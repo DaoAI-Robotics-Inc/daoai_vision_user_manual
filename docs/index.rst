@@ -9,26 +9,18 @@ DaoAI Vision 使用说明
    :maxdepth: 2
    :caption: 目录
 
-   getting-started
-   flowchart-configuration
-   node/index
+   introduction/index
    hardware-system/index
-   operator-view
-   hand-eye-calibration
-   vision-detection-tutorial
-   robot-communication-and-generating-full-location
+   quick-start/index
+   flowchart-configuration/index
+   node/index
+   calibration/index
+   pick-template/index
+   operator-view/index
+   vision-detection/index
+   camera/index
+   robot-communication/index
+   robot/index
+   troubleshooting/index
    examples/index
 
-.. toctree::
-   :hidden:
-   :maxdepth: 2
-   :caption: 外部链接
-
-   示例 <https://www.example.com/>
-
-Indices and tables
-------------------
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

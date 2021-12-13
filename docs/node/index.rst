@@ -1,8 +1,8 @@
-功能节点
-========
+Node Specification
+==================
 
 .. toctree::
-   :caption: 目录
+   :caption: Content
 
    image
    camera

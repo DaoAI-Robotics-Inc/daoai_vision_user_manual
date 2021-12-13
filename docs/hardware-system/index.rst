@@ -1,6 +1,5 @@
-硬件系统
-========
-
+Hardware requiements
+====================
 .. toctree::
    :caption: 目录
 
