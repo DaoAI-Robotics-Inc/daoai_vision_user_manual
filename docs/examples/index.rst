@@ -2,7 +2,7 @@ Project Examples
 ================
 
 .. toctree::
-   :caption: 目录
+   :caption: Content
 
    ppf-picking
    mod-finder-picking

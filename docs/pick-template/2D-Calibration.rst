@@ -1,2 +1,0 @@
-2D Calibration picking
-======================
