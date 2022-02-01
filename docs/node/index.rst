@@ -1,11 +1,18 @@
 Node Specification
 ==================
 
+This section is a detailed description about the functionalities of each node. You can also find examples here
+
 .. toctree::
-   :caption: Content
-
-   image
-   camera
-   image-processing
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+   :maxdepth: 2
+   :caption: Contents
+    
+   Recipe/index
+   Data/index
+   Flowchart control/index
+   Utils/index
+   Image Processing/index
+   3D Processing/index
+   Calibration/index
+   DA Modules/index
+   Robot/index
