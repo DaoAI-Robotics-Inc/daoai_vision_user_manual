@@ -35,5 +35,5 @@ be able to see a set of operations to choose from.
     
 |
 
-Note that base on your needs, you can choose as many as operations you want to be performed by order on the input image. In the next section, each of the availble operations are explained with examples. 
+Note that base on your needs, you can choose as many as operations you want to be performed by order on the input image. In the next section, each of the availble operations are explained. 
 

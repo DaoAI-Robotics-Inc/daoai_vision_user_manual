@@ -5,16 +5,13 @@ Resize
 ~~~~~~~~~~~~~~
 This operation resizes the input into a user specified size.
 
-
 To Gray
 ~~~~~~~~~~~~~~
 This operation converts the input image into a gray scale image. 
     
-|
-
 ROI
 ~~~~~~~~~~~~~~
-Using this operation, you can define a Region Of Interest(ROI) in the input image and crop it out as the output. Examples of the input and output image using this operation is shown below.
+Using this operation, you can define a Region Of Interest (ROI) in the input image and crop it out as the output. Examples of the input and output image using this operation is shown below.
 
 .. image:: Images/ROI/in.png
     :align: center
@@ -96,12 +93,12 @@ Erode
 ~~~~~~~~~~~~~~
 This operation performs erosion operation on the input image using the user specified parameters (number of erosion iterations and used kernel size). Example of the input image and output using this operation is shown below.
 
-.. image:: Images/erode/in.png
+.. image:: Images/erode/in_erode.png
     :align: center
     
 |
 
-.. image:: Images/dilate/out.png
+.. image:: Images/erode/out_erode.png
     :align: center
     
 |
@@ -110,12 +107,12 @@ Dilate
 ~~~~~~~~~~~~~~
 This operation performs erosion operation on the input image using the user specified parameters (number of erosion iterations and used kernel size). Example of the input image and output using this operation is shown below.
 
-.. image:: Images/in.png
+.. image:: Images/dilate/in.png
     :align: center
     
 |
 
-.. image:: Images/out.png
+.. image:: Images/dilate/out.png
     :align: center
     
 |

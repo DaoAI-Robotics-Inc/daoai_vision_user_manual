@@ -21,7 +21,7 @@ In contrast, in a eye-to-hand scenario, the camera is mounted to a fixed positio
 |
 
 Regardsless of the robot-camera configuration, the transformation of a detected 2D pixel location to 3D base corrdiantes can be expressed in terms of a transformation tree as below: 
-2d image-> 3d cmaera corrdiantes -> 3d base cooridnates
+2d image-> 3d cmaera corrdiantes -> 3d base cooridnates.
 
 In other words, we need the transfomration of 2D image pixels to 3D camera coordinates and the transformation between 3D camera corrdiantes to 3D base corrdiantes to obtain the location of 2D pixels in 3D base corrdiantes. The main purpose of using calibration nodes is to find the transformation between different coordiante systems, specifically camera to base transformation. We support differnt methods for calibration and in the
 following, the functionality of each of the calibration nodes is explained and a guide on how to use them is provided. 
