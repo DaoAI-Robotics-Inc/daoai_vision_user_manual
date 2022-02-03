@@ -5,6 +5,6 @@ Calibration Nodes
    :caption: Content
 
    Introduction
-   3D Calibration nodes  
-   2D Calibration nodes 
+   3D Calibration 
+   2D Calibration 
 

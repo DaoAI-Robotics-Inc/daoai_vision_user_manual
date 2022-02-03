@@ -6,6 +6,7 @@ this node is an image which is usually linked to the reader or the camera node. 
 
 .. image:: Images/img1.png
     :align: center
+    :caption: Image is here Sina 
     
 |
 

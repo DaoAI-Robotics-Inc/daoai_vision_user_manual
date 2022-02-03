@@ -1,4 +1,4 @@
-3D Calibration Nodes
+3D Calibration
 ========================
 
 The purpose of these nodes is to perfrom 3D calibration between robot and the camera. We provide two different nodes for 3D calibration. One is the calibration node and the other is sphere calibration. They both obtain the 3D transformations 

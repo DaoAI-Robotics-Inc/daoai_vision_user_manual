@@ -1,4 +1,4 @@
-Calibration Nodes
+Introduction
 ========================
 
 In a robot bin picking operation, a camera is used to capture an image from the workspace. Then, using one of the mod_finder, shape_finder or DL nodes (Deep Learning),
