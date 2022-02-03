@@ -15,7 +15,7 @@ Usually, robot-camera configurations can be classified into eye-to-hand and eye-
  
 In contrast, in a eye-to-hand scenario, the camera is mounted to a fixed position and its position does not change with robot arm movements. An exmaple of this configuration is shown below: 
 
-.. image:: Images/calibration_node/eye-in-hand.jpg
+.. image:: Images/calibration_node/eye-to-hand.jpg
     :align: center
     
 |

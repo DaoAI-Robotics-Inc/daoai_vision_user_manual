@@ -121,13 +121,19 @@ Apply mask
 ~~~~~~~~~~~~~~
 This operation applies a mask to the input image. The mask input can be linked to a node which produces a mask, or by reading in a mask image using a Reader/Camera node.
 
-
+.. image:: Images/apply_mask/img.png
+    :align: center
+    
+|
 
 Crop Around Mask
 ~~~~~~~~~~~~~~
 This operation crops the image around a mask with size of the user’s specifications in pixels. This operation was added to produce cropped images which can then be fed into DL models. 
 
-
+.. image:: Images/crop_around_mask/img.png
+    :align: center
+    
+|
 
 No-Op
 ~~~~~~~~~~~~~~
