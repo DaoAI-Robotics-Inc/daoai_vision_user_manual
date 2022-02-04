@@ -12,6 +12,7 @@ Version v0.0.1
    hardware-system/index
    quick-start/index
    flowchart-configuration/index
+   picking/index
    node/index
    calibration/index
    pick-template/index
