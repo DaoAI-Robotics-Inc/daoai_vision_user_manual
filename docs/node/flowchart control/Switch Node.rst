@@ -3,7 +3,7 @@ Switch Node
 
 Synopsis 
 ---------
-	A generalization of the Condition Node to $\geq$ 2 cases used to execute one of many sub-flowcharts based on expressions for each case.
+	A generalization of the Condition Node to greater than or equal to 2 cases used to execute one of many sub-flowcharts based on expressions for each case.
 
 
 Description 

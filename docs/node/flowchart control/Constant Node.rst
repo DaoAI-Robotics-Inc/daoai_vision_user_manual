@@ -30,7 +30,8 @@ Input
 
 Output 
 ---------
-	Integer-type value inputted by user.
+	Int Field
+		Integer-type value inputted by user.
 	Double Field:
 		Double-type value inputted by user.
 	Bool Field:
