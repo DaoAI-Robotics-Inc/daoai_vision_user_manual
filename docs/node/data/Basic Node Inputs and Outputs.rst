@@ -1,17 +1,17 @@
 Basic Node Inputs and Outputs
 ===========
 Int:
-	An integer value (no decimal places)
+	An integer value (no decimal places).
 Double:
-	A numerical values which can have decimal places.
+	A numerical value which can have decimal places.
 Bool:
 	A boolean value which can be either True (1) or False (0).
 String:
 	Can be any combination of characters (e.g. "xyz123!").
 Image:
-	A 2D array of information, often RGB or greyscale, represented by pixels.
+	A 2D array of information, often RGB or greyscale, represented by pixels. Can be read in using the Camera Node or Reader Node. 
 Depth Image:
-	A 2D array of information which also inludes another value for each pixel that represents distance from the data acquisition device (i.e. a 3D camera).
+	A 2D array of information which also inludes another value for each pixel that represents distance from the data acquisition device (i.e. a 3D camera). Can be obtained by reading a .dcf file or connecting to a camera with the Camera Node. 
 Point Cloud:
 	A set of data points that represent an object in 3D, where each point has at least an X, Y, and Z component, and which may often also have colour components. Unlike a depth image, a point cloud is not organized into a grid-like array where each array element has data - a point cloud can have no points in part of the cloud and lots of points in other parts. Point clouds can be read in using the Camera Node or Reader Node using .pcd, .daf or .dcf files or by connecting to a camera. 
 Mesh: 
