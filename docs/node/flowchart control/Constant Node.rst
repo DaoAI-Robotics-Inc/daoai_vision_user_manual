@@ -30,7 +30,7 @@ Input
 
 Output 
 ---------
-	Int Field
+	Int Field:
 		Integer-type value inputted by user.
 	Double Field:
 		Double-type value inputted by user.
