@@ -13,11 +13,10 @@
    dl_classify
    dl_segment
    mesh_process
-   obj_vol_est
    pallet_loading
    pick_adjust
    reconstruct
    scene_crop
    segmentation
    verification
-   visualize
+   visualization
