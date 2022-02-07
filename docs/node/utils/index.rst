@@ -10,7 +10,6 @@ This section introduces the utility nodes that we have.
    bag
    pose
    count 
-   load recipe
+   load_recipe
    reader_writer
    transformation_tree
-   print 
