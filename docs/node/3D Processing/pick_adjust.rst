@@ -27,8 +27,9 @@ Parameters
 * Plate Y: height of the picking plate, default is 300mm
 * Threshold low: how much of the box should be covered to be picked up, default is 0.5
 * Threshold high: the upper bound of box coverage to be picked up, default is 1
-* Pre Sort Poses: sort poses in a back-and-force moving pattern
+* Pre Sort Poses: sort poses in a back-and-force moving pattern, as shown in the below image, the ordering of the pose follows a z-shape pattern.
 
-Example Usage (vedio required)
-------------------------------
+
+.. image:: ../../_static/images/3d_process/pick_adjust_display.PNG
+   :width: 100%
 

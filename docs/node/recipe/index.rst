@@ -69,4 +69,7 @@ We run the flow chart from the start to mod finder node, and define a model
 
 Double click recipe_2 in the recipe panel to switch to recipe_2, re-run the process to define another model
 
+.. image:: ../../_static/images/recipe/model_and_scene_2.PNG
+   :width: 100%
 
+Now switch back to recipe_1, you should see the first model in the mod finder node. Now we have two recipes to search for different models.
