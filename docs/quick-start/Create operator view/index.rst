@@ -1,7 +1,7 @@
 Create operator view   
 **********
 
-.. image:: image/operator_view.png
+.. image:: image/operator_view.PNG
    :width: 650
 
 The Operator View can design user preference facing application. Based on a cell and grid system. Different operator views can be selected from the drop-down menu on the top left. 
@@ -27,7 +27,7 @@ Border Visibility
 
 Border Color 
 
-.. image:: image/operator_editting.png
+.. image:: image/operator_editting.PNG
    :width: 650
 
 Resizing Grids/Cells:
@@ -69,7 +69,7 @@ These elements can be resized and styled the same way as grids
 
 These are the types of elements: 
 
-.. image:: image/operator_outputvalue.png
+.. image:: image/operator_outputvalue.PNG
    :width: 650
 
 Output Value: 

@@ -8,7 +8,7 @@ Links are the communications between nodes. All the nodes have inputs and output
 
 The data source (in content view window) is the input for node Cloud Process. We can see that Cloud Process Node takes a Point Cloud type input. Clicking on the blue dots on the right opens up Link Expression Dialog. 
 
-.. image:: image/link_dialog.png
+.. image:: image/link_dialog.PNG
    :width: 650
 
 The Link Expression Dialog has Linkable List and Link Value. Expressions are showing the linkable nodes for this selected node. Link Value is on the right side of the dialog box, it has Link, Simple and Advanced link value. 
