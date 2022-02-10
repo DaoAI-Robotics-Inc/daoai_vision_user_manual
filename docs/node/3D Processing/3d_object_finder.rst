@@ -82,4 +82,10 @@ Edge Parameters:
 * occluding detail : int
    * The occluding edge detail level, larger values provide more edges.
 
-How to use 3d object finder node (vedio required)
+How to use 3d object finder node
+-----------------------------------
+.. video:: https://daoairoboticsinc-my.sharepoint.com/personal/xchen_daoai_com/_layouts/15/onedrive.aspx?ct=1644517096042&or=Teams%2DHL&id=%2Fpersonal%2Fxchen%5Fdaoai%5Fcom%2FDocuments%2FREAD%5FTHE%5FDOC%2F2%2E22%2E1%2F3d%5Fobj%5Ffinder%2Emp4&parent=%2Fpersonal%2Fxchen%5Fdaoai%5Fcom%2FDocuments%2FREAD%5FTHE%5FDOC%2F2%2E22%2E1
+   :width: 100%
+
+.. video:: https://daoairoboticsinc-my.sharepoint.com/personal/xchen_daoai_com/_layouts/15/onedrive.aspx?ct=1644517096042&or=Teams%2DHL&id=%2Fpersonal%2Fxchen%5Fdaoai%5Fcom%2FDocuments%2FREAD%5FTHE%5FDOC%2F2%2E22%2E1%2F3d%5Fobj%5Ffinder%5F2%2Emp4&parent=%2Fpersonal%2Fxchen%5Fdaoai%5Fcom%2FDocuments%2FREAD%5FTHE%5FDOC%2F2%2E22%2E1
+   :width: 100%

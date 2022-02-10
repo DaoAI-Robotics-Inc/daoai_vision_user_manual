@@ -1,5 +1,5 @@
-Picking
-=======
+Picking In Action
+======================
 
 .. toctree::
    

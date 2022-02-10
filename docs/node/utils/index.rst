@@ -4,7 +4,7 @@ Utility Functions
 This section introduces the utility nodes that we have.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents
     
    bag

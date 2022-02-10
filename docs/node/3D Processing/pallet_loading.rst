@@ -1,5 +1,5 @@
 Pallet Loading Node
---------------------------------
+==============================
 
 
 The purpose of the pallet loading node is to take the 'Dimensions' output from the Box Volume Estimation node and systematically generate poses for each box in order to load them onto a pallet. 

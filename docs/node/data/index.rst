@@ -1,3 +1,6 @@
+Data Control 
+====================
+
 .. toctree::
 	:maxdepth: 2
 	

@@ -31,6 +31,8 @@ Parameters
 * Scene Decimation Step: Step size for sampling points in the scene. The larger the step size means the more points it will skip for the alignment algorithm. Generally, the smaller the step will result in more accuracy. Preset Values are LOW=15 MEDIUM=100 HIGH=500
 * Model Decimation Step: Step size for sampling points in the model. This is similar to Scene Decimation Step.
 
-Sample Use Case: vedio required
+Sample Use Case: 
+----------------------------
 
-
+.. video:: https://daoairoboticsinc-my.sharepoint.com/personal/xchen_daoai_com/_layouts/15/onedrive.aspx?ct=1644517096042&or=Teams%2DHL&id=%2Fpersonal%2Fxchen%5Fdaoai%5Fcom%2FDocuments%2FREAD%5FTHE%5FDOC%2F2%2E22%2E1%2Falignment%2Emp4&parent=%2Fpersonal%2Fxchen%5Fdaoai%5Fcom%2FDocuments%2FREAD%5FTHE%5FDOC%2F2%2E22%2E1
+   :width: 100%

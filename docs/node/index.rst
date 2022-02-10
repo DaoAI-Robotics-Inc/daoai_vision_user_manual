@@ -1,4 +1,4 @@
-Node Specification
+System Detail Explaination
 ==================
 
 This section is a detailed description about the functionalities of each node. You can also find examples here

@@ -26,6 +26,8 @@ Node Parameters
 * Downsample Strength: Downsamples each cloud by creating a voxel grid and averaging all points in each voxel into a single point. In basic operation, this is a value from 0-100. In advanced operation, the user can specify the dimensions of the voxels. Higher downsampling leads to faster operation, at the potential cost of worse results.
 * Lock Z axis: if selected, the z axis of every picking pose will have the same direction as the z axis of reference pose.
 
-Sample Use Case (vedio required)
+Sample Use Case 
 --------------------------------
 
+.. video:: https://daoairoboticsinc-my.sharepoint.com/personal/xchen_daoai_com/_layouts/15/onedrive.aspx?ct=1644517096042&or=Teams%2DHL&id=%2Fpersonal%2Fxchen%5Fdaoai%5Fcom%2FDocuments%2FREAD%5FTHE%5FDOC%2F2%2E22%2E1%2Fbox%5Fvol%5Fest%2Emp4&parent=%2Fpersonal%2Fxchen%5Fdaoai%5Fcom%2FDocuments%2FREAD%5FTHE%5FDOC%2F2%2E22%2E1
+   :width: 100%
