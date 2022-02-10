@@ -29,7 +29,8 @@ author = 'DaoAI'
 # ones.
 extensions = [
     'sphinx_inline_tabs',
-    'sphinxcontrib.video'
+    'sphinxcontrib.video',
+    'sphinx.ext.autosectionlabel'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
