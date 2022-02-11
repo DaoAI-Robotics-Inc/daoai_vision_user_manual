@@ -12,8 +12,9 @@ Version v0.0.1
    hardware-system/index
    quick-start/index
    flowchart-configuration/index
-   picking/index
+   Picking/index
    node/index
+   deep-learning/index
    calibration/index
    pick-template/index
    operator-view/index
