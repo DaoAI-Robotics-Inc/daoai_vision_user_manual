@@ -5,5 +5,5 @@ Flowcharts consist of nodes, all flowcharts have start and end indicates the sta
 
 Right click any node, choose Insert Node from the drop-down menu. Add Node Dialog is shown as below. Nodes are in categories. Click on the nodes which want to add to the flowchart then OK. These nodes will be inserted.
 
-.. image:: image/add_node.png
+.. image:: image/add_node.PNG
    :width: 650
