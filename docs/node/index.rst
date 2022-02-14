@@ -4,12 +4,12 @@ System Detail Explaination
 This section is a detailed description about the functionalities of each node. You can also find examples here
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents
     
    Recipe/index
-   Data/index
-   Flowchart control/index
+   Data Control/index
+   Flowchart_control/index
    Utils/index
    Image Processing/index
    3D Processing/index

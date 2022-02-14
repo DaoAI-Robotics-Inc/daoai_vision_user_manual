@@ -4,23 +4,46 @@
 This node is used to find 3d locations of an object using PPF related algorithms.
 At the creation of the node, users need to select which type of PPF to use (normal PPF or edge PPF mode).
 
-Input 
------------------------
+Overview
+------------------------
 
+Input 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Scene cloud: one or a vector of point clouds to find objects within.
 
 Output
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 cloudModel: active model used for searching, represented as point cloud
 edgesModel: active model used for searching, represented as edge cloud. Available only in edge mode
 msehModel: active model used for searching, represented as mesh. Available only when the model is defined by mesh
 resultPoses: a vector of pose represeting the result of search
 success: a field indicating whether the search is successful (at least one position found)
 
+Procedure for Using 3d Object Finder Node
+------------------------------------------
+
+Pre-process Point Cloud In Edge Mode
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To get proper search result using edge point, the scene cloud must be preprocess to contain normals. This is because after edge extraction is performed on point cloud
+it will be very hard to compute its normals, which are used in searching. Simply use cloud process node's normal operation to pre-process the point cloud
+
+Before you can see the nodes detailed config, you need to set the search type of the node to be either normal or edge.
+
 Model Creation and Processing
-------------------------------------
-Users can create multiple models that can then be searched for within the scene.
-Additionally, users can use the adjust pose interactor to modify the model pose or the define search region interactor to modify the search region used to search for that specific model.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: ../../_static/images/3d_process/3d_obj_finder/set_mode.PNG
+   :width: 100%
+
+Then in the model section, users are able to add/delete model, the dropdown list on the bottom shows the current active model to search. You can also double click model entry
+to edit model. You will see a model config page, where you are able to see the model and ajust its parameters.
+
+.. image:: ../../_static/images/3d_process/3d_obj_finder/models.PNG
+   :width: 100%
+
+.. image:: ../../_static/images/3d_process/3d_obj_finder/model_config.PNG
+   :width: 100%
 
 Model Parameters:
 
@@ -40,18 +63,44 @@ Model Parameters:
    * Controls whether to enable x/y/z axis rotation constraints when searching for object poses
 * min angle : double
    * Minimum rotation angle about the x/y/z axis when searching for object poses
-max angle : double
+* max angle : double
    * Maximum rotation angle about the x/y/z axis when searching for object poses
 
-3D Detection 
---------------------
+The first way to define a model is to define from a scene point cloud. In model config page, select model type to be "From scene", then click "Define Model".
+Then the mainwindow display will prompt a bounding box interactor (or console will give error message if the "Scene Cloud" input is not linked or is invalid).
+Use the bounding box to include the points of the model, then hit 0 or click "Exit Interactor" button to save your change. After that the processed model (with default model parameter)
+will be shown in the config page.
 
-When the 3D Object Finder Node in run, the node will search for instances of the selected model and output the poses found.
+.. image:: ../../_static/images/3d_process/3d_obj_finder/model_from_scene.PNG
+   :width: 100%
+
+The second way to define a model is to define from a polygon mesh file. In model config page, select model type to be "From Mesh", then browse the .ply file and click "Load Model".
+
+Adjust Model Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+After the model is defined users can adjust model perameters in the model config page. The most common adjustment of model parameters are downsample strength and search detail. Remember to
+click "Update Model" if these two settings are changed.
+
+You can define search region by checking "Constrain Search Region" and use "Set Search Region" button. This will enter the interaction mode where you need to draw a bouding box to include
+the search reagion, similar to defining a model from scene.
+
+You can also define the range of rotation of the model. Click "Adjust Pose" to enter the interaction mode where you can rotate the model around origin by click and drag on the model cloud.
+This will define a base pose. Then you can speficy the X,Y,Z rotation range based on the base pose.
+
+.. image:: ../../_static/images/3d_process/3d_obj_finder/adjust_pose.PNG
+   :width: 100%
+
+You can also save the model as a pcd file by using export model.
+
+
+Detect Model in Scene
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+After the model is defined you can search the position of the model in scene.
 
 Scene Matching Parameters:
 
-* Search type : int
-   * Type of search algorithm used, either Normal or Edge PPF
 * Selected model : string
    * The name of the model that will be searched for 
 * Downsample strength : int
@@ -63,10 +112,17 @@ Scene Matching Parameters:
 * Timeout : double
    * Timeout in ms
 * Acceptance threshold : double
-   *Controls the threshold used when filtering possible poses.
+   * Controls the threshold used when filtering possible poses
 
-Edge Extraction
---------------------
+In the display window you can select what to display: use "Show Model" to show found occurrence of model in the scene, use
+"Show Scene" to show the scene cloud (in edge mode this will be edge cloud extracted from the orginal scene cloud), use "Show Downsampled"
+to show the downsampled scene cloud.
+
+.. image:: ../../_static/images/3d_process/3d_obj_finder/result_display.PNG
+   :width: 100%
+
+Edge Extraction (Only In Edge Mode)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 When the search type is set to Edge, we perform edge extraction on both the model and scene 
 
 Edge Parameters:
@@ -82,10 +138,69 @@ Edge Parameters:
 * occluding detail : int
    * The occluding edge detail level, larger values provide more edges.
 
-How to use 3d object finder node
------------------------------------
-.. video:: https://daoairoboticsinc-my.sharepoint.com/personal/xchen_daoai_com/_layouts/15/onedrive.aspx?ct=1644517096042&or=Teams%2DHL&id=%2Fpersonal%2Fxchen%5Fdaoai%5Fcom%2FDocuments%2FREAD%5FTHE%5FDOC%2F2%2E22%2E1%2F3d%5Fobj%5Ffinder%2Emp4&parent=%2Fpersonal%2Fxchen%5Fdaoai%5Fcom%2FDocuments%2FREAD%5FTHE%5FDOC%2F2%2E22%2E1
+After the edge extraction setting is changed, redefine the model using new edge extraction parameters.
+
+Parameter Tunning Guide
+---------------------------
+
+This guide will walk through some rules of thumb when it comes to adjusting parameters to get better detection.
+
+Not detection all objects
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Increase the search detail. This will increase the number of computed scene features
+* Decrease acceptance threshold. This lowers the acceptance threshold of the score filter, keeping poses with lower scores
+
+.. image:: ../../_static/images/3d_process/3d_obj_finder/search_detail_low.png
    :width: 100%
 
-.. video:: https://daoairoboticsinc-my.sharepoint.com/personal/xchen_daoai_com/_layouts/15/onedrive.aspx?ct=1644517096042&or=Teams%2DHL&id=%2Fpersonal%2Fxchen%5Fdaoai%5Fcom%2FDocuments%2FREAD%5FTHE%5FDOC%2F2%2E22%2E1%2F3d%5Fobj%5Ffinder%5F2%2Emp4&parent=%2Fpersonal%2Fxchen%5Fdaoai%5Fcom%2FDocuments%2FREAD%5FTHE%5FDOC%2F2%2E22%2E1
+.. image:: ../../_static/images/3d_process/3d_obj_finder/search_detail_high.png
    :width: 100%
+
+.. image:: ../../_static/images/3d_process/3d_obj_finder/acceptance_low.png
+   :width: 100%
+
+.. image:: ../../_static/images/3d_process/3d_obj_finder/acceptance_high.png
+   :width: 100%
+
+False positive
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Reduce downsample strength. This makes the downsample voxel size smaller, preserving more detail in the scene. Reducing downsample strength can also improve poses that are badly oriented.
+
+.. image:: ../../_static/images/3d_process/3d_obj_finder/downsample_low.png
+   :width: 100%
+
+downsample strength low
+
+.. image:: ../../_static/images/3d_process/3d_obj_finder/downsample_medium.png
+   :width: 100%
+
+downsample strength medium
+
+Model parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Adjust model feature detail. Increasing model feature detail will increase the amount of model features calculated, making it more likely to accurately find the object in the scene
+* Adjust model downsample strength. Reducing downsample strength can remove false positives
+
+
+.. image:: ../../_static/images/3d_process/3d_obj_finder/feature_detail_low.png
+   :width: 100%
+
+feature detail low
+
+.. image:: ../../_static/images/3d_process/3d_obj_finder/feature_detail_high.png
+   :width: 100%
+
+feature detail high
+
+.. image:: ../../_static/images/3d_process/3d_obj_finder/model_downsample_low.png
+   :width: 100%
+
+downsample strength low
+
+.. image:: ../../_static/images/3d_process/3d_obj_finder/model_downsample_medium.png
+   :width: 100%
+
+downsample strength medium
