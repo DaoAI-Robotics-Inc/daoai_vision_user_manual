@@ -1,17 +1,20 @@
 Da Alignment Node 
 =========
 
-Synopsis 
+
+Overview
 ---------
+Synopsis 
+~~~~~~~~~
 	Align model point cloud to scene point cloud.
 
 
 Description 
----------
+~~~~~~~~~
 	Put the model into scene in the hypothesis pose, then continus making adjustment on pose to get a better pose.
 
 Use Case
----------
+~~~~~~~~~
 	After we find a approximated object pose, we use this node to get a accurrate object pose.
 	Below are the comparsion of a pose before and after alignment. 
  .. image:: images/da_alignment_node_before.jpg
@@ -26,7 +29,7 @@ Use Case
 
 
 Input 
----------
+~~~~~~~~~
 	Scene Cloud: <DataType: BPPointCloud>
 		Scene point cloud.
 	Model Cloud: <DataType: BPPointCloud>
@@ -34,8 +37,26 @@ Input
 	Hypothesis: <DataType: BPPose3D>
 		The initial guess for the pose, usually obtained from reconstruct node.
 
+Output 
+~~~~~~~~~
+	poses: <DataType: BPPose3D>
+		The aligned poses, a vector of 3D pose.
 
-Setting 
+
+Procedure of Using This Node
+---------
+
+1. Input Scene Cloud, a point cloud of scene.
+	This can be obtained from camera node, and be cropped by cloud process node.
+2. Input Model Cloud, a point cloud of object model. 
+	The model point cloud is better to be saved int file, and loaded from reader node.
+3. Input Hypothesis, the initial guess of objects.
+	This input is a vector of poses, usualy is obtained from reconstruct node.
+4. Run the node, user can check the display result to check if the alignment is good or bad. 
+5. The Node will output the aligned poses. 
+
+
+Parameter Tunning
 ---------
 	Use Model Box: 
 		Specifies whether to use the model point cloud's extraction box to limit the points during alignment.
@@ -81,9 +102,3 @@ Setting
 		
 	Decimation Step Scene: 
 		Step size used when downsampling the scene. 
-
-
-Output 
----------
-	poses: <DataType: BPPose3D>
-		The aligned poses, a vector of 3D pose.
