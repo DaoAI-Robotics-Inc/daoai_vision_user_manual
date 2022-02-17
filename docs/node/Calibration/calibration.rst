@@ -11,7 +11,7 @@ Modes
 
 * Accumulate : In this mode, the calibration node accumualtes (loads) the needed data and calibration settings to be used in the final mode for calibration computation.
 * Final : In this mode, the calibration node uses the data from the accumulation mode and perfrom the acutal robot calibration.  
-* Load : In this mode, the calibration node loads the ouput from the final for future use. This can help to load previous calibration results without a need to run previous modes. 
+* Load : In this mode, the calibration node loads the output from the final mode for future use. This can help to load previous calibration results without a need to run previous modes. 
 
 
 Accumulate mode inputs 
@@ -51,7 +51,7 @@ Final mode outputs
 * cam_in_base (type:Pose) : The 3D transformation from camera to robot base. Only has value in eye-to-hand situations.
 * gripper_in_world (type:Pose) : The 3D transformation from gripper (TCP) to world (calibration board). Only has value in eye-to-hand situations.
 * pointerToCalibration (type:Calibration) : This output includes the inforamtion about the calibration settings alongside with the results of the calibration from the final mode. 
-* status (type:Int) : This output indicates the if there were any erros during the node excecution. If the value is 0, no error has occured. However, if the value is non-zero, an error has occured during excecution and an error message will be printed in the console.
+* status (type:Int) : This output indicates if there were any erros during the node excecution. If the value is 0, no error has occured. However, if the value is non-zero, an error has occured during excecution and an error message will be printed in the console.
 
 Load mode inputs 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -78,7 +78,7 @@ In order to perfrom calibration using this node, we need to capture camera image
     
 |
  
-Note that the captured images should contain a variety of images with differnt position and rotation angles to ensure a good calibration result. Once you have captured calibrartion images, you can add the calibration node into the flowchart to perfrom calibration. (Templates provided in the software)
+Note that the captured images should contain a variety of images with differnt position and rotation angles to ensure a good calibration result. Once you have captured calibrartion images, you can add the calibration node into the flowchart to perfrom calibration (Templates provided in the software). 
 When adding this node to the flowchart, you will see the option for choosing the calibration mode. We provide three modes for the calibration node.
 First, the accumulation mode is used to load the captured images, poses and point clouds from the calibration board and detect the corner points (chessboard) or circle center points (circle borad). When you choose the accumulation mode, you will be able to set differnt options and inputs. 
 
@@ -105,8 +105,8 @@ After obtaining the corner/circle points, it is time to use the results and inpu
 
 In the final node, the user has to specify the reference accumulation node, so, the results then can be used for calibration. Also, as the calibration algorithm will use an optimization based method to obtain the calibration results, 
 the user needs to choose the used cost function. In case of using a 3D camera and 3D picking, it is a better option to use the RPDepth cost function as our experiments show better results for this cost function. However, note that when using RPDepth, you will need to set the option "using the point cloud" in the accumulation mode. By running
-the calibration node in the final mode, the calibration results will be obtained. More specifically, the main outputs of the final mode are the camera to gripper and base to board 3D transformations in the eye-in-hand scenario. This will be camera to base and gripper to board 3D transfromations in the eye-to-hand scenario. These transformations then can 
-be used in the picking flowchart for differnt robot picking operations.
+the calibration node in the final mode, the calibration results will be obtained. More specifically, the main outputs of the final mode are the camera to gripper (TCP) and base to board (world) 3D transformations in the eye-in-hand scenario. This will be camera to base and gripper (TCP) to board 3D transfromations in the eye-to-hand scenario. These transformations then can 
+be used in the picking flowchart for different robot picking operations.
 
 
 Another existing mode for calibration mode is the load mode which simply loads the result file saved in the final mode. This can be used to visualize the result of the calibration without a need to run the previous nodes. 

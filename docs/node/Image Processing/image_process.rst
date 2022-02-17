@@ -57,7 +57,7 @@ Note that base on your needs, you can choose as many as operations you want to b
 
 Resize
 ~~~~~~~~~~~~~~
-This operation resizes the input into a user specified size. An example of the settings od this operator is shown below. 
+This operation resizes the input into a user specified size. An example of the settings of this operator is shown below. 
 
 
 .. image:: Images/resize/gui.png
@@ -65,17 +65,7 @@ This operation resizes the input into a user specified size. An example of the s
     
 |
 
-Also, an exmaple of an input image and the output resized image are shown below, respectively. 
 
-.. image:: Images/resize/in.png
-    :align: center
-    
-|
-
-.. image:: Images/resize/out.png
-    :align: center
-    
-|
 
 To Gray
 ~~~~~~~~~~~~~~
@@ -128,14 +118,14 @@ Note that the user also has the choioce of exculding the chosen ROI by checking 
 
 Threshold
 ~~~~~~~~~~~~~~
-This operation, performs a global thresholding (binarization) on the input image based on the user specified threshold value. The image below shows the settings of this operation. 
+This operation performs a global thresholding (binarization) on the input image based on the user specified threshold value. The image below shows the settings of this operation. 
 
 .. image:: Images/threshold/gui.png
     :align: center
     
 |
 
-The user specified threshold should a value in range of 0 to 255 and determines the threshold used for binirazation. 
+The user specified threshold should have a value in range of 0 to 255 and determines the threshold used for binirazation. 
 
 .. image:: Images/threshold/in.png
     :align: center
@@ -198,7 +188,7 @@ This operation performs logic OR operation between the input image and user spec
 |
 
 As shown in the image above, the user has to define an additional image in the operation config page which is used for OR operation with the node input image. An exmaple of the node image input, user specified image for OR operation and the output image of this 
-is below , respectively.
+is shown below, respectively.
 
 .. image:: Images/logic_or/in.png
     :align: center
@@ -275,7 +265,7 @@ As shown in the image above, the user has to define an additional image in the o
 
 Crop Around Mask
 ~~~~~~~~~~~~~~
-crops the image around a mask with size of the user’s specifications in pixels. This operation was added to produce cropped images which can then be fed into DL models. The image below shows the settings of this operation.
+This operation crops the image around a mask with size of the user’s specifications in pixels. This operation was added to produce cropped images which can then be fed into DL models. The image below shows the settings of this operation.
 
 .. image:: Images/crop_around_mask/gui.png
     :align: center
@@ -284,7 +274,7 @@ crops the image around a mask with size of the user’s specifications in pixels
 
 An exmaple of the input image and resulting output image is shown below. 
 
-.. image:: Images/crop_around_mask/apply_mask.png
+.. image:: Images/crop_around_mask/img.png
     :align: center
     
 |
