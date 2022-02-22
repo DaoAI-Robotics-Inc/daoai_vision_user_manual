@@ -28,4 +28,19 @@ There are three general detection methods, each optimized for different types of
 
 * :ref:`shape-finder`
 
+Teach Pose
+----------
+The relative position between tool and object is fixed during the picking process, and it’s aquired from Teach Pose. The transformation is simular to the final picking transformation, but instead of generating relative position between flange and base, it is generative tool in object by reading the flange in base of robot picking pose.
 
+Pose Transformation
+-------------------
+After previous steps, the required relative positions are enough to produce the position that robot arm should arrive to perform picking. In order to combine the relative positions, transformations are needed and vary between different Hand Eye Config.
+
+
+.. sidebar:: Eye In Hand
+
+    .. image:: images/eye-in-hand-transformation.PNG
+
+.. sidebar:: Eye To Hand
+
+    .. image:: images/eye-to-hand-transformation.PNG
