@@ -8,4 +8,10 @@ There are two modes for this node: Single-Box picking and Multiple-Box picking. 
 .. image:: ../../_static/images/3d_process/pick_adjust.PNG
    :width: 100%
 
+.. toctree::
+   :maxdepth: 1
+
+   pick_adjust_overview
+   pick_adjust_procedure
+   
 

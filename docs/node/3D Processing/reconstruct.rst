@@ -9,3 +9,10 @@ In order the visualize the pose, it will be displayed in the scene using a small
 .. image:: ../../_static/images/3d_process/reconstruct/reconstruct.PNG
    :width: 100%
 
+.. toctree::
+   :maxdepth: 1
+
+   reconstruct_overview
+   reconstruct_procedure
+
+   
