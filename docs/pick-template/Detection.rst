@@ -1,7 +1,9 @@
-Templates of picking flowchart
+Detection
 ==============================
 
 .. toctree::
    :caption: Content
 
-   Order Picking
+   2D-Picking
+   2D-Mod-Finder
+   3D-Mod-Finder
