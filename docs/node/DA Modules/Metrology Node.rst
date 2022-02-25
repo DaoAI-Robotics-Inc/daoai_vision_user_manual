@@ -1,31 +1,61 @@
 Metrology Node
 =========
 
-Synopsis 
+
+Overview
 ---------
+Synopsis 
+~~~~~~~~~
 	Define, Detect or Calculate features such as edge, circle, and point on a gray image.
 	Calculate value information such as length of segment and radius of circle and arc. 
-
+ .. image:: images/metrology_0.jpg
+	:scale: 60%
+ .. image:: images/metrology_1.jpg
+	:scale: 60%
+|
 
 Reference Fixture 
----------
+~~~~~~~~~
 	Please refer to Reference Fixture System
 
 
 Interactive Display 
----------
+~~~~~~~~~
 	User may only be able to edit or add features after click "Show Interactive Display"
 
+Output 
+~~~~~~~~~
+	allTolerancesPassed: <DataType:Bool>
+		a boolean value indicating if all tolerances are passed
+	numPassedTolerances: <DataType:Int>
+		number of passed tolerance
+	numWarningTolerances: <DataType:Int>
+		number of warning tolerance
+	numFailedTolerances: <DataType:Int>
+		number of fail tolerance
+	toleranceResult/tolerance_name['']: <DataType:Double>
+		the actual value of the tolerance
 
-Features 
+
+Procedure of Using This Node
 ---------
+1. input Image.
+2. open interactive display
+3. define Features
+4. define Tolerances
+5. run the node, the node will output the tolerance values and tolerance pass/fail
+
+Feature and Tolerance
+---------
+Features 
+~~~~~~~~~
 	There are 3 ways for defining a feature:
 	Parametric Feature: 
 		define fixture in absolute position.
 	Measured Feature:
-		define a region in absolute position, detect feature in the region.
+		define a region in absolute position, detect edge features such as segment and circle in the region.
 	Constructed Feature: 
-		define fixture from other features, such as define a mid_point from a segment.
+		define fixture from other features, such as define a mid_point from a segment, or define a circle base on 2 points.
 
 	After a feature is defined, the feature(or region for measurement features) will appear in the interactive display at position (0,0)
 	user can drag it to proper position. 
@@ -38,13 +68,13 @@ Features
 
 
 Measured Feature Parameters 
----------
+~~~~~~~~~
 	Threshold: 
 		A high threshold only keeps edge with strong contrast. A low threshold will include fainter edges.
 	Smoothness: 
 		Range [0.0 ~ 100.0]
 	
-		Strength of the noise reduction filter. 
+		Strength of the noise reduction filter when detecting edges. 
 	Data Angle Tolerance: 
 		Whether edges along a transition are considered is based on the angle(direction) of the transition compared to the scan direction of the search region. This angle tolerance determines the range of accepted angle(direction). 
 	Edge Selection Rank: 
@@ -52,7 +82,7 @@ Measured Feature Parameters
 
 
 Tolerance 
----------
+~~~~~~~~~
 	Tolerance is a calculation of features. such as the maximum distance between 2 features.
 	user can add tolerance, and set the pass_min, pass_max, warn_min, warn_max for it.
 	normally, it is:
@@ -66,18 +96,3 @@ Tolerance
  .. image:: images/metrology_tolerance_example.jpg
 	:scale: 60%
 |
-
-
-Output 
----------
-	allTolerancesPassed: <DataType:Bool>
-		a boolean value indicating if all tolerances are passed
-	numPassedTolerances: <DataType:Int>
-		number of passed tolerance
-	numWarningTolerances: <DataType:Int>
-		number of warning tolerance
-	numFailedTolerances: <DataType:Int>
-		number of fail tolerance
-	toleranceResult/tolerance_name['']: <DataType:Double>
-		the actual value of the tolerance
-

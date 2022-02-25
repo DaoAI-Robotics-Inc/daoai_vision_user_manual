@@ -1,8 +1,10 @@
 Da Depth N Cloud Conv Node 
 =========
 
-Synopsis 
+Overview
 ---------
+Synopsis 
+~~~~~~~~~
 	Generate Calibrated Depth Map Image from Point Cloud.
 
 	Generate Point Cloud from Calibrated Depth Map.
@@ -11,16 +13,20 @@ Use Case:
 	When we need a calibrated depth image from point cloud to do 3d searching in node such as 3d mod_finder, metrology node, measurement node.  
 
 Input
----------
-	Depth Map -> Point Cloud:
-	* Depth Map <DataType: BPDepthImage>
-	
-	Point Cloud -> Depth Map:
-	* PointCloud
-
+~~~~~~~~~
+	Depth Map <DataType: BPDepthImage>
+		For Depth to Cloud, the depth map.
+	PointCloud
+		For Cloud to Depth, the point cloud
+	Depthmap Size X,Y
+		For Cloud to Depth, set the size of depth image.
+	Extraction Box Settings
+		For Cloud to Depth, set the extraction box.
+		Only points inside the box will be extracted into depth map.
+		Normally these parameters are tunned by adjust box on interactive display when running the node.
 
 Description 
----------
+~~~~~~~~~
 	Depth Map -> Point Cloud:
 		For each pixel point in depth image, generate a point with its depth value and add it into pointl cloud.
 	
@@ -31,11 +37,13 @@ Description
 
 
 Output 
----------
+~~~~~~~~~
 	Depth Map -> Point Cloud:
 
 	* Generated Point Cloud <DataType: BPPointCloud>
-	Point Cloud -> Depth Map:
-
+		Output of Depth to Cloud
 	* Generated Depth Map <DataType: BPDepthImage>
+		Output of Cloud to Depth.
 	* Generated 8bit Depth Map <DataType: DepthImage>
+		Output of Cloud to Depth.
+
