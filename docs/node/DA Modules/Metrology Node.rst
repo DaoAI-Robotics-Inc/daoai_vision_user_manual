@@ -45,7 +45,7 @@ Procedure of Using This Node
 4. define Tolerances
 5. run the node, the node will output the tolerance values and tolerance pass/fail
 
-Parameter Tunning 
+Feature and Tolerance
 ---------
 Features 
 ~~~~~~~~~
@@ -53,9 +53,9 @@ Features
 	Parametric Feature: 
 		define fixture in absolute position.
 	Measured Feature:
-		define a region in absolute position, detect feature in the region.
+		define a region in absolute position, detect edge features such as segment and circle in the region.
 	Constructed Feature: 
-		define fixture from other features, such as define a mid_point from a segment.
+		define fixture from other features, such as define a mid_point from a segment, or define a circle base on 2 points.
 
 	After a feature is defined, the feature(or region for measurement features) will appear in the interactive display at position (0,0)
 	user can drag it to proper position. 
