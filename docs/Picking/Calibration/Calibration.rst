@@ -194,7 +194,7 @@ For result validation, the operator needs to recapture the gripper bag file by u
 |
 
 
-chessboard-calibration
+Chessboard Calibration
 ----------------------
 
 This algorithm attempts to calibrate the camera and the robot in order to determine the robot's relative position to the camera. After calibration, all coordinate systems will be accessible: Absolute (world), Camera, Gripper, and Robot Base. This enables the robot to position the gripper on a specific part of an object selected from the point cloud.

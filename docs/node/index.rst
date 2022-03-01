@@ -7,10 +7,10 @@ This section is a detailed description about the functionalities of each node. Y
    :maxdepth: 1
    :caption: Contents
     
-   Recipe/index
+   Recipes/index
    Data Control/index
    Flowchart_control/index
-   Utils/index
+   Utility/index
    Image Processing/index
    3D Processing/index
    Calibration/index

@@ -9,8 +9,8 @@ Hand Eye calibration, where ``Hand`` stands for the robot and ``Eye`` stands for
 
 There are four general types of calibration:
 
-* :ref:`sphere-calibration` 
-* :ref:`chessboard-calibration` 
+* :ref:`Sphere Calibration` 
+* :ref:`Chessboard Calibration` 
 * :ref:`2d-calibration` 
 * :ref:`converyor-calibration` 
 

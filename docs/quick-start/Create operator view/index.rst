@@ -13,19 +13,13 @@ Each Item can be edited to set the style for their text, borders, and colors
 
 Some of the settings to edit:
 
-Font  
-
-Font Decoration  
-
-Font Color  
-
-Background Color  
-
-Alignment  
-
-Border Visibility  
-
-Border Color 
+* Font  
+* Font Decoration  
+* Font Color  
+* Background Color  
+* Alignment  
+* Border Visibility  
+* Border Color 
 
 .. image:: image/operator_editting.PNG
    :width: 650

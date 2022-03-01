@@ -29,7 +29,9 @@ Click ``update Camera list`` and select the Serial Number of the camera, then cl
 .. image:: Images/Camera5.png
     :align: center
     
-|
+You can also load a camera setting file when connecting to a camera. The settings include projector/camera parameters when capturing 2d images and parameters used when generating the point cloud.
+The camera config file (.cfg file) is created by DaoAI Camera Studio Program.
+Refer to Camera Studio User Manual for details on how to adjust camera parameters and exporting config as a file.
 
 Virtual Camera
 ~~~~~~~~~~~~~~
@@ -55,8 +57,6 @@ Select the camera name you just created in the ``Camera Source`` and run the cam
     :align: center
     
 |
-
-
 
 
 
