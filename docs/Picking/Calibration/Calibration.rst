@@ -307,3 +307,246 @@ Instead of manually setting up the pose and generating the bag file, the operato
     :align: center
 | 
 
+The operator needs to choose the moving path of the gripper, the distance from the camera, and the number of poses wanted to generate to the bag first.  In the circle field, the operator can adjust the tilting angle, height, and rotation var to adjust the pose of the chessboard.
+
+.. image:: Chessboard_Calibration/Chessboard_Calibration_image/flowchart/Picture36.png
+    :width: 80%
+    :align: center
+| 
+
+All bag files will be generated in the loop section and saved under the path defined in the writer node. 
+
+.. image:: Chessboard_Calibration/Chessboard_Calibration_image/flowchart/Picture37.png
+    :width: 80%
+    :align: center
+|    
+
+After running the manual or auto flowchart, the operator needs to load the bag file folder saved previously into the Calibration flowchart to generate yml file, which will be used for the real bin-picking applications. The yml file tells the threshold value of the accuracy of locating the object in the image. The smaller value, the better accuracy. 
+
+Small circle method
+~~~~~~~~~~~~~~~~~~~~~~
+
+Inside the reader node, use the folder path to load the bag file generated from the previous step. 
+
+.. image:: Chessboard_Calibration/Chessboard_Calibration_image/flowchart/Picture38.png
+    :width: 80%
+    :align: center
+|    
+
+Inside the node, the operator can select the source type they want for loading the bag file. If the operator chooses to load a file from Numbered, then it is necessary to define the parameter in the ADDITIONAL SETTINGS. 
+
+.. image:: Chessboard_Calibration/Chessboard_Calibration_image/flowchart/Picture39.png
+    :width: 80%
+    :align: center
+|   
+
+All bag files will be accumulated in the first Calibration node. The operator should set up the number of rows, cols, spacing of the chessboard correctly to avoid mismatching between the bag file and the real board. 
+
+.. image:: Chessboard_Calibration/Chessboard_Calibration_image/flowchart/Picture40.png
+    :width: 80%
+    :align: center
+|   
+
+The second Calibration node will generate the final yml used for the future application. The operator needs to name the file by typing in the File Name section. 
+
+Big circle method
+~~~~~~~~~~~~~~~~~~
+
+The operator can also select the Use large circle orientation function. However, it is still necessary to make sure to config the number of rows, columns, spacing between each row and column correctly. 
+
+.. image:: Chessboard_Calibration/Chessboard_Calibration_image/flowchart/Picture41.png
+    :width: 80%
+    :align: center
+|   
+
+Validation
+~~~~~~~~~~~~~~~~~~~
+
+If the application type is Eye-to-hand, the operator should switch the flowchart to the Eye_to_hand. 
+
+The first step is to load the testing bag file into the Reader node, and use the Disassemble Bag node to extract the data from inside. In the Calibration node, the operator needs to type in the yml file name stored in the Calibration folder under the Chessboard Calibration template folder created by the operator. 
+
+.. image:: Chessboard_Calibration/Chessboard_Calibration_image/validation/Picture42.png
+    :width: 100%
+    :align: center
+|   
+
+After the second switch, the operator needs to load the gripper model they want to use based on the validation approach they chose in the beginning. The left sub-child path is to visualize how well the gripper model matches the gripper’s cloud. The right sub-child path is to visualize how good the world is located in the cloud. (The pen should plug right in the center of the first circle of the chessboard.) (Small circle) or check if the pen is located in the center of the central circle of the board. (Large circle)
+
+.. image:: Chessboard_Calibration/Chessboard_Calibration_image/validation/Picture43.png
+    :width: 100%
+    :align: center
+|   
+
+.. image:: Chessboard_Calibration/Chessboard_Calibration_image/validation/Picture44.png
+    :width: 100%
+    :align: center
+|   
+
+.. image:: Chessboard_Calibration/Chessboard_Calibration_image/validation/Picture45.png
+    :width: 100%
+    :align: center
+|   
+
+.. Attention:: 
+    The testing bag file cannot be the same as the one used for generating the yml file. The operator needs to readjust the poses and check the result using multiple bag files with different orientations. 
+
+
+If the application type is Eye-in-hand, the operator should switch the flowchart to the Eye_in_hand. 
+
+To validate the small circle method result, inside the first and second Readers, the operators needs to load the gripper model ply file and the bag file respectively, then use the Calibration node to load the yml file generated from the previous step. 
+
+.. image:: Chessboard_Calibration/Chessboard_Calibration_image/validation/Picture46.png
+    :width: 100%
+    :align: center
+|   
+
+Different from the Eye-to-hand flowchart, the operator can only validate the result by using world in cloud method. 
+
+.. image:: Chessboard_Calibration/Chessboard_Calibration_image/validation/Picture47.png
+    :width: 100%
+    :align: center
+|   
+
+To validate the large circle method result, the pen(world) should be located in the center of the scene cloud. 
+
+.. image:: Chessboard_Calibration/Chessboard_Calibration_image/validation/Picture48.png
+    :width: 100%
+    :align: center
+| 
+
+.. image:: Chessboard_Calibration/Chessboard_Calibration_image/validation/Picture49.png
+    :width: 100%
+    :align: center
+| 
+
+.. image:: Chessboard_Calibration/Chessboard_Calibration_image/validation/Picture50.png
+    :width: 100%
+    :align: center
+| 
+
+.. Attention:: 
+    For either Eye-to-hand or Eye-in-hand application, the testing bag file cannot be the same as the one used for generating the yml file. The operator needs to readjust the poses and check the result using multiple bag files with different orientations.
+
+2D Calibration
+---------------
+
+Overview
+~~~~~~~~~~
+
+2D Picking is to recognize object position in a 2D image, then guide the robot to move to the corresponding target in the real world.   
+
+Preparation
+~~~~~~~~~~~~
+
+Overall, we need to set up one detection pose (for chessboard image capture), multiple waypoints for calibration, and multiple elevation waypoints to avoid the tcp from scratching the chessboard during the movement. Usually, we use three waypoints to locate the plane and use another 12 waypoints to generate the bag file. The elevation waypoints are added in between each waypoint. To set up the plane, the first waypoint should always start from the upper right corner. Then define the X-axis by selecting the point at the top left corner. Lastly, define the positive Y direction by selecting the point at the bottom left corner. 
+
+.. image::  2D_Cali/2D_Calibration_Image/Capture1.png
+    :width: 100%
+    :align: center
+| 
+
+* When defining the points for generating the bag file, the operator should start by selecting the first bottom right corner point as the first waypoint, then set points as a “Z” shape towards the upper left corner. 
+* When defining the 12 waypoints for the bag file, the z value relative to the plane should be as close to 0 as possible. If 0 is not able to reach, then keep the z value relative to the plane always the same number for all the waypoints. Then make sure to keep RX and RY equals 0 for all waypoints.
+* For the twelve waypoints set up, the operator can follow the steps as shown below:
+  
+  .. image::  2D_Cali/2D_Calibration_Image/Capture2.png
+    :width: 100%
+    :align: center
+| 
+
+  #. For Detection Pose, make sure the chessboard is unblocked by robot arms.
+  #. When setting up waypoints, make sure to select reference coordinate to the plane which has been defined.
+  #. Change the unit from radiance into the degree, click into the TCP details and rotate Rz to (TCP/6th axis) -75°. 
+  #. Then change z, Rx, Ry values to 0°.
+  #. Save this waypoint.
+  #. Edit the corresponding elevation point to around -5mm (the TCP has an opposite z value compared to the plane).
+  #. Repeat the steps from 2 to 6 for the rest of the waypoints; however, the operator needs to change the Rz rotation in the step 3 as the following degree mentions down below:
+  
+.. Attention:: 
+      After changing the reference coordinate from the base to the plane, the Z value will be opposite to the operator controlling board interface. If the operator clicks on the moving up the bottom, the gripper will go down and wise visa. Without noticing, the operator may miss clicking the Up button causing the Tcp to thrust into the board causing any damage; more importantly, the operator has to redo the entire process since the Tcp various. 
+
+
+.. list-table:: Angle Rotation Table
+   :widths: 25 25
+   :header-rows: 1
+
+   * - Number of waypoints
+     - Rotation Angles (Degree)
+   * - 1
+     - -75
+   * - 2
+     - 30 
+   * - 3
+     - 30
+   * - 4
+     - -15
+   * - 5
+     - 60 
+   * - 6
+     - 30 
+   * - 7
+     - -75
+   * - 8
+     - 30
+   * - 9
+     - 60
+   * - 10
+     - 30
+   * - 11
+     - -75
+   * - 12
+     - -75
+
+.. Attention:: 
+    Make sure the Chessboard is not moved during the setup. Check if Waypoint 1 still points exactly on the bottom left corner; moreover, all waypoints have the same z value relative to the plane, the threshold should be around + /- 0.5mm. For Rx and Ry, -0.5°<rx, ry<0.5°.
+
+* Lastly, set the number of poses in the Manage Variable Dialog to 12. 
+
+.. image::  2D_Cali/2D_Calibration_Image/Picture3.png
+    :width: 100%
+    :align: center
+| 
+
+Flowchart Setup
+~~~~~~~~~~~~~~~~~~
+
+In side the Manual flowchart, the operator should select where you want to save the chessboard image data bag. Each pose will be assembled and saved as a bag file. All files will be written into a folder where the operator is defined previously. 
+
+.. image::  2D_Cali/2D_Calibration_Image/Picture4.png
+    :width: 80%
+    :align: center
+| 
+
+.. Attention:: 
+    Calibration board is not moved until this step is finished.
+
+After finishing generating the bag file, use the Calibration flowchart to create the yml file and find out the relation between the Plane and the World (the Chessboard). 
+
+Using the Reader node to browse the folder path and extract the robot pose bag files.
+
+.. image::  2D_Cali/2D_Calibration_Image/Picture5.png
+    :width: 80%
+    :align: center
+| 
+
+Use the first Hand-Eye Calibration 2D V02 to load the bag files disassembled from the Reader Node. Then, use the second Hand-Eye Calibration 2D V02 to configure the Calibration Setting by setting the number of rows, columns, and spacing correctly. 
+
+.. image::  2D_Cali/2D_Calibration_Image/Picture6.png
+    :width: 80%
+    :align: center
+| 
+
+The operator can find your calibration file under the workspace folder → pin_calibrations, if the "pin_calibrations" folder does not show up in Picking workspace, copy the folder or create a new folder and rename to “pin_calibrations“.
+
+Validation
+~~~~~~~~~~~
+
+The accuracy (RMSE) can be checked in the console. The small number we get, the better result we obtained. 
+
+.. image::  2D_Cali/2D_Calibration_Image/Picture7.png
+    :width: 80%
+    :align: center
+| 
+
+
