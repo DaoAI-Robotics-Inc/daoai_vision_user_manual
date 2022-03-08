@@ -1,18 +1,13 @@
-Quick-Start: Application Usage 
-###########
+Quick-Start: System Overview
+==================================
 
-This section demostracts how to use our Vision software based on a built-in template workspace.
-
+This section covers the basic knowledge of the Vision software, including user interface, data types, recipes and case study on how to build a project.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
     
-   New Workspace/index
-   Configure Platform/index
-   Config flowchart
-   Display
-   Link/index
-   Check result
-   Create operator view/index
-   Copy and paste feature
+   interface
+   data types
+   recipes
+   case study
 
