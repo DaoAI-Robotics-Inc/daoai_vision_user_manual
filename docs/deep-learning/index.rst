@@ -10,3 +10,5 @@ Deep Learning
    jenkins-setup
    jenkins-usage
    bp-testing
+   common-issues
+   examples
