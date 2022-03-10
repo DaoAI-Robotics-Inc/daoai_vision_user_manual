@@ -8,9 +8,10 @@ This is an example from our classification model.
 Here, the model is being used to identify which row of objects is on top, using their orientation.
 This allows for much easier picking further along the flowchart, as there won't be objects stuck under others.
 
-.. image:: images/examples-classification.png
-    :width: 80%
-    :align: center
+.. image:: images/examples-classification1.png
+    :width: 25%
+.. image:: images/examples-classification2.png
+    :width: 25%
 
 Instance Segmentation Model
 ---------------------------

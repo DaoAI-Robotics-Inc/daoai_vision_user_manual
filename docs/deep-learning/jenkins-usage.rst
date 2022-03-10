@@ -1,6 +1,14 @@
 Train and Export a Model with Jenkins
 ============================================
 
+Requirements
+------------
+Before beginning to train a learning model, you must have or know a few things:
+
+* Know what type of model you would like to train
+* Know if you would like to continue training from a previous checkpoint or not
+* Have a complete dataset in the format identified below
+
 Creating a New Project
 ----------------------
 Creating a new project is very simple, and only consists of running one pipeline.
