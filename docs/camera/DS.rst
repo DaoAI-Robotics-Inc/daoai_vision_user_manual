@@ -1,6 +1,30 @@
 DaoAI Camera (DS)
 =================
 
+Physical Camera Wire Connection
+~~~~~~~
+
+
+Connect the camera via DaoAI Camera Studio
+~~~~~~~~~~~~~
+Connect, capture, save out cfg files
+
+Connect the camera via DaoAI Vision Studio
+~~~~~~~~~~~~~
+
+Connect the virtual camera via DaoAI Vision Studio
+~~~~~~~~~~~~~
+
+Use Camera with Camera Node
+~~~~~~~~~~~~~~~~~~~~
+
+Common Issues
+~~~~~~~~~~~~~~
+* USB 3.0 cable issue
+* cfg file doesn't match 
+* Not able to find the camera
+
+
 In addition to allowing the connection of Physical Daoai Camera, **DaoAI Vision Studio** offers the Virtual Camera function in order to allow user to load existing image files.
 
 
