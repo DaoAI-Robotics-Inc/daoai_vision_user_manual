@@ -47,7 +47,7 @@ There are two ways in which robot-camera calibration can be validated:
 * Quantitative validation (to link), using the DaoAI calibration template with corresponding robot program.
 * Qualitative validation (to link), using the DaoAI calibration template and manual inspection.
 
-.. Attention:: The first picks after performing calibration should be executed at a low robot speed, so unexpected behavior can be identified early enough to prevent the robot from colliding with people or the environment.
+.. Attention:: The first picks after performing calibration should be executed at a **low robot speed**, so unexpected behavior can be identified early enough to prevent the robot from colliding with people or the environment.
 
 
 
