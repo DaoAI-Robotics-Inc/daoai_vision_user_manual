@@ -38,9 +38,40 @@ Robot mounted camera
 =======
 (COPY THE SAME CONTENT AS PICKIT)    [https://docs.pickit3d.com/en/latest/documentation/calibration/multi-poses-calibration.html#calibrating-from-the-web-interface]
 
+Calibrate from DaoAI calibration template
+=============
+
+To perform a new calibration, open the DaoAI Vision Studio, create a workspace out from the **Chessboard Calibration (To Verifiy the name)** template, and following the steps below: (Use the new process mentioned here, https://daoai.atlassian.net/jira/software/projects/DV/boards/7?assignee=612fb8249976c30069458dbf&selectedIssue=DV-549 with the current approach 1)
+
+1. Config the calibration parameters, set blabla
+2. set the robot poses in the robot script
+3. Collect calibration bag files 
+4. Run calibration flowchart  
+5. Validate calibration result
 
 
+Create workspace and set up calibration (step 1 above)
+~~~~~~~~~~~~~~~~~~
+Create workspace from template, and based on situation config the flowchart blabla
 
+Set robot poses (Step 2 above)
+~~~~~~~~~~~~~~
+Start to run the flowchart to preview all the poses; Preview each pose;
+Refer to Robot Section/Calibration program;  Setup each calibration poses. 
+
+Collect calibration bag files (Step 3 above)
+~~~~~~~~~~~~
+
+Modify the name of the stored folder, run the robot program, remember to setup correctly the ip etc..  
+
+Run calibration flowchart
+~~~~~~~~~~~~
+
+Run the calibration with the collected files, and store the calibraiton result out into the disk
+
+Validating the calibration result
+~~~~~~~~~~~
+After you run the calibration, you will see a printed error. And to better validate the result, refer to the validating calibration result page.
 
 
 

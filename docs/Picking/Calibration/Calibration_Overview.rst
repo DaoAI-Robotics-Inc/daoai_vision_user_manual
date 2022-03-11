@@ -1,4 +1,4 @@
-Calibration 
+3D Calibration 
 ===========
 
 Robot-camera calibration is the process where the **camera** and the **robot** learn their relative position with respect to each other, which allows the camera to guide the robot to correct positions in the work cell.
