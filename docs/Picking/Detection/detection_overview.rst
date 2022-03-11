@@ -18,3 +18,9 @@ DaoAI also offers detection engines optimized with deep learning techniques for 
 * **AnyPick**, which is specially designed for picking any type of object outside from the bin, it doesn't pick the same location everytime for any part, but it tries to pick from any pickable region.
 * **KeyPoint**, which is designed for detecting object that hard to use general engines and reduce the time user configure the detection parameters. The overall logic allows user to annotate the point on the object, then it can predict the object position out from the points on the image.  
 
+Other engines
+~~~~~~~~~~~~~
+DaoAI offers other engines which allow user to configure for specifc project:
+
+* **Measurement & Metrology**, it allows the user to measure the object size, shape etc. 
+* **Code Reading**, it allows user to detect the code from the image. 
