@@ -7,6 +7,8 @@ DaoAI has two general detection engines, each optimized for a different type of 
 
 * **Mod Finder** engine is fast and robust, it is recommended detection for most applications where the object is usally one side showing to the camera. 
 * **3D Object Finder** engine is slightly slower, and it is recommended detection for random bin picking situations, where the object's showing face is different.
+* **Mono 3D** engine is using a single 2D camera for high accuracy 3D object locating. It is suitable for eye-in-hand situation, and able to achieve better than 3D camera accuracy for single object.
+* **Shape Finder** engine is suitable to find specific shapes on the images, and use it for robot guidance. It can detect shapes like circle, rectangle, ellipse etc.. 
 
 .. tip:: You can learn about the main ideas behind the Teach engine by watching this video tutorial. (TODO)
 
@@ -24,3 +26,4 @@ DaoAI offers other engines which allow user to configure for specifc project:
 
 * **Measurement & Metrology**, it allows the user to measure the object size, shape etc. 
 * **Code Reading**, it allows user to detect the code from the image. 
+* **2D Finder**, it allows user to achieve 2D part locating  
