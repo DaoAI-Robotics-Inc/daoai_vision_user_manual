@@ -63,3 +63,16 @@ Double click recipe_2 in the recipe panel to switch to recipe_2, re-run the proc
    :width: 100%
 
 Now switch back to recipe_1, you should see the first model in the mod finder node. Now we have two recipes to search for different models.
+
+Load Recipe Node
+~~~~~~~~~~~~~~~~~~~~~~
+
+All the creation and definition work of the recipes must be done before the project deployed to the field. However, users are able to swith recipe automatically using the 
+load recipe node.
+
+.. image:: ../../_static/images/recipe/recipe_node.PNG
+   :width: 100%
+
+When the load recipe node is run, it loads the recipe in its recipe table specified by the input index. You can add or remove recipe entry in the table by clicking add or remove button.
+The index of the entry is unique and fixed once it is added. The recipe name of each entry and the index name to load can be manually changed or linked, giving user the flexibility
+to automatically load specific recipes.

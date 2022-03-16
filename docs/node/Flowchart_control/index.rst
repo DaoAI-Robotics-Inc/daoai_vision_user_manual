@@ -1,8 +1,11 @@
 Flowchart Control 
 ==================
 
+Normally, a flowchart runs sequentially from top to bottom. To have a more programmable flowchart we use flowchart control node to alter the order of flowchart run.
+
+
 .. toctree::
-	:maxdepth: 2
+	:maxdepth: 1
 	
 	Break Node
 	Condition Node
