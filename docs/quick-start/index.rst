@@ -9,5 +9,5 @@ This section covers the basic knowledge of the Vision software, including user i
    interface
    data types
    recipes
-   case study
+   case_studies
 
