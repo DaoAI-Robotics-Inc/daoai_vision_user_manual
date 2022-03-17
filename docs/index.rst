@@ -16,5 +16,5 @@ Version v0.0.1
    complete-vision-guidance/index
    template-usage/index
    examples/index
-   exercise/index
-   faq-troubleshooting/index
+   excercise/index
+   faq-trouble-shooting/index
