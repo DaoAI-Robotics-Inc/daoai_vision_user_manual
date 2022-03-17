@@ -2,6 +2,10 @@
 
 This user manual is powered by Read the Docs, which works as a hosting provider and a continuous integration (CI) service for deploying Sphinx or MkDocs documentation in Git repositories. We are using Sphinx as the document site generator which uses reStructuredText (reST) as the markup language.
 
+## Convetions for the document writting
+   - All file and folder name should be using lower case, and use `-` for separating word
+   - images folder should be kept right next to the rst file
+   
 ## Key concepts in Read the Docs for Business
 
 - Organization: For hosting multiple projects, adding user accounts as members, and managing teams. Subscription fees are charged per organization.

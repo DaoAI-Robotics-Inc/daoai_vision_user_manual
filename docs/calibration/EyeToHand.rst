@@ -1,2 +1,0 @@
-Eye-Io-Hand Calibration
-=======================

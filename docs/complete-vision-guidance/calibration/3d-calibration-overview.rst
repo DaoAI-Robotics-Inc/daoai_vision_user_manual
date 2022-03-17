@@ -21,7 +21,7 @@ DaoAI ships with a calibration plate that has circles printed on it (below left)
 Calibration uses the color image in addition to 3D information to detect the plate, so it’s important for the markers in the plate to be clearly visible, without reflections, artifacts or over-illumination from external light sources learn more (TODO, to show what will be a good calibration board captured image).
 
 Perform Calibration 
-===========
+~~~~~~~~~~~~~~~~
 
 The most accurate results are obtained when the calibration target is detected from multiple viewpoints, using multi poses calibration.
 
@@ -35,7 +35,8 @@ Circle board calibration is suitable for situations where you can mount the cali
 (TODO: Images for circle board, and sphere[the red ball on the scissor])
 
 Validating calibration
-===========
+~~~~~~~~~~~~~~
+
 An **incorrect** or **outdated** calibration can lead to unexpected robot motions. An incorrect calibration can result from not following correctly the calibration prodecure. A calibration can become outdated if the camera moved relative to the robot since the last successful calibration.
 
 
