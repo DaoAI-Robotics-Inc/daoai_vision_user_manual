@@ -70,7 +70,6 @@ Our software also support classfical machine vision tools, including pattern mat
 
 .. toctree::
    :numbered:
-   :maxdepth: 1
    :hidden:
    :caption: Contents
 

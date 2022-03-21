@@ -1,6 +1,8 @@
 Mono 3d template usage
 ======================
 
+It used the 2d feature to extract the 3d position of the object. 
+
 (reference https://docs.pickit3d.com/en/latest/examples/build-a-showcase-demo-with-a-m-camera-and-suction-cup.html)
 
 Use Case 

@@ -4,7 +4,6 @@ Calibration
 This section coveres the basics for the robot and camera calibration details
 
 .. toctree::
-   :numbered:
    :maxdepth: 1
    :caption: Contents
 

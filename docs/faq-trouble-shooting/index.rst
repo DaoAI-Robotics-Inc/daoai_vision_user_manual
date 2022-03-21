@@ -1,9 +1,9 @@
-FAQ & Trouble Shooting 
+FAQ & Trouble Shooting  (Hanzo)
 ============
 
+https://docs.pickit3d.com/en/latest/faq/index.html#faq
+
 .. toctree::
-   :numbered:
-   :maxdepth: 1
-   :caption: Contents
+   :hidden:
 
    virtual
