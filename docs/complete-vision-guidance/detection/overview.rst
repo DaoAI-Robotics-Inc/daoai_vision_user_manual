@@ -12,6 +12,13 @@ DaoAI has two general detection engines, each optimized for a different type of 
 
 .. tip:: You can learn about the main ideas behind the Teach engine by watching this video tutorial. (TODO)
 
+.. toctree:: 
+    :hidden:
+
+    mod-finder-overview
+    mono-3d
+    
+
 Deep learning engines
 ~~~~~~~~~
 DaoAI also offers detection engines optimized with deep learning techniques for specific part shapes and arrangements:
@@ -27,3 +34,4 @@ DaoAI offers other engines which allow user to configure for specifc project:
 * **Measurement & Metrology**, it allows the user to measure the object size, shape etc. 
 * **Code Reading**, it allows user to detect the code from the image. 
 * **2D Finder**, it allows user to achieve 2D part locating  
+

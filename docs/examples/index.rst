@@ -1,4 +1,4 @@
-Project Examples (Hanzo)
+Project Examples
 ================
 
 https://docs.pickit3d.com/en/latest/examples/index.html

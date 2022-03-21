@@ -1,4 +1,4 @@
-Excercise (Hanzo)
+Excercise
 =============
 
 https://docs.pickit3d.com/en/latest/exercises/index.html
