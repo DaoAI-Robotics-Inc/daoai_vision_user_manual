@@ -1,4 +1,4 @@
-Bug Report
+How to report bugs
 ==========
 The principle of bug report is to let anyone able to understand the problem and reproduce it easily.
 

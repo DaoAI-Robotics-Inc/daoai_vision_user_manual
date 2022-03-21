@@ -6,4 +6,5 @@ https://docs.pickit3d.com/en/latest/faq/index.html#faq
 .. toctree::
    :hidden:
 
-   virtual
+   work-with-virtual-robot/virtual
+   bug-report/overview
