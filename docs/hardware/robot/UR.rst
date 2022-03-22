@@ -23,12 +23,12 @@ Network
 
 Once you open the program, we would need to configure the network setting so we can communicate with the robot.  Click on Setup Robot → Network → select static address and we will change the IP address. 
 
-.. image:: Images/nt1.png
+.. image:: Images/ur_ui.PNG
     :align: center
     
 |
 
-.. image:: Images/nt2.png
+.. image:: Images/ur_setupnetwork.PNG
     :align: center
     
 |
@@ -77,7 +77,7 @@ Moving Speed
 
 It is important to note the operating speed of the robot as the robot can be dangerous when running at a fast speed. Make sure your robot speed is within the range of 20% speed to reduce the robot operating speed as well as giving the user time to recover the robot if something goes wrong half-way through the operation. 
 
-.. image:: Images/si1.png
+.. image:: Images/ur_speed.PNG
     :align: center
     
 |
@@ -107,7 +107,12 @@ Once you finished configuring the network, click Back to go back to the menu and
 
 Before running the program, the user needs to make sure that the robot is connected to the right IP and port. Go to “Connected==socket_open…” under chushiconnected and change the IP address to the same network as the virtual network (or the network the real robot is on), and change the port to 6969 (or the same port as the Hercules program on the server-side). 
 
-.. image:: Images/lp2.png
+.. image:: Images/ur_ip.PNG
+    :align: center
+
+|
+
+.. image:: Images/ur_port.PNG
     :align: center
     
 |
