@@ -15,9 +15,9 @@ DaoAI has two general detection engines, each optimized for a different type of 
 .. toctree:: 
     :hidden:
 
-    mod-finder-overview
+    mod-finder/mod-finder-overview
     mono-3d
-    
+
 
 Deep learning engines
 ~~~~~~~~~

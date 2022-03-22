@@ -1,7 +1,8 @@
 Mono 3D
 =======
 
-The mono 3d pipeline used mod finder to extract the feature from 2d image, then used the 3d information for those feature points, then locate the object in 3d space. 
+The mono 3d pipeline used mod finder to extract the feature from 2d image, then combining known 3d information for those feature points, finally to detect the object 3d position with a single 2d image.
+You could find the detection pipeline from the template workspace "????"
 
 Pipeline Overview
 ~~~~~~~~~~~~~~~~~
