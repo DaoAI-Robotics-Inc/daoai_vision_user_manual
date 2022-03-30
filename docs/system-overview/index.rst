@@ -12,11 +12,11 @@ This section covers the basic knowledge of the Vision software, including user i
 
 .. toctree::
    :maxdepth: 1
-   :hidden:
-    
+   :hidden
+   
    interface/interface
    data-types/data-types
    3d-concept/overview
    recipes/recipes
-   tutorials/3d-transformation-tutorial
+   tutorials/3d-transformation/3d-transformation-tutorial
 
