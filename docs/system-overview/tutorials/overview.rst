@@ -9,6 +9,6 @@ This section covers the basic examples of the Vision software, including creatin
    new-workspace/new-workspace 
    mod-finder/mod-finder
    3d-object-finder/3d-object-finder
-   3d-transformation/3d-transformation-tutorial
+   3d-transformation/overview
 
 

@@ -1,5 +1,5 @@
 Circle Board Calibration
-=============
+========================
 
 Circle board calibration is the recommended method for performing robot-camera calibration in Pickit. With this method, the robot shows the calibration plate to Pickit from different viewpoints.
 
@@ -160,8 +160,6 @@ The operator needs to choose the approach for result validation, either using th
 
 Set robot poses 
 ~~~~~~~~~~~~~~~~
-Start to run the flowchart to preview all the poses; Preview each pose;
-Refer to Robot Section/Calibration program;  Setup each calibration poses. 
 
 Adjust the robot arm to the proper position
 
@@ -283,7 +281,6 @@ The operator can also select the Use large circle orientation function. However,
 Validate calibration result
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-After you run the calibration, you will see a printed error. And to better validate the result, refer to the validating calibration result page.
 
 **Eye-to-hand**
 

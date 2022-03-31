@@ -1,6 +1,17 @@
 DaoAI Camera (DS)
 =================
 
+Content
+~~~~~~~
+1. :ref:`Physical Camera Wire Connection`
+2. :ref:`Connect the camera via DaoAI Camera Studio`
+3. :ref:`Connect the camera via DaoAI Vision Studio`
+4. :ref:`Connect the virtual camera via DaoAI Vision Studio`
+5. :ref:`Use Camera with Camera Node`
+6. :ref:`Common Issues`
+7. :ref:`Physical Camera`
+8. :ref:`Virtual Camera`
+
 Physical Camera Wire Connection
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -58,7 +69,7 @@ The operator can also use the manual bar highlighted in the image down below to 
    :width: 100%
 |
 
-**ROI**
+**ROI** (Optional)
 
 If part of the image point cloud is unclear, the software allows the operator to switch the mode from “Point Cloud” to the “2D color” to readjust the area that has bad point cloud quality. 
 
@@ -83,7 +94,7 @@ Then the operator can click the save button to confirm the area and perform the 
 |
 
 
-**Gap Fill**
+**Gap Fill** (Optional)
 
 Another general function that has been used quite often is the “Gap Fill” function. The function can help the operator repair and optimize the point cloud image by automatically filling the point cloud captured from the Studio. 
 
@@ -177,7 +188,7 @@ Once configuring the camera, switch back to the flowchar template and right clic
    :width: 100%
 |
 
-.. image:: camera-image/Pictur30.png
+.. image:: camera-image/Picture30.png
    :width: 100%
 |
 
