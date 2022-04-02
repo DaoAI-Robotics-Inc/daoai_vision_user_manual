@@ -15,10 +15,10 @@ The flow of Manual Calibration is like followed:
 
 3. Vision replies ``DAOAI_MODE_CALIBRATION`` acknowledge the manual calibration mode.
 
-4. Robot sends ``RC_MANUAL_ACCUMULATE_POSE`` and requests ``Vision``  to enter accumulate mode, accumulates the poses and images for calibration. Then ``Vision`` replies 
+4. Robot sends ``RC_MANUAL_ACCUMULATE_POSE`` and requests **Vision**  to enter accumulate mode, accumulates the poses and images for calibration. Then **Vision** replies 
 ``DAOAI_MODE_CALIBRATION`` to continue manual calibration, robot moves to next waypoint.
 
-5. After robot traversed all the waypoints, robot will send ``RC_STOP_MANUAL_CALIBRATION`` to exits ``Vision`` from manual calibration mode.
+5. After robot traversed all the waypoints, robot will send ``RC_STOP_MANUAL_CALIBRATION`` to exits **Vision** from manual calibration mode.
 
 .. image:: Images/manual_cali_flow.png
     :align: center
@@ -34,19 +34,19 @@ The flow of Guidance Calibration is like followed:
 
 2. Robot sends ``RC_GUIDANCE_CALIBRATION`` to request start of Guidance Calibration.
 
-3. ``Vision`` collects the first pose then calculate and show the next recommanded calibration pose.
+3. **Vision** collects the first pose then calculate and show the next recommanded calibration pose.
 
-4. Robot would be manually moved by user to the recommanded pose, then collect this pose with ``RC_GUIDANCE_CALIBRATION`` command to ``Vision`` .
+4. Robot would be manually moved by user to the recommanded pose, then collect this pose with ``RC_GUIDANCE_CALIBRATION`` command to **Vision** .
 
-5. Based on the pose sent back from robot, ``Vision`` will calculate and decide if it is a good pose:
+5. Based on the pose sent back from robot, **Vision** will calculate and decide if it is a good pose:
 
-	*a. if this pose is acceptable, ``Vision`` sends ``DAOAI_GUIDANCE_CALIBRATION_GOOD`` as well as showing the next recommanded pose for user;
+	*a. if this pose is acceptable, **Vision** sends ``DAOAI_GUIDANCE_CALIBRATION_GOOD`` as well as showing the next recommanded pose for user;
 
-	*b. if this pose is not good enought, ``Vision`` would recalculate the current pose then output the recalculated pose showing to user, user should move to this pose then repeat the calculation;
+	*b. if this pose is not good enought, **Vision** would recalculate the current pose then output the recalculated pose showing to user, user should move to this pose then repeat the calculation;
 
-6. Repeats tje 4-5 step until ``Vision`` has collected enough poses to perform final calibration.
+6. Repeats tje 4-5 step until **Vision** has collected enough poses to perform final calibration.
 
-7. After the accumulations, ``Vision`` sends ``DAOAI_DONE_GUIDANCE_CALIBRATION`` to terminate Guidance Calibration process on robot.
+7. After the accumulations, **Vision** sends ``DAOAI_DONE_GUIDANCE_CALIBRATION`` to terminate Guidance Calibration process on robot.
 
 .. image:: Images/guidance_cali_flow.png
     :align: center
@@ -60,13 +60,13 @@ The flow of Auto Calibration is like followed:
 
 1. Setup the first calibration pose
 
-2. Robot sends ``RC_DAOAI_NO_COMMAND`` with current pose to ``Vision`` and ``Vision`` would reply ``DAOAI_UNKNOWN_COMMAND`` . This is the acknowledge step for Auto Calibration between ``Vision`` and robot.
+2. Robot sends ``RC_DAOAI_NO_COMMAND`` with current pose to **Vision** and **Vision** would reply ``DAOAI_UNKNOWN_COMMAND`` . This is the acknowledge step for Auto Calibration between **Vision** and robot.
 
-3. Robot sends ``RC_START_AUTO_CALIBRATION`` to initate the calibration process, ``Vision`` replies ``DAOAI_MODE_AUTO_CALIBRATION`` to enter Auto Calibration process.
+3. Robot sends ``RC_START_AUTO_CALIBRATION`` to initate the calibration process, **Vision** replies ``DAOAI_MODE_AUTO_CALIBRATION`` to enter Auto Calibration process.
 
-4. Robot follows this status, it sends back the pose(after moving to the calibration pose) and command ``RC_ACCUMULATE_POSE`` to ``Vision`` . ``Vision`` will collect this pose and calculate the next calibration mode, replies ``DAOAI_MODE_AUTO_CALIBRATION`` and the calculated pose.
+4. Robot follows this status, it sends back the pose(after moving to the calibration pose) and command ``RC_ACCUMULATE_POSE`` to **Vision** . **Vision** will collect this pose and calculate the next calibration mode, replies ``DAOAI_MODE_AUTO_CALIBRATION`` and the calculated pose.
 
-5. Repeating step 4 until ``Vision`` has collected enough poses for calibration result. Then, ``Vision`` sends ``DAOAI_DONE_AUTO_CALIBRATION `` to terminate the Auto Calibration process at robot side.
+5. Repeating step 4 until **Vision** has collected enough poses for calibration result. Then, **Vision** sends ``DAOAI_DONE_AUTO_CALIBRATION `` to terminate the Auto Calibration process at robot side.
 
 .. image:: Images/auto_flow.png
     :align: center
@@ -80,18 +80,18 @@ The flow of picking process is like followed:
 
 1. Setup the detection pose. When the camera is capturing image, robot needs to stay outside of the scene. Hence, this pose is where the robot should be when camera is capturing the image.
 
-2. Robot sends ``RC_DAOAI_CAPTURE_AND_PROCESS`` to initating the start of picking process, this is acknowledge stage. ``Vision`` replies back ``DAOAI_DETECTION`` to inform it is at picking process.
+2. Robot sends ``RC_DAOAI_CAPTURE_AND_PROCESS`` to initating the start of picking process, this is acknowledge stage. **Vision** replies back ``DAOAI_DETECTION`` to inform it is at picking process.
 
-3. Robot sends ``RC_DAOAI_GET_NEXT_OBJECT`` to request the detection results from ``Vision`` . Based on the detection results, there are 3 possibilities from the detection: image capture failed, no objects detected on scene and objects found.
-So that, ``Vision`` has 3 status to reply: ``DAOAI_NO_IMAGE_CAPTURED`` , ``DAOAI_NO_OBJECT_FOUND`` and  ``DAOAI_OBJECTS_FOUND`` respectively. 
+3. Robot sends ``RC_DAOAI_GET_NEXT_OBJECT`` to request the detection results from **Vision** . Based on the detection results, there are 3 possibilities from the detection: image capture failed, no objects detected on scene and objects found.
+So that, **Vision** has 3 status to reply: ``DAOAI_NO_IMAGE_CAPTURED`` , ``DAOAI_NO_OBJECT_FOUND`` and  ``DAOAI_OBJECTS_FOUND`` respectively. 
 
-4. According to ``Vision`` replies, robot would perform picking:
+4. According to **Vision** replies, robot would perform picking:
 
-	a. When ``Vision`` has failed capturing image, robot holds still and sends ``RC_DAOAI_GET_NEXT_OBJECT`` to request detection again, and repeats;
+	a. When **Vision** has failed capturing image, robot holds still and sends ``RC_DAOAI_GET_NEXT_OBJECT`` to request detection again, and repeats;
 
-	b. When ``Vision`` cannot detect any objects, robot holds still and sends ``RC_DAOAI_GET_NEXT_OBJECT`` to request detection again, and repeats;
+	b. When **Vision** cannot detect any objects, robot holds still and sends ``RC_DAOAI_GET_NEXT_OBJECT`` to request detection again, and repeats;
 
-	c. When ``Vision`` detected objects in scene, robot will receive the pose, and robot performs picking. Then, robot moves back to detection pose. It sends back ``RC_DAOAI_GET_NEXT_OBJECT`` waiting for next object pose, and repeats;
+	c. When **Vision** detected objects in scene, robot will receive the pose, and robot performs picking. Then, robot moves back to detection pose. It sends back ``RC_DAOAI_GET_NEXT_OBJECT`` waiting for next object pose, and repeats;
 
 .. image:: Images/picing_flow.png
     :align: center

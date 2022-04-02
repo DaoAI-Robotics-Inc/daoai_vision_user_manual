@@ -1,7 +1,7 @@
 The Vision Interface
 =================
 
-The Vision Interface has some variables and functions to communicate between ``Vision`` and robot. 
+The Vision Interface has some variables and functions to communicate between **Vision** and robot. 
 This interface should be able to communicate with different type of robots, no matter what language the robot is scrpting in.
 
 These are the examples:
@@ -9,25 +9,54 @@ These are the examples:
 .. toctree::
    :caption: Type of Interface
 
-   pick
    cali
+   pick
 
-Variables
+|
+
+Global Variables
 ------------------
+
+Common Variables
+************
+
+daoai_socket_name
+~~~~~~~~~~~~
+This is the name if socket which is "daoai" at all time.
+
+daoai_tcp_pose
+~~~~~~~~~~~~
+This variable is a vector which contains position and rotation p[0,0,0,0,0,0,0]. They are position x, y, z and rotations(different robot uses different length of this vector, for example, **UR** uses 6 of them; **ABB** uses 7 of them).
+
+
+Vision
+***********
+
+daoai_object_type & daoai_remaining_obj & daoai_payload 
+~~~~~~~~~~~~
+
+These are the 6 payloads of **Vision** replies. ``daoai_object_type`` is referred to ``payload_1`` , ``daoai_remaining_obj`` is ``payload_2`` , ``daoai_payload_x`` are referred payload -> 3, 4, 5, 6.
 
 daoai_status
 ~~~~~~~~~
-This variable is the command from ``Vision`` . Robot is able to check this variable after receiving message from ``Vision`` .
-The status essential in communication since it is to determine which process ``Vision`` is currently in. 
+This variable is the command from **Vision** . Robot is able to check this variable after receiving message from **Vision** .
+The status essential in communication since it is to determine which process **Vision** is currently in. 
 It also represents the result from previous command. For example, if robot is under picking mode, robot requests the objects location, 
-``Vision`` has different reply based on its detection results: object found, object not found and image capture failure. 
-Hence, this status is important to determine the current process between ``Vision`` and robot.
+**Vision** has different reply based on its detection results: object found, object not found and image capture failure. 
+Hence, this status is important to determine the current process between **Vision** and robot.
+
+Robot
+***********
+
+payload_1 & payload_2
+~~~~~~~~~~~~~~
+These are the payloads of the message.
 
 daoai_r_command
 ~~~~~~~~~~~
-This variable is the command from robot. Robot sends command with/without poses to ``Vision`` , according to this command, ``Vision`` is able to determine what is the message and how to process this message. 
-This is useful when robot is running on different script with ``Vsion`` flowchart: if robot is trying to perform calibration waypoints, but ``Vision`` is trying to detect object and perform picking; their commands are 
-different in this communication. So that robot is able to detect the pose sent back from ``Vision`` is in wrong process. This is able to protect unexpected errors and collision. 
+This variable is the command from robot. Robot sends command with/without poses to **Vision** , according to this command, **Vision** is able to determine what is the message and how to process this message. 
+This is useful when robot is running on different script with ``Vsion`` flowchart: if robot is trying to perform calibration waypoints, but **Vision** is trying to detect object and perform picking; their commands are 
+different in this communication. So that robot is able to detect the pose sent back from **Vision** is in wrong process. This is able to protect unexpected errors and collision. 
 
 For more details about these commands, please see *Link . 
 

@@ -1,8 +1,8 @@
 Socket
 =================
 
-The communication between robot and ``Vision`` is based on low level interface on TCP/IP socket. 
-TCP provide stable communication protocol, which is ideal for robot and ``Vision`` .
+The communication between robot and **Vision** is based on low level interface on TCP/IP socket. 
+TCP provide stable communication protocol, which is ideal for robot and **Vision** .
 
 Connections 
 ----------------
@@ -22,16 +22,16 @@ Connections
 
 
 Just like the Client-Server pattern, server is waiting for the requests from client. 
-``Vision`` is the server in this case, so the communication would start from robot.
-Robot sends a request to ``Vision`` , this request should include command and payloads. 
-``Vision`` determines the process by checking command. after processing data on ``Vision`` side, it replies back reponse, this reponse should include status and payloads. 
+**Vision** is the server in this case, so the communication would start from robot.
+Robot sends a request to **Vision** , this request should include command and payloads. 
+**Vision** determines the process by checking command. after processing data on **Vision** side, it replies back reponse, this reponse should include status and payloads. 
 Robot also checks this status, based on this response to preform moving, picking or holding still. 
 
-The IP address of server is the IP of workstation which the ``Vision`` is running on. Port number must to identical for robor and `Vision`` , otherwise they will not be able to communicate.
+The IP address of server is the IP of workstation which the **Vision** is running on. Port number must to identical for robor and `Vision`` , otherwise they will not be able to communicate.
 
 Protocols
 ----------------
-Requesst and responses messages between a robot and ``Vision`` have a fixed size. 
+Requesst and responses messages between a robot and **Vision** have a fixed size. 
 A fixed-size message protocol has the advantage that it is easy to implement on the robot side, even with limited programming features.
 
 .. note::
@@ -77,7 +77,7 @@ Response Message
 
 Commands
 ----------------
-These are the commands which robot sends to ``Vision`` :
+These are the commands which robot sends to **Vision** :
 
 Manual Calibration
 ~~~~~~~~~~~~~~~~

@@ -1,7 +1,7 @@
 Language Issue(Possible Workspace Corruption)
 ================
 
-Since ``Vision`` has not only English version, we would have issue if the workstation does not support other languages.
+Since **Vision** has not only English version, we would have issue if the workstation does not support other languages.
 
 On the right botton corner(usually there), click on the ``ENG`` logo to bring up the languages selections.
 
