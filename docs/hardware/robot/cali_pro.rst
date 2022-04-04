@@ -1,7 +1,7 @@
 Calibration Program
 ===============
 
-This page is about **Universal Robot** (alias as UR) specific instruction of Calibration. Please make sure you have read `Installation and Setup <link URL>`_ and `Calibration <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/complete-vision-guidance/overview.html#calibration>`_.
+This page is about **Universal Robot** (alias as UR) specific instruction of Calibration. Please make sure you have read `Installation and Setup <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/hardware/robot/ur_setup.html>`_ and `Calibration <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/hardware/robot/cali_pro.html>`_.
 
 .. Note ::
 	The Calibration programs in default DaoAI package is ready to use. If user does not plan to change the Calibration process flow, we recommend to leave the program as it is. 

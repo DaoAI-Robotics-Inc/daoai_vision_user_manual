@@ -1,10 +1,10 @@
 Picking Program
 ================
 
-This page is about **Universal Robot** (alias as UR) specific instruction of picking process. Please make sure you have read `Installation and Setup <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/hardware/robot/UR.html#system-setup>`_ and `Picking <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/complete-vision-guidance/picking/overview.html>`_.
+This page is about **Universal Robot** (alias as UR) specific instruction of picking process. Please make sure you have read `Installation and Setup <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/hardware/robot/ur_setup.html>`_ and `Picking <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/complete-vision-guidance/picking/overview.html>`_.
 
 .. Note ::
-	The Calibration programs in default DaoAI package is ready to use. If user does not plan to change the picking process flow, we recommend to leave the program as it is. 
+	The Picking programs in default DaoAI package is ready to use. If user does not plan to change the picking process flow, we recommend to leave the program as it is. 
 	If user decides to modify the program, please make sure it matches the communication protocols with DaoAI Vision side. For detail of communication details please see `Socket <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/hardware/robot/socket.html>`_ and `Communication Flow <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/hardware/robot/comm.html>`_ .
 
 Program
