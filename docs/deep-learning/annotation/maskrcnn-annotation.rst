@@ -6,7 +6,7 @@ It is commonly used for computer vision tasks and also provides some command lin
 
 Installing LabelMe
 ------------------
-Use the downloadable executable found here or see installation instructions at https://github.com/wkentaro/labelme#installation in order to set up LabelMe
+Use the downloadable executable `found here <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/xchen_daoai_com/Ecmqz3JU-WVCv_Po7uuE-lABNDx6zXs44VY-tE8OP9ZkqQ?e=VPzNwI>`_ or see installation instructions at https://github.com/wkentaro/labelme#installation in order to set up LabelMe
 
 Using LabelMe
 -------------

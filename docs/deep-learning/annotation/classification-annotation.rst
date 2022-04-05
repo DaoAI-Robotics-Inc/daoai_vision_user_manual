@@ -6,7 +6,7 @@ For our classification annotation, we use a simple annotater called tkteach.
 Installing tkteach
 ------------------
 Prior to installing tkteach, you must have an environment set up with Python, PIL, and tkiner.
-Once you have that environment set up, go to https://github.com/rmones/tkteach and clone the repository somewhere accessible.
+Once you have that environment set up, go to `this link <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/xchen_daoai_com/EbnJb56ga5VGmjSjkV2279wB3andyLOdtg-xfdDzBLe2Tg?e=UOp96H>`_ and download the .zip file, OR go to https://github.com/rmones/tkteach and clone the repository somewhere accessible.
 
 
 
