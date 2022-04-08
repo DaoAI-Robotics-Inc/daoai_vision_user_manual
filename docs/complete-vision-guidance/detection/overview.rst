@@ -18,6 +18,7 @@ DaoAI has two general detection engines, each optimized for a different type of 
     mod-finder/mod-finder-overview
     mono-3d
     mod-finder/good_model
+    boxes/overview
 
 
 Deep learning engines
