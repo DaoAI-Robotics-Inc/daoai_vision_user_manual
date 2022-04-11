@@ -35,7 +35,7 @@ Teaching an object model is important step when setting up the DaoAI Mod Finder 
 Mod Finder needs a good model to identify objects in scene. Mod Finder uses RGB or Depth image to detect objects, therefore anything captured in camera could be possibly the oobject. 
 How can Vision recognizes these objects? By comparing from the model and the image. Hence, good model plays the essential role in this process.
   
-The rest of this article is about how to define model. If you want to know what is good model, please see `How to define good models<good_model>`_
+The rest of this article is about how to define model. If you want to know what is good model, please see `How to define good models <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/complete-vision-guidance/detection/mod-finder/good_model.html>`_
 
 
 Placing the object under the camera
