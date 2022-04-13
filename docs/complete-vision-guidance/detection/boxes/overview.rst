@@ -18,7 +18,7 @@ Therefore we have **Deep Learning Engine** and **Box Volume Estimate** to help u
 Pipeline Overview
 ------------------
 
-.. image:: images/Pipeline.PNG
+.. image:: images/pipeline.PNG
     :align: center 
 
 |
@@ -29,7 +29,7 @@ As the image above shows, the Box Volume Estimate is straight forward pipeline f
     #. Cropping out the point clouds using binary masks from the output segement from DL Segment;
     #. Applying the segement and clouds to generate the object in cloud relations;
 
-.. tip:: You can also learn about the main ideas behind the Box Volume Estimate by watching this video tutorial. (TODO, record a video)
+.. tip:: You can also learn about the main ideas behind the Box Volume Estimate by watching this video tutorial. (TODO, record a video) You can also checkout this sample `workspace <https://drive.google.com/uc?export=download&id=1S4iL9rzlIMeGlSVbGf4RZbIEkDROQJNR>`_.
 
 Deep Learning Model
 ------------------

@@ -18,8 +18,6 @@ DaoAI has two general detection engines, each optimized for a different type of 
     mod-finder/mod-finder-overview
     mono-3d
     mod-finder/good_model
-    boxes/overview
-
 
 Deep learning engines
 ~~~~~~~~~
@@ -28,6 +26,12 @@ DaoAI also offers detection engines optimized with deep learning techniques for 
 * **Boxes**, which is specially designed for detecting box on a pallet.
 * **AnyPick**, which is specially designed for picking any type of object outside from the bin, it doesn't pick the same location everytime for any part, but it tries to pick from any pickable region.
 * **KeyPoint**, which is designed for detecting object that hard to use general engines and reduce the time user configure the detection parameters. The overall logic allows user to annotate the point on the object, then it can predict the object position out from the points on the image.  
+
+.. toctree:: 
+    :hidden:
+
+    boxes/overview
+    shape-finder/overview
 
 Other engines
 ~~~~~~~~~~~~~
