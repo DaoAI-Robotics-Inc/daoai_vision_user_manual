@@ -6,9 +6,13 @@ Simple Value, Expression, Advanced Expression
 
 Data in Vision software is addressed by expression. Expressions can be categorized into 3 types:
 
-* Expressions starting with "In/". These are the input of the nodes. Most of the time these type of expression do not have valid data, but are linked to other expression. 
+* Expressions starting with "In/". These are the input of the nodes. Most of the time these are linked to other expression, or can be set by input. And it can be passed to another node as input as well. And the another node will just use the same input as this node. 
 * Expressions starting with "Out/". These are the output of the nodes. These expressions contain valid data only after the node is run.
 * Expressions starting with "Variable/". These expressions contain globally available values.
+
+.. tip:: .. image:: images/link_input.png
+	As the image shows, if B node input used A node's output port **A_out_1**, then C node linked B node's input port **B_in_1**, then the C node input **C_in_1** is actually linked to **A_out_1**.
+
 
 In link value dialog, you can set the value of input directly with simple value, or link it to an expression, or link it to an advanced expression (a python script that evalutes to an expression). 
 Check :ref:`Python Interpreter and Advanced Expressions` for details on advanced expression.
@@ -52,8 +56,11 @@ Complex data types can be constructed using basic data types.
 
 You can check the type of the expression or the child fields of a data type (if any) in quick expression dialog.
 
-.. image:: image/complex_type.PNG
+.. image:: images/complex_type.png
    :width: 650
+
+.. tip:: .. image:: images/access_container.png
+	As the image shows, if it's a map, you could specify the string value inside **['']**, and to access the element inside the vector, you could specify the interger inside **[]**.
 
 Save/load data from files
 --------------------------
@@ -68,5 +75,5 @@ In addition to processing data in runtime, vision software also supports saving 
 * Bag files (.bag). A bag file contains at least one of : image, depth image, point cloud, pose3d, camera intrinsics.
 * Calibration result files (.yml). These files contains the result of a calibration, including the hand-eye configuration, accuracy, relative positions of the calibrated objects (pose3d).
 * Reader cache files (.reader). Contains the result of a reader node run. Can contain one of : image, depth image, point cloud, mesh.
-* Deep learning files. These files contains deeplearning models for deep learning releated nodes. These are read-only files as Vision won't produce such files.
+* Deep learning files (.pt). These files contains deeplearning models for deep learning releated nodes. These are read-only files as Vision won't produce such files.
 

@@ -41,7 +41,7 @@ You will first click on the **platform** button, then open the platform config p
 
 3. Use mod finder node 
 ~~~~~~~~~~~~~~~~~
-.. image:: images/new_images.png
+.. image:: images/new_mod_finder.png
    :width: 100%
 .. image:: images/link-data.png
    :width: 100%

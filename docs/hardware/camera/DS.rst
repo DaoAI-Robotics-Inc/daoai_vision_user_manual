@@ -1,4 +1,4 @@
-DaoAI Camera (DS)
+DaoAI Camera
 =================
 
 Content
@@ -27,12 +27,11 @@ On the backside, the camera has one 3.0 USB port (1), one power source (2), and 
 |
 
 
-Connect the camera via DaoAI Camera Studio
+Connect the camera via DaoAI Camera Studio (physical camera)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Connection**
-
-Clicking on the DaoAI Camera Studio icon to open the software, pressing the refresh button, searching, and updating the available cameras.  If there is an available camera in the list, by clicking on the list box on the left side, the serial number of that camera will pop up in the box. Then, the operator can click “Connect” button to connect the camera with the studio software. 
+For more detailed steps to use the `DaoAI Camera Studio Manual <https://daoai-robotics-inc-daoai-camera-studio-user-manul.readthedocs-hosted.com/en/english/camera-overview/index.html>`_ .
+First clicking on the DaoAI Camera Studio icon to open the software, pressing the refresh button, searching, and updating the available cameras.  If there is an available camera in the list, by clicking on the list box on the left side, the serial number of that camera will pop up in the box. Then, the operator can click “Connect” button to connect the camera with the studio software. 
 
 .. image:: camera-image/Picture3.png
    :width: 100%
@@ -108,7 +107,7 @@ Another general function that has been used quite often is the “Gap Fill” fu
 
 **Saving the studio file**
 
-When finishing editing the settings, to save the image configuration and loaded into the Vision software for capturing the real image, the operator can click the “File” button and select the “Save Setting As” to save the setting as cfg.
+When finishing editing the settings, to save the caputring configuration and loaded into the Vision Studio for using it for real detection project, the operator can click the “File” button and select the “Save Setting As” to save the setting as cfg. Remember the name of the ".cfg" file, as you will need to load it in the Vision Studio. 
 
 .. image:: camera-image/Picture15.png
    :width: 100%
@@ -135,10 +134,6 @@ In the New Project dialog, the operator should name the project and select the f
 |
 
 Once finishing creating the new project, the operator should click the Platform to config the camera, robot, and server settings.  
-
-.. image:: camera-image/Picture18.png
-   :width: 100%
-|
 
 All three categories are listed on the left side of the dialog and highlighted by the blue bar. The operator can add cameras, robots, or servers by pressing the “+” button. 
 
@@ -171,7 +166,7 @@ Once the camera has been connected with other nodes, the operator should select 
 Connect the virtual camera via DaoAI Vision Studio
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The operator can load dcf files that were generated in the past as the camera output. To do so, the operator should check the Virtual Camera box, and choose the option to load the dcf files. The operator can either load the entire dcf folders or just load a single dcf file. Then press the “Connect” button to connect the camera node with the other node.  
+The operator can load dcf/daf files that were generated in the past as the camera output. To do so, the operator should check the Virtual Camera box, and choose the option to load the dcf files. The operator can either load the entire dcf folders or just load a single dcf file. Then press the “Connect” button to connect the camera node with the other node.  
 
 .. image:: camera-image/Picture24.png
    :width: 100%

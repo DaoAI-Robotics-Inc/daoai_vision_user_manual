@@ -1,3 +1,3 @@
 Sphere Calibration
 ===============
-Follow the same pattern as Circle board calibration 
+Use the sphere calibration template to explain the eye-in-hand and eye-to-hand calibration

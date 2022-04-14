@@ -1,7 +1,12 @@
 3D Transformation Tutorial
 ==========================
+
+When reading this page, we assume you have understood the :ref:`3d transformation concept`
+ 
+
 There are three objects, A/B/C. A sits on the world origin.
 Known that:
+
 * [B in A] = [100, 100, 50, 60, 0, 0]
 * [C in B] = [0, 0, -40, 0, 0, 0]
 
@@ -131,7 +136,7 @@ Follow the detailed procedure and work on your end as well.
     .. image:: images/3d-dis-pose-result.png
         :align: center
 
-Extended Question
+Further Question
 -----------------
 What if we want to only gather the X and Y of this pose, and ignoring z and rotation?
 

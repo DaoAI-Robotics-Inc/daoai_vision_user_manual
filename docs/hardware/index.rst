@@ -2,7 +2,7 @@ Hardware
 =========
 
 
-This section covers the hardware components for the whole system
+This section covers the hardware components for the whole system. 
 
 .. toctree::
    :maxdepth: 2

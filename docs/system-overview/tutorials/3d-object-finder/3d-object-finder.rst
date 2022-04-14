@@ -2,7 +2,7 @@
 ----------------
 Objective
 ~~~~~~~~~
-The 3D Object Finder Node aims to consolidate several existing PPF-related nodes, including Model Processing, 3D Detection, and Edge Extraction, into a single, feature-rich node.
+This tutorial is to guide you to use the 3d object finder node to locate the object using the features of the cloud. 
 
 Steps
 ~~~~~~

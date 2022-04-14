@@ -13,13 +13,14 @@ Pose stands for the position and rotation.
 
 **Rotation** is represented by Euler angles(Rx, Ry, Rz) or Quaternions (a, b, c, w). Vision Studio use Euler angles by default.
 
-A transformation or pose of target coordinate in reference coordinate is represented by A in B .
+A transformation or pose of target (A) coordinate in reference (B) coordinate is represented by A in B .
 
-.. hint:: For an example, **Obj** is at the origin of reference coordinate which is (0, 0, 0, 0, 0, 0), and after transformation [**Obj'** in **Obj**] = [100, 100, 50, 60, 0, 0]
-    
+.. hint:: For example, **Obj** initially is at the origin of reference  coordinate (B) which is (0, 0, 0, 0, 0, 0), and we move the **Obj** to the position [100,100,50]. Afterwards, we rotate the **Obj** along it's **X** axis for 60 degree. The final pose of **Obj** is [100, 100, 50, 60, 0, 0]. 
+        
     .. image:: images/3d-pose-example.png
         :scale: 80 %
-    
+.. caution:: Talking about the orientation, we usually use Euler order to represent the orientation. Ane euler angle will need to have a specified rotation order. Different robot may have different conventions, for example ABB robot used the ZYX sequence. For more details, refer to the `page <https://en.wikipedia.org/wiki/Euler_angles>`_ 
+
 Sources of pose and transformation in Vision Studio:
  * Robot Read
  * Calibrations (Calibration, Sphere Calibration, DA Calibration)
