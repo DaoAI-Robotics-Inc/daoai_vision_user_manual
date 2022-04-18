@@ -11,18 +11,18 @@ Program
 --------------
 First of all, we opens up the Manual_Calibration.urp, connect robot with **Vision**.
 
-.. image:: Images/picking_file.PNG
+.. image:: Images/picking_file.png
     :align: center
     
 |
-.. image:: Images/picking_connect.PNG
+.. image:: Images/picking_connect.png
     :align: center
     
 |
 
 The program flow would looks like this:
 
-.. image:: Images/picking_pro.PNG
+.. image:: Images/picking_pro.png
     :align: center
     
 |
@@ -63,18 +63,18 @@ Execute Picking
 
 Calibration is required for accurate picking
 
-.. image:: Images/robot_speed.PNG
+.. image:: Images/robot_speed.png
     :align: center
     
 Speed at 100% is pretty quick. While at experimental stage, set the speed below 30% to observe the robot movement.
 
-.. image:: Images/robot_tcp.PNG
+.. image:: Images/robot_tcp.png
     :align: center
 
 TCP setting is in ``Installation`` tab. The green box area is the TCP in flange relationship, at default, TCP is centre point of flange. Red box area is the Payload weight, this should set to a correct weight of the object. 
 If this Payload is larger than object, robot might have unexpected movement. Hence, **Make Sure TCP** and **Payload** are Set **Correctly**.
 
-.. image:: Images/picking_vis.PNG
+.. image:: Images/picking_vis.png
     :align: center
 
 Checking the Visualize node in **Vision** is able to see the virtual picking pose.

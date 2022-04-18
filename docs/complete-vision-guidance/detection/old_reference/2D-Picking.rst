@@ -8,7 +8,7 @@ Defining a good model is essential for Detection, a good model can help the syst
 Mod Finder Node is detecting object from image RGB and depth. When adding Mod Finder Node, system will ask which source to use.
 2D is taking image RGB as input, and 3D is depth image. In this case, system takes RGB image as input, so that choose 2D. Console with print the message with how many objects found, also displaying the object in the image. 
 
-.. image:: Images/2d_detect.PNG
+.. image:: Images/2d_detect.png
     :align: center
     
 |
@@ -22,7 +22,7 @@ Double click on the model name brings up the Model Param Configuration dialog. T
 
 In 2D Picking, we can use ``Calibration 2D`` Node to generate the reference point for objects. Choosing ``Project`` mode, taking ``Image`` and ``Mod Finder`` results as inputs, refering with Calibration Node. 
 
-.. image:: Images/2d_cali_p.PNG
+.. image:: Images/2d_cali_p.png
     :align: center
     
 |

@@ -36,7 +36,7 @@ We use this simple workspace to illustrate how we can use recipe. In this worksp
 to a depth image, based on this depth image mod finder finds the 3d locations of defined objects in the camera scene. By default, we have only 1 recipe, and no
 nodes store info in recipe now.
 
-.. image:: ../../_static/images/recipe/Workspace.PNG
+.. image:: ../../_static/images/recipe/Workspace.png
    :width: 100%
 
 Add/Remove Recipe, Add Node to Recipe
@@ -45,7 +45,7 @@ Add/Remove Recipe, Add Node to Recipe
 From the recipe panel on the bottom of the mainwindow you can add and remove recipe. To tell a node to store its information in recipes, right click on the node
 and select "Add Node To Recipe". Once that's successful, you will see a small R icon on the top left of the node.
 
-.. image:: ../../_static/images/recipe/add_node_to_recipe.PNG
+.. image:: ../../_static/images/recipe/add_node_to_recipe.png
    :width: 40%
 
 Switch Recipes
@@ -54,12 +54,12 @@ Switch Recipes
 Now we have two recipes are we want to define a model for mod finder node for each recipe. In recipe 1,
 We run the flow chart from the start to mod finder node, and define a model 
 
-.. image:: ../../_static/images/recipe/model_and_scene_1.PNG
+.. image:: ../../_static/images/recipe/model_and_scene_1.png
    :width: 100%
 
 Double click recipe_2 in the recipe panel to switch to recipe_2, re-run the process to define another model
 
-.. image:: ../../_static/images/recipe/model_and_scene_2.PNG
+.. image:: ../../_static/images/recipe/model_and_scene_2.png
    :width: 100%
 
 Now switch back to recipe_1, you should see the first model in the mod finder node. Now we have two recipes to search for different models.
@@ -70,7 +70,7 @@ Load Recipe Node
 All the creation and definition work of the recipes must be done before the project deployed to the field. However, users are able to swith recipe automatically using the 
 load recipe node.
 
-.. image:: ../../_static/images/recipe/recipe_node.PNG
+.. image:: ../../_static/images/recipe/recipe_node.png
    :width: 100%
 
 When the load recipe node is run, it loads the recipe in its recipe table specified by the input index. You can add or remove recipe entry in the table by clicking add or remove button.

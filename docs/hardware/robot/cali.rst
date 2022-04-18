@@ -1,4 +1,4 @@
-Generic Calibration
+Calibration Program
 ===============
 
 This is the generic logic of Calibration for all kinds of robot. 
@@ -15,17 +15,15 @@ In pseudo code:
 
 	Calibration():
 		#Start Communication
-		open_socket()
+		daoai_start_manual_calibration() #Opens socket, sends start signal to Vision
 
 		#Accumulate Poses
 		if(vision is in Calibration_mode):
-			loop until(No_more_waypoints):
-				send(current_pose)
+			loop daoai_manual_accumulate_calibration():
                 move_robot(waypoint_n)
 			end_of_loop
 
 		#Depending on the type of Calibration, **Vision** or robot will trigger this stop signal
         
-		send/receive(done_Calibration_message)
-		close_socket()
+		daoai_stop_manual_calibration() # Close socket and halt robot program
 		end_of_function

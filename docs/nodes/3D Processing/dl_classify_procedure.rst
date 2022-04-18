@@ -10,7 +10,7 @@ The steps to use DL classification node:
 2. For each object in 1. Use DL classification to determine the type of the object
 3. Based on object label output, do different actions
 
-.. image:: ../../_static/images/3d_process/dl_classify/sample_flowchart.PNG
+.. image:: ../../_static/images/3d_process/dl_classify/sample_flowchart.png
    :width: 100%
 
 

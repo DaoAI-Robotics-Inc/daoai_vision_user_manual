@@ -4,7 +4,7 @@ Reader Node and Writer Node
 Reader Node
 -------------------
 
-.. image:: ../../_static/images/util/assemble_bag.PNG
+.. image:: ../../_static/images/util/assemble_bag.png
    :width: 100%
 
 The Reader Node allows for reading common file types for use in the flowchart.
@@ -55,7 +55,7 @@ Writer Node
 
 Writer nodes write certains types of data to files in disk
 
-.. image:: ../../_static/images/util/assemble_bag.PNG
+.. image:: ../../_static/images/util/assemble_bag.png
    :width: 100%
 
 Different from the reader node you have to choose which type of data you want to store. Like reader nodes, writer nodes also have single file mode and numbered file mode.

@@ -12,7 +12,7 @@ There are 2 modes of mod finder:
 
 * **Mod Finder Gray**, it finds the defined object on the rgb(gray) image, then use reconstruct feature map the coordinate into 3D space. Finally use the alignment feature to get accurate position. It is suitable to find object has good feature on 2D image, or concatenate it with deep learning feature. 
 
-.. image:: images/tee_gray_image.PNG
+.. image:: images/tee_gray_image.png
     :align: center
     
 |
@@ -24,6 +24,6 @@ There are 2 modes of mod finder:
 
 * **Mod Finder Depth**, it find the defined object on the depth image (paralle projected), then use the alignment feature to get accurate 3D space position. 
 
-.. image:: images/tee_depth_camera.PNG
+.. image:: images/tee_depth_camera.png
     :align: center
     

@@ -1,7 +1,7 @@
 3D Finder Depth Detection
 =====================
 
-.. image:: Images/3d_mod_det_r.PNG
+.. image:: Images/3d_mod_det_r.png
     :align: center
 
 Teach From Camera
@@ -11,28 +11,28 @@ Teach From Camera
 
 In the first ``Switch`` Node, the left side branch is working as defining model. Storing the model cloud into local directory.
 
-.. image:: Images/3d_model_def.PNG
+.. image:: Images/3d_model_def.png
     :align: center
     
 |
 
 ``DA CloudDepth Conv`` Node processes the Point Cloud from ``Cloud Process`` into Depth map. (Note that ``DA CloudDepth Conv`` Node can convert point cloud to depth map; also is able to convert depth map to point cloud. This function can be choosen when adding this node. In this case, we need depth map from point cloud, so that we use DA Point Cloud -> DA Depth Map)
 
-.. image:: Images/3d_da_conv.PNG
+.. image:: Images/3d_da_conv.png
     :align: center
     
 |
 
 The right side branch of first ``Switch`` Node, is setup the bounding box for interest area. System would search the object within this area.
 
-.. image:: Images/3d_scene_box.PNG
+.. image:: Images/3d_scene_box.png
     :align: center
     
 |
 
 Also setting up the reference frame for the scene cloud. This outout would be used by ``Collision Avoidance`` Node in Picking process. Hence, this reference frame is important to keep the Z axis upward from the scene.
 
-.. image:: Images/3d_ref_frame.PNG
+.. image:: Images/3d_ref_frame.png
     :align: center
     
 |
@@ -44,21 +44,21 @@ Defining a good model is essential for Detection, a good model can help the syst
 
 Cloud Process Node will generate a box of area; this area is desingated for the system to search for the model.
 
-.. image:: Images/3d_model_def.PNG
+.. image:: Images/3d_model_def.png
     :align: center
     
 |
 
 Connect Mod Finder Node with Cloud Process, taking ``DA CloudDepth Conv`` Node result as input. Mod Finder Node is detecting object from image RGB and depth. When adding Mod Finder Node, system will ask which source to use. 2D is taking image RGB as input, and 3D is depth image. In this case, system takes depth map as input, so that choose 3D. Console with print the message with how many objects found, also displaying the object in the image.
 
-.. image:: Images/mod_finder_3d.PNG
+.. image:: Images/mod_finder_3d.png
     :align: center
     
 |
 
 Image link is the input user defined for Mod Finder Node. Checking the ``Use labelled mask sequence`` enables the node to use designated mask for the models; commonly taking Deep Learning ouput(DL Segment Node). Total occurence option can be detect all the objects in the image or only one object in the image at a time: if user wants to picking all occurence of objects with single image captured, this option should set to ``All``; on the other hand, picking one object at a time shuold set to ``One`` (default).
 
-.. image:: Images/model.PNG
+.. image:: Images/model.png
     :align: center
     
 |
@@ -76,7 +76,7 @@ Testing the detection of the model
 
 Run the rest of the detection flowchart, and see if ``DA Alignment`` Node is able to detect all the objects and only the objects are detected. In this example, the left top corner T-tube is not detected in ``Mod Finder`` , hence it should also be not aligned in ``DA Alignment`` Node. Also, capture a different image(Or use different picture for virtual camera), and see if all the obejects are detected.
 
-.. image:: Images/3d_da_align.PNG
+.. image:: Images/3d_da_align.png
     :align: center
     
 |

@@ -18,7 +18,7 @@ Therefore we have **Deep Learning Engine** and **Box Volume Estimate** to help u
 Pipeline Overview
 ------------------
 
-.. image:: images/pipeline.PNG
+.. image:: images/pipeline.png
     :align: center 
 
 |
@@ -44,24 +44,24 @@ Define Regoin of interest
 
 Usually the camera field of view will be larger than the region of interest, thus the first step usually is to setup the boundary for the useful information. You could run to the Cloud Process node, and make sure the Adjust Bounding Box options was on in the cloud process display setting. Then execute the Cloud Process node. Then you could adjust the bounding box.
 
-.. image:: images/roi.PNG
+.. image:: images/roi.png
     :align: center 
 
 .. tip:: When adjust the bounding box, you could press **R** to reset to the original view, and blabla for the operation trick
 
-.. image:: images/dynamic_filter.PNG
+.. image:: images/dynamic_filter.png
     :align: center 
 
 Double click on the **Dynamic Box Filter** operation in Cloud Process node, the **Distance Threshold** is the value for depth interest: Vision based on the first valid point cloud, going down(-Z direction) the distance and crop this area, rest of the area outside of this depth would be exclued. 
 
 
-.. image:: images/box_stack.PNG
+.. image:: images/box_stack.png
     :align: center 
 
 For example, when the boxes are stacking up and robot is only able to grab the top boxes; DL would indentify every valid occurences of boxes in scene, we would need to exclude some of the bottom ones. 
 Modify this Threshold until it is able to crop the top level only. Above scenario showing that the left top corner box is at the next level, hence we only want the right box to be picked.
 
-.. image:: images/diff_threshold.PNG
+.. image:: images/diff_threshold.png
     :align: center 
 
 |
@@ -74,7 +74,7 @@ Generate Poses
 Applying Scene Crop node to crop point clouds using binary masks from DL Segment node, outputs the box segments for Box Volume Estimate. 
 Box Volume Estimate uses the segements, origin from the reference frame and scene point cloud to visualize the pose in scene.
 
-.. image:: images/box_output.PNG
+.. image:: images/box_output.png
     :align: center 
 
 |

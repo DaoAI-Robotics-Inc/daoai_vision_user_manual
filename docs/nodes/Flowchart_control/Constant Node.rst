@@ -10,7 +10,7 @@ Description
 ---------
 	Can hold integer, double, string, or boolean values to be referenced in other nodes.
 
-	 .. image:: images/constant_node.PNG
+	 .. image:: images/constant_node.png
 		:scale: 80%	
 		
 	This image shows a Constant Node holding various values. 

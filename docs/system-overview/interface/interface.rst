@@ -63,7 +63,7 @@ The vision software connects the input/output of the nodes via *linking*.
 
 In this image, the data source (in the node config) is the input for node Cloud Process. We can see that Cloud Process Node takes a Point Cloud type input. Clicking on the blue dots on the right opens up Link Expression Dialog (as seen below), where you can link expressions from other nodes. 
 
-.. image:: image/link_dialog.PNG
+.. image:: image/link_dialog.png
    :width: 650
 
 Platform Configuration
@@ -76,7 +76,7 @@ In order to pick up the objects, the workspace must similarly be connected to ro
 
 The vision software provides detection, connection management and configuration of cameras and robots. They are located under platform config page (Platform -> Platform Config Page).
 
-.. image:: image/acc_cam.PNG
+.. image:: image/acc_cam.png
    :width: 650
 
 Camera 
@@ -84,7 +84,7 @@ Camera
 
 Cameras can be added by clicking the **+** button, then **Accept**. You can then double click an already added camera to configure a specific camera.
 
-.. image:: image/cam_config.PNG
+.. image:: image/cam_config.png
    :width: 650
 
 The camera's name (an alias) and the type of the camera is shown at top of the dialog. Check the option *Virtual Camera* unless you are using an actual camera. Users can choose a specific camera from the list using its Serial number and IP. If you cannot find the camera in the list, click on *Update Camera List* to refresh. Camera settings can be loaded from a file (.cfg) which can be generated from DaoAI Studio. Finally, click connect and the camera is connected to the program. 
@@ -94,13 +94,13 @@ Robots
 
 You can manage robot configuration in robot tab.
 
-.. image:: image/robot.PNG
+.. image:: image/robot.png
    :width: 350
 
 Operator View
 ------------------
 
-.. image:: image/operator_view.PNG
+.. image:: image/operator_view.png
    :width: 650
 
 The Operator View can design a user facing application, based on a cell and grid system. Different operator views can be selected from the drop-down menu on the top left. 

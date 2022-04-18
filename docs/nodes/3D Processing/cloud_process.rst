@@ -4,7 +4,7 @@ Cloud Process Node
 
 Cloud process node is a utility node that performs arbitrary number of operations on the input point cloud.
 
-.. image:: ../../_static/images/3d_process/cloud_process/cloud_process.PNG
+.. image:: ../../_static/images/3d_process/cloud_process/cloud_process.png
    :width: 100%
 
 

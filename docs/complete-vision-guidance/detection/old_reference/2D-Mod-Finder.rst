@@ -1,7 +1,7 @@
 3D Finder RGB Detection
 =====================
 
-.. image:: Images/2d_mod_det.PNG
+.. image:: Images/2d_mod_det.png
     :align: center
 
 Teach From Camera
@@ -9,7 +9,7 @@ Teach From Camera
 
 3D Finder RGB Detection uses image RGB to detect object location. Cloud Process Node highlights the designated area(bounding box) for the scene, system will try to detect from this specific area to increase accuracy. Mod Finder Node takes the Cloud ouput and user is able to define the object model. Reconstruct Node will generate the Z coornidate for objects which were detected. The left branch of the Switch Node is used when first define the object cloud/mesh to the system. It saves the object cloud/mesh to local folder in order for future use. Last but not least, DA Alignment Node refines the poses for Picking process, generating the object locations to robot.
 
-.. image:: Images/recon.PNG
+.. image:: Images/recon.png
     :align: center
 
 Teach Good Model
@@ -19,21 +19,21 @@ Defining a good model is essential for Detection, a good model can help the syst
 
 Cloud Process Node will generate a box of area; this area is desingated for the system to search for the model.
 
-.. image:: Images/cloud_box.PNG
+.. image:: Images/cloud_box.png
     :align: center
     
 |
 
 Connect Mod Finder Node with Cloud Process, taking Cloud Process Node result as input, searching for the model within this box area. Mod Finder Node is detecting object from image RGB and depth. When adding Mod Finder Node, system will ask which source to use. 2D is taking image RGB as input, and 3D is depth image. In this case, system takes RGB image as input, so that choose 2D. Console with print the message with how many objects found, also displaying the object in the image.
 
-.. image:: Images/mod_finder.PNG
+.. image:: Images/mod_finder.png
     :align: center
     
 |
 
 Image link is the input user defined for Mod Finder Node. Checking the ``Use labelled mask sequence`` enables the node to use designated mask for the models; commonly taking Deep Learning ouput(DL Segment Node). Total occurence option can be detect all the objects in the image or only one object in the image at a time: if user wants to picking all occurence of objects with single image captured, this option should set to ``All``; on the other hand, picking one object at a time shuold set to ``One`` (default).
 
-.. image:: Images/model.PNG
+.. image:: Images/model.png
     :align: center
     
 |
@@ -50,7 +50,7 @@ Testing the detection of the model
 
 Run the rest of the detection flowchart, and see if ``DA Alignment`` Node is able to detect all the objects and only the objects are detected. Also, capture a different image(Or use different picture for virtual camera), and see if all the obejects are detected.
 
-.. image:: Images/da.PNG
+.. image:: Images/da.png
     :align: center
     
 |

@@ -16,10 +16,10 @@ In order to better estimate the width and height of the boxes, the point cloud m
 * Use set reference frame to define the reference frame. In ring interactor, try to align the x-y plane (purple ring) with the box surface
 * Use normals operation to compute the normal of the point cloud.
 
-.. image:: ../../_static/images/3d_process/box_vol_est/adjust_box.PNG
+.. image:: ../../_static/images/3d_process/box_vol_est/adjust_box.png
    :width: 100%
 
-.. image:: ../../_static/images/3d_process/box_vol_est/set_reference.PNG
+.. image:: ../../_static/images/3d_process/box_vol_est/set_reference.png
    :width: 100%
 
 Tuning Parameters to Get Best Estimation
@@ -28,8 +28,8 @@ Tuning Parameters to Get Best Estimation
 * Use "Lock Z Axes" option so that the z axes of the poses will always be prependicular to the reference plane
 * Use "Use OBB" to estimate the rotated box. Use "Use 2D Correction" to better estimate the 2d rotation of the box
 
-.. image:: ../../_static/images/3d_process/box_vol_est/without_2d_correction.PNG
+.. image:: ../../_static/images/3d_process/box_vol_est/without_2d_correction.png
    :width: 100%
 
-.. image:: ../../_static/images/3d_process/box_vol_est/with_2d_correction.PNG
+.. image:: ../../_static/images/3d_process/box_vol_est/with_2d_correction.png
    :width: 100%

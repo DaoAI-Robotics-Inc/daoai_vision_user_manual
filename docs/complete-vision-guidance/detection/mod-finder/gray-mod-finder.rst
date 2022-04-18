@@ -54,7 +54,7 @@ Usually the camera field of view will be larger than the region of interest, thu
 You could run to the first cloud process node, and make sure the **Adjust Bounding Box** options was on in the cloud process display setting. 
 Then execute the Cloud Process node. Then you could adjust the bounding box. 
 
-.. image:: images/roi.PNG
+.. image:: images/roi.png
     :align: center 
 
 .. tip:: When adjust the bounding box, you could press **R** to reset to the original view, and blabla for the operation trick
@@ -68,7 +68,7 @@ We use the RGB output from the cloud process node, and now we run the Mod Finder
 Then click **add model**, then select a bounding box on the image. 
 To define a model, click the ``+`` sign. 
 
-.. image:: images/plus_sign.PNG
+.. image:: images/plus_sign.png
     :align: center 
 
 |

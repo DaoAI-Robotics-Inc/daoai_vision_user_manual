@@ -17,27 +17,14 @@ In pseudo code:
 
 	Picking():
 		#Start the communication
-		move(detection_pose)
-		open_socket()
-		send(start_picking)
-		receive(detection_mode)
-
-		#Detection and Picking Loop
-		loop until(disconnected):
-
-			#Request Vision Starts Detection
-			send(detection)
-			if(receive is object_found):
-				#Start Picking
-				move(pick_pose)
-				move(drop_pose)
-				#Repeats
-				send(detection)
-
-			#Error Handlings
-			else if(receive is object_not_found):
-				send(detection)
-			else if(receive is image_capture_failed):
-				send(detection)
-		end_of_loop
-		close_socket()
+		move(detection_pose) # Setup a Detection pose for Picking Process
+		if(daoai_find_objects(p1, p2) is objects_found):
+			while(daoai_receive_result(p1, p2)):
+			move_robot(waypoint_n)
+		#Error Handlings
+		else if(receive is object_not_found):
+			repeat Picking() from beginning
+		else if(receive is image_capture_failed):
+			repeat Picking() from beginning
+		
+	end_of_function

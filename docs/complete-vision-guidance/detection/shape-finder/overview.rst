@@ -4,7 +4,7 @@ Shape Finder
 The DaoAI Shape Finder uses designated shape to create 2D object locations, applied to Reconstruct node in order to generate 3D object locations. 
 This is useful when user encounters objects like this:
 
-.. image:: images/object.PNG
+.. image:: images/object.png
     :align: center 
 
 There are 3 circles on the metal part, our goal is to assemble another part through these circles. Hence we need the 3D object locations of these circles. 
@@ -16,7 +16,7 @@ We only need to setup the parameters of certain shapes.
 Pipeline Overview
 ----------------
 
-.. image:: images/pipeline.PNG
+.. image:: images/pipeline.png
     :align: center 
 
 As the image above shows, the Shape Finder detection is straight forward pipeline flow:
@@ -36,7 +36,7 @@ Setup Shape Parameters
 
 Clicking on ``+`` button to add shape. You can see the Shape Prarameter Configuration window. You can edit your shape parameters and type here.
 
-.. image:: images/add_shape.PNG
+.. image:: images/add_shape.png
     :align: center
 
 |
@@ -54,24 +54,24 @@ User is able to choose the shape for your object from **Vision** defined shapes.
 For example, Diamond Shape requires ``Param 2`` and ``Param 3`` inputs, Ring Shape requires ``Param 2`` and ``Param 3`` inputs and Cross Shape requires ``Param 2``, ``Param 3``, ``Param 4`` and ``Param 5`` inputs. 
 Without these inputs, Shape Finder would display errors since there are not enough parameters to detect objects in scene.
 
-.. image:: images/error.PNG
+.. image:: images/error.png
     :align: center
 
 **Min Acceptance** is the acceptance level of objects in scene. We should increase the acceptance higher to ensure it detects the objects and objects only. 
 But if the acceptance is too high, Vision would try to look for objects which has similar shape. 
 This is not so true in real life enviornment since objects might be in different place, when camera captures, the shape of object would slightly change due to angle changes or lighting changes.
 
-.. image:: images/less_found.PNG
+.. image:: images/less_found.png
     :align: center
 
 When setting acceptance too high, detected 2 occurence of objects but there are 3
 
-.. image:: images/many_found.PNG
+.. image:: images/many_found.png
     :align: center
 
 When setting acceptance too low, detected 32 occurence of objects but there are 3
 
-.. image:: images/correct.PNG
+.. image:: images/correct.png
     :align: center
 
 Correct output shouls looks like this.
@@ -86,7 +86,7 @@ Generate Poses
 
 Now we can execute Reconstruct node with Shape Finder outputs to generate 3D picking poses.
 
-.. image:: images/recon.PNG
+.. image:: images/recon.png
     :align: center
 
 Reconstruct node requires **Object Locations** and **Object Masks** from Shape Finder. Then Reconstruct node generates the picking poses for **Collision Avoidance** for further calculations.

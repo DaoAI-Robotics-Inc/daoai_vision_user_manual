@@ -18,7 +18,7 @@ Users can do so by clicking the 'Reset Pallet' button. Additionally, there is au
 
 Users also have the option of electing to manually determine the dimensions of the next box, instead of using the 'Dimensions' output from a Box Volume Estimation node. 
 
-.. image:: ../../_static/images/3d_process/cloud_depth_conversion.PNG
+.. image:: ../../_static/images/3d_process/cloud_depth_conversion.png
    :width: 100%
 
 Input

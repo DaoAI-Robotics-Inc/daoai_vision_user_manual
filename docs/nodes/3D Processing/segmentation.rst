@@ -1,7 +1,7 @@
 Segmentation Node
 ================================
 
-.. image:: ../../_static/images/3d_process/segmentation.PNG
+.. image:: ../../_static/images/3d_process/segmentation.png
    :width: 100%
 
 

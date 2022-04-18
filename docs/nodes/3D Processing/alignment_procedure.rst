@@ -7,7 +7,7 @@ Procedure of Using Alignment Node
 4. Run alignment node to improve 3d poses
 5. (Optional) Use verification node to verify the aligned poses
 
-.. image:: ../../_static/images/3d_process/alignment/alignment_result.PNG
+.. image:: ../../_static/images/3d_process/alignment/alignment_result.png
    :width: 100%
 
 

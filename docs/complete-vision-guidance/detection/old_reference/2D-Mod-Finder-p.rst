@@ -4,7 +4,7 @@
 3D RGB Picking Teach Pose
 -------------
 
-.. image:: Images/3d_rgb_teach.PNG
+.. image:: Images/3d_rgb_teach.png
     :align: center
     
 |
@@ -14,7 +14,7 @@
 1. ``Store`` Node at the beginning will set the variable ``Teaching_Pose`` as ``True`` . 
 This step runs the Detection flowchart as Teach_Pose mode(running the left branch of the ``Switch`` in Detection flowchart).
 
-.. image:: Images/3d_mod_det.PNG
+.. image:: Images/3d_mod_det.png
     :align: center
     
 |
@@ -33,7 +33,7 @@ This step runs the Detection flowchart as Teach_Pose mode(running the left branc
 
 Note: When ``Gripper`` Node needs to redefine a new pose, please delete the existing poses in ``Gripper`` Node, then add a new pose. Otherwise the ``Gripper`` Node might not be able to visualize the new pose.
 
-.. image:: Images/3d_gripper.PNG
+.. image:: Images/3d_gripper.png
     :align: center
     
 |
@@ -42,7 +42,7 @@ The example shown above is transformed with virtual robot therefore the ``Robot 
 
 Note: ONLY adjust this pose when using virtual robot! If using real robot and gripper not aligned with object, should check the real robot pose. 
 
-.. image:: Images/3d_rgb_gripper_skew.PNG
+.. image:: Images/3d_rgb_gripper_skew.png
     :align: center
     
 |
@@ -50,7 +50,7 @@ Note: ONLY adjust this pose when using virtual robot! If using real robot and gr
 
 This is how it looks like the image below.
 
-.. image:: Images/3d_gripper_m.PNG
+.. image:: Images/3d_gripper_m.png
     :align: center
     
 |
@@ -65,7 +65,7 @@ In our example, there are only 2 recipes in this project. Hence carefully set th
 
 For virtual robot, we use ``Hercules`` . 
 
-.. image:: Images/3drgb_herc.PNG
+.. image:: Images/3drgb_herc.png
     :align: center
     
 |
@@ -79,14 +79,14 @@ Both 3D RGB Picking and 3D Depth Picking would need ``pose_generation`` flowchar
 
 ``Collision Avoidance`` Node collects all the poses, and simulate a box boundary for the scene. Output of ``Collision Avoidance`` Node is used as inputs for ``Pick Sort`` Node to generate the transformations for ``Transformation Tree`` Node.
 
-.. image:: Images/3d_rgb_colli.PNG
+.. image:: Images/3d_rgb_colli.png
     :align: center
     
 |
 
 ``Pick Sort`` Node would sort the order for picking up objects. This Node labels all the occurence of objects and the result is used as inputs for ``Transformation Tree`` Node to generate the pose to robot.
 
-.. image:: Images/3d_pick_sort.PNG
+.. image:: Images/3d_pick_sort.png
     :align: center
     
 |
@@ -96,7 +96,7 @@ Run Picking
 
 For virtual robot, we use ``Hercules`` . 
 
-.. image:: Images/picking.PNG
+.. image:: Images/picking.png
     :align: center
     
 |
@@ -109,12 +109,12 @@ Before running the Picking flowchart:
 
 In this case, camera_1 is for Recipe_1 object detection; camera_2 is for Recipe_2 object detection.
 
-.. image:: Images/camera.PNG
+.. image:: Images/camera.png
     :align: center
     
 |
 
-.. image:: Images/robot.PNG
+.. image:: Images/robot.png
     :align: center
     
 |
@@ -124,7 +124,7 @@ Loading the recipe from ``Robot Read`` Node ``Payload_2`` to determine which obj
 
 After Detection and Pose Generation flowcharts, ``Visualize`` Node will visualize the corresponding gripper and object in the scene.
 
-.. image:: Images/3d_pick_vis.PNG
+.. image:: Images/3d_pick_vis.png
     :align: center
     
 |

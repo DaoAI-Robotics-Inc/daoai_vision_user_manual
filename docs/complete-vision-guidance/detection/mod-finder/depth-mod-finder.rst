@@ -16,7 +16,7 @@ As the image above shows, the Gray Mod Finder contains 5 sections in the whole f
 * Section 4: Mod Finder node is used in model define stage as well as detection stage.
 * Section 5: The alignment in this section was used to align the 3D model from section 2 into the 3D space. It takes in the output from section 2 or section 3, where the Mod Finder node output the initial pose of the object.
 
-.. image:: images/var_change.PNG
+.. image:: images/var_change.png
     :width: 40%
     :align: center  
 
@@ -59,7 +59,7 @@ Usually the camera field of view will be larger than the region of interest, thu
 You could run to the **Section 3** Cloud Process node, and make sure the **Adjust Bounding Box** options was on in the cloud process display setting. 
 Then execute the Cloud Process node. Then you could adjust the bounding box. 
 
-.. image:: images/roi.PNG
+.. image:: images/roi.png
     :align: center 
 
 .. tip:: When adjust the bounding box, you could press **R** to reset to the original view, and blabla for the operation trick
@@ -73,7 +73,7 @@ We use the depth output from the DA CloudNDepth Conv node, and now we run the Mo
 Then click **add model**, then select a bounding box on the image. 
 To define a model, click the ``+`` sign. 
 
-.. image:: images/plus_sign_depth.PNG
+.. image:: images/plus_sign_depth.png
     :align: center 
 
 |

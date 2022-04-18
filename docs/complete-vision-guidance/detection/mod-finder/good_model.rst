@@ -6,54 +6,54 @@ How to set good model matching parameters
 
 Double clicking on the model brings up the model parameter configuration.
 
-.. image:: images/model_param_dep.PNG
+.. image:: images/model_param_dep.png
     :align: center 
 
 These parameters are important for detection such that:
 
 * **Acceptance** is the object acceptance in scene. Since Gray Mod Finder uses gray image to detect objects, some pixels of same color in image might form a similar shape as model. Hence, increasing the acceptance higher to ensure it detects the objects and objects only. But if the acceptance is too high, Vision would try to look for objects which has identical pixels with model. This is not so true in real life enviornment since objects might be in different place, when camera captures, the shape of object would slightly change due to angle changes or lighting changes.
 
-.. image:: images/acc_high.PNG
+.. image:: images/acc_high.png
     :align: center 
 
 When setting acceptance too high, detected 1 occurence of objects but there are 8
 
-.. image:: images/acc_low.PNG
+.. image:: images/acc_low.png
     :align: center 
 
 When setting acceptance too low, detected 32 occurence of objects but there are 8
 
 * **Reference Point** is the point which Vision detects and perform picking. Reconstruct node generates the object coordinates based on this reference point. Hence, this point would affect the height of object when picking(you do NOT want the gripper to penetrate though the object). This green cross is the reference point:
 
-.. image:: images/ref_point_dep.PNG
+.. image:: images/ref_point_dep.png
     :align: center 
 
 * **Mask** can cover the area which we do not want to include in model. As we opens up the model parameter configuration, we can see the red lines on the object. These red lines are the shape which is the shape Vision uses for detecting objects. 
 
-.. image:: images/model_param.PNG
+.. image:: images/model_param.png
     :align: center 
 
 As the image shown, the label in the middle is included as the shape of object now. We do not want this label since the other side of this object does not have label!
 We can click ``Draw Mask`` to apply mask on the model:
 
-.. image:: images/draw_mask_model_dep.PNG
+.. image:: images/draw_mask_model_dep.png
     :align: center 
 
 So that we can erase all the non-interested details of the model.
 
-.. image:: images/good_model_dep.PNG
+.. image:: images/good_model_dep.png
     :align: center 
 
 |
 
 After define the model, head to the DA Alignment node, and run it. You will see model cloud aligns with the object positions. 
 
-.. image:: images/da_align.PNG
+.. image:: images/da_align.png
     :align: center 
 
 .. tip:: * To define the model more clearly, you could first enlarge the image view in the display.
 
-.. image:: images/model_cloud.PNG
+.. image:: images/model_cloud.png
     :align: center
 
 After that, executing flowchart to **Section 2**, Cloud Process node crops the defined model and Writer saves the model cloud to local directory. 
@@ -63,7 +63,7 @@ After that, executing flowchart to **Section 2**, Cloud Process node crops the d
     In this case, we used bottom right corner object to define model in Mod Finder; then we have to crop the same object for moel cloud.
     If model is not the same object as the cloud, DA Alignment node would not be able to align the model cloud with objects.
 
-.. image:: images/align_wrong.PNG
+.. image:: images/align_wrong.png
     :align: center 
 
 This is the result of alignment when using different object cloud.

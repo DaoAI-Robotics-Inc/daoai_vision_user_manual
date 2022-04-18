@@ -10,7 +10,7 @@ If using real robot, the ``Gripper`` visualization is adjusted with real robot. 
 
 Note: in 2D Picking, we align the pencil with the plane, there is no real world scene in this ``Gripper`` .
 
-.. image:: Images/2d_gripper.PNG
+.. image:: Images/2d_gripper.png
     :align: center
     
 |

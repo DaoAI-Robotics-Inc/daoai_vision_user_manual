@@ -8,7 +8,7 @@ Assemble Pose Node
 
 Assemble pose node allows users to create a 3d transformation matrix with specified parameter.
 
-.. image:: ../../_static/images/util/assemble_pose.PNG
+.. image:: ../../_static/images/util/assemble_pose.png
    :width: 100%
 
 Input
@@ -27,7 +27,7 @@ Disassemble Pose Node
 
 Disassemble pose node decomposes the input pose and print the result on console 
 
-.. image:: ../../_static/images/util/disassemble_pose.PNG
+.. image:: ../../_static/images/util/disassemble_pose.png
    :width: 100%
 
 Input
@@ -39,5 +39,5 @@ output
 ~~~~~~~~~~~~~~~~~~~~~
 No output, the result is printed in the console
 
-.. image:: ../../_static/images/util/disassemble_pose_output.PNG
+.. image:: ../../_static/images/util/disassemble_pose_output.png
    :width: 100%

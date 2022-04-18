@@ -10,7 +10,7 @@ Description
 ---------
 	Has a single field 'Condition', which when evaluates to true, causes the For Loop which the Break Node is in to be broken out of. 
 
-	 .. image:: images/break_node.PNG
+	 .. image:: images/break_node.png
 		:scale: 80%	
 		
 	In this image we see a Break Node which was automatically placed at the end of the sub-flowchart in a Loop Node. 

@@ -13,7 +13,7 @@ Model Configuration
 
 You can adjust the detail of the model in the model config page. Double click or select model and click edit button to open model config page.
 
- .. image:: images/mod_finder_config.PNG
+ .. image:: images/mod_finder_config.png
 	:scale: 60%
 
 The red lines are the extracted edges of the model, which will be used for searching. You can mask out or unmask area that you are not interested in by clicking "Draw Mask" or "Erase Mask" button.

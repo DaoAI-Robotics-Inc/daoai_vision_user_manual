@@ -4,14 +4,14 @@
 2D Picking Teach Pose
 -------------
 
-.. image:: Images/2d_teach.PNG
+.. image:: Images/2d_teach.png
     :align: center
     
 |
 
 ``2d_finder_teach_pose`` flowchart is used before ``Picking`` since we need to teach the system what pose to pick the object. Firstly, the system loads a recipe depending on which kind of object user wants to pick. In this template, both recipe_1 and recipe_2 are looking for the same object.
 
-.. image:: Images/2d_recipe.PNG
+.. image:: Images/2d_recipe.png
     :align: center
     
 |
@@ -19,7 +19,7 @@
 Then this flowchart loads the 2D Calibration result from ``Hand Eye Calibration 2D V02`` Node and chesseborad ``bag`` file, calibrate again from the bag files. Loading the mesh from local directory, outputing the picking pose in ``Gripper`` Node. 
 Using the visualization to check if object(the plane in this case) and gripper(the pencil in this case) if they were aligned.
 
-.. image:: Images/2d_gripper_skew.PNG
+.. image:: Images/2d_gripper_skew.png
     :align: center
     
 |
@@ -30,7 +30,7 @@ Note: ONLY adjust this pose when using virtual robot! If using real robot and gr
 
 This is how it looks like the image below.
 
-.. image:: Images/2d_gripper.PNG
+.. image:: Images/2d_gripper.png
     :align: center
     
 |
@@ -45,7 +45,7 @@ In our example, there are only 2 recipes in this project. Hence carefully set th
 
 For virtual robot, we use ``Hercules`` . 
 
-.. image:: Images/2d_herc.PNG
+.. image:: Images/2d_herc.png
     :align: center
     
 |
@@ -55,7 +55,7 @@ In Hercules, the ``Payload_1`` and ``Payload_2`` is the highlight indexes in the
 Run Picking
 -------------
 
-.. image:: Images/picking.PNG
+.. image:: Images/picking.png
     :align: center
     
 |
@@ -68,12 +68,12 @@ Before running the Picking flowchart:
 
 In this case, camera_1 is for Recipe_1 object detection; camera_2 is for Recipe_2 object detection.
 
-.. image:: Images/camera.PNG
+.. image:: Images/camera.png
     :align: center
     
 |
 
-.. image:: Images/robot.PNG
+.. image:: Images/robot.png
     :align: center
     
 |
