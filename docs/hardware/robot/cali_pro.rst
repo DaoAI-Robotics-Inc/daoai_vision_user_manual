@@ -4,8 +4,8 @@ Calibration Program
 This page is about **Universal Robot** (alias as UR) specific instruction of Calibration. Please make sure you have read `Installation and Setup <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/hardware/robot/ur_setup.html>`_ and `Calibration <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/hardware/robot/cali_pro.html>`_.
 
 .. Note ::
-	The Calibration programs in default DaoAI package is ready to use. If user does not plan to change the Calibration process flow, we recommend to leave the program as it is. 
-	If user decides to modify the program, please make sure it matches the communication protocols with DaoAI Vision side. For detail of communication details please see `Socket <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/hardware/robot/socket.html>`_ and `Communication Flow <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/hardware/robot/comm.html>`_ .
+	The Calibration programs in default DaoAI package is ready to use. If you do not plan to change the Calibration process flow, we recommend to leave the program as it is. 
+	If you decided to modify the program, please make sure it matches the communication protocols with DaoAI Vision side. For detail of communication details please see `Socket <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/hardware/robot/socket.html>`_ and `Communication Flow <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/hardware/robot/comm.html>`_ .
 
 The goal of Calibration is to confirm the relation between Robot Base and Camera(Camera to Base).
 
@@ -121,7 +121,7 @@ This is the sample central waypoint.
 .. image:: Images/cali_waypoint_layout.png
     :align: center
 
-This is the sample waypoints layout poses, this is 9 waypoints. If user decides to add more waypoints to minimize the error, user need to modify the program. 
+This is the sample waypoints layout poses, this is 9 waypoints. If you decided to add more waypoints to minimize the error, you would need to modify the program. 
 But the basic concept of wayppoints is the same: waypoints can form a circle around the central waypoint.
 
 Execute the Program

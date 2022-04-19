@@ -27,7 +27,7 @@ Robot sends a request to **Vision** , this request should include command and pa
 **Vision** determines the process by checking command. after processing data on **Vision** side, it replies back reponse, this reponse should include status and payloads. 
 Robot also checks this status, based on this response to preform moving, picking or holding still. 
 
-The IP address of server is the IP of workstation which the **Vision** is running on. Port number must to identical for robor and `Vision`` , otherwise they will not be able to communicate.
+The IP address of server is the IP of workstation which the **Vision** is running on. Port number must to identical for robor and **Vision** , otherwise they will not be able to communicate.
 
 Protocols
 ----------------
@@ -77,192 +77,134 @@ Response Message
 
 Commands
 ----------------
-These are the commands which robot sends to **Vision** :
-
-Manual Calibration
-~~~~~~~~~~~~~~~~
-
-.. raw:: html
-
-	<details>
-	<summary><a>RC_DAOAI_NO_COMMAND = -1</a></summary>
+These are the commands which robot sends to **Vision**:
 
 .. code-block:: text
 
-	Robot sends the current flange pose to Vision, Vision uses the message to ensure if robot is 
-	connecting with Vision and update the 3D preview in Vision.
+	RC_DAOAI_NO_COMMAND 				= -1
+	RC_START_MANUAL_CALIBRATION			=  1
+	RC_STOP_MANUAL_CALIBRATION 			=  2
+	RC_MANUAL_ACCUMULATE_POSE			=  6
+	RC_START_AUTO_CALIBRATION			=  4
+	RC_AUTO_ACCUMULATE_POSE				=  7
+	RC_GUIDANCE_CALIBRATION 			= 10
+	RC_DAOAI_CAPTURE_AND_PROCESS			= 20
+	RC_DAOAI_GET_NEXT_OBJECT 			= 21
+|
 
-.. raw:: html
-   
-	</details>
+**RC_START_MANUAL_CALIBRATION**
 
-.. raw:: html
++--------+------------------------+------------------------------------------------------------+
+| Field  | Value                  | Description                                                |
++========+========================+============================================================+
+| status | DAOAI_MODE_CALIBRATION | Correct Manual Calibration reply, starts the process       |
++--------+------------------------+------------------------------------------------------------+
 
-	<details>
-	<summary><a>RC_START_MANUAL_CALIBRATION = 1</a></summary>
+**RC_STOP_MANUAL_CALIBRATION**
 
-.. code-block:: text
++--------+-------------------------+---------------------------------------+
+| Field  | Value                   | Description                           |
++========+=========================+=======================================+
+| status | DAOAI_UNKNOWN_COMMAND   | Robot terminates Calibration program  |
++--------+-------------------------+---------------------------------------+
 
-	Robot sends the start signal of calibration mode, Vision would acknowledge and start calibration mode 
-	When Vision is responding, it should reply DAOAI_MODE_CALIBRATION= 10 to ensure it is under manual 
-	calibration mode. If it is not in calibratio mode, it would reply back different status; in this case,
-	robot resends the current command to re-acknowledge the calibration process
+Robot sends the ending signal of calibration mode, Vision would stop calibration mode and sends
+back ``DAOAI_UNKNOWN_COMMAND = -1`` to acknowledge the termination of calibration mode.
 
-.. raw:: html
-   
-	</details>
+**RC_START_AUTO_CALIBRATION**
 
-.. raw:: html
++--------+-------------------------------+-----------------------------------------+
+| Field  | Value                         | Description                             |
++========+===============================+=========================================+
+| status | DAOAI_MODE_AUTO_CALIBRATION   | Acknowledge and enters accumulate mode  |
++--------+-------------------------------+-----------------------------------------+
 
-	<details>
-	<summary><a>RC_STOP_MANUAL_CALIBRATION = 2</a></summary>
+Robot sends the start signal of auto calibration mode, Vision would acknowledge the auto
+calibration mode. Vision would reply ``DAOAI_MODE_AUTO_CALIBRATION = 11`` to acknowledge and enter
+accumulate mode. If Vision sends back any other status, it means Vision is under different
+process, robot would resends current command and repeat the above process.
 
-.. code-block:: text
+**RC_MANUAL_ACCUMULATE_POSE**
 
-	Robot sends the ending signal of calibration mode, Vision would stop calibration mode and sends 
-	back DAOAI_UNKNOWN_COMMAND = -1 to acknowledge the termination of calibration mode.
++--------+--------------------------+------------------+
+| Field  | Value                    | Description      |
++========+==========================+==================+
+| status | DAOAI_MODE_CALIBRATION   | Accumulate mode  |
++--------+--------------------------+------------------+
 
-.. raw:: html
-   
-	</details>
+Robot requests Vision to accumulate and collect images to accumulates calibration poses. If
+Vision sends back ``DAOAI_MODE_CALIBRATION = 10``, it means Vision is under correct process. Else,
+Vision is under a different process and robot will sends ``RC_START_MANUAL_CALIBRATION = 1`` to
+re-acknowledge the calibration process.
 
-.. raw:: html
+**RC_AUTO_ACCUMULATE_POSE**
 
-	<details>
-	<summary><a>RC_MANUAL_ACCUMULATE_POSE = 6</a></summary>
++--------+-------------------------------+----------------------------------------------+
+| Field  | Value                         | Description                                  |
++========+===============================+==============================================+
+| status | DAOAI_MODE_AUTO_CALIBRATION   | Accumulate mode                              |
++        +-------------------------------+----------------------------------------------+
+|        | DAOAI_DONE_AUTO_CALIBRATION   | Collected enough poses, stop Calibration     |
++--------+-------------------------------+----------------------------------------------+
 
-.. code-block:: text
 
-	Robot requests Vision to accumulate and collect images to accumulates calibration poses. If 
-	Vision sends back DAOAI_MODE_CALIBRATION = 10, it means Vision is under correct process. Else,
-	Vision is under a different process and robot will sends RC_START_MANUAL_CALIBRATION = 1 to 
-	re-acknowledge the calibration process.
+Robot requests Vision to accumulate and collect images to accumulates calibration poses. If
+Vision sends back ``DAOAI_MODE_AUTO_CALIBRATION = 11``, it means Vision is under correct process. Else
+if, Vision sends back ``DAOAI_DONE_AUTO_CALIBRATION = 33``, it means Vision collected enough poses for
+calibration mode, this status ends the auto calibration mode in robot. If Vision replies anything
+other than 11 or 33, that means Vision and robot are under different process, robot will resends
+``RC_START_AUTO_CALIBRATION = 4`` to restart auto calibration prcess.
 
-.. raw:: html
-   
-	</details>
+**RC_GUIDANCE_CALIBRATION**
 
-Auto Calibration
-~~~~~~~~~~~~~~~~
++--------+----------------------------------+----------------------------------------------+
+| Field  | Value                            | Description                                  |
++========+==================================+==============================================+
+| status | DAOAI_GUIDANCE_CALIBRATION_GOOD  | Good pose, proceed to next pose              |
++        +----------------------------------+----------------------------------------------+
+|        | DAOAI_GUIDANCE_CALIBRATION_BAD   | Bad pose, adjust the pose                    |
++        +----------------------------------+----------------------------------------------+
+|        | DAOAI_DONE_GUIDANCE_CALIBRATION  | Collected enough poses, stop Calibration     |
++--------+----------------------------------+----------------------------------------------+
 
-.. raw:: html
 
-	<details>
-	<summary><a>RC_START_AUTO_CALIBRATION = 4</a></summary>
+Robot requests Vision to start guidance calibration process. Robot would keeps sending this command
+throughout the guidance process. Vision will start accumulate and collect images to accumulates
+calibration poses from the first robot pose. Then based on the first pose, Vision would calculate
+and output the next recommanded pose; based on these poses, Vision would reply 12, 13 and 32
+according to the calculation: if the pose is good, Vision replies 12, meaning is able to move to next
+pose; if Vision replies 13, it means the pose is not good according to the calculation; 32 means
+Vision has collected enough poses to generate calibration result, terminates the calibration mode
+in robot. If Vision replies anything other than the status above, that means Vision and robot are
+under different process, robot will resends ``RC_GUIDANCE_CALIBRATION = 10`` to restart guidance
+calibration process.
 
-.. code-block:: text
+**RC_DAOAI_CAPTURE_AND_PROCESS**
 
-	Robot sends the start signal of auto calibration mode, Vision would acknowledge the auto 
-	calibration mode. Vision would reply DAOAI_MODE_AUTO_CALIBRATION = 11 to acknowledge and enter
-	accumulate mode. If Vision sends back any other status, it means Vision is under different 
-	process, robot would resends current command and repeat the above process.
-	
-.. raw:: html
-   
-	</details>
-
-.. raw:: html
-
-	<details>
-	<summary><a>RC_AUTO_ACCUMULATE_POSE = 7</a></summary>
-
-.. code-block:: text
-
-	Robot requests Vision to accumulate and collect images to accumulates calibration poses. If 
-	Vision sends back DAOAI_MODE_AUTO_CALIBRATION = 11, it means Vision is under correct process. Else 
-	if, Vision sends back DAOAI_DONE_AUTO_CALIBRATION = 33, it means Vision collected enough poses for
-	calibration mode, this status ends the auto calibration mode in robot. If Vision replies anything 
-	other than 11 or 33, that means Vision and robot are under different process, robot will resends 
-	RC_START_AUTO_CALIBRATION = 4 to restart auto calibration prcess.
-	
-.. raw:: html
-   
-	</details>
-
-Guidance Calibration
-~~~~~~~~~~~~~~~~
-
-.. raw:: html
-
-	<details>
-	<summary><a>RC_GUIDANCE_CALIBRATION = 10</a></summary>
-
-.. code-block:: text
-
-	Robot requests Vision to start guidance calibration process. Robot would keeps sending this command
-	throughout the guidance process. Vision will start accumulate and collect images to accumulates 
-	calibration poses from the first robot pose. Then based on the first pose, Vision would calculate 
-	and output the next recommanded pose; based on these poses, Vision would reply 12, 13 and 32 
-	according to the calculation: if the pose is good, Vision replies 12, meaning is able to move to next
-	pose; if Vision replies 13, it means the pose is not good according to the calculation; 32 means 
-	Vision has collected enough poses to generate calibration result, terminates the calibration mode
-	in robot. If Vision replies anything other than the status above, that means Vision and robot are 
-	under different process, robot will resends RC_GUIDANCE_CALIBRATION = 10 to restart guidance 
-	calibration process.
-	
-.. raw:: html
-
-Picking
-~~~~~~~~~~~~~~~~~
-
-.. raw:: html
-
-	<details>
-	<summary><a>RC_DAOAI_CAPTURE_AND_PROCESS = 20</a></summary>
-
-.. code-block:: text
-
-	Robot requests the start signal of picking mode, Vision would acknowledge picking mode. Vision 
-	would reply DAOAI_DETECTION =  5 to acknowledge and enter detection and picking process. If Vision 
-	sends back any other status, it means Vision is under different process, robot would resends 
-	current command and repeat the above process.
-	
-.. raw:: html
-   
-	</details>
-
-.. raw:: html
-
-	<details>
-	<summary><a>RC_DAOAI_GET_NEXT_OBJECT = 21</a></summary>
-
-.. code-block:: text
-
-	Robot requests the object location under picking process, Vision would sends back 
-	DAOAI_OBJECTS_FOUND = 2 if detection found objects in scene. DAOAI_NO_OBJECT_FOUND = 3 is sent
-	when Vision is not able to find objects in scene. DAOAI_NO_IMAGE_CAPTURED = 4 is sent when 
-	images capture failure. And robot repeats this command to repeatly get all the object locations
-	in scene, then recapture image and go on. If Vision sends back any other status, it means Vision
-	is under different process, robot would resends current command and repeat the above process.
-	
-.. raw:: html
-   
-	</details>
+Robot requests the start signal of picking mode, Vision would acknowledge picking mode. Vision
+would reply ``DAOAI_DETECTION =  5`` to acknowledge and enter detection and picking process. If Vision
+sends back any other status, it means Vision is under different process, robot would resends
+current command and repeat the above process.
 
 Response Status
 ----------------
 
-DAOAI_UNKNOWN_COMMAND                              = -1  
+These are the status which robot receive from **Vision**:
 
-DAOAI_OBJECTS_FOUND                                = 2
+.. code-block:: text
 
-DAOAI_NO_OBJECT_FOUND                              = 3
-
-DAOAI_DETECTION							           = 5
-
-DAOAI_NO_IMAGE_CAPTURED                            = 4 
-
-DAOAI_MODE_CALIBRATION                             = 10 
-
-DAOAI_MODE_AUTO_CALIBRATION                        = 11
-
-DAOAI_GUIDANCE_CALIBRATION_GOOD                    = 12
-
-DAOAI_GUIDANCE_CALIBRATION_BAD                     = 13
-
-DAOAI_DONE_GUIDANCE_CALIBRATION                    = 32
-
-DAOAI_DONE_AUTO_CALIBRATION                        = 33
+	DAOAI_UNKNOWN_COMMAND        			= -1  
+	DAOAI_OBJECTS_FOUND				=  2
+	DAOAI_NO_OBJECT_FOUND				=  3
+	DAOAI_NO_IMAGE_CAPTURED				=  4 
+	DAOAI_DETECTION					=  5
+	DAOAI_MODE_CALIBRATION				= 10 
+	DAOAI_MODE_AUTO_CALIBRATION 			= 11
+	DAOAI_GUIDANCE_CALIBRATION_GOOD			= 12
+	DAOAI_GUIDANCE_CALIBRATION_BAD			= 13
+	DAOAI_DONE_GUIDANCE_CALIBRATION			= 32
+	DAOAI_DONE_AUTO_CALIBRATION 			= 33
+|
 
 Message metadata
 ----------------

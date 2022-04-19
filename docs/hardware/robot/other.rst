@@ -85,7 +85,7 @@ If we want the robot holds still, only transmitting command and payloads: we cou
 
 3. Processing time is the ``payload_1`` for robot, Geometry type is ``payload_2`` .
 
-4. This is optional if user wants to print message on the console window, put down the message here.
+4. This is optional if you want to print message on the console window, put down the message here.
 
 .. image:: Images/message.png
     :width: 90%
@@ -117,7 +117,7 @@ In our example, we use UR5 robot to perform the testing, for details of operatio
     :width: 80%
     :align: center
 
-Click on ``Program Robot`` , here user is able to run the robot simulation as well as change the program for different purpose. Then ``Load Program`` .
+Click on ``Program Robot`` , you can run the robot simulation as well as change the program for different purpose. Then ``Load Program`` .
 
 .. image:: Images/ur_programs.png
     :width: 80%
@@ -131,7 +131,7 @@ We can see there are many different urp files in this directory. We can use:
     :width: 80%
     :align: center
 
-In real world robot, user needs to setup all the waypoints for calibration.
+In real world robot, you need to setup all the waypoints for calibration.
 
 2. Picking.urp to perform pciking test; 
 
@@ -139,7 +139,7 @@ In real world robot, user needs to setup all the waypoints for calibration.
     :width: 80%
     :align: center
 
-In the real world robot, user should change this detection_pose: this is the robot pose when **Vision** is performing detection process. 
+In the real world robot, you should change this detection_pose: this is the robot pose when **Vision** is performing detection process. 
 This pose should be away from the camera(At lease not blocking the object in camera), so that camera is able to capture the scene cloud to detect the objects in scene.
 
 3. send_pose.urp to perform pose define. 

@@ -2,14 +2,14 @@ Shape Finder
 ==============
 
 The DaoAI Shape Finder uses designated shape to create 2D object locations, applied to Reconstruct node in order to generate 3D object locations. 
-This is useful when user encounters objects like this:
+This is useful when you encounter objects like this:
 
 .. image:: images/object.png
     :align: center 
 
 There are 3 circles on the metal part, our goal is to assemble another part through these circles. Hence we need the 3D object locations of these circles. 
 
-**Why not RGB Mod Finder or Depth Mod Finder?** Mod Finder is similar to Shape Finder, only difference is This node is very similar to mod_finder node, Mod Finder Node Implementation , the only difference is Shape Finder use parameters to define shapes, Mod Finder use user defined edge models. 
+**Why not RGB Mod Finder or Depth Mod Finder?** Mod Finder is similar to Shape Finder, only difference is This node is very similar to mod_finder node, Mod Finder Node Implementation , the only difference is Shape Finder use parameters to define shapes, Mod Finder uses the user-defined edge models. 
 Objects like image shown, perfect circles are more handy using Shape Finder. Shape Finder does not require edge model from scene, hence we do not need alignment in Shape Finder detection. 
 We only need to setup the parameters of certain shapes. 
 

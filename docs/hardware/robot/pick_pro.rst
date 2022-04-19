@@ -4,8 +4,8 @@ Picking Program
 This page is about **Universal Robot** (alias as UR) specific instruction of picking process. Please make sure you have read `Installation and Setup <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/hardware/robot/ur_setup.html>`_ and `Picking <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/complete-vision-guidance/picking/overview.html>`_.
 
 .. Note ::
-	The Picking programs in default DaoAI package is ready to use. If user does not plan to change the picking process flow, we recommend to leave the program as it is. 
-	If user decides to modify the program, please make sure it matches the communication protocols with DaoAI Vision side. For detail of communication details please see `Socket <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/hardware/robot/socket.html>`_ and `Communication Flow <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/hardware/robot/comm.html>`_ .
+	The Picking programs in default DaoAI package is ready to use. If you do not plan to change the picking process flow, we recommend to leave the program as it is. 
+	If you decided to modify the program, please make sure it matches the communication protocols with DaoAI Vision side. For detail of communication details please see `Socket <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/hardware/robot/socket.html>`_ and `Communication Flow <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/hardware/robot/comm.html>`_ .
 
 Program
 --------------
@@ -88,6 +88,6 @@ Collision Avoidance & Safety Related
 
 .. warning ::
 	Robot might have unexpected movement. And due to constrains in real world(such as tight working space for robot), robot needs to be monitor in developing and experimental stage. 
-	Observe robot behavior until user ensures the program and work flow is correct.
+	Observe robot behavior until you ensure the program and work flow is correct.
 
-If robot is about to hit anything, please initiate the Emergency Stop on UR panel. After Emgergency Stop, user should find the issue and fix it before restart the process.
+If robot is about to hit anything, please initiate the Emergency Stop on UR panel. After Emgergency Stop, you should find the issue and fix it before restart the process.

@@ -1,4 +1,4 @@
-Generic Picking
+Picking Program
 =============
 
 This is the generic logic of picking process for all kinds of robot. If you want to see Picking of individual robot, you can go to `Different type of Robots <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/hardware/robot/index.html>`_ to find the specific picking program under the robot page.

@@ -8,7 +8,7 @@ The Calibration programs and VMPlayer are `in here <https://drive.google.com/fil
 
 Calibration process needs some setup beforehand:
 	* Calibration Tool: Calibration Chessboard or Calibration Ball installed on robot arm;
-	* Calibration Pose: According to different Calibration types, user needs to setup 1 or more waypoints;
+	* Calibration Pose: According to different Calibration types, you would need to setup 1 or more waypoints;
 
 In pseudo code:
 .. code-block::

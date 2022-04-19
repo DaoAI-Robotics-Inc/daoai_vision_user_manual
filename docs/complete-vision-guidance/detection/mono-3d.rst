@@ -27,7 +27,7 @@ During the runtime, the execution flow is section 1 -> 2 -> 3 -> 4. And during t
 
 |
 
-As the above image shows (TODO, draw professional image), the red line is the data flow for the nodes. And more details can be found with this `workspace <https://domain.invalid/>`_ (TODO, upload a sample workspace for this flowchart, and also upload testing data the user can test with). 
+As the above image shows (TODO, draw professional image), the red line is the data flow for the nodes. And more details can be found with this `workspace <https://domain.invalid/>`_ (TODO, upload a sample workspace for this flowchart, and also upload testing data you can test with). 
 
 Placing the object under the camera
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

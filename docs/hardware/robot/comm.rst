@@ -36,13 +36,13 @@ The flow of Guidance Calibration is like followed:
 
 3. **Vision** collects the first pose then calculate and show the next recommanded calibration pose.
 
-4. Robot would be manually moved by user to the recommanded pose, then collect this pose with ``RC_GUIDANCE_CALIBRATION`` command to **Vision** .
+4. Robot would be manually moved to the recommanded pose, then collect this pose with ``RC_GUIDANCE_CALIBRATION`` command to **Vision** .
 
 5. Based on the pose sent back from robot, **Vision** will calculate and decide if it is a good pose:
 
-	a. if this pose is acceptable, **Vision** sends ``DAOAI_GUIDANCE_CALIBRATION_GOOD`` as well as showing the next recommanded pose for user;
+	a. if this pose is acceptable, **Vision** sends ``DAOAI_GUIDANCE_CALIBRATION_GOOD`` as well as showing the next recommanded pose for you;
 
-	b. if this pose is not good enought, **Vision** would recalculate the current pose then output the recalculated pose showing to user, user should move to this pose then repeat the calculation;
+	b. if this pose is not good enought, **Vision** would recalculate the current pose then output the recalculated pose showing to you, you should move to this pose then repeat the calculation;
 
 6. Repeats tje 4-5 step until **Vision** has collected enough poses to perform final calibration.
 

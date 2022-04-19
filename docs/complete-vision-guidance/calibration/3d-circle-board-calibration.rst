@@ -135,21 +135,21 @@ Open the DaoAI Vision Studio, and select the Circle-board-calibration from the T
 
 The chessboard calibration template includes five flowcharts: :ref:`Manual`, :ref:`Calibration`, :ref:`Auto`, :ref:`Eye-to-hand`, and :ref:`Eye-in-hand`. Each flowchart serves a unique and critical purpose within the template. 
 
-The operator must specify the number of poses to be used in the calibration. 
+You_ must specify the number of poses to be used in the calibration. 
 
 .. image:: circle-calibration-image/2Number_of_poses.png
     :width: 100%
     :align: center
 |
 
-Then the operator needs to choose the calibration type depending on the application requirement. By default, the variable will be set to 1 as calibration. 
+Then you need to choose the calibration type depending on the application requirement. By default, the variable will be set to 1 as calibration. 
 
 .. image:: circle-calibration-image/3Cali_type.png
     :width: 100%
     :align: center
 |
 
-The operator needs to choose the approach for result validation, either using the pen on board, or gripper on TCP. 
+You_ needs to choose the approach for result validation, either using the pen on board, or gripper on TCP. 
 
 .. image:: circle-calibration-image/4Validation_type.png
     :width: 100%
@@ -165,7 +165,7 @@ Adjust the robot arm to the proper position
 
 When the robot arm reaches the position, select the current pose as the :ref:`Robot` waypoint by clicking ok. 
 
-To get good quality image poses, the operator should insert the camera node in the main flowchart and continuously run it by clicking the “Run” button. The camera will keep capturing the image poses so that the operator can constantly monitor the image pose making sure no bad image poses will be added into the bag files. More details for the camera to Vision Studio connection can be referenced by the previous topic :ref:`camera`.
+To get good quality image poses, you should insert the camera node in the main flowchart and continuously run it by clicking the “Run” button. The camera will keep capturing the image poses so that you can constantly monitor the image pose making sure no bad image poses will be added into the bag files. More details for the camera to Vision Studio connection can be referenced by the previous topic :ref:`camera`.
 
 .. image:: circle-calibration-image/24Set_robot.png
     :width: 100%
@@ -189,17 +189,17 @@ The first flowchart the needs to execute is the Manual flowchart. The purpose of
     :align: center
 |
 
-The vision software will decide to execute a specific case, based on the request command constants got from the robot. In general, the operator needs to perform a handshake first between the robot and vision software.  Once the connection is made, the vision software will trigger the camera to capture the image and save the image data by using Assemble Bag node. The data will be assembled into a bag file from the Writer Node. 
+The vision software will decide to execute a specific case, based on the request command constants got from the robot. In general, you need to perform a handshake first between the robot and vision software.  Once the connection is made, the vision software will trigger the camera to capture the image and save the image data by using Assemble Bag node. The data will be assembled into a bag file from the Writer Node. 
 
 
-Inside the writer node, the operator can specify the mode for generating the bag file. A single bag file can be saved by selecting the source type into “From file”. 
+Inside the writer node, you can specify the mode for generating the bag file. A single bag file can be saved by selecting the source type into “From file”. 
 
 .. image:: circle-calibration-image/22Writer_node.png
     :width: 100%
     :align: center
 |
 
-If there is a sequence of bag files, the operator can select “From Numbered” by defining the folder path and the file name along with its start and end index for each file. 
+If there is a sequence of bag files, you can select “From Numbered” by defining the folder path and the file name along with its start and end index for each file. 
 
 .. image:: circle-calibration-image/6writer_node.png
     :width: 100%
@@ -207,9 +207,9 @@ If there is a sequence of bag files, the operator can select “From Numbered”
 |
 
 .. attention:: 
-     Normally we would set the end index into a large number to avoid editing the box in the future if the operator wants to add more poses for the calibration. 
+     Normally we would set the end index into a large number to avoid editing the box in the future if you want to add more poses for the calibration. 
 
-The flowchart will be continuously running the second case for each pose until all the poses have been executed. Then, the flowchart will switch into case three and stop. All the bag files will be saved inside the folder path defined by the operator. 
+The flowchart will be continuously running the second case for each pose until all the poses have been executed. Then, the flowchart will switch into case three and stop. All the bag files will be saved inside the folder path defined by you. 
 
 .. image:: circle-calibration-image/7case_switch.png
     :width: 100%
@@ -218,16 +218,16 @@ The flowchart will be continuously running the second case for each pose until a
 
 **Auto**
 
-Instead of manually setting up the pose and generating the bag file, the operator can autonomously set up everything by using the Auto flowchart.  
+Instead of manually setting up the pose and generating the bag file, you can autonomously set up everything by using the Auto flowchart.  
 
 .. image:: circle-calibration-image/8Auto.png
     :width: 100%
     :align: center
 |
 
-The operator needs to choose the moving path of the gripper, the distance from the camera, and the number of poses wanted to generate to the bag first. 
+You_ needs to choose the moving path of the gripper, the distance from the camera, and the number of poses wanted to generate to the bag first. 
 
-In the circle field, the operator can adjust the tilting angle, height, and rotation var to adjust the pose of the chessboard. 
+In the circle field, you can adjust the tilting angle, height, and rotation var to adjust the pose of the chessboard. 
 
 .. image:: circle-calibration-image/9Pose_generation.png
     :width: 100%
@@ -244,7 +244,7 @@ Run calibration flowchart
 
 Run the calibration with the collected files, and store the calibraiton result out into the disk
 
-After running the manual or auto flowchart, the operator needs to load the bag file folder saved previously into the Calibration flowchart to generate yml file, which will be used for the real bin-picking applications. The yml file tells the threshold value of the accuracy of locating the object in the image. The smaller value, the better accuracy. 
+After running the manual or auto flowchart, you need to load the bag file folder saved previously into the Calibration flowchart to generate yml file, which will be used for the real bin-picking applications. The yml file tells the threshold value of the accuracy of locating the object in the image. The smaller value, the better accuracy. 
 
 Inside the reader node, use the folder path to load the bag file generated from the previous step. 
 
@@ -253,25 +253,25 @@ Inside the reader node, use the folder path to load the bag file generated from 
     :align: center
 |
 
-Inside the node, the operator can select the source type they want for loading the bag file. If the operator chooses to load a file from Numbered, then it is necessary to define the parameter in the ADDITIONAL SETTINGS. 
+Inside the node, you can select the source type they want for loading the bag file. If you choose to load a file from Numbered, then it is necessary to define the parameter in the ADDITIONAL SETTINGS. 
 
 .. image:: circle-calibration-image/12Reader_node2.png
     :width: 100%
     :align: center
 |
 
-All bag files will be accumulated in the first Calibration node. The operator should set up the number of rows, cols, spacing of the chessboard correctly to avoid mismatching between the bag file and the real board. 
+All bag files will be accumulated in the first Calibration node. You_ should set up the number of rows, cols, spacing of the chessboard correctly to avoid mismatching between the bag file and the real board. 
 
 .. image:: circle-calibration-image/11Calibration.png
     :width: 100%
     :align: center
 |
 
-The second Calibration node will generate the final yml used for the future application. The operator needs to name the file by typing in the File Name section. 
+The second Calibration node will generate the final yml used for the future application. You_ needs to name the file by typing in the File Name section. 
 
 **Large Circle method**
 
-The operator can also select the Use large circle orientation function. However, it is still necessary to make sure to config the number of rows, columns, spacing between each row and column correctly.  
+You_ can also select the Use large circle orientation function. However, it is still necessary to make sure to config the number of rows, columns, spacing between each row and column correctly.  
 
 .. image:: circle-calibration-image/13Using_large_circle.png
     :width: 100%
@@ -286,14 +286,14 @@ Validate calibration result
 
 The first step is to load the testing bag file into the Reader node, and use the Disassemble Bag node to extract the data from inside. 
 
-In the Calibration node, the operator needs to type in the yml file name stored in the Calibration folder under the Chessboard Calibration template folder created by the operator. 
+In the Calibration node, you need to type in the yml file name stored in the Calibration folder under the Chessboard Calibration template folder created by you. 
 
 .. image:: circle-calibration-image/14Eye-to-hand.png
     :width: 100%
     :align: center
 |
 
-After the second switch, the operator needs to load the gripper model they want to use based on the validation approach they chose in the beginning. 
+After the second switch, you need to load the gripper model they want to use based on the validation approach they chose in the beginning. 
 
 .. image:: circle-calibration-image/15Validation_approach.png
     :width: 100%
@@ -321,7 +321,7 @@ The right sub-child path is to visualize how good the world is located in the cl
 |
 
 .. attention:: 
-    The testing bag file cannot be the same as the one used for generating the yml file. The operator needs to readjust the poses and check the result using multiple bag files with different orientations.
+    The testing bag file cannot be the same as the one used for generating the yml file. You_ needs to readjust the poses and check the result using multiple bag files with different orientations.
 
 **Eye-in-hand**
 
@@ -335,7 +335,7 @@ Use the first and second Readers to load the gripper model ply file and the bag 
 |
 
 
-Different from the Eye to hand flowchart, the operator can only validate the result by using the world in cloud method. 
+Different from the Eye to hand flowchart, you can only validate the result by using the world in cloud method. 
 
 **Large circle**
 
@@ -347,7 +347,7 @@ By using the large circle, the pen(world) should be located in the center of the
 |
 
 .. attention:: 
-     The testing bag file cannot be the same as the one used for generating the yml file. The operator needs to readjust the poses and check the result using multiple bag files with different orientations.
+     The testing bag file cannot be the same as the one used for generating the yml file. You_ needs to readjust the poses and check the result using multiple bag files with different orientations.
      
 
 

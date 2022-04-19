@@ -74,7 +74,7 @@ Safety Issue
 Moving Speed
 ~~~~~~~~~~~~
 
-It is important to note the operating speed of the robot as the robot can be dangerous when running at a fast speed. Make sure your robot speed is within the range of 20% speed to reduce the robot operating speed as well as giving the user time to recover the robot if something goes wrong half-way through the operation. 
+It is important to note the operating speed of the robot as the robot can be dangerous when running at a fast speed. Make sure your robot speed is within the range of 20% speed to reduce the robot operating speed as well as giving the safety time to recover the robot if something goes wrong half-way through the operation. 
 
 .. image:: Images/ur_speed.png
     :align: center
@@ -104,7 +104,7 @@ Once you finished configuring the network, click Back to go back to the menu and
     
 |
 
-Before running the program, the user needs to make sure that the robot is connected to the right IP and port. Go to “Connected==socket_open…” under chushiconnected and change the IP address to the same network as the virtual network (or the network the real robot is on), and change the port to 6969 (or the same port as the Hercules program on the server-side). 
+Before running the program, you would need to make sure that the robot is connected to the right IP and port. Go to “Connected==socket_open…” under chushiconnected and change the IP address to the same network as the virtual network (or the network the real robot is on), and change the port to 6969 (or the same port as the Hercules program on the server-side). 
 
 .. image:: Images/ur_ip.png
     :align: center

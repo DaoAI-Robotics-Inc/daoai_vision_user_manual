@@ -21,7 +21,7 @@ As the image above shows, the Gray Mod Finder contains 5 sections in the whole f
     :align: center  
 
 During the runtime, the execution flow is section 1 -> 3 -> 2 -> 4 -> 3 -> 4 -> 5. When defining model, set ``detection.detection_status`` to ``0`` which would reset to setup working cell stage. 
-Then it enters stage 2 defining model. Afterwards, it statys on stage 3 detection mode until user changes variable to reset the stage.
+Then it enters stage 2 defining model. Afterwards, it statys on stage 3 detection mode until you change the variable to reset the stage.
 
 .. image:: images/depth_modfinder_temp.png
     :width: 40%

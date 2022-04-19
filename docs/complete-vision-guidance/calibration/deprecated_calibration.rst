@@ -32,7 +32,7 @@ Preparation
     :align: center 
 |
 .. Attention:: 
-    To ensure the ball is centered in the camera, the operator can enable the crosshair function in the view section display setting dialogue, which will center the ball in the cross. 
+    To ensure the ball is centered in the camera, you can enable the crosshair function in the view section display setting dialogue, which will center the ball in the cross. 
 
 .. image:: Sphere_Calibration/Sphere_Calibration_image/Picture2.png
     :width: 100%
@@ -40,7 +40,7 @@ Preparation
 |
 * When generating the pose for the ball, it is necessary to have both X and Y orientations exerted on the flange. 
 * Each pose generated should maintain the same altitude. Too much height deviation will have a significant impact on the final result's accuracy.
-* In the software, the user needs to adjust the value loaded inside the “Manage Variable” dialog based on the number of poses used in the calibration. 
+* In the software, you to adjust the value loaded inside the “Manage Variable” dialog based on the number of poses used in the calibration. 
   
 .. image:: Sphere_Calibration/Sphere_Calibration_image/Picture3.png
     :width: 100%
@@ -58,35 +58,35 @@ The sphere calibration template comprises four different flowcharts: manual, cal
 
 The manual flowchart is the first flowchart that must be executed. The flowchart's purpose is to manage and save the camera's data, which includes the image, point cloud, depth image, camera intrinsic, and pose. 
 
-The vision software will decide which case to execute based on the command constants received from the robot. In general, the operator must initiate a handshake between the robot and the vision software first. Once the connection is established, the vision software uses the Assemble Bag node to trigger the camera to capture the image and save the data. From the Writer Node, the data will be assembled into a bag file.
+The vision software will decide which case to execute based on the command constants received from the robot. In general, you must initiate a handshake between the robot and the vision software first. Once the connection is established, the vision software uses the Assemble Bag node to trigger the camera to capture the image and save the data. From the Writer Node, the data will be assembled into a bag file.
 
-The operator can specify the mode of generating the bag file within the writer node. By selecting the source type into "From file", a single bag file can be saved. 
+You can specify the mode of generating the bag file within the writer node. By selecting the source type into "From file", a single bag file can be saved. 
 
 .. image:: Sphere_Calibration/Sphere_Calibration_image/image2/Picture6.png
     :width: 80%
     :align: center
 |
 
-If there is a sequence of bag files, the operator can select “From Numbered” by defining the folder path and the file name along with its start and end index for each file. 
+If there is a sequence of bag files, you can select “From Numbered” by defining the folder path and the file name along with its start and end index for each file. 
 
 .. Attention:: 
-    Normally we would set the end index into a large number to avoid editing the box in the future if the operator wants to add more poses for the calibration. 
+    Normally we would set the end index into a large number to avoid editing the box in the future if you want to add more poses for the calibration. 
 
 .. image:: Sphere_Calibration/Sphere_Calibration_image/image2/Picture7.png
     :width: 80%
     :align: center
 |
 
-Until all poses are executed, the flowchart will continuously run the second case for each pose. The flowchart will then transition to case three and terminate. All bag files will be saved in the operator-defined folder path.
+Until all poses are executed, the flowchart will continuously run the second case for each pose. The flowchart will then transition to case three and terminate. All bag files will be saved in the user-defined folder path.
 
-After running the manual flowchart, the operator must import the bag file folder that was previously saved into the Calibration flowchart in order to generate the yml file that will be used for the actual bin-picking applications. The yml file specifies the accuracy threshold for locating the object in the image. The lower the value, the more precise. 
+After running the manual flowchart, you must import the bag file folder that was previously saved into the Calibration flowchart in order to generate the yml file that will be used for the actual bin-picking applications. The yml file specifies the accuracy threshold for locating the object in the image. The lower the value, the more precise. 
 
 .. image:: Sphere_Calibration/Sphere_Calibration_image/image2/Picture8.png
     :width: 80%
     :align: center
 |
 
-The operator can either manually filtering out the ball, or using the color filtering option to select the ball's cloud automactically. 
+You can either manually filtering out the ball, or using the color filtering option to select the ball's cloud automactically. 
 
 Manually filter the ball
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -113,34 +113,34 @@ Manually filter the ball
 Auto selecting
 ~~~~~~~~~~~~~~~
 
-    To speed up the process of finding the sphere cloud, the operator can also use the color filter function in the operation list to exclude the colors which do not belong to the targeting object or just include the color of the aiming object. 
+    To speed up the process of finding the sphere cloud, you can also use the color filter function in the operation list to exclude the colors which do not belong to the targeting object or just include the color of the aiming object. 
 
 .. image:: Sphere_Calibration/Sphere_Calibration_image/image2/Picture12.png
     :width: 80%
     :align: center
 |
 
-Inside the 3D Object Finder, the operator needs to load the model's mesh into the node. Based on the requirement, the operator can configure feature detail and sample strength in the dialog as well. 
+Inside the 3D Object Finder, you need to load the model's mesh into the node. Based on the requirement, you can configure feature detail and sample strength in the dialog as well. 
 
 .. image:: Sphere_Calibration/Sphere_Calibration_image/image2/Picture13.png
     :width: 80%
     :align: center
 |
 
-After defining the model, the operator can use it to map the targeting object in the scene. The operator can define multiple models for associating objects of varying shapes. 
+After defining the model, you can use it to map the targeting object in the scene. You can define multiple models for associating objects of varying shapes. 
 
 .. image:: Sphere_Calibration/Sphere_Calibration_image/image2/Picture14.png
     :width: 80%
     :align: center
 |
-The operator can use the Alignment node to map the model and point cloud even better. 
+You can use the Alignment node to map the model and point cloud even better. 
 
 .. image:: Sphere_Calibration/Sphere_Calibration_image/image2/Picture15.png
     :width: 80%
     :align: center
 |
 
-In the first Sphere Calibration node, the final pairing data will be accumulated. To achieve a better result, the operator must adjust the Hand Eye Config to the desired mode and type in the value measured previously in the Sphere in Gripper Fields. 
+In the first Sphere Calibration node, the final pairing data will be accumulated. To achieve a better result, you must adjust the Hand Eye Config to the desired mode and type in the value measured previously in the Sphere in Gripper Fields. 
 
 .. Attention:: 
     To enable Eye-in-hand operation, change the Hand Eye Configuration to eye-in-hand.
@@ -153,7 +153,7 @@ The flowchart will iterate indefinitely until the number of poses is reached and
 |
 
 .. Attention:: 
-    Each time the operator generates a new yml file, the operator should change the file name to avoid overwriting the previous one.
+    Each time you generate a new yml file, you should change the file name to avoid overwriting the previous one.
 
 
 .. image:: Sphere_Calibration/Sphere_Calibration_image/image2/Picture17.png
@@ -164,7 +164,7 @@ The flowchart will iterate indefinitely until the number of poses is reached and
 Validation
 ~~~~~~~~~~~~~
 
-The SC_Eye_to_hand and SC_Eye_in_hand flowcharts are similar to each other. Regarding to the application kind, the operator can select between the two flowcharts to visualize the final result based on application type. 
+The SC_Eye_to_hand and SC_Eye_in_hand flowcharts are similar to each other. Regarding to the application kind, you can select between the two flowcharts to visualize the final result based on application type. 
 
 .. image:: Sphere_Calibration/Sphere_Calibration_image/image1/Picture18.png
     :width: 80%
@@ -174,9 +174,9 @@ The SC_Eye_to_hand and SC_Eye_in_hand flowcharts are similar to each other. Rega
     :align: center
 |
 
-In both flowcharts, the yml file should be loaded into the Sphere Calibration Node. Using the first Reader and the second Reader node to load bag file and gripper mesh. The operator should be able to check how well the gripper mesh matches with the point cloud in the visualize node.  
+In both flowcharts, the yml file should be loaded into the Sphere Calibration Node. Using the first Reader and the second Reader node to load bag file and gripper mesh. You should be able to check how well the gripper mesh matches with the point cloud in the visualize node.  
 
-For Eye-to-hand and Eye-in-hand applications, the output generated by the transformation is between sphere to cloud shown in Pic 20. The operator can validate the final result by viewing the mapping result between the sphere model and the sphere cloud point displayed in the scene cloud. However, in the Eye-to-hand flowchart, the operator can also see the pairing result by changing the output result from sphere to tool in the Transformation Tree output. 
+For Eye-to-hand and Eye-in-hand applications, the output generated by the transformation is between sphere to cloud shown in Pic 20. You can validate the final result by viewing the mapping result between the sphere model and the sphere cloud point displayed in the scene cloud. However, in the Eye-to-hand flowchart, you can also see the pairing result by changing the output result from sphere to tool in the Transformation Tree output. 
 
 .. image:: Sphere_Calibration/Sphere_Calibration_image/image1/Picture20.png
     :width: 80%
@@ -184,9 +184,9 @@ For Eye-to-hand and Eye-in-hand applications, the output generated by the transf
 |
 
 .. Attention:: 
-    By recapturing the bag file for the gripper only and loading the same yml file generated previously, the operator can also check the pairing result of the tool's model mesh and scene cloud.  
+    By recapturing the bag file for the gripper only and loading the same yml file generated previously, you can also check the pairing result of the tool's model mesh and scene cloud.  
 
-For result validation, the operator needs to recapture the gripper bag file by using different poses instead of using the original poses generated in the beginning. 
+For result validation, you need to recapture the gripper bag file by using different poses instead of using the original poses generated in the beginning. 
 
 .. image:: Sphere_Calibration/Sphere_Calibration_image/image1/Picture21.png
     :width: 80%
@@ -210,8 +210,8 @@ Preparation
     Due to the robotic vibration, the chessboard coordinates displayed in the camera will be distorted, reducing the accuracy of the final result significantly. It is strongly advised to reduce the robot's speed and set up the waiting time between each pose in order to capture a clear image.
 
 * The chessboard should be positioned at the camera's optimal working distance. When generating the chessboard's coordinating system, the initial pose should always be in the center of the camera's field of view. Then, either clockwise or counterclockwise, gradually adjust the chessboard's position around the first pose to create at least eight additional poses. These poses should be angled approximately 30 degrees in relation to the Z direction of the world coordinates (as defined by the world points), and they should encompass the entire chessboard (even though the outer part of the chessboard may not contain any internal corners). Additionally, it is recommended to capture a small area around the chessboard to aid in the accuracy of later image corner detection. The more poses you generate, the more precise the result. 
-* To ensure that the chessboard's initial pose is in the center of the camera, the operator can activate the crosshair function in the view section display setting dialogue, which will center the chessboard in the cross. The chessboard's maximum tilt angle is 40 degrees.
-* The chessboard calibration can be done two ways: The operator can use the samll circle or use the large circle to calibrate; however, each method has different approach to setup poses for generating the bag file as shown in the picture. 
+* To ensure that the chessboard's initial pose is in the center of the camera, you can activate the crosshair function in the view section display setting dialogue, which will center the chessboard in the cross. The chessboard's maximum tilt angle is 40 degrees.
+* The chessboard calibration can be done two ways: you can use the samll circle or use the large circle to calibrate; however, each method has different approach to setup poses for generating the bag file as shown in the picture. 
 
 Small circle
 
@@ -226,7 +226,7 @@ Small circle
 large circle 
 
 .. Attention:: 
-    If using the large circle orientation function inside the calibration, the operator can turn the chessboard or camera in 180 degrees from -90 to 90 depending on the application type as shown in the picture. For Eye-to-hand, the camera is placed in the center. The arrow shows the direction of the chessboard (Eye-to-hand) or the camera (Eye-in-hand) should be facing at each pose location. 
+    If using the large circle orientation function inside the calibration, you can turn the chessboard or camera in 180 degrees from -90 to 90 depending on the application type as shown in the picture. For Eye-to-hand, the camera is placed in the center. The arrow shows the direction of the chessboard (Eye-to-hand) or the camera (Eye-in-hand) should be facing at each pose location. 
 
 .. image:: Chessboard_Calibration/Chessboard_Calibration_image/image/Picture25.png
     :width: 80%
@@ -238,7 +238,7 @@ large circle
     :align: center
 |
 
-* In comparison to the sphere calibration, the chessboard calibration requires more adjustments prior to running the flowchart. To begin, the operator must specify the number of poses to be used in the calibration. 
+* In comparison to the sphere calibration, the chessboard calibration requires more adjustments prior to running the flowchart. To begin, you must specify the number of poses to be used in the calibration. 
   
 .. image:: Chessboard_Calibration/Chessboard_Calibration_image/image/Picture27.png
     :width: 80%
@@ -250,14 +250,14 @@ large circle
     :align: center
 | 
 
-* Then the operator needs to choose the calibration type depending on the application requirement. By default, the variable will be set to 1 as calibration.  
+* Then you need to choose the calibration type depending on the application requirement. By default, the variable will be set to 1 as calibration.  
   
 .. image:: Chessboard_Calibration/Chessboard_Calibration_image/image/Picture29.png
     :width: 60%
     :align: center
 | 
 
-* Lastly, the operator needs to choose the approach for result validation, either using the pen on board, or gripper on TCP. 
+* Lastly, you need to choose the approach for result validation, either using the pen on board, or gripper on TCP. 
 
 .. image:: Chessboard_Calibration/Chessboard_Calibration_image/image/Picture30.png
     :width: 60%
@@ -269,9 +269,9 @@ Flowchart Setup
 
 The first flowchart the needs to execute is the Manual flowchart. The purpose of the flowchart is to manage and save the data obtained from the camera including image, point cloud, depth image, camera intrinsic, and poses.
 
-The vision software will decide to execute a specific case, based on the request command constants got from the robot. In general, the operator needs to perform a handshake first between the robot and vision software.  Once the connection is made, the vision software will trigger the camera to capture the image and save the image data by using Assemble Bag node. The data will be assembled into a bag file from the Writer Node.
+The vision software will decide to execute a specific case, based on the request command constants got from the robot. In general, you need to perform a handshake first between the robot and vision software.  Once the connection is made, the vision software will trigger the camera to capture the image and save the image data by using Assemble Bag node. The data will be assembled into a bag file from the Writer Node.
 
-Inside the writer node, the operator can specify the mode for generating the bag file. A single bag file can be saved by selecting the source type into “From file”. 
+Inside the writer node, you can specify the mode for generating the bag file. A single bag file can be saved by selecting the source type into “From file”. 
 
 .. image:: Chessboard_Calibration/Chessboard_Calibration_image/flowchart/Picture31.png
     :width: 60%
@@ -283,31 +283,31 @@ Inside the writer node, the operator can specify the mode for generating the bag
     :align: center
 | 
 
-If there is a sequence of bag files, the operator can select “From Numbered” by defining the folder path and the file name along with its start and end index for each file. 
+If there is a sequence of bag files, you can select “From Numbered” by defining the folder path and the file name along with its start and end index for each file. 
 
 .. Attention:: 
-    Normally we would set the end index into a large number to avoid editing the box in the future if the operator wants to add more poses for the calibration. 
+    Normally we would set the end index into a large number to avoid editing the box in the future if you want to add more poses for the calibration. 
 
 .. image:: Chessboard_Calibration/Chessboard_Calibration_image/flowchart/Picture33.png
     :width: 80%
     :align: center
 | 
 
-The flowchart will be continuously running the second case for each pose until all the poses have been executed. Then, the flowchart will switch into case three and stop. All the bag files will be saved inside the folder path defined by the operator.
+The flowchart will be continuously running the second case for each pose until all the poses have been executed. Then, the flowchart will switch into case three and stop. All the bag files will be saved inside the folder path defined by you.
 
 .. image:: Chessboard_Calibration/Chessboard_Calibration_image/flowchart/Picture34.png
     :width: 80%
     :align: center
 | 
 
-Instead of manually setting up the pose and generating the bag file, the operator can autonomously set up everything by using the Auto flowchart.  
+Instead of manually setting up the pose and generating the bag file, you can autonomously set up everything by using the Auto flowchart.  
 
 .. image:: Chessboard_Calibration/Chessboard_Calibration_image/flowchart/Picture35.png
     :width: 80%
     :align: center
 | 
 
-The operator needs to choose the moving path of the gripper, the distance from the camera, and the number of poses wanted to generate to the bag first.  In the circle field, the operator can adjust the tilting angle, height, and rotation var to adjust the pose of the chessboard.
+You need to choose the moving path of the gripper, the distance from the camera, and the number of poses wanted to generate to the bag first.  In the circle field, you can adjust the tilting angle, height, and rotation var to adjust the pose of the chessboard.
 
 .. image:: Chessboard_Calibration/Chessboard_Calibration_image/flowchart/Picture36.png
     :width: 80%
@@ -321,7 +321,7 @@ All bag files will be generated in the loop section and saved under the path def
     :align: center
 |    
 
-After running the manual or auto flowchart, the operator needs to load the bag file folder saved previously into the Calibration flowchart to generate yml file, which will be used for the real bin-picking applications. The yml file tells the threshold value of the accuracy of locating the object in the image. The smaller value, the better accuracy. 
+After running the manual or auto flowchart, you need to load the bag file folder saved previously into the Calibration flowchart to generate yml file, which will be used for the real bin-picking applications. The yml file tells the threshold value of the accuracy of locating the object in the image. The smaller value, the better accuracy. 
 
 Small circle method
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -333,26 +333,26 @@ Inside the reader node, use the folder path to load the bag file generated from 
     :align: center
 |    
 
-Inside the node, the operator can select the source type they want for loading the bag file. If the operator chooses to load a file from Numbered, then it is necessary to define the parameter in the ADDITIONAL SETTINGS. 
+Inside the node, you can select the source type they want for loading the bag file. If you chooses to load a file from Numbered, then it is necessary to define the parameter in the ADDITIONAL SETTINGS. 
 
 .. image:: Chessboard_Calibration/Chessboard_Calibration_image/flowchart/Picture39.png
     :width: 80%
     :align: center
 |   
 
-All bag files will be accumulated in the first Calibration node. The operator should set up the number of rows, cols, spacing of the chessboard correctly to avoid mismatching between the bag file and the real board. 
+All bag files will be accumulated in the first Calibration node. You should set up the number of rows, cols, spacing of the chessboard correctly to avoid mismatching between the bag file and the real board. 
 
 .. image:: Chessboard_Calibration/Chessboard_Calibration_image/flowchart/Picture40.png
     :width: 80%
     :align: center
 |   
 
-The second Calibration node will generate the final yml used for the future application. The operator needs to name the file by typing in the File Name section. 
+The second Calibration node will generate the final yml used for the future application. You need to name the file by typing in the File Name section. 
 
 Big circle method
 ~~~~~~~~~~~~~~~~~~
 
-The operator can also select the Use large circle orientation function. However, it is still necessary to make sure to config the number of rows, columns, spacing between each row and column correctly. 
+You can also select the Use large circle orientation function. However, it is still necessary to make sure to config the number of rows, columns, spacing between each row and column correctly. 
 
 .. image:: Chessboard_Calibration/Chessboard_Calibration_image/flowchart/Picture41.png
     :width: 80%
@@ -362,16 +362,16 @@ The operator can also select the Use large circle orientation function. However,
 Validation
 ~~~~~~~~~~~~~~~~~~~
 
-If the application type is Eye-to-hand, the operator should switch the flowchart to the Eye_to_hand. 
+If the application type is Eye-to-hand, you should switch the flowchart to the Eye_to_hand. 
 
-The first step is to load the testing bag file into the Reader node, and use the Disassemble Bag node to extract the data from inside. In the Calibration node, the operator needs to type in the yml file name stored in the Calibration folder under the Chessboard Calibration template folder created by the operator. 
+The first step is to load the testing bag file into the Reader node, and use the Disassemble Bag node to extract the data from inside. In the Calibration node, you need to type in the yml file name stored in the Calibration folder under the Chessboard Calibration template folder created by you. 
 
 .. image:: Chessboard_Calibration/Chessboard_Calibration_image/validation/Picture42.png
     :width: 100%
     :align: center
 |   
 
-After the second switch, the operator needs to load the gripper model they want to use based on the validation approach they chose in the beginning. The left sub-child path is to visualize how well the gripper model matches the gripper’s cloud. The right sub-child path is to visualize how good the world is located in the cloud. (The pen should plug right in the center of the first circle of the chessboard.) (Small circle) or check if the pen is located in the center of the central circle of the board. (Large circle)
+After the second switch, you need to load the gripper model they want to use based on the validation approach they chose in the beginning. The left sub-child path is to visualize how well the gripper model matches the gripper’s cloud. The right sub-child path is to visualize how good the world is located in the cloud. (The pen should plug right in the center of the first circle of the chessboard.) (Small circle) or check if the pen is located in the center of the central circle of the board. (Large circle)
 
 .. image:: Chessboard_Calibration/Chessboard_Calibration_image/validation/Picture43.png
     :width: 100%
@@ -389,19 +389,19 @@ After the second switch, the operator needs to load the gripper model they want 
 |   
 
 .. Attention:: 
-    The testing bag file cannot be the same as the one used for generating the yml file. The operator needs to readjust the poses and check the result using multiple bag files with different orientations. 
+    The testing bag file cannot be the same as the one used for generating the yml file. You need to readjust the poses and check the result using multiple bag files with different orientations. 
 
 
-If the application type is Eye-in-hand, the operator should switch the flowchart to the Eye_in_hand. 
+If the application type is Eye-in-hand, you should switch the flowchart to the Eye_in_hand. 
 
-To validate the small circle method result, inside the first and second Readers, the operators needs to load the gripper model ply file and the bag file respectively, then use the Calibration node to load the yml file generated from the previous step. 
+To validate the small circle method result, inside the first and second Readers, you needs to load the gripper model ply file and the bag file respectively, then use the Calibration node to load the yml file generated from the previous step. 
 
 .. image:: Chessboard_Calibration/Chessboard_Calibration_image/validation/Picture46.png
     :width: 100%
     :align: center
 |   
 
-Different from the Eye-to-hand flowchart, the operator can only validate the result by using world in cloud method. 
+Different from the Eye-to-hand flowchart, you can only validate the result by using world in cloud method. 
 
 .. image:: Chessboard_Calibration/Chessboard_Calibration_image/validation/Picture47.png
     :width: 100%
@@ -426,7 +426,7 @@ To validate the large circle method result, the pen(world) should be located in 
 | 
 
 .. Attention:: 
-    For either Eye-to-hand or Eye-in-hand application, the testing bag file cannot be the same as the one used for generating the yml file. The operator needs to readjust the poses and check the result using multiple bag files with different orientations.
+    For either Eye-to-hand or Eye-in-hand application, the testing bag file cannot be the same as the one used for generating the yml file. You need to readjust the poses and check the result using multiple bag files with different orientations.
 
 2D Calibration
 ---------------
@@ -446,9 +446,9 @@ Overall, we need to set up one detection pose (for chessboard image capture), mu
     :align: center
 | 
 
-* When defining the points for generating the bag file, the operator should start by selecting the first bottom right corner point as the first waypoint, then set points as a “Z” shape towards the upper left corner. 
+* When defining the points for generating the bag file, you should start by selecting the first bottom right corner point as the first waypoint, then set points as a “Z” shape towards the upper left corner. 
 * When defining the 12 waypoints for the bag file, the z value relative to the plane should be as close to 0 as possible. If 0 is not able to reach, then keep the z value relative to the plane always the same number for all the waypoints. Then make sure to keep RX and RY equals 0 for all waypoints.
-* For the twelve waypoints set up, the operator can follow the steps as shown below:
+* For the twelve waypoints set up, you can follow the steps as shown below:
   
   .. image::  2D_Cali/2D_Calibration_Image/Capture2.png
     :width: 100%
@@ -461,10 +461,10 @@ Overall, we need to set up one detection pose (for chessboard image capture), mu
   #. Then change z, Rx, Ry values to 0°.
   #. Save this waypoint.
   #. Edit the corresponding elevation point to around -5mm (the TCP has an opposite z value compared to the plane).
-  #. Repeat the steps from 2 to 6 for the rest of the waypoints; however, the operator needs to change the Rz rotation in the step 3 as the following degree mentions down below:
+  #. Repeat the steps from 2 to 6 for the rest of the waypoints; however, you need to change the Rz rotation in the step 3 as the following degree mentions down below:
   
 .. Attention:: 
-      After changing the reference coordinate from the base to the plane, the Z value will be opposite to the operator controlling board interface. If the operator clicks on the moving up the bottom, the gripper will go down and wise visa. Without noticing, the operator may miss clicking the Up button causing the Tcp to thrust into the board causing any damage; more importantly, the operator has to redo the entire process since the Tcp various. 
+      After changing the reference coordinate from the base to the plane, the Z value will be opposite to you controlling board interface. If you click on the moving up the bottom, the gripper will go down and wise visa. Without noticing, you may miss clicking the Up button causing the Tcp to thrust into the board causing any damage; more importantly, you have to redo the entire process since the Tcp various. 
 
 
 .. list-table:: Angle Rotation Table
@@ -511,7 +511,7 @@ Overall, we need to set up one detection pose (for chessboard image capture), mu
 Flowchart Setup
 ~~~~~~~~~~~~~~~~~~
 
-In side the Manual flowchart, the operator should select where you want to save the chessboard image data bag. Each pose will be assembled and saved as a bag file. All files will be written into a folder where the operator is defined previously. 
+In side the Manual flowchart, you should select where you want to save the chessboard image data bag. Each pose will be assembled and saved as a bag file. All files will be written into a folder where you defined previously. 
 
 .. image::  2D_Cali/2D_Calibration_Image/Picture4.png
     :width: 80%
@@ -537,7 +537,7 @@ Use the first Hand-Eye Calibration 2D V02 to load the bag files disassembled fro
     :align: center
 | 
 
-The operator can find your calibration file under the workspace folder → pin_calibrations, if the "pin_calibrations" folder does not show up in Picking workspace, copy the folder or create a new folder and rename to “pin_calibrations“.
+you can find your calibration file under the workspace folder → pin_calibrations, if the "pin_calibrations" folder does not show up in Picking workspace, copy the folder or create a new folder and rename to “pin_calibrations“.
 
 Validation
 ~~~~~~~~~~~
