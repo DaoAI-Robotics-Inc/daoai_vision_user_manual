@@ -87,3 +87,5 @@ At the end, DA Alignment node aligns the model point cloud with the objects in s
 
 .. image:: Images/align.png
     :align: center 
+
+    
