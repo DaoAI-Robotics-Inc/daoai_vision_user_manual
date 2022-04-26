@@ -12,3 +12,4 @@ https://docs.pickit3d.com/en/latest/faq/index.html#faq
    known-issue/index
    outlier/index
    adjust_box/index
+   map-value/index
