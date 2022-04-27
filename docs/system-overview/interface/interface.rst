@@ -7,7 +7,7 @@ Getting Started Page
 After openning the software, the welcome page will be displayed.
 
 .. image:: image/main_page.png
-   :width: 650
+   :align: center
 
 1. This button opens a dialog to create a new project and open it. You can specify name and location of the new project.
 2. This button opens a existing workspace by browsing for an existing workspace file (files that end with .ws).
@@ -23,9 +23,12 @@ Loaded Configuration
 Once a workspace is opened, this interface will be displayed by default.
 
 .. image:: image/loaded_config.png
-   :width: 650
+   :align: center
+
+|
 
 Things to note:
+
 * Menu bar at the top.  
 * There are 4 buttons in the top-left corner (below the menu bar). From top to bottom, they are:
   
@@ -37,9 +40,13 @@ Things to note:
 * The top-left window is the **flowchart display** (shown here as the large black box). This window displays the result of the selected node. When displaying a node's result, user can change the node's display operation by checking/unchecking Display Properties on the top right of the display window. The flowchart display is also used when a node requires user interaction. See examples section or node specification to learn when interaction is required.
 * The middle window is the **flowchart window**. A flowchart is a sequence of well-defined operations to achieve some functionality (e.g. detecting an object in a scene, picking an object). A workspace usually consists of several flowcharts, each managing one procedure in the picking application. A flowchart consists of connected nodes (displayed as circles, or boxes) and has only one start point and one end point.
 
+.. image:: image/run.png
+   :align: center
+
+| 
+
    * You can switch flowcharts using the dropdown menu at the top. Or, you can manage variables (more on data types section) with the *Manage Variables* button.
    * These are the different buttons used while running the flowchart (from left to right):
-  
       * **Run**: Run current flowchart non-stop, the order of nodes being run depends on the flowchart. It stops until it gets an error, or it reaches a node that forces it to. After the end node, it goes back to the start node recursively.
       * **Pause**: Pause current running flowchart.
       * **Reset**: Reset all of the flowchart's current status (node outputs, node's internal counter for sequential file read/write, current node marker, etc.).
