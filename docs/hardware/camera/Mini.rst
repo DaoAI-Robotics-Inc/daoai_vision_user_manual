@@ -2,8 +2,7 @@ Daoai Mini Camera
 =================
 
 Physical Camera Wire Connection
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+-------------------------------
 On the front, there are three lenses. Two of them are for image capture and the middle lense is for IR projection. RGB module is an additional components on certain modules like D455. Two small holes bounded by white rectangle are for depth detection.
 
 .. image:: mini-images/mini-components.png
@@ -19,8 +18,7 @@ On the back, the USB-C connector on the side of the camera is for connection to 
 .. hint:: The RealSense D400 series cameras will function when recognized as USB 2 and also when connected to USB 2 ports. However, there is limited support for USB 2.
 
 Connect the camera via DaoAI Vision Studio
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+------------------------------------------
 Open the Vision Software and click on the New Project button on the top left. 
 
 .. image:: camera-image/Picture17.png
@@ -56,8 +54,7 @@ To add a camera, you can press the “Updated Camera List”, then press the bla
    :width: 80%
 
 Connect the virtual camera via DaoAI Vision Studio
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+--------------------------------------------------
 To generate virtual camera files, you can simply check the ``Save camera data`` checkbox in the Camera Configuration window. Everytime ``Camera`` node runs, it will save the virtual camera file to your destination folder as .dmf format.
 
 .. image::  mini-images/mini-save.png
@@ -69,37 +66,45 @@ You can load dmf files that were generated from the previous step as the camera 
    :width: 100%
 
 Use Camera with Camera Node
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------
 
 Once configuring the camera, switch back to the flowchar. Right click the "+" sign and add the camera node. 
 
 .. image:: camera-image/Picture29.png
    :width: 60%
-|
 
 .. image:: camera-image/Picture30.png
    :width: 80%
-|
-
 
 Then click on the camera node and select the camera you just added in platform config window.
 
 .. image:: camera-image/Picture31.png
    :width: 80%
-|
 
 Now if you run the ``Camera`` node, it will generate camera capture or virtual camera image.
 
 Common Issues
-~~~~~~~~~~~~~~
-* USB connection.
-  |
-  You must use a USB-3 -- USB-C connection wire in order for the camera to run properly.
-  If you still have connection problems try the following workarounds
-  
-  * Unplug the camera and plug it back in quickly.
-  * Connect the cable to the camera side first then to the host second.
-  * Reverse the orientation of the C-Type connector to the camera.
-  * Plug in the camera to other PCs with USB 3 ports and plug it back into the original PC.
+-------------
 
-* Image quality
+USB connection
+~~~~~~~~~~~~~~
+
+You must use a USB-3 -- USB-C connection wire in order for the camera to run properly. If you still have connection problems try the following workarounds.
+  
+* Unplug the camera and plug it back in quickly.
+* Connect the cable to the camera side first then to the host second.
+* Reverse the orientation of the C-Type connector to the camera.
+* Plug in the camera to other PCs with USB 3 ports and plug it back into the original PC.
+
+Image quality
+~~~~~~~~~~~~~
+
+Since Mini Camera is using binocular stereo vision, it has a valid depth range where both of the imager can capture the scene. If the camera is too close to the scene, it is not able to generate valid depth information of the scene.
+  
+   .. image:: mini-images/mini-invalid-depth-band.png
+      :width: 100%
+
+Here's an example of bad point cloud quality due to short distance between camera and scene.
+
+   .. image:: mini-images/mini-invalid-depth-example.png
+      :width: 100%
