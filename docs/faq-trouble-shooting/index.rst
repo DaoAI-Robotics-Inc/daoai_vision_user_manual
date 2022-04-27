@@ -10,3 +10,6 @@ https://docs.pickit3d.com/en/latest/faq/index.html#faq
    bug-report/overview
    utf8/index
    known-issue/index
+   outlier/index
+   adjust_box/index
+   map-value/index

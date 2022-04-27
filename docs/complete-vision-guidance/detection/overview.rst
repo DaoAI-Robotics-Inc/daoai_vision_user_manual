@@ -32,6 +32,7 @@ DaoAI also offers detection engines optimized with deep learning techniques for 
 
     boxes/overview
     shape-finder/overview
+    keypoint/overview
 
 Other engines
 ~~~~~~~~~~~~~
