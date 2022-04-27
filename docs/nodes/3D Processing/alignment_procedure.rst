@@ -8,7 +8,7 @@ Procedure of Using Alignment Node
 5. (Optional) Use verification node to verify the aligned poses
 
 .. image:: Images/alignment/alignment_result.png
-   :width: 100%
+   :align: center
 
 
 Tips on making alignment result more accurate
@@ -20,9 +20,9 @@ Tips on making alignment result more accurate
 4. Change tolerance
    
 .. image:: Images/alignment/tolerance.png
-   :width: 100%
+   :align: center
 
 5. Change decimation step
    
 .. image:: Images/alignment/decimation_step.png
-   :width: 100%
+   :align: center

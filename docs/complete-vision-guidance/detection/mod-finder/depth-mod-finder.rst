@@ -6,7 +6,6 @@ The Depth Mod Finder pipeline has 3 stages, one is to find the object on depth i
 Pipeline Overview
 ~~~~~~~~~
 .. image:: images/depth_mod_finder_det.png
-    :width: 40%
     :align: center 
 As the image above shows, the Gray Mod Finder contains 5 sections in the whole flow:
 
@@ -17,14 +16,12 @@ As the image above shows, the Gray Mod Finder contains 5 sections in the whole f
 * Section 5: The alignment in this section was used to align the 3D model from section 2 into the 3D space. It takes in the output from section 2 or section 3, where the Mod Finder node output the initial pose of the object.
 
 .. image:: images/var_change.png
-    :width: 40%
     :align: center  
 
 During the runtime, the execution flow is section 1 -> 3 -> 2 -> 4 -> 3 -> 4 -> 5. When defining model, set ``detection.detection_status`` to ``0`` which would reset to setup working cell stage. 
 Then it enters stage 2 defining model. Afterwards, it statys on stage 3 detection mode until you change the variable to reset the stage.
 
 .. image:: images/depth_modfinder_temp.png
-    :width: 40%
     :align: center 
 
 As the above image shows, the red, green and blue arrow is the data flow for the nodes. 

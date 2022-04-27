@@ -9,7 +9,7 @@ Assemble Bag Node
 This node allows us to put together different data and create a bag data as an output.
 
 .. image:: Images/assemble_bag.png
-   :width: 100%
+   :align: center
 
 Input
 ~~~~~~~~~~~~~~~~~~~~~
@@ -33,7 +33,7 @@ Disassemble Bag Node
 This node does the reverse process of assemble bag node
 
 .. image:: Images/disassemble_bag.png
-   :width: 100%
+   :align: center
 
 Input
 ~~~~~~~~~~~~~~~~~~~~~

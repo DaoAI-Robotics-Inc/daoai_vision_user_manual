@@ -5,7 +5,7 @@ The DL Segmentation Node offers state-of-the-art segmentation of point clouds us
 The Node can be used anywhere that normal segmentation is used and offers the same functionality with less configuration. 
 
 .. image:: Images/dl_segment/dl_segment.png
-   :width: 100%
+   :align: center
 
 .. toctree::
    :maxdepth: 1

@@ -19,16 +19,16 @@ Model Creation and Processing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Images/3d_obj_finder/set_mode.png
-   :width: 100%
+   :align: center
 
 Then in the model section, users are able to add/delete model, the dropdown list on the bottom shows the current active model to search. You can also double click model entry
 to edit model. You will see a model config page, where you are able to see the model and ajust its parameters.
 
 .. image:: Images/3d_obj_finder/models.png
-   :width: 100%
+   :align: center
 
 .. image:: Images/3d_obj_finder/model_config.png
-   :width: 100%
+   :align: center
 
 Model Parameters:
 
@@ -57,7 +57,7 @@ Use the bounding box to include the points of the model, then hit 0 or click "Ex
 will be shown in the config page.
 
 .. image:: Images/3d_obj_finder/model_from_scene.png
-   :width: 100%
+   :align: center
 
 The second way to define a model is to define from a polygon mesh file. In model config page, select model type to be "From Mesh", then browse the .ply file and click "Load Model".
 
@@ -74,7 +74,7 @@ You can also define the range of rotation of the model. Click "Adjust Pose" to e
 This will define a base pose. Then you can speficy the X,Y,Z rotation range based on the base pose.
 
 .. image:: Images/3d_obj_finder/adjust_pose.png
-   :width: 100%
+   :align: center
 
 You can also save the model as a pcd file by using export model.
 
@@ -104,7 +104,7 @@ In the display window you can select what to display: use "Show Model" to show f
 to show the downsampled scene cloud.
 
 .. image:: Images/3d_obj_finder/result_display.png
-   :width: 100%
+   :align: center
 
 Edge Extraction (Only In Edge Mode)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

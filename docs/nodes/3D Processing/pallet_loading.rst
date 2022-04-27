@@ -19,7 +19,7 @@ Users can do so by clicking the 'Reset Pallet' button. Additionally, there is au
 Users also have the option of electing to manually determine the dimensions of the next box, instead of using the 'Dimensions' output from a Box Volume Estimation node. 
 
 .. image:: Images/cloud_depth_conversion.png
-   :width: 100%
+   :align: center
 
 Input
 ----------------
@@ -79,13 +79,13 @@ Parameters
 * Tolerance: Distance, in mm, boxes can be placed such that they may lie slightly outside the bounds of the pallet. Note that this tolerance is applied for the new dimensions on each layer as well. In basic operation mode, this is a single value. In advanced operation mode, users can control the tolerance in both the x and y directions.
 
 .. image:: Images/pallet_loading_shelf.png
-   :width: 100%
+   :align: center
 
 .. image:: Images/pallet_loading_guillotine.png
-   :width: 100%
+   :align: center
 
 .. image:: Images/pallet_loading_maxrect.png
-   :width: 100%
+   :align: center
 
 .. image:: Images/pallet_loading_skyline.png
-   :width: 100%
+   :align: center

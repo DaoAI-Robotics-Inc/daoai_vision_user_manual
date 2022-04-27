@@ -5,7 +5,7 @@ Visualization node is a utility node that visualizes point clouds or meshes. It 
 The Node has no output.
 
 .. image:: Images/visualization.png
-   :width: 100%
+   :align: center
 
 Input
 ---------------------------

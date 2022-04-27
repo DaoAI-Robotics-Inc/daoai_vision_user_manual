@@ -2,7 +2,7 @@ Segmentation Node
 ================================
 
 .. image:: Images/segmentation.png
-   :width: 100%
+   :align: center
 
 
 The Segmentation Node clusters the points from an input point cloud into segments. The output segment masks can be used by the Scene Crop Node to create a vector of segment clouds. 

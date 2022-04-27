@@ -5,7 +5,7 @@ Procedure of Using Reconstruct Node
 2. Use Reconstruct Node to estimate 3d poses based on the 2d poses.
 
 .. image:: Images/reconstruct/reconstruct_link.png
-   :width: 100%
+   :align: center
 
 Parameter Tunning in Z Computation 
 --------------------------------------

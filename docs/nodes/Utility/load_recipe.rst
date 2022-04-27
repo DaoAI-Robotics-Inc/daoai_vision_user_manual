@@ -6,7 +6,7 @@ This node contains a table of recipe names. Users can add/remove recipe names in
 it loads the recipe with the input index.
 
 .. image:: Images/load_recipe.png
-   :width: 100%
+   :align: center
 
 Input
 ________________________

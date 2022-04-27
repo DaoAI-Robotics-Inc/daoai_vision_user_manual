@@ -10,16 +10,16 @@ Not detection all objects
 * Decrease acceptance threshold. This lowers the acceptance threshold of the score filter, keeping poses with lower scores
 
 .. image:: Images/3d_obj_finder/search_detail_low.png
-   :width: 100%
+   :align: center
 
 .. image:: Images/3d_obj_finder/search_detail_high.png
-   :width: 100%
+   :align: center
 
 .. image:: Images/3d_obj_finder/acceptance_low.png
-   :width: 100%
+   :align: center
 
 .. image:: Images/3d_obj_finder/acceptance_high.png
-   :width: 100%
+   :align: center
 
 False positive
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -27,12 +27,12 @@ False positive
 * Reduce downsample strength. This makes the downsample voxel size smaller, preserving more detail in the scene. Reducing downsample strength can also improve poses that are badly oriented.
 
 .. image:: Images/3d_obj_finder/downsample_low.png
-   :width: 100%
+   :align: center
 
 downsample strength low
 
 .. image:: Images/3d_obj_finder/downsample_medium.png
-   :width: 100%
+   :align: center
 
 downsample strength medium
 
@@ -44,21 +44,21 @@ Model parameters
 
 
 .. image:: Images/3d_obj_finder/feature_detail_low.png
-   :width: 100%
+   :align: center
 
 feature detail low
 
 .. image:: Images/3d_obj_finder/feature_detail_high.png
-   :width: 100%
+   :align: center
 
 feature detail high
 
 .. image:: Images/3d_obj_finder/model_downsample_low.png
-   :width: 100%
+   :align: center
 
 downsample strength low
 
 .. image:: Images/3d_obj_finder/model_downsample_medium.png
-   :width: 100%
+   :align: center
 
 downsample strength medium

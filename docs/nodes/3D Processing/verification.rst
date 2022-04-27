@@ -2,7 +2,7 @@ Verification Node
 ===========================
 
 .. image:: Images/verification.png
-   :width: 100%
+   :align: center
 
 Verification checks a matched pose to determine if a model with this pose is well-aligned to the scene cloud, and outputs scores for each pose.
 

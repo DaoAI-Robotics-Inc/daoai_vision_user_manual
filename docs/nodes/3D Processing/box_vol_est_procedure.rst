@@ -17,10 +17,10 @@ In order to better estimate the width and height of the boxes, the point cloud m
 * Use normals operation to compute the normal of the point cloud.
 
 .. image:: Images/box_vol_est/adjust_box.png
-   :width: 100%
+   :align: center
 
 .. image:: Images/box_vol_est/set_reference.png
-   :width: 100%
+   :align: center
 
 Tuning Parameters to Get Best Estimation
 -------------------------------------------
@@ -29,7 +29,7 @@ Tuning Parameters to Get Best Estimation
 * Use "Use OBB" to estimate the rotated box. Use "Use 2D Correction" to better estimate the 2d rotation of the box
 
 .. image:: Images/box_vol_est/without_2d_correction.png
-   :width: 100%
+   :align: center
 
 .. image:: Images/box_vol_est/with_2d_correction.png
-   :width: 100%
+   :align: center

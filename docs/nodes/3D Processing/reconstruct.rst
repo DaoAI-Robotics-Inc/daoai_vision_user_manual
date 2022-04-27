@@ -7,7 +7,7 @@ The 3D pose uses the model defined in Mod Finder Node as a reference to compute 
 In order the visualize the pose, it will be displayed in the scene using a small XYZ axis.
 
 .. image:: Images/reconstruct/reconstruct.png
-   :width: 100%
+   :align: center
 
 .. toctree::
    :maxdepth: 1

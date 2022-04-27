@@ -11,7 +11,7 @@ The output of this operation will be a new cloud that is subsampled to contain f
 Note this does not maintain the organized structure of the output cloud (output only contains a height of 1).
 
 .. image:: Images/cloud_process/cloud_process_downsample.png
-   :width: 100%
+   :align: center
 
 Outlier Removal
 ~~~~~~~~~~~~~~~~
@@ -21,7 +21,7 @@ For all points whose mean distances are outside an interval defined by the globa
 Specifically, we calculate the following to determine if the point is an outlier or not. 
 
 .. image:: Images/cloud_process/cloud_process_outlier_removal.png
-   :width: 100%
+   :align: center
 
 Crop a Regiion
 ~~~~~~~~~~~~~~~~~~~
@@ -29,7 +29,7 @@ Crop a Regiion
 This operation takes in a field name (“x” “y“ or “z”) and the bounds for that region. The output of this operation will return a cloud with that specific region cropped.
 
 .. image:: Images/cloud_process/cloud_process_crop.png
-   :width: 100%
+   :align: center
 
 Normals
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -50,7 +50,7 @@ Transform Coordinates
 This applies a 3D affine transform to the input point cloud and returns the transformed version of the cloud.
 
 .. image:: Images/cloud_process/cloud_process_transform.png
-   :width: 100%
+   :align: center
 
 Set Reference Frame 
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -59,7 +59,7 @@ Define a refernce coordinate using the interactor.
 
 
 .. image:: Images/cloud_process/cloud_process_reference_frame.png
-   :width: 100%
+   :align: center
 
 Dynamic Box Filter
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -74,7 +74,7 @@ The filtering process starts from the origin of the reference coordinate. It div
 is the frist partition with points more than *Points Threashold* (user defined parameter). Then the filter will keep points withing the following *Distance Threshold* mm.
 
 .. image:: Images/cloud_process/cloud_process_dynamic_box.png
-   :width: 100%
+   :align: center
 
 * Threshold: range in millimeter along z axis, the points in range will be kept
 * Points Treshold: number of points a segmentation along z axis must have to be considered a staring point of filtering, this determines the top of the dynamic box.
@@ -83,7 +83,7 @@ Adjust Bounding Box
 ~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: Images/cloud_process/cloud_process_adjust_box.png
-   :width: 100%
+   :align: center
 
 This operation crops the cloud by placing a bounding box that the user can adjust by clicking on the adjust box option. 
 Once the user sets the bounding box the first time it will remember this choice so that the user does not have to reconfigure the box again. 
@@ -107,7 +107,7 @@ Also, the width of the bounding box can be detected using QR-Code. If the object
 3 QR markers.
 
 .. image:: Images/cloud_process/cloud_process_qr_code.png
-   :width: 100%
+   :align: center
 
 Color Filter
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -121,7 +121,7 @@ The step of picking a color and define a threshold are:
 
 
 .. image:: Images/cloud_process/cloud_process_color_pick.png
-   :width: 100%
+   :align: center
 
 Merge Point Clouds 
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -130,7 +130,7 @@ This operation takes in another point cloud as an input and merge these two poin
 two point clouds with the second one being translated along z axis.
 
 .. image:: Images/cloud_process/cloud_process_merge_point_cloud.png
-   :width: 100%
+   :align: center
 
 Depth Inpainting & Smoothing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

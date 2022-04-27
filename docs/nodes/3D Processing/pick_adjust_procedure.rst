@@ -11,7 +11,7 @@ You can check whether the vacuum position is desired in the display. The green b
 Also each pose is marked with numbers showing the order of the pose.
 
 .. image:: Images/pick_adjust_display.png
-   :width: 100%
+   :align: center
 
 The parameters must be set correctly to get the desired picking pose.
 

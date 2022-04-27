@@ -5,7 +5,7 @@ The DL Classification Node offers state-of-the-art classification of point cloud
 The setup of this node is very similar to DL Segmentation with the only difference being the task at hand.
 
 .. image:: Images/dl_classify/dl_classify.png
-   :width: 100%
+   :align: center
 
 .. toctree::
    :maxdepth: 1
