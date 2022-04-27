@@ -6,7 +6,7 @@ Pose and Transformation
 -----------------------
 
 Pose stands for the position and rotation.
-    .. image:: images/3d-right-hand.png 
+    .. image:: Images/3d-right-hand.png 
         :scale: 70 %
 
 **Position** is usually represented by right hand rule, and R/G/B stands for X/Y/Z.
@@ -17,7 +17,7 @@ A transformation or pose of target (A) coordinate in reference (B) coordinate is
 
 .. hint:: For example, **Obj** initially is at the origin of reference  coordinate (B) which is (0, 0, 0, 0, 0, 0), and we move the **Obj** to the position [100,100,50]. Afterwards, we rotate the **Obj** along it's **X** axis for 60 degree. The final pose of **Obj** is [100, 100, 50, 60, 0, 0]. 
         
-    .. image:: images/3d-pose-example.png
+    .. image:: Images/3d-pose-example.png
         :scale: 80 %
 .. caution:: Talking about the orientation, we usually use Euler order to represent the orientation. Ane euler angle will need to have a specified rotation order. Different robot may have different conventions, for example ABB robot used the ZYX sequence. For more details, refer to the `page <https://en.wikipedia.org/wiki/Euler_angles>`_ 
 
@@ -31,7 +31,7 @@ Transformation Tree
 -------------------
 
 Transformation Tree is useing known poses and trasnformations to calculate the unknowns.
-    .. image:: images/3d-transformation-tree.png
+    .. image:: Images/3d-transformation-tree.png
         :scale: 60 %
 
 .. important:: The process of detection, calibration and robot guidiance all serves the core **Transformation Tree**, so understanding it's concept is the very important.
@@ -41,24 +41,24 @@ How to Establish a Transformation Tree?
 In the figure below, there are five objects ABCDE, and some of the relative positions are known, and constructed a transformation chain(Purple).
 
 Known trasnformations: [A in World] [E in A] [D in World] [C in D] [B in C]
-    .. image:: images/3d-transformation-tree-example1.png
+    .. image:: Images/3d-transformation-tree-example1.png
         :scale: 50 %
 
 Then the transformation between any two objects in the **same** transformation chain can be computed by transformation tree.
 
 [B in E] or [D in A] etc. are all in the same transformation chain thus able to be computed.
-    .. image:: images/3d-transformation-tree-example2.png
+    .. image:: Images/3d-transformation-tree-example2.png
         :scale: 50 %
 
 However, if two objects are **not** in the same transformation chain, their transformation cannot be computed. To be able to calculate the transformation, the transformation chain must be connected first.
 
 B and E are not in the same transformation chain.
-    .. image:: images/3d-transformation-tree-example3.png
+    .. image:: Images/3d-transformation-tree-example3.png
         :scale: 50 %
 
 To aquire [B in E], first aquire any transformation that will make B and E be in the same transformation chain.
 
 For an example, [C in A].
-    .. image:: images/3d-transformation-tree-example4.png
+    .. image:: Images/3d-transformation-tree-example4.png
         :scale: 50 %
 

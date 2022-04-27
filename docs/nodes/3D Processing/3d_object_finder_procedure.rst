@@ -18,16 +18,16 @@ Before you can see the nodes detailed config, you need to set the search type of
 Model Creation and Processing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: ../../_static/images/3d_process/3d_obj_finder/set_mode.png
+.. image:: Images/3d_obj_finder/set_mode.png
    :width: 100%
 
 Then in the model section, users are able to add/delete model, the dropdown list on the bottom shows the current active model to search. You can also double click model entry
 to edit model. You will see a model config page, where you are able to see the model and ajust its parameters.
 
-.. image:: ../../_static/images/3d_process/3d_obj_finder/models.png
+.. image:: Images/3d_obj_finder/models.png
    :width: 100%
 
-.. image:: ../../_static/images/3d_process/3d_obj_finder/model_config.png
+.. image:: Images/3d_obj_finder/model_config.png
    :width: 100%
 
 Model Parameters:
@@ -56,7 +56,7 @@ Then the mainwindow display will prompt a bounding box interactor (or console wi
 Use the bounding box to include the points of the model, then hit 0 or click "Exit Interactor" button to save your change. After that the processed model (with default model parameter)
 will be shown in the config page.
 
-.. image:: ../../_static/images/3d_process/3d_obj_finder/model_from_scene.png
+.. image:: Images/3d_obj_finder/model_from_scene.png
    :width: 100%
 
 The second way to define a model is to define from a polygon mesh file. In model config page, select model type to be "From Mesh", then browse the .ply file and click "Load Model".
@@ -73,7 +73,7 @@ the search reagion, similar to defining a model from scene.
 You can also define the range of rotation of the model. Click "Adjust Pose" to enter the interaction mode where you can rotate the model around origin by click and drag on the model cloud.
 This will define a base pose. Then you can speficy the X,Y,Z rotation range based on the base pose.
 
-.. image:: ../../_static/images/3d_process/3d_obj_finder/adjust_pose.png
+.. image:: Images/3d_obj_finder/adjust_pose.png
    :width: 100%
 
 You can also save the model as a pcd file by using export model.
@@ -103,7 +103,7 @@ In the display window you can select what to display: use "Show Model" to show f
 "Show Scene" to show the scene cloud (in edge mode this will be edge cloud extracted from the orginal scene cloud), use "Show Downsampled"
 to show the downsampled scene cloud.
 
-.. image:: ../../_static/images/3d_process/3d_obj_finder/result_display.png
+.. image:: Images/3d_obj_finder/result_display.png
    :width: 100%
 
 Edge Extraction (Only In Edge Mode)

@@ -4,7 +4,7 @@ Visualization Node
 Visualization node is a utility node that visualizes point clouds or meshes. It can also apply poses to objects before visualizing.
 The Node has no output.
 
-.. image:: ../../_static/images/3d_process/visualization.png
+.. image:: Images/visualization.png
    :width: 100%
 
 Input

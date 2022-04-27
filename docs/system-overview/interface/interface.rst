@@ -6,7 +6,7 @@ Getting Started Page
 
 After openning the software, the welcome page will be displayed.
 
-.. image:: image/main_page.png
+.. image:: Images/main_page.png
    :align: center
 
 1. This button opens a dialog to create a new project and open it. You can specify name and location of the new project.
@@ -22,7 +22,7 @@ Loaded Configuration
 
 Once a workspace is opened, this interface will be displayed by default.
 
-.. image:: image/loaded_config.png
+.. image:: Images/loaded_config.png
    :align: center
 
 |
@@ -37,10 +37,13 @@ Things to note:
    3. Open flowchart view (default view when opening a project)
    4. Go back to tutorial page from welcome screen
    
+.. image:: Images/general.png
+   :align: center
+
 * The top-left window is the **flowchart display** (shown here as the large black box). This window displays the result of the selected node. When displaying a node's result, user can change the node's display operation by checking/unchecking Display Properties on the top right of the display window. The flowchart display is also used when a node requires user interaction. See examples section or node specification to learn when interaction is required.
 * The middle window is the **flowchart window**. A flowchart is a sequence of well-defined operations to achieve some functionality (e.g. detecting an object in a scene, picking an object). A workspace usually consists of several flowcharts, each managing one procedure in the picking application. A flowchart consists of connected nodes (displayed as circles, or boxes) and has only one start point and one end point.
 
-.. image:: image/run.png
+.. image:: Images/run.png
    :align: center
 
 | 
@@ -65,13 +68,13 @@ Link Expression Dialog
 
 The vision software connects the input/output of the nodes via *linking*.
 
-.. image:: image/link_general.png
-   :width: 470
+.. image:: Images/link_general.png
+   :align: center
 
 In this image, the data source (in the node config) is the input for node Cloud Process. We can see that Cloud Process Node takes a Point Cloud type input. Clicking on the blue dots on the right opens up Link Expression Dialog (as seen below), where you can link expressions from other nodes. 
 
-.. image:: image/link_dialog.png
-   :width: 650
+.. image:: Images/link_dialog.png
+   :align: center
 
 Platform Configuration
 -----------------------------------
@@ -83,16 +86,16 @@ In order to pick up the objects, the workspace must similarly be connected to ro
 
 The vision software provides detection, connection management and configuration of cameras and robots. They are located under platform config page (Platform -> Platform Config Page).
 
-.. image:: image/acc_cam.png
-   :width: 650
+.. image:: Images/acc_cam.png
+   :align: center
 
 Camera 
 ~~~~~~~~~~~~~~~~~~~~~
 
 Cameras can be added by clicking the **+** button, then **Accept**. You can then double click an already added camera to configure a specific camera.
 
-.. image:: image/cam_config.png
-   :width: 650
+.. image:: Images/cam_config.png
+   :align: center
 
 The camera's name (an alias) and the type of the camera is shown at top of the dialog. Check the option *Virtual Camera* unless you are using an actual camera. Users can choose a specific camera from the list using its Serial number and IP. If you cannot find the camera in the list, click on *Update Camera List* to refresh. Camera settings can be loaded from a file (.cfg) which can be generated from DaoAI Studio. Finally, click connect and the camera is connected to the program. 
 
@@ -101,14 +104,14 @@ Robots
 
 You can manage robot configuration in robot tab.
 
-.. image:: image/robot.png
-   :width: 350
+.. image:: Images/robot.png
+   :align: center
 
 Operator View
 ------------------
 
-.. image:: image/operator_view.png
-   :width: 650
+.. image:: Images/operator_view.png
+   :align: center
 
 The Operator View can design a user facing application, based on a cell and grid system. Different operator views can be selected from the drop-down menu on the top left. 
 

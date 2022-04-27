@@ -8,7 +8,7 @@ Assemble Bag Node
 
 This node allows us to put together different data and create a bag data as an output.
 
-.. image:: ../../_static/images/util/assemble_bag.png
+.. image:: Images/assemble_bag.png
    :width: 100%
 
 Input
@@ -32,7 +32,7 @@ Disassemble Bag Node
 
 This node does the reverse process of assemble bag node
 
-.. image:: ../../_static/images/util/disassemble_bag.png
+.. image:: Images/disassemble_bag.png
    :width: 100%
 
 Input

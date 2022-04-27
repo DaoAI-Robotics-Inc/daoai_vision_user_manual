@@ -7,7 +7,7 @@ Procedure of Using Alignment Node
 4. Run alignment node to improve 3d poses
 5. (Optional) Use verification node to verify the aligned poses
 
-.. image:: ../../_static/images/3d_process/alignment/alignment_result.png
+.. image:: Images/alignment/alignment_result.png
    :width: 100%
 
 
@@ -19,10 +19,10 @@ Tips on making alignment result more accurate
 3. Check "Use Model Box" to check the scene based on the model's bounding box before alignment (speeds up matching)
 4. Change tolerance
    
-.. image:: ../../_static/images/3d_process/alignment/tolerance.png
+.. image:: Images/alignment/tolerance.png
    :width: 100%
 
 5. Change decimation step
    
-.. image:: ../../_static/images/3d_process/alignment/decimation_step.png
+.. image:: Images/alignment/decimation_step.png
    :width: 100%

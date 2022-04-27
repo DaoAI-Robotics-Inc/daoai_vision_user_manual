@@ -10,7 +10,7 @@ This operation takes in 3 spatial resolutions (x, y, z). We use this resolution 
 The output of this operation will be a new cloud that is subsampled to contain fewer points than the original. 
 Note this does not maintain the organized structure of the output cloud (output only contains a height of 1).
 
-.. image:: ../../_static/images/3d_process/cloud_process/cloud_process_downsample.png
+.. image:: Images/cloud_process/cloud_process_downsample.png
    :width: 100%
 
 Outlier Removal
@@ -20,7 +20,7 @@ Based on the input values (k and cutoff) it calculates the mean and variance in 
 For all points whose mean distances are outside an interval defined by the global distances mean and standard deviation can be considered as outliers and trimmed from the dataset. 
 Specifically, we calculate the following to determine if the point is an outlier or not. 
 
-.. image:: ../../_static/images/3d_process/cloud_process/cloud_process_outlier_removal.png
+.. image:: Images/cloud_process/cloud_process_outlier_removal.png
    :width: 100%
 
 Crop a Regiion
@@ -28,7 +28,7 @@ Crop a Regiion
 
 This operation takes in a field name (“x” “y“ or “z”) and the bounds for that region. The output of this operation will return a cloud with that specific region cropped.
 
-.. image:: ../../_static/images/3d_process/cloud_process/cloud_process_crop.png
+.. image:: Images/cloud_process/cloud_process_crop.png
    :width: 100%
 
 Normals
@@ -49,7 +49,7 @@ Transform Coordinates
 
 This applies a 3D affine transform to the input point cloud and returns the transformed version of the cloud.
 
-.. image:: ../../_static/images/3d_process/cloud_process/cloud_process_transform.png
+.. image:: Images/cloud_process/cloud_process_transform.png
    :width: 100%
 
 Set Reference Frame 
@@ -58,7 +58,7 @@ Set Reference Frame
 Define a refernce coordinate using the interactor.
 
 
-.. image:: ../../_static/images/3d_process/cloud_process/cloud_process_reference_frame.png
+.. image:: Images/cloud_process/cloud_process_reference_frame.png
    :width: 100%
 
 Dynamic Box Filter
@@ -73,7 +73,7 @@ operation to set the reference coordinate.
 The filtering process starts from the origin of the reference coordinate. It divides point cloud into partitions along z- direction. The starting partition 
 is the frist partition with points more than *Points Threashold* (user defined parameter). Then the filter will keep points withing the following *Distance Threshold* mm.
 
-.. image:: ../../_static/images/3d_process/cloud_process/cloud_process_dynamic_box.png
+.. image:: Images/cloud_process/cloud_process_dynamic_box.png
    :width: 100%
 
 * Threshold: range in millimeter along z axis, the points in range will be kept
@@ -82,7 +82,7 @@ is the frist partition with points more than *Points Threashold* (user defined p
 Adjust Bounding Box
 ~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: ../../_static/images/3d_process/cloud_process/cloud_process_adjust_box.png
+.. image:: Images/cloud_process/cloud_process_adjust_box.png
    :width: 100%
 
 This operation crops the cloud by placing a bounding box that the user can adjust by clicking on the adjust box option. 
@@ -106,7 +106,7 @@ When the Adjust Box is unchecked, the bounding box will the the same as last tim
 Also, the width of the bounding box can be detected using QR-Code. If the object in the scene is marked by QR markers, the initial width and depth of the bounding box will be determined by
 3 QR markers.
 
-.. image:: ../../_static/images/3d_process/cloud_process/cloud_process_qr_code.png
+.. image:: Images/cloud_process/cloud_process_qr_code.png
    :width: 100%
 
 Color Filter
@@ -120,7 +120,7 @@ The step of picking a color and define a threshold are:
 3. Set the Color Threshold. If the RGB value of a point in the scene falls inside the range of Color Spec +/- Threshold * 10. This point will be Exclude/Include in the scene.
 
 
-.. image:: ../../_static/images/3d_process/cloud_process/cloud_process_color_pick.png
+.. image:: Images/cloud_process/cloud_process_color_pick.png
    :width: 100%
 
 Merge Point Clouds 
@@ -129,7 +129,7 @@ Merge Point Clouds
 This operation takes in another point cloud as an input and merge these two point clouds. The user is also able to define the pose of the second point cloud. The below image shows merging 
 two point clouds with the second one being translated along z axis.
 
-.. image:: ../../_static/images/3d_process/cloud_process/cloud_process_merge_point_cloud.png
+.. image:: Images/cloud_process/cloud_process_merge_point_cloud.png
    :width: 100%
 
 Depth Inpainting & Smoothing
