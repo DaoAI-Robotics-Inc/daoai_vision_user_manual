@@ -3,7 +3,8 @@ Picking Program
 
 This is the generic logic of picking process for all kinds of robot. If you want to see Picking of individual robot, you can go to `Different type of Robots <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/hardware/robot/index.html>`_ to find the specific picking program under the robot page.
 
-You can find the picking program `in here <https://drive.google.com/file/d/1e8qJSOhm25ZiUAlJgulAEamDqmwYkx6s/view?usp=sharing>`_ 
+You can find the picking program `in here <https://drive.google.com/file/d/1e8qJSOhm25ZiUAlJgulAEamDqmwYkx6s/view?usp=sharing>`_. 
+Details for UR Picking program is in `here <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/hardware/robot/pick_pro.html>`_.
 
 Picking process needs some setup and file beforehand:
 	* Calibration result(.yml file): Picking needs the camera to base relation in order to correctly output object locations in scene;
