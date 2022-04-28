@@ -4,8 +4,8 @@ Procedure of Using Reconstruct Node
 1. Use DL Segmentation, Mod Finder (2D mode), Shape Finder to get a vector of 2D poses.
 2. Use Reconstruct Node to estimate 3d poses based on the 2d poses.
 
-.. image:: ../../_static/images/3d_process/reconstruct/reconstruct_link.png
-   :width: 100%
+.. image:: Images/reconstruct/reconstruct_link.png
+   :align: center
 
 Parameter Tunning in Z Computation 
 --------------------------------------

@@ -25,14 +25,14 @@ Flowchart Based Program
 As the image below shows, you could configure the flowchart using different logical control, and also functional nodes.
 
 .. image:: introduction_images/flowchart_overview.png
-   :width: 100%
+   :align: center
 
 Operator View for Deployment
 """"""""""
 In the following image, based on the project needs, you are able to configure the layout that display to the end user (operator), where you could place the start/stop buttons, and also place your company logos etc.. 
 
 .. image:: introduction_images/operator_view.png
-   :width: 100%
+   :align: center
 
 Camera & Robot Calibration
 """"""""""
@@ -49,23 +49,23 @@ Deep Learning Recognition Features
 The system provide state of the art deep learning functionalities, including image classification, segmentation, key-points detection etc.. And all these modules can be trained online with our deep learning server.
 
 .. image:: introduction_images/deep_learning.gif
-   :width: 100%
+   :align: center
 
 .. image:: introduction_images/online_server.png
-   :width: 100%
+   :align: center
 
 Classical Machine Vision Features
 """"""""""
 Our software also support classfical machine vision tools, including pattern matching, image corrections, code reading, and metrology etc. These tools can be combined together with the robot guidance applications or used indepently.
 
 .. image:: introduction_images/alignment.gif
-   :width: 100%
+   :align: center
 
 .. image:: introduction_images/3d_object_finder.jpeg
-   :width: 100%
+   :align: center
 
 .. image:: introduction_images/pattern_matching.jpeg
-   :width: 100%
+   :align: center
 
 
 .. toctree::

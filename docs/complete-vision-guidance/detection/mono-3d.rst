@@ -7,7 +7,6 @@ You could find the detection pipeline from the template workspace "????"
 Pipeline Overview
 ~~~~~~~~~~~~~~~~~
 .. image:: Images/mono-3d-det.png
-    :width: 80%
     :align: center 
 
 |
@@ -22,7 +21,6 @@ As the image above shows, the Mono 3D Detection contains 4 sections in the whole
 During the runtime, the execution flow is section 1 -> 2 -> 3 -> 4. And during the defining time, only section 3 in the above image will be used. 
 
 .. image:: Images/mono-3d-det-data.png
-    :width: 80%
     :align: center 
 
 |
@@ -34,7 +32,6 @@ Placing the object under the camera
 Place your object under the camera and try to put it as close as possible to the center of your working enviroment (center height of the working cell, and at the center of the image) to capture the sample image while making sure that the object is lying fully in the field of view of the camera. It’s useful to run the camera node continously, and check the **Show Crosshairs** to see the object position
 
 .. image:: Images/mono-3d-teach-model.png
-    :width: 62%
     :align: center 
 
 |
@@ -45,56 +42,56 @@ Train/Set the Mono model
 * Or use the chessboard calibration template to generate bag files and read them into the **Mono Train** flowchart.
 
     .. image:: Images/mono-3d-train.png
-        :width: 100%
-        :align: center 
+        :align: center
+         
 
 |
 
   * In the **Manage Variables**, set Mod finder mode to 0 or 1 depending on which flowchart is used(detailed in comment).
   
     .. image:: Images/mono-3d-manage-variable.png
-        :width: 100%
-        :align: center 
+        :align: center
+         
         
 |
 
   * If using **Mono Train** flowchart, in the **Constant** node, set integer field to the number of bag files.
 
     .. image:: Images/mono-3d-constant.png
-        :width: 100%
-        :align: center 
+        :align: center
+         
         
 |
 
   * In the **Mono 3D** node accumulate mode, set the **Calibration Context** to the DA Calibration output file name that exist in the da_calibrations folder in the workspace folder.
     
     .. image:: Images/mono-3d-accumulate.png
-        :width: 100%
-        :align: center 
+        :align: center
+         
         
 |
 
   * In the **Mono 3D** node Final mode, set the output file name. Then proceed to next step.
 
     .. image:: Images/mono-3d-final.png
-        :width: 100%
         :align: center
+        
         
 |
 
   * If using **Manual** flowchart, set the output folder for **Writer** node.
 
     .. image:: Images/mono-3d-writer.png
-        :width: 100%
         :align: center
+        
         
 |
 
 * Method 2 -- Set Feature: Instead of training, if the precise relative positions between geo features are known, use the **Mono 3D** node set feature mode. Click **add model**, enter the **Feature Name** corresponding to the geo features' name in **Mod Finder** node(model-n), and enter the xyz relative to the object center(or just make one of the feature to be object center by xyz = [0,0,0]). Make sure each geo feature has it's corresponding set feature. Then set the output file name and run this node only.
 
 .. image:: Images/mono-3d-set-feature.png
-    :width: 100%
     :align: center
+    
 
 |
 
@@ -114,8 +111,8 @@ Define the anchor feature with the image
 We use the RGB output from the camera node, and now we run the first mod finder node once to load the image. Then click **add model**, then select a bounding box on the image. It has to be a part of the object that has consistant position relative to itself. To define a good model, see the following sections and the mod finder node introduction (TODO, add the link).
 
 .. image:: Images/mono-3d-define-anchor.png
-    :width: 100%
-    :align: center 
+    :align: center
+     
 
 |
 
@@ -128,20 +125,20 @@ Define the geo feature with the image
 * After defined the anchor feature, head to the second mod finder node, and run it once to load the image. Now define at least 4 geo features aka four models on the object that has consistant relative position to eachother and the anchor feature defined in previous step. 
   
 .. image:: Images/mono-3d-define-geo.png
-    :width: 100%
-    :align: center 
+    :align: center
+     
 
 * After defined the geo features, double click on each of them in the **Models** list, and click the **Define Search Region** button on the bottom left corner. Then select a bounding box for the region of the object where this geo feature at. The search region will be moving with the anchor feature. 
 
 .. image:: Images/mono-3d-search-region.png
-    :width: 100%
-    :align: center 
+    :align: center
+     
 
 * To check search region and anchor feature, simply check the **Show Fixture** option and check geo feature search region(blue box) and anchor feature(yellow box).
   
 .. image:: Images/mono-3d-feature-result.png
-    :width: 100%
     :align: center
+    
 
 |
 
@@ -150,8 +147,8 @@ Detect the object
 In **Detection** flowchart, click the **Mono 3D** node pose estimate mode, set the **Calibration Context** to DA calibration file name and the Mono 3D file name in **Name this file** section. After everything set, run through the detection flowchart to see if **Mod Finder** nodes displays the correct position of features, and **Mono 3D** pose esitmation pervides same positions as geo features in Mod Finder node.
 
 .. image:: Images/mono-3d-det-setup.png
-    :width: 100%
     :align: center
+    
 
 |
 

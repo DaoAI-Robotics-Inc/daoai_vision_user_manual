@@ -3,8 +3,8 @@ Scene Crop Node
 
 The Scene Crop Node uses segmentation results to crop a Point Cloud and output a vector of clouds corresponding to each segment.
 
-.. image:: ../../_static/images/3d_process/scene_crop.png
-   :width: 100%
+.. image:: Images/scene_crop.png
+   :align: center
 
 .. toctree::
    :maxdepth: 1

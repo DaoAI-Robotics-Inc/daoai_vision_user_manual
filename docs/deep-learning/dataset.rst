@@ -8,13 +8,11 @@ This section demonstrates collecting and saving a training dataset with the corr
 4. Left click the **Camera** node. In the configuration window click the **Open Platform Config** button
 
 .. image:: images/dataset-im1.png
-    :width: 60%
     :align: center
 
 5. Click the **[+]** button and select your camera type, then click the **Accept** button
 
 .. image:: images/dataset-im2.png
-    :width: 60%
     :align: center
 
 6. Configure the camera so that it will produce the same images as will be seen during the detecting and picking process after your model has been trained. 
@@ -23,19 +21,16 @@ This section demonstrates collecting and saving a training dataset with the corr
 7. Switch **Camera Source** to the camera you just added
 
 .. image:: images/dataset-im3.png
-    :width: 60%
     :align: center
 
 8. In the first **Writer** node, click on the link button (the blue circle) and select the **Image** output from the **Camera** node.  Click the **Apply button**
 
 .. image:: images/dataset-im4.png
-    :width: 60%
     :align: center
 
 9. Keep the **Data Type** to be PNG and change the **Source Type** to "From Numbered"
 
 .. image:: images/dataset-im5.png
-    :width: 60%
     :align: center
 
 10. Click **Browse** and select a folder where the PNG data will be saved.  Preferably, in the same level as the DCF folder create a folder named PNG and store every image into the same folder.
@@ -43,7 +38,6 @@ This section demonstrates collecting and saving a training dataset with the corr
 .. important:: Training will depend on these PNG images
 
 .. image:: images/dataset-im6.png
-    :width: 60%
     :align: center
 
 11. In the **Robot Wait** node click **Open Platform Config**. Click the **[+] button.  It doesn't matter what robot you're using here, select one and click **Connect**
@@ -52,13 +46,11 @@ This section demonstrates collecting and saving a training dataset with the corr
     Usually ~5000ms will be enough
 
 .. image:: images/dataset-im7.png
-    :width: 60%
     :align: center
 
 13. Once you've completed all the above setup, click the **Run** button. Click **Pause** when you want to stop the flowchart
 
 .. image:: images/dataset-im8.png
-    :width: 60%
     :align: center
 
 .. caution:: Clicking the **Reset** button will reset the **Writer** node index count.  **Do not click it**

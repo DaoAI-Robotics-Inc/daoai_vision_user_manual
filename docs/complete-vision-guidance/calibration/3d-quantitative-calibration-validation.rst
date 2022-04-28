@@ -11,14 +11,13 @@ Calibration validation requires a successful calibration to exist for the active
 
 * **Fixed camera**: The plate location with respect to the robot flange should be the exactly the same as when calibration ran.
 .. image:: Images/validation-camera-fixed.png
-    :width: 100%
     :align: center 
 
 * **Robot-mounted camera**: The plate location with respect to the robot base should be the exactly the same as when calibration ran.
 
 .. image:: Images/validation-camera-on-robot.png
-    :width: 100%
-    :align: center 
+    :align: center
+     
 
 If you are validating just after running calibration, this contraint should not be an issue, but you might want to perform validation regularly over time, days, weeks or months after the last successful calibration. When this is the case, it is recommended to:
 

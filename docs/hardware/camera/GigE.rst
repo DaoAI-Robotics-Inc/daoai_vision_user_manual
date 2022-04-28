@@ -5,7 +5,7 @@ Physical Camera Wire Connection
 ~~~~~~~~~~~~~
 
 .. image:: GigeImages/connection.png
-   :width: 100%
+   :align: center
 
 The Gige camera can directly connect to the **POE** port of the industrial PC, or through a **POE** switch.  
 
@@ -30,7 +30,7 @@ Connect the virtual camera via DaoAI Vision Studio
 ~~~~~~~~~~~~~
 
 .. image:: GigeImages/virtual.png
-   :width: 100%
+   :align: center
 
 The virtual camera will read the \*.png files, and select the way you would like the system to find the \*.png files.
 

@@ -10,8 +10,8 @@ Set Parameters to Get Picking Poses
 You can check whether the vacuum position is desired in the display. The green boxes are the boxes to pick and the red rectangles means the picking pose of the vacuum plate.
 Also each pose is marked with numbers showing the order of the pose.
 
-.. image:: ../../_static/images/3d_process/pick_adjust_display.png
-   :width: 100%
+.. image:: Images/pick_adjust_display.png
+   :align: center
 
 The parameters must be set correctly to get the desired picking pose.
 

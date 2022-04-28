@@ -13,7 +13,7 @@ Using LabelMe
 After opening LabelMe you should see the home screen:
 
 .. image:: images/im1.png
-    :width: 100%
+    :align: center
 
 Before annotating choose an output directory for the JSON files by clicking “File > Change Output Dir”. 
 Although this can be a standalone directory since the JSON files contain the image data, 
@@ -24,7 +24,7 @@ To get started, open an image or a directory of images by clicking “Open” or
 The files to annotate will be shown in the “File List” section (bottom-right) and some options will become visible:
 
 .. image:: images/im2.png
-    :width: 100%
+    :align: center
 
 When you're ready to annotate your segments, select the 'Create Polygon' tool on the left toolbar.
 Proceed to your image and draw your shape following the :ref:`guidelines-label`.

@@ -14,8 +14,7 @@ DaoAI ships with a calibration plate that has circles printed on it (below left)
 * For a **robot-mounted camera** (below right), the plate is located at a fixed position in the work cell, and Pickit learns the location between the camera and the robot flange.
 
 .. image:: Images/calibration_overview.png
-    :width: 100%
-    :align: center 
+    :align: center
 
 
 Calibration uses the color image in addition to 3D information to detect the plate, so it’s important for the markers in the plate to be clearly visible, without reflections, artifacts or over-illumination from external light sources learn more (TODO, to show what will be a good calibration board captured image).

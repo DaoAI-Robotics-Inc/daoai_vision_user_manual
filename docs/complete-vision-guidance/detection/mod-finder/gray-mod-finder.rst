@@ -6,7 +6,6 @@ The Gray Mod Finder pipeline has 3 stages, one is to find the object on gray(RGB
 Pipeline Overview
 ~~~~~~~~~
 .. image:: images/gray_mod_finder_det.png
-    :width: 40%
     :align: center 
 As the image above shows, the Gray Mod Finder contains 5 sections in the whole flow:
 
@@ -19,7 +18,6 @@ As the image above shows, the Gray Mod Finder contains 5 sections in the whole f
 During the runtime, the execution flow is section 1 -> 2 -> 3 -> 5. And during the defining time, the execution flow is section 1 ->2 -> 3 -> 4 -> 5. 
 
 .. image:: images/gray_mod_finder_data.png
-    :width: 40%
     :align: center 
 
 As the above image shows, the red and blue arrow is the data flow for the nodes. 

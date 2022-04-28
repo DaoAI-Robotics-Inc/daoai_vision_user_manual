@@ -8,7 +8,6 @@ The first thing you'll want to do is to set up your system to be able to test th
 First, launch WeRobotics Cognition Systems.exe.  It should look similar to this:
 
 .. image:: images/bp-testing-im1.png
-    :width: 60%
     :align: center
 
 From here, click on 'New Project' in the top left, and give your project a name.
@@ -17,7 +16,6 @@ Click 'OK' when you're ready.
 Now your screen should look like this:
 
 .. image:: images/bp-testing-im2.png
-    :width: 60%
     :align: center
 
 Next, right click on the Plus ('+') in the mdidle of the screen, and select 'Insert Node'.
@@ -35,13 +33,11 @@ Connecting the camera is the same for each node.
 Next, select the DL Node and click the blue circle to the right of 'Image Input'
 
 .. image:: images/bp-testing-im3.png
-    :width: 60%
     :align: center
 
 From there, click on the arrow to bring out the camera_node dropdown, and double click 'image'.
 
 .. image:: images/bp-testing-im4.png
-    :width: 60%
     :align: center
 
 Click 'Apply' in the bottom right and close the menu.
@@ -56,5 +52,4 @@ For classification models, there should be a text output specifying the detected
 For segmentation models, it should look similar to this
 
 .. image:: images/bp-testing-gif1.gif
-    :width: 60%
     :align: center

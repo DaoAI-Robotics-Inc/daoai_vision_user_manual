@@ -26,5 +26,5 @@ and dilation post-processing option.
 
 Below image shows the result of erotion, the result mask is smaller than the actual object
 
-.. image:: ../../_static/images/3d_process/dl_segment/erosion.png
-   :width: 100%
+.. image:: Images/dl_segment/erosion.png
+   :align: center

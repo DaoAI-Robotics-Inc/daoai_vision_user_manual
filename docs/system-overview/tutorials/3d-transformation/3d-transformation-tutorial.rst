@@ -12,7 +12,7 @@ Known that:
 
 Aqurie [C in World] from a transformation tree node.
 
-    .. image:: images/3d-transformation-tutorial-q1.png
+    .. image:: Images/3d-transformation-tutorial-q1.png
         :align: center
 
 Procedure
@@ -21,39 +21,39 @@ Follow the detailed procedure and work on your end as well.
 
 #. Open the software shortcut on desktop: **WeRobotics EN/CN**, and click **New Project** button.
 
-    .. image:: images/3d-new-project.png
+    .. image:: Images/3d-new-project.png
         :align: center
 
 #. Customize the project name and path, then click **OK**.
 
-    .. image:: images/3d-new-project-window.png
+    .. image:: Images/3d-new-project-window.png
         :align: center
 
 #. Right click on the `+`, and click **insert node**.
 
-    .. image:: images/3d-insert-node.png
+    .. image:: Images/3d-insert-node.png
         :align: center
 
 #. Insert the following nodes in the right order.
 
-    .. image:: images/3d-flowchart.png
+    .. image:: Images/3d-flowchart.png
         :align: center
 
 #. Download example `Cubes CAD model <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/xchen_daoai_com/EQn18vWqNqBLh_edHhokYvYBhubwrs3PrgpjFg3eYjyHlw?e=4B47Vy>`_, and left click on the first reader node. Click **Browse** button on the right and select **Cube 20mmA.ply**.
 
-    .. image:: images/3d-reader.png
+    .. image:: Images/3d-reader.png
         :align: center
 
 #. For the second and third reader nodes, repeate previous step and load **Cube 20mmB.ply** and **Cube 20mmC.ply**
 #. Now since we want to make the Cube A sitting on the world origin, we leave the first **Assemble Pose** node with all values 0, which is [A in World].
 #. For the second and third **Assemble Pose** node, configure them as below, which is [B in A] and [C in B].
 
-    .. image:: images/3d-assemble-pose.png
+    .. image:: Images/3d-assemble-pose.png
         :align: center
 
 #. The next step is to configure **Transformation Tree** node. Click **Transformation Tree** node and in the config page, click **Set Input**. This window should popup.
 
-    .. image:: images/3d-trans-tree-input.png
+    .. image:: Images/3d-trans-tree-input.png
         :align: center
 
 #. Click on the + button three times to create three inputs. Configure them as follows. For example, if entering [X in Y], X will be the object A name, and Y should be the Object B name. Then use the blue circle to link expression.
@@ -62,47 +62,47 @@ Follow the detailed procedure and work on your end as well.
     | [B in A], link second **Assemble Pose** node.
     | [C in B], link third **Assemble Pose** node.
 
-    .. image:: images/3d-trans-tree-input.png
+    .. image:: Images/3d-trans-tree-input.png
         :align: center
 
 #. First enter the names A and World. Then click the blue circle to open link expression window.
 
-    .. image:: images/3d-AinWorld.png
+    .. image:: Images/3d-AinWorld.png
         :align: center
 
 #. Search for "assemble", and expand the assemble_pose_node. Then click the poses from dropdown list. Click **Apply** button before moving to net input.
 
-    .. image:: images/3d-AinWorld-link.png
+    .. image:: Images/3d-AinWorld-link.png
         :align: center
 
 #. Repeate previous steps for the next two inputs. When finished all three input configurations, click **Next** button.
 
-    .. image:: images/3d-second-third-input.png
+    .. image:: Images/3d-second-third-input.png
         :align: center
 
 #. Select the output from dropdown list to be [C in World]
 
-    .. image:: images/3d-trans-tree-output.png
+    .. image:: Images/3d-trans-tree-output.png
         :align: center
 
 #. Now the output list is shown in config page, and [C in World] will be the 0-indexed item in the output array(Occurance[0])
 
-    .. image:: images/3d-output-list.png
+    .. image:: Images/3d-output-list.png
         :align: center
 
 #. Click on the transformation tree node, and click **Run to Selected Node** button in the Operation List.
 
-    .. image:: images/3d-run-to-selected-step.png
+    .. image:: Images/3d-run-to-selected-step.png
         :align: center
 
 #. If the links and setup are correct, the result display should look similar to this. Use mouse to drag to see the transformation in different view points.
 
-    .. image:: images/3d-trans-tree-result.png
+    .. image:: Images/3d-trans-tree-result.png
         :align: center
 
 #. The next step is to add visualizations. Click **Visualize** node and in the config page, click **Add** button three times.
 
-    .. image:: images/3d-trans-tree-result.png
+    .. image:: Images/3d-trans-tree-result.png
         :align: center
 
 #. Link the objects to three Reader nodes, and link the Object Poses to 1. First Assemble Pose node, which is [A in World], 2. Second Assemble Pose node, which is [B in A]. Since A and World has 0 transformation, [B in A] = [B in World].
@@ -112,28 +112,28 @@ Follow the detailed procedure and work on your end as well.
     
         2. Object should link to the Reader.Output_Mesh since the readers are loading Mesh models.
 
-                .. image:: images/3d-read-mesh.png
+                .. image:: Images/3d-read-mesh.png
                     :align: center
 
 
 #. For the thrid Object Pose link, [C in World] is needed and it is generated by **Transformation Tree** node. So link it to the **Transformation Tree** output.
     
-    .. image:: images/3d-third-object-pose.png
+    .. image:: Images/3d-third-object-pose.png
         :align: center
 
 #. Click the **Visualize** node and run selected step. Check if the result is expected as image shown below.
  
-    .. image:: images/3d-viz-result.png
+    .. image:: Images/3d-viz-result.png
         :align: center
 
 #. The next step is to use **Disassemble Pose** node. Configure the node as following image shows. Then click on the node and run selected step.
  
-    .. image:: images/3d-dis-pose.png
+    .. image:: Images/3d-dis-pose.png
         :align: center
 
 #. The expected result should be:
  
-    .. image:: images/3d-dis-pose-result.png
+    .. image:: Images/3d-dis-pose-result.png
         :align: center
 
 Further Question
@@ -142,17 +142,17 @@ What if we want to only gather the X and Y of this pose, and ignoring z and rota
 
 #. Add an **Assemble Pose** node after **Disassemble Pose** node.
 
-    .. image:: images/3d-assemble-pose-node.png
+    .. image:: Images/3d-assemble-pose-node.png
         :align: center
 
 #. Since **Disassemble Pose** node will split the pose object into: Position X/Y/Z, Rotation X/Y/Z, etc. We can link only to the PosX and PosY output from it.
 
-    .. image:: images/3d-assemble-pose-xy.png
+    .. image:: Images/3d-assemble-pose-xy.png
         :align: center
 
 #. Add another **Disassemble Pose** node at the end, and check if the assembled result is correct.
 
-    .. image:: images/3d-dis-pose-2-result.png
+    .. image:: Images/3d-dis-pose-2-result.png
         :align: center
 
 

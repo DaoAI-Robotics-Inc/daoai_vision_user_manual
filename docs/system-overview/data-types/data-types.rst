@@ -10,7 +10,7 @@ Data in Vision software is addressed by expression. Expressions can be categoriz
 * Expressions starting with "Out/". These are the output of the nodes. These expressions contain valid data only after the node is run.
 * Expressions starting with "Variable/". These expressions contain globally available values.
 
-.. tip:: .. image:: images/link_input.png
+.. tip:: .. image:: Images/link_input.png
 	As the image shows, if B node input used A node's output port **A_out_1**, then C node linked B node's input port **B_in_1**, then the C node input **C_in_1** is actually linked to **A_out_1**.
 
 
@@ -56,10 +56,10 @@ Complex data types can be constructed using basic data types.
 
 You can check the type of the expression or the child fields of a data type (if any) in quick expression dialog.
 
-.. image:: images/complex_type.png
+.. image:: Images/complex_type.png
    :width: 650
 
-.. tip:: .. image:: images/access_container.png
+.. tip:: .. image:: Images/access_container.png
 	As the image shows, if it's a map, you could specify the string value inside **['']**, and to access the element inside the vector, you could specify the interger inside **[]**.
 
 Save/load data from files
