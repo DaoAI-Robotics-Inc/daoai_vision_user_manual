@@ -18,7 +18,7 @@ Once you have installed Filezilla, launch it.
 You can now input the information in the top toolbar to connect to the FTP server.
 
 .. image:: images/jenkins-setup-im1.png
-    :width: 100%
+    :align: center
 
 Please use the following info::
 

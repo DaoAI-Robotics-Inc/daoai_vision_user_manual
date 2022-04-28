@@ -11,6 +11,6 @@ The steps to use DL classification node:
 3. Based on object label output, do different actions
 
 .. image:: ../../_static/images/3d_process/dl_classify/sample_flowchart.png
-   :width: 100%
+   :align: center
 
 

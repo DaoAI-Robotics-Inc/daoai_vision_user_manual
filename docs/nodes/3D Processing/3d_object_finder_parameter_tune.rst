@@ -9,30 +9,30 @@ Not detection all objects
 * Increase the search detail. This will increase the number of computed scene features
 * Decrease acceptance threshold. This lowers the acceptance threshold of the score filter, keeping poses with lower scores
 
-.. image:: ../../_static/images/3d_process/3d_obj_finder/search_detail_low.png
-   :width: 100%
+.. image:: Images/3d_obj_finder/search_detail_low.png
+   :align: center
 
-.. image:: ../../_static/images/3d_process/3d_obj_finder/search_detail_high.png
-   :width: 100%
+.. image:: Images/3d_obj_finder/search_detail_high.png
+   :align: center
 
-.. image:: ../../_static/images/3d_process/3d_obj_finder/acceptance_low.png
-   :width: 100%
+.. image:: Images/3d_obj_finder/acceptance_low.png
+   :align: center
 
-.. image:: ../../_static/images/3d_process/3d_obj_finder/acceptance_high.png
-   :width: 100%
+.. image:: Images/3d_obj_finder/acceptance_high.png
+   :align: center
 
 False positive
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * Reduce downsample strength. This makes the downsample voxel size smaller, preserving more detail in the scene. Reducing downsample strength can also improve poses that are badly oriented.
 
-.. image:: ../../_static/images/3d_process/3d_obj_finder/downsample_low.png
-   :width: 100%
+.. image:: Images/3d_obj_finder/downsample_low.png
+   :align: center
 
 downsample strength low
 
-.. image:: ../../_static/images/3d_process/3d_obj_finder/downsample_medium.png
-   :width: 100%
+.. image:: Images/3d_obj_finder/downsample_medium.png
+   :align: center
 
 downsample strength medium
 
@@ -43,22 +43,22 @@ Model parameters
 * Adjust model downsample strength. Reducing downsample strength can remove false positives
 
 
-.. image:: ../../_static/images/3d_process/3d_obj_finder/feature_detail_low.png
-   :width: 100%
+.. image:: Images/3d_obj_finder/feature_detail_low.png
+   :align: center
 
 feature detail low
 
-.. image:: ../../_static/images/3d_process/3d_obj_finder/feature_detail_high.png
-   :width: 100%
+.. image:: Images/3d_obj_finder/feature_detail_high.png
+   :align: center
 
 feature detail high
 
-.. image:: ../../_static/images/3d_process/3d_obj_finder/model_downsample_low.png
-   :width: 100%
+.. image:: Images/3d_obj_finder/model_downsample_low.png
+   :align: center
 
 downsample strength low
 
-.. image:: ../../_static/images/3d_process/3d_obj_finder/model_downsample_medium.png
-   :width: 100%
+.. image:: Images/3d_obj_finder/model_downsample_medium.png
+   :align: center
 
 downsample strength medium
