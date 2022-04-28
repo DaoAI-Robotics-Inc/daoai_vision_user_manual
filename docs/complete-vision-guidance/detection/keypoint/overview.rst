@@ -26,11 +26,6 @@ Pipeline Overview
 
 .. image:: Images/pipeline.png
     :align: center 
-<<<<<<< HEAD
-
-=======
-    :width: 80%
->>>>>>> ebc3623c6558a2b4a54474a2bcfa1605b231758b
 |
 
 As the image above shows, the Gray Mod Finder contains 5 sections in the whole flow:
@@ -44,11 +39,6 @@ During the runtime, the execution flow is section 1 -> 2 -> 3 -> 5. And during t
 
 .. image:: Images/flow.png
     :align: center 
-<<<<<<< HEAD
-
-=======
-    :width: 80%
->>>>>>> ebc3623c6558a2b4a54474a2bcfa1605b231758b
 
 As the above image shows, the red and blue arrow is the data flow for the nodes. 
 Red arrow is the detection flow of the flowchart; blue arrow is the flow for defining model in scene. And more details can be found with this workspace(TODO)
