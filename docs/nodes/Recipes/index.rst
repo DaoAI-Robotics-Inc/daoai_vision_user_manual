@@ -37,7 +37,11 @@ to a depth image, based on this depth image mod finder finds the 3d locations of
 nodes store info in recipe now.
 
 .. image:: Images/Workspace.png
+<<<<<<< HEAD
    :align: center
+=======
+   :width: 100%
+>>>>>>> ebc3623c6558a2b4a54474a2bcfa1605b231758b
 
 Add/Remove Recipe, Add Node to Recipe
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -55,12 +59,20 @@ Now we have two recipes are we want to define a model for mod finder node for ea
 We run the flow chart from the start to mod finder node, and define a model 
 
 .. image:: Images/model_and_scene_1.png
+<<<<<<< HEAD
    :align: center
+=======
+   :width: 100%
+>>>>>>> ebc3623c6558a2b4a54474a2bcfa1605b231758b
 
 Double click recipe_2 in the recipe panel to switch to recipe_2, re-run the process to define another model
 
 .. image:: Images/model_and_scene_2.png
+<<<<<<< HEAD
    :align: center
+=======
+   :width: 100%
+>>>>>>> ebc3623c6558a2b4a54474a2bcfa1605b231758b
 
 Now switch back to recipe_1, you should see the first model in the mod finder node. Now we have two recipes to search for different models.
 

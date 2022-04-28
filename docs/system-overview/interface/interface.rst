@@ -6,7 +6,11 @@ Getting Started Page
 
 After openning the software, the welcome page will be displayed.
 
+<<<<<<< HEAD
 .. image:: Images/main_page.png
+=======
+.. image:: image/main_page.png
+>>>>>>> ebc3623c6558a2b4a54474a2bcfa1605b231758b
    :align: center
 
 1. This button opens a dialog to create a new project and open it. You can specify name and location of the new project.
@@ -22,7 +26,11 @@ Loaded Configuration
 
 Once a workspace is opened, this interface will be displayed by default.
 
+<<<<<<< HEAD
 .. image:: Images/loaded_config.png
+=======
+.. image:: image/loaded_config.png
+>>>>>>> ebc3623c6558a2b4a54474a2bcfa1605b231758b
    :align: center
 
 |
@@ -43,7 +51,11 @@ Things to note:
 * The top-left window is the **flowchart display** (shown here as the large black box). This window displays the result of the selected node. When displaying a node's result, user can change the node's display operation by checking/unchecking Display Properties on the top right of the display window. The flowchart display is also used when a node requires user interaction. See examples section or node specification to learn when interaction is required.
 * The middle window is the **flowchart window**. A flowchart is a sequence of well-defined operations to achieve some functionality (e.g. detecting an object in a scene, picking an object). A workspace usually consists of several flowcharts, each managing one procedure in the picking application. A flowchart consists of connected nodes (displayed as circles, or boxes) and has only one start point and one end point.
 
+<<<<<<< HEAD
 .. image:: Images/run.png
+=======
+.. image:: image/run.png
+>>>>>>> ebc3623c6558a2b4a54474a2bcfa1605b231758b
    :align: center
 
 | 
