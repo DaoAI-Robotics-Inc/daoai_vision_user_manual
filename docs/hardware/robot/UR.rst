@@ -10,4 +10,4 @@ UR-Robot
    ur_setup
    cali_pro
    pick_pro
-   
+   tcp_setup

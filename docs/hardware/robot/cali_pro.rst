@@ -108,6 +108,7 @@ Waypoints are important for the Calibration output. If the waypoints are not goo
 Waypoint locations should try to follow the clockwise or counter-clockwise direction within camera scene. The first waypoint can be at the middle(Or anywhere you could remember). Then central top, central top to the right......until the wapoint can form a circle to produce enough poses.
 Each waypoints should have slightly tilt and rotation. Try to keep tilting degree small, and rotate around the wrists.
 
+For details of Calibration waypoints, you can check out this `article <TODO>`_.TODO
 
 .. warning ::
 	Guidance Calibration and Auto Calibration only needs to setup the first waypoint. For Guidance Calibration and Auto Calibration, first wapoint should always be the central location.
@@ -118,11 +119,6 @@ Each waypoints should have slightly tilt and rotation. Try to keep tilting degre
 This is the sample central waypoint. 
 
 |
-.. image:: Images/cali_waypoint_layout.png
-    :align: center
-
-This is the sample waypoints layout poses, this is 9 waypoints. If you decided to add more waypoints to minimize the error, you would need to modify the program. 
-But the basic concept of wayppoints is the same: waypoints can form a circle around the central waypoint.
 
 Execute the Program
 -----------------------

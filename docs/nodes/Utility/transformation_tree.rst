@@ -5,7 +5,7 @@ This is a utility node that creates a relationship graph of relative positions o
 There are two steps involved in using this node. The first step is to define a set of relationships between objects positions and their relative transformations 
 then we can query the internal graph to produce a list of transformations as the output.
 
-.. image:: ../../_static/images/util/transformation_tree.png
+.. image:: Images/util/transformation_tree.png
    :align: center
 
 Input
@@ -36,5 +36,5 @@ Then configure the output. Click `Set output` and select a output item to edit. 
 
 Then run the node. You should get the expected output. The relative positions of all objects are also shown in the display
 
-.. image:: ../../_static/images/util/transformation_tree_visualize.png
+.. image:: Images/util/transformation_tree_visualize.png
    :align: center

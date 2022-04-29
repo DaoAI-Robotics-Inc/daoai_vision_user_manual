@@ -21,9 +21,6 @@ Follow the detailed procedure and work on your end as well.
 
 #. Open the software shortcut on desktop: **WeRobotics EN/CN**, and click **New Project** button.
 
-    .. image:: Images/3d-new-project.png
-        :align: center
-
 #. Customize the project name and path, then click **OK**.
 
     .. image:: Images/3d-new-project-window.png
@@ -73,7 +70,7 @@ Follow the detailed procedure and work on your end as well.
 #. Search for "assemble", and expand the assemble_pose_node. Then click the poses from dropdown list. Click **Apply** button before moving to net input.
 
     .. image:: Images/3d-AinWorld-link.png
-        :align: center
+        
 
 #. Repeate previous steps for the next two inputs. When finished all three input configurations, click **Next** button.
 
