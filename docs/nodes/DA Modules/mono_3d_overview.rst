@@ -41,7 +41,7 @@ Node Paramters
 			The name of file where node save the object feature positions. The file will be saved in the workspace directory.
 	Set Feature:
 		Set Feature Fields: 
-			User defined features.
+			User-defined features.
 		Name this file: 
 			The name of file where node save the object feature positions. The file will be saved in the workspace directory.
 	Pose Estimate:

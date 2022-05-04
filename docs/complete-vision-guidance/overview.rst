@@ -30,7 +30,7 @@ There are three general detection methods, each optimized for different types of
 
 Teach Pose
 ~~~~~~~~~~
-The relative position between tool and object is fixed during the picking process, and it’s aquired from Teach Pose. The transformation is simular to the final picking transformation, but instead of generating relative position between flange and base, it is generative tool in object by reading the flange in base of robot picking pose.
+The relative position between tool and object is fixed during the picking process, and it is acquired from Teach Pose. The transformation is similar to the final picking transformation, but instead of generating relative position between flange and base, it is generative tool in object by reading the flange in base of robot picking pose.
 
 Pose Transformation
 ~~~~~~~~~~

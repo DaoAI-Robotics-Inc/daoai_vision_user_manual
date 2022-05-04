@@ -25,7 +25,7 @@ In order to better estimate the width and height of the boxes, the point cloud m
 Tuning Parameters to Get Best Estimation
 -------------------------------------------
 
-* Use "Lock Z Axes" option so that the z axes of the poses will always be prependicular to the reference plane
+* Use "Lock Z Axes" option so that the z axes of the poses will always be perpendicular to the reference plane
 * Use "Use OBB" to estimate the rotated box. Use "Use 2D Correction" to better estimate the 2d rotation of the box
 
 .. image:: Images/box_vol_est/without_2d_correction.png

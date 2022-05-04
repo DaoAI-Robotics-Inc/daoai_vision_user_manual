@@ -29,7 +29,7 @@ As the above image shows (TODO, draw professional image), the red line is the da
 
 Placing the object under the camera
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Place your object under the camera and try to put it as close as possible to the center of your working enviroment (center height of the working cell, and at the center of the image) to capture the sample image while making sure that the object is lying fully in the field of view of the camera. It’s useful to run the camera node continously, and check the **Show Crosshairs** to see the object position
+Place your object under the camera and try to put it as close as possible to the center of your working environment (center height of the working cell, and at the center of the image) to capture the sample image while making sure that the object is lying fully in the field of view of the camera. It’s useful to run the camera node continuously, and check the **Show Crosshair** to see the object position
 
 .. image:: Images/mono-3d-teach-model.png
     :align: center 

@@ -22,7 +22,7 @@ There are 3 ways for defining a feature:
       define fixture from other features, such as define a mid_point from a segment, or define a circle base on 2 points.
 
 After a feature is defined, the feature(or region for measurement features) will appear in the interactive display at position (0,0)
-user can drag it to proper position. 
+you can drag it to proper position. 
 	
 For measured features, the detection direction is shown as arrow on the edge of searching region.
 Below is an example of having 2 measured circle. the blue ring is search region, and the red circle is detected.
@@ -50,7 +50,7 @@ Tolerance
 ~~~~~~~~~
 
 Tolerance is a calculation of features. such as the maximum distance between 2 features.
-User can add tolerance, and set the pass_min, pass_max, warn_min, warn_max for it.
+You can add tolerance, and set the pass_min, pass_max, warn_min, warn_max for it.
 Normally, it is:
    warning_min < pass_min < pass_max < warning_max
 

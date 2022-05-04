@@ -107,7 +107,7 @@ Compared to the Eye-to-hand, instead of fixing the camera, the Eye-in-hand appli
 
   Pic 
 
-  Show 10 differnet poses
+  Show 10 different poses
 
 Calibrate from DaoAI calibration template
 ==========================================
@@ -240,7 +240,7 @@ Run calibration flowchart
 
 **Small Circle Method**
 
-Run the calibration with the collected files, and store the calibraiton result out into the disk
+Run the calibration with the collected files, and store the calibration result out into the disk
 
 After running the manual or auto flowchart, you need to load the bag file folder saved previously into the Calibration flowchart to generate yml file, which will be used for the real bin-picking applications. The yml file tells the threshold value of the accuracy of locating the object in the image. The smaller value, the better accuracy. 
 

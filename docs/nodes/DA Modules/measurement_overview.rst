@@ -13,13 +13,13 @@ Reference Fixture
 Interactive Display 
 -------------------------
 
-	user may only be able to edit or add markers after click "Show Interactive Display"
+	You may only be able to edit or add markers after click "Show Interactive Display"
 
 
 Markers 
 --------------------
 
-	User may click "+" button to add a new marker.
+	You may click "+" button to add a new marker.
 
 	Edge Marker: 
 		draw a rectangle region, and detect edges in this region

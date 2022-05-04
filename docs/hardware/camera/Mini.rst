@@ -13,7 +13,7 @@ On the back, the USB-C connector on the side of the camera is for connection to 
 .. image:: mini-images/mini-connection.png
    :width: 100%
 
-.. caution:: Make sure you are connecting to a USB-3 port that is intergrated on the motherboard. If you are connecting to the front panel that is connected indirectly to the motherboard, you might lack power supply when you capture.
+.. caution:: Make sure you are connecting to a USB-3 port that is integrated on the motherboard. If you are connecting to the front panel that is connected indirectly to the motherboard, you might lack power supply when you capture.
 
 .. hint:: The RealSense D400 series cameras will function when recognized as USB 2 and also when connected to USB 2 ports. However, there is limited support for USB 2.
 
@@ -41,21 +41,21 @@ There are three categories are listed on the left side of the Platform Config Wi
    :width: 100%
 
 
-Under the Type, click the Dorpdown list to see the options and add a DaoAI Mini Camera by selecting it and clicking the Accept button. A new dialog will pop up for configuring the mini camera. You can load the cfg file saved from the studio into the “Load Settings Path” as the setting used for configuring the camera node in the Vision software. To delete the camera, you can click on the camera and press the trash bin icon to delete it. 
+Under the Type, click the Dropdown list to see the options and add a DaoAI Mini Camera by selecting it and clicking the Accept button. A new dialog will pop up for configuring the mini camera. You can load the cfg file saved from the studio into the “Load Settings Path” as the setting used for configuring the camera node in the Vision software. To delete the camera, you can click on the camera and press the trash bin icon to delete it. 
 
 .. image:: camera-image/Picture22.png
    :width: 80%
 
 To add a camera, you can press the “Updated Camera List”, then press the blank box on the left to discover if the camera's serial number has been updated. If the number pops up, you can select the camera by clicking it. The load Setting Path function allows you to load the mini camera config file (not the .cfg one that ds camera use) to enhance the image quality. You can also active high accuracy mode here. Then, press the “Connect” button to connect the camera with other nodes. 
 
-.. note:: ``High Accuacy Mode`` will limit the point cloud generated in the way of filtering the points having lower confidence. Thus if ``High Accuracy Mode`` is enabled, the point cloud generated will be less condent.
+.. note:: ``High Accuracy Mode`` will limit the point cloud generated in the way of filtering the points having lower confidence. Thus if ``High Accuracy Mode`` is enabled, the point cloud generated will be less condense.
 
 .. image:: mini-images/mini-update.png
    :width: 80%
 
 Connect the virtual camera via DaoAI Vision Studio
 --------------------------------------------------
-To generate virtual camera files, you can simply check the ``Save camera data`` checkbox in the Camera Configuration window. Everytime ``Camera`` node runs, it will save the virtual camera file to your destination folder as .dmf format.
+To generate virtual camera files, you can simply check the ``Save camera data`` checkbox in the Camera Configuration window. Every time ``Camera`` node runs, it will save the virtual camera file to your destination folder as .dmf format.
 
 .. image::  mini-images/mini-save.png
    :width: 100%
@@ -68,7 +68,7 @@ You can load dmf files that were generated from the previous step as the camera 
 Use Camera with Camera Node
 ---------------------------
 
-Once configuring the camera, switch back to the flowchar. Right click the "+" sign and add the camera node. 
+Once configuring the camera, switch back to the flowchart. Right click the "+" sign and add the camera node. 
 
 .. image:: camera-image/Picture29.png
    :width: 60%

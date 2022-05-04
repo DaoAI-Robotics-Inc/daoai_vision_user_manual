@@ -1,7 +1,7 @@
 Load Recipe Node
 =======================
  
-This node allows user to load recipe automatically. For more information about the recipe, refer to recipe section.
+This node allows you to load recipe automatically. For more information about the recipe, refer to recipe section.
 This node contains a table of recipe names. Users can add/remove recipe names in the table, when the node is run,
 it loads the recipe with the input index.
 

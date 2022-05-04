@@ -9,14 +9,14 @@
     
 |
 
-``2d_finder_teach_pose`` flowchart is used before ``Picking`` since we need to teach the system what pose to pick the object. Firstly, the system loads a recipe depending on which kind of object user wants to pick. In this template, both recipe_1 and recipe_2 are looking for the same object.
+``2d_finder_teach_pose`` flowchart is used before ``Picking`` since we need to teach the system what pose to pick the object. Firstly, the system loads a recipe depending on which kind of object you want to pick. In this template, both recipe_1 and recipe_2 are looking for the same object.
 
 .. image:: Images/2d_recipe.png
     :align: center
     
 |
 
-Then this flowchart loads the 2D Calibration result from ``Hand Eye Calibration 2D V02`` Node and chesseborad ``bag`` file, calibrate again from the bag files. Loading the mesh from local directory, outputing the picking pose in ``Gripper`` Node. 
+Then this flowchart loads the 2D Calibration result from ``Hand Eye Calibration 2D V02`` Node and chessboard ``bag`` file, calibrate again from the bag files. Loading the mesh from local directory, outputting the picking pose in ``Gripper`` Node. 
 Using the visualization to check if object(the plane in this case) and gripper(the pencil in this case) if they were aligned.
 
 .. image:: Images/2d_gripper_skew.png
@@ -24,7 +24,7 @@ Using the visualization to check if object(the plane in this case) and gripper(t
     
 |
 
-The example shown above is transformed with virtual robot therefore the ``Robot Read`` input is not accurate. User then should adjust the pose for ``Gripper`` Node output, adjusting it as they should align. 
+The example shown above is transformed with virtual robot therefore the ``Robot Read`` input is not accurate. Then, you should adjust the pose for ``Gripper`` Node output, adjusting it as they should align. 
 
 Note: ONLY adjust this pose when using virtual robot! If using real robot and gripper not aligned with object, should check the real robot pose. 
 
@@ -38,10 +38,10 @@ This is how it looks like the image below.
 Order Picking Setting
 -------------
 
-If user wants to pick using 2D Picking, the Picking flowchart needs to take in specific payloads from the robot. 
-``Payload_1`` is the variable which control what type of detections to choose. In this case, 2D Picking is anything othere than ``1`` and ``2`` .
-``Payload_2`` is the variable which control what kind of objects to pick in the recipe(swithcing recipes). ``Load Recipe`` Node takes ``Payload_2`` as input to determine which recipe to load. 
-In our example, there are only 2 recipes in this project. Hence carefully set this ``Payload_2`` , if this payload does not match corresponding recipe number, the system would ouput ``ERROR`` .
+If you want to pick using 2D Picking, the Picking flowchart needs to take in specific payloads from the robot. 
+``Payload_1`` is the variable which control what type of detections to choose. In this case, 2D Picking is anything other than ``1`` and ``2`` .
+``Payload_2`` is the variable which control what kind of objects to pick in the recipe(switching recipes). ``Load Recipe`` Node takes ``Payload_2`` as input to determine which recipe to load. 
+In our example, there are only 2 recipes in this project. Hence carefully set this ``Payload_2`` , if this payload does not match corresponding recipe number, the system would output ``ERROR`` .
 
 For virtual robot, we use ``Hercules`` . 
 
@@ -64,7 +64,7 @@ Before running the Picking flowchart:
 
 1. Should run through the ``2d_finder_teach_pose`` flowchart, otherwise some of the inputs might be ``NULL`` .
 
-2. User should double check the ``Platform Configuration`` , make sure the camera and robot is connected. 
+2. You should double check the ``Platform Configuration`` , make sure the camera and robot is connected. 
 
 In this case, camera_1 is for Recipe_1 object detection; camera_2 is for Recipe_2 object detection.
 

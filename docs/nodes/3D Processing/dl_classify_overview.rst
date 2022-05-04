@@ -14,7 +14,7 @@ Output
 * classLabel: label of the object, an int defined by the deep learning model
 * confidence: confidence of the classification
 
-Classfication Setting
+Classification Setting
 ---------------------
 
 * Model Mode: use only RGB for classification; use only depth(from point cloud) for classification; or use both.

@@ -24,7 +24,7 @@ Three source types are available:
 * Read from folder: Reads from files inside a folder
 * Read from numbered: Reads from files with the same naming scheme ending in a number
 
-If the user chooses a file with a non-supported extension, the program will give an error message. Also, if reading from a folder or in numbered orders, the program will give an error message if the folder is empty or, it does not include any of the valid extensions, or in case the more than one valid extension type exists in the folder.  
+If you chose a file with a non-supported extension, the program will give an error message. Also, if reading from a folder or in numbered orders, the program will give an error message if the folder is empty or, it does not include any of the valid extensions, or in case the more than one valid extension type exists in the folder.  
 
 Read From a single file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -41,7 +41,7 @@ otherwise the reader node will not know which type of data to read. You can also
 Read From Numbered Files 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This is the more advanced version of reading from foler mode. Here you can specify the file prefix and index. For example, if the prefix is `daoai_` and index range is between
+This is the more advanced version of reading from folder mode. Here you can specify the file prefix and index. For example, if the prefix is `daoai_` and index range is between
 0 and 12, the node will read from daoai_0 to daoai_12, and start from 0 again. You can also reset iterator with the "reset values" button.
 
 Output
@@ -53,7 +53,7 @@ It also has numOfFiles output, which indicates number of files read so far (in r
 Writer Node
 -------------------
 
-Writer nodes write certains types of data to files in disk
+Writer nodes write certain types of data to files in disk
 
 .. image:: Images/util/assemble_bag.png
    :align: center

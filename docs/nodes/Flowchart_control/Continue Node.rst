@@ -8,7 +8,7 @@ Synopsis
 
 Description 
 ---------
-	Has a single input, 'Condition', that when evaluates to True, forwards the execution of the loop that the node is in to the next loop iteration. This node allows the user to skip part of a For Loop sub-flowchart by simply going to the next iteration. 
+	Has a single input, 'Condition', that when evaluates to True, forwards the execution of the loop that the node is in to the next loop iteration. This node allows the you to skip part of a For Loop sub-flowchart by simply going to the next iteration. 
 
 	 .. image:: images/continue_node.png
 		:scale: 80%	

@@ -90,4 +90,4 @@ Collision Avoidance & Safety Related
 	Robot might have unexpected movement. And due to constrains in real world(such as tight working space for robot), robot needs to be monitor in developing and experimental stage. 
 	Observe robot behavior until you ensure the program and work flow is correct.
 
-If robot is about to hit anything, please initiate the Emergency Stop on UR panel. After Emgergency Stop, you should find the issue and fix it before restart the process.
+If robot is about to hit anything, please initiate the Emergency Stop on UR panel. After Emergency Stop, you should find the issue and fix it before restart the process.

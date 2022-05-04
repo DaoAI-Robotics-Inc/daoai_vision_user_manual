@@ -6,7 +6,7 @@ Instruction for Adjusting Box
 
 |
 
-Adjusting Box feature in Cloud Process node is a feature which allows user to adjust the region of interest. 
+Adjusting Box feature in Cloud Process node is a feature which allows you to adjust the region of interest. 
 The green box will be the region of interest when it is set. 
 The box also has x, y, z directions, hence when adjusting this box should be aware which direction you want to set(if you setup the reference frame in Cloud Process node, these directions would be changed to the ones from reference frame). 
 Therefore, pay attention to the directions especially when using Collision Avoidance.
@@ -22,12 +22,12 @@ There are 3 ways of adjusting the box: 1. adjusting the size; 2. adjusting the r
 Adjusting Size
 ------------------------
 
-This operation would change the size of the region. Based on the expected result, you can **left-click** and drag to enlarge or shrink the area. By draging on the green knots, you will be able to change the size of this direction.
+This operation would change the size of the region. Based on the expected result, you can **left-click** and drag to enlarge or shrink the area. By dragging on the green knots, you will be able to change the size of this direction.
 
 .. image:: Images/moving_size.png
     :align: center 
 
-After draging the box, you can see the original box(white) and the modified box(green). 
+After dragging the box, you can see the original box(white) and the modified box(green). 
 
 .. image:: Images/after_size.png
     :align: center 
@@ -49,7 +49,7 @@ Based on the expected result, you can **left-click** and drag on the box surface
 The box will rotate followed with your mouse dragging direction. If you want the box to tilt 90 degrees to the left, you can **left-click** and drag the top sureface of the box then drag it to the left slowly. 
 Try to **left-click** and drag closer to the central of the top box surface which would easier to finish this tilt.
 
-After draging the box, you can see the original box(white) and the modified box(green). 
+After dragging the box, you can see the original box(white) and the modified box(green). 
 
 .. image:: Images/rotate.png
     :align: center 
@@ -67,6 +67,6 @@ Based on the expected result, you can **right-click** and drag on anywhere on th
 
 |
 
-After draging the box, you can see the original box(white) and the modified box(green). 
+After dragging the box, you can see the original box(white) and the modified box(green). 
 
 After you exit the Interactor, the original box would be changed when the next time you open the adjusting box feature.

@@ -34,7 +34,7 @@ Color Sample
 	There are 2 ways to define a color sample
 
 	1. Define color by area.
-		Draw a box on display, node will calculate the average color of this box, and save it as color sample value. Additionally, user can draw/erase mask to change pixels included when calculate average.
+		Draw a box on display, node will calculate the average color of this box, and save it as color sample value. Additionally, you can draw/erase mask to change pixels included when calculate average.
 
 	2. Define color by value
 		Define a RGB value as color sample. The color can be set from a color board, manually set HSV or RGB value, or pick a pixel's color from the screen.

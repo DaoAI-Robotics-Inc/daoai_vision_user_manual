@@ -15,7 +15,7 @@ Output
 * postSegmDepth: depth image of the scene after segmentation
 * postSegmPCA: image showing PCA of the scene cluster 
 * postSegmRGB: rgb image after segmentation
-* results: a vector of segments, each containining a mask image of the size of the scene image, showing which points belong to this segment
+* results: a vector of segments, each containing a mask image of the size of the scene image, showing which points belong to this segment
 
 Parameters
 -----------------------
@@ -28,7 +28,7 @@ Pre-process
 Segmentation Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* Basic Weight Threshold: how much differnt between the adjascent points to be considered as different segment. Default Value is 50, range is [0,100].
+* Basic Weight Threshold: how much different between the adjacent points to be considered as different segment. Default Value is 50, range is [0,100].
 * Basic Min Size: minimum size of each segment. Default value is 50, range is [0,100].
 
 Post-processing

@@ -57,3 +57,17 @@ This section demonstrates collecting and saving a training dataset with the corr
 
 Guidelines for collecting a dataset
 -----------------------------------
+
+.. image:: images/detectors.png
+    :align: center
+
+While collecting dataset for annotation, you need to set rules for the dataset. 
+These rules are followed by the detail requirement of detection needs. 
+For example, we only want to pick the objects which does not cover/stack by another objects; pick the objects which are tilted less than 30 degrees etc. 
+Therefore, you only need to annotate the objects which follows the requirements. Then, you should only annotate those objects which are not cover 20% or more, 
+tilted less than 30 degree horizontally and annotate objects by classifying front/back sides etc.
+
+Secondly, try to simulate the actual working environment and conditions when collecting dataset. For example, if the objects would showed up in different height within the scene: 
+you need to collect dataset for objects in different heights. If the background of object occurrence is different, deep learning is difficult to identify the objects. 
+Therefore, you should collect dataset in the working environment. If object can be shown in different background, you should also collect dataset in all the possible background.
+

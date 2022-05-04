@@ -22,11 +22,11 @@ The model provides the area that it detects each object, which makes picking pos
 .. image:: images/bp-testing-gif1.gif
     :align: center
 
-Keypoint Detection Model
+Key-point Detection Model
 ------------------------
-This is an example of our keypoint detection model.
+This is an example of our key-point detection model.
 Here, the model is identifying the orientation of each object, as well as the center-point.
-The top and bottom of each object are slightly different, so the two different keypoints (P1 and P2) are used to identify which side is which.
+The top and bottom of each object are slightly different, so the two different key-points (P1 and P2) are used to identify which side is which.
 
 .. image:: images/examples-keypoint.png
     :align: center

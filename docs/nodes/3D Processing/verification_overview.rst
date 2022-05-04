@@ -20,9 +20,9 @@ Parameters
 * Depth Mode Parameters
    * Occluded Part Tolerance: threshold such that poses with more than this part occluded should be removed. Default is 50, range is [0,100]
    * Error Tolerance: how much error points a pose can have. Higher the tolerance, more inaccurate result will be kept. Default is 50, range is [0,100]
-   * Overlap Ratio: controls the pentalty low overlap between model and scene. Default is 50, range is [0,100]
+   * Overlap Ratio: controls the penally low overlap between model and scene. Default is 50, range is [0,100]
 * Edge Mode Parameters
-   * Camera Instrinsic Parameter: camera intrinsic parameter, used for edge extract
+   * Camera Intrinsic Parameter: camera intrinsic parameter, used for edge extract
    * RGB image: RGB image of the scene
    * Smoothness: level of smoothness applied to scene edge. Default is 50, range is [0,100]
    * Canny Low Factor: lower threshold of canny filter

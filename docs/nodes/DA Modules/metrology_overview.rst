@@ -10,7 +10,7 @@ Please refer to Reference Fixture System
 Interactive Display 
 ---------------------
 	
-User may only be able to edit or add features after click "Show Interactive Display"
+You may only be able to edit or add features after click "Show Interactive Display"
 
 Output 
 -----------------

@@ -10,7 +10,7 @@ The matching process will run faster on these segments.
 
 RGBD segmentation works best when instances of objects are spaced apart. 
 Otherwise, segments may contain multiple instances of the object. In these cases, normal segmentation may segment out the instances more clearly. 
-Both watershed segmentations are performing on the image using maker generation. They are faster but could result in less accurate segmentation.
+Both watershed segmentation are performing on the image using maker generation. They are faster but could result in less accurate segmentation.
 
 Four types of Segmentation Nodes are available:
    * Segmentation RGBD: Uses the RGB and depth information to perform clustering

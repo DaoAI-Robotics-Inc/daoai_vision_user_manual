@@ -1,7 +1,7 @@
 Overview 
 =========================
 
-nput 
+Input 
 -----------------------------
 
 Point Cloud: the input point cloud to be processed.

@@ -44,13 +44,13 @@ The virtual camera will read the \*.png files, and select the way you would like
 
 .. Attention:: 
     * From file: Select a single png file
-    * Fron folder: It reads out all the \*.png file from the folder
+    * From folder: It reads out all the \*.png file from the folder
     * From numeric: Read specific files with dedicated prefix.
 
 Use Camera with Camera Node
 ---------------------------
 
-Once configuring the camera, switch back to the flowchar. Right click the "+" sign and add the camera node. 
+Once configuring the camera, switch back to the flowchart. Right click the "+" sign and add the camera node. 
 
 .. image:: camera-image/Picture29.png
    :align: center

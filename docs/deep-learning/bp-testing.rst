@@ -18,7 +18,7 @@ Now your screen should look like this:
 .. image:: images/bp-testing-im2.png
     :align: center
 
-Next, right click on the Plus ('+') in the mdidle of the screen, and select 'Insert Node'.
+Next, right click on the Plus ('+') in the middle of the screen, and select 'Insert Node'.
 
 If you'd like to test your model using a Camera, select the 'Camera' Node
 To learn how to use a Camera, please reference the 'Cameras' section.

@@ -19,13 +19,13 @@ Calibration validation requires a successful calibration to exist for the active
     :align: center
      
 
-If you are validating just after running calibration, this contraint should not be an issue, but you might want to perform validation regularly over time, days, weeks or months after the last successful calibration. When this is the case, it is recommended to:
+If you are validating just after running calibration, this constraint should not be an issue, but you might want to perform validation regularly over time, days, weeks or months after the last successful calibration. When this is the case, it is recommended to:
 
 * **Fixed camera**: Use a (manual or automatic) tool changer, and have the calibration plate rigidly attached to one of the tool ends. It’s important that the tool changer is such that the mounted tool is subject to neglectable mounting errors.
 
 * **Robot-mounted camera**: Rigidly fix the calibration plate to a wall or other structure in the work cell. When performing validation, the plate should be at a distance to the camera similar to the distance at which parts are expected to be picked.
 
-Validation from the calibraiton template
+Validation from the calibration template
 ~~~~~~~~~~
 (This section should describe how to use the template to collect the group of testing bag data, and then run through all the bag data and check the final average accuracy, if the error is bigger than sth, should re-calibrate; Should also cover how to operate the robot side program)
 
@@ -39,7 +39,7 @@ If the camera has not moved with respect to the robot, it could be that somethin
 * The calibration plate moved during the calibration process.
 * The camera mount (fixed or robot-mounted) was incorrectly selected in the calibration wizard.
 * The calibration poses don’t comply with the recommendations.
-* If you are integrating a new robot brand with DaoAI Vision Studio, there might be an incompatability in the way poses are communicated between DaoAI Vision and the robot. Especially the euler order and magnitude for the translation. 
+* If you are integrating a new robot brand with DaoAI Vision Studio, there might be an incompatibility in the way poses are communicated between DaoAI Vision and the robot. Especially the euler order and magnitude for the translation. 
 
 
 

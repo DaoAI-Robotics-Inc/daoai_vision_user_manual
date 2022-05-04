@@ -8,9 +8,9 @@ Define Features:
 	4. run final mode node to calculate the position of feature relative to object.
 
 Set Feature:
-	As an alternative way of define features, user may input the feature_in_object using position vallues
+	As an alternative way of define features, you may input the feature_in_object using position values
 
 Pose Estimate:
 	0. run eye-in-hand calibration, get calibration context. 
-	1. caprure object, it should capture at least 4 features.
+	1. capture object, it should capture at least 4 features.
 	2. run pose_estimate mode node, obtain object_in_camera pose

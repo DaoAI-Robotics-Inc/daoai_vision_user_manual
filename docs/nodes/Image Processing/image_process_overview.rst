@@ -9,5 +9,5 @@ Image_In (type:Image) : Input image for image process operations.
 Output
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-imageOutput (type:Image) : Output image after perfroming different operations on the input image.
+imageOutput (type:Image) : Output image after performing different operations on the input image.
 

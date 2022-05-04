@@ -8,7 +8,7 @@ Processing Nodes Vs Definition Nodes
 --------------------------------------
 
 Processing nodes are nodes that doesn't require re-configuration in field. For example, camera nodes. Due to such reason these nodes are not able to store configuration in recipe
-Definition Nodes, on the other hand, are nodes that may have changing configuration in field application, or their configuration requires user interaction (such as adjust 
+Definition Nodes, on the other hand, are nodes that may have changing configuration in field application, or their configuration requires user-interaction (such as adjust 
 bounding box filtering in cloud process node). These nodes are able to store information in the recipe.
 
 Complete List of Definition Nodes
@@ -29,7 +29,7 @@ Complete List of Definition Nodes
 * DL classification
 * Object Finder 3d
 
-An Exmaple on How to Use the Recipe Feature
+An Example on How to Use the Recipe Feature
 --------------------------------------------
 
 We use this simple workspace to illustrate how we can use recipe. In this workspace, camera node captures a point cloud, then the point cloud is converted 
@@ -42,7 +42,7 @@ nodes store info in recipe now.
 Add/Remove Recipe, Add Node to Recipe
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-From the recipe panel on the bottom of the mainwindow you can add and remove recipe. To tell a node to store its information in recipes, right click on the node
+From the recipe panel on the bottom of the main window you can add and remove recipe. To tell a node to store its information in recipes, right click on the node
 and select "Add Node To Recipe". Once that's successful, you will see a small R icon on the top left of the node.
 
 .. image:: Images/add_node_to_recipe.png
@@ -67,12 +67,12 @@ Now switch back to recipe_1, you should see the first model in the mod finder no
 Load Recipe Node
 ~~~~~~~~~~~~~~~~~~~~~~
 
-All the creation and definition work of the recipes must be done before the project deployed to the field. However, users are able to swith recipe automatically using the 
+All the creation and definition work of the recipes must be done before the project deployed to the field. However, users are able to switch recipe automatically using the 
 load recipe node.
 
 .. image:: Images/recipe_node.png
    :width: 58%
 
 When the load recipe node is run, it loads the recipe in its recipe table specified by the input index. You can add or remove recipe entry in the table by clicking add or remove button.
-The index of the entry is unique and fixed once it is added. The recipe name of each entry and the index name to load can be manually changed or linked, giving user the flexibility
+The index of the entry is unique and fixed once it is added. The recipe name of each entry and the index name to load can be manually changed or linked, giving you the flexibility
 to automatically load specific recipes.

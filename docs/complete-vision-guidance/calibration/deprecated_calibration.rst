@@ -82,7 +82,7 @@ After running the manual flowchart, you must import the bag file folder that was
     :align: center
 |
 
-You can either manually filtering out the ball, or using the color filtering option to select the ball's cloud automactically. 
+You can either manually filtering out the ball, or using the color filtering option to select the ball's cloud automatically. 
 
 Manually filter the ball
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -194,7 +194,7 @@ Preparation
 
 * The chessboard should be positioned at the camera's optimal working distance. When generating the chessboard's coordinating system, the initial pose should always be in the center of the camera's field of view. Then, either clockwise or counterclockwise, gradually adjust the chessboard's position around the first pose to create at least eight additional poses. These poses should be angled approximately 30 degrees in relation to the Z direction of the world coordinates (as defined by the world points), and they should encompass the entire chessboard (even though the outer part of the chessboard may not contain any internal corners). Additionally, it is recommended to capture a small area around the chessboard to aid in the accuracy of later image corner detection. The more poses you generate, the more precise the result. 
 * To ensure that the chessboard's initial pose is in the center of the camera, you can activate the crosshair function in the view section display setting dialogue, which will center the chessboard in the cross. The chessboard's maximum tilt angle is 40 degrees.
-* The chessboard calibration can be done two ways: you can use the samll circle or use the large circle to calibrate; however, each method has different approach to setup poses for generating the bag file as shown in the picture. 
+* The chessboard calibration can be done two ways: you can use the small circle or use the large circle to calibrate; however, each method has different approach to setup poses for generating the bag file as shown in the picture. 
 
 Small circle
 

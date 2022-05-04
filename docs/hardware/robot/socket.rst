@@ -24,20 +24,20 @@ Connections
 Just like the Client-Server pattern, server is waiting for the requests from client. 
 **Vision** is the server in this case, so the communication would start from robot.
 Robot sends a request to **Vision** , this request should include command and payloads. 
-**Vision** determines the process by checking command. after processing data on **Vision** side, it replies back reponse, this reponse should include status and payloads. 
+**Vision** determines the process by checking command. after processing data on **Vision** side, it replies back response, this response should include status and payloads. 
 Robot also checks this status, based on this response to preform moving, picking or holding still. 
 
-The IP address of server is the IP of workstation which the **Vision** is running on. Port number must to identical for robor and **Vision** , otherwise they will not be able to communicate.
+The IP address of server is the IP of workstation which the **Vision** is running on. Port number must to identical for robot and **Vision** , otherwise they will not be able to communicate.
 
 Protocols
 ----------------
-Requesst and responses messages between a robot and **Vision** have a fixed size. 
+Request and responses messages between a robot and **Vision** have a fixed size. 
 A fixed-size message protocol has the advantage that it is easy to implement on the robot side, even with limited programming features.
 
 .. note::
-	Even though requests and reponses are having fix-size length, they do not have starting and/or ending singals. Robot side is able to compare the message size to determine the boundaries of each message.
+	Even though requests and response are having fix-size length, they do not have starting and/or ending signals. Robot side is able to compare the message size to determine the boundaries of each message.
 
-Requests and reponses are consist of many fields, each fields are ``int32 `` size of 4 bytes. Floats would be multiply with a constant number ``MULT = 10000`` , then sends back as ``int32`` . After that, client side robot would devide the multifactor to get the data. Negative values would use one's complement.
+Requests and response are consist of many fields, each fields are ``int32 `` size of 4 bytes. Floats would be multiply with a constant number ``MULT = 10000`` , then sends back as ``int32`` . After that, client side robot would divide the multifactor to get the data. Negative values would use one's complement.
 
 Request Message
 ----------------
@@ -68,7 +68,7 @@ Response Message
 +-------------+----------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Orientation | int32[4] | 16 bytes               | Object direction or object coordinate rotations, depending on status. Encoding and units depend on the chosen orientation convention and have to be divided by MULT  |
 +-------------+----------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Payload     | int32[6] | 24 bytes               | Optional fields which for extra informationsin message. Encoding and units depend on the chosen orientation convention and have to be divided by MULT                |
+| Payload     | int32[6] | 24 bytes               | Optional fields which for extra information message. Encoding and units depend on the chosen orientation convention and have to be divided by MULT                |
 +-------------+----------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Status      | int32    | 4 bytes                | Payloads are optional for extra message contents in communication                                                                                                    |
 +-------------+----------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -152,8 +152,8 @@ Robot requests Vision to accumulate and collect images to accumulates calibratio
 Vision sends back ``DAOAI_MODE_AUTO_CALIBRATION = 11``, it means Vision is under correct process. Else
 if, Vision sends back ``DAOAI_DONE_AUTO_CALIBRATION = 33``, it means Vision collected enough poses for
 calibration mode, this status ends the auto calibration mode in robot. If Vision replies anything
-other than 11 or 33, that means Vision and robot are under different process, robot will resends
-``RC_START_AUTO_CALIBRATION = 4`` to restart auto calibration prcess.
+other than 11 or 33, that means Vision and robot are under different process, robot will resend
+``RC_START_AUTO_CALIBRATION = 4`` to restart auto calibration process.
 
 **RC_GUIDANCE_CALIBRATION**
 
@@ -171,19 +171,19 @@ other than 11 or 33, that means Vision and robot are under different process, ro
 Robot requests Vision to start guidance calibration process. Robot would keeps sending this command
 throughout the guidance process. Vision will start accumulate and collect images to accumulates
 calibration poses from the first robot pose. Then based on the first pose, Vision would calculate
-and output the next recommanded pose; based on these poses, Vision would reply 12, 13 and 32
+and output the next recommended pose; based on these poses, Vision would reply 12, 13 and 32
 according to the calculation: if the pose is good, Vision replies 12, meaning is able to move to next
 pose; if Vision replies 13, it means the pose is not good according to the calculation; 32 means
 Vision has collected enough poses to generate calibration result, terminates the calibration mode
 in robot. If Vision replies anything other than the status above, that means Vision and robot are
-under different process, robot will resends ``RC_GUIDANCE_CALIBRATION = 10`` to restart guidance
+under different process, robot will resend ``RC_GUIDANCE_CALIBRATION = 10`` to restart guidance
 calibration process.
 
 **RC_DAOAI_CAPTURE_AND_PROCESS**
 
 Robot requests the start signal of picking mode, Vision would acknowledge picking mode. Vision
 would reply ``DAOAI_DETECTION =  5`` to acknowledge and enter detection and picking process. If Vision
-sends back any other status, it means Vision is under different process, robot would resends
+sends back any other status, it means Vision is under different process, robot would resend
 current command and repeat the above process.
 
 Response Status

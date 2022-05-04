@@ -15,10 +15,10 @@ Input
 Description 
 ------------
 Depth Map -> Point Cloud:
-	For each pixel point in depth image, generate a point with its depth value and add it into pointl cloud.
+	For each pixel point in depth image, generate a point with its depth value and add it into point cloud.
 	
 Point Cloud -> Depth Map:
-	User set the size_x and size_y of depth image. From point cloud, draw a box in point cloud.
+	You set the size_x and size_y of depth image. From point cloud, draw a box in point cloud.
 	For all the points in the box, select the top points and put it as pixel points of depth image. 
 	Then remap the depth image to a size_x,size_y depth image.  
 

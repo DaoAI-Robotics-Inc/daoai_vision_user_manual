@@ -2,7 +2,7 @@ The Vision Interface
 =================
 
 The Vision Interface has some variables and functions to communicate between **Vision** and robot. 
-This interface should be able to communicate with different type of robots, no matter what language the robot is scrpting in.
+This interface should be able to communicate with different type of robots, no matter what language the robot is scripting in.
 
 These are the examples:
 
@@ -62,7 +62,7 @@ Functions
 
 All functions below are request to **Vision**, the communication is one send and one recv.
 
-.. warning:: These are the system functions, do **NOT** directly call thses functions even if you need to modify the script!
+.. warning:: These are the system functions, do **NOT** directly call these functions even if you need to modify the script!
 
 
 .. raw:: html
@@ -172,8 +172,8 @@ These are the functions mainly for Guidance Calibration process.
 
 .. code-block:: text
 
-	Iccumulate the calibration, and once the vision received enough pose, 
-	it will finish the calibraiton automatically
+	Accumulate the calibration, and once the vision received enough pose, 
+	it will finish the calibration automatically
 
 	This is the same function as Manual Calibration
 
@@ -192,7 +192,7 @@ These are the functions mainly for Auto Calibration process.
 .. code-block:: text
 
 	 This is requesting Vision to start Auto Calibration. Robot sends RC_START_AUTO_CALIBRATION,
-	 as well as the current robot pose. Then wait vision to send back acknolegement.
+	 as well as the current robot pose. Then wait vision to send back acknowledgement.
 
 .. raw:: html
    
@@ -262,7 +262,7 @@ These are the functions mainly for Picking process.
 .. code-block:: text
 
 	  Just receiving poses, without capturing new images. This can be applied to 1 capture and pick all 
-	  occurences as well. payload_1 is the number of remaining objects in scene.
+	  occurrences as well. payload_1 is the number of remaining objects in scene.
 
 .. raw:: html
    

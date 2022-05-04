@@ -13,7 +13,7 @@ Parameter Tunning in Depth Mode
 
 Besides verifying if the model is closely aligned with the scene, an important feature of depth mode is to reject poses where
 objects are below the scene(occluded by other objects). In application this can be used where objects with too much occlusion by other objects
-can not be picked up. You can change *Occluded Part Tolerance* to deterine how much occlusion to reject a pose.
+can not be picked up. You can change *Occluded Part Tolerance* to determine how much occlusion to reject a pose.
 
 Parameter Tunning in Edge Mode
 ------------------------------------------

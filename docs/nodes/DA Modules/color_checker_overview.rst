@@ -17,7 +17,7 @@ Node Settings
 	Color Image In: (DataType: Image) A color image. 
 
 	Color Function: 
-		decide weither user want to use Color_Matching function or Color Segmentation function.
+		decide whether you want to use Color_Matching function or Color Segmentation function.
 
 	Tolerance: 
 		Range [0 ~ 100]

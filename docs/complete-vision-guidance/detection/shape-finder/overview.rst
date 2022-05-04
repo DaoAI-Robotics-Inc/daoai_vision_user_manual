@@ -34,14 +34,14 @@ All the shapes in Shape Finder has been taught to **Vision**, you can go ahead t
 Setup Shape Parameters
 --------------------
 
-Clicking on ``+`` button to add shape. You can see the Shape Prarameter Configuration window. You can edit your shape parameters and type here.
+Clicking on ``+`` button to add shape. You can see the Shape Parameter Configuration window. You can edit your shape parameters and type here.
 
 .. image:: images/add_shape.png
     :align: center
 
 |
 
-User is able to choose the shape for your object from **Vision** defined shapes. Like image shown below:
+You are able to choose the shape for your object from **Vision** defined shapes. Like image shown below:
 
 .. image:: images/shapes.png
     :align: center
@@ -59,24 +59,24 @@ Without these inputs, Shape Finder would display errors since there are not enou
 
 **Min Acceptance** is the acceptance level of objects in scene. We should increase the acceptance higher to ensure it detects the objects and objects only. 
 But if the acceptance is too high, Vision would try to look for objects which has similar shape. 
-This is not so true in real life enviornment since objects might be in different place, when camera captures, the shape of object would slightly change due to angle changes or lighting changes.
+This is not so true in real life environment since objects might be in different place, when camera captures, the shape of object would slightly change due to angle changes or lighting changes.
 
 .. image:: images/less_found.png
     :align: center
 
-When setting acceptance too high, detected 2 occurence of objects but there are 3
+When setting acceptance too high, detected 2 occurrence of objects but there are 3
 
 .. image:: images/many_found.png
     :align: center
 
-When setting acceptance too low, detected 32 occurence of objects but there are 3
+When setting acceptance too low, detected 32 occurrence of objects but there are 3
 
 .. image:: images/correct.png
     :align: center
 
-Correct output shouls looks like this.
+Correct output should looks like this.
 
-Occurence option controls the output result to be single or multiple. In this example, we want the robot to assemble all the holes hence we need all occurence of objects in scene.
+Occurrence option controls the output result to be single or multiple. In this example, we want the robot to assemble all the holes hence we need all occurrence of objects in scene.
 
 .. image:: images/occurence.png
     :align: center

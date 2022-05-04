@@ -7,7 +7,7 @@ Collect Data
 First Complete the following information
 
 #. Software Version. 
-    * DaoAI Visin Studio
+    * DaoAI Vision Studio
         .. image:: images/faq-version.png
     
     * DaoAI 3D Camera

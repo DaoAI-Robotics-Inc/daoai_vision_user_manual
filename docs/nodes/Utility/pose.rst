@@ -20,7 +20,7 @@ Input
 
 output
 ~~~~~~~~~~~~~~~~~~~~~
-A pose that contains assembeld transformation matrix
+A pose that contains assembled transformation matrix
 
 Disassemble Pose Node
 ---------------------

@@ -1,7 +1,7 @@
-Deep Learing Classification Node
+Deep Learning Classification Node
 ======================================
 
-The DL Classification Node offers state-of-the-art classification of point clouds using pretrained models. 
+The DL Classification Node offers state-of-the-art classification of point clouds using pre-trained models. 
 The setup of this node is very similar to DL Segmentation with the only difference being the task at hand.
 
 .. image:: Images/dl_classify/dl_classify.png

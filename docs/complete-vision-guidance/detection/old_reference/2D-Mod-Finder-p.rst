@@ -19,7 +19,7 @@ This step runs the Detection flowchart as Teach_Pose mode(running the left branc
     
 |
 
-2. The system loads a recipe depending on which kind of object user wants to pick. In this template, both recipe_1 and recipe_2 are looking for the same object.
+2. The system loads a recipe depending on which kind of object you want to pick. In this template, both recipe_1 and recipe_2 are looking for the same object.
 
 3. Depending on the Calibration type in variable, ``Switch`` between 3 kinds of calibration files. We use ``Sphere Calibration`` in our example.
 
@@ -38,7 +38,7 @@ Note: When ``Gripper`` Node needs to redefine a new pose, please delete the exis
     
 |
 
-The example shown above is transformed with virtual robot therefore the ``Robot Read`` input is not accurate. User then should adjust the pose for ``Gripper`` Node output, adjusting it as they should align. 
+The example shown above is transformed with virtual robot therefore the ``Robot Read`` input is not accurate. Then, you should adjust the pose for ``Gripper`` Node output, adjusting it as they should align. 
 
 Note: ONLY adjust this pose when using virtual robot! If using real robot and gripper not aligned with object, should check the real robot pose. 
 
@@ -58,9 +58,9 @@ This is how it looks like the image below.
 Order Picking Setting
 -------------
 
-If user wants to pick using 3D RGB Picking, the Picking flowchart needs to take in specific payloads from the robot. 
+If you want to pick using 3D RGB Picking, the Picking flowchart needs to take in specific payloads from the robot. 
 ``Payload_1`` is the variable which control what type of detections to choose. In this case, 3D RGB Picking is ``1`` .
-``Payload_2`` is the variable which control what kind of objects to pick in the recipe(swithcing recipes). ``Load Recipe`` Node takes ``Payload_2`` as input to determine which recipe to load. 
+``Payload_2`` is the variable which control what kind of objects to pick in the recipe(switching recipes). ``Load Recipe`` Node takes ``Payload_2`` as input to determine which recipe to load. 
 In our example, there are only 2 recipes in this project. Hence carefully set this ``Payload_2`` , if this payload does not match corresponding recipe number, the system would ouput ``ERROR`` .
 
 For virtual robot, we use ``Hercules`` . 
@@ -84,7 +84,7 @@ Both 3D RGB Picking and 3D Depth Picking would need ``pose_generation`` flowchar
     
 |
 
-``Pick Sort`` Node would sort the order for picking up objects. This Node labels all the occurence of objects and the result is used as inputs for ``Transformation Tree`` Node to generate the pose to robot.
+``Pick Sort`` Node would sort the order for picking up objects. This Node labels all the occurrence of objects and the result is used as inputs for ``Transformation Tree`` Node to generate the pose to robot.
 
 .. image:: Images/3d_pick_sort.png
     :align: center
@@ -105,7 +105,7 @@ Before running the Picking flowchart:
 
 1. Should run through the ``3d_finder_rgb_teach_pose`` flowchart, otherwise some of the inputs might be ``NULL`` .
 
-2. User should double check the ``Platform Configuration`` , make sure the camera and robot is connected. 
+2. You should double check the ``Platform Configuration`` , make sure the camera and robot is connected. 
 
 In this case, camera_1 is for Recipe_1 object detection; camera_2 is for Recipe_2 object detection.
 

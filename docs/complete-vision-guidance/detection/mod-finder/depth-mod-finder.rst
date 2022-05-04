@@ -19,7 +19,7 @@ As the image above shows, the Gray Mod Finder contains 5 sections in the whole f
     :align: center  
 
 During the runtime, the execution flow is section 1 -> 3 -> 2 -> 4 -> 3 -> 4 -> 5. When defining model, set ``detection.detection_status`` to ``0`` which would reset to setup working cell stage. 
-Then it enters stage 2 defining model. Afterwards, it statys on stage 3 detection mode until you change the variable to reset the stage.
+Then it enters stage 2 defining model. Afterwards, it stays on stage 3 detection mode until you change the variable to reset the stage.
 
 .. image:: images/depth_modfinder_temp.png
     :align: center 
@@ -43,7 +43,7 @@ The rest of this article is about how to define model. If you want to know what 
 Placing the object under the camera
 ~~~~~~~~~~~~~~
 
-Place your object under the camera and try to put it as close as possible to the center of your working enviroment (center height of the working cell, and at the center of the image) to capture the sample image while making sure that the object is lying fully in the field of view of the camera. It’s useful to run the camera node continously, and turn on the point cloud view to see the image quality of the object. 
+Place your object under the camera and try to put it as close as possible to the center of your working environment (center height of the working cell, and at the center of the image) to capture the sample image while making sure that the object is lying fully in the field of view of the camera. It’s useful to run the camera node continuously, and turn on the point cloud view to see the image quality of the object. 
 
 .. image:: images/teach-model-picture_gray_mod_finder.png
     :align: center 
@@ -59,12 +59,12 @@ Then execute the Cloud Process node. Then you could adjust the bounding box.
 .. image:: images/roi.png
     :align: center 
 
-.. tip:: When adjust the bounding box, you could press **R** to reset to the original view, and blabla for the operation trick
+.. tip:: When adjust the bounding box, you could press **R** to reset to the original view. For more information of Adjusting Box, checkout this `article <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/faq-trouble-shooting/adjust_box/index.html>`_.
 
 Define the Model with the Image
 ~~~~~~~~~~~~~~~
 .. note:: 
-    Defening a model from scene requires the flowchart in defining mode. Constant node should be set to ``true`` in order to switch to defining mode. ``false`` represents flowchart is in detection mode.
+    Defining a model from scene requires the flowchart in defining mode. Constant node should be set to ``true`` in order to switch to defining mode. ``false`` represents flowchart is in detection mode.
 
 We use the depth output from the DA CloudNDepth Conv node, and now we run the Mod Finder node once to load in the image. 
 Then click **add model**, then select a bounding box on the image. 

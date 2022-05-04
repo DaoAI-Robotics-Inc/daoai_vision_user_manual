@@ -1,9 +1,9 @@
-Excercise
+Exercise
 =============
 
 https://docs.pickit3d.com/en/latest/exercises/index.html
 
-This section covers the excercise for the vision engineer to practice the usage of the system
+This section covers the exercise for the vision engineer to practice the usage of the system
 
 .. toctree::
    :maxdepth: 1

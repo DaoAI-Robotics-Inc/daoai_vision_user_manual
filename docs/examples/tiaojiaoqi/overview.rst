@@ -4,7 +4,7 @@ Angle adjuster picking
 Project overview
 """"""""""""""
 
-Requirments
+Requirements
 """"""""""
 
 Mounting instructions

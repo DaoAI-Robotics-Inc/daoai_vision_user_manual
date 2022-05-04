@@ -7,11 +7,11 @@ It used the 2d feature to extract the 3d position of the object.
 
 Use Case 
 ~~~~~~~~~~~
-TODO: Upload Benz Battery project vedio after done.
+TODO: Upload Benz Battery project video after done.
 
-Requirment 
+Requirement 
 ~~~~~~~~~~
-TODO: Abstract Benz Battery project Requirments after done.
+TODO: Abstract Benz Battery project Requirements after done.
 
 Mounting instructions 
 ~~~~~~~~~~~~~~~~~~~~~
@@ -77,12 +77,12 @@ Flowchart Summary
 +----------------+---------+----------------------------------------------------+
 | Flowchart Name | Purpose |                                                    |
 +================+=========+====================================================+
-| Manual         | 0       | Aquire Object geo feature relations.               |
+| Manual         | 0       | Acquire Object geo feature relations.               |
 +----------------+---------+----------------------------------------------------+
-| Mono Train     | 1       | Aquire Object geo feature relations.               |
+| Mono Train     | 1       | Acquire Object geo feature relations.               |
 +----------------+---------+----------------------------------------------------+
 || Mod Finder    || N/A    || Use given image selected by Variable.Mode         |
-||               ||        || to aquire relative position between camera        |
+||               ||        || to acquire relative position between camera        |
 ||               ||        || and geo features.                                 |
 +----------------+---------+----------------------------------------------------+
 || Detection     || N/A    || Use Trained geo features and detected geo         |
@@ -96,14 +96,14 @@ Flowchart Summary
 
 Manual 
 """"""
-The data flow for this flowchart is basicly gathering the camera captured image, mod finder result, and robot pose into **Mono 3D** Accumulate mode and use **Mono 3D** final mode to generate a training file.
+The data flow for this flowchart is basically gathering the camera captured image, mod finder result, and robot pose into **Mono 3D** Accumulate mode and use **Mono 3D** final mode to generate a training file.
 
 .. image:: Images/mono-3d-manual.png
     :align: center 
 
 Mono Train
 """"""""""
-The data flow for this flowchart is similar to **Manual**. Instead of aquiring image from camera and pose from robot read, it gets data from assembled bag, plus mod finder result into **Mono 3D** Accumulate mode and use **Mono 3D** final mode to generate a training file. If **Mono 3D** Set feature mode is used, none of the data will be needed.
+The data flow for this flowchart is similar to **Manual**. Instead of acquiring image from camera and pose from robot read, it gets data from assembled bag, plus mod finder result into **Mono 3D** Accumulate mode and use **Mono 3D** final mode to generate a training file. If **Mono 3D** Set feature mode is used, none of the data will be needed.
 
 .. image:: Images/mono-3d-mono-train.png
     :align: center 
@@ -117,7 +117,7 @@ The image input for **Mod Finder** nodes comes from different flowchart dependin
 
 Teach Pose  
 """"""""""
-Firstly, **DA Calibration** node will load the relative position between camera and flange. Secondly, **Camera** node will provide image for **Mod Finder** flowchart which will generate geo features in camera 2D location for **Mono 3D** pose estimate mode. First **Robot Read** node will read the robot pose for detection pose, second **Robot Read** node will read the robot pose for picking pose, and both will be passed to **Transformation Tree* node. **Mono 3D** pose estimate mode will generate the object in camera 3D location for **Transformation Tree** node. Afterwards, **Transformation Tree** node will calculate the Flange in object relative position and pass it to **Gripper** node. Since **Gripper** node is added to recipe, the saved pose will be loaded thourgh **Load Recipe** node in **Detection** flowchart.
+Firstly, **DA Calibration** node will load the relative position between camera and flange. Secondly, **Camera** node will provide image for **Mod Finder** flowchart which will generate geo features in camera 2D location for **Mono 3D** pose estimate mode. First **Robot Read** node will read the robot pose for detection pose, second **Robot Read** node will read the robot pose for picking pose, and both will be passed to **Transformation Tree* node. **Mono 3D** pose estimate mode will generate the object in camera 3D location for **Transformation Tree** node. Afterwards, **Transformation Tree** node will calculate the Flange in object relative position and pass it to **Gripper** node. Since **Gripper** node is added to recipe, the saved pose will be loaded through **Load Recipe** node in **Detection** flowchart.
 
 .. image:: Images/mono-3d-teach-pose.png
     :align: center 
@@ -131,7 +131,7 @@ The **Load Recipe** node will load **Calibration** and **Gripper** node output f
 
 Picking
 """""""
-The **Robot Read** node will recieve the detection pose and pass it to **Transformation Tree** node. **Mono 3D** node in **Detection** flowchart will provide object in camera 3D location for **Transformation Tree** node. The **Gripper** and **DA Calibration** node will be loaded through **Load Recipe** node and provide camera in tool and tool in object location. Finally **Transformation Tree** node will generate the tool in base and guide robot to pick the object.
+The **Robot Read** node will receive the detection pose and pass it to **Transformation Tree** node. **Mono 3D** node in **Detection** flowchart will provide object in camera 3D location for **Transformation Tree** node. The **Gripper** and **DA Calibration** node will be loaded through **Load Recipe** node and provide camera in tool and tool in object location. Finally **Transformation Tree** node will generate the tool in base and guide robot to pick the object.
 
 .. image:: Images/mono-3d-picking.png
     :align: center 
@@ -155,4 +155,4 @@ The **Switch** node in **Mono Train** flowchart will be evaluated to True if the
     .. image:: Images/mono-3d-mono-train-switch.png
         :align: center 
 
-The **Manual** flowchart will be using the same robot script as Manual Calibrations. The switch node will check the recieved command from **Robot Read** node.
+The **Manual** flowchart will be using the same robot script as Manual Calibrations. The switch node will check the received command from **Robot Read** node.

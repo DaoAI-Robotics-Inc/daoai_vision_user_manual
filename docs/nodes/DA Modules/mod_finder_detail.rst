@@ -76,7 +76,7 @@ Certainty:
 
 Polarity: 
 
-    Sets the expected polarity of occurrences, compared to that of the model. If the model is a white circle in black background, "SAME" will search for white circle in black background, "REVERSE" will search black circle in white background, and "ANY" will seach any circle in any background as long as the it is an edge. 
+    Sets the expected polarity of occurrences, compared to that of the model. If the model is a white circle in black background, "SAME" will search for white circle in black background, "REVERSE" will search black circle in white background, and "ANY" will search any circle in any background as long as the it is an edge. 
 
 .. image:: images/mod_finder_11.jpg
 	:scale: 100%	

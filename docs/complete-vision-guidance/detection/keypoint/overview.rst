@@ -3,7 +3,7 @@ KeyPoint Deep Learning
 
 The KeyPoint Deep Learning engine is using a different deep learning model to detect objects in scene. 
 Usually this engine is objects which needed direction output from **DL Segment** node. 
-Foe example, the object below is a metal part which has distict directions. 
+Foe example, the object below is a metal part which has distinct directions. 
 
 .. image:: Images/object.png
     :align: center 
@@ -18,8 +18,8 @@ For detail about **Dataset Annotation**, checkout `Annotate your Dataset <https:
 
 You can see there are ``P1`` and ``P2`` in the image above. They are the key-points of this object through deep learning model. 
 Through these key-points on the model, **DL Segment** generates the object 2D poses and its x, y directions are defined when models were being trained. 
-In this sample object, according to the order of user given to these key-points, the direction of the metal part is now the green and red arrows. 
-Further more, if user given different order to these key-points, direction is also changed. For example, if the image above giving order **P2** -> **P1** -> **A**, then the direction would have changed(The direction is specifically defined while training the models).
+In this sample object, according to the order of you gave to these key-points, the direction of the metal part is now the green and red arrows. 
+Further more, if you give different order to these key-points, direction is also changed. For example, if the image above giving order **P2** -> **P1** -> **A**, then the direction would have changed(The direction is specifically defined while training the models).
 
 Pipeline Overview
 -----------------
@@ -49,17 +49,17 @@ Red arrow is the detection flow of the flowchart; blue arrow is the flow for def
 Placing the object under the camera
 --------------------------------
 
-Place your object under the camera and try to put it as close as possible to the center of your working enviroment (center height of the working cell, and at the center of the image) to capture the sample image while making sure that the object is lying fully in the field of view of the camera. It’s useful to run the camera node continously, and turn on the point cloud view to see the image quality of the object.
+Place your object under the camera and try to put it as close as possible to the center of your working environment (center height of the working cell, and at the center of the image) to capture the sample image while making sure that the object is lying fully in the field of view of the camera. It’s useful to run the camera node continuously, and turn on the point cloud view to see the image quality of the object.
 
 .. image:: Images/camera.png
     :align: center 
 |
 
-Define Regoin of interest
+Define Region of interest
 ---------------------------
 
 Usually the camera field of view will be larger than the region of interest, thus the first step usually is to setup the boundary for the useful information. 
-You could excute the Image Process node with **ROI** operation, you can drag the **ROI** in the image to define your region of interest. 
+You could execute the Image Process node with **ROI** operation, you can drag the **ROI** in the image to define your region of interest. 
 
 .. image:: Images/roi.png
     :align: center 
@@ -75,12 +75,12 @@ For detail of deep learning model, checkout `Deep Learning <https://daoai-roboti
     :align: center 
 
 You still need to define object point cloud(.pcd) in **Section 4**. You should put the box area around the object. The box should includes the whole object and the object only. 
-Sometimes might be hard to exclude the buttom of the container, it is okay to have a little bit of object excluded. To keep in mind that the box should still includes the major point cloud of the object.
+Sometimes might be hard to exclude the button of the container, it is okay to have a little bit of object excluded. To keep in mind that the box should still includes the major point cloud of the object.
 
 Generate Poses
 --------------------------------
 
-Reconstruct node generate the 3D poses from 2D poses. Applying the Mod Finder ouputs to Reconstruct node. Reconstruct node uses pixels around the 2D pose and calculates the Z axis direction. 
+Reconstruct node generate the 3D poses from 2D poses. Applying the Mod Finder outputs to Reconstruct node. Reconstruct node uses pixels around the 2D pose and calculates the Z axis direction. 
 At the end, DA Alignment node aligns the model point cloud with the objects in scene to precisely output the picking pose.
 
 .. image:: Images/align.png

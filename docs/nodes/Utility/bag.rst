@@ -43,5 +43,5 @@ A bag data, usually from the output of reader node or assemble bag node
 output
 ~~~~~~~~~~~~~~~~~~~~~
 
-Same as the input feilds of assemble bag node, a out field contains value if only there is such data in the input bag
+Same as the input felids of assemble bag node, a out field contains value if only there is such data in the input bag
 

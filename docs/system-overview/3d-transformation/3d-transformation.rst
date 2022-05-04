@@ -30,17 +30,17 @@ Sources of pose and transformation in Vision Studio:
 Transformation Tree
 -------------------
 
-Transformation Tree is useing known poses and trasnformations to calculate the unknowns.
+Transformation Tree is using known poses and transformations to calculate the unknowns.
     .. image:: Images/3d-transformation-tree.png
         :scale: 60 %
 
-.. important:: The process of detection, calibration and robot guidiance all serves the core **Transformation Tree**, so understanding it's concept is the very important.
+.. important:: The process of detection, calibration and robot guidance all serves the core **Transformation Tree**, so understanding it's concept is the very important.
 
 How to Establish a Transformation Tree?
 """""""""""""""""""""""""""""""""""""""
 In the figure below, there are five objects ABCDE, and some of the relative positions are known, and constructed a transformation chain(Purple).
 
-Known trasnformations: [A in World] [E in A] [D in World] [C in D] [B in C]
+Known transformations: [A in World] [E in A] [D in World] [C in D] [B in C]
     .. image:: Images/3d-transformation-tree-example1.png
         :scale: 50 %
 
@@ -56,7 +56,7 @@ B and E are not in the same transformation chain.
     .. image:: Images/3d-transformation-tree-example3.png
         :scale: 50 %
 
-To aquire [B in E], first aquire any transformation that will make B and E be in the same transformation chain.
+To acquire [B in E], first acquire any transformation that will make B and E be in the same transformation chain.
 
 For an example, [C in A].
     .. image:: Images/3d-transformation-tree-example4.png

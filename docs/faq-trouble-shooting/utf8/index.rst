@@ -3,7 +3,7 @@ Language Issue(Possible Workspace Corruption)
 
 Since **Vision** has not only English version, we would have issue if the workstation does not support other languages.
 
-On the right botton corner(usually there), click on the ``ENG`` logo to bring up the languages selections.
+On the right bottom corner(usually there), click on the ``ENG`` logo to bring up the languages selections.
 
 .. image:: Images/desktop.png
     :width: 90%
@@ -25,7 +25,7 @@ Note: if there is no such logo, you can click ``Window`` key, search Language, a
 
 |
 
-Go to ``Administratve Language Settings``
+Go to ``Administrative Language Settings``
 
 .. image:: Images/lang_admin.png
     :align: center 

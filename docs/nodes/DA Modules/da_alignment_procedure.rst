@@ -6,8 +6,8 @@ Procedure of Using DA Alignment Node
 2. Input Model Cloud, a point cloud of object model. 
 	The model point cloud is better to be saved int file, and loaded from reader node.
 3. Input Hypothesis, the initial guess of objects.
-	This input is a vector of poses, usualy is obtained from reconstruct node.
-4. Run the node, user can check the display result to check if the alignment is good or bad. 
+	This input is a vector of poses, usually is obtained from reconstruct node.
+4. Run the node, you can check the display result to check if the alignment is good or bad. 
 5. The Node will output the aligned poses. 
 
  .. image:: images/da_alignment_node_before.jpg
@@ -29,7 +29,7 @@ Parameter Tunning
 		"POINT_TO_PLANE + USE_MODEL_NORMALS" Specifies to measure the distance between the tangent planes of the surface of the model point cloud (calculated from the model normals) and the points of the scene point cloud. It can be beneficial to use the normals of the model point cloud when the model point cloud has fewer points than the scene point cloud, because fewer normals need to be calculated.
 
 	Max Iterations: 
-		the maximum iteration to stop. Fewer iteration will decrease accurracy and limit the running time.
+		the maximum iteration to stop. Fewer iteration will decrease accuracy and limit the running time.
 		
 		* DEFAULT: 20
 		* VERY LOW: 5

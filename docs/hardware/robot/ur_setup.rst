@@ -156,7 +156,7 @@ Select ``Robots`` on left side menu bar and click ``+``,
     
 |
 
-Press ``Connect`` (Keep the pamameter defualt)
+Press ``Connect`` (Keep the parameter default)
 
 .. image:: Images/Robot2.png
     :align: center

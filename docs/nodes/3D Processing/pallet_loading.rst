@@ -3,18 +3,18 @@ Pallet Loading Node
 
 
 The purpose of the pallet loading node is to take the 'Dimensions' output from the Box Volume Estimation node and systematically generate poses for each box in order to load them onto a pallet. 
-There are many different loading algorithms for the user to choose from: Shelf, Guillotine, Max Rects, and Skyline packing, each with their own heuristics. 
+There are many different loading algorithms for the you to choose from: Shelf, Guillotine, Max Rects, and Skyline packing, each with their own heuristics. 
 Boxes will be loaded one at a time onto the pallet layer by layer. Boxes can be placed slightly outside the bounds of the pallet, based on the level of tolerance specified by the user. 
 Once a layer is deemed to be full, poses will be generated for the next layer. 
 In order to prevent boxes being stacked over empty space (or mostly empty space), any empty space near the edges of the pallet will be ignored on subsequent layers. 
 As an example, let's say that we have a pallet with dimensions 500x500, and that the pallet has been filled such that the boxes are arranged in a gapless rectangle with dimensions 490x470. Since the layer has been determined to be full, we don't want boxes to be placed over the empty space near the edges. Therefore, the next layer will be loaded under the dimensions of 490x470, plus tolerance. 
-The user has complete control of the size and height of the pallet. 
+You has complete control of the size and height of the pallet. 
 
 While a layer is being filled, the maximum height of the boxes in the current layer is kept track of. 
 Once a layer is filled, this maximum height becomes the new “ground” for the next layer. Therefore, for obvious reasons, it is best to use boxes of similar height when using this node.
 
-Once the config page has been set and boxes have been loaded onto the pallet, the user cannot go back and change the config settings until the pallet has been cleared. 
-Users can do so by clicking the 'Reset Pallet' button. Additionally, there is automated control modes where the user can choose to remove the most recent box from the pallet (e.g. if the robot gripper dropped or misplaced the last box) before placing the next one, or to automatically clear the pallet before loading the next box.
+Once the config page has been set and boxes have been loaded onto the pallet, you cannot go back and change the config settings until the pallet has been cleared. 
+Users can do so by clicking the 'Reset Pallet' button. Additionally, there is automated control modes where you can choose to remove the most recent box from the pallet (e.g. if the robot gripper dropped or misplaced the last box) before placing the next one, or to automatically clear the pallet before loading the next box.
 
 Users also have the option of electing to manually determine the dimensions of the next box, instead of using the 'Dimensions' output from a Box Volume Estimation node. 
 
@@ -75,7 +75,7 @@ Parameters
       * Bottom Left: Places each box as close to the bottom-left corner as possible
       * Min Waste Fit: Places each box as to minimize leftover space
       * Use Waste Map: Should the algorithm keep track of wasted space, and place boxes into that space if they fit?
-* Optional Fields: If the user elects not to use the 'Dimensions' output from a Box Volume Estimation node, these values will be used instead for the x, y, and z dimensions of the box, respectively. If these values are all 0, the box volume output is used instead.
+* Optional Fields: If you elect not to use the 'Dimensions' output from a Box Volume Estimation node, these values will be used instead for the x, y, and z dimensions of the box, respectively. If these values are all 0, the box volume output is used instead.
 * Tolerance: Distance, in mm, boxes can be placed such that they may lie slightly outside the bounds of the pallet. Note that this tolerance is applied for the new dimensions on each layer as well. In basic operation mode, this is a single value. In advanced operation mode, users can control the tolerance in both the x and y directions.
 
 .. image:: Images/pallet_loading_shelf.png

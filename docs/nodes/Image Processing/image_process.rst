@@ -1,7 +1,7 @@
 Image Process Node
 ========================
 
-Image process node gives the user the ability to perform several image processing operations on an input image. 
+Image process node gives you the ability to perform several image processing operations on an input image. 
 
 .. toctree::
 	:maxdepth: 1

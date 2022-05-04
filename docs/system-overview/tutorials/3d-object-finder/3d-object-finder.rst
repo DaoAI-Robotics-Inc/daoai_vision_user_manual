@@ -35,7 +35,7 @@ In general, we use the 3D Object Finder node to identify the object inside the 3
 Configure the link expression inside each node
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The first step the operator needs to do is to select the search type
+The first step you need to do is to select the search type
 
 .. image:: Images/2.png
     :align: center
@@ -49,48 +49,43 @@ By selecting normal, the node's point cloud will consist of planes or curved sur
     
 |
 
-If the operator selects edge, the node will create the point cloud using the feature points along the object's edge.
+If you select edge, the node will create the point cloud using the feature points along the object's edge.
 
 .. image:: Images/4.png
     :align: center
     
 |
 
-Once the operator finishes defining the type, the remaining sections of the dialogue can be visualized.
+Once you finished defining the type, the remaining sections of the dialogue can be visualized.
    
 .. image:: Images/5.png
     :align: center
     
 |
 
-If the operator selects normal, the operator should click the blue button to the right of the Scene Cloud node to open the Expression Link Dialog and insert the scene cloud's link.
+If you select normal, you should click the blue button to the right of the Scene Cloud node to open the Expression Link Dialog and insert the scene cloud's link.
 
 .. Attention::
    While the camera node is used as the scene cloud's input in the example above, other nodes such as reader and cloud process can also be used as the scene cloud's input.
 
-The result displayed in the View interface varies according to the search type selected by the operator at the start.
-The operator can add and define an object's model in the Models section by pressing the "+" button. In the section, a "model x" will be displayed to inform the operator that the model was successfully created.
+The result displayed in the View interface varies according to the search type selected by you at the start.
+You can add and define an object's model in the Models section by pressing the "+" button. In the section, a "model x" will be displayed to inform you that the model was successfully created.
 
 .. image:: Images/6.png
     :align: center
     
 |
 
-By double-clicking on model 1, the ObjFinder3DModelConfig dialogue for editing the model's parameters will open. The operator can either load the model mesh from the device or define the object from the scene cloud within Model Type.
+By double-clicking on model 1, the ObjFinder3DModelConfig dialogue for editing the model's parameters will open. You can either load the model mesh from the device or define the object from the scene cloud within Model Type.
 
 .. image:: Images/7.png
     :align: center
     
 |
 
-By choosing the type as mesh, the program will ask the operator to add the mesh path. 
+By choosing the type as mesh, the program will ask you to add the mesh path. 
 
-
-.. image:: Images/8.png
-    :align: center
-    
-|
-.. image:: Images/17.png
+.. image:: Images/9.png
     :align: center
     
 |
@@ -98,9 +93,9 @@ By choosing the type as mesh, the program will ask the operator to add the mesh 
 .. Attention::
    Normally the model type loaded into the path should be ply.
 
-However, if the operator chooses to load the model from the scene, then the program will ask the operator to define the Model from the scene cloud.
+However, if you choose to load the model from the scene, then the program will ask you to define the Model from the scene cloud.
 
-.. image:: Images/9.png
+.. image:: Images/define.png
     :align: center
     
 |
@@ -113,7 +108,7 @@ However, if the operator chooses to load the model from the scene, then the prog
     
 |
 
-The operator can use this function in the Model Parameters node to enhance the quality of the point cloud by editing the Feature Detail and Downsample Strength. By clicking the Update Model button, the operator can update the editing information.
+You can use this function in the Model Parameters node to enhance the quality of the point cloud by editing the Feature Detail and Downsample Strength. By clicking the Update Model button, you can update the editing information.
 
 .. image:: Images/12.png
     :align: center
@@ -133,23 +128,23 @@ The Feature Detail property specifies how many model features are used in the ca
     
 |
 
-The Pose Constraints dialog can be used to help the operator to define objects more accurately. 
+The Pose Constraints dialog can be used to help you to define objects more accurately. 
 
-After defining the model, the operator can close the ObjFinder3DModelConfig Diglog and edit the parameters inside the Finder Settings. 
+After defining the model, you can close the ObjFinder3DModelConfig Dialog and edit the parameters inside the Finder Settings. 
 
 .. image:: Images/15.png
     :align: center
     
 |
 
-The operator should enter the desired number of detected objects in the Number of Occurrences field and adjust the Acceptance Threshold to ensure that no additional or fewer objects are displayed in the scene.
+You should enter the desired number of detected objects in the Number of Occurrences field and adjust the Acceptance Threshold to ensure that no additional or fewer objects are displayed in the scene.
 
 .. image:: Images/16.png
     :align: center
     
 |
 
-The operator can use the Alignment node to perform a second alignment between the detected poses and the scene to increase the accuracy.
+You can use the Alignment node to perform a second alignment between the detected poses and the scene to increase the accuracy.
 
 Workspace Data & Video Recordings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

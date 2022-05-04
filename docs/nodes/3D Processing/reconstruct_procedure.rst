@@ -10,15 +10,15 @@ Procedure of Using Reconstruct Node
 Parameter Tunning in Z Computation 
 --------------------------------------
 
-There are two ways to estimate Z value of the 3d poses: use the average depth of points in a kernal or use average depth of points of represented by a mask.
-If the poses are from a flat surface object (e.g. a box), it is more efficient to use kernal. Otherwise, using the object mask will take the whole shape information into 
-computation, leading to a better result. Also, if the point cloud has some noisy points around the boundary of the object it is adviced to use kernal mode.
+There are two ways to estimate Z value of the 3d poses: use the average depth of points in a kernel or use average depth of points of represented by a mask.
+If the poses are from a flat surface object (e.g. a box), it is more efficient to use kernel. Otherwise, using the object mask will take the whole shape information into 
+computation, leading to a better result. Also, if the point cloud has some noisy points around the boundary of the object it is advices to use kernel mode.
 
-If the point cloud has many invalid points around the center of 2d pose, try to increase the kernal size or dilation iteration to compensate the information lost due to invalid points.
+If the point cloud has many invalid points around the center of 2d pose, try to increase the kernel size or dilation iteration to compensate the information lost due to invalid points.
 
 
 Parameter Tunning in Rotation Computation 
 --------------------------------------------
 
-You can enable rotation estimation of 3d pose using *Enable Rotation Computation* Flag. Simlar to Z Computation, it also has two ways of evaluating
+You can enable rotation estimation of 3d pose using *Enable Rotation Computation* Flag. Similar to Z Computation, it also has two ways of evaluating
 rotation. Use the same principle in choosing computation parameters.

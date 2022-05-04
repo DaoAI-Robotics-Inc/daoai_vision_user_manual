@@ -1,9 +1,9 @@
 Access Map Values
 =====================
 
-When project requirements getting complex, we need **Vision** nodes to process multiplt items or multiple inputs to accomplish our goal. 
-Therefore, you would need to access different indecies within the map. 
-Such as **Picking Sort**, **Reconstruct**, **DA Alignment** nodes outputs, they produces a sequence of results and you can use variables or ``loop_iteration`` to access differnt elements in sequence.
+When project requirements getting complex, we need **Vision** nodes to process multiply items or multiple inputs to accomplish our goal. 
+Therefore, you would need to access different indices within the map. 
+Such as **Picking Sort**, **Reconstruct**, **DA Alignment** nodes outputs, they produces a sequence of results and you can use variables or ``loop_iteration`` to access different elements in sequence.
 
 .. image:: Images/general.png
     :align: center 
@@ -16,9 +16,9 @@ Such as **Picking Sort**, **Reconstruct**, **DA Alignment** nodes outputs, they 
 Sequence of Elements
 ----------------
 
-Similar to situations above, there are 4 objects in scene. For example, you want to pick all the occurences of objects in scene.
+Similar to situations above, there are 4 objects in scene. For example, you want to pick all the occurrences of objects in scene.
 
-For **Robor Write** node, it loops through the detected objects in scene pick them one by one. 
+For **Robot Write** node, it loops through the detected objects in scene pick them one by one. 
 **Robot Write** node takes the transformation results from **Transformation Tree** node, the **Link Expression** of **Transformation Tree** node needs to take the loop_iteration to determine which object should be picked next.
 
 .. image:: Images/link_dialog.png
@@ -54,8 +54,8 @@ Some of the outputs are not matching type of our link input, hence they will be 
 In order to see all the links, you can uncheck the **Filter Identifiers** box to see all the possible outputs from other nodes. 
 
 In the link expression dialog, imagine it as a function. The function body is the advanced link expression you going to write.
-Similar to Python syntax, you will need to assign value to a giving variable. In the example aobve, you need to loop through the elements in map ``Out/Detection.da_align_node/poses/occurrence``. 
-Therefore, you need to know which iteration currently at. Variable ``a`` is assigned with value of ``Loop/Iteration``. Each iteratioin of the loop, ``a`` would be assigned with new value. 
+Similar to Python syntax, you will need to assign value to a giving variable. In the example above, you need to loop through the elements in map ``Out/Detection.da_align_node/poses/occurrence``. 
+Therefore, you need to know which iteration currently at. Variable ``a`` is assigned with value of ``Loop/Iteration``. Each iteration of the loop, ``a`` would be assigned with new value. 
 And the ``a``-th element would be the input for this link, dynamically change followed the loop iteration. 
 
 Models
@@ -75,7 +75,7 @@ How to modify the Link Expression in order to do this?
 
     """
     Apply 1 model, 'model_1' -> should be the model you want to detect, in the code below 
-    is detecting all occurences of model_1 objects
+    is detecting all occurrences of model_1 objects
     """
     a=OBJECT((Out/Detection.switch.fcase_1.mod_finder_node/modelPoses2D/model['model_1']))
     RETURN a
@@ -101,4 +101,4 @@ For all models, you can select the link below, it is the sequence of 2D poses ou
 .. warning::
     #. For single model in regular link expression, name of the model should be wrapped by ``' '`` quotation make;
     #. The model should exist in Mod Finder, otherwise **Reconstruct** node is not able to find the corresponding model;
-    #. If the selected model/models has no occurences from **Mod Finder** node, **Reconstruct** cannot be able to produce any poses(model has no occurences);
+    #. If the selected model/models has no occurrences from **Mod Finder** node, **Reconstruct** cannot be able to produce any poses(model has no occurences);

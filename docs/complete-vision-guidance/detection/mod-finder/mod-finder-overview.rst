@@ -22,7 +22,7 @@ There are 2 modes of mod finder:
 
     depth-mod-finder
 
-* **Mod Finder Depth**, it find the defined object on the depth image (paralle projected), then use the alignment feature to get accurate 3D space position. 
+* **Mod Finder Depth**, it find the defined object on the depth image (parallel projected), then use the alignment feature to get accurate 3D space position. 
 
 .. image:: images/tee_depth_camera.png
     :align: center

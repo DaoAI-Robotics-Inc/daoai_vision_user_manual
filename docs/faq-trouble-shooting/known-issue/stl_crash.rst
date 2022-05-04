@@ -19,4 +19,4 @@ Here is the list:
     * txt => Text File
     * pcd => Point Cloud Model
 
-If any hotfixes and patches in the future fixed any of the files with this crash issue, they woulde be mentioned in the patch notes as well as this article. 
+If any hotfixes and patches in the future fixed any of the files with this crash issue, they would be mentioned in the patch notes as well as this article. 

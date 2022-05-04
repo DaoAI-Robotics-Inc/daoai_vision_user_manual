@@ -33,4 +33,4 @@ This is a special use case of mod finder where the input is the result of segmen
 2. In mod finder node, define models. Assign correct labels to the models.
 3. Check "Use Labelled Mask Sequence", and link the labelled mask sequence to mask sequence output of of the DL segmentation node.
 4. Run the node. For each mask image in the sequence the node will search for the model based on the model of the mask image (label of the segment).
-5. The result pose (sotred in labelledPose2dSequence or labelledPose3dSequence) will have the same order of the segments vector of the DL segmentation node.
+5. The result pose (sorted in labelledPose2dSequence or labelledPose3dSequence) will have the same order of the segments vector of the DL segmentation node.

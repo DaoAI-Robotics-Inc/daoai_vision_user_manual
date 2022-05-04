@@ -39,7 +39,7 @@ The rest of this article is about how to define model. If you want to know what 
 Placing the object under the camera
 ~~~~~~~~~~~~~~
 
-Place your object under the camera and try to put it as close as possible to the center of your working enviroment (center height of the working cell, and at the center of the image) to capture the sample image while making sure that the object is lying fully in the field of view of the camera. It’s useful to run the camera node continously, and turn on the point cloud view to see the image quality of the object. 
+Place your object under the camera and try to put it as close as possible to the center of your working environment (center height of the working cell, and at the center of the image) to capture the sample image while making sure that the object is lying fully in the field of view of the camera. It’s useful to run the camera node continously, and turn on the point cloud view to see the image quality of the object. 
 
 .. image:: images/teach-model-picture_gray_mod_finder.png
     :align: center 
@@ -55,7 +55,7 @@ Then execute the Cloud Process node. Then you could adjust the bounding box.
 .. image:: images/roi.png
     :align: center 
 
-.. tip:: When adjust the bounding box, you could press **R** to reset to the original view, and blabla for the operation trick
+.. tip:: When adjust the bounding box, you could press **R** to reset to the original view, For more information of Adjusting Box. checkout this `article <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/faq-trouble-shooting/adjust_box/index.html>`_.
 
 Define the 2D Model with the Image
 ~~~~~~~~~~~~~~~

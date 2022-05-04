@@ -2,7 +2,7 @@ Virtual Testing
 =============
 
 Virtual testing is essential before testing the project workspace in real robot. This step could help to ensure **Vision** does not send the wrong (dangerous) poses to robot.
-It is to verified the workspace correctness as well as to ensure the safety of user and hardware.
+It is to verified the workspace correctness as well as to ensure the safety of users and hardware.
 The following virtual robots are good  for virtual testing:
 
 Hercules
@@ -49,15 +49,15 @@ The red box is the messages templates which would be sent to **Vision** while co
 Communication
 ~~~~~~~~~~~~
 
-Communications require requests and reponses. **Vision** is the communication ``Server`` and Hercules is ``Client`` in this communication. 
-Hence, **Vision** would always wait for a ``Robot Read`` before ``Robot Write`` , withour requests from client, server would not send anything to client side. 
+Communications require requests and responses. **Vision** is the communication ``Server`` and Hercules is ``Client`` in this communication. 
+Hence, **Vision** would always wait for a ``Robot Read`` before ``Robot Write`` , without requests from client, server would not send anything to client side. 
 
 .. image:: Images/flow.png
     :width: 90%
     :align: center
 
 These 2 nodes are the main communication nodes between **Vision** and Hercules. ``Robot Read`` would always wait for requests from Hercules, without any requests, the flowchart would be waiting at ``Robot Read`` until requests come in.
-User also able to set a Time Out for this node, it could be helpful when there is connection issue between **Vision** and Hercules.
+You also able to set a Time Out for this node, it could be helpful when there is connection issue between **Vision** and Hercules.
 
 .. image:: Images/her_sent.png
     :width: 90%
@@ -65,12 +65,12 @@ User also able to set a Time Out for this node, it could be helpful when there i
 
 Hercules sends a string to **Vision** . Console would shows the details of this request. 
 The fifth index of this message is the ``command`` of this request. 
-Different ``command`` has different meanings to **Vision** , it tells **Vision** what kind of operations robot is working on, as well as the status of previous reponse. The next indexes after ``command`` is ``playload_1`` and ``payload_2`` .
+Different ``command`` has different meanings to **Vision** , it tells **Vision** what kind of operations robot is working on, as well as the status of previous response. The next indexes after ``command`` is ``playload_1`` and ``payload_2`` .
 
 .. image:: Images/console_her.png
     :align: center
 	
-**Vision** would reponse to Hercules with ``Robot Write`` . 
+**Vision** would response to Hercules with ``Robot Write`` . 
 
 .. image:: Images/vis_write_to_her.png
     :width: 90%
@@ -78,10 +78,10 @@ Different ``command`` has different meanings to **Vision** , it tells **Vision**
 
 The setting details are below:
 
-1. Status is important, it is the reponse command to robot, which tells robot what is the next operation. 
+1. Status is important, it is the response command to robot, which tells robot what is the next operation. 
 
-2. Pose Object is the pose which robot should perform. During Picking process, **Vision** would combine the object coordiantes and picking pose in to this object, sending it to robot in order to perform picking.
-If we want the robot holds still, only transmitting command and payloads: we could send back the pose which is read from ``Robot Read`` , the robot will statys still.
+2. Pose Object is the pose which robot should perform. During Picking process, **Vision** would combine the object coordinates and picking pose in to this object, sending it to robot in order to perform picking.
+If we want the robot holds still, only transmitting command and payloads: we could send back the pose which is read from ``Robot Read`` , the robot will stays still.
 
 3. Processing time is the ``payload_1`` for robot, Geometry type is ``payload_2`` .
 
@@ -125,7 +125,7 @@ Click on ``Program Robot`` , you can run the robot simulation as well as change 
 	, 
 We can see there are many different urp files in this directory. We can use:
 
-1. Manual_Calibration.urp for cheese borad manual calibration; 
+1. Manual_Calibration.urp for cheese board manual calibration; 
 
 .. image:: Images/cali.png
     :width: 80%
@@ -133,7 +133,7 @@ We can see there are many different urp files in this directory. We can use:
 
 In real world robot, you need to setup all the waypoints for calibration.
 
-2. Picking.urp to perform pciking test; 
+2. Picking.urp to perform picking test; 
 
 .. image:: Images/picking.png
     :width: 80%
@@ -211,8 +211,8 @@ Change the IP to corresponding IP address. You can check the IP address in ``cmd
 Communication
 ~~~~~~~~~~~~
 
-Communications require requests and reponses. **Vision** is the communication ``Server`` and Virtual VM robot is ``Client`` in this communication. 
-Hence, **Vision** would always wait for a ``Robot Read`` before ``Robot Write`` , withour requests from client, server would not send anything to client side. 
+Communications require requests and responses. **Vision** is the communication ``Server`` and Virtual VM robot is ``Client`` in this communication. 
+Hence, **Vision** would always wait for a ``Robot Read`` before ``Robot Write`` , without requests from client, server would not send anything to client side. 
 
 .. image:: Images/flow.png
     :width: 90%

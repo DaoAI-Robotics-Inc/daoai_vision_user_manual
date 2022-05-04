@@ -1,7 +1,7 @@
 Calibration
 ===================
 
-This section coveres the basics for the robot and camera calibration details
+This section covers the basics for the robot and camera calibration details
 
 .. toctree::
    :maxdepth: 1

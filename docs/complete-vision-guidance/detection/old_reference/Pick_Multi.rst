@@ -1,7 +1,7 @@
 Picking Multiple Objects
 ==============
 
-In the following image example, there are many different kinds of object; if requirement asks to pick different specific type of object at each different iteration, user is able to alter the system to archive this.
+In the following image example, there are many different kinds of object; if requirement asks to pick different specific type of object at each different iteration, you are able to alter the system to archive this.
 
 .. image:: Images/teabag.png
     :align: center
@@ -32,7 +32,7 @@ Adding ``Payload_2`` as the input for ``Load Recipe`` , opens up the link dialog
     
 |
 
-Note: When running the Teach_Pose flowcharts, user needs to teach all the different recipes: for example, if we have 14 different recipes, we need to teach all the recipes ``Gripper`` to produce all the different poses for different ojects.
+Note: When running the Teach_Pose flowcharts, you needs to teach all the different recipes: for example, if we have 14 different recipes, we need to teach all the recipes ``Gripper`` to produce all the different poses for different objects.
 
 .. image:: Images/load_teach.png
     :align: center

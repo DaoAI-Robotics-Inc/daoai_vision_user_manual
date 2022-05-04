@@ -28,4 +28,4 @@ Verification scores are normalized between 0 and 1 and represent the confidence 
    :maxdepth: 1
 
    verification_overview
-   verification_procedure
+   verification_procedure v

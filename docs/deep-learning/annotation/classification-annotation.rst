@@ -31,7 +31,7 @@ Navigate to the folder you just cloned and run the following::
 
     python tkteach.py
 
-After running the previous command, you should see the homescreen:
+After running the previous command, you should see the home screen:
 
 .. image:: images/im5.png
     :width: 80%

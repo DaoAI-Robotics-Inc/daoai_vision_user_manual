@@ -29,7 +29,7 @@ As the image below shows, you could configure the flowchart using different logi
 
 Operator View for Deployment
 """"""""""
-In the following image, based on the project needs, you are able to configure the layout that display to the end user (operator), where you could place the start/stop buttons, and also place your company logos etc.. 
+In the following image, based on the project needs, you are able to configure the layout that display to the end you, where you could place the start/stop buttons, and also place your company logos etc.. 
 
 .. image:: introduction_images/operator_view.png
    :align: center

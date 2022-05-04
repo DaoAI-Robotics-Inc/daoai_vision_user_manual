@@ -4,8 +4,8 @@ Overview
 Modes 
 ---------------
 
-* Accumulate : In this mode, the calibration node accumualtes (loads) the needed data and calibration settings to be used in the final mode for calibration computation.
-* Final : In this mode, the calibration node uses the data from the accumulation mode and perfrom the acutal robot calibration.  
+* Accumulate : In this mode, the calibration node accumulates (loads) the needed data and calibration settings to be used in the final mode for calibration computation.
+* Final : In this mode, the calibration node uses the data from the accumulation mode and perform the actual robot calibration.  
 * Load : In this mode, the calibration node loads the ouput from the final for future use. This can help to load previous calibration results without a need to run previous modes. 
 
 
@@ -24,8 +24,8 @@ Accumulate mode inputs
 Accumulate mode outputs 
 ---------------------------
 
-* milCalibrationID (type:MIL_ID) : This output includes the inforamtion about the calibration settings alongside with the data needed for performing calibration computation in the final mode. 
-* calibrationStatus (type:Int) : This output indicates if there were any erros during the node excecution. If the value is 0, no error has occured. However, if the value is non-zero, an error has occured during excecution and an error message will be printed in the console.
+* milCalibrationID (type:MIL_ID) : This output includes the information about the calibration settings alongside with the data needed for performing calibration computation in the final mode. 
+* calibrationStatus (type:Int) : This output indicates if there were any errors during the node execution. If the value is 0, no error has occurred. However, if the value is non-zero, an error has occurred during execution and an error message will be printed in the console.
 
 Final mode inputs 
 -----------------------
@@ -37,12 +37,12 @@ Final mode inputs
 Final mode outputs 
 ------------------------
 
-* cam_in_gripper (type:Pose) : The 3D transformation from the camera to the gripper (TCP). Only has value in eye-in-hand situaltions.
-* base_in_world (type:Pose) : The 3D transformation from robot base to the world (calibration board). Only has value in eye-in-hand situaltions.
+* cam_in_gripper (type:Pose) : The 3D transformation from the camera to the gripper (TCP). Only has value in eye-in-hand situations.
+* base_in_world (type:Pose) : The 3D transformation from robot base to the world (calibration board). Only has value in eye-in-hand situations.
 * cam_in_base (type:Pose) : The 3D transformation from camera to robot base. Only has value in eye-to-hand situations.
 * gripper_in_world (type:Pose) : The 3D transformation from gripper (TCP) to world (calibration board). Only has value in eye-to-hand situations.
-* milCalibrationID (type:MIL_ID) : This output includes the inforamtion about the calibration settings alongside with the data needed for performing calibration computation in the final mode. 
-* calibrationStatus (type:Int) : This output indicates if there were any erros during the node excecution. If the value is 0, no error has occured. However, if the value is non-zero, an error has occured during excecution and an error message will be printed in the console.
+* milCalibrationID (type:MIL_ID) : This output includes the information about the calibration settings alongside with the data needed for performing calibration computation in the final mode. 
+* calibrationStatus (type:Int) : This output indicates if there were any errors during the node execution. If the value is 0, no error has occurred. However, if the value is non-zero, an error has occurred during execution and an error message will be printed in the console.
 
 Load mode inputs 
 ----------------------------

@@ -3,10 +3,10 @@ Reference Fixture System
 
 Synopsis 
 ---------
-	Fxiture system allows user to define a reference frame and make all other things relative to the fxiture frame.
+	Fixture system allows you to define a reference frame and make all other things relative to the fxiture frame.
 
 
-Define Fxiture 
+Define Fixture 
 ---------
 	The fixture is defined in a 2d mod finder or 3d mod finder node. 
 	It is recommend to have only one model in this node. If more than 1 model defined, it will pick the one with highest score.
@@ -20,7 +20,7 @@ Define Fxiture
 
 Use Fixture 
 ---------
-	After user clicked the checkbox of use_fixturein a node, user can select a mod_finder node as reference.
+	After you clicked the checkbox of use_fixture in a node, you can select a mod_finder node as reference.
 	
 	For shape_finder node and mod_finder node, you need to redefine search region for each model. The region redefine should be done on the same image of reference mod_finder node.
 	
@@ -40,7 +40,7 @@ Use Fixture
 	:scale: 60%
 |
 
-	Following images are mod_finder node with fixture. The yellow box is the fixturee object, and the blue box is the search region that changes with the fixture. 
+	Following images are mod_finder node with fixture. The yellow box is the fixture object, and the blue box is the search region that changes with the fixture. 
  .. image:: images/fixture_mod_finder1.jpg
 	:scale: 60%
  .. image:: images/fixture_mod_finder2.jpg

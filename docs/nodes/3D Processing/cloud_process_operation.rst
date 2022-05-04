@@ -23,7 +23,7 @@ Specifically, we calculate the following to determine if the point is an outlier
 .. image:: Images/cloud_process/cloud_process_outlier_removal.png
    :align: center
 
-Crop a Regiion
+Crop a Region
 ~~~~~~~~~~~~~~~~~~~
 
 This operation takes in a field name (“x” “y“ or “z”) and the bounds for that region. The output of this operation will return a cloud with that specific region cropped.
@@ -55,7 +55,7 @@ This applies a 3D affine transform to the input point cloud and returns the tran
 Set Reference Frame 
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Define a refernce coordinate using the interactor.
+Define a reference coordinate using the interactor.
 
 
 .. image:: Images/cloud_process/cloud_process_reference_frame.png
@@ -71,13 +71,13 @@ Please note that this filter is based on the reference coordinate defined in the
 operation to set the reference coordinate.
 
 The filtering process starts from the origin of the reference coordinate. It divides point cloud into partitions along z- direction. The starting partition 
-is the frist partition with points more than *Points Threashold* (user defined parameter). Then the filter will keep points withing the following *Distance Threshold* mm.
+is the first partition with points more than *Points Threshold* (user-defined parameter). Then the filter will keep points withing the following *Distance Threshold* mm.
 
 .. image:: Images/cloud_process/cloud_process_dynamic_box.png
    :align: center
 
 * Threshold: range in millimeter along z axis, the points in range will be kept
-* Points Treshold: number of points a segmentation along z axis must have to be considered a staring point of filtering, this determines the top of the dynamic box.
+* Points Threshold: number of points a segmentation along z axis must have to be considered a staring point of filtering, this determines the top of the dynamic box.
 
 Adjust Bounding Box
 ~~~~~~~~~~~~~~~~~~~~~
@@ -85,9 +85,9 @@ Adjust Bounding Box
 .. image:: Images/cloud_process/cloud_process_adjust_box.png
    :align: center
 
-This operation crops the cloud by placing a bounding box that the user can adjust by clicking on the adjust box option. 
-Once the user sets the bounding box the first time it will remember this choice so that the user does not have to reconfigure the box again. 
-The user can uncheck the Adjust box option so that they do not have to interact with the box once the adjustments are finished.
+This operation crops the cloud by placing a bounding box that the you can adjust by clicking on the adjust box option. 
+Once the you set the bounding box the first time it will remember this choice so that you do not have to reconfigure the box again. 
+You can uncheck the Adjust box option so that they do not have to interact with the box once the adjustments are finished.
 
 To enable the Adjust Bounding Box function, make sure to check the Adjust Box before running. 
 
@@ -101,7 +101,7 @@ When the Adjust Box is checked, a bounding box will display in the scene every t
 * Drag on the sliding box to adjust box's rotation around x,y,z axis
 * Press 0 or Exist Interactor button to confirm change
 
-When the Adjust Box is unchecked, the bounding box will the the same as last time when the user defines a box, or the default one if it's never defined.
+When the Adjust Box is unchecked, the bounding box will the the same as last time when you defined a box, or the default one if it's never defined.
 
 Also, the width of the bounding box can be detected using QR-Code. If the object in the scene is marked by QR markers, the initial width and depth of the bounding box will be determined by
 3 QR markers.
@@ -126,7 +126,7 @@ The step of picking a color and define a threshold are:
 Merge Point Clouds 
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This operation takes in another point cloud as an input and merge these two point clouds. The user is also able to define the pose of the second point cloud. The below image shows merging 
+This operation takes in another point cloud as an input and merge these two point clouds. You are also able to define the pose of the second point cloud. The below image shows merging 
 two point clouds with the second one being translated along z axis.
 
 .. image:: Images/cloud_process/cloud_process_merge_point_cloud.png
@@ -155,10 +155,10 @@ Apply a 2d mask to the point cloud.
 RGB Restore Mode
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Sometimes during the cloud process the rgb information of some poitns inside the region of interest are lost, because the corresponding clouds are noise.
+Sometimes during the cloud process the rgb information of some points inside the region of interest are lost, because the corresponding clouds are noise.
 This mode restores some of the rgb information using the average of neighboring points.
 
-* Mode: box mode, where the rgb is the average of points in a square kernal; or tight mode, where the rgb is the average of neighboring valid points.
+* Mode: box mode, where the rgb is the average of points in a square kernel; or tight mode, where the rgb is the average of neighboring valid points.
 * Iteration: number of times the rgb restore operation is applied.
 * Dilation size: size of dilation kernel, bigger the number, more rgb information maybe restored.
 * Erosion size: size of erosion kernel, bigger the number, more rgb information maybe restored.

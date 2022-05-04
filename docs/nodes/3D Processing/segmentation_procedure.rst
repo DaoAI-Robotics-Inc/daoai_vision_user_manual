@@ -12,8 +12,8 @@ Steps in using DL segmentation node
 
 After segmentation, you can use the result in following ways.
 
-1. Use center point of the segments as the 2D positions of object. Estimate 3d positions using reconstruct node. Use these 2D poses or 3D poses to determin picking positions
-2. Use scene crop to devide a scene point cloud into a vector of point clouds, each contains point cloud of one object
+1. Use center point of the segments as the 2D positions of object. Estimate 3d positions using reconstruct node. Use these 2D poses or 3D poses to determine picking positions
+2. Use scene crop to divide a scene point cloud into a vector of point clouds, each contains point cloud of one object
 3. More.
 
 Tunning Segmentation Parameters for Better result

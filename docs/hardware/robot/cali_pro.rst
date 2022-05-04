@@ -105,13 +105,13 @@ The Waypoints
 
 Waypoints are important for the Calibration output. If the waypoints are not good, the Calibration output would have large error. Which would affect the detection pose results and robot might not be able to pick.
 
-Waypoint locations should try to follow the clockwise or counter-clockwise direction within camera scene. The first waypoint can be at the middle(Or anywhere you could remember). Then central top, central top to the right......until the wapoint can form a circle to produce enough poses.
+Waypoint locations should try to follow the clockwise or counter-clockwise direction within camera scene. The first waypoint can be at the middle(Or anywhere you could remember). Then central top, central top to the right......until the waypoint can form a circle to produce enough poses.
 Each waypoints should have slightly tilt and rotation. Try to keep tilting degree small, and rotate around the wrists.
 
 For details of Calibration waypoints, you can check out this `article <TODO>`_.TODO
 
 .. warning ::
-	Guidance Calibration and Auto Calibration only needs to setup the first waypoint. For Guidance Calibration and Auto Calibration, first wapoint should always be the central location.
+	Guidance Calibration and Auto Calibration only needs to setup the first waypoint. For Guidance Calibration and Auto Calibration, first waypoint should always be the central location.
 
 .. image:: Images/cali_centre_waypoint.png
     :align: center

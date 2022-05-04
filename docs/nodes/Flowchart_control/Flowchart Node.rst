@@ -9,7 +9,7 @@ Synopsis
 Description 
 ---------
 	Has a single input, 'Flowchart Name', which is the name of the other flowchart that is run when this node is executed. 
-	Upon placement of this node, the user is prompted to select which flowchart the node should execute:
+	Upon placement of this node, you are prompted to select which flowchart the node should execute:
 
 	 .. image:: images/flowchart_node_setup.png
 		:scale: 50%	

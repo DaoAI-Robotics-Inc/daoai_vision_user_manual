@@ -6,12 +6,12 @@ Input
 
 * Dimensions: a vector of box dimensions from the output of box volume estimation node
 * Original Poses: a vector of poses representing the pick pose of each box
-* Pose Order (optional): a vector representing the order of the orignal poses from the pick sort node
+* Pose Order (optional): a vector representing the order of the original poses from the pick sort node
 
 Output
 --------------------------------
 
-* newPoses: valid poses where the vaccum could suck up the orignal box
+* newPoses: valid poses where the vacuum could suck up the original box
 
 Parameters
 ------------------------------------

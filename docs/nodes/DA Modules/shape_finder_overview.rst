@@ -11,7 +11,7 @@ Reference Fixture
 
 Shape 
 -------------------
-User can define shape and shape parameters.
+You can define shape and shape parameters.
 The parameters for different shape is labelled on the shape model.
 Please note that the unit of parameters is pixel unit. 
  

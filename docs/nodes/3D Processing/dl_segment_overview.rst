@@ -17,7 +17,7 @@ Output
    * depth: depth image.
    * eigen_vecs: eigen vectors representing trends of the variance.
    * label: label of the segment.
-   * mask: mask of the segment, the mask has the size of the orignal image.
+   * mask: mask of the segment, the mask has the size of the original image.
    * num_points: number of points in the segment.
    * pca: image representing PCA of the segment.
    * rgb: rgb image of the segment.
@@ -38,5 +38,5 @@ Deep Learning Parameters
    * min/max eigenval: Similar to how the segmentation calculates the PCA of each segment we calculate that here and limit the eigen values. Eigen value 1 is the longer axis.
    * min confidence: minimum confidence required for each segment.
    * NMS threshold: threshold for applying soft NMS to the bounding boxes. This removes boxes that are too close together. Default value is 0.8, range is [0,1].
-   * Erosion/Dilation sizes: the kernal size used for erosion/dilation applied to segmentation mask and segmentation RGB image.
-   * Erosion/Dilation iteration: number of times erosion/dilation is applied to segmentation mask and segmentation RGB iamge.
+   * Erosion/Dilation sizes: the kernel size used for erosion/dilation applied to segmentation mask and segmentation RGB image.
+   * Erosion/Dilation iteration: number of times erosion/dilation is applied to segmentation mask and segmentation RGB image.

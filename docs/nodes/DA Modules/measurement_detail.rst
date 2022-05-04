@@ -39,7 +39,7 @@ Marker Parameter Tunning
 	Min Edge Value: 
 		Range [0, 100]
 	
-		The confidence of edge detection. A high value will ignore edges with weak contrast. Defaule is 2.0. 
+		The confidence of edge detection. A high value will ignore edges with weak contrast. Default is 2.0. 
  .. image:: images/measurement_7.JPG
 	:scale: 60%
  .. image:: images/measurement_8.JPG

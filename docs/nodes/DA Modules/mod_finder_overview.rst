@@ -16,7 +16,7 @@ The model is defined by drawing a rectangle box on display.
  .. image:: images/mod_finder_1.jpg
 	:scale: 60%
 	
-User may draw mask on the model to erase unwanted edges. After draw mask, run this node to apply changes
+You may draw mask on the model to erase unwanted edges. After draw mask, run this node to apply changes
  .. image:: images/mod_finder_2.jpg
 	:scale: 60%
  .. image:: images/mod_finder_3.jpg
@@ -31,7 +31,7 @@ The model can be searched on image.
 Output 
 --------------------
 	
-* numFound: (DataType:Int) The totall number of occurrences found. 
+* numFound: (DataType:Int) The total number of occurrences found. 
 * result: (DataType:ModFinderResult) A map, mapping "model_name" to "vector of occurrences of this model"
 * success: (DataType:Bool) Boolean value indicating the search is successful
 * modelPoses2D: (DataType:Map<Vec<Pose2D>>) A map of vector of 2d poses

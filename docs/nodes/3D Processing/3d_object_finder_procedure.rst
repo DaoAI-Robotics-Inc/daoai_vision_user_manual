@@ -10,7 +10,7 @@ Procedure for Using 3d Object Finder Node
 Pre-process Point Cloud In Edge Mode
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To get proper search result using edge point, the scene cloud must be preprocess to contain normals. This is because after edge extraction is performed on point cloud
+To get proper search result using edge point, the scene cloud must be pre-process to contain normals. This is because after edge extraction is performed on point cloud
 it will be very hard to compute its normals, which are used in searching. Simply use cloud process node's normal operation to pre-process the point cloud
 
 Before you can see the nodes detailed config, you need to set the search type of the node to be either normal or edge.
@@ -22,7 +22,7 @@ Model Creation and Processing
    :align: center
 
 Then in the model section, users are able to add/delete model, the dropdown list on the bottom shows the current active model to search. You can also double click model entry
-to edit model. You will see a model config page, where you are able to see the model and ajust its parameters.
+to edit model. You will see a model config page, where you are able to see the model and adjust its parameters.
 
 .. image:: Images/3d_obj_finder/models.png
    :align: center
@@ -52,7 +52,7 @@ Model Parameters:
    * Maximum rotation angle about the x/y/z axis when searching for object poses
 
 The first way to define a model is to define from a scene point cloud. In model config page, select model type to be "From scene", then click "Define Model".
-Then the mainwindow display will prompt a bounding box interactor (or console will give error message if the "Scene Cloud" input is not linked or is invalid).
+Then the main window display will prompt a bounding box interactor (or console will give error message if the "Scene Cloud" input is not linked or is invalid).
 Use the bounding box to include the points of the model, then hit 0 or click "Exit Interactor" button to save your change. After that the processed model (with default model parameter)
 will be shown in the config page.
 
@@ -64,14 +64,14 @@ The second way to define a model is to define from a polygon mesh file. In model
 Adjust Model Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-After the model is defined users can adjust model perameters in the model config page. The most common adjustment of model parameters are downsample strength and search detail. Remember to
+After the model is defined users can adjust model parameters in the model config page. The most common adjustment of model parameters are downsample strength and search detail. Remember to
 click "Update Model" if these two settings are changed.
 
-You can define search region by checking "Constrain Search Region" and use "Set Search Region" button. This will enter the interaction mode where you need to draw a bouding box to include
-the search reagion, similar to defining a model from scene.
+You can define search region by checking "Constrain Search Region" and use "Set Search Region" button. This will enter the interaction mode where you need to draw a bounding box to include
+the search region, similar to defining a model from scene.
 
 You can also define the range of rotation of the model. Click "Adjust Pose" to enter the interaction mode where you can rotate the model around origin by click and drag on the model cloud.
-This will define a base pose. Then you can speficy the X,Y,Z rotation range based on the base pose.
+This will define a base pose. Then you can specific the X,Y,Z rotation range based on the base pose.
 
 .. image:: Images/3d_obj_finder/adjust_pose.png
    :align: center
@@ -100,7 +100,7 @@ Scene Matching Parameters:
    * Controls the threshold used when filtering possible poses
 
 In the display window you can select what to display: use "Show Model" to show found occurrence of model in the scene, use
-"Show Scene" to show the scene cloud (in edge mode this will be edge cloud extracted from the orginal scene cloud), use "Show Downsampled"
+"Show Scene" to show the scene cloud (in edge mode this will be edge cloud extracted from the original scene cloud), use "Show Downsampled"
 to show the downsampled scene cloud.
 
 .. image:: Images/3d_obj_finder/result_display.png
