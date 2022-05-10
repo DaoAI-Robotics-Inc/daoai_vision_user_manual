@@ -4,7 +4,7 @@ DaoAI Camera
 Content
 ~~~~~~~
 1. :ref:`Physical Camera Wire Connection`
-2. :ref:`Connect the camera via DaoAI Camera Studio`
+2. :ref:`Connect the camera via DaoAI Camera Studio (physical camera)`
 3. :ref:`Connect the camera via DaoAI Vision Studio`
 4. :ref:`Connect the virtual camera via DaoAI Vision Studio`
 5. :ref:`Use Camera with Camera Node`
