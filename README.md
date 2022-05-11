@@ -66,7 +66,7 @@ This user manual is powered by Read the Docs, which works as a hosting provider 
    ```
    Server: cos.ap-beijing.myqcloud.com:443
    Access Key ID: AKIDSkmX1FCsIRJuEI5bqoVv4yavznKZXEfp
-   Secret Access Key: (ask an administrator)
+   Secret Access Key: uWv4wXrviETSAbkdFaeRyEDuLVNyJNAg
    ```
 3. Once successfully connected, you may upload files like using an FTP client.
 4. To get the URL of a file, right-click a file and then go to "Copy URL". You cannot access the file by using this link because only the CDN has access to it. You need to change its domain to the CDN domain: change `https://cos.ap-beijing.myqcloud.com/daoai-robotics-1305756387/your-path-to-file` to `https://daoai-robotics-1305756387.file.myqcloud.com/your-path-to-file`.
