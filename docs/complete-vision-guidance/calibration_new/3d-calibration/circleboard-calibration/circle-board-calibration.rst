@@ -233,8 +233,8 @@ You can also select the Use large circle orientation function, it will allow you
     :align: center
 |
 
-Output File
------------
+Circle Board Output File
+------------------------
 You can get your output calibration file from the **calibrations** folder inside the workspace. Copy and paste the folder to your Picking Workspace folder, then you will be able to load the calibration file.
 
 .. image:: images/output-file.png

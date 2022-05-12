@@ -1,4 +1,4 @@
 .. _auto-sphere-calibration:
 
-Auto
-====
+auto-sphere-calibration
+=======================

@@ -58,7 +58,7 @@ To perform a new calibration, open the DaoAI Vision Studio follow the steps belo
 
 1. :ref:`Create workspace and set up sphere calibration`
 2. :ref:`Collect sphere calibration bag files`
-3. :ref:`Run sphere calibration flowchart`
+3. Run the :ref:`sphere-calibration-flowchart` flowchart
 
 Create workspace and set up sphere calibration 
 ----------------------------------------------
@@ -70,7 +70,7 @@ Open the DaoAI Vision Studio, and select the **Sphere Calibration** from the Tem
     
 |
 
-The sphere calibration template includes five flowcharts: :ref:`Manual`, :ref:`Calibration`, :ref:`auto-sphere-calibration`, :ref:`Eye-to-hand`, and :ref:`Eye-in-hand`. Each flowchart serves a unique and critical purpose within the template. 
+The sphere calibration template includes five flowcharts: :ref:`sphere-manual-flowchart`, :ref:`sphere-calibration-flowchart`, :ref:`auto-sphere-calibration`, :ref:`SC_Eye_to_hand`, and :ref:`SC_Eye_in_hand`. Each flowchart serves a unique and critical purpose within the template. 
 
 You need to choose the pre-process method depending on the project environment. By default, the variable will be set to 0 as using Deep learning segmentation node to cut out the sphere. 
 
@@ -88,6 +88,8 @@ You need also to choose the number of poses you will be using to calibrate. By d
 
 Collect sphere calibration bag files
 ------------------------------------
+.. _sphere-manual-flowchart:
+
 Manual
 ~~~~~~
 
@@ -135,7 +137,9 @@ Adjust the robot arm to the proper position, select the current pose as the :ref
 
 Run the robot script to send the current robot pose to DaoAI Vision, then the current pose and image will be saved in a bag file.
 
-Run sphere calibration flowchart
+.. _sphere-calibration-flowchart:
+
+Calibration
 --------------------------------
 Before you run the **Calibration** flowchart, there are a few things need to setup.
 
@@ -153,8 +157,8 @@ Before you run the **Calibration** flowchart, there are a few things need to set
 
 After setting up, you can just run your flowchart to generate your calibration result file.
 
-Output File
------------
+Sphere Calibration Output File
+------------------------------
 You can get your output calibration file from the **sphere calibrations** folder inside the workspace. Copy and paste the folder to your Picking Workspace folder, then you will be able to load the calibration file.
 
 .. image:: images/output-file.png
