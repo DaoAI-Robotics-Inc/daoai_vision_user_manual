@@ -15,6 +15,7 @@ This section covers the basic knowledge of the Vision software, including user i
    :hidden:
     
    interface/interface
+   interface/snapshot
    data-types/data-types
    3d-transformation/3d-transformation
    recipes/recipes

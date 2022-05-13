@@ -1,4 +1,4 @@
-Robot Independant
+Robot Independent
 =================
 
 This section is about different robots and **Vision**. Robot is independent to **Vision** while they communicate through the designated interface.
