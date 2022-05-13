@@ -136,9 +136,12 @@ Edge Selection Parameters
 
 Models
 ~~~~~~
-	The model is defined from the scene, or it can be imported from a DL_Segment node using labelled mask sequence.
+	The model is defined from the scene, or it can be imported from a DL_Segment node using a labelled mask sequence.
 	For the details of the defining or import process, please check the "Procedure to use" section. 
-	This section focusses on the properties of models.
+	This section focuses on the properties of models.
+
+	You can adjust the detail of the model in the model config page. 
+	Double click or select model and click edit button to open model config page.
 
 	.. image:: images/mod_finder_settings_4.png
 		:scale: 60%
@@ -163,7 +166,7 @@ Models
 
 - **Polarity**: 
 
-	the expected polarity of occurrences, compared to that of the model. 
+	The expected polarity of occurrences, compared to that of the model. 
 	If the model is a white circle in black background, 
 	“SAME” will search for white circle in black background, “REVERSE” will search black circle in white background, 
 	and “ANY” will search any circle in any background as long as the it is an edge.
@@ -171,6 +174,83 @@ Models
 
 	.. image:: images/mod_finder_11.jpg
 	:scale: 100%
+
+- **X, Y**:
+
+	The offsets to set the reference point. The X and Y is the X-offset (in pixels) and the Y-offset (in pixels) 
+	of the origin of the model's reference axis, relative to the model origin. The top left corner is (0, 0). 
+
+	You can also define reference point in the model image by clicking “Define Ref Point” of the model. 
+	This will enter interactor mode where you need to select a point as a reference point. 
+	Normally the reference point is the center of all the edge pixels. 
+	It is recommended to use the default reference point.
+
+
+- **Angle**: Range [0, 360]
+
+	The nominal search angle in degrees. This is the angle to find the model's reference axis.
+
+- **Search Region**: (Default value: Whole Image)
+
+	The search region can be set to the "Whole Image" or a specified region of the Image. 
+	
+	.. image:: images/mod_finder_settings_5.png
+		:scale: 100%
+
+	*Top Left X*:
+		The top left starting X pixel value.
+
+	*Top Left Y*:
+		The top left starting Y pixel value.
+
+	*Size X*:
+		The X dimension size of the search area in pixels.
+	
+	*Size Y*:
+		The Y dimension size of the search area in pixels.
+
+	For example, if the interested search region is in the top left corner of the image with a size of 1000*1000 pixels, the parameters should 
+	be set as (0, 0, 1000, 1000).
+
+	Alternatively, you can define the search region in the target image by clicking “Define Search Region” 
+	and draw a rectangle ROI on target image.
+
+
+
+
+- **Search Scale**:
+
+	Sets whether to search for only models within a specified scale range. 
+
+	.. image:: images/mod_finder_settings_6.png
+		:scale: 100%
+	
+	Nominal scale: Range [0.5, 2.0] (Default value: 1.0)
+		The nominal scale used in scale range calculations.
+
+	Min scale: Range [1.0, 2.0] (Default value: 2.0)
+		The min scale used in scale range calculations.
+
+	Max scale: Range [0.5, 1.0] (Default value: 0.5)
+		The max scale used in scale range calculations.
+
+- **Search Angle**:
+
+	Sets whether to search for only models within a specified angle range.
+
+	.. image:: images/mod_finder_settings_7.png
+		:scale: 100%
+
+	Delta Neg Angle: 
+		Controls the lower limit of the angular range, relative to the reference angle (Model Ref Angle).
+
+	Delta Pos Angle: 
+		Controls the upper limit of the angular range, relative to the reference angle (Model Ref Angle).
+
+Procedure to use
+-----------------
+
+
 
 Model Masking
 -----------------
@@ -229,89 +309,6 @@ Search Model In Labelled Mask Sequence
 	3. Check "Use Labelled Mask Sequence", and link the labelled mask sequence to mask sequence output of of the DL segmentation node.
 	4. Run the node. For each mask image in the sequence the node will search for the model based on the model of the mask image (label of the segment).
 	5. The result pose (sorted in labelledPose2dSequence or labelledPose3dSequence) will have the same order of the segments vector of the DL segmentation node.
-
-Parameter Tunning 
-------------------
-
-Settings 
---------------------
-
-	The occurrence for each model to search. If it is 1, then node will only search 1 object on image. If labelled_mask_sequence is enabled, then node will search 1 model on each matched mask region. 
-
-	.. image:: images/mod_finder_5.jpg
-		:scale: 60%
-	.. image:: images/mod_finder_6.jpg
-		:scale: 60%
-	.. image:: images/mod_finder_7.jpg
-		:scale: 60%
-
-	Speed: 
-
-		Range [1, 4]	
-		
-		The speed of searching. 
-
-	Accuracy: 
-
-		Range [1, 3]
-		
-		The accuracy of searching
-
-	Smoothness: 
-
-		Range [1, 100]
-	
-		A high smoothness will only accept smooth edges, and low smoothness will accept sharp edgeds. 
-		Below the first image is when smoothness=100, and the second one is when smoothness=1.
-
-
-	.. image:: images/mod_finder_8.jpg
-		:scale: 60%
-
-	.. image:: images/mod_finder_9.jpg
-		:scale: 60%
-
-			
-	Detail Level: 
-
-		Range [1, 3]
-			
-		Sets the level of details to extract from model images and target images during edge extraction. The detail level determines what is considered an edge/background. A higher detail level will include more edges than a lower detail level.
-			
-	.. image:: images/mod_finder_9.jpg
-		:scale: 60%
-	.. image:: images/mod_finder_10.jpg
-		:scale: 60%
-
-
-	Shared Edge: 
-		
-		Range [0, 1]
-		
-		Sets whether to allow sharing of edges between occurrences.
-
-
-Model Parameters 
-------------------
-
-	Acceptance: 
-
-		Range [0,100]
-		
-		Sets the acceptance level for the score. An occurrence will be returned only if the match score between the target and the model is greater than or equal to this level. 
-
-	Certainty: 
-		
-		Range [0,100]
-		
-		Sets the certainty level for the score, as a percentage. If both the score and target scores are greater than or equal to their respective certainty levels, the occurrence is considered a match, without searching the rest of the target for better matches (provided the specified number of occurrences has been found). 
-
-	Polarity: 
-
-		Sets the expected polarity of occurrences, compared to that of the model. If the model is a white circle in black background, "SAME" will search for white circle in black background, "REVERSE" will search black circle in white background, and "ANY" will search any circle in any background as long as the it is an edge. 
-
-	.. image:: images/mod_finder_11.jpg
-		:scale: 100%	
 
 
 Reference Fixture 
