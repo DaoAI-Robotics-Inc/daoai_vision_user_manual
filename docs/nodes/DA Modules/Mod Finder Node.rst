@@ -64,6 +64,10 @@ Source Parameters
 
 	The time limit for the node to run. When the running time of the node reaches the time limit. The node will terminate and return the current output. 
 
+
+- **Use labelled mask sequence**: TO DO
+
+
 Algorithm Parameters
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -122,13 +126,51 @@ Edge Selection Parameters
 
 - **Detail Level**: Range [1,3] (Default value: MEDIUM)
 
-	The level of detail during edge extraction. Larger value means more edges are extracted.
+	The level of detail during edge extraction. The detail level determines what is considered as an edge/background. Larger value means more edges are extracted.
 
 
 - **Shared Edge**: Range [0,1]  (Default value: DISABLE)
 
 	Whether edges are shared bewteen different occurrences.
 
+
+Models
+~~~~~~
+	The model is defined from the scene, or it can be imported from a DL_Segment node using labelled mask sequence.
+	For the details of the defining or import process, please check the "Procedure to use" section. 
+	This section focusses on the properties of models.
+
+	.. image:: images/mod_finder_settings_4.png
+		:scale: 60%
+
+- **Label**: (Default value: -1)
+
+	asd
+
+- **Acceptance**: Range [0,100] (Default value: MEDIUM)
+
+	The minimum matching score where an occurrence is accpeted. 
+	An occurrence will be returned only if the match score between the target and the model is greater than or equal to this level.
+
+
+- **Certainty**: Range [0,100] (Default value: HIGH)
+
+	Sets the certainty level for the score, as a percentage. 
+	If both the score and target scores are greater than or equal to their respective certainty levels, 
+	the occurrence is considered a match, without searching the rest of the target for better matches 
+	(provided the specified number of occurrences has been found).
+
+
+- **Polarity**: 
+
+	the expected polarity of occurrences, compared to that of the model. 
+	If the model is a white circle in black background, 
+	“SAME” will search for white circle in black background, “REVERSE” will search black circle in white background, 
+	and “ANY” will search any circle in any background as long as the it is an edge.
+
+
+	.. image:: images/mod_finder_11.jpg
+	:scale: 100%
 
 Model Masking
 -----------------
