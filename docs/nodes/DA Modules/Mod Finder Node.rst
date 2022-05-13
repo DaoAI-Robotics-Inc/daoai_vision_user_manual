@@ -250,6 +250,76 @@ Models
 Procedure to use
 -----------------
 
+2D Mod Finder Example
+~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Open a workspace in DaoAI Vision Studio.
+	.. image:: images/mod_finder_procedure_1.png
+		:scale: 30%
+
+2. Insert a Camera node to get the source image.
+	.. image:: images/mod_finder_procedure_2.png
+		:scale: 60%
+
+3. A virtual image is used to demonstrate. Refer to System Overview, Tutorials on how to connect to camera.
+	.. image:: images/mod_finder_procedure_3.png
+		:scale: 50%
+
+4. Insert a Mod Finder node to find the T tube, select "2D" when creating the node.
+	.. image:: images/mod_finder_procedure_4.png
+		:scale: 60%
+
+5. Click on the blue dot on the right side of "Image" to link the image from the camera node above as input.
+	.. image:: images/mod_finder_procedure_5.png
+		:scale: 70%
+
+6. Expand the "Out/main_flowchart.camera_node" on the left window of the LinkExpressionDialog. Click the "image" then Apply. 
+	.. image:: images/mod_finder_procedure_6.png
+		:scale: 70%
+
+7. Create a model to let the node know what it should looking for. Click on the "+"" to create a model.
+	.. image:: images/mod_finder_procedure_7.png
+		:scale: 70%
+
+8. Name the model then "Confirm".
+	.. image:: images/mod_finder_procedure_8.png
+		:scale: 100%
+
+9. The display on the left window enters Interactor mode. Use mouse to carefully 
+select the region that contains the desired model.
+	.. image:: images/mod_finder_procedure_9.png
+		:scale: 70%
+
+10. Run the Mod Finder node. The edge of found objects are extracted by red line in the image display.
+	.. image:: images/mod_finder_procedure_12.png
+		:scale: 45%
+
+11. The default value of "Total Occurrences" is one. Set it to all to detect all the object.
+	.. image:: images/mod_finder_procedure_13.png
+		:scale: 60%
+
+12. Run the Mod Finder node. Five objects are detected.
+	.. image:: images/mod_finder_procedure_14.png
+		:scale: 50%
+
+13. Adjust the parameter of the model to find all the objects. The model appears under the "Models" section. Double click it to open the model parameters configurator.
+	.. image:: images/mod_finder_procedure_10.png
+		:scale: 70%
+
+14. Click on the "Draw Mask", then use mouse to cover all the area until only the edge of the model is extracted by red lines.
+	.. image:: images/mod_finder_procedure_16.png
+		:scale: 70%
+
+15. Run the Mod Finder node. All of the objects are detected.
+	.. image:: images/mod_finder_procedure_17.png
+		:scale: 45%
+
+
+3D Mod Finder Example
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
 
 
 Model Masking
