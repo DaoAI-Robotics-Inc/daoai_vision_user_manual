@@ -15,3 +15,4 @@ If the issue you encounter is not listed below, please `report your issue here <
    map-value/index
    resolution/index
    robot-script/index
+   workspace-corruption/overview
