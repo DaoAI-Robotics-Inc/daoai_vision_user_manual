@@ -65,7 +65,7 @@ Source Parameters
 	The time limit for the node to run. When the running time of the node reaches the time limit. The node will terminate and return the current output. 
 
 
-- **Use labelled mask sequence**: TO DO
+- **Use labelled mask sequence**: TODO
 
 
 Algorithm Parameters
@@ -148,7 +148,7 @@ Models
 
 - **Label**: (Default value: -1)
 
-	asd
+	TODO
 
 - **Acceptance**: Range [0,100] (Default value: MEDIUM)
 
@@ -292,7 +292,7 @@ select the region that contains the desired model.
 
 10. Run the Mod Finder node. The edge of found objects are extracted by red line in the image display.
 	.. image:: images/mod_finder_procedure_12.png
-		:scale: 45%
+		:align: center
 
 11. The default value of "Total Occurrences" is one. Set it to all to detect all the object.
 	.. image:: images/mod_finder_procedure_13.png
@@ -318,7 +318,80 @@ select the region that contains the desired model.
 3D Mod Finder Example
 ~~~~~~~~~~~~~~~~~~~~~~~
 
+1. **Repeat the step 1 to 3 from the above example.**
 
+2. Insert a Mod Finder node to find the T tube, select "3D" when creating the node.
+	.. image:: images/mod_finder_procedure_4.png
+		:scale: 60%
+
+3. **The 3D Mod Finder takes a "Da Depth Map And Point Cloud" as input. Insert a "DA CloudNDepth Conv" node under Camera node.
+Select "DA PointCloud -> DA depth map" when creating the node.**
+
+	.. image:: images/mod_finder_procedure_18.png
+		:scale: 80%
+
+	.. image:: images/mod_finder_procedure_19.png
+		:scale: 80%
+
+4. Link the point cloud from the above camera node as the input of the "DA CloudNDepth Conv" node.
+	.. image:: images/mod_finder_procedure_20.png
+		:align: center
+
+5. Run the "DA CloudNDepth Conv" node. The display enters interaction mode. Adjust the adjust box to contain the region of interest.
+	.. image:: images/mod_finder_procedure_22.png
+		:scale: 45%
+
+6. Exit the interactor, the depth map is dispalyed.
+	.. image:: images/mod_finder_procedure_23.png
+		:scale: 60%
+
+7. Select the Mod Finder node. Link the result from the "DA CloudNDepth Conv" node as the input.
+	.. image:: images/mod_finder_procedure_24.png
+		:scale: 60%
+
+8. Create a model to let the node know what it should looking for. Click on the "+"" to create a model.
+	.. image:: images/mod_finder_procedure_26.png
+		:scale: 70%
+
+9. Name the model then "Confirm".
+	.. image:: images/mod_finder_procedure_8.png
+		:scale: 100%
+
+10. The display on the left window enters Interactor mode. Use mouse to carefully select the region that contains the desired model.
+	.. image:: images/mod_finder_procedure_25.png
+		:scale: 70%
+
+11. Run the Mod Finder node. One object is found.
+	.. image:: images/mod_finder_procedure_27.png
+		:scale: 70%
+
+12. The default value of “Total Occurrences” is one. Set it to all to detect all the object.
+	.. image:: images/mod_finder_procedure_28.png
+		:scale: 70%
+
+13. Run the Mod Finder node. Three objects are found.
+	.. image:: images/mod_finder_procedure_29.png
+		:scale: 70%
+
+14. Open the Model Parameter Configurator. Set the "Acceptance" to low.
+	.. image:: images/mod_finder_procedure_30.png
+			:scale: 70%
+
+15. Run the Mod Finder node again. All of the objects are found.
+	.. image:: images/mod_finder_procedure_31.png
+			:scale: 40%
+
+
+
+General process of Using Mod Finder Node
+----------------------------------------
+
+	1. Link input model image. For 3d mod finder node, the input must be the output of DA CloudNDepthConv Node.
+	2. Run node once so the input image shows on the display.
+	3. Define model, click on "+" button to add a model, and draw a bounding box in the input image to define the model.
+	4. (Optional) adjust model in the model config page.
+	5. Run the node with other images. The found occurrences of the model will be displayed in the target image.
+	6. Use the position vector  for further processing to get the picking pose of the objects in the scene.
 
 
 
@@ -343,31 +416,22 @@ The model can be searched on image.
 
 
 
-Procedure of Using Mod Finder Node
------------------------------------
 
-	1. Link input model image. For 3d mod finder node, the input must be the output of DA CloudNDepthConv Node.
-	2. Run node once so the input image shows on the display.
-	3. Define model, click on "+" button to add a model, and draw a bounding box in the input image to define the model.
-	4. (Optional) adjust model in the model config page.
-	5. Run the node with other images. The found occurrences of the model will be displayed in the target image.
-	6. Use the position vector  for further processing to get the picking pose of the objects in the scene.
+.. Model Configuration
+.. -------------------------
 
-Model Configuration
--------------------------
+.. 	You can adjust the detail of the model in the model config page. Double click or select model and click edit button to open model config page.
 
-	You can adjust the detail of the model in the model config page. Double click or select model and click edit button to open model config page.
+.. 	.. image:: images/mod_finder_config.png
+.. 		:scale: 60%
 
-	.. image:: images/mod_finder_config.png
-		:scale: 60%
+.. 	The red lines are the extracted edges of the model, which will be used for searching. You can mask out or unmask area that you are not interested in by clicking "Draw Mask" or "Erase Mask" button.
+.. 	This will enter interactor mode where you can edit mask. You can also change "Edit Pixel Map Size" to change the brush size when drawing and erasing mask.
 
-	The red lines are the extracted edges of the model, which will be used for searching. You can mask out or unmask area that you are not interested in by clicking "Draw Mask" or "Erase Mask" button.
-	This will enter interactor mode where you can edit mask. You can also change "Edit Pixel Map Size" to change the brush size when drawing and erasing mask.
+.. 	You can also define reference point in the model image by clicking "Define Ref Point" of the model. This will enter interactor mode where you need to select a point as a reference point.
+.. 	Normally the reference point is the center of all the edge pixels. It is recommended to use the default reference point.
 
-	You can also define reference point in the model image by clicking "Define Ref Point" of the model. This will enter interactor mode where you need to select a point as a reference point.
-	Normally the reference point is the center of all the edge pixels. It is recommended to use the default reference point.
-
-	Additionally, you can define the search region in the target image by clicking "Define Search Region" and draw a rectangle ROI on target image.
+.. 	Additionally, you can define the search region in the target image by clicking "Define Search Region" and draw a rectangle ROI on target image.
 
 Search Model In Labelled Mask Sequence 
 --------------------------------------
