@@ -3,7 +3,7 @@ Reference Fixture System
 
 Synopsis 
 ---------
-	Fixture system allows you to define a reference frame and make all other things relative to the fxiture frame.
+	Fixture system allows you to define a reference frame and make all other things relative to the fixture frame.
 
 
 Define Fixture 
