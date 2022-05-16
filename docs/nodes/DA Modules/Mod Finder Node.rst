@@ -3,9 +3,9 @@ Mod Finder Node
 
 Overview 
 --------------------
-	The DaoAI Mod Finder engine used images pattern feature to find the object in 2D space, then used 3D space conversion to map it to 3D space. Usually at the end, it will go through point cloud alignment node to improve the 3D position accuracy.
+	The DaoAI Mod Finder engine used an image pattern feature to find the object in 2D space, then used 3D space conversion to map it to 3D space. Usually at the end, it will go through point cloud alignment node to improve the 3D position accuracy.
 	
-	The Mod Finder can be configured to find 2D or 3D model.
+	The Mod Finder can be configured to find 2D or 3D models.
 
 Input and Output 
 --------------------
@@ -65,7 +65,9 @@ Source Parameters
 	The time limit for the node to run. When the running time of the node reaches the time limit. The node will terminate and return the current output. 
 
 
-- **Use labelled mask sequence**: TODO
+- **Use labelled mask sequence**: 
+
+	Refer to the "Search Model In Labelled Mask Sequence" section below.
 
 
 Algorithm Parameters
@@ -79,9 +81,9 @@ Algorithm Parameters
 
 	The number of occurrences for each model to search. 
 	The occurrence can be set to any positive number. 
-	If the number of detected object is larger than the total occurrences number, 
+	If the number of detected objects is larger than the total occurrences number, 
 	the objects with the highest acceptance will be returned. 
-	If the occurrences number is larger than the number of detected objects, 
+	If the occurrence number is larger than the number of detected objects, 
 	all of them will show. The Total Occurrences can be set to "ALL". 
 
 	(left: occurrences = 1, middle: occurrences = 2, right: occurrences = ALL)
@@ -114,7 +116,7 @@ Edge Selection Parameters
 - **Smoothness**: Range [0,100) (Default value: 50)
 
 	The noise reduction used during edge extraction. Larger value means stronger noise reduction.
-	A high smoothness will only accept smooth edges, and low smoothness will accept sharp edgeds. 
+	A high smoothness will only accept smooth edges, and low smoothness will accept sharp edges. 
 	
 	(left: smoothness = 100, right: smoothness = 1)
 
@@ -126,12 +128,12 @@ Edge Selection Parameters
 
 - **Detail Level**: Range [1,3] (Default value: MEDIUM)
 
-	The level of detail during edge extraction. The detail level determines what is considered as an edge/background. Larger value means more edges are extracted.
+	The level of detail during edge extraction. The detail level determines what is considered as an edge/background. A larger value means more edges are extracted.
 
 
 - **Shared Edge**: Range [0,1]  (Default value: DISABLE)
 
-	Whether edges are shared bewteen different occurrences.
+	Whether edges are shared between different occurrences.
 
 
 Models
@@ -140,7 +142,7 @@ Models
 	For the details of the defining or import process, please check the "Procedure to use" section. 
 	This section focuses on the properties of models.
 
-	You can adjust the detail of the model in the model config page. 
+	You can adjust the details of the model in the model config page. 
 	Double click or select model and click edit button to open model config page.
 
 	.. image:: images/mod_finder_settings_4.png
@@ -148,7 +150,7 @@ Models
 
 - **Label**: (Default value: -1)
 
-	TODO
+	To distinguish model from the DL segmentation node when labelled mask sequence is used.
 
 - **Acceptance**: Range [0,100] (Default value: MEDIUM)
 
@@ -177,10 +179,10 @@ Models
 
 - **X, Y**:
 
-	The offsets to set the reference point. The X and Y is the X-offset (in pixels) and the Y-offset (in pixels) 
+	The offsets to set the reference point. The X and Y are the X-offset (in pixels) and the Y-offset (in pixels) 
 	of the origin of the model's reference axis, relative to the model origin. The top left corner is (0, 0). 
 
-	You can also define reference point in the model image by clicking “Define Ref Point” of the model. 
+	You can also define reference points in the model image by clicking the “Define Ref Point” of the model. 
 	This will enter interactor mode where you need to select a point as a reference point. 
 	Normally the reference point is the center of all the edge pixels. 
 	It is recommended to use the default reference point.
@@ -213,7 +215,7 @@ Models
 	be set as (0, 0, 1000, 1000).
 
 	Alternatively, you can define the search region in the target image by clicking “Define Search Region” 
-	and draw a rectangle ROI on target image.
+	and draw a rectangular ROI on target image.
 
 
 
@@ -277,7 +279,7 @@ Procedure to use
 	.. image:: images/mod_finder_procedure_6.png
 		:scale: 70%
 
-7. Create a model to let the node know what it should looking for. Click on the "+"" to create a model.
+7. Create a model to let the node know what it should be looking for. Click on the "+" to create a model.
 	.. image:: images/mod_finder_procedure_7.png
 		:scale: 70%
 
@@ -285,12 +287,12 @@ Procedure to use
 	.. image:: images/mod_finder_procedure_8.png
 		:scale: 100%
 
-9. The display on the left window enters Interactor mode. Use mouse to carefully 
+9. The display on the left window enters Interactor mode. Use mouse carefully 
 select the region that contains the desired model.
 	.. image:: images/mod_finder_procedure_9.png
 		:scale: 70%
 
-10. Run the Mod Finder node. The edge of found objects are extracted by red line in the image display.
+10. Run the Mod Finder node. The edges of found objects are extracted by red line in the image display.
 	.. image:: images/mod_finder_procedure_12.png
 		:align: center
 
@@ -341,7 +343,7 @@ Select "DA PointCloud -> DA depth map" when creating the node.**
 	.. image:: images/mod_finder_procedure_22.png
 		:scale: 45%
 
-6. Exit the interactor, the depth map is dispalyed.
+6. Exit the interactor, the depth map is displayed.
 	.. image:: images/mod_finder_procedure_23.png
 		:scale: 60%
 
@@ -349,7 +351,7 @@ Select "DA PointCloud -> DA depth map" when creating the node.**
 	.. image:: images/mod_finder_procedure_24.png
 		:scale: 60%
 
-8. Create a model to let the node know what it should looking for. Click on the "+"" to create a model.
+8. Create a model to let the node know what it should be looking for. Click on the "+" to create a model.
 	.. image:: images/mod_finder_procedure_26.png
 		:scale: 70%
 
