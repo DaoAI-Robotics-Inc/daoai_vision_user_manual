@@ -10,6 +10,6 @@ This section will cover the whole procedure for calibration, detection, and robo
 
 
    overview
-   calibration/index
+   calibration_new/index
    detection/overview
    picking/overview

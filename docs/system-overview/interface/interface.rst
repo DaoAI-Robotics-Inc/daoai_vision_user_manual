@@ -114,4 +114,3 @@ Operator View
    :align: center
 
 The Operator View can design a user facing application, based on a cell and grid system. Different operator views can be selected from the drop-down menu on the top left. 
-
