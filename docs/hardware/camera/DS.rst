@@ -267,7 +267,24 @@ Select the camera name you just created in the ``Camera Source`` and run the cam
     
 |
 
+Save Image Data
+~~~~~~~~~~~~~~
 
+You can save your image data into your local directory for future use. 
 
+.. image:: Images/save_image.png
+    :align: center
 
+Open **Platform Configuration**, and click into **Cameras**. Click into the connected camera.
 
+.. image:: Images/save_image_button.png
+    :align: center
+
+Click **Save camera data**, and select either **From File**(by default) or **From Numbered Files**. **From File** will save the captured image into a designated directory and file. 
+
+.. image:: Images/save_from_numbered.png
+    :align: center
+
+**From Numbered Files** will save the data into the designated directory. And as you capture more and more images, they will all be saved into this directory with prefix and index number. 
+
+These saved data will contain the point cloud, 3D data etc into a **.dcf** file. These **.dcf** files can be loaded using virtual camera.

@@ -34,4 +34,13 @@ First Complete the following information
 Contact Us
 --------------
 
-TODO
+If you cannot find the solution of your issue, don't hesitate to contact us: 
+    #. Contact your on-site support engineer directly
+    #. Through support team email: **support@daoai.com**
+
+When you report your issue, it would be great to have information below to help us resolving the issue:
+    * Write down your issue description
+    * Steps to reproduce the issue
+    * Software version and working environment
+    * Images attached will be much helpful for us to locate the issue
+    * Your name, contact email address and phone number(if needed)
