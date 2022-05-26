@@ -1,4 +1,4 @@
-Nodes Detail Explaination
+Nodes Detail Explanation
 ==============================
 
 This section is a detailed description about the functionalities of each node. You can also find examples here
