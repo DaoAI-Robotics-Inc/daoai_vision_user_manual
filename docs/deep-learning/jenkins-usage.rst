@@ -3,7 +3,7 @@ Train and Export a Model with Jenkins
 
 Requirements
 ------------
-Before beginning to train a learning model, you must have or know a few things:
+Before beginning to train a deep learning model, you must have or know a few things:
 
 * Know what type of model you would like to train
 * Know if you would like to continue training from a previous checkpoint or not
@@ -14,20 +14,23 @@ Creating a New Project
 Creating a new project is very simple, and only consists of running one pipeline.
 Navigate to the 'Create New Project' pipeline, and press 'Build with Parameters' on the left toolbar.
 Enter the name of your new project (write it down somewhere, you'll need this later), and the class labels you used while annotating your dataset.
+The class labels should be separated on individual lines.
+Depending on the type of project you're creating, you may need to use additional labels in the SECONDARY_CLASS_LABELS parameter.  
+For example, if you are creating a keypoint project, please input your keypoint class labels here.
 Press Build.
 
-After this build is successful, you should see a new folder show up on your Filezilla with the same name.
+After this build is successful, you should see a new folder show up on your Filezilla with the same name. (Hit refresh if you don't)
 This is the folder where you will be uploading all data, and receiving the model for everything you do with this project.
 
 Training a Model
 ----------------
 No matter the type of model you wish to train, two pipelines are used.
-For each, you must use the Annotation-Check pipeline first, as you will not be able to run the Training pipeline until the check is successful.
-This is to ensure that data formatting is accurate.
+For each, you must use the AnnoCheck pipeline first, as you will not be able to run the Training pipeline until the check is successful.
+This is to ensure that data formatting is accurate and to set up some internal files for the Training pipeline to use.
 
 Classification Models
 ~~~~~~~~~~~~~~~~~~~~~~
-First, run the Annotation-Check with the following steps:
+First, run the AnnoCheck with the following steps:
 
 1. Navigate to your tkteach folder you used to annotate your dataset in your file explorer
 2. Navigate to the project folder on Filezilla that you wish to use
@@ -43,8 +46,8 @@ First, run the Annotation-Check with the following steps:
     :width: 30%
     :align: center
 
-5. Navigate to the Classification-Annotation-Check pipeline on Jenkins
-6. Click 'Build with Parameters' and enter the name of your project (**case sensitive**)
+5. Navigate to the Classification-AnnoCheck pipeline on Jenkins
+6. Click 'Build with Parameters' and select the name of your project, as well as your DATASET_ID (stored in storage.db)
 7. Click 'Build'
 
 Please ensure the previous build is successful before carrying on to the next step.
@@ -53,14 +56,14 @@ Next, run the Training with the following steps:
 
 1. Navigate to the Classification-Training pipeline on Jenkins
 2. Click 'Build with Parameters' and enter the details for your project
-3. If you wish to train from a previous build, continue below to :ref:`checkpoint-label` to learn how
+3. If you wish to train from a previous build, select the build from the dropdown menu titled 'CHECKPOINT'
 4. Click 'Build'
 
 Now the model is training and you can continue to the :ref:`export-label` section.
 
 Segmentation Models
 ~~~~~~~~~~~~~~~~~~~~
-First, run the Annotation-Check with the following steps:
+First, run the AnnoCheck with the following steps:
 
 1. Navigate to your dataset that you annotated containing the PNGs and the JSONs
 2. Navigate to the project folder on Filezilla that you wish to use
@@ -76,8 +79,8 @@ First, run the Annotation-Check with the following steps:
     :width: 30%
     :align: center
 
-5. Navigate to the Segmentation-Annotation-Check pipeline on Jenkins
-6. Click 'Build with Parameters' and enter the name of your project (**case sensitive**)
+5. Navigate to the Segmentation-AnnoCheck pipeline on Jenkins
+6. Click 'Build with Parameters' and select the name of your project
 7. Click 'Build'
 
 Please ensure the previous build is successful before carrying on to the next step.
@@ -86,7 +89,7 @@ Next, run the Training with the following steps:
 
 1. Navigate to the Segmentation-Training pipeline on Jenkins
 2. Click 'Build with Parameters' and enter the details for your project
-3. If you wish to train from a previous build, continue below to :ref:`checkpoint-label` to learn how
+3. If you wish to train from a previous build, select the build from the dropdown menu titled 'CHECKPOINT'
 4. Click 'Build'
 
 Now the model is training and you can continue to the :ref:`export-label` section.
@@ -98,11 +101,6 @@ Training from a Previous checkpoint
 If you wish to continue training with new data, using a model you had previously trained to save time, you can do so.
 All of your exported models should come named with a build number
 To improve an old model, simply input the build number as a parameter for the training pipeline.
-
-For example, if I wanted to continue training from a model I was using called 'projectName-build-5-2022-01-01-cpu.pt',
-I would input the following as the CHECKPOINT_BUILD_NUMBER in the jenkins pipeline::
-
-    build-5-2022-01-01
 
 As we have limited storage, only a certain number of past builds are stored for each project, usually the last 10 builds, or any builds in the last week
 (whichever number is higher)
