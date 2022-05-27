@@ -31,18 +31,16 @@ First Complete the following information
 
     .. attention:: There might be more than one DMP file generated during a small period of time around when crush happened. Just upload all of them.
 
-Submit Jira Card
-----------------
+Contact Us
+--------------
 
-#. Open the link to `Jira <https://daoai.atlassian.net/jira/software/projects/ES/boards/11/backlog>`_ backlog.
-    
-    .. attention:: If there's no access to Jira board, then zip all collected data and information and send to any customer support.
+If you cannot find the solution of your issue, don't hesitate to contact us: 
+    #. Contact your on-site support engineer directly
+    #. Through support team email: **support@daoai.com**
 
-#. Go to the bottom of the page, and click **Create issue** in the backlog.
-    .. image:: images/faq-create-issue.png
-
-#. Switch the issue type to **Bug** and write a clear description of the bug.
-    .. image:: images/faq-create-issue-2.png
-
-#. Record all the information in the description field. Upload all the compressed data as attached file.
-    .. image:: images/faq-upload-to-jira.png
+When you report your issue, it would be great to have information below to help us resolving the issue:
+    * Write down your issue description
+    * Steps to reproduce the issue
+    * Software version and working environment
+    * Images attached will be much helpful for us to locate the issue
+    * Your name, contact email address and phone number(if needed)

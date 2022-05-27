@@ -16,3 +16,5 @@ If the issue you encounter is not listed below, please `report your issue here <
    resolution/index
    robot-script/index
    workspace-corruption/overview
+   validate_accuracy/index
+   
