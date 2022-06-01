@@ -1,5 +1,5 @@
 Instruction for Adjusting Box
-===========================
+=============================
 
 .. image:: Images/general.png
     :align: center 

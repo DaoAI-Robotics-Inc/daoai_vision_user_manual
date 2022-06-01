@@ -1,5 +1,5 @@
 How to Report Your Issue
-==========
+========================
 The principle of bug report is to let anyone able to understand the problem and reproduce it easily.
 
 Collect Data

@@ -7,6 +7,7 @@ If the issue you encounter is not listed below, please `report your issue here <
 .. toctree::
    :hidden:
 
+   help_center/index
    bug-report/overview
    utf8/index
    known-issue/index
