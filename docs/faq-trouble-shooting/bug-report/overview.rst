@@ -35,8 +35,10 @@ Contact Us
 --------------
 
 If you cannot find the solution of your issue, don't hesitate to contact us: 
-    #. Contact your on-site support engineer directly
-    #. Through support team email: **support@daoai.com**
+
+    #. Go to `Help Centre <https://daoai.atlassian.net/servicedesk/customer/portals>`_ submit your issue. You could also find the similar issues and see if there are solutions for you. Once we receive the ticket, we will contact you as soon as possible!
+    #. Contact your on-site support engineer directly;
+    #. Through support team email: **support@daoai.com**;
 
 When you report your issue, it would be great to have information below to help us resolving the issue:
     * Write down your issue description
