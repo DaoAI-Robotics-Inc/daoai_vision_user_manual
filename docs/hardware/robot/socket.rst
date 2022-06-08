@@ -75,7 +75,7 @@ Response Message
 | Meta        | int32[2] | 8 bytes                | meta_1 is the second last field in a message, sending the type of robot to Vision; meta_2 is the last field in message, sending the robot protocol version           |
 +-------------+----------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Commands
+Requests
 ----------------
 These are the commands which robot sends to **Vision**:
 

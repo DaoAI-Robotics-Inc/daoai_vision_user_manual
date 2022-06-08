@@ -4,6 +4,9 @@ Calibration Program
 This is the generic logic of Calibration for all kinds of robot. 
 If you want to see Calibration of individual robot, you can go to Different type of Robots to find the specific Calibration program under the robot page.
 
+.. warning::
+	You must make sure the `Euler Angle Order <>`_ is matching before you working on Calibration. TODO
+
 The Calibration programs and VMPlayer are `in here <https://drive.google.com/file/d/1e8qJSOhm25ZiUAlJgulAEamDqmwYkx6s/view?usp=sharing>`_. 
 Details for UR Calibration program is in `here <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/hardware/robot/cali_pro.html>`_.
 
@@ -22,7 +25,7 @@ In pseudo code:
 		#Accumulate Poses
 		if(vision is in Calibration_mode):
 			loop daoai_manual_accumulate_calibration():
-                move_robot(waypoint_n)
+				move_robot(waypoint_n)
 			end_of_loop
 
 		#Depending on the type of Calibration, **Vision** or robot will trigger this stop signal
