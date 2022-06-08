@@ -15,7 +15,7 @@ DaoAI Vision Studio support multiple types of cameras.
 
    DS
    Mini
-   .. Laser TODO
+   Laser
    GigE
    .. USB3 TODO
    
