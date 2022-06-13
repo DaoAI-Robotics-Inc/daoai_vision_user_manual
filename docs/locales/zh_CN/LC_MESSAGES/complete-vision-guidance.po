@@ -1,0 +1,3719 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021 DaoAI Robotics Inc.
+# This file is distributed under the same license as the DaoAI Vision User
+# Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: DaoAI Vision User Manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-26 15:26-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../complete-vision-guidance/calibration_new/2d-calibration/kyung-calibration/2d-kyung-calibration.rst:2
+msgid "2D Calibration by associating robot object frame with camera frame"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/2d-calibration/kyung-calibration/2d-kyung-calibration.rst:4
+msgid ""
+"similar to this "
+"(https://docs.pickit3d.com/en/latest/documentation/calibration/multi-"
+"poses-calibration.html)"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/2d-calibration/overview.rst:2
+msgid "2D Calibration"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/2d-calibration/overview.rst:4
+msgid ""
+"Robot-camera calibration is the process where the camera and the robot "
+"learn their relative position with respect to each other, which allows "
+"the camera to guide the robot to correct positions in the work cell."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/2d-calibration/overview.rst:6
+#: ../complete-vision-guidance/calibration_new/3d-calibration/overview.rst:6
+msgid ""
+"Calibration can be performed once the camera and robot have been mounted "
+"in the work cell, and needs to be redone if the camera moved relative to "
+"the robot base (fixed camera) or flange (robot mounted camera)."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/2d-calibration/overview.rst:8
+msgid "[Follow pickit ideas]"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/2d-calibration/overview.rst:13
+msgid "Performing calibration"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/2d-calibration/overview.rst:15
+msgid ""
+"We support two types of calibration, one is accurate for the calibration "
+"accuracy, another is easier to use for lower accuracy required "
+"applications"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/2d-calibration/overview.rst:18
+#: ../complete-vision-guidance/calibration_new/3d-calibration/overview.rst:57
+msgid "Validating calibration"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/camera-accuracy.rst:4
+msgid "Camera Accuracy"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/camera-accuracy.rst:6
+msgid ""
+"The limiting factor of 3D camera accuracy is typically the camera "
+"trueness(refer to :ref:`Accuracy, trueness and repeatability`). Camera "
+"repeatability tends to be an order of magnitude better than camera "
+"trueness. Therefore, this article focuses on camera trueness and "
+"describes what it is and how to measure it."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/camera-accuracy.rst:9
+msgid "Camera Trueness"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/camera-accuracy.rst:10
+msgid ""
+"The trueness of a camera specifies how representative of reality the "
+"camera point cloud is. More precisely, it quantifies how relative "
+"distances within the point cloud deviate from reality."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/camera-accuracy.rst:12
+msgid ""
+"The effect of bad camera trueness is exemplified in the drawing below. "
+"The left image represents reality as a perfect camera would see it. The "
+"right image shows the distorted representation produced by a real camera."
+" The red arrow represents the distance error resulting from this non "
+"ideal trueness."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/camera-accuracy.rst:17
+msgid ""
+"Camera shocks and collisions may significantly deteriorate camera "
+"trueness. To prevent this, it is recommended to place your camera inside "
+"a protective structure, especially if it’s robot-mounted. If after a "
+"camera collision you observe bad picking accuracy, verify the camera "
+"trueness, as explained below."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/camera-accuracy.rst:20
+msgid "Verifying the camera trueness"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/camera-accuracy.rst:21
+msgid ""
+"To verify the trueness of the camera, we compare the distance between two"
+" objects perceived by the camera with the actual (and known) distance. We"
+" therefore need a detection target with objects separated by an "
+"accurately known distance. The difference between the known distance and "
+"the detected distance indicates the camera trueness error."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/camera-accuracy.rst:23
+msgid ""
+"This procedure is similar to the way we verify the robot trueness "
+"described in :ref:`robot-accuracy`. The difference being that, instead of"
+" pointing with the robot, here we detect objects with the camera. The "
+"same `distance calculator <https://www.calculatorsoup.com/calculators"
+"/geometry-solids/distance-two-points.php>`_ can be used."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/camera-accuracy.rst:25
+msgid ""
+"Camera trueness is not constant across the field of view. It is therefore"
+" recommended to measure trueness inside the Region of Interest (ROI) of "
+"the application, where picking is meant to take place."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/camera-accuracy.rst:27
+msgid ""
+"In order to have meaningful measurements, it is important to use objects "
+"that can be accurately detected. It is recommended to first measure the "
+"detection repeatability of the objects."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/camera-accuracy.rst:29
+msgid ""
+"Note also that the longer the distance between the detected objects, the "
+"more reliable the trueness measurement will be."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/camera-accuracy.rst:32
+msgid "Correcting the camera trueness"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/camera-accuracy.rst:33
+msgid ""
+"Poor camera trueness can only be corrected by a new factory calibration. "
+"If the camera trueness error of your camera is unexpectedly high, contact"
+" our support team with a snapshot of your trueness verification."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/chessboard-calibration/chessboard-calibration.rst:2
+msgid "Chessboard Calibration"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-auto-calibration.rst:4
+msgid "Auto"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:2
+msgid "Circle Board Calibration"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:4
+msgid ""
+"Circle board calibration is the recommended method for performing robot-"
+"camera calibration in DaoAI Vision. With this method, the robot shows the"
+" calibration plate to DaoAI Vision from different viewpoints."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:6
+msgid ""
+"The placing of the calibration plate and the poses from which it is "
+"detected depend on the camera mount."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:11
+msgid "Fixed camera mount"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:13
+msgid ""
+"If the camera is fixed to a static structure, the circle board "
+"calibration plate must be attached to the robot flange. It does not "
+"matter how the plate is mounted, as long as it’s rigidly attached to the "
+"flange."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:16
+msgid "How to install the circle board onto the flange"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:18
+msgid ""
+"DaoAI provides the necessary equipment for mounting the calibration plate"
+" on the flange."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:20
+msgid ""
+"Align the plate, dowel pin, and holes on the robot flange. Then screw the"
+" plate to the flange."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:23
+msgid "How to capture a good quality image"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:25
+msgid ""
+"Due to the robotic vibration, the chessboard coordinates displayed in the"
+" camera will be distorted, reducing the accuracy of the final result "
+"significantly. It is strongly advised to reduce the robot's speed and set"
+" up the waiting time between each pose in order to capture a clear image."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:27
+msgid ""
+"The chessboard should be positioned at the camera's optimal working "
+"distance."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:29
+msgid ""
+"When generating the chessboard's coordinating system, the initial pose "
+"should always be in the center of the camera's field of view."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:36
+msgid "The first picture shows the good quality of image pose setting."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:43
+msgid "The second image shows a bad quality of image due to bad movement setting."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:50
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:17
+msgid "Calibration Poses"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:52
+msgid "The calibration poses are such that:"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:54
+msgid ""
+"The calibration plate is at a distance to the camera similar to the "
+"distance at which parts are expected to be picked."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:55
+msgid "The calibration plate can be correctly detected."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:56
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:20
+msgid "The poses are distinct enough to produce an accurate calibration."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:57
+msgid "The order in which the poses are captured is not important."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:59
+msgid ""
+"DaoAI recommends collecting the ten poses shown below to obtain an "
+"accurate calibration. It is however allowed to collect a different amount"
+" of poses, as long as their quality is good enough."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:61
+msgid "The first four poses capture variation in plate position:"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:65
+msgid ""
+"The next two poses capture variation in the camera-facing rotation of the"
+" plate:"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:69
+msgid "The last four poses capture variation in plate tilt:"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:75
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:49
+msgid "Robot Mounted Camera"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:78
+msgid "How to Place the Circle Board"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:79
+msgid ""
+"Compared to the Eye-to-hand, instead of fixing the camera, the Eye-in-"
+"hand application requires to have the circle calibration board fixed to "
+"one place. Therefore, it is highly recommended to place the board on a "
+"flat surface that future object being picked will be placed to proceed "
+"the calibration."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:82
+msgid "How to define a good quality image"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:83
+msgid "The first picture shows the good quality of image pose setting"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:87
+msgid "The second image shows a bad quality of image pose setting"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:94
+msgid "Calibrate from DaoAI Calibration Template"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:96
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:57
+msgid ""
+"To perform a new calibration, open the DaoAI Vision Studio follow the "
+"steps below:"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:98
+msgid ":ref:`Create workspace and set up calibration`"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:99
+msgid ":ref:`Collect calibration bag files`"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:100
+msgid ":ref:`Run calibration flowchart`"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:103
+msgid "Create workspace and set up calibration"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:105
+msgid ""
+"Open the DaoAI Vision Studio, and select the **Circleboard Calibration** "
+"from the Template list."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:112
+msgid ""
+"The chessboard calibration template includes five flowcharts: "
+":ref:`Manual`, :ref:`Calibration`, :ref:`circle-board-auto-calibration`, "
+":ref:`Eye-to-hand`, and :ref:`Eye-in-hand`. Each flowchart serves a "
+"unique and critical purpose within the template."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:114
+msgid ""
+"You need to choose the calibration type depending on the application "
+"requirement. By default, the variable will be set to 1 as calibration."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:121
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:82
+msgid ""
+"You need also to choose the number of poses you will be using to "
+"calibrate. By default, the variable will be set to 9."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:128
+msgid ""
+"Then you need to choose the approach for result validation, either using "
+"the pen on board, or gripper on TCP."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:136
+msgid "Collect calibration bag files"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:139
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:94
+msgid "Manual"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:141
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:96
+msgid ""
+"The first flowchart the needs to execute is the Manual flowchart. The "
+"purpose of the flowchart is to manage and save the data obtained from the"
+" camera and the robot including image, point cloud, depth image, camera "
+"intrinsic, and pose."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:148
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:103
+msgid ""
+"Modify the path of the ``writer`` node output folder. The data will be "
+"assembled into a bag file from the Writer Node."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:150
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:105
+msgid ""
+"Inside the writer node, you can specify the mode for generating the bag "
+"file. A single bag file can be saved by selecting the source type into "
+"“From file”."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:157
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:112
+msgid ""
+"If there is a sequence of bag files, you can select “From Numbered” by "
+"defining the folder path and the file name along with its start and end "
+"index for each file."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:165
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:120
+msgid ""
+"Normally we would set the end index into a large number to avoid "
+"overwriting previous saved files."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:167
+msgid ""
+"Next thing to setup before start running the flowchart is to set the row "
+"and column information in the **Calibration** node preview mode."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:174
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:122
+msgid ""
+"To collect poses, you need to setup the ``Manual Calibration`` robot "
+"script."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:176
+msgid ""
+"To get good quality image poses, you should run the Manual flowchart "
+"before you setup the poses, with camera and robot connected. Click the "
+"**Calibration** node so you can see the preview of the image being "
+"calibrated."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:179
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:131
+msgid ""
+"Adjust the robot arm to the proper position, select the current pose as "
+"the :ref:`Robot` waypoint by clicking ok. Then complete all waypoints in "
+"the robot script. More details for the camera to Vision Studio connection"
+" can be referenced by the previous topic :ref:`camera`."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:181
+msgid ""
+"You should adjust each pose until you see the **calibration marks** show "
+"up on your image accurately. The camera will keep capturing the image "
+"poses until you start the robot script so that you can constantly monitor"
+" the image pose making sure no bad image poses will be added into the bag"
+" files."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:189
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:136
+msgid ""
+"More details for capturing image poses can reference by the previous "
+"topic :ref:`How to capture a good quality image`."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:191
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:138
+msgid ""
+"Run the robot script to send the current robot pose to DaoAI Vision, then"
+" the current pose and image will be saved in a bag file."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:194
+msgid "Run calibration flowchart"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:197
+msgid "Small Circle Method"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:199
+msgid ""
+"If using **Small Circle Method**, you must have your calibration board "
+"rotation less than 45 degrees for all bag files."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:201
+msgid ""
+"Run the calibration with the collected bag files, and store the "
+"calibraiton result out into the calibration folder of your current "
+"workspace."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:203
+msgid ""
+"After running the bag collecting flowchart, you need to load the bag file"
+" folder saved previously into the Calibration flowchart to generate .yml "
+"file, which will be used for the real picking applications. The yml file "
+"tells the threshold value of the accuracy of locating the object in the "
+"image. The smaller value, the better accuracy."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:205
+msgid ""
+"Inside the reader node, use the folder path to load the bag file "
+"generated from the previous step."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:212
+msgid ""
+"Inside the node, you can select the source type they want for loading the"
+" bag file. If you choose to load a file from Numbered, then it is "
+"necessary to define the parameter as *Variable.NumerOfPoses* - 1."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:219
+msgid ""
+"All bag files will be accumulated in the first Calibration node, which is"
+" set to **Accumulate** mode. You should set up the number of rows, cols, "
+"spacing of the chessboard correctly to avoid mismatching between the bag "
+"file and the real board."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:226
+msgid ""
+"The second Calibration node, which is set to **Final** mode, will "
+"generate the final yml used for the future application. You need to name "
+"the file by typing in the File Name section."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:228
+msgid "**Large Circle method**"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:230
+msgid ""
+"You can also select the Use large circle orientation function, it will "
+"allow you to have any rotation of calibration board. However, it is still"
+" necessary to make sure to config the number of rows, columns, spacing "
+"between each row and column correctly."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:237
+msgid "Circle Board Output File"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/circleboard-calibration/circle-board-calibration.rst:238
+msgid ""
+"You can get your output calibration file from the **calibrations** folder"
+" inside the workspace. Copy and paste the folder to your Picking "
+"Workspace folder, then you will be able to load the calibration file."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/overview.rst:2
+msgid "3D Calibration"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/overview.rst:4
+msgid ""
+"Robot-camera calibration is the process where the **camera** and the "
+"**robot** learn their relative position with respect to each other, which"
+" allows the camera to guide the robot to correct positions in the work "
+"cell."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/overview.rst:8
+msgid ""
+"DaoAI ships with a calibration plate that has circles printed on it "
+"(below left) and a sphere. During robot-camera calibration, the robot "
+"shows this plate or the sphere to DaoAI Vision from different viewpoints,"
+" and DaoAI Vision learns the relative position between camera and robot:"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/overview.rst:10
+msgid ""
+"For a **fixed camera mount** (below center), the plate is attached to the"
+" robot end-effector, and DaoAI Vision learns the location between the "
+"camera and the robot base."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/overview.rst:11
+msgid ""
+"For a **robot-mounted camera** (below right), the plate is located at a "
+"fixed position in the work cell, and DaoAI Vision learns the location "
+"between the camera and the robot flange."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/overview.rst:18
+msgid ""
+"Calibration uses the color image in addition to 3D information to detect "
+"the plate or the sphere, so it's important for the circles in the plate "
+"or the sphere to be clearly visible, without reflections, artifacts or "
+"over-illumination from external light sources learn more."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/overview.rst:20
+msgid "The calibration board point cloud should look like image below."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/overview.rst:25
+msgid ""
+"The sphere point cloud should look like the image below, having at least "
+"1/3 of the ball showing."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/overview.rst:33
+msgid "Perform Calibration"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/overview.rst:35
+msgid ""
+"The most accurate results are obtained when the calibration target is "
+"detected from multiple viewpoints."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/overview.rst:37
+msgid "There are two types of calibration supported:"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/overview.rst:39
+msgid "Circle board calibration"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/overview.rst:40
+msgid "Sphere calibration"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/overview.rst:42
+msgid ""
+"Circle board calibration is suitable for situations where you can mount "
+"the calibration board on the robot end-effector easily, or you want to "
+"perform eye-in-hand calibration."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/overview.rst:49
+msgid ""
+"Sphere calibration is suitable for situations when mounting the "
+"calibration board on the end-effector is hard, or you have mounted a tool"
+" on the end-effector already, and you don't want to remove the tool. In "
+"this situations, you could easily attach the sphere."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/overview.rst:59
+msgid ""
+"An **incorrect** or **outdated** calibration can lead to unexpected robot"
+" motions. An incorrect calibration can result from not following "
+"correctly the calibration prodecure. A calibration can become outdated if"
+" the camera displaced relative to the robot since the last successful "
+"calibration."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/overview.rst:61
+msgid ""
+"The robot-camera calibration quality relies on the :ref:`Robot Accuracy` "
+"and on the :ref:`Camera Accuracy`. Therefore, if you observe a persistent"
+" robot-camera calibration error that cannot be fixed with better "
+"calibration poses, it is recommended to verify the accuracy of both "
+"camera and robot."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/overview.rst:63
+msgid "There are two ways in which robot-camera calibration can be validated:"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/overview.rst:65
+msgid ""
+":ref:`Quantitative calibration validation`, using the DaoAI calibration "
+"template with corresponding robot program."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/overview.rst:66
+msgid ""
+":ref:`Qualitative calibration validation`, using the DaoAI calibration "
+"template and manual inspection."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/overview.rst:68
+msgid ""
+"The first picks after performing calibration should be executed at a "
+"**low robot speed**, so unexpected behavior can be identified early "
+"enough to prevent the robot from colliding with people or the "
+"environment."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:2
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitive-measurement/3d-qualitative-validating-calibration.rst:2
+msgid "Qualitative calibration validation"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:4
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitive-measurement/3d-qualitative-validating-calibration.rst:4
+msgid ""
+"This validation method relies on a human operator visually confirming the"
+" correctness of a calibration, hence is a coarse check."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:6
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitive-measurement/3d-qualitative-validating-calibration.rst:6
+msgid ""
+"DaoAI also allows to perform a :ref:`Quantitative calibration "
+"validation`, which is more accurate, and recommended for applications "
+"that need to keep an eye on sources of picking errors."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:8
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitive-measurement/3d-qualitative-validating-calibration.rst:8
+msgid ""
+"Quantitative validate the result means we are projecting back some known "
+"objects back to the cloud, and compare it with what we actually see from "
+"the camera. Following are general steps:"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:10
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:14
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitive-measurement/3d-qualitative-validating-calibration.rst:10
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitive-measurement/3d-qualitative-validating-calibration.rst:14
+msgid "Collect validating bag data"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:11
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitive-measurement/3d-qualitative-validating-calibration.rst:11
+msgid ""
+"Config the flowchart, and run dedicated flowchart to check the visual "
+"result"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:15
+msgid ""
+"Open the same workspace for running the calibration, and set the robot "
+"pose to different ones, and collect a group of validating data. Refer to "
+":ref:`Collect calibration bag files` or :ref:`Collect sphere calibration "
+"bag files` for more details about collecting data."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:17
+msgid ""
+"for validating data, save the bag files into \"Data\\\\Validation\" "
+"folder will save you some time in future steps."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:20
+msgid "Circle Board Calibration Validation"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:22
+msgid "Gripper visulization - Eye-to-hand only"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:23
+msgid "The first step is to load the testing bag file into the Reader node."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:25
+msgid ""
+"In the Calibration node, you need to type in the yml file name stored in "
+"the **calibrations** folder under the current workspace folder. For "
+"details of the location refer to :ref:`Circle Board Output File`"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:32
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitive-measurement/3d-qualitative-validating-calibration.rst:29
+msgid ""
+"After the second switch, you need to load the gripper model they want to "
+"use based on the validation approach they chose in the beginning."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:39
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitive-measurement/3d-qualitative-validating-calibration.rst:36
+msgid ""
+"The left sub-child path is to visualize how well the gripper model "
+"matches the gripper's cloud."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:47
+msgid "Pin visualization - Eye-to-hand"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:48
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitive-measurement/3d-qualitative-validating-calibration.rst:47
+msgid ""
+"The right sub-child path is to visualize how good the world is located in"
+" the cloud. (The pen should plug right in the center of the first circle "
+"of the chessboard.) (Small circle) or check if the pen is located in the "
+"center of the central circle of the board. (Large circle)"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:62
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:83
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitive-measurement/3d-qualitative-validating-calibration.rst:61
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitive-measurement/3d-qualitative-validating-calibration.rst:84
+msgid ""
+"The testing bag file cannot be the same as the one used for generating "
+"the yml file. You need to readjust the poses and check the result using "
+"multiple bag files with different orientations."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:65
+msgid "Pin visualization - Eye-in-hand"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:66
+msgid ""
+"Use the first and second Readers to load the gripper model ply file and "
+"the bag file respectively. Then, click the Calibration node and enter the"
+" yml file name that you want to validate."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:72
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitive-measurement/3d-qualitative-validating-calibration.rst:73
+msgid ""
+"Different from the **Eye To Hand** flowchart, you can only validate the "
+"result by using the world in cloud method."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:74
+msgid ""
+"For **Small circle**, the pen(world) should be located at the center of "
+"the upper-left circle on the calibration borad."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:76
+msgid ""
+"For **Large circle**, the pen(world) should be located at the center of "
+"the calibration board."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:86
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitive-measurement/3d-qualitative-validating-calibration.rst:88
+msgid "Sphere visualization"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:87
+msgid ""
+"For sphere calibration, there's only one way of validation and it "
+"combined both eye-to-hand and eye-in-hand."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:89
+msgid ""
+"Go to the **Validation** flowchart in Sphere calibrations workspace. You "
+"will need to setup the first three nodes."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:95
+msgid ""
+"**Sphere Calibration** Node: enter the yml file name which you want to "
+"validate."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:96
+msgid ""
+"First **Reader** Node: Browse the bag data captured for validation, if "
+"you already saved them in Data/Validation folder of current workspace, "
+"then you don't need to select again."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:97
+msgid ""
+"Second **Reader** Node: Browse the CAD model for you sphere, there are "
+"two existing models for 40mm and 60mm diameter in the Data folder."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:99
+msgid ""
+"After setting up, you can click **Visualize** node and check how good the"
+" sphere CAD model matchs the sphere in point cloud. Sometimes you might "
+"need to move to different views on the display to judge the validation "
+"result."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:105
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitive-measurement/3d-qualitative-validating-calibration.rst:92
+#: ../complete-vision-guidance/calibration_new/3d-calibration/quantitive-measurement/3d-quantitative-calibration-validation.rst:62
+msgid "Invalid robot-camera calibration?"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:106
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitive-measurement/3d-qualitative-validating-calibration.rst:93
+msgid ""
+"If the outcome of calibration validation is that the current calibration "
+"is invalid, the most likely cause is that the camera moved with respect "
+"to the robot base (Eye to Hand) or robot flange (Eye In Hand). When this "
+"is the case, robot-camera calibration needs to be performed again."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:108
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitive-measurement/3d-qualitative-validating-calibration.rst:95
+#: ../complete-vision-guidance/calibration_new/3d-calibration/quantitive-measurement/3d-quantitative-calibration-validation.rst:65
+msgid ""
+"If the camera has not moved with respect to the robot, it could be that "
+"something went unexpectedly wrong during calibration. The following "
+"pointers can help you identify the cause:"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:110
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitive-measurement/3d-qualitative-validating-calibration.rst:97
+msgid ""
+"After capturing, the calibration plate moved before sending the current "
+"pose."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:111
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitive-measurement/3d-qualitative-validating-calibration.rst:98
+msgid "The calibration poses don't comply with the requirement."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:112
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitive-measurement/3d-qualitative-validating-calibration.rst:99
+msgid ""
+"If you are integrating a new robot brand with DaoAI Vision, there might "
+"be an incompatability in the way poses are communicated between DaoAI "
+"Vision and the robot."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitative-measurement/3d-qualitative-validating-calibration.rst:114
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitive-measurement/3d-qualitative-validating-calibration.rst:101
+msgid ""
+"If you are having trouble with robot-camera calibration, contact our "
+"support team."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitive-measurement/3d-qualitative-validating-calibration.rst:16
+msgid ""
+"Open the same workspace for running the calibration, and set the robot "
+"pose to different ones, and collect a group of validating data. Refer to "
+":ref:`Collect calibration bag files` for more details about collecting "
+"data."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitive-measurement/3d-qualitative-validating-calibration.rst:19
+msgid "Eye-to-hand Gripper visulization"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitive-measurement/3d-qualitative-validating-calibration.rst:20
+msgid ""
+"The first step is to load the testing bag file into the Reader node, and "
+"use the Disassemble Bag node to extract the data from inside."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitive-measurement/3d-qualitative-validating-calibration.rst:22
+msgid ""
+"In the Calibration node, you need to type in the yml file name stored in "
+"the Calibration folder under the Chessboard Calibration template folder "
+"created by you."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitive-measurement/3d-qualitative-validating-calibration.rst:44
+msgid "Pin visualization"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitive-measurement/3d-qualitative-validating-calibration.rst:46
+msgid "Eye-to-hand"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitive-measurement/3d-qualitative-validating-calibration.rst:64
+msgid "Eye-in-hand"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitive-measurement/3d-qualitative-validating-calibration.rst:65
+msgid "**Small circle**"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitive-measurement/3d-qualitative-validating-calibration.rst:67
+msgid ""
+"Use the first and second Readers to load the gripper model ply file and "
+"the bag file respectively. Then, use the Calibration node to load the yml"
+" file generated from the previous step."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitive-measurement/3d-qualitative-validating-calibration.rst:75
+msgid "**Large circle**"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/qualitive-measurement/3d-qualitative-validating-calibration.rst:77
+msgid ""
+"By using the large circle, the pen(world) should be located in the center"
+" of the scene cloud."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/quantitive-measurement/3d-quantitative-calibration-validation.rst:2
+msgid "Quantitative calibration validation"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/quantitive-measurement/3d-quantitative-calibration-validation.rst:3
+msgid ""
+"This article describes how to quantitatively validate the correctness of "
+"the active camera's current calibration. The procedure can be performed "
+"as a sanity check just after calibrating, or at any future moment, "
+"especially if you suspect that the camera might have moved relative to "
+"the robot. It consists in performing one or more additional calibration "
+"plate detections, and computing for each detection the error with respect"
+" to the value stored during the last successful calibration."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/quantitive-measurement/3d-quantitative-calibration-validation.rst:5
+msgid ""
+"The robot-camera calibration error might not be constant across the field"
+" of view. It is therefore recommended to validate the calibration as "
+"described in this article inside the Region of Interest (ROI) of the "
+"application, where picking is meant to take place."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/quantitive-measurement/3d-quantitative-calibration-validation.rst:8
+msgid "Requirements"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/quantitive-measurement/3d-quantitative-calibration-validation.rst:9
+msgid ""
+"Calibration validation requires a successful calibration to exist for the"
+" active camera. It also imposes a constraint on the placement of the "
+"calibration plate with respect to the robot, which depends on the camera "
+"mount:"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/quantitive-measurement/3d-quantitative-calibration-validation.rst:11
+msgid ""
+"**Fixed camera**: The plate location with respect to the robot flange "
+"should be the exactly the same as when calibration ran."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/quantitive-measurement/3d-quantitative-calibration-validation.rst:16
+msgid ""
+"**Robot-mounted camera**: The plate location with respect to the robot "
+"base should be the exactly the same as when calibration ran."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/quantitive-measurement/3d-quantitative-calibration-validation.rst:23
+msgid ""
+"The range of movements of robot will affect the calibration result, you "
+"might get a low error but not a meaningful result. Usually your range "
+"should cover the whole region of interest for future picking tasks to "
+"make the calibration result meaningful."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/quantitive-measurement/3d-quantitative-calibration-validation.rst:25
+msgid ""
+"If you are validating just after running calibration, this contraint "
+"should not be an issue, but you might want to perform validation "
+"regularly over time, days, weeks or months after the last successful "
+"calibration. When this is the case, it is recommended to:"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/quantitive-measurement/3d-quantitative-calibration-validation.rst:27
+msgid ""
+"**Fixed camera**: Use a (manual or automatic) tool changer, and have the "
+"calibration plate rigidly attached to one of the tool ends. It's "
+"important that the tool changer is such that the mounted tool is subject "
+"to neglectable mounting errors."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/quantitive-measurement/3d-quantitative-calibration-validation.rst:29
+msgid ""
+"**Robot-mounted camera**: Rigidly fix the calibration plate to a wall or "
+"other structure in the work cell. When performing validation, the plate "
+"should be at a distance to the camera similar to the distance at which "
+"parts are expected to be picked."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/quantitive-measurement/3d-quantitative-calibration-validation.rst:32
+msgid "Validation from the calibraiton template"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/quantitive-measurement/3d-quantitative-calibration-validation.rst:33
+msgid ""
+"First, collect another set of calibration bag data differ from the bag "
+"data used to calibrate."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/quantitive-measurement/3d-quantitative-calibration-validation.rst:35
+msgid ""
+"Then go to the **Test** flowchart, and you need to specify the path to "
+"the bag files you just collected in the reader node."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/quantitive-measurement/3d-quantitative-calibration-validation.rst:40
+msgid ""
+"Make sure the yml file is inside the **calibrations** folder of current "
+"workspace folder."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/quantitive-measurement/3d-quantitative-calibration-validation.rst:45
+msgid "Enter the yml file name to the **calibration** node **Test** mode."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/quantitive-measurement/3d-quantitative-calibration-validation.rst:50
+msgid ""
+"Then run the flowchart to see the console output. You will be able to see"
+" the error between the calibration and current validation dataset."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/quantitive-measurement/3d-quantitative-calibration-validation.rst:58
+msgid "Sphere Calibration Validation"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/quantitive-measurement/3d-quantitative-calibration-validation.rst:59
+msgid ""
+"Quantitative calibration validation is not supported yet. Please use "
+":ref:`Qualitative calibration validation`."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/quantitive-measurement/3d-quantitative-calibration-validation.rst:63
+msgid ""
+"If the outcome of calibration validation is that the current calibration "
+"is invalid, the most likely cause is that the camera moved with respect "
+"to the robot base (fixed camera) or robot flange (camera on robot). When "
+"this is the case, robot-camera calibration needs to be performed again."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/quantitive-measurement/3d-quantitative-calibration-validation.rst:67
+msgid "The calibration plate moved during the calibration process."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/quantitive-measurement/3d-quantitative-calibration-validation.rst:68
+msgid ""
+"The camera mount (fixed or robot-mounted) was incorrectly selected in the"
+" calibration wizard."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/quantitive-measurement/3d-quantitative-calibration-validation.rst:69
+msgid "The calibration poses don't comply with the recommendations."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/quantitive-measurement/3d-quantitative-calibration-validation.rst:70
+msgid ""
+"If you are integrating a new robot brand with DaoAI Vision Studio, there "
+"might be an incompatability in the way poses are communicated between "
+"DaoAI Vision and the robot. Especially the euler order and magnitude for "
+"the translation."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/robot-accuracy.rst:2
+msgid "Robot Accuracy"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/robot-accuracy.rst:5
+msgid "Accuracy, trueness and repeatability"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/robot-accuracy.rst:6
+msgid ""
+"**Trueness** measures how close to reality a measurement is, on average. "
+"It is related to the statistical concept of bias."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/robot-accuracy.rst:7
+msgid ""
+"**Repeatability** measures how close measurements taken in the same "
+"conditions are from each other. It is also called **precision** and is "
+"related to the statistical concept of variance."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/robot-accuracy.rst:8
+msgid ""
+"**Accuracy** measures how close to reality a measurement can be. It is a "
+"combination of both the trueness and the repeatability."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/robot-accuracy.rst:10
+msgid ""
+"Trueness and repeatability are therefore two independent concepts. As "
+"shown in the image below, a measurement with a good trueness can have a "
+"bad repeatability and *vice versa*. Good accuracy can only be obtained "
+"with both good trueness and good repeatability."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/robot-accuracy.rst:15
+msgid ""
+"For blind applications, where the robot moves between fixed taught "
+"points, only the robot repeatability matters. For vision applications, "
+"both the robot repeatability and the robot trueness matter. "
+"Unfortunately, robot manufacturers usually only communicate robot "
+"repeatability in their datasheet and not robot trueness."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/robot-accuracy.rst:18
+msgid "Verifying Robot Trueness"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/robot-accuracy.rst:19
+msgid ""
+"This section describes an easy way to verify the trueness of a robot by "
+"calculating the distance between three known points."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/robot-accuracy.rst:21
+msgid ""
+"This verification is subject to manual error (jogging the robot to a "
+"given point). It is therefore not exact, but it can catch errors larger "
+"than 1 mm."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/robot-accuracy.rst:23
+msgid ""
+"The idea of this test is to compare real and known distances with the "
+"distances perceived by the robot. For this, you need an object that "
+"contains distinctive points at which the robot can precisely point, and "
+"the distances between the points need to be exactly known. This could be "
+"corners of a table or corners of a sheet of paper. The robot needs to be "
+"able to reach all relevant points. Here we use two A4 sheets (equivalent "
+"to one A3 sheet) to illustrate the procedure. In case of two A4 sheets "
+"make sure you attach them accurately and firm to each other as seen in "
+"the illustration below."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/robot-accuracy.rst:29
+msgid "Lay this paper in such a way that the corners are reachable by your robot."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/robot-accuracy.rst:31
+msgid ""
+"The robot trueness depends on the robot pose. It is therefore recommended"
+" to measure the robot trueness inside the Region of Interest (ROI) of the"
+" application, where picking is meant to take place. For camera on robot, "
+"it is also interesting to verify the robot truenss at the detection "
+"pose(s)."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/robot-accuracy.rst:33
+msgid ""
+"Point your robot TCP exactly to points A, B and C, and write down the TCP"
+" coordinates given by the robot."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/robot-accuracy.rst:35
+msgid ""
+"Make sure that the TCP orientation is kept the same for all points. The "
+"easiest is to have the TCP oriented at 0 degrees around X, Y and Z. This "
+"makes sure that eventual TCP errors are not affecting this test."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/robot-accuracy.rst:37
+msgid ""
+"Calculate the distance between three corners by using `this calculator "
+"<https://www.calculatorsoup.com/calculators/geometry-solids/distance-two-"
+"points.php>`_."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/robot-accuracy.rst:39
+msgid ""
+"The deviation from the expected distance indicates the trueness error of "
+"your robot."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/robot-accuracy.rst:41
+msgid "For an A3 sheet of paper, the distances should be close to:"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/robot-accuracy.rst:43
+msgid "A to B: 297 mm"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/robot-accuracy.rst:44
+msgid "B to C: 420 mm"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/robot-accuracy.rst:45
+msgid "A to C: 514.4 mm"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/robot-accuracy.rst:48
+msgid "Correcting the robot trueness"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/robot-accuracy.rst:49
+msgid ""
+"If you observed unexpectedly high errors with your robot, contact your "
+"robot manufacturer. A new robot factory calibration might be required."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/robot-accuracy.rst:51
+msgid "An industrial robot should typically be accurate to less than 1 mm."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-auto-calibration.rst:4
+msgid "auto-sphere-calibration"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:2
+msgid "Sphere Calibration"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:4
+msgid ""
+"Sphere Calibration is more like a backup plan for :ref:`Circle Board "
+"Calibration`. It is suitable for situations when mounting the calibration"
+" board on the end-effector is hard, or you have mounted a tool on the "
+"end-effector already, and you don't want to remove the tool. In these "
+"situations, you might want to easily attatch the sphere onto the tool."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:6
+msgid ""
+"With this method, the robot shows the sphere to DaoAI Vision from "
+"different viewpoints."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:9
+msgid "General Settings"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:11
+msgid "How To Capture a Good Quality Image"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:12
+msgid ""
+"Make sure your robot does not vibrate during the capturing process, "
+"otherwise the sphere point cloud displayed in the camera will be "
+"distorted, reducing the accuracy of the final result significantly. It is"
+" strongly advised to reduce the robot's speed and set up the waiting time"
+" between each pose in order to capture a clear image."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:13
+msgid "The sphere should be positioned at the camera's optimal working distance."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:14
+msgid ""
+"When generating the gripper calibration poses, the initial pose should "
+"always be in the center of the camera view."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:18
+msgid ""
+"The sphere is at a distance to the camera similar to the distance at "
+"which parts are expected to be picked."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:19
+msgid "Make sure there's at least 1/3 of the sphere visible in the point cloud."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:21
+msgid "The order in which the poses are captured does **not** matter."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:24
+msgid "DaoAI recommends collecting poses from:"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:30
+msgid ""
+"1 pose of sphere set to center of the camera view, as the yellow circle "
+"shows."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:31
+msgid ""
+"at least 2 poses on each green circles halfway from center to the edge of"
+" camera view. For the total of 8 poses discribed here, you need to make "
+"large rotation and tiltings between each of them to get a good result."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:34
+msgid ""
+"For Eye in hand setting, you should move the camera to achieve the "
+"position discribed above. DO **NOT** move the sphere."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:37
+msgid "Fixed Camera Mount"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:40
+msgid "How to attatch the sphere onto the Robot"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:41
+msgid ""
+"DaoAI provides the 40mm or 60mm calibration sphere and a sphere mounting "
+"gripper."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:45
+msgid ""
+"You can also choose to stick the sphere onto your current gripper. .. "
+"warning:: Make sure you attatch the sphere to a stable position so when "
+"your robot moves, the sphere doesn't move."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:52
+msgid "How to place the sphere"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:53
+msgid ""
+"Compare to the Eye-to-hand, instead of fixing the camera, the Eye-in-hand"
+" application requires to have the sphere fixed to one position. "
+"Therefore, it is highly recommended to glue sphere onto the surface where"
+" objects will be picked from."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:56
+msgid "Calibratie from DaoAI Sphere Calibration Template"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:59
+msgid ":ref:`Create workspace and set up sphere calibration`"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:60
+msgid ":ref:`Collect sphere calibration bag files`"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:61
+msgid "Run the :ref:`sphere-calibration-flowchart` flowchart"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:64
+msgid "Create workspace and set up sphere calibration"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:66
+msgid ""
+"Open the DaoAI Vision Studio, and select the **Sphere Calibration** from "
+"the Template list."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:73
+msgid ""
+"The sphere calibration template includes five flowcharts: :ref:`sphere-"
+"manual-flowchart`, :ref:`sphere-calibration-flowchart`, :ref:`auto-"
+"sphere-calibration`, :ref:`SC_Eye_to_hand`, and :ref:`SC_Eye_in_hand`. "
+"Each flowchart serves a unique and critical purpose within the template."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:75
+msgid ""
+"You need to choose the pre-process method depending on the project "
+"environment. By default, the variable will be set to 0 as using Deep "
+"learning segmentation node to cut out the sphere."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:90
+msgid "Collect sphere calibration bag files"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:124
+msgid ""
+"To get good quality image poses, you should run the Manual flowchart "
+"before you setup the poses, with camera and robot connected. Click the "
+"**Camera** node one the right side so you can see the preview of the "
+"image being calibrated."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:133
+msgid ""
+"The camera will keep capturing the image poses until you start the robot "
+"script so that you can constantly monitor the image pose making sure no "
+"bad image poses will be added into the bag files."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:143
+#: ../complete-vision-guidance/calibration_new/index.rst:2
+#: ../complete-vision-guidance/overview.rst:7
+msgid "Calibration"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:144
+msgid ""
+"Before you run the **Calibration** flowchart, there are a few things need"
+" to setup."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:151
+msgid "Reader node: set the path to the folder where you saved your bag data."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:153
+msgid ""
+"Sphere Calirbation node **Accumulate** mode: Set the hand eye config. "
+"Then enter the intitial guess of the position of the sphere center to the"
+" robot flange."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:155
+msgid ""
+"Sphere Calibration node *Final* mode: Set the file name to your desired "
+"output name."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:156
+msgid ""
+"*Optional* - Cloud Process node: If you set the **cloud_process_method** "
+"variable to 1, which will be using color filter, you should click the "
+"cloud process node, and double click the **Color Filter** from operation "
+"list, and set your color filter."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:158
+msgid ""
+"After setting up, you can just run your flowchart to generate your "
+"calibration result file."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:161
+msgid "Sphere Calibration Output File"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/3d-calibration/sphere-calibration/3d-sphere-calibration.rst:162
+msgid ""
+"You can get your output calibration file from the **sphere calibrations**"
+" folder inside the workspace. Copy and paste the folder to your Picking "
+"Workspace folder, then you will be able to load the calibration file."
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/index.rst:6
+msgid "Contents"
+msgstr ""
+
+#: ../complete-vision-guidance/calibration_new/index.rst:4
+msgid ""
+"This section coveres the basics for the robot and camera calibration "
+"details"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/boxes/overview.rst:2
+msgid "Box Volume Estimate"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/boxes/overview.rst:4
+msgid ""
+"The DaoAI Box Volume Estimate uses 2D box cloud to create 3D gripping "
+"pose for boxes. Usually this engine is applied to box like objects, since"
+" these objects do not have obvious distinct shapes. We feed the objects "
+"into deep learning engine, then uses the mature learning model to find "
+"the object locations in scene. The deep learning engine can learn from "
+"the object color, relative size and object shape; then generate a model "
+"for the object which can be used by **DL Segment** node to identify "
+"objects in scene. Hence, this would be useful for packages or boxes "
+"picking."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/boxes/overview.rst:15
+msgid ""
+"Objects like these boxes are rectangles for Vision, except for minor "
+"differences on the top(such as scratches or hole), if we try to use the "
+"Gray or Depth Mod Finder, results might not be accurate. Therefore we "
+"have **Deep Learning Engine** and **Box Volume Estimate** to help us!"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/boxes/overview.rst:19
+#: ../complete-vision-guidance/detection/keypoint/overview.rst:25
+#: ../complete-vision-guidance/detection/mod-finder/depth-mod-finder.rst:7
+#: ../complete-vision-guidance/detection/mod-finder/gray-mod-finder.rst:7
+#: ../complete-vision-guidance/detection/mono-3d.rst:8
+#: ../complete-vision-guidance/detection/shape-finder/overview.rst:17
+msgid "Pipeline Overview"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/boxes/overview.rst:30
+msgid ""
+"As the image above shows, the Box Volume Estimate is straight forward "
+"pipeline flow:"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/boxes/overview.rst:27
+msgid "Camera captures image, then feeds to DL Segment to detect the objects;"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/boxes/overview.rst:28
+msgid ""
+"Setup a region of interest in scene and apply dynamic box filter to this "
+"area to differentiate the layers of box(this is not necessary if boxes "
+"are not stacking up);"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/boxes/overview.rst:29
+msgid ""
+"Cropping out the point clouds using binary masks from the output segment "
+"from DL Segment;"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/boxes/overview.rst:30
+msgid "Applying the segment and clouds to generate the object in cloud relations;"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/boxes/overview.rst:32
+msgid ""
+"You can also learn about the main ideas behind the Box Volume Estimate by"
+" watching this video tutorial. (TODO, record a video) You can also "
+"checkout this sample `workspace "
+"<https://drive.google.com/uc?export=download&id=1S4iL9rzlIMeGlSVbGf4RZbIEkDROQJNR>`_."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/boxes/overview.rst:35
+#: ../complete-vision-guidance/detection/shape-finder/overview.rst:30
+msgid "Deep Learning Model"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/boxes/overview.rst:37
+msgid ""
+"Deep Learning Engine plays an important role in this detection stage. For"
+" more details about `Deep Learning <https://daoai-robotics-inc-daoai-"
+"vision-user-manual.readthedocs-hosted.com/en/latest/deep-"
+"learning/dataset.html>`_"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/boxes/overview.rst:39
+msgid ""
+"After the model is trained, apply the model and configuration file to DL "
+"Segment node to identify the objects. This result includes the object "
+"masks, object type(within the trained dataset) and object 2D pose."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/boxes/overview.rst:43
+#: ../complete-vision-guidance/detection/keypoint/overview.rst:59
+msgid "Define Region of interest"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/boxes/overview.rst:45
+msgid ""
+"Usually the camera field of view will be larger than the region of "
+"interest, thus the first step usually is to setup the boundary for the "
+"useful information. You could run to the Cloud Process node, and make "
+"sure the Adjust Bounding Box options was on in the cloud process display "
+"setting. Then execute the Cloud Process node. Then you could adjust the "
+"bounding box."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/boxes/overview.rst:50
+#: ../complete-vision-guidance/detection/mod-finder/depth-mod-finder.rst:62
+msgid ""
+"When adjust the bounding box, you could press **R** to reset to the "
+"original view. For more information of Adjusting Box, checkout this "
+"`article <https://daoai-robotics-inc-daoai-vision-user-manual"
+".readthedocs-hosted.com/en/latest/faq-trouble-"
+"shooting/adjust_box/index.html>`_."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/boxes/overview.rst:55
+msgid ""
+"Double click on the **Dynamic Box Filter** operation in Cloud Process "
+"node, the **Distance Threshold** is the value for depth interest: Vision "
+"based on the first valid point cloud, going down(-Z direction) the "
+"distance and crop this area, rest of the area outside of this depth would"
+" be excluded."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/boxes/overview.rst:61
+msgid ""
+"For example, when the boxes are stacking up and robot is only able to "
+"grab the top boxes; DL would identify every valid occurrences of boxes in"
+" scene, we would need to exclude some of the bottom ones. Modify this "
+"Threshold until it is able to crop the top level only. Above scenario "
+"showing that the left top corner box is at the next level, hence we only "
+"want the right box to be picked."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/boxes/overview.rst:69
+msgid ""
+"The **Points Threshold** is to minimize the noise point influence. For "
+"example, if we set **Distance Threshold** as 200, we want calculate from "
+"the highest box. Vision is looking for valid points in scene. However, if"
+" some noise point is higher than the box, Vision would start calculating "
+"from this point, which is not the expected behavior. **Points Threshold**"
+" is able to define number of points for this highest object. Boxes are "
+"having large flat surface so that we set this value to a few hundreds to "
+"ensure Vision calculates from the highest box."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/boxes/overview.rst:72
+#: ../complete-vision-guidance/detection/keypoint/overview.rst:81
+#: ../complete-vision-guidance/detection/shape-finder/overview.rst:85
+msgid "Generate Poses"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/boxes/overview.rst:74
+msgid ""
+"Applying Scene Crop node to crop point clouds using binary masks from DL "
+"Segment node, outputs the box segments for Box Volume Estimate. Box "
+"Volume Estimate uses the segments, origin from the reference frame and "
+"scene point cloud to visualize the pose in scene."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/keypoint/overview.rst:2
+msgid "KeyPoint Deep Learning"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/keypoint/overview.rst:4
+msgid ""
+"The KeyPoint Deep Learning engine is using a different deep learning "
+"model to detect objects in scene. Usually this engine is objects which "
+"needed direction output from **DL Segment** node. Foe example, the object"
+" below is a metal part which has distinct directions."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/keypoint/overview.rst:11
+msgid ""
+"The part with hole is the top of this part. In order to have this result,"
+" we would need to apply key-points on the object during the annotation "
+"process."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/keypoint/overview.rst:17
+msgid ""
+"For detail about **Dataset Annotation**, checkout `Annotate your Dataset "
+"<https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-"
+"hosted.com/en/latest/deep-learning/annotation/index.html>`_"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/keypoint/overview.rst:19
+msgid ""
+"You can see there are ``P1`` and ``P2`` in the image above. They are the "
+"key-points of this object through deep learning model. Through these key-"
+"points on the model, **DL Segment** generates the object 2D poses and its"
+" x, y directions are defined when models were being trained. In this "
+"sample object, according to the order of you gave to these key-points, "
+"the direction of the metal part is now the green and red arrows. Further "
+"more, if you give different order to these key-points, direction is also "
+"changed. For example, if the image above giving order **P2** -> **P1** ->"
+" **A**, then the direction would have changed(The direction is "
+"specifically defined while training the models)."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/keypoint/overview.rst:36
+#: ../complete-vision-guidance/detection/mod-finder/depth-mod-finder.rst:10
+#: ../complete-vision-guidance/detection/mod-finder/gray-mod-finder.rst:10
+msgid ""
+"As the image above shows, the Gray Mod Finder contains 5 sections in the "
+"whole flow:"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/keypoint/overview.rst:32
+msgid ""
+"Section 1: Used the camera to capture 3D data, then use Image Process "
+"(ROI operation)) to crop the area of interest for detection."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/keypoint/overview.rst:33
+msgid ""
+"Section 2: Used **DL Segment** node with trained model to detect the "
+"objects in cropped area; then feeds it to Mod Finder node to generate the"
+" 2D poses."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/keypoint/overview.rst:34
+msgid ""
+"Section 3: Use the reconstruct node projecting feature to map the 2D "
+"result from Mod Finder node into the 3D space."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/keypoint/overview.rst:35
+#: ../complete-vision-guidance/detection/mod-finder/gray-mod-finder.rst:15
+msgid ""
+"Section 4: This section was used to crop the 3D model of the object, and "
+"use it for the alignment. And this section will only be executed once "
+"during the defining time."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/keypoint/overview.rst:36
+msgid ""
+"Section 5: The alignment in this section was used to align the 3D model "
+"from section 4 into the 3D space."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/keypoint/overview.rst:38
+#: ../complete-vision-guidance/detection/mod-finder/gray-mod-finder.rst:18
+msgid ""
+"During the runtime, the execution flow is section 1 -> 2 -> 3 -> 5. And "
+"during the defining time, the execution flow is section 1 ->2 -> 3 -> 4 "
+"-> 5."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/keypoint/overview.rst:43
+msgid ""
+"As the above image shows, the red and blue arrow is the data flow for the"
+" nodes. Red arrow is the detection flow of the flowchart; blue arrow is "
+"the flow for defining model in scene. And more details can be found with "
+"this workspace(TODO)"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/keypoint/overview.rst:47
+#: ../complete-vision-guidance/detection/mod-finder/gray-mod-finder.rst:27
+msgid ""
+"You can also learn about the main ideas behind the gray mod finder engine"
+" by watching this video tutorial. (TODO, record a video)"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/keypoint/overview.rst:50
+#: ../complete-vision-guidance/detection/mod-finder/depth-mod-finder.rst:44
+#: ../complete-vision-guidance/detection/mod-finder/gray-mod-finder.rst:40
+#: ../complete-vision-guidance/detection/mono-3d.rst:31
+msgid "Placing the object under the camera"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/keypoint/overview.rst:52
+#: ../complete-vision-guidance/detection/mod-finder/depth-mod-finder.rst:46
+msgid ""
+"Place your object under the camera and try to put it as close as possible"
+" to the center of your working environment (center height of the working "
+"cell, and at the center of the image) to capture the sample image while "
+"making sure that the object is lying fully in the field of view of the "
+"camera. It’s useful to run the camera node continuously, and turn on the "
+"point cloud view to see the image quality of the object."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/keypoint/overview.rst:61
+msgid ""
+"Usually the camera field of view will be larger than the region of "
+"interest, thus the first step usually is to setup the boundary for the "
+"useful information. You could execute the Image Process node with **ROI**"
+" operation, you can drag the **ROI** in the image to define your region "
+"of interest."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/keypoint/overview.rst:69
+msgid "Define Model"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/keypoint/overview.rst:71
+msgid ""
+"The object model is defined in deep learning training, however you still "
+"need the object point cloud in order to align the object mask to the "
+"object in scene. For detail of deep learning model, checkout `Deep "
+"Learning <https://daoai-robotics-inc-daoai-vision-user-manual"
+".readthedocs-hosted.com/en/latest/deep-learning/index.html>`_."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/keypoint/overview.rst:77
+msgid ""
+"You still need to define object point cloud(.pcd) in **Section 4**. You "
+"should put the box area around the object. The box should includes the "
+"whole object and the object only. Sometimes might be hard to exclude the "
+"button of the container, it is okay to have a little bit of object "
+"excluded. To keep in mind that the box should still includes the major "
+"point cloud of the object."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/keypoint/overview.rst:83
+msgid ""
+"Reconstruct node generate the 3D poses from 2D poses. Applying the Mod "
+"Finder outputs to Reconstruct node. Reconstruct node uses pixels around "
+"the 2D pose and calculates the Z axis direction. At the end, DA Alignment"
+" node aligns the model point cloud with the objects in scene to precisely"
+" output the picking pose."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/depth-mod-finder.rst:2
+msgid "Depth Mod Finder"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/depth-mod-finder.rst:4
+msgid ""
+"The Depth Mod Finder pipeline has 3 stages, one is to find the object on "
+"depth image, then map to 3D space, and finally use alignment to get "
+"accurate result."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/depth-mod-finder.rst:12
+msgid "Section 1: Used the camera to capture 3D data."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/depth-mod-finder.rst:13
+msgid ""
+"Section 2: This section was used to crop the 3D model of the object, and "
+"use it for the alignment. And this section will only be executed once "
+"during the defining time."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/depth-mod-finder.rst:14
+msgid ""
+"Section 3: Use cloud process (adjust bounding box feature) to set the "
+"working cell of the project."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/depth-mod-finder.rst:15
+msgid ""
+"Section 4: Mod Finder node is used in model define stage as well as "
+"detection stage."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/depth-mod-finder.rst:16
+msgid ""
+"Section 5: The alignment in this section was used to align the 3D model "
+"from section 2 into the 3D space. It takes in the output from section 2 "
+"or section 3, where the Mod Finder node output the initial pose of the "
+"object."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/depth-mod-finder.rst:21
+msgid ""
+"During the runtime, the execution flow is section 1 -> 3 -> 2 -> 4 -> 3 "
+"-> 4 -> 5. When defining model, set ``detection.detection_status`` to "
+"``0`` which would reset to setup working cell stage. Then it enters stage"
+" 2 defining model. Afterwards, it stays on stage 3 detection mode until "
+"you change the variable to reset the stage."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/depth-mod-finder.rst:27
+msgid ""
+"As the above image shows, the red, green and blue arrow is the data flow "
+"for the nodes. Green arrow is the detection flow of the flowchart; Red "
+"arrow is the flow for defining model in scene; Blue arrow is to define "
+"the working cell in image. And more details can be found with this "
+"`workspace "
+"<https://drive.google.com/uc?export=download&id=171FzY6Br1Uv6vjGTCblTZD6l76cuyRWh>`_"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/depth-mod-finder.rst:31
+msgid ""
+"You can also learn about the main ideas behind the depth mod finder "
+"engine by watching this video tutorial. (TODO, record a video)"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/depth-mod-finder.rst:34
+#: ../complete-vision-guidance/detection/mod-finder/gray-mod-finder.rst:30
+#: ../complete-vision-guidance/detection/mono-3d.rst:99
+msgid "Teach model from camera"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/depth-mod-finder.rst:36
+#: ../complete-vision-guidance/detection/mod-finder/gray-mod-finder.rst:32
+msgid ""
+"Teaching an object model is important step when setting up the DaoAI Mod "
+"Finder engine to detect objects. Mod Finder needs a good model to "
+"identify objects in scene. Mod Finder uses RGB or Depth image to detect "
+"objects, therefore anything captured in camera could be possibly the "
+"oobject. How can Vision recognizes these objects? By comparing from the "
+"model and the image. Hence, good model plays the essential role in this "
+"process."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/depth-mod-finder.rst:40
+#: ../complete-vision-guidance/detection/mod-finder/gray-mod-finder.rst:36
+msgid ""
+"The rest of this article is about how to define model. If you want to "
+"know what is good model, please see `How to define good models <https"
+"://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-"
+"hosted.com/en/latest/complete-vision-guidance/detection/mod-"
+"finder/good_model.html>`_"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/depth-mod-finder.rst:54
+#: ../complete-vision-guidance/detection/mod-finder/gray-mod-finder.rst:50
+msgid "Isolating the object"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/depth-mod-finder.rst:55
+msgid ""
+"Usually the camera field of view will be larger than the region of "
+"interest, thus the first step usually is to setup the boundary for the "
+"useful information. You could run to the **Section 3** Cloud Process "
+"node, and make sure the **Adjust Bounding Box** options was on in the "
+"cloud process display setting. Then execute the Cloud Process node. Then "
+"you could adjust the bounding box."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/depth-mod-finder.rst:65
+msgid "Define the Model with the Image"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/depth-mod-finder.rst:67
+msgid ""
+"Defining a model from scene requires the flowchart in defining mode. "
+"Constant node should be set to ``true`` in order to switch to defining "
+"mode. ``false`` represents flowchart is in detection mode."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/depth-mod-finder.rst:69
+msgid ""
+"We use the depth output from the DA CloudNDepth Conv node, and now we run"
+" the Mod Finder node once to load in the image. Then click **add model**,"
+" then select a bounding box on the image. To define a model, click the "
+"``+`` sign."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/depth-mod-finder.rst:78
+#: ../complete-vision-guidance/detection/mod-finder/gray-mod-finder.rst:74
+msgid "Then defining the model in scene."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/depth-mod-finder.rst:86
+msgid "Masks"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/depth-mod-finder.rst:87
+msgid ""
+"TODO: How does mod finder calculate the depth? Please wait for new "
+"updates!"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/good_model.rst:2
+msgid "Define Models"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/good_model.rst:5
+msgid "How to set good model matching parameters"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/good_model.rst:7
+msgid "Double clicking on the model brings up the model parameter configuration."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/good_model.rst:12
+msgid "These parameters are important for detection such that:"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/good_model.rst:14
+msgid ""
+"**Acceptance** is the object acceptance in scene. Since Gray Mod Finder "
+"uses gray image to detect objects, some pixels of same color in image "
+"might form a similar shape as model. Hence, increasing the acceptance "
+"higher to ensure it detects the objects and objects only. But if the "
+"acceptance is too high, Vision would try to look for objects which has "
+"identical pixels with model. This is not so true in real life environment"
+" since objects might be in different place, when camera captures, the "
+"shape of object would slightly change due to angle changes or lighting "
+"changes."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/good_model.rst:19
+msgid ""
+"When setting acceptance too high, detected 1 occurrence of objects but "
+"there are 8"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/good_model.rst:24
+msgid ""
+"When setting acceptance too low, detected 32 occurrence of objects but "
+"there are 8"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/good_model.rst:26
+msgid ""
+"**Reference Point** is the point which Vision detects and perform "
+"picking. Reconstruct node generates the object coordinates based on this "
+"reference point. Hence, this point would affect the height of object when"
+" picking(you do NOT want the gripper to penetrate though the object). "
+"This green cross is the reference point:"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/good_model.rst:31
+msgid ""
+"**Mask** can cover the area which we do not want to include in model. As "
+"we opens up the model parameter configuration, we can see the red lines "
+"on the object. These red lines are the shape which is the shape Vision "
+"uses for detecting objects."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/good_model.rst:36
+msgid ""
+"As the image shown, the label in the middle is included as the shape of "
+"object now. We do not want this label since the other side of this object"
+" does not have label! We can click ``Draw Mask`` to apply mask on the "
+"model:"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/good_model.rst:42
+msgid "So that we can erase all the non-interested details of the model."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/good_model.rst:49
+msgid ""
+"After define the model, head to the DA Alignment node, and run it. You "
+"will see model cloud aligns with the object positions."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/good_model.rst:54
+#: ../complete-vision-guidance/detection/mono-3d.rst:120
+msgid ""
+"To define the model more clearly, you could first enlarge the image view "
+"in the display."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/good_model.rst:59
+msgid ""
+"After that, executing flowchart to **Section 2**, Cloud Process node "
+"crops the defined model and Writer saves the model cloud to local "
+"directory."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/good_model.rst:62
+msgid ""
+"The object we crop in Cloud Process node **MUST** be the same object we "
+"defined earlier in Mod Finder node. In this case, we used bottom right "
+"corner object to define model in Mod Finder; then we have to crop the "
+"same object for model cloud. If model is not the same object as the "
+"cloud, DA Alignment node would not be able to align the model cloud with "
+"objects."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/good_model.rst:69
+msgid "This is the result of alignment when using different object cloud."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/good_model.rst:71
+msgid ""
+"The reason behind this result is that DA Alignment takes the model cloud "
+"as well as the initial pose of this object from Mod Finder. Reconstruct "
+"node process the objects from Mod Finder, it generates the "
+"pose(coordinates) for the objects. Then Pose Operation node inverse the "
+"pose, since the output from Reconstruct is Object-in-Cloud relation, DA "
+"Alignment needs Cloud-in-Object relation to align model cloud with object"
+" pose. Hence, if the cloud is not the same with model, alignment result "
+"is not the correct relations."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/good_model.rst:75
+msgid "How to teach a good model"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/good_model.rst:77
+msgid ""
+"As mentioned earlier, teaching a good model would have great beneficial "
+"to detection result. What is good model?"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/good_model.rst:82
+msgid "Good model should be:"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/good_model.rst:80
+msgid ""
+"Model has clear object outline and good object point cloud. A good point "
+"cloud should only have tiny area of overexposed pixels or even better "
+"that does not have any overexposed pixels."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/good_model.rst:81
+msgid ""
+"Model contains the object and object itself only. The surface should not "
+"be included in the model when cropping for Cloud Process."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/good_model.rst:82
+msgid ""
+"Model Acceptance should be low enough to detect all the occurrences of "
+"objects **AND** as high as possible to detect all the occurrences of the "
+"object."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/good_model.rst:84
+msgid ""
+"How to adjust this Acceptance level? Set this acceptance level to able to"
+" detect all occurrences of object; then slowly increases the acceptance "
+"level until detected occurrences less than what it suppose to be(For "
+"example, 8 objects in scene, and we keep increasing the acceptance level "
+"until detected occurrences is 7 or less). Then decreasing it back to the "
+"highest acceptance level which is able to detect all occurrences."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/gray-mod-finder.rst:2
+msgid "Gray Mod Finder"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/gray-mod-finder.rst:4
+msgid ""
+"The Gray Mod Finder pipeline has 3 stages, one is to find the object on "
+"gray(RGB) image, then map to 3D space, and finally use alignment to get "
+"accurate result."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/gray-mod-finder.rst:12
+msgid ""
+"Section 1: Used the camera to capture 3D data, then use cloud process "
+"(adjust bounding box feature) to set the working cell of the project."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/gray-mod-finder.rst:13
+msgid "Section 2: Used mod finder 2D mode to find the object in the 2D image."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/gray-mod-finder.rst:14
+msgid ""
+"Section 3: Use the reconstruct node projecting feature to map the 2D "
+"result from mod finder node into the 3D space."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/gray-mod-finder.rst:16
+msgid ""
+"Section 5: The alignment in this section was used to align the 3D model "
+"from section 4 into the 3D space. It takes in the output from section 3, "
+"where the reconstruct node output the initial pose of the object."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/gray-mod-finder.rst:23
+msgid ""
+"As the above image shows, the red and blue arrow is the data flow for the"
+" nodes. Red arrow is the detection flow of the flowchart; blue arrow is "
+"the flow for defining model in scene. And more details can be found with "
+"this `workspace "
+"<https://drive.google.com/uc?export=download&id=1rqktQ6TLJMIhvsqRI_6OAPlhThUwjjVB>`_"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/gray-mod-finder.rst:42
+msgid ""
+"Place your object under the camera and try to put it as close as possible"
+" to the center of your working environment (center height of the working "
+"cell, and at the center of the image) to capture the sample image while "
+"making sure that the object is lying fully in the field of view of the "
+"camera. It’s useful to run the camera node continously, and turn on the "
+"point cloud view to see the image quality of the object."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/gray-mod-finder.rst:51
+msgid ""
+"Usually the camera field of view will be larger than the region of "
+"interest, thus the first step usually is to setup the boundary for the "
+"useful information. You could run to the first cloud process node, and "
+"make sure the **Adjust Bounding Box** options was on in the cloud process"
+" display setting. Then execute the Cloud Process node. Then you could "
+"adjust the bounding box."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/gray-mod-finder.rst:58
+msgid ""
+"When adjust the bounding box, you could press **R** to reset to the "
+"original view, For more information of Adjusting Box. checkout this "
+"`article <https://daoai-robotics-inc-daoai-vision-user-manual"
+".readthedocs-hosted.com/en/latest/faq-trouble-"
+"shooting/adjust_box/index.html>`_."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/gray-mod-finder.rst:61
+msgid "Define the 2D Model with the Image"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/gray-mod-finder.rst:63
+msgid ""
+"Defening a model from scene requires the flowchart in defining mode. "
+"Constant node should be set to ``true`` in order to switch to defining "
+"mode. ``false`` represents flowchart is in detection mode."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/gray-mod-finder.rst:65
+msgid ""
+"We use the RGB output from the cloud process node, and now we run the Mod"
+" Finder node once to load in the image. Then click **add model**, then "
+"select a bounding box on the image. To define a model, click the ``+`` "
+"sign."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/mod-finder-overview.rst:2
+msgid "Mod Finder"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/mod-finder-overview.rst:4
+msgid ""
+"The DaoAI Mod Finder engine used images pattern feature to find the "
+"object in 2D space, then used 3D space conversion to map it to 3D space. "
+"Usually at the end, it will go through point cloud alignment node to "
+"improve the 3D position accuracy."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/mod-finder-overview.rst:6
+msgid "There are 2 modes of mod finder:"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/mod-finder-overview.rst:13
+msgid ""
+"**Mod Finder Gray**, it finds the defined object on the rgb(gray) image, "
+"then use reconstruct feature map the coordinate into 3D space. Finally "
+"use the alignment feature to get accurate position. It is suitable to "
+"find object has good feature on 2D image, or concatenate it with deep "
+"learning feature."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mod-finder/mod-finder-overview.rst:25
+msgid ""
+"**Mod Finder Depth**, it find the defined object on the depth image "
+"(parallel projected), then use the alignment feature to get accurate 3D "
+"space position."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:2
+msgid "Mono 3D"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:4
+msgid ""
+"The mono 3d pipeline used mod finder to extract the feature from 2d "
+"image, then combining known 3d information for those feature points, "
+"finally to detect the object 3d position with a single 2d image. You "
+"could find the detection pipeline from the template workspace \"????\""
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:14
+msgid ""
+"As the image above shows, the Mono 3D Detection contains 4 sections in "
+"the whole flow:"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:16
+msgid ""
+"Section 1: Load previously defined pose, reader data, calibration "
+"context, or to switch between different recipes."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:17
+msgid "Section 2: Use the camera to capture 2D data."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:18
+msgid ""
+"Section 3: First use mod finder 2D mode to find object's anchor feature "
+"that will be used as a reference fixture in the second mod finder. Then "
+"use mod finder 2D mode to find the object geomatric features in the same "
+"2D image."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:19
+msgid ""
+"Section 4: Use the Mono 3D node pose estimate mode mapping the trained or"
+" set feature to the 2D result from mod finder node into the 3D space."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:21
+msgid ""
+"During the runtime, the execution flow is section 1 -> 2 -> 3 -> 4. And "
+"during the defining time, only section 3 in the above image will be used."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:28
+msgid ""
+"As the above image shows (TODO, draw professional image), the red line is"
+" the data flow for the nodes. And more details can be found with this "
+"`workspace <https://domain.invalid/>`_ (TODO, upload a sample workspace "
+"for this flowchart, and also upload testing data you can test with)."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:32
+msgid ""
+"Place your object under the camera and try to put it as close as possible"
+" to the center of your working environment (center height of the working "
+"cell, and at the center of the image) to capture the sample image while "
+"making sure that the object is lying fully in the field of view of the "
+"camera. It’s useful to run the camera node continuously, and check the "
+"**Show Crosshair** to see the object position"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:40
+msgid "Train/Set the Mono model"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:41
+msgid ""
+"Method 1 -- Train: We use at least 6 poses to train the Mono Model, the "
+"poses can be generated just like Hand-eye calibration. Use the **Manual**"
+" flowchart and set the poses like calibration."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:42
+msgid ""
+"Or use the chessboard calibration template to generate bag files and read"
+" them into the **Mono Train** flowchart."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:50
+msgid ""
+"In the **Manage Variables**, set Mod finder mode to 0 or 1 depending on "
+"which flowchart is used(detailed in comment)."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:58
+msgid ""
+"If using **Mono Train** flowchart, in the **Constant** node, set integer "
+"field to the number of bag files."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:66
+msgid ""
+"In the **Mono 3D** node accumulate mode, set the **Calibration Context** "
+"to the DA Calibration output file name that exist in the da_calibrations "
+"folder in the workspace folder."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:74
+msgid ""
+"In the **Mono 3D** node Final mode, set the output file name. Then "
+"proceed to next step."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:82
+msgid "If using **Manual** flowchart, set the output folder for **Writer** node."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:90
+msgid ""
+"Method 2 -- Set Feature: Instead of training, if the precise relative "
+"positions between geo features are known, use the **Mono 3D** node set "
+"feature mode. Click **add model**, enter the **Feature Name** "
+"corresponding to the geo features' name in **Mod Finder** node(model-n), "
+"and enter the xyz relative to the object center(or just make one of the "
+"feature to be object center by xyz = [0,0,0]). Make sure each geo feature"
+" has it's corresponding set feature. Then set the output file name and "
+"run this node only."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:100
+msgid ""
+"Teaching an object model is the most important step when setting up the "
+"DaoAI Mod Finder engine to detect your object. The model is the only "
+"thing that is used by vision studio to search for your objects in a "
+"scene, so a better quality model results in better detections. A high-"
+"quality model has the following characteristics:"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:102
+msgid "It contains as many details of the object as possible,"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:103
+msgid "It contains only poi  nts that belong to the object itself and"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:104
+msgid "It exactly matches the side of the object that you want to detect."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:106
+msgid "Continue reading to learn how to build a high-quality model."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:109
+msgid "Define the anchor feature with the image"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:111
+msgid ""
+"We use the RGB output from the camera node, and now we run the first mod "
+"finder node once to load the image. Then click **add model**, then select"
+" a bounding box on the image. It has to be a part of the object that has "
+"consistant position relative to itself. To define a good model, see the "
+"following sections and the mod finder node introduction (TODO, add the "
+"link)."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:123
+msgid "Define the geo feature with the image"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:125
+msgid ""
+"After defined the anchor feature, head to the second mod finder node, and"
+" run it once to load the image. Now define at least 4 geo features aka "
+"four models on the object that has consistant relative position to "
+"eachother and the anchor feature defined in previous step."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:131
+msgid ""
+"After defined the geo features, double click on each of them in the "
+"**Models** list, and click the **Define Search Region** button on the "
+"bottom left corner. Then select a bounding box for the region of the "
+"object where this geo feature at. The search region will be moving with "
+"the anchor feature."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:137
+msgid ""
+"To check search region and anchor feature, simply check the **Show "
+"Fixture** option and check geo feature search region(blue box) and anchor"
+" feature(yellow box)."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:146
+msgid "Detect the object"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:147
+msgid ""
+"In **Detection** flowchart, click the **Mono 3D** node pose estimate "
+"mode, set the **Calibration Context** to DA calibration file name and the"
+" Mono 3D file name in **Name this file** section. After everything set, "
+"run through the detection flowchart to see if **Mod Finder** nodes "
+"displays the correct position of features, and **Mono 3D** pose "
+"esitmation pervides same positions as geo features in Mod Finder node."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:158
+msgid "How to define a good anchor feature"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:157
+msgid ""
+"A good anchor feature must have consistent relative position to the whole"
+" object, any shift of the feature will cause inaccuracy."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:158
+msgid "Make sure the anchor feature is NOT symmetry at all, axial or central."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:164
+msgid "How to define a good geo feature"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:161
+msgid ""
+"A good geo feature must have consistent relative position to the whole "
+"object and other geo features, any shift of the feature will cause "
+"inaccuracy."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:162
+msgid ""
+"Make sure the geo feature is NOT symmetry at all, axial or central. "
+"Sometimes drawing mask on the feature will prevent symmetry."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:163
+msgid ""
+"Define the search region a little bit larger than the geo feature but "
+"covering area is not too large."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:164
+msgid "Make sure the reference point is on the object."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:167
+msgid "How to train a good model"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:167
+msgid "Make the object close to center of image throughout all capture poses."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/mono-3d.rst:168
+msgid ""
+"Make the tilt angle(x,y axis rotation) around 7°, and rotation(around z "
+"axis) of ±10° will be enough to train a good model."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder.rst:2
+msgid "3D Finder RGB Detection"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder.rst:8
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder.rst:8
+msgid "Teach From Camera"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder.rst:10
+msgid ""
+"3D Finder RGB Detection uses image RGB to detect object location. Cloud "
+"Process Node highlights the designated area(bounding box) for the scene, "
+"system will try to detect from this specific area to increase accuracy. "
+"Mod Finder Node takes the Cloud ouput and you are able to define the "
+"object model. Reconstruct Node will generate the Z coordinate for objects"
+" which were detected. The left branch of the Switch Node is used when "
+"first define the object cloud/mesh to the system. It saves the object "
+"cloud/mesh to local folder in order for future use. Last but not least, "
+"DA Alignment Node refines the poses for Picking process, generating the "
+"object locations to robot."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder.rst:16
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder.rst:41
+msgid "Teach Good Model"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder.rst:18
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder.rst:43
+msgid ""
+"Defining a good model is essential for Detection, a good model can help "
+"the system to identify the objects in many different situation. But note "
+"that, machine is still machine, some object might be different from front"
+" and back, system only able to identify the model which you defined. As "
+"example, template is a sample project which is looking for the T-tubes. "
+"The T-tubes are identical front and back. Hence, the system is able to "
+"detect both sides."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder.rst:20
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder.rst:45
+msgid ""
+"Cloud Process Node will generate a box of area; this area is designated "
+"for the system to search for the model."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder.rst:27
+msgid ""
+"Connect Mod Finder Node with Cloud Process, taking Cloud Process Node "
+"result as input, searching for the model within this box area. Mod Finder"
+" Node is detecting object from image RGB and depth. When adding Mod "
+"Finder Node, system will ask which source to use. 2D is taking image RGB "
+"as input, and 3D is depth image. In this case, system takes RGB image as "
+"input, so that choose 2D. Console with print the message with how many "
+"objects found, also displaying the object in the image."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder.rst:34
+msgid ""
+"Image link is the input user-defined for Mod Finder Node. Checking the "
+"``Use labelled mask sequence`` enables the node to use designated mask "
+"for the models; commonly taking Deep Learning ouput(DL Segment Node). "
+"Total occurence option can be detect all the objects in the image or only"
+" one object in the image at a time: if you want to picking all occurrence"
+" of objects with single image captured, this option should set to "
+"``All``; on the other hand, picking one object at a time should set to "
+"``One`` (default)."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder.rst:41
+#, python-format
+msgid ""
+"Double click on the model name brings up the Model Param Configuration "
+"dialog. There are more parameter settings for the model in this dialog. "
+"Mod Finder Node uses the model details to detext the objects in the "
+"image. ``Draw Mask`` is able to set a excluding area for the model, the "
+"mask area would be ignored when it comes to detect the object. ``Erase "
+"Mask`` can erase the drawn area. Reference point is generated at the "
+"middle of the object by default. Reference point would be used by "
+"Reconstruct Node, generating Z coordinate from this point. ``Define Red "
+"Point`` allows you to define a new reference point on the object. It is "
+"useful when the object is skewed or heavy on one side: robot might be "
+"failed to grab or the object will fall when using this reference point. "
+"``Acceptance`` is the acceptance level for the system: if the acceptance "
+"level is too high, system might not be able to detect all the objects "
+"since system sees the objects in the image is not 100% identical to the "
+"model. On the other hand, low acceptance level might lead to finding too "
+"many objects, system might detect all the similar points, pixels in the "
+"image as the object. You should adjust the acceptance level to detect all"
+" the occurrence AND as high as possible."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder.rst:49
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder.rst:75
+msgid "Testing the detection of the model"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder.rst:51
+msgid ""
+"Run the rest of the detection flowchart, and see if ``DA Alignment`` Node"
+" is able to detect all the objects and only the objects are detected. "
+"Also, capture a different image(Or use different picture for virtual "
+"camera), and see if all the obejects are detected."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder.rst:58
+msgid ""
+"As shown above, this is a detection of the model. Only 8 objects are "
+"found and all the green points are aligned with the objects."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder-p.rst:2
+msgid "3D RGB Picking"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder-p.rst:5
+msgid "3D RGB Picking Teach Pose"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder-p.rst:12
+msgid ""
+"``3d_finder_rgb_teach_pose`` flowchart is used before ``Picking`` since "
+"we need to teach the system what pose to pick the object."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder-p.rst:14
+msgid ""
+"1. ``Store`` Node at the beginning will set the variable "
+"``Teaching_Pose`` as ``True`` . This step runs the Detection flowchart as"
+" Teach_Pose mode(running the left branch of the ``Switch`` in Detection "
+"flowchart)."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder-p.rst:22
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder-p.rst:22
+msgid ""
+"The system loads a recipe depending on which kind of object you want to "
+"pick. In this template, both recipe_1 and recipe_2 are looking for the "
+"same object."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder-p.rst:24
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder-p.rst:24
+msgid ""
+"Depending on the Calibration type in variable, ``Switch`` between 3 kinds"
+" of calibration files. We use ``Sphere Calibration`` in our example."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder-p.rst:26
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder-p.rst:26
+msgid ""
+"``Reader`` Node loads the gripper mesh from local directory. Then run "
+"through the Detection flowchart to define model."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder-p.rst:28
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder-p.rst:28
+msgid ""
+"Depending on the project requirements, ``Eye to Hand`` picking would be "
+"on the left branch; ``Eye io Hand`` picking would be on the right branch."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder-p.rst:30
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder-p.rst:30
+msgid ""
+"Re-store the variable ``Teaching_Pose`` as ``False`` , so that system "
+"will not redefine the model during the Picking process."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder-p.rst:32
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder-p.rst:32
+msgid ""
+"Lastly, ``Gripper`` Node defines the picking pose and can be visualized "
+"here."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder-p.rst:34
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder-p.rst:34
+msgid ""
+"Note: When ``Gripper`` Node needs to redefine a new pose, please delete "
+"the existing poses in ``Gripper`` Node, then add a new pose. Otherwise "
+"the ``Gripper`` Node might not be able to visualize the new pose."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder-p.rst:41
+#: ../complete-vision-guidance/detection/old_reference/2D-Picking-p.rst:27
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder-p.rst:41
+msgid ""
+"The example shown above is transformed with virtual robot therefore the "
+"``Robot Read`` input is not accurate. Then, you should adjust the pose "
+"for ``Gripper`` Node output, adjusting it as they should align."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder-p.rst:43
+#: ../complete-vision-guidance/detection/old_reference/2D-Picking-p.rst:29
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder-p.rst:43
+msgid ""
+"Note: ONLY adjust this pose when using virtual robot! If using real robot"
+" and gripper not aligned with object, should check the real robot pose."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder-p.rst:51
+#: ../complete-vision-guidance/detection/old_reference/2D-Picking-p.rst:31
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder-p.rst:51
+msgid "This is how it looks like the image below."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder-p.rst:59
+#: ../complete-vision-guidance/detection/old_reference/2D-Picking-p.rst:39
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder-p.rst:59
+msgid "Order Picking Setting"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder-p.rst:61
+msgid ""
+"If you want to pick using 3D RGB Picking, the Picking flowchart needs to "
+"take in specific payloads from the robot. ``Payload_1`` is the variable "
+"which control what type of detections to choose. In this case, 3D RGB "
+"Picking is ``1`` . ``Payload_2`` is the variable which control what kind "
+"of objects to pick in the recipe(switching recipes). ``Load Recipe`` Node"
+" takes ``Payload_2`` as input to determine which recipe to load. In our "
+"example, there are only 2 recipes in this project. Hence carefully set "
+"this ``Payload_2`` , if this payload does not match corresponding recipe "
+"number, the system would ouput ``ERROR`` ."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder-p.rst:66
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder-p.rst:97
+#: ../complete-vision-guidance/detection/old_reference/2D-Picking-p.rst:46
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder-p.rst:66
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder-p.rst:97
+msgid "For virtual robot, we use ``Hercules`` ."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder-p.rst:73
+msgid ""
+"In Hercules, the ``Payload_1`` and ``Payload_2`` is the highlight indexes"
+" in the image. In this case, we choose ``1`` in ``Pyload_1`` to use 3D "
+"RGB Picking; ``1`` in ``Payload_2`` to load recipe_1."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder-p.rst:76
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder-p.rst:76
+#: ../complete-vision-guidance/picking/3d/overview.rst:23
+msgid "Collision prevention"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder-p.rst:78
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder-p.rst:78
+msgid ""
+"Both 3D RGB Picking and 3D Depth Picking would need ``pose_generation`` "
+"flowchart. This flowchart would ensure the robot would not collide "
+"anything when it performs picking."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder-p.rst:80
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder-p.rst:80
+msgid ""
+"``Collision Avoidance`` Node collects all the poses, and simulate a box "
+"boundary for the scene. Output of ``Collision Avoidance`` Node is used as"
+" inputs for ``Pick Sort`` Node to generate the transformations for "
+"``Transformation Tree`` Node."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder-p.rst:87
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder-p.rst:87
+msgid ""
+"``Pick Sort`` Node would sort the order for picking up objects. This Node"
+" labels all the occurrence of objects and the result is used as inputs "
+"for ``Transformation Tree`` Node to generate the pose to robot."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder-p.rst:95
+#: ../complete-vision-guidance/detection/old_reference/2D-Picking-p.rst:56
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder-p.rst:95
+msgid "Run Picking"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder-p.rst:104
+#: ../complete-vision-guidance/detection/old_reference/2D-Picking-p.rst:63
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder-p.rst:104
+msgid "Before running the Picking flowchart:"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder-p.rst:106
+msgid ""
+"Should run through the ``3d_finder_rgb_teach_pose`` flowchart, otherwise "
+"some of the inputs might be ``NULL`` ."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder-p.rst:108
+#: ../complete-vision-guidance/detection/old_reference/2D-Picking-p.rst:67
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder-p.rst:108
+msgid ""
+"You should double check the ``Platform Configuration`` , make sure the "
+"camera and robot is connected."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder-p.rst:110
+#: ../complete-vision-guidance/detection/old_reference/2D-Picking-p.rst:69
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder-p.rst:110
+msgid ""
+"In this case, camera_1 is for Recipe_1 object detection; camera_2 is for "
+"Recipe_2 object detection."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder-p.rst:122
+msgid ""
+"Loading the recipe from ``Robot Read`` Node ``Payload_2`` to determine "
+"which object we want to pick. Then the first ``Switch`` Node checks the "
+"``Robot Read`` Node ``Payload_2`` to ensure which detection is used for "
+"this picking. ``Transformation Tree`` Node processes the result from "
+"``3d_finder_rgb_detection`` and ``3d_finder_rgb_teach_pose`` flowcharts."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder-p.rst:125
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder-p.rst:125
+msgid ""
+"After Detection and Pose Generation flowcharts, ``Visualize`` Node will "
+"visualize the corresponding gripper and object in the scene."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Mod-Finder-p.rst:132
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder-p.rst:132
+msgid "``Robot Write`` will send the pose to robot and robot can perform picking."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Picking.rst:2
+msgid "2D Detection"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Picking.rst:4
+msgid ""
+"It is mainly designed for detecting the precise location of object to be "
+"picked. It uses image RGB to detect object location."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Picking.rst:6
+msgid ""
+"``Mod Finder`` Node takes ``Image`` Node result as input and you are able"
+" to define the object model. Defining a good model is essential for "
+"Detection, a good model can help the system to identify the objects in "
+"many different situation. But note that, machine is still machine, some "
+"object might be different from front and back, system only able to "
+"identify the model which you defined. As example, template is a sample "
+"project which is looking for the T-tubes. The T-tubes are identical front"
+" and back. Hence, the system is able to detect both sides. Mod Finder "
+"Node is detecting object from image RGB and depth. When adding Mod Finder"
+" Node, system will ask which source to use. 2D is taking image RGB as "
+"input, and 3D is depth image. In this case, system takes RGB image as "
+"input, so that choose 2D. Console with print the message with how many "
+"objects found, also displaying the object in the image."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Picking.rst:16
+#, python-format
+msgid ""
+"Image link is the input user-defined for Mod Finder Node. Checking the "
+"``Use labelled mask sequence`` enables the node to use designated mask "
+"for the models; commonly taking Deep Learning ouput(DL Segment Node). "
+"Total occurence option can be detect all the objects in the image or only"
+" one object in the image at a time: if you want to pick all occurence of "
+"objects with single image captured, this option should set to ``All``; on"
+" the other hand, picking one object at a time should set to ``One`` "
+"(default). Double click on the model name brings up the Model Param "
+"Configuration dialog. There are more parameter settings for the model in "
+"this dialog. Mod Finder Node uses the model details to detect the objects"
+" in the image. ``Draw Mask`` is able to set a excluding area for the "
+"model, the mask area would be ignored when it comes to detect the object."
+" ``Erase Mask`` can erase the drawn area. Reference point is generated at"
+" the middle of the object by default. Reference point would be used by "
+"Reconstruct Node, generating Z coordinate from this point. ``Define Red "
+"Point`` allows you to define a new reference point on the object. It is "
+"useful when the object is skewed or heavy on one side: robot might be "
+"failed to grab or the object will fall when using this reference point. "
+"``Acceptance`` is the acceptance level for the system: if the acceptance "
+"level is too high, system might not be able to detect all the objects "
+"since system sees the objects in the image is not 100% identical to the "
+"model. On the other hand, low acceptance level might lead to finding too "
+"many objects, system might detect all the similar points, pixels in the "
+"image as the object. You should adjust the acceptance level to detect all"
+" the occurrence AND as high as possible."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Picking.rst:23
+msgid ""
+"In 2D Picking, we can use ``Calibration 2D`` Node to generate the "
+"reference point for objects. Choosing ``Project`` mode, taking ``Image`` "
+"and ``Mod Finder`` results as inputs, referring with Calibration Node."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Picking.rst:30
+msgid "As shown above, the green circles would be the gripping points for robot."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Picking-p.rst:2
+#: ../complete-vision-guidance/picking/2d/overview.rst:2
+msgid "2D Picking"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Picking-p.rst:5
+msgid "2D Picking Teach Pose"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Picking-p.rst:12
+msgid ""
+"``2d_finder_teach_pose`` flowchart is used before ``Picking`` since we "
+"need to teach the system what pose to pick the object. Firstly, the "
+"system loads a recipe depending on which kind of object you want to pick."
+" In this template, both recipe_1 and recipe_2 are looking for the same "
+"object."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Picking-p.rst:19
+msgid ""
+"Then this flowchart loads the 2D Calibration result from ``Hand Eye "
+"Calibration 2D V02`` Node and chessboard ``bag`` file, calibrate again "
+"from the bag files. Loading the mesh from local directory, outputting the"
+" picking pose in ``Gripper`` Node. Using the visualization to check if "
+"object(the plane in this case) and gripper(the pencil in this case) if "
+"they were aligned."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Picking-p.rst:41
+msgid ""
+"If you want to pick using 2D Picking, the Picking flowchart needs to take"
+" in specific payloads from the robot. ``Payload_1`` is the variable which"
+" control what type of detections to choose. In this case, 2D Picking is "
+"anything other than ``1`` and ``2`` . ``Payload_2`` is the variable which"
+" control what kind of objects to pick in the recipe(switching recipes). "
+"``Load Recipe`` Node takes ``Payload_2`` as input to determine which "
+"recipe to load. In our example, there are only 2 recipes in this project."
+" Hence carefully set this ``Payload_2`` , if this payload does not match "
+"corresponding recipe number, the system would output ``ERROR`` ."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Picking-p.rst:53
+msgid ""
+"In Hercules, the ``Payload_1`` and ``Payload_2`` is the highlight indexes"
+" in the image. In this case, we choose ``0`` in ``Pyload_1`` to use 2D "
+"Picking; ``1`` in ``Payload_2`` to load recipe_1."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Picking-p.rst:65
+msgid ""
+"Should run through the ``2d_finder_teach_pose`` flowchart, otherwise some"
+" of the inputs might be ``NULL`` ."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/2D-Picking-p.rst:81
+msgid ""
+"Loading the recipe from ``Robot Read`` Node ``Payload_2`` to determine "
+"which object we want to pick. Then the first ``Switch`` Node checks the "
+"``Robot Read`` Node ``Payload_2`` to ensure which detection is used for "
+"this picking. ``Transformation Tree`` Node processes the result from "
+"``2d_finder_detection`` and ``2d_finder_teach_pose`` flowcharts. For 2D "
+"Picking, there is no ``Visualize`` involved, therefore ``Robot Write`` "
+"Node sends the pose to robot, robot will move to this pose and perform "
+"picking."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder.rst:2
+msgid "3D Finder Depth Detection"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder.rst:10
+msgid ""
+"3D Finder RGB Detection uses image depth map to detect object location. "
+"Cloud Process Node highlights the designated area(bounding box) for the "
+"scene, system will try to detect from this specific area to increase "
+"accuracy. Mod Finder Node takes the Cloud ouput and you are able to "
+"define the object model."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder.rst:12
+msgid ""
+"In the first ``Switch`` Node, the left side branch is working as defining"
+" model. Storing the model cloud into local directory."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder.rst:19
+msgid ""
+"``DA CloudDepth Conv`` Node processes the Point Cloud from ``Cloud "
+"Process`` into Depth map. (Note that ``DA CloudDepth Conv`` Node can "
+"convert point cloud to depth map; also is able to convert depth map to "
+"point cloud. This function can be choosen when adding this node. In this "
+"case, we need depth map from point cloud, so that we use DA Point Cloud "
+"-> DA Depth Map)"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder.rst:26
+msgid ""
+"The right side branch of first ``Switch`` Node, is setup the bounding box"
+" for interest area. System would search the object within this area."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder.rst:33
+msgid ""
+"Also setting up the reference frame for the scene cloud. This output "
+"would be used by ``Collision Avoidance`` Node in Picking process. Hence, "
+"this reference frame is important to keep the Z axis upward from the "
+"scene."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder.rst:52
+msgid ""
+"Connect Mod Finder Node with Cloud Process, taking ``DA CloudDepth Conv``"
+" Node result as input. Mod Finder Node is detecting object from image RGB"
+" and depth. When adding Mod Finder Node, system will ask which source to "
+"use. 2D is taking image RGB as input, and 3D is depth image. In this "
+"case, system takes depth map as input, so that choose 3D. Console with "
+"print the message with how many objects found, also displaying the object"
+" in the image."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder.rst:59
+msgid ""
+"Image link is the input user-defined for Mod Finder Node. Checking the "
+"``Use labelled mask sequence`` enables the node to use designated mask "
+"for the models; commonly taking Deep Learning output(DL Segment Node). "
+"Total occurrence option can be detect all the objects in the image or "
+"only one object in the image at a time: if you want to pick all "
+"occurrence of objects with single image captured, this option should set "
+"to ``All``; on the other hand, picking one object at a time should set to"
+" ``One`` (default)."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder.rst:66
+#, python-format
+msgid ""
+"Double click on the model name brings up the Model Param Configuration "
+"dialog. There are more parameter settings for the model in this dialog. "
+"Mod Finder Node uses the model details to detect the objects in the "
+"image. ``Draw Mask`` is able to set a excluding area for the model, the "
+"mask area would be ignored when it comes to detect the object. ``Erase "
+"Mask`` can erase the drawn area. Reference point is generated at the "
+"middle of the object by default. Reference point would be used by "
+"Reconstruct Node, generating Z coordinate from this point. ``Define Red "
+"Point`` allows you to define a new reference point on the object. It is "
+"useful when the object is skewed or heavy on one side: robot might be "
+"failed to grab or the object will fall when using this reference point. "
+"``Acceptance`` is the acceptance level for the system: if the acceptance "
+"level is too high, system might not be able to detect all the objects "
+"since system sees the objects in the image is not 100% identical to the "
+"model. On the other hand, low acceptance level might lead to finding too "
+"many objects, system might detect all the similar points, pixels in the "
+"image as the object. You should adjust the acceptance level to detect all"
+" the occurrence AND as high as possible."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder.rst:72
+msgid ""
+"In the example shown above, one of the T-tube is not detected. You should"
+" lower the acceptance level or draw mask on the model to make the "
+"detection process is able to detect all the objects and at the as highest"
+" acceptance level as it could."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder.rst:77
+msgid ""
+"Run the rest of the detection flowchart, and see if ``DA Alignment`` Node"
+" is able to detect all the objects and only the objects are detected. In "
+"this example, the left top corner T-tube is not detected in ``Mod "
+"Finder`` , hence it should also be not aligned in ``DA Alignment`` Node. "
+"Also, capture a different image(Or use different picture for virtual "
+"camera), and see if all the objects are detected."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder-p.rst:2
+msgid "3D Depth Picking"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder-p.rst:5
+msgid "3D Depth Picking Teach Pose"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder-p.rst:12
+msgid ""
+"``3d_finder_depth_teach_pose`` flowchart is used before ``Picking`` since"
+" we need to teach the system what pose to pick the object."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder-p.rst:14
+msgid ""
+"1. ``Store`` Node at the beginning will set the variable "
+"``Teaching_Pose`` as ``True`` . This step runs the Detection flowchart as"
+" Teach_Pose mode(running the right branch of the first ``Switch`` in "
+"Detection flowchart)."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder-p.rst:61
+msgid ""
+"If you want to pick using 3D Depth Picking, the Picking flowchart needs "
+"to take in specific payloads from the robot. ``Payload_1`` is the "
+"variable which control what type of detections to choose. In this case, "
+"3D Depth Picking is ``2`` . ``Payload_2`` is the variable which control "
+"what kind of objects to pick in the recipe(switching recipes). ``Load "
+"Recipe`` Node takes ``Payload_2`` as input to determine which recipe to "
+"load. In our example, there are only 2 recipes in this project. Hence "
+"carefully set this ``Payload_2`` , if this payload does not match "
+"corresponding recipe number, the system would output ``ERROR`` ."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder-p.rst:73
+msgid ""
+"In Hercules, the ``Payload_1`` and ``Payload_2`` is the highlight indexes"
+" in the image. In this case, we choose ``2`` in ``Pyload_1`` to use 3D "
+"Depth Picking; ``1`` in ``Payload_2`` to load recipe_1."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder-p.rst:106
+msgid ""
+"Should run through the ``3d_finder_depth_teach_pose`` flowchart, "
+"otherwise some of the inputs might be ``NULL`` ."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/3D-Mod-Finder-p.rst:122
+msgid ""
+"Loading the recipe from ``Robot Read`` Node ``Payload_2`` to determine "
+"which object we want to pick. Then the first ``Switch`` Node checks the "
+"``Robot Read`` Node ``Payload_2`` to ensure which detection is used for "
+"this picking. ``Transformation Tree`` Node processes the result from "
+"``3d_finder_depth_detection`` and ``3d_finder_depth_teach_pose`` "
+"flowcharts."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/Detection.rst:4
+#: ../complete-vision-guidance/detection/old_reference/Order
+#: ../complete-vision-guidance/detection/old_reference/Picking.rst:4
+#: ../complete-vision-guidance/detection/old_reference/index.rst:4
+#: ../complete-vision-guidance/index.rst:7 Picking.rst:4
+msgid "Content"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/Detection.rst:2
+#: ../complete-vision-guidance/detection/overview.rst:2
+#: ../complete-vision-guidance/overview.rst:18
+msgid "Detection"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/Order Picking.rst:2
+msgid "Order Picking"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/Pick_Multi.rst:2
+msgid "Picking Multiple Objects"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/Pick_Multi.rst:4
+msgid ""
+"In the following image example, there are many different kinds of object;"
+" if requirement asks to pick different specific type of object at each "
+"different iteration, you are able to alter the system to archive this."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/Pick_Multi.rst:12
+msgid "Recipe & Payload"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/Pick_Multi.rst:14
+msgid ""
+"In the bottom console window, there is a tab ``Recipes`` . In this tab, "
+"we can ``Add Recipe`` and matches the number of different objects we "
+"want. For example, if we have 14 different objects to choose, then we "
+"need 14 recipes to switch between these objects."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/Pick_Multi.rst:21
+msgid ""
+"``Payload_2`` is the variable to control which object to pick. In Picking"
+" flowchart, ``Load Recipe`` Node would take the robot payload_2 as input,"
+" determine which recipe to load."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/Pick_Multi.rst:28
+msgid ""
+"Adding ``Payload_2`` as the input for ``Load Recipe`` , opens up the link"
+" dialog from ``Selected Index`` , choose the corresponding link for "
+"``Load Recipe`` Node."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/Pick_Multi.rst:35
+msgid ""
+"Note: When running the Teach_Pose flowcharts, you needs to teach all the "
+"different recipes: for example, if we have 14 different recipes, we need "
+"to teach all the recipes ``Gripper`` to produce all the different poses "
+"for different objects."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/Pick_Multi.rst:42
+msgid ""
+"Even though different recipes are for different objects, but basically "
+"all the them running with common procedures. Only some of the nodes would"
+" process different values, these nodes are added to the recipe."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/Pick_Multi.rst:49
+msgid ""
+"And only these nodes, switching recipes would switch their inputs or "
+"configuration. These nodes have a small ``R`` logo on it like the image "
+"shown below."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/Picking.rst:2
+#: ../complete-vision-guidance/picking/overview.rst:2
+msgid "Picking"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/Setup-TCP.rst:2
+msgid "Setup the Robot TCP"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/Setup-TCP.rst:4
+msgid ""
+"Setting up the TCP for the system is important for the Teach_Pose "
+"process. According to the real robot, different gripper has different "
+"pose to approach the object."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/Setup-TCP.rst:6
+msgid ""
+"Note that: 2D Picking should use a pencil and plane gripper mesh, pencil "
+"can easily visualizing the X and Y coordinates of the reference point; "
+"plane can visualizing the Z coordinate."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/Setup-TCP.rst:8
+msgid ""
+"Gripper mesh is loaded from the ``Reader`` Node. ``Gripper`` Node can "
+"visualize the gripper mesh in scene. In sample template, virtual robot is"
+" used; therefore, you might need to adjust the gripper pose manually to "
+"align the gripper mesh with object. If using real robot, the ``Gripper`` "
+"visualization is adjusted with real robot. For detail please see :ref:`2D"
+" Picking: Teach Pose<2D Picking Teach Pose>` , :ref:`3D RGB Picking: "
+"Teach Pose<3D RGB Picking Teach Pose>` , :ref:`3D Depth Picking: Teach "
+"Pose<3D Depth Picking Teach Pose>` ."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/Setup-TCP.rst:11
+msgid ""
+"Note: in 2D Picking, we align the pencil with the plane, there is no real"
+" world scene in this ``Gripper`` ."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/old_reference/index.rst:2
+msgid "Templates of picking flowchart"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/overview.rst:5
+msgid "General engines"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/overview.rst:6
+msgid ""
+"DaoAI has two general detection engines, each optimized for a different "
+"type of shapes."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/overview.rst:8
+msgid ""
+"**Mod Finder** engine is fast and robust, it is recommended detection for"
+" most applications where the object is usually one side showing to the "
+"camera. Checkout these articles for `Gray Mod Finder <https://daoai-"
+"robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest"
+"/complete-vision-guidance/detection/mod-finder/gray-mod-finder.html>`_ "
+"and `Depth Mod Finder <https://daoai-robotics-inc-daoai-vision-user-"
+"manual.readthedocs-hosted.com/en/latest/complete-vision-"
+"guidance/detection/mod-finder/depth-mod-finder.html>`_"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/overview.rst:9
+msgid ""
+"**3D Object Finder** engine is slightly slower, and it is recommended "
+"detection for random bin picking situations, where the object's showing "
+"face is different."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/overview.rst:10
+msgid ""
+"**Mono 3D** engine is using a single 2D camera for high accuracy 3D "
+"object locating. It is suitable for eye-in-hand situation, and able to "
+"achieve better than 3D camera accuracy for single object."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/overview.rst:11
+msgid ""
+"**Shape Finder** engine is suitable to find specific shapes on the "
+"images, and use it for robot guidance. It can detect shapes like circle, "
+"rectangle, ellipse etc.."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/overview.rst:13
+msgid ""
+"You can learn about the main ideas behind the Teach engine by watching "
+"this video tutorial. (TODO)"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/overview.rst:24
+msgid "Deep learning engines"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/overview.rst:25
+msgid ""
+"DaoAI also offers detection engines optimized with deep learning "
+"techniques for specific part shapes and arrangements:"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/overview.rst:27
+msgid "**Boxes**, which is specially designed for detecting box on a pallet."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/overview.rst:28
+msgid ""
+"**AnyPick**, which is specially designed for picking any type of object "
+"outside from the bin, it doesn't pick the same location every time for "
+"any part, but it tries to pick from any pickable region."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/overview.rst:29
+msgid ""
+"**KeyPoint**, which is designed for detecting object that hard to use "
+"general engines and reduce the time you configure the detection "
+"parameters. The overall logic allows you to annotate the point on the "
+"object, then it can predict the object position out from the points on "
+"the image."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/overview.rst:38
+msgid "Other engines"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/overview.rst:39
+msgid ""
+"DaoAI offers other engines which allow users to configure for specific "
+"project:"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/overview.rst:41
+msgid ""
+"**Measurement & Metrology**, it allows the users to measure the object "
+"size, shape etc."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/overview.rst:42
+msgid "**Code Reading**, it allows users to detect the code from the image."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/overview.rst:43
+msgid "**2D Finder**, it allows users to achieve 2D part locating"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/shape-finder/overview.rst:2
+msgid "Shape Finder"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/shape-finder/overview.rst:4
+msgid ""
+"The DaoAI Shape Finder uses designated shape to create 2D object "
+"locations, applied to Reconstruct node in order to generate 3D object "
+"locations. This is useful when you encounter objects like this:"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/shape-finder/overview.rst:10
+msgid ""
+"There are 3 circles on the metal part, our goal is to assemble another "
+"part through these circles. Hence we need the 3D object locations of "
+"these circles."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/shape-finder/overview.rst:12
+msgid ""
+"**Why not RGB Mod Finder or Depth Mod Finder?** Mod Finder is similar to "
+"Shape Finder, only difference is This node is very similar to mod_finder "
+"node, Mod Finder Node Implementation , the only difference is Shape "
+"Finder use parameters to define shapes, Mod Finder uses the user-defined "
+"edge models. Objects like image shown, perfect circles are more handy "
+"using Shape Finder. Shape Finder does not require edge model from scene, "
+"hence we do not need alignment in Shape Finder detection. We only need to"
+" setup the parameters of certain shapes."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/shape-finder/overview.rst:25
+msgid ""
+"As the image above shows, the Shape Finder detection is straight forward "
+"pipeline flow:"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/shape-finder/overview.rst:23
+msgid "Camera captures, then feeds output to Shape Finder node;"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/shape-finder/overview.rst:24
+msgid "Add shapes and set the corresponding parameters;"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/shape-finder/overview.rst:25
+msgid "Reconstruct node generates the 3D object picking pose;"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/shape-finder/overview.rst:27
+msgid ""
+"You can also learn about the main ideas behind the Box Volume Estimate by"
+" watching this video tutorial(TODO, record a video) and `Sample Workspace"
+" "
+"<https://drive.google.com/uc?export=download&id=1S4iL9rzlIMeGlSVbGf4RZbIEkDROQJNR>`_"
+" ."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/shape-finder/overview.rst:32
+msgid ""
+"All the shapes in Shape Finder has been taught to **Vision**, you can go "
+"ahead to use Shape Finder, it is ready! For more details about Deep "
+"Learning, please see `Deep Learning <https://daoai-robotics-inc-daoai-"
+"vision-user-manual.readthedocs-hosted.com/en/latest/deep-"
+"learning/index.html>`_"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/shape-finder/overview.rst:35
+msgid "Setup Shape Parameters"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/shape-finder/overview.rst:37
+msgid ""
+"Clicking on ``+`` button to add shape. You can see the Shape Parameter "
+"Configuration window. You can edit your shape parameters and type here."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/shape-finder/overview.rst:44
+msgid ""
+"You are able to choose the shape for your object from **Vision** defined "
+"shapes. Like image shown below:"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/shape-finder/overview.rst:49
+msgid ""
+"``Param 2`` is the radius of the circle. Different shapes require "
+"different parameters, without the correct parameters, it is difficult for"
+" **Vision** to detect the objects in scene."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/shape-finder/overview.rst:54
+msgid ""
+"For example, Diamond Shape requires ``Param 2`` and ``Param 3`` inputs, "
+"Ring Shape requires ``Param 2`` and ``Param 3`` inputs and Cross Shape "
+"requires ``Param 2``, ``Param 3``, ``Param 4`` and ``Param 5`` inputs. "
+"Without these inputs, Shape Finder would display errors since there are "
+"not enough parameters to detect objects in scene."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/shape-finder/overview.rst:60
+msgid ""
+"**Min Acceptance** is the acceptance level of objects in scene. We should"
+" increase the acceptance higher to ensure it detects the objects and "
+"objects only. But if the acceptance is too high, Vision would try to look"
+" for objects which has similar shape. This is not so true in real life "
+"environment since objects might be in different place, when camera "
+"captures, the shape of object would slightly change due to angle changes "
+"or lighting changes."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/shape-finder/overview.rst:67
+msgid ""
+"When setting acceptance too high, detected 2 occurrence of objects but "
+"there are 3"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/shape-finder/overview.rst:72
+msgid ""
+"When setting acceptance too low, detected 32 occurrence of objects but "
+"there are 3"
+msgstr ""
+
+#: ../complete-vision-guidance/detection/shape-finder/overview.rst:77
+msgid "Correct output should looks like this."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/shape-finder/overview.rst:79
+msgid ""
+"Occurrence option controls the output result to be single or multiple. In"
+" this example, we want the robot to assemble all the holes hence we need "
+"all occurrence of objects in scene."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/shape-finder/overview.rst:87
+msgid ""
+"Now we can execute Reconstruct node with Shape Finder outputs to generate"
+" 3D picking poses."
+msgstr ""
+
+#: ../complete-vision-guidance/detection/shape-finder/overview.rst:92
+msgid ""
+"Reconstruct node requires **Object Locations** and **Object Masks** from "
+"Shape Finder. Then Reconstruct node generates the picking poses for "
+"**Collision Avoidance** for further calculations."
+msgstr ""
+
+#: ../complete-vision-guidance/index.rst:2
+msgid "Complete Robot Guidance Setup"
+msgstr ""
+
+#: ../complete-vision-guidance/index.rst:4
+msgid ""
+"This section will cover the whole procedure for calibration, detection, "
+"and robot picking."
+msgstr ""
+
+#: ../complete-vision-guidance/overview.rst:2
+msgid "Overview"
+msgstr ""
+
+#: ../complete-vision-guidance/overview.rst:4
+msgid ""
+"Vision does not only detect objects, but also generates the pose for "
+"robot to pick them. While the Detection flowchart generates object "
+"location, the Picking flowchart consider everything that revolves around "
+"how to pick a detected object: Which tool will it use? What pose is robot"
+" going to pick it? Is the pose collision free?"
+msgstr ""
+
+#: ../complete-vision-guidance/overview.rst:8
+msgid ""
+"Hand Eye calibration, where ``Hand`` stands for the robot and ``Eye`` "
+"stands for the camera, is the process where the camera and the robot "
+"learn their relative position with respect to each other. If done "
+"correctly, the camera will be able to guide the robot to correct "
+"positions in the physical environment. Calibration can be performed once "
+"the camera and robot are set to fixed position. If the camera relative "
+"position to the robot base has not moved, or vise versa, then this "
+"process does not need to be done again."
+msgstr ""
+
+#: ../complete-vision-guidance/overview.rst:10
+msgid "There are four general types of calibration:"
+msgstr ""
+
+#: ../complete-vision-guidance/overview.rst:12
+msgid ":ref:`Sphere Calibration`"
+msgstr ""
+
+#: ../complete-vision-guidance/overview.rst:13
+msgid ":ref:`Chessboard Calibration`"
+msgstr ""
+
+#: ../complete-vision-guidance/overview.rst:14
+msgid ":ref:`2d-calibration`"
+msgstr ""
+
+#: ../complete-vision-guidance/overview.rst:15
+msgid ":ref:`converyor-calibration`"
+msgstr ""
+
+#: ../complete-vision-guidance/overview.rst:19
+msgid ""
+"Detection is the process where camera and objects learn their relative "
+"positions."
+msgstr ""
+
+#: ../complete-vision-guidance/overview.rst:21
+msgid ""
+"There are three general detection methods, each optimized for different "
+"types of object."
+msgstr ""
+
+#: ../complete-vision-guidance/overview.rst:23
+msgid ":ref:`deep-learning-segmentation`"
+msgstr ""
+
+#: ../complete-vision-guidance/overview.rst:26
+msgid ":ref:`mod-finder`"
+msgstr ""
+
+#: ../complete-vision-guidance/overview.rst:29
+msgid ":ref:`shape-finder`"
+msgstr ""
+
+#: ../complete-vision-guidance/overview.rst:32
+msgid "Teach Pose"
+msgstr ""
+
+#: ../complete-vision-guidance/overview.rst:33
+msgid ""
+"The relative position between tool and object is fixed during the picking"
+" process, and it is acquired from Teach Pose. The transformation is "
+"similar to the final picking transformation, but instead of generating "
+"relative position between flange and base, it is generative tool in "
+"object by reading the flange in base of robot picking pose."
+msgstr ""
+
+#: ../complete-vision-guidance/overview.rst:36
+msgid "Pose Transformation"
+msgstr ""
+
+#: ../complete-vision-guidance/overview.rst:37
+msgid ""
+"After previous steps, the required relative positions are enough to "
+"produce the position that robot arm should arrive to perform picking. In "
+"order to combine the relative positions, transformations are needed and "
+"vary between different Hand Eye Config."
+msgstr ""
+
+#: ../complete-vision-guidance/picking/3d/overview.rst:2
+msgid "3D Picking"
+msgstr ""
+
+#: ../complete-vision-guidance/picking/3d/overview.rst:4
+msgid ""
+"For 3D picking, the previous detection procedure will detect the object "
+"positions in the point cloud coordinate, and the calibration procedure "
+"will detect the robot and camera relationship. The picking step is "
+"mapping what the camera detected to where to pick with the robot end "
+"effector."
+msgstr ""
+
+#: ../complete-vision-guidance/picking/3d/overview.rst:6
+msgid ""
+"The camera and point cloud coordinate has a 180 degree rotation on the rx"
+" axis."
+msgstr ""
+
+#: ../complete-vision-guidance/picking/3d/overview.rst:9
+msgid "Robot tool model"
+msgstr ""
+
+#: ../complete-vision-guidance/picking/3d/overview.rst:10
+msgid ""
+"one reference page "
+"(https://docs.pickit3d.com/en/latest/documentation/picking/robot-tool-"
+"model.html#robot-tool-model)"
+msgstr ""
+
+#: ../complete-vision-guidance/picking/3d/overview.rst:12
+msgid ""
+"We are using the gripper node to define it with the tool model, and it "
+"will cover the tcp in flange part."
+msgstr ""
+
+#: ../complete-vision-guidance/picking/3d/overview.rst:15
+msgid "Pick points"
+msgstr ""
+
+#: ../complete-vision-guidance/picking/3d/overview.rst:16
+msgid ""
+"reference page (https://docs.pickit3d.com/en/latest/documentation/picking"
+"/pick-points.html#pick-points-detail). explain it with the gripper node. "
+"Also explain how to achieve the cylinder picking; Here will need to "
+"explain how to teach pose from real world as well."
+msgstr ""
+
+#: ../complete-vision-guidance/picking/3d/overview.rst:19
+msgid "Pick strategy"
+msgstr ""
+
+#: ../complete-vision-guidance/picking/3d/overview.rst:20
+msgid ""
+"Include the pick sort node config, and also include verification stacking"
+" checking ability"
+msgstr ""
+
+#: ../complete-vision-guidance/picking/overview.rst:4
+msgid ""
+"DaoAI Vision Studio is not only about detecting objects, but also about "
+"being able to pick them. While the :ref:`Detection <detection/overview>` "
+"page is concerned with what to detect, the Picking page is concerned with"
+" everything that revolves around how to pick a detected object: From "
+"which points can it be picked? With which tool? Is the pick collision-"
+"free?"
+msgstr ""
+
+#: ../complete-vision-guidance/picking/overview.rst:6
+msgid ""
+"DaoAI Vision Studio Provide 2 types of picking, it includes 2D and 3D "
+"Picking"
+msgstr ""
+

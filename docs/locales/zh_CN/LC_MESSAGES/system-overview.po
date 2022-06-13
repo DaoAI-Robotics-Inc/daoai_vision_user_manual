@@ -1,0 +1,1297 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021 DaoAI Robotics Inc.
+# This file is distributed under the same license as the DaoAI Vision User
+# Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: DaoAI Vision User Manual\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-26 15:26-0700\n"
+"PO-Revision-Date: 2022-06-07 09:57-0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: ../system-overview/3d-transformation/3d-transformation.rst:2
+msgid "3D Transformation Concept"
+msgstr "3D转换概念"
+
+#: ../system-overview/3d-transformation/3d-transformation.rst:3
+msgid "To use Vision Studio, some concepts of 3D transformation are necessary."
+msgstr "将涵盖 3D 转换的基本概念."
+
+#: ../system-overview/3d-transformation/3d-transformation.rst:6
+msgid "Pose and Transformation"
+msgstr "位姿和转换"
+
+#: ../system-overview/3d-transformation/3d-transformation.rst:10
+msgid "Pose stands for the position and rotation."
+msgstr "位姿包含了位置和旋转."
+
+#: ../system-overview/3d-transformation/3d-transformation.rst:12
+msgid "**Position** is usually represented by right hand rule, and R/G/B stands for X/Y/Z."
+msgstr "**位置** 通常用右手定则表示，R/G/B 代表着 X/Y/Z."
+
+#: ../system-overview/3d-transformation/3d-transformation.rst:14
+msgid "**Rotation** is represented by Euler angles(Rx, Ry, Rz) or Quaternions (a, b, c, w). Vision Studio use Euler angles by default."
+msgstr "**旋转** 由欧拉角（RX, RY, RZ）或者四元数表示（a,b,c,w）. Vision studio 默认使用欧拉角 ."
+
+#: ../system-overview/3d-transformation/3d-transformation.rst:16
+msgid "A transformation or pose of target (A) coordinate in reference (B) coordinate is represented by A in B ."
+msgstr "目标（A）坐标在参考（B）中的变化或姿势坐标由B中的A表示."
+
+#: ../system-overview/3d-transformation/3d-transformation.rst:18
+msgid ""
+"For example, **Obj** initially is at the origin of reference  coordinate (B) which is (0, 0, 0, 0, 0, 0), and we move the **Obj** to the "
+"position [100,100,50]. Afterwards, we rotate the **Obj** along it's   axis for 60 degree. The final pose of **Obj** is [100, 100, 50, "
+"60, 0, 0]."
+msgstr ""
+"例如, **物体** 最初的参考坐标   (B) 的原点 (0, 0, 0, 0, 0, 0), 我们将 **物体** 移动到位置 [100,100,50]. 之后, 我们将 **物体** 沿其   X轴"
+"旋转60度. **物体** 的最终姿势是 [100, 100, 50, 60, 0, 0]."
+
+#: ../system-overview/3d-transformation/3d-transformation.rst:22
+msgid ""
+"Talking about the orientation, we usually use Euler order to represent the orientation. Ane euler angle will need to have a specified "
+"rotation order. Different robot may have different conventions, for example ABB robot used the ZYX sequence. For more details, refer to "
+"the `page <https://en.wikipedia.org/wiki/Euler_angles>`_"
+msgstr ""
+"有关方向问题，我们通常用欧拉阶来表示方向。欧拉角需要具有指定的旋转顺序。不同的机器人可能有不同的约定，例如 ABB 机器人使用 ZYX 序列。更多"
+"详情，请参阅 `页面 <https://en.wikipedia.org/wiki/Euler_angles>`_"
+
+#: ../system-overview/3d-transformation/3d-transformation.rst:28
+msgid "Sources of pose and transformation in Vision Studio:"
+msgstr "Vision Studio中位姿和变换的来源："
+
+#: ../system-overview/3d-transformation/3d-transformation.rst:25
+msgid "Robot Read"
+msgstr "机器人阅读"
+
+#: ../system-overview/3d-transformation/3d-transformation.rst:26
+msgid "Calibrations (Calibration, Sphere Calibration, DA Calibration)"
+msgstr "校准（校准，球形校准，DA 校准）"
+
+#: ../system-overview/3d-transformation/3d-transformation.rst:27
+msgid "Detection nodes (Mod Finder, Reconstruct, Box Volume Estimation, Alignment)"
+msgstr "检测模块 （Mod Finder、Reconstruct、Box Volume Estimation、Alignment（对齐模块））"
+
+#: ../system-overview/3d-transformation/3d-transformation.rst:28
+msgid "Manually Define (Assemble Pose, Gripper)"
+msgstr "手动定义（组装姿势、夹爪）"
+
+#: ../system-overview/3d-transformation/3d-transformation.rst:31
+msgid "Transformation Tree"
+msgstr "转换树"
+
+#: ../system-overview/3d-transformation/3d-transformation.rst:35
+msgid "Transformation Tree is using known poses and transformations to calculate the unknowns."
+msgstr "转换树使用已知的姿势和转换来计算未知量。"
+
+#: ../system-overview/3d-transformation/3d-transformation.rst:37
+msgid ""
+"The process of detection, calibration and robot guidance all serves the core **Transformation Tree**, so understanding it's concept is "
+"the very important."
+msgstr "检测、校准和机器人引导的过程都服务于核心 **转换树** ，因此理解它的概念非常重要。"
+
+#: ../system-overview/3d-transformation/3d-transformation.rst:40
+msgid "How to Establish a Transformation Tree?"
+msgstr "如何建立转换树?"
+
+#: ../system-overview/3d-transformation/3d-transformation.rst:41
+msgid ""
+"In the figure below, there are five objects ABCDE, and some of the relative positions are known, and constructed a transformation "
+"chain(Purple)."
+msgstr "下图中，有五个对象ABCDE，其中一些相对位置是已知的，构造了一个转换链（紫色）"
+
+#: ../system-overview/3d-transformation/3d-transformation.rst:45
+msgid "Known transformations: [A in World] [E in A] [D in World] [C in D] [B in C]"
+msgstr "已知转换：[A在平面中] [A中的E] [D在平面中] [D中的C] [C中的B]"
+
+#: ../system-overview/3d-transformation/3d-transformation.rst:47
+msgid "Then the transformation between any two objects in the **same** transformation chain can be computed by transformation tree."
+msgstr "然后可以通过转换树计算**同一**转换链中任意两个对象之间的转换。"
+
+#: ../system-overview/3d-transformation/3d-transformation.rst:51
+msgid "[B in E] or [D in A] etc. are all in the same transformation chain thus able to be computed."
+msgstr "[B 在 E] 或 [D 在 A] 等都在同一个转换链中，因此可以计算."
+
+#: ../system-overview/3d-transformation/3d-transformation.rst:53
+msgid ""
+"However, if two objects are **not** in the same transformation chain, their transformation cannot be computed. To be able to calculate "
+"the transformation, the transformation chain must be connected first."
+msgstr "但是，如果两个对象 **不在** 同一个转换链中，则无法计算它们的转换。为了能够计算转换，必须首先连接转换链。"
+
+#: ../system-overview/3d-transformation/3d-transformation.rst:57
+msgid "B and E are not in the same transformation chain."
+msgstr "B和E不在同一个转换链中."
+
+#: ../system-overview/3d-transformation/3d-transformation.rst:59
+msgid "To acquire [B in E], first acquire any transformation that will make B and E be in the same transformation chain."
+msgstr "要获得 [B 在 E 中]，首先要获得使 B 和 E 在同一转换链中的任何转换."
+
+#: ../system-overview/3d-transformation/3d-transformation.rst:63
+msgid "For an example, [C in A]."
+msgstr "例如, [C 在 A 中]."
+
+#: ../system-overview/data-types/data-types.rst:2
+msgid "Data Types"
+msgstr "数据类型"
+
+#: ../system-overview/data-types/data-types.rst:5
+msgid "Simple Value, Expression, Advanced Expression"
+msgstr "简单值，表达式，高级表达式"
+
+#: ../system-overview/data-types/data-types.rst:7
+msgid "Data in Vision software is addressed by expression. Expressions can be categorized into 3 types:"
+msgstr "Vision软件中的数据通过表达式.表达式可以分为3中类型:"
+
+#: ../system-overview/data-types/data-types.rst:9
+msgid ""
+"Expressions starting with \"In/\". These are the input of the nodes. Most of the time these are linked to other expression, or can be "
+"set by input. And it can be passed to another node as input as well. And the another node will just use the same input as this node."
+msgstr ""
+"以\"In/\"开头的表达式.这些是模块输入.大多数情况下，这些都与其他表达式相关联,或者可以通过输入进行设置.也可以作为输入传递给另外一个模块.另"
+"外一个模块将值使用与该模块相同的输入值."
+
+#: ../system-overview/data-types/data-types.rst:10
+msgid ""
+"Expressions starting with \"Out/\". These are the output of the nodes. These expressions contain valid data only after the node is run."
+msgstr "以\"Out/\"开头的表达式.这些是模块的输出.这些表达式仅在模块运行后才可以得到有效数据."
+
+#: ../system-overview/data-types/data-types.rst:11
+msgid "Expressions starting with \"Variable/\". These expressions contain globally available values."
+msgstr "以\"Variable/\"开头的表达式.这些表达式包含全局可用的值."
+
+#: ../system-overview/data-types/data-types.rst:14
+msgid ""
+"As the image shows, if B node input used A node's output port **A_out_1**, then C node linked B node's input port **B_in_1**, then the C "
+"node input **C_in_1** is actually linked to **A_out_1**."
+msgstr ""
+"如图所示，如果B模块输入使用A模块的输出 **A_out_1**,之后C模块链接B模块的输入 **B_in_1**，则C模块输入 **C_in_1** 实际上链接到 **A_out_1**."
+
+#: ../system-overview/data-types/data-types.rst:17
+msgid ""
+"In link value dialog, you can set the value of input directly with simple value, or link it to an expression, or link it to an advanced "
+"expression (a python script that evalutes to an expression). Check :ref:`Python Interpreter and Advanced Expressions` for details on "
+"advanced expression."
+msgstr ""
+"在链接值对话框中，您可以直接使用简单值设置输入的值，或将其链接到表达式，活将其链接到高级表达式（评估为表达式的Python脚本）。有关高级表达"
+"式的详细信息，请查看 :ref: ` Python Interpreter and Advanced Expressions` 。"
+
+#: ../system-overview/data-types/data-types.rst:21
+msgid "Basic Data Types"
+msgstr "基础数据类型"
+
+#: ../system-overview/data-types/data-types.rst:23
+msgid ""
+"To link expressions, the source and destination expression must have the same data type. Data types can be either basic or complex. Here "
+"are the basic data types used by vision software."
+msgstr "要链接表达式，源表达式和目标表达式必须具有相同的数据类型。数据类型可以是基本的可以是复杂的。一下是视觉软件使用的基本数据类型。"
+
+#: ../system-overview/data-types/data-types.rst:26
+msgid "Int:"
+msgstr "整数："
+
+#: ../system-overview/data-types/data-types.rst:27
+msgid "An integer value (no decimal places)."
+msgstr "一个整数值（没有小数位）。"
+
+#: ../system-overview/data-types/data-types.rst:28
+msgid "Double:"
+msgstr "浮点数："
+
+#: ../system-overview/data-types/data-types.rst:29
+msgid "A numerical value which can have decimal places."
+msgstr "可以又小数位的数值。"
+
+#: ../system-overview/data-types/data-types.rst:30
+msgid "Bool:"
+msgstr "布尔值："
+
+#: ../system-overview/data-types/data-types.rst:31
+msgid "A boolean value which can be either True (1) or False (0)."
+msgstr "一个布尔值，可以是True（1）或者 False（0）."
+
+#: ../system-overview/data-types/data-types.rst:32
+msgid "String:"
+msgstr "字符串："
+
+#: ../system-overview/data-types/data-types.rst:33
+msgid "Can be any combination of characters (e.g. \"xyz123!\")."
+msgstr "可以是任意的字符组合（例如：“xyz123！”）。"
+
+#: ../system-overview/data-types/data-types.rst:34
+msgid "Image:"
+msgstr "图像："
+
+#: ../system-overview/data-types/data-types.rst:35
+msgid "A 2D array of information, often RGB or grayscale, represented by pixels. Can be read in using the Camera Node or Reader Node."
+msgstr "由像素表示的二维信息数组，通常为RGB或者灰度图。可以使用Camera Node或者Reader Node。"
+
+#: ../system-overview/data-types/data-types.rst:36
+msgid "Depth Image:"
+msgstr "深度图像："
+
+#: ../system-overview/data-types/data-types.rst:37
+msgid ""
+"A 2D array of information which also includes another value for each pixel that represents distance from the data acquisition device (i."
+"e. a 3D camera). Can be obtained by reading a .dcf file or connecting to a camera with the Camera Node."
+msgstr ""
+"2D信息阵列，其中还包括每个像素的另一个值，表示与数据采集设备（即3D相机）的距离，可以通过读取 .dcf 文件或使用Camera Node连接到相机来获得。"
+
+#: ../system-overview/data-types/data-types.rst:38
+msgid "Point Cloud:"
+msgstr "点云："
+
+#: ../system-overview/data-types/data-types.rst:39
+msgid ""
+"A set of data points that represent an object in 3D, where each point has at least an X, Y, and Z component, and which may often also "
+"have color components. Unlike a depth image, a point cloud is not organized into a grid-like array where each array element has data - a "
+"point cloud can have no points in part of the cloud and lots of points in other parts. Point clouds can be read in using the Camera Node "
+"or Reader Node using .pcd, .daf or .dcf files or by connecting to a camera."
+msgstr ""
+"一组表示 3D 对象的数据点，其中每个点至少具有 X、Y 和 Z 分量，并且通常还可能具有颜色分量。与深度图像不同，点云不是组织成网格状数组，其中每"
+"个数组元素都有数据——点云的一部分可以没有点，而其他部分可以有很多点。可以使用相机节点或读取器节点使用 .pcd、.daf 或 .dcf 文件或通过连接到"
+"相机来读取点云。"
+
+#: ../system-overview/data-types/data-types.rst:40
+msgid "Mesh:"
+msgstr "网格："
+
+#: ../system-overview/data-types/data-types.rst:41
+msgid ""
+"Similar to a Point Cloud as a set of 3D data points are also stored, but a Mesh also includes another set of information that represents "
+"a surface defined by points which form polygons that make up the surface. Can be read in using the Reader Node using .ply, .stl, or .obj "
+"files."
+msgstr ""
+"与点云类似，也存储了一组 3D 数据点，但网格还包含另一组信息，这些信息表示由点定义的表面，这些点形成构成表面的多边形。可以使用Reader Node使"
+"用 .ply、.stl 或 .obj 文件读取。"
+
+#: ../system-overview/data-types/data-types.rst:42
+msgid "Camera Intrinsic:"
+msgstr "相机内参："
+
+#: ../system-overview/data-types/data-types.rst:43
+msgid ""
+"Holds information about the physical camera in use, such as focal length. Can be obtained by reading a .dcf file or connecting to a "
+"camera with the Camera Node."
+msgstr "保存有关正在使用的物理相机的信息，例如焦距。可以通过读取 .dcf 文件或使用Camera Node连接到相机来获得。"
+
+#: ../system-overview/data-types/data-types.rst:44
+msgid "Pose3D:"
+msgstr "姿势3D："
+
+#: ../system-overview/data-types/data-types.rst:45
+msgid ""
+"A numerical description of the position and orientation of an object. Position is given in X, Y, and Z coordinates and orientation can "
+"be given in different ways including euler, quaternion or angle-axis representation. Can be generated using the Assemble Pose node or "
+"using other nodes."
+msgstr ""
+"对象位置和方向的数值描述。位置以 X、Y 和 Z 坐标给出，方向可以以不同的方式给出，包括欧拉、四元数或角轴表示。可以使用 Assemble Pose 模块或"
+"使用其他模块生成。"
+
+#: ../system-overview/data-types/data-types.rst:47
+msgid "Pose2D:"
+msgstr "姿势2D："
+
+#: ../system-overview/data-types/data-types.rst:47
+msgid ""
+"Similar to Pose3D, pose2d is used to express the position and orientation of an object in 2d. This include x,y coordinate and counter-"
+"clockwise rotation, expressed by degree."
+msgstr "与 Pose3D 类似，pose2d 用于在 2d 中表示对象的位置和方向。这包括 x,y 坐标和逆时针旋转，以度数表示。"
+
+#: ../system-overview/data-types/data-types.rst:50
+msgid "Complex Data Types"
+msgstr "复杂数据类型"
+
+#: ../system-overview/data-types/data-types.rst:52
+msgid "Complex data types can be constructed using basic data types."
+msgstr "可以使用基本数据类型来构造复杂数据类型。"
+
+#: ../system-overview/data-types/data-types.rst:54
+msgid "Container of basic data types. For example, a map of poses. A vector of poses."
+msgstr "基本数据类型的容器。例如，位姿图。姿势数列。"
+
+#: ../system-overview/data-types/data-types.rst:55
+msgid "A struct of basic data types. For example, SDaDepthNCloud type contains two image, one depth image."
+msgstr "基本数据类型的结构。例如，DaDepthNCloud 类型包含两个图像，一个深度图像。"
+
+#: ../system-overview/data-types/data-types.rst:57
+msgid "You can check the type of the expression or the child fields of a data type (if any) in quick expression dialog."
+msgstr "您可以在快速表达式对话框中检查表达式的类型或数据类型的子字段（如果有）。"
+
+#: ../system-overview/data-types/data-types.rst:63
+msgid ""
+"As the image shows, if it's a map, you could specify the string value inside **['']**, and to access the element inside the vector, you "
+"could specify the integer inside **[]**."
+msgstr "如图所示，如果是map，您可以在 **['']** , 中指定字符串值，并且要访问数列中的元素，您可以在 **[]** 中指定整数。"
+
+#: ../system-overview/data-types/data-types.rst:66
+msgid "Save/load data from files"
+msgstr "从文件中保存/加载数据"
+
+#: ../system-overview/data-types/data-types.rst:68
+msgid "In addition to processing data in runtime, vision software also supports saving data to local files and use them later on."
+msgstr "除了在运行时处理数据外，视觉软件还支持将数据保存到本地文件中，以便以后使用。"
+
+#: ../system-overview/data-types/data-types.rst:70
+msgid ""
+"Camera capture files (.daf, .dcf, .dmf, etc.). One such file contains the point cloud, rgb image(could be grayscale as well), depth "
+"image and camera intrinsic (optional) of one camera capture. These files can be used as input of virtual cameras."
+msgstr ""
+"相机捕捉文件（.daf、.dcf、.dmf 等）。一个这样的文件包含一个相机捕获的点云、rgb 图像（也可以是灰度图像）、深度图像和相机内参（可选）。这些"
+"文件可以用作虚拟摄像机的输入。"
+
+#: ../system-overview/data-types/data-types.rst:71
+msgid "Image files (.png). This image can be either rgb or grayscale."
+msgstr "图像文件 (.png)。此图像可以是 rgb 或灰度图像。"
+
+#: ../system-overview/data-types/data-types.rst:72
+msgid "Depth image files (.tif)."
+msgstr "深度图像文件 (.tif)。"
+
+#: ../system-overview/data-types/data-types.rst:73
+msgid "Point cloud files (.pcd)."
+msgstr "点云文件 (.pcd)。"
+
+#: ../system-overview/data-types/data-types.rst:74
+msgid "Mesh files (.ply, .obj, .stl)."
+msgstr "网格文件（.ply、.obj、.stl）。"
+
+#: ../system-overview/data-types/data-types.rst:75
+msgid "Bag files (.bag). A bag file contains at least one of : image, depth image, point cloud, pose3d, camera intrinsic."
+msgstr "Bag文件 (.bag)。一个包文件至少包含以下之一：图像、深度图像、点云、pose3d、相机内在."
+
+#: ../system-overview/data-types/data-types.rst:76
+msgid ""
+"Calibration result files (.yml). These files contains the result of a calibration, including the hand-eye configuration, accuracy, "
+"relative positions of the calibrated objects (pose3d)."
+msgstr "校准结果文件 (.yml)。这些文件包含校准的结果，包括校准对象的手眼配置、精度、相对位置（3D位姿）。"
+
+#: ../system-overview/data-types/data-types.rst:77
+msgid "Reader cache files (.reader). Contains the result of a reader node run. Can contain one of : image, depth image, point cloud, mesh."
+msgstr "阅读缓存文件 (.reader)。包含读取器节点运行的结果。可以包含以下之一：图像、深度图像、点云、网格。"
+
+#: ../system-overview/data-types/data-types.rst:78
+msgid ""
+"Deep learning files (.pt). These files contains deep learning models for deep learning related nodes. These are read-only files as "
+"Vision won't produce such files."
+msgstr "深度学习文件 (.pt)。这些文件包含深度学习相关节点的深度学习模型。这些是只读文件，因为 Vision 不会生成此类文件。"
+
+#: ../system-overview/index.rst:2
+msgid "System Overview"
+msgstr "系统概述"
+
+#: ../system-overview/index.rst:4
+msgid ""
+"This section covers the basic knowledge of the Vision software, including user interface, data types, recipes and case study on how to "
+"build a project."
+msgstr "本部分涵盖了 Vision 软件的基本知识，包括用户界面、数据类型、配方和有关如何构建项目的案例研究。"
+
+#: ../system-overview/index.rst:7
+msgid "**User Interface**: It will cover the basic usage with the software."
+msgstr "**用户界面**: 将涵盖软件的基本用法."
+
+#: ../system-overview/index.rst:8
+msgid "**Data Type**: It will cover the supported datatype, and how to use it."
+msgstr "**Data Type**: 将涵盖支持的数据类型，以及如何使用它。"
+
+#: ../system-overview/index.rst:9
+msgid "**3D Concept**: It will cover the basic concept for the 3d transformation."
+msgstr "**3D 概念**: 将涵盖3D转换的基本概念。"
+
+#: ../system-overview/index.rst:10
+msgid "**Recipe**: It will cover how to use the recipe to define multiple picking object. Can skip for the first time reader."
+msgstr "**配方**: 将介绍如何使用配方来定义多个拾取对象。可以跳过第一次的读取。"
+
+#: ../system-overview/index.rst:11
+msgid "**Tutorials**: It provides simple tutorials for using the software to achieve different goals."
+msgstr "**教程**: 提供了使用本软件实现不同目标的简单教学。"
+
+#: ../system-overview/interface/interface.rst:2
+msgid "User interface"
+msgstr "用户界面"
+
+#: ../system-overview/interface/interface.rst:5
+msgid "Getting Started Page"
+msgstr "入门页面"
+
+#: ../system-overview/interface/interface.rst:7
+msgid "After opening the software, the welcome page will be displayed."
+msgstr "打开软件后，将显示欢迎页面。"
+
+#: ../system-overview/interface/interface.rst:12
+msgid "This button opens a dialog to create a new project and open it. You can specify name and location of the new project."
+msgstr "此按钮打开一个对话框来创建一个新的项目并打开它。你可以指定新项目的名称和位置。"
+
+#: ../system-overview/interface/interface.rst:13
+msgid "This button opens a existing workspace by browsing for an existing workspace file (files that end with .ws)."
+msgstr "此按钮通过浏览现有的工作区文件（以.ws结尾的文件）来打开一个现有的工作空间。"
+
+#: ../system-overview/interface/interface.rst:14
+msgid "This button opens a search tab to search for recent local projects and template projects to open."
+msgstr "此按钮打开一个搜索标签，搜索最近的本地项目和模板项目，以便打开。"
+
+#: ../system-overview/interface/interface.rst:15
+msgid "This is the default tab. It shows the recent projects and templates, as shown in the above picture."
+msgstr "这是默认的标签。它显示最近的项目和模板，如上图所示。"
+
+#: ../system-overview/interface/interface.rst:16
+msgid ""
+"This button opens a tutorial page. Click on the topic you want to see to open up your default browser and visit the corresponding "
+"website(s). It also supports searching with key words to filter different tutorials."
+msgstr "此按钮可以打开一个教程页面。点击你想看的主题，打开你的默认浏览器，访问相应的网站。它还支持用关键词搜索来过滤不同的教程。"
+
+#: ../system-overview/interface/interface.rst:17
+msgid ""
+"This tab shows the recently opened workspaces (projects). You can sort the list based on name or the last time the project was modified."
+msgstr "这个标签显示最近打开的工作空间（项目）。你可以根据名称或项目最后一次被修改的时间来对列表进行排序。"
+
+#: ../system-overview/interface/interface.rst:18
+msgid ""
+"This tab contains various template workspaces. This allows you to create a copy of a template workspace in a new location, and open it."
+msgstr "这个标签包含各种模板工作空间。允许你在一个新的位置创建一个模板工作空间的副本，并打开它。"
+
+#: ../system-overview/interface/interface.rst:21
+msgid "Loaded Configuration"
+msgstr "加载配置"
+
+#: ../system-overview/interface/interface.rst:23
+msgid "Once a workspace is opened, this interface will be displayed by default."
+msgstr "一旦一个工作区被打开，这个界面就会默认显示。"
+
+#: ../system-overview/interface/interface.rst:30
+msgid "Things to note:"
+msgstr "需要注意的事项:"
+
+#: ../system-overview/interface/interface.rst:32
+msgid "Menu bar at the top."
+msgstr "顶部的菜单栏。"
+
+#: ../system-overview/interface/interface.rst:33
+msgid "There are 4 buttons in the top-left corner (below the menu bar). From top to bottom, they are:"
+msgstr "在左上角（菜单栏下面）有4个按钮。从上到下，它们是:"
+
+#: ../system-overview/interface/interface.rst:35
+msgid "Close the project and go back to the welcome page"
+msgstr "关闭项目，回到欢迎页面"
+
+#: ../system-overview/interface/interface.rst:36
+msgid "Open operator view (will be covered later in this page)"
+msgstr "打开操作者视图（将在本页后面介绍）。"
+
+#: ../system-overview/interface/interface.rst:37
+msgid "Open flowchart view (default view when opening a project)"
+msgstr "打开流程图视图（打开项目时的默认视图）。"
+
+#: ../system-overview/interface/interface.rst:38
+msgid "Go back to tutorial page from welcome screen"
+msgstr "从欢迎界面返回到教程页面"
+
+#: ../system-overview/interface/interface.rst:43
+msgid ""
+"The top-left window is the **flowchart display** (shown here as the large black box). This window displays the result of the selected "
+"node. When displaying a node's result, you can change the node's display operation by checking/unchecking Display Properties on the top "
+"right of the display window. The flowchart display is also used when a node requires user-interaction. See examples section or node "
+"specification to learn when interaction is required."
+msgstr ""
+"左上角的窗口是 **流程图显示** （此处显示为绿色选取区域）。此窗口显示所选模块的结果。显示模块结果时，可以通过勾选/取消勾选显示窗口右上角的"
+"显示属性来更改模块的显示操作。当模块需要用户交互时，也会使用流程图显示。请参阅示例部分或节点规范以了解何时需要交互。"
+
+#: ../system-overview/interface/interface.rst:44
+msgid ""
+"The middle window is the **flowchart window**. A flowchart is a sequence of well-defined operations to achieve some functionality (e.g. "
+"detecting an object in a scene, picking an object). A workspace usually consists of several flowcharts, each managing one procedure in "
+"the picking application. A flowchart consists of connected nodes (displayed as circles, or boxes) and has only one start point and one "
+"end point."
+msgstr ""
+"中间的窗口是 **流程图窗口** 。流程图是一系列定义明确的操作以实现某些功能（例如，检测场景中的对象、拾取对象）。一个工作空间通常由多个流程"
+"图组成，每个流程图管理拣货应用程序中的一个程序。流程图由连接的模块（显示为圆形或方框）组成，并且只有一个起点和一个终点。"
+
+#: ../system-overview/interface/interface.rst:51
+msgid ""
+"You can switch flowcharts using the dropdown menu at the top. Or, you can manage variables (more on data types section) with the *Manage "
+"Variables* button."
+msgstr "您可以使用顶部的下拉菜单切换流程图。或者，您可以使用“管理变量”按钮管理变量（有关数据类型部分的更多信息） 。"
+
+#: ../system-overview/interface/interface.rst:58
+msgid "These are the different buttons used while running the flowchart (from left to right):"
+msgstr "这些是运行流程图时使用的不同按钮（从左到右）："
+
+#: ../system-overview/interface/interface.rst:53
+msgid ""
+"**Run**: Run current flowchart non-stop, the order of nodes being run depends on the flowchart. It stops until it gets an error, or it "
+"reaches a node that forces it to. After the end node, it goes back to the start node recursively."
+msgstr ""
+"**运行**:不间断运行当前流程图，运行模块的顺序取决于流程图。它会停止，直到它出现错误，或者它到达一个强制它的模块。在结束模块之后，它递归地"
+"回到开始模块。"
+
+#: ../system-overview/interface/interface.rst:54
+msgid "**Pause**: Pause current running flowchart."
+msgstr "**暂停**: 暂停当前运行的流程图."
+
+#: ../system-overview/interface/interface.rst:55
+msgid ""
+"**Reset**: Reset all of the flowchart's current status (node outputs, node's internal counter for sequential file read/write, current "
+"node marker, etc.)."
+msgstr "**重置**:重置所有流程图的当前状态（模块输出、用于顺序文件读/写的模块内部计数器、当前模块标记等）。"
+
+#: ../system-overview/interface/interface.rst:56
+msgid "**Next Step**: Run current node and go to next node in the flowchart."
+msgstr "**下一步**: 运行当前模块并转到流程图中的下一个模块."
+
+#: ../system-overview/interface/interface.rst:57
+msgid "**Skip Step**: Skip current node (without running) and go to next node in the flowchart."
+msgstr "**跳过步骤**: 跳过当前模块（不运行）并转到流程图中的下一个模块。"
+
+#: ../system-overview/interface/interface.rst:58
+msgid "**Run Selected Step**: Run a selected node, this node can be arbitrarily selected."
+msgstr "**运行当前选定步骤**: 运行一个选中的模块，这个模块可以任意选中."
+
+#: ../system-overview/interface/interface.rst:59
+msgid "**Run to Selected Step**: From the current node, run the flowchart until it reaches selected node. the current node is not Run."
+msgstr "**运行到选定步骤**: 从当前模块运行流程图，直到到达选定模块。当前模块未运行。"
+
+#: ../system-overview/interface/interface.rst:60
+msgid "The right most window is the **node config**. Here, you can view and change the selected node's settings."
+msgstr "最右边的窗口是 **模块配置**。在这里，您可以查看和更改所选模块的设置。"
+
+#: ../system-overview/interface/interface.rst:64
+msgid "The bottom-left window holds three different tabs."
+msgstr "左下角的窗口包含三个不同的选项。"
+
+#: ../system-overview/interface/interface.rst:62
+msgid ""
+"**The console** shows all the logs of the software. You can select the type of messages you wish to see (info/warning/error) by clicking "
+"the corresponding button. As well, you can search and clear the console log."
+msgstr ""
+"**控制台** 显示软件的所有日志。您可以通过单击相应的按钮来选择您希望查看的消息类型（信息/警告/错误）。同样，您可以搜索和清除控制台日志。"
+
+#: ../system-overview/interface/interface.rst:63
+msgid "**The recipes tab** allows users to manage the recipes in the workspace. (More on recipe section is covered later)"
+msgstr "**配方选项** 允许用户管理工作空间中的配方。（更多关于配方部分的内容将在后面介绍）"
+
+#: ../system-overview/interface/interface.rst:64
+msgid "**The quick evaluate page** allows users check values within the flowchart (variables, node outputs)."
+msgstr "**快速评估页面** 允许用户检查流程图中的值（变量，模块输出）。"
+
+#: ../system-overview/interface/interface.rst:67
+msgid "Link Expression Dialog"
+msgstr "链接表达式对话框"
+
+#: ../system-overview/interface/interface.rst:69
+msgid "The vision software connects the input/output of the nodes via *linking*."
+msgstr "视觉软件通过*链接*连接模块的输入/输出。"
+
+#: ../system-overview/interface/interface.rst:74
+msgid ""
+"In this image, the data source (in the node config) is the input for node Cloud Process. We can see that Cloud Process Node takes a "
+"Point Cloud type input. Clicking on the blue dots on the right opens up Link Expression Dialog (as seen below), where you can link "
+"expressions from other nodes."
+msgstr ""
+"在此图中，数据源（在模块配置中）是Cloud Process Node 的输入。我们可以看到 Cloud Process Node 采用 Point Cloud 类型的输入。单击右侧的蓝点"
+"打开链接表达式对话框（如下所示），您可以在其中链接来自其他模块的表达式。"
+
+#: ../system-overview/interface/interface.rst:80
+msgid "Platform Configuration"
+msgstr "平台配置"
+
+#: ../system-overview/interface/interface.rst:82
+msgid ""
+"Cameras are used to provide information to the workspace about the physical working environment, such as images and point clouds. The "
+"workspace must be connected to cameras (real or virtual) in order to capture such input data."
+msgstr "相机用于向工作空间提供有关物理工作环境的信息，例如图像和点云。工作空间必须连接到摄像机（真实或虚拟）才能捕获此类输入数据。"
+
+#: ../system-overview/interface/interface.rst:85
+msgid "In order to pick up the objects, the workspace must similarly be connected to robots."
+msgstr "为了拾取物体，工作空间必须同样连接到机器人。"
+
+#: ../system-overview/interface/interface.rst:87
+msgid ""
+"The vision software provides detection, connection management and configuration of cameras and robots. They are located under platform "
+"config page (Platform -> Platform Config Page)."
+msgstr "视觉软件提供摄像头和机器人的检测、连接管理和配置。它们位于平台配置页面（平台 -> 平台配置页面）下。"
+
+#: ../system-overview/interface/interface.rst:93
+msgid "Camera"
+msgstr "相机"
+
+#: ../system-overview/interface/interface.rst:95
+msgid ""
+"Cameras can be added by clicking the **+** button, then **Accept**. You can then double click an already added camera to configure a "
+"specific camera."
+msgstr "可以通过单击 **+** 按钮添加相机，然后单击 **接受**。然后，您可以双击已添加的摄像头来配置特定摄像头。"
+
+#: ../system-overview/interface/interface.rst:100
+msgid ""
+"The camera's name (an alias) and the type of the camera is shown at top of the dialog. Check the option *Virtual Camera* unless you are "
+"using an actual camera. Users can choose a specific camera from the list using its Serial number and IP. If you cannot find the camera "
+"in the list, click on *Update Camera List* to refresh. Camera settings can be loaded from a file (.cfg) which can be generated from "
+"DaoAI Studio. Finally, click connect and the camera is connected to the program."
+msgstr ""
+"相机的名称（别名）和相机的类型显示在对话框的顶部。除非您使用的是实际相机，否则请选中虚拟相机选项。用户可以使用其序列号和 IP 从列表中选择"
+"特定的相机。如果在列表中找不到相机，请单击更新相机机列表进行刷新。相机设置可以从 DaoAI Studio 生成的文件 (.cfg) 中加载。最后，点击连接，"
+"相机连接到程序。"
+
+#: ../system-overview/interface/interface.rst:103
+msgid "Robots"
+msgstr "机器人"
+
+#: ../system-overview/interface/interface.rst:105
+msgid "You can manage robot configuration in robot tab."
+msgstr "您可以在机器人选项中管理机器人配置。"
+
+#: ../system-overview/interface/interface.rst:111
+msgid "Operator View"
+msgstr "操作者视图"
+
+#: ../system-overview/interface/interface.rst:116
+msgid ""
+"The Operator View can design a user facing application, based on a cell and grid system. Different operator views can be selected from "
+"the drop-down menu on the top left."
+msgstr "操作者视图可以基于单元格和网格系统设计面向用户的应用程序。可以从左上角的下拉菜单中选择不同的操作员视图。"
+
+#: ../system-overview/interface/snapshot.rst:2
+msgid "Snapshot Version Control"
+msgstr "快照版本控制"
+
+#: ../system-overview/interface/snapshot.rst:4
+msgid ""
+"Vision has Snapshot Version Control feature for you to backup your process. It is similar to Git version control, but we have a straight "
+"forward user interface for you to manage your versions. You do not need to type any commands, manage the versions through user interface."
+msgstr ""
+"Vision 具有快照版本控制功能，可让您备份您的流程。它类似于 Git 版本控制，但我们有一个直接的用户界面供您管理您的版本。您无需键入任何命令，"
+"通过用户界面管理版本."
+
+#: ../system-overview/interface/snapshot.rst:12
+msgid "Snapshot is not equal to **Save**! Make sure you saved your process by **Save Project**."
+msgstr "快照不等于 **保存** ！确保您通过 **保存项目** 保存了您的流程。"
+
+#: ../system-overview/interface/snapshot.rst:19
+msgid "You can open the Snapshot interface from the top left corner;"
+msgstr "您可以从左上角打开快照界面;"
+
+#: ../system-overview/interface/snapshot.rst:24
+msgid "Click **Enable Snapshot**;"
+msgstr "点击 **启用快照**;"
+
+#: ../system-overview/interface/snapshot.rst:29
+msgid "**Create New Snapshot** enable the Snapshot feature."
+msgstr "**创建新快照** 启用快照功能。"
+
+#: ../system-overview/interface/snapshot.rst:31
+msgid "You can delete the snapshots, or revert to certain snapshots."
+msgstr "您可以删除快照，或恢复到某些快照。"
+
+#: ../system-overview/interface/snapshot.rst:33
+msgid "If you want to delete a snapshot, make sure you are not on current snapshot."
+msgstr "如果要删除快照，请确保您不在当前快照上。"
+
+#: ../system-overview/interface/snapshot.rst:40
+msgid ""
+"If you want to revert to a different snapshot, Vision will ask you whether you want to save your current process to a different snapshot."
+msgstr "如果您想恢复到不同的快照，Vision 会询问您是否要将当前流程保存到不同的快照。"
+
+#: ../system-overview/interface/snapshot.rst:47
+msgid "**Revert Now** will revert to the selected snapshot, and current process will be **LOST**;"
+msgstr "**立即恢复** 将恢复到选定的快照，当前进程将 **丢失** ;"
+
+#: ../system-overview/interface/snapshot.rst:48
+msgid "**Create new Snapshot, then revert** will ask you to save the current process into a new snapshot;"
+msgstr "**创建新快照，然后还原** 要求你将当前进程保存到一个新的快照中;"
+
+#: ../system-overview/interface/snapshot.rst:53
+msgid "Name the new snapshot you going to save. Then Vision will revert to the designated snapshot."
+msgstr "命名您要保存的新快照。然后 Vision 将恢复到指定的快照。"
+
+#: ../system-overview/recipes/recipes.rst:2
+msgid "Recipes"
+msgstr "配方"
+
+#: ../system-overview/recipes/recipes.rst:7
+msgid ""
+"Imagine you have created a flowchart like the above image to recognize an \"apple\". And the flowchart is that you are reading the input "
+"from **camera**, and use the **Mod Finder** node to recognize the object, then pass the result to **Alignment** to refine the position "
+"of the apple."
+msgstr ""
+"想象一下，您创建了一个类似上图的流程图来识别 \"apple\" 。流程图是您正在从 **Camera**,读取输入，并使用Mod Finder Node 识别对象，然后将结果"
+"传递给 **Alignment** 以细化apple的位置。"
+
+#: ../system-overview/recipes/recipes.rst:9
+msgid ""
+"Now, you would like to create the functionality to detect an \"Orange\" from Similar steps, expect that the **Mod Finder** and "
+"**Alignment** will need to define the model of the \"Orange\". One way to do so is to create a flowchart as below, you could use "
+"**switch** to go left or right to determine if you wanna detect \"Apple\" or \"Orange\"."
+msgstr ""
+"现在，您想创建功能以从类似的步骤中检测 \"橙色\" ，预计 **Mod Finder** 和 **Alignment** 将需要定义“橙色”的模型。这样做的一种方法是创建如下"
+"流程图，您可以使用 **switch** 向左或向右移动来确定是否要检测“Apple”或“Orange”。"
+
+#: ../system-overview/recipes/recipes.rst:15
+msgid ""
+"Another way is to add the **Mod Finder** and **Alignment** node into the recipe, so that when we are switching the recipe, we are "
+"switching the definition for both the **Mod Finder** and **Alignment** all at once."
+msgstr ""
+"另一种方法是将 **Mod Finder** 和 **Alignment** Node添加到配方中，这样当我们切换配方时，我们会同时切换 **Mod Finder** and **Alignment** 的"
+"定义。"
+
+#: ../system-overview/recipes/recipes.rst:21
+msgid "You will notice a \"R\" icon on the top-left conner of the step."
+msgstr "您会在步骤的左上角看到一个 \"R\" 图标。"
+
+#: ../system-overview/recipes/recipes.rst:22
+msgid "Usually you should consider use recipe when you want to define multiple models."
+msgstr "通常，当您要定义多个模型时，您应该考虑使用配方。"
+
+#: ../system-overview/recipes/recipes.rst:23
+msgid "The recipe will be automatically loaded when you open the workspace."
+msgstr "当您打开工作空间时，配方将自动加载。"
+
+#: ../system-overview/recipes/recipes.rst:24
+msgid ""
+"You should consider to add the recipe almost when you finalized the flowchart creation. As you will know which node to add to recipe, "
+"and when you create new recipe, all the content of the new recipe is a copy of the default \"recipe_1\""
+msgstr ""
+"几乎在完成流程图创建时，您应该考虑添加配方。正如您将知道要将哪个模块添加到配方中，并且当您创建新配方时，新配方的所有内容都是默"
+"认“recipe_1”的副本"
+
+#: ../system-overview/recipes/recipes.rst:27
+msgid "For more detailed explanation on how to use recipe feature, check :ref:`Recipe nodes`"
+msgstr "有关如何使用配方功能的更详细说明，请查看 :ref:`Recipe nodes`"
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:2
+msgid "3D Object Finder"
+msgstr "3D Object Finder"
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:4
+msgid "Objective"
+msgstr "客观的"
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:5
+msgid "This tutorial is to guide you to use the 3d object finder node to locate the object using the features of the cloud."
+msgstr "本教程将指导您使用 3d object finder 模块 使用云的功能来定位对象。"
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:8 ../system-overview/tutorials/new-workspace/new-workspace.rst:5
+msgid "Steps"
+msgstr "步骤"
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:9 ../system-overview/tutorials/new-workspace/new-workspace.rst:7
+msgid ":ref:`Create a new workspace`"
+msgstr ""
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:10 ../system-overview/tutorials/new-workspace/new-workspace.rst:8
+msgid ":ref:`Connect the camera to the Vision software`"
+msgstr ""
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:11
+msgid ":ref:`Insert the nodes`"
+msgstr ""
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:12
+msgid ":ref:`Configure the link expression inside each node`"
+msgstr ""
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:13
+msgid ":ref:`Workspace Data & Video Recordings`"
+msgstr ""
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:16 ../system-overview/tutorials/new-workspace/new-workspace.rst:11
+msgid "Create a new workspace"
+msgstr "创建一个新的工作空间"
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:18
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:23
+msgid ""
+"Please use the link to checkout the details of `Link <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/"
+"latest/system-overview/tutorials/new-workspace/new-workspace.html>`_."
+msgstr ""
+"请使用链接查看链接的详细信息 `Link <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/system-overview/"
+"tutorials/new-workspace/new-workspace.html>`_."
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:21 ../system-overview/tutorials/new-workspace/new-workspace.rst:28
+msgid "Connect the camera to the Vision software"
+msgstr "将相机连接到 Vision 软件"
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:26
+msgid "Insert the nodes"
+msgstr "插入模块"
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:28
+msgid ""
+"In general, we use the 3D Object Finder node to identify the object inside the 3D scene cloud; therefore, the basic setup is to use the "
+"camera point cloud as the input of the 3D Object Finder. To make sure the object can be perfectly mapped in the scene, the Alignment "
+"node is added under to 3D Object Finder node to improve the accuracy."
+msgstr ""
+"一般来说，我们使用 3D Object Finder 模块来识别 3D 场景云内部的对象；因此，基本设置是使用相机点云作为 3D Object Finder 的输入。为确保对象"
+"可以完美地映射到场景中，在 3D Object Finder 模块下添加了 Alignment 模块以提高准确性。"
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:36
+msgid "Configure the link expression inside each node"
+msgstr "配置每个模块内的链接表达式"
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:38
+msgid "The first step you need to do is to select the search type"
+msgstr "您需要做的第一步是选择搜索类型"
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:45
+msgid "By selecting normal, the node's point cloud will consist of planes or curved surfaces."
+msgstr "通过选择法线，模块的点云将由平面或曲面组成。"
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:52
+msgid "If you select edge, the node will create the point cloud using the feature points along the object's edge."
+msgstr "如果选择边缘，模块将使用沿对象边缘的特征点创建点云。"
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:59
+msgid "Once you finished defining the type, the remaining sections of the dialogue can be visualized."
+msgstr "一旦你完成了类型的定义，对话的其余部分就可以可视化了。"
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:66
+msgid ""
+"If you select normal, you should click the blue button to the right of the Scene Cloud node to open the Expression Link Dialog and "
+"insert the scene cloud's link."
+msgstr "如果选择法线，则应单击场景云节点右侧的蓝色按钮，打开表达式链接对话框并插入场景云的链接。"
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:69
+msgid ""
+"While the camera node is used as the scene cloud's input in the example above, other nodes such as reader and cloud process can also be "
+"used as the scene cloud's input."
+msgstr "上例中Camera 模块作为场景云的输入，其他模块，如reader和cloud process也可以作为场景云的输入。"
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:71
+msgid ""
+"The result displayed in the View interface varies according to the search type selected by you at the start. You can add and define an "
+"object's model in the Models section by pressing the \"+\" button. In the section, a \"model x\" will be displayed to inform you that "
+"the model was successfully created."
+msgstr ""
+"视图界面中显示的结果会根据您一开始选择的搜索类型而有所不同。您可以通过按“+”按钮在“模型”部分添加和定义对象的模型。在该部分中，将显示“模型 "
+"x”以通知您模型已成功创建。"
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:79
+msgid ""
+"By double-clicking on model 1, the ObjFinder3DModelConfig dialogue for editing the model's parameters will open. You can either load the "
+"model mesh from the device or define the object from the scene cloud within Model Type."
+msgstr ""
+"通过双击模型 1，将打开用于编辑模型参数的 ObjFinder3DModel配置对话框。您可以从设备加载模型网格，也可以从模型类型中的场景云中定义对象。"
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:86
+msgid "By choosing the type as mesh, the program will ask you to add the mesh path."
+msgstr "通过选择网格类型，程序将要求您添加网格路径。"
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:94
+msgid "Normally the model type loaded into the path should be ply."
+msgstr "通常加载到路径中的模型类型应该是 ply。"
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:96
+msgid "However, if you choose to load the model from the scene, then the program will ask you to define the Model from the scene cloud."
+msgstr "但是，如果您选择从场景中加载模型，那么程序会要求您从场景云中定义模型。"
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:111
+msgid ""
+"You can use this function in the Model Parameters node to enhance the quality of the point cloud by editing the Feature Detail and "
+"Downsample Strength. By clicking the Update Model button, you can update the editing information."
+msgstr ""
+"您可以在 Model Parameters 模块中使用此功能，通过编辑 Feature Detail 和 Downsample Strength 来提高点云的质量。通过单击更新模型按钮，您可以"
+"更新编辑信息。"
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:122
+msgid "Both features have 3 options to choose:"
+msgstr "这两个功能都有 3 个选项可供选择:"
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:124
+msgid ""
+"The Feature Detail property specifies how many model features are used in the calculation. The higher the value, the more features are "
+"calculated. Downsampling determines the object's point cloud's quality. A lower value indicates a denser point cloud was used in the "
+"subsequent calculation."
+msgstr ""
+"Feature Detail 属性指定在计算中使用了多少模型特征。值越高，计算的特征越多。Downsampling决定了对象点云的质量。较低的值表示在随后的计算中使"
+"用了更密集的点云。"
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:131
+msgid "The Pose Constraints dialog can be used to help you to define objects more accurately."
+msgstr "姿势约束对话框可用于帮助您更准确地定义对象."
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:133
+msgid "After defining the model, you can close the ObjFinder3DModelConfig Dialog and edit the parameters inside the Finder Settings."
+msgstr "定义模型后，您可以关闭 ObjFinder3DModel配置 对话框并在 Finder 设置中编辑参数。"
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:140
+msgid ""
+"You should enter the desired number of detected objects in the Number of Occurrences field and adjust the Acceptance Threshold to ensure "
+"that no additional or fewer objects are displayed in the scene."
+msgstr "您应该在 Number of Occurrences 字段中输入所需的检测对象数量，并调整 Acceptance Threshold 以确保场景中不会显示更多或更少的对象。"
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:147
+msgid "You can use the Alignment node to perform a second alignment between the detected poses and the scene to increase the accuracy."
+msgstr "您可以使用Alignment 模块在检测到的姿势和场景之间执行第二次对齐，以提高准确性。"
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:150
+msgid "Workspace Data & Video Recordings"
+msgstr "工作空间数据和视频记录"
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:152
+msgid "The used data for this demo, and the video recording for this demo was stored online with this:"
+msgstr "该演示使用的数据和该演示的视频录制在线存储："
+
+#: ../system-overview/tutorials/3d-object-finder/3d-object-finder.rst:154
+msgid ""
+"`3D_Object_Finder <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/wzhao_daoai_com/"
+"ElfERbA6veVMhl0YbWQOWR4B5nVnXy_vmYAPLFfLXSfawA?e=fGXkUX>`_"
+msgstr ""
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:2
+msgid "3D Transformation Tutorial"
+msgstr "3D 转换教程"
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:4
+msgid "When reading this page, we assume you have understood the :ref:`3d transformation concept`"
+msgstr "阅读本页时，我们假设您已了解3D 转换概念 :ref:`3d transformation concept`"
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:7
+msgid "There are three objects, A/B/C. A sits on the world origin. Known that:"
+msgstr "共有三个对象，A/B/C。A 坐世界原点。已知："
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:10
+msgid "[B in A] = [100, 100, 50, 60, 0, 0]"
+msgstr "[A 中的 B] = [100, 100, 50, 60, 0, 0]"
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:11
+msgid "[C in B] = [0, 0, -40, 0, 0, 0]"
+msgstr "[B 中的 C] = [0, 0, -40, 0, 0, 0]"
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:13
+msgid "Acquire [C in World] from a transformation tree node."
+msgstr "从 transformation tree 模块获取 [C in World]。"
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:19
+msgid "Procedure"
+msgstr "程序"
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:20
+msgid "Follow the detailed procedure and work on your end as well."
+msgstr "遵循详细的程序并在您的最终工作。"
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:22
+msgid "Open the software shortcut on desktop: **WeRobotics EN/CN**, and click **New Project** button."
+msgstr "打开桌面软件快捷方式： **WeRobotics EN/CN**,点击 **新建项目** 按钮。"
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:24
+msgid "Customize the project name and path, then click **OK**."
+msgstr "自定义项目名称和路径，然后单击 **OK**."
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:29
+msgid "Right click on the `+`, and click **insert node**."
+msgstr "右键单击+，然后单击 **插入模块**."
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:34
+msgid "Insert the following nodes in the right order."
+msgstr "以正确的顺序插入以下模块."
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:39
+msgid ""
+"Download example `Cubes CAD model <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/xchen_daoai_com/"
+"EQn18vWqNqBLh_edHhokYvYBhubwrs3PrgpjFg3eYjyHlw?e=4B47Vy>`_, and left click on the first reader node. Click **Browse** button on the "
+"right and select **Cube 20mmA.ply**."
+msgstr ""
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:44
+msgid "For the second and third reader nodes, repeats previous step and load **Cube 20mmB.ply** and **Cube 20mmC.ply**"
+msgstr "对于第二个和第三个读取器节点，重复上一步并加载Cube 20mmB.ply和Cube 20mmC.ply"
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:45
+msgid ""
+"Now since we want to make the Cube A sitting on the world origin, we leave the first **Assemble Pose** node with all values 0, which is "
+"[A in World]."
+msgstr "现在，由于我们想让立方体 A 位于世界原点，我们将第一个Assemble Pose Node保留为所有值 0，即 [A in World]。"
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:46
+msgid "For the second and third **Assemble Pose** node, configure them as below, which is [B in A] and [C in B]."
+msgstr "对于第二个和第三个 **Assemble Pose** 模块,，配置如下，分别为 [B in A] 和 [C in B]。"
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:51
+msgid ""
+"The next step is to configure **Transformation Tree** node. Click **Transformation Tree** node and in the config page, click **Set "
+"Input**. This window should popup."
+msgstr ""
+"下一步是配置 **Transformation Tree** 模块.。单击 **Transformation Tree** 模块.然后在配置页面中，单击 **Set Input**. 这个窗口应该弹出。"
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:56
+msgid ""
+"Click on the + button three times to create three inputs. Configure them as follows. For example, if entering [X in Y], X will be the "
+"object A name, and Y should be the Object B name. Then use the blue circle to link expression."
+msgstr ""
+"单击 + 按钮三次以创建三个输入。如下配置它们。例如，如果输入 [X in Y]，X 将是对象 A 的名称，Y 应该是对象 B 的名称。然后使用蓝色圆圈链接表"
+"达式。"
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst
+msgid "[A in World], link first **Assemble Pose** node."
+msgstr "[A in World]，链接第一个 **Assemble Pose** 模块."
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst
+msgid "[B in A], link second **Assemble Pose** node."
+msgstr "[B in A]，链接第二个 **Assemble Pose** 模块."
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst
+msgid "[C in B], link third **Assemble Pose** node."
+msgstr "[C in B]，链接第三个 **Assemble Pose** 模块."
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:65
+msgid "First enter the names A and World. Then click the blue circle to open link expression window."
+msgstr "首先输入名称 A 和 World。然后单击蓝色圆圈打开链接表达式窗口。"
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:70
+msgid ""
+"Search for \"assemble\", and expand the assemble_pose_node. Then click the poses from dropdown list. Click **Apply** button before "
+"moving to net input."
+msgstr "搜索“assemble”，然后展开 assemble_pose_模块。然后单击下拉列表中的姿势。在移动到网络输入之前单击应用按钮。"
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:75
+msgid "Repeats previous steps for the next two inputs. When finished all three input configurations, click **Next** button."
+msgstr "对接下来的两个输入重复前面的步骤。完成所有三个输入配置后，单击 **下一步** 按钮。"
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:80
+msgid "Select the output from dropdown list to be [C in World]"
+msgstr "从下拉列表中选择输出为 [C in World]"
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:85
+msgid "Now the output list is shown in config page, and [C in World] will be the 0-indexed item in the output array(Occurrence[0])"
+msgstr "现在输出列表显示在配置页面中，[C in World] 将是输出数组中的 0 索引项（Occurrence[0]）"
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:90
+msgid "Click on the transformation tree node, and click **Run to Selected Node** button in the Operation List."
+msgstr "单击转换树节点，然后单击操作列表中的 **运行到选定模块** 按钮。"
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:95
+msgid ""
+"If the links and setup are correct, the result display should look similar to this. Use mouse to drag to see the transformation in "
+"different view points."
+msgstr "如果链接和设置正确，结果显示应该与此类似。使用鼠标拖动以查看不同视点的转换."
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:100
+msgid "The next step is to add visualizations. Click **Visualize** node and in the config page, click **Add** button three times."
+msgstr "下一步是添加可视化。单击 **Visualize** 模块并在配置页面中单击 **添加** 按钮三次。"
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:105
+msgid ""
+"Link the objects to three Reader nodes, and link the Object Poses to 1. First Assemble Pose node, which is [A in World], 2. Second "
+"Assemble Pose node, which is [B in A]. Since A and World has 0 transformation, [B in A] = [B in World]."
+msgstr ""
+"将物体链接到三个Reader 模块，并将Object Pose链接到1.First Assemble Pose 模块，即[A in World]，2. Second Assemble Pose 模块，即[B in A]。"
+"由于 A 和 World 的变换为 0，因此 [B in A] = [B in World]。"
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:108
+msgid ""
+"All Object Poses need to have same reference coordinate. In the form of [A in X], [B in X], [C in X]. X do not have to be the same name, "
+"but must have the same pose."
+msgstr "所有对象姿势都需要具有相同的参考坐标。形式为 [A in X]、[B in X]、[C in X]。X 不必同名，但必须具有相同的姿势。"
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:110
+msgid "Object should link to the Reader.Output_Mesh since the readers are loading Mesh models."
+msgstr "对象应链接到 Reader. Output_Mesh，因为reader正在加载网格模型。"
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:116
+msgid ""
+"For the third Object Pose link, [C in World] is needed and it is generated by **Transformation Tree** node. So link it to the "
+"**Transformation Tree** output."
+msgstr "对于第三个Object Pose链接，需要[C in World]，它由 **Transformation Tree** 模块生成。因此，将其链接到 **转换树** 输出。"
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:121
+msgid "Click the **Visualize** node and run selected step. Check if the result is expected as image shown below."
+msgstr "单击 **Visualize** 模块并运行选定的步骤。检查结果是否如下图所示。"
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:126
+msgid ""
+"The next step is to use **Disassemble Pose** node. Configure the node as following image shows. Then click on the node and run selected "
+"step."
+msgstr "下一步是使用 **Disassemble Pose** 模块。如下图所示配置模块。然后单击节点并运行选定的步骤。"
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:131
+msgid "The expected result should be:"
+msgstr "预期的结果应该是："
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:137
+msgid "Further Question"
+msgstr "进阶问题"
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:138
+msgid "What if we want to only gather the X and Y of this pose, and ignoring z and rotation?"
+msgstr "如果我们只想收集这个姿势的 X 和 Y，而忽略 z 和旋转怎么办？"
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:140
+msgid "Add an **Assemble Pose** node after **Disassemble Pose** node."
+msgstr "在 **Disassemble Pose** 模块之后添加一个 **Assemble Pose** 模块。"
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:145
+msgid ""
+"Since **Disassemble Pose** node will split the pose object into: Position X/Y/Z, Rotation X/Y/Z, etc. We can link only to the PosX and "
+"PosY output from it."
+msgstr "由于 **Disassemble Pose** 模块会将姿势对象拆分为：位置 X/Y/Z、旋转 X/Y/Z 等。我们只能链接到它的 PosX 和 PosY 输出。"
+
+#: ../system-overview/tutorials/3d-transformation/3d-transformation-tutorial.rst:150
+msgid "Add another **Disassemble Pose** node at the end, and check if the assembled result is correct."
+msgstr "最后再添加一个 **Disassemble Pose** 模块，检查组装结果是否正确。"
+
+#: ../system-overview/tutorials/mod-finder/mod-finder.rst:2
+msgid "Mod Finder"
+msgstr ""
+
+#: ../system-overview/tutorials/mod-finder/mod-finder.rst:3
+msgid "With this example, you are able to define a model from a 2d image, and search the model in other images. Following are the steps:"
+msgstr "通过此示例，您可以从 2d 图像定义模型，并在其他图像中搜索模型。以下是步骤："
+
+#: ../system-overview/tutorials/mod-finder/mod-finder.rst:6
+msgid "Steps:"
+msgstr "步骤："
+
+#: ../system-overview/tutorials/mod-finder/mod-finder.rst:7
+msgid "Create new workspace"
+msgstr "创建新工作空间"
+
+#: ../system-overview/tutorials/mod-finder/mod-finder.rst:8
+msgid "Connect the camera and insert camera node"
+msgstr "连接相机并插入Camera模块"
+
+#: ../system-overview/tutorials/mod-finder/mod-finder.rst:9
+msgid "Insert Mod Finder Node and Link the output from camera"
+msgstr "插入 Mod Finder 模块并链接相机的输出"
+
+#: ../system-overview/tutorials/mod-finder/mod-finder.rst:10
+msgid "Define model with mod finder, and tune the parameters"
+msgstr "使用 mod finder 定义模型，并调整参数"
+
+#: ../system-overview/tutorials/mod-finder/mod-finder.rst:11
+msgid "Run the search with other images"
+msgstr "使用其他图像运行搜索"
+
+#: ../system-overview/tutorials/mod-finder/mod-finder.rst:14
+msgid "Detailed Procedures:"
+msgstr "详细步骤："
+
+#: ../system-overview/tutorials/mod-finder/mod-finder.rst:16
+msgid "1. Create workspace"
+msgstr "1. 创建工作区"
+
+#: ../system-overview/tutorials/mod-finder/mod-finder.rst:24
+msgid "Open the software, and click the **new project** button, then change the project name and where to save the project, click **ok**."
+msgstr "打开软件，点击 **新项目** 按钮，修改工程名称和工程保存位置，点击确定。"
+
+#: ../system-overview/tutorials/mod-finder/mod-finder.rst:27
+msgid "2. Connect camera"
+msgstr "2. 连接相机"
+
+#: ../system-overview/tutorials/mod-finder/mod-finder.rst:42
+msgid ""
+"You will first click on the **platform** button, then open the platform config page. Add a camera system, then use virtual camera by "
+"reading the data from the disk (which can be dlowloaded with the link at the bottom of this page). Then add a camera node, then select "
+"the corresponding camera system. Run the camera node once, so that you will see the image on the display panel on the left."
+msgstr ""
+"您将首先单击 **平台** 按钮，然后打开平台配置页面。添加一个摄像头系统，然后通过从磁盘读取数据来使用虚拟相机（可以通过本页底部的链接下"
+"载）。然后添加一个Camera 模块，然后选择对应的相机系统。运行一次相机模块，您将在左侧的显示面板上看到图像。"
+
+#: ../system-overview/tutorials/mod-finder/mod-finder.rst:45
+msgid "3. Use mod finder node"
+msgstr "3. 使用mod finder 模块"
+
+#: ../system-overview/tutorials/mod-finder/mod-finder.rst:70
+msgid ""
+"Insert a mod finder node, and select **2D** mode. Once you inserted the mod finder node, now you will need to link the data by click on "
+"the **link** button at the **image** selection field. Then click the **skip** button on the top to move the current node to **mod "
+"finder** node. Click **run current node** button to run the mod finder node once, this is to **load the image into mod finder**."
+msgstr ""
+"插入一个 mod finder 模块，然后选择 **2D** 模式。插入 mod finder 模块后，现在您需要通过单击 **图像** 选择字段中的 **链接** 按钮来链接数"
+"据。然后单击顶部的 **跳过** 按钮将当前模块移动到mod finder模块。单击 **运行当前模块** 按钮运行一次 **mod finder** 模块，这是 **将图像加载"
+"到 mod finder中**."
+
+#: ../system-overview/tutorials/mod-finder/mod-finder.rst:72
+msgid ""
+"Now, you are able to define the mode. Click on the **+** button, then **left click** on the mouse and select a rectangle in the display. "
+"This is how to define the model, then click on **run current node** button to run the detection of the model. You will be able to see "
+"the system is able to detect the correct object."
+msgstr ""
+"现在，您可以定义模式。单击 **+** 按钮，然后 **左键单击** 鼠标并在显示中选择一个矩形。这是如何定义模型，然后单击 **运行当前模块** 按钮运行"
+"模型检测。您将能够看到系统能够检测到正确的对象。"
+
+#: ../system-overview/tutorials/mod-finder/mod-finder.rst:74
+msgid "Finally, you could click on the **run** button to run the flowchart endlessly."
+msgstr "最后，您可以单击 **运行** 按钮以无休止地运行流程图。"
+
+#: ../system-overview/tutorials/mod-finder/mod-finder.rst:78
+msgid "Workspace Data & Video Recordings:"
+msgstr "工作空间数据和视频记录："
+
+#: ../system-overview/tutorials/mod-finder/mod-finder.rst:79
+msgid ""
+"The used data for this demo, and the video recording for this demo was stored online with this `link <https://daoairoboticsinc-my."
+"sharepoint.com/:f:/g/personal/xchen_daoai_com/EiXHSWVok5lMqMDsEYUdBzUB2sKYNa8FFTKZhk5Ne5Je3w?e=PA3XVs>`_"
+msgstr ""
+
+#: ../system-overview/tutorials/new-workspace/new-workspace.rst:2
+msgid "New workspace"
+msgstr "新工作空间"
+
+#: ../system-overview/tutorials/new-workspace/new-workspace.rst:13
+msgid "Open the Vision Software and click on the New Project button on the top left."
+msgstr "打开 Vision软件并单击左上角的新建项目按钮。"
+
+#: ../system-overview/tutorials/new-workspace/new-workspace.rst:21
+msgid "In the New Project dialog, you should name the project and select the file location, then press “ok”."
+msgstr "在“新建项目”对话框中，您应该为项目命名并选择文件位置，然后按“确定”。"
+
+#: ../system-overview/tutorials/new-workspace/new-workspace.rst:30
+msgid "Once finishing creating the new project, you should click the Platform to config the camera, robot, and server settings."
+msgstr "完成创建新项目后，您应该单击平台来配置相机、机器人和服务器设置。"
+
+#: ../system-overview/tutorials/new-workspace/new-workspace.rst:38
+msgid ""
+"All three categories are listed on the left side of the dialog and highlighted by the blue bar. You can add cameras, robots, or servers "
+"by pressing the “+” button."
+msgstr "所有三个类别都列在对话框的左侧，并以蓝色条突出显示。您可以通过按“+”按钮添加相机、机器人或服务器。"
+
+#: ../system-overview/tutorials/new-workspace/new-workspace.rst:45
+msgid ""
+"Under the Type, click the camera box to view the whole list of options and select the camera that is going to be used for the "
+"application by clicking the Accept button. Then, a new dialog will pop up for configuring the specific camera. You can also delete the "
+"camera by selecting the camera and pressing the trash bin icon to delete it."
+msgstr ""
+"在“类型”下，单击相机框以查看整个选项列表，然后通过单击“接受”按钮选择将用于应用程序的相机。然后，将弹出一个用于配置特定相机的新对话框。您"
+"也可以通过选择相机并按垃圾桶图标将其删除来删除相机。"
+
+#: ../system-overview/tutorials/new-workspace/new-workspace.rst:62
+msgid ""
+"You can load dcf files that were generated in the past as the camera output. To do so, you should check the Virtual Camera box, and "
+"choose the option to load the dcf files. You can either load the entire dcf folders or just load a single dcf file. Then press the "
+"“Connect” button to connect the camera node with the other node."
+msgstr ""
+"您可以加载过去生成的 dcf 文件作为相机输出。为此，您应该选中 Virtual Camera 框，然后选择加载 dcf 文件的选项。您可以加载整个 dcf 文件夹或仅"
+"加载单个 dcf 文件。然后按“连接”按钮将Camera模块与另一个模块连接起来。"
+
+#: ../system-overview/tutorials/new-workspace/new-workspace.rst:69
+msgid ""
+"To add the real camera, you should press the “Updated Camera List”, then press the blank box on the left to discover if the camera’s "
+"serial number has been updated. If the number pops up, you can select the number by pressing it. The load Setting Path function allows "
+"you to load the cfg file, which contains the setting you configured in the studio to enhance the quality of the image shot from the "
+"camera. Then, press the “Connect” button to connect the camera with other nodes."
+msgstr ""
+"要添加真实相机机，请点击“已更新的相机列表”，然后点击左侧的空白框，查看相机的序列号是否已更新。如果弹出数字，您可以通过按下它来选择数字。"
+"加载设置路径功能允许您加载 cfg 文件，其中包含您在Studio中配置的设置，以提高从相机拍摄的图像质量。然后，按下“连接”按钮，将相机与其他模块连"
+"接起来。"
+
+#: ../system-overview/tutorials/new-workspace/new-workspace.rst:76
+msgid "Once the camera has been connected with other nodes, you should select the correct physical camera number in the Camera Source box."
+msgstr "相机与其他模块连接后，您应该在“相机源”框中选择正确的物理相机编号。"
+
+#: ../system-overview/tutorials/overview.rst:2
+msgid "Tutorials"
+msgstr "教程"
+
+#: ../system-overview/tutorials/overview.rst:4
+msgid ""
+"This section covers the basic examples of the Vision Studio, including creating a new workspace, and link the node for the vision tasks. "
+"You could install the DaoAI Vision Studio, and create the same workspace by following the steps."
+msgstr ""
+"本节介绍 Vision Studio 的基本示例，包括创建新工作空间和链接视觉任务的模块。您可以安装 DaoAI Vision Studio，并按照以下步骤创建相同的工作空"
+"间。"

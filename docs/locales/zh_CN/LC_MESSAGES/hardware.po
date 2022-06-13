@@ -1,0 +1,2558 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021 DaoAI Robotics Inc.
+# This file is distributed under the same license as the DaoAI Vision User
+# Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: DaoAI Vision User Manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-26 15:26-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../hardware/camera/DS.rst:2
+msgid "DaoAI Camera"
+msgstr ""
+
+#: ../hardware/camera/DS.rst:5 ../hardware/camera/index.rst:11
+#: ../hardware/robot/UR.rst:6 ../hardware/robot/index.rst:6
+#: ../hardware/robot/socket.rst:46
+msgid "Content"
+msgstr ""
+
+#: ../hardware/camera/DS.rst:6
+msgid ":ref:`Physical Camera Wire Connection`"
+msgstr ""
+
+#: ../hardware/camera/DS.rst:7
+msgid ":ref:`Connect the camera via DaoAI Camera Studio (physical camera)`"
+msgstr ""
+
+#: ../hardware/camera/DS.rst:8
+msgid ":ref:`Connect the camera via DaoAI Vision Studio`"
+msgstr ""
+
+#: ../hardware/camera/DS.rst:9
+msgid ":ref:`Connect the virtual camera via DaoAI Vision Studio`"
+msgstr ""
+
+#: ../hardware/camera/DS.rst:10
+msgid ":ref:`Use Camera with Camera Node`"
+msgstr ""
+
+#: ../hardware/camera/DS.rst:11
+msgid ":ref:`Common Issues`"
+msgstr ""
+
+#: ../hardware/camera/DS.rst:12
+msgid ":ref:`Physical Camera`"
+msgstr ""
+
+#: ../hardware/camera/DS.rst:13
+msgid ":ref:`Virtual Camera`"
+msgstr ""
+
+#: ../hardware/camera/DS.rst:16 ../hardware/camera/GigE.rst:5
+#: ../hardware/camera/Laser.rst:6 ../hardware/camera/Mini.rst:5
+#: ../hardware/camera/USB3.rst:5
+msgid "Physical Camera Wire Connection"
+msgstr ""
+
+#: ../hardware/camera/DS.rst:18
+msgid ""
+"On the front side, the camera has one light projector (1) and one camera "
+"lens (2) shown in the picture down below."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:23
+msgid ""
+"On the backside, the camera has one 3.0 USB port (1), one power source "
+"(2), and a fan (3)."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:31
+msgid "Connect the camera via DaoAI Camera Studio (physical camera)"
+msgstr ""
+
+#: ../hardware/camera/DS.rst:33
+msgid ""
+"For more detailed steps to use the `DaoAI Camera Studio Manual <https"
+"://daoai-robotics-inc-daoai-camera-studio-user-manul.readthedocs-"
+"hosted.com/en/english/camera-overview/index.html>`_ . First clicking on "
+"the DaoAI Camera Studio icon to open the software, pressing the refresh "
+"button, searching, and updating the available cameras.  If there is an "
+"available camera in the list, by clicking on the list box on the left "
+"side, the serial number of that camera will pop up in the box. Then, you "
+"can click “Connect” button to connect the camera with the studio "
+"software."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:41
+msgid ""
+"To disconnect the camera, you can either close the software or press the "
+"camera serial number printed on the top right corner. The “Manage "
+"Cameras” window will display, then you can press the “Disconnect”."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:47
+msgid "**Basic configuration for capturing**"
+msgstr ""
+
+#: ../hardware/camera/DS.rst:49
+msgid ""
+"You can click on the “+” button to add multiple frames when capturing the"
+" image.  To delete the frame, you can click on the trash bin button on "
+"the right. However, the minimum number of the frame that you can have is "
+"1."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:55
+msgid ""
+"In the frame, you can adjust the 3 parameters, exposure, brightness, and "
+"gain respectively. Adding multiple frames will help the camera to capture"
+" more details and features in the image; however, the capturing time will"
+" get longer as well. By clicking on the “Capture” button to capture an "
+"image. The “Auto” button will allow the system automatically adjust the "
+"setting to capture the best shot image. The “Live” button will trigger "
+"the camera to constantly capture the images. To stop it, you just need to"
+" click on the “Live” button one more time."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:65
+msgid ""
+"You can also use the manual bar highlighted in the image down below to "
+"check out the image quality in different modes."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:71
+msgid "**ROI** (Optional)"
+msgstr ""
+
+#: ../hardware/camera/DS.rst:73
+msgid ""
+"If part of the image point cloud is unclear, the software allows you to "
+"switch the mode from “Point Cloud” to the “2D color” to readjust the area"
+" that has bad point cloud quality."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:79
+msgid ""
+"Once clicking the “Use ROI” button, you can select the specific area of "
+"an image to edit."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:85
+msgid ""
+"Then you can click the save button to confirm the area and perform the "
+"adjusting. Once finish adjusting the area, you can click the “…” on the "
+"top right to delete ROI."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:96
+msgid "**Gap Fill** (Optional)"
+msgstr ""
+
+#: ../hardware/camera/DS.rst:98
+msgid ""
+"Another general function that has been used quite often is the “Gap Fill”"
+" function. The function can help you to repair and optimize the point "
+"cloud image by automatically filling the point cloud captured from the "
+"Studio."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:108
+msgid "**Saving the studio file**"
+msgstr ""
+
+#: ../hardware/camera/DS.rst:110
+msgid ""
+"When finishing editing the settings, to save the caputring configuration "
+"and loaded into the Vision Studio for using it for real detection "
+"project, you can click the “File” button and select the “Save Setting As”"
+" to save the setting as cfg. Remember the name of the \".cfg\" file, as "
+"you will need to load it in the Vision Studio."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:122 ../hardware/camera/GigE.rst:21
+#: ../hardware/camera/Laser.rst:16 ../hardware/camera/Mini.rst:21
+#: ../hardware/camera/USB3.rst:8
+msgid "Connect the camera via DaoAI Vision Studio"
+msgstr ""
+
+#: ../hardware/camera/DS.rst:124 ../hardware/camera/Mini.rst:22
+msgid ""
+"Open the Vision Software and click on the New Project button on the top "
+"left."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:130
+msgid ""
+"In the New Project dialog, you should name the project and select the "
+"file location, then press “ok”."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:136
+msgid ""
+"Once finishing creating the new project, you should click the Platform to"
+" config the camera, robot, and server settings."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:138
+msgid ""
+"All three categories are listed on the left side of the dialog and "
+"highlighted by the blue bar. You can add cameras, robots, or servers by "
+"pressing the “+” button."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:144
+msgid ""
+"Under the Type, click the camera box to view the whole list of options "
+"and select the camera that is going to be used for the application by "
+"clicking the Accept button. Then, a new dialog will pop up for "
+"configuring the specific camera. You can load the cfg file saved from the"
+" studio into the “Load Settings Path” as the setting used for configuring"
+" the camera node in the Vision software. To delete the camera, you can "
+"select the camera and press the trash bin icon to delete it."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:154
+msgid ""
+"To add the real camera, you should press the “Updated Camera List”, then "
+"press the blank box on the left to discover if the camera’s serial number"
+" has been updated. If the number pops up, you can select the number by "
+"pressing it. The load Setting Path function allows you to load the cfg "
+"file, which contains the setting you configured in the studio to enhance "
+"the quality of the image shot from the camera. Then, press the “Connect” "
+"button to connect the camera with other nodes."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:160
+msgid ""
+"Once the camera has been connected with other nodes, you should select "
+"the correct physical camera number in the Camera Source box."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:167 ../hardware/camera/GigE.rst:38
+#: ../hardware/camera/Laser.rst:20 ../hardware/camera/Mini.rst:57
+#: ../hardware/camera/USB3.rst:11
+msgid "Connect the virtual camera via DaoAI Vision Studio"
+msgstr ""
+
+#: ../hardware/camera/DS.rst:169
+msgid ""
+"You can load dcf/daf files that were generated in the past as the camera "
+"output. To do so, you should check the Virtual Camera box, and choose the"
+" option to load the dcf files. You can either load the entire dcf folders"
+" or just load a single dcf file. Then press the “Connect” button to "
+"connect the camera node with the other node."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:178 ../hardware/camera/GigE.rst:51
+#: ../hardware/camera/Mini.rst:69 ../hardware/camera/USB3.rst:14
+msgid "Use Camera with Camera Node"
+msgstr ""
+
+#: ../hardware/camera/DS.rst:180
+msgid ""
+"Once configuring the camera, switch back to the flowchar template and "
+"right click the \"+\" to add the camera node."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:191
+msgid ""
+"Then click on the camera node and select the correct physical camera "
+"configured inside the camera source."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:199 ../hardware/camera/GigE.rst:89
+#: ../hardware/camera/Laser.rst:28 ../hardware/camera/Mini.rst:87
+#: ../hardware/camera/USB3.rst:17
+msgid "Common Issues"
+msgstr ""
+
+#: ../hardware/camera/DS.rst:200
+msgid "USB 3.0 cable issue"
+msgstr ""
+
+#: ../hardware/camera/DS.rst:202
+msgid ""
+"The DS camera USB has to be plugged into the USB port 3.0 in order to be "
+"functional."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:204
+msgid "cfg file doesn't match"
+msgstr ""
+
+#: ../hardware/camera/DS.rst:206
+msgid ""
+"The cfg generated by the old version camera studio cannot be used in the "
+"later version. Be sure the version camera studio is under the same "
+"version as in the third party's SLC."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:208
+msgid "Not able to find the camera"
+msgstr ""
+
+#: ../hardware/camera/DS.rst:210
+msgid ""
+"This issue normally caused by the version conflict. Making sure the "
+"camera studio is in the latest version."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:213
+msgid ""
+"In addition to allowing the connection of Physical Daoai Camera, **DaoAI "
+"Vision Studio** offers the Virtual Camera function in order to allow you "
+"to load existing image files."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:216 ../hardware/robot/ur_setup.rst:145
+msgid "On the top menu bar, select ``Platform`` ->  ``Platform config page``."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:223
+msgid ""
+"Select ``Cameras`` on left side menu bar and click ``+``, then choose "
+"**DaoAI Camera**, Then click ``Accept`` button below."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:230
+msgid ""
+"Now you have two options to proceed: **Virtual Camera** or **Physical "
+"Camera** (Default)."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:234
+msgid "Physical Camera"
+msgstr ""
+
+#: ../hardware/camera/DS.rst:236
+msgid ""
+"Click ``update Camera list`` and select the Serial Number of the camera, "
+"then click ``Connect``."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:241
+msgid ""
+"You can also load a camera setting file when connecting to a camera. The "
+"settings include projector/camera parameters when capturing 2d images and"
+" parameters used when generating the point cloud. The camera config file "
+"(.cfg file) is created by DaoAI Camera Studio Program. Refer to Camera "
+"Studio User Manual for details on how to adjust camera parameters and "
+"exporting config as a file."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:246
+msgid "Virtual Camera"
+msgstr ""
+
+#: ../hardware/camera/DS.rst:248
+msgid ""
+"Select ``Virtual Camera``, Click ``Browse`` to Choose the image files you"
+" want to load, then click ``Connect``."
+msgstr ""
+
+#: ../hardware/camera/DS.rst
+msgid "There are three options to load the image file."
+msgstr ""
+
+#: ../hardware/camera/DS.rst
+msgid "1. From file: loading single image file"
+msgstr ""
+
+#: ../hardware/camera/DS.rst
+msgid "2. From Folder: loading all image files in the folder one by one"
+msgstr ""
+
+#: ../hardware/camera/DS.rst
+msgid ""
+"3. From Numbered Files: loading image files based on numbered file name "
+"one by one."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:263
+msgid ""
+"Select the camera name you just created in the ``Camera Source`` and run "
+"the camera node in the flowchart."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:271
+msgid "Save Image Data"
+msgstr ""
+
+#: ../hardware/camera/DS.rst:273
+msgid "You can save your image data into your local directory for future use."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:278
+msgid ""
+"Open **Platform Configuration**, and click into **Cameras**. Click into "
+"the connected camera."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:283
+msgid ""
+"Click **Save camera data**, and select either **From File**(by default) "
+"or **From Numbered Files**. **From File** will save the captured image "
+"into a designated directory and file."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:288
+msgid ""
+"**From Numbered Files** will save the data into the designated directory."
+" And as you capture more and more images, they will all be saved into "
+"this directory with prefix and index number."
+msgstr ""
+
+#: ../hardware/camera/DS.rst:290
+msgid ""
+"These saved data will contain the point cloud, 3D data etc into a "
+"**.dcf** file. These **.dcf** files can be loaded using virtual camera."
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:2
+msgid "Daoai Gige Camera"
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:6
+msgid ""
+"Gige Cameras are usually connected through Ethernet cables, you can find "
+"the ethernet port on camera."
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:11
+msgid ""
+"The Gige camera can directly connect to the **Power Of Ethernet(POE)** "
+"port of the industrial PC, or through a **POE** switch to connect to a "
+"none-power-supplied ethernet port."
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:17
+msgid ""
+"In order to have stable connection, the ethernet cable need to meet "
+"industrial usage standard, and CAT6 above. If there is any sudden "
+"disconnection, most likely it's the cable issue."
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:18
+msgid ""
+"Once camera connected, the **power** and **POE** connection status "
+"indicator on the camera and industrial pc should be green. Otherwise, "
+"could check if the industrial PC/switch **POE** power is stable or not."
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:23
+msgid ""
+"Once physically connected, on the top menu bar click the **Platform** -> "
+"**Platform config**, click the **+** button, and select **DaoAI Gige "
+"Camera**, click accept."
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:28
+msgid ""
+"Click the **Update Camera List**, and select the camera you wanna "
+"connect. In order to tune the camera, sometime you want to change the "
+"Exposure time and Gain. Then click connect button."
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:34
+msgid ""
+"In order to connect the PC with the Gige camera, both has to fall within "
+"the same sub network. Check the **Network configuration**"
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:35
+msgid ""
+"The larger the exposure time and gain, the brighter the image. Some model"
+" of the camera has a available range for the exposure time and gain, will"
+" need to check the model."
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:43
+msgid ""
+"The virtual camera will read the \\*.png files, and select the way you "
+"would like the system to find the \\*.png files."
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:46
+msgid "From file: Select a single png file"
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:47
+msgid "From folder: It reads out all the \\*.png file from the folder"
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:48
+msgid "From numeric: Read specific files with dedicated prefix."
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:53 ../hardware/camera/Mini.rst:71
+msgid ""
+"Once configuring the camera, switch back to the flowchart. Right click "
+"the \"+\" sign and add the camera node."
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:61 ../hardware/camera/Mini.rst:79
+msgid ""
+"Then click on the camera node and select the camera you just added in "
+"platform config window."
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:66 ../hardware/camera/Mini.rst:84
+msgid ""
+"Now if you run the ``Camera`` node, it will generate camera capture or "
+"virtual camera image."
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:69 ../hardware/camera/Laser.rst:24
+msgid "Network configuration"
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:70
+msgid ""
+"In order to let the camera and industrial pc to connect, they both need "
+"to fall in the same subnet. Usually the camera was configured to "
+"automatically get an IP from the industrial PC, in this way, the camera "
+"can get an IP which can directly communicate."
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:72
+msgid ""
+"Sometimes, the Gige camera was configured to a different subnet that the "
+"**POE** network driver. In this way, you need to either change the **PC**"
+" network to a static IP that could match the Gige camera, or set the "
+"camera to automatically get a new IP address (usually by reset to factory"
+" settings). The subnet usually means the last number of the ip is "
+"different, but all the other numbers are the same, and the mask is "
+"255.255.255.1"
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:74
+msgid ""
+"To change the PC network to static IP, first you need to know the IP "
+"address of your camera. Open command line prompt, enter ``ipconfig``. You"
+" can see your computer IP and the connected camera IP here. Leave the "
+"window open and proceed to next step."
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:75
+msgid ""
+"Next thing is to press ``Win+R`` and enter ``ncpa.cpl`` to open Network "
+"Connection window. Find the Network adapter for your computer network "
+"connection, and right click > **Properties**."
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:80
+msgid ""
+"Find the ``Internet Protocol Version 4(TCP/IPv4) Properties``, double "
+"click it and you should see the following window."
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:85
+msgid ""
+"Change the ``Obtain an IP address automatically`` to ``Use the following "
+"IP address``. Then change the first line ``IP address`` to match first "
+"three parts of the camera IPv4 address. For example, if your Camera IP "
+"address is 196.254.42.xxx, then you should enter 196.254.42.yyy(yyy must "
+"differ from xxx)."
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:86
+msgid ""
+"Then in the next line, enter 255.255.255.0 for subnet mask. Click OK to "
+"save the changes."
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:91
+msgid "Packet Loss"
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:92
+msgid "First confirm the Gige Camera IP is under the same subnet with your PC."
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:93
+msgid ""
+"Then press ``Win+R`` and enter ``ncpa.cpl`` to open Network Connection "
+"window. Right click the Ethernet port your camera connects to. Click "
+"**Properties**"
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:95
+msgid "Find ``Client for Microsoft Networks`` and click ``Configure`` button."
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:98
+msgid ""
+"Go to **Advanced** and in the Property List find ``Jumbo Packet``. In the"
+" Value dropdown list, select 9014 Bytes."
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:101
+msgid ""
+"Continue in the Property List, find ``Receive Buffers``, set the value to"
+" 2048."
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:104
+msgid ""
+"Continue in the Property List, find ``Transmit Buffers``, set the value "
+"to 2048."
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:107
+msgid ""
+"Continue in the Property List, find ``Speed & Duplex``, set the value to "
+"1.0 Gbps Full Duplex."
+msgstr ""
+
+#: ../hardware/camera/GigE.rst:109
+msgid "Click OK to save your changes."
+msgstr ""
+
+#: ../hardware/camera/Laser.rst:2
+msgid "Daoai Laser Camera"
+msgstr ""
+
+#: ../hardware/camera/Laser.rst:10
+msgid "Connect the camera via Webpage"
+msgstr ""
+
+#: ../hardware/camera/Laser.rst:13
+msgid "Config camera from webpage"
+msgstr ""
+
+#: ../hardware/camera/Mini.rst:2
+msgid "Daoai Mini Camera"
+msgstr ""
+
+#: ../hardware/camera/Mini.rst:6
+msgid ""
+"On the front, there are three lenses. Two of them are for image capture "
+"and the middle lense is for IR projection. RGB module is an additional "
+"components on certain modules like D455. Two small holes bounded by white"
+" rectangle are for depth detection."
+msgstr ""
+
+#: ../hardware/camera/Mini.rst:11
+msgid ""
+"On the back, the USB-C connector on the side of the camera is for "
+"connection to PC. Two whole on the back of the camera are for mounting "
+"purpose."
+msgstr ""
+
+#: ../hardware/camera/Mini.rst:16
+msgid ""
+"Make sure you are connecting to a USB-3 port that is integrated on the "
+"motherboard. If you are connecting to the front panel that is connected "
+"indirectly to the motherboard, you might lack power supply when you "
+"capture."
+msgstr ""
+
+#: ../hardware/camera/Mini.rst:18
+msgid ""
+"The RealSense D400 series cameras will function when recognized as USB 2 "
+"and also when connected to USB 2 ports. However, there is limited support"
+" for USB 2."
+msgstr ""
+
+#: ../hardware/camera/Mini.rst:28
+msgid ""
+"In the New Project dialog, you can name the project and select the file "
+"location, then press “ok”."
+msgstr ""
+
+#: ../hardware/camera/Mini.rst:33
+msgid ""
+"Once you finished creating the new project, on the top menu bar click the"
+" ``Platform`` -> ``Platform config`` to config the camera."
+msgstr ""
+
+#: ../hardware/camera/Mini.rst:35
+msgid ""
+"There are three categories are listed on the left side of the Platform "
+"Config Window and the selected catogory will be highlighted by a vertical"
+" blue bar. You can add cameras in Camera catogory by pressing the “+” "
+"button."
+msgstr ""
+
+#: ../hardware/camera/Mini.rst:44
+msgid ""
+"Under the Type, click the Dropdown list to see the options and add a "
+"DaoAI Mini Camera by selecting it and clicking the Accept button. A new "
+"dialog will pop up for configuring the mini camera. You can load the cfg "
+"file saved from the studio into the “Load Settings Path” as the setting "
+"used for configuring the camera node in the Vision software. To delete "
+"the camera, you can click on the camera and press the trash bin icon to "
+"delete it."
+msgstr ""
+
+#: ../hardware/camera/Mini.rst:49
+msgid ""
+"To add a camera, you can press the “Updated Camera List”, then press the "
+"blank box on the left to discover if the camera's serial number has been "
+"updated. If the number pops up, you can select the camera by clicking it."
+" The load Setting Path function allows you to load the mini camera config"
+" file (not the .cfg one that ds camera use) to enhance the image quality."
+" You can also active high accuracy mode here. Then, press the “Connect” "
+"button to connect the camera with other nodes."
+msgstr ""
+
+#: ../hardware/camera/Mini.rst:51
+msgid ""
+"``High Accuracy Mode`` will limit the point cloud generated in the way of"
+" filtering the points having lower confidence. Thus if ``High Accuracy "
+"Mode`` is enabled, the point cloud generated will be less condense."
+msgstr ""
+
+#: ../hardware/camera/Mini.rst:58
+msgid ""
+"To generate virtual camera files, you can simply check the ``Save camera "
+"data`` checkbox in the Camera Configuration window. Every time ``Camera``"
+" node runs, it will save the virtual camera file to your destination "
+"folder as .dmf format."
+msgstr ""
+
+#: ../hardware/camera/Mini.rst:63
+msgid ""
+"You can load dmf files that were generated from the previous step as the "
+"camera input. To do so, you need to check the ``Virtual Camera`` "
+"checkbox, and choose the loading option to load the dmf files. You can "
+"either iterate every single .dmf through a folder or just load a single "
+"dmf file. Then press the “Connect” button to connect the virtual camera."
+msgstr ""
+
+#: ../hardware/camera/Mini.rst:90
+msgid "USB connection"
+msgstr ""
+
+#: ../hardware/camera/Mini.rst:92
+msgid ""
+"You must use a USB-3 -- USB-C connection wire in order for the camera to "
+"run properly. If you still have connection problems try the following "
+"workarounds."
+msgstr ""
+
+#: ../hardware/camera/Mini.rst:94
+msgid "Unplug the camera and plug it back in quickly."
+msgstr ""
+
+#: ../hardware/camera/Mini.rst:95
+msgid "Connect the cable to the camera side first then to the host second."
+msgstr ""
+
+#: ../hardware/camera/Mini.rst:96
+msgid "Reverse the orientation of the C-Type connector to the camera."
+msgstr ""
+
+#: ../hardware/camera/Mini.rst:97
+msgid ""
+"Plug in the camera to other PCs with USB 3 ports and plug it back into "
+"the original PC."
+msgstr ""
+
+#: ../hardware/camera/Mini.rst:100
+msgid "Image quality"
+msgstr ""
+
+#: ../hardware/camera/Mini.rst:102
+msgid ""
+"Since Mini Camera is using binocular stereo vision, it has a valid depth "
+"range where both of the imager can capture the scene. If the camera is "
+"too close to the scene, it is not able to generate valid depth "
+"information of the scene."
+msgstr ""
+
+#: ../hardware/camera/Mini.rst:107
+msgid ""
+"Here's an example of bad point cloud quality due to short distance "
+"between camera and scene."
+msgstr ""
+
+#: ../hardware/camera/USB3.rst:2
+msgid "Daoai USB3 Camera"
+msgstr ""
+
+#: ../hardware/camera/USB3.rst:18
+msgid "Camera Driver"
+msgstr ""
+
+#: ../hardware/camera/index.rst:2
+msgid "Cameras"
+msgstr ""
+
+#: ../hardware/camera/index.rst:4
+msgid "DaoAI Vision Studio support multiple types of cameras."
+msgstr ""
+
+#: ../hardware/camera/index.rst:6
+msgid ""
+"DaoAI Camera: This is our high precision structured light camera, the "
+"precision of this camera can be up to 0.02mm."
+msgstr ""
+
+#: ../hardware/camera/index.rst:7
+msgid ""
+"DaoAI Mini Camera: This is a cost-effective and light camera, which "
+"usually have the precision for few mm."
+msgstr ""
+
+#: ../hardware/camera/index.rst:8
+msgid ""
+"DaoAI Laser Camera: This is a laser profile camera, which is super "
+"suitable for moving objects recognition on conveyor."
+msgstr ""
+
+#: ../hardware/camera/index.rst:9
+msgid ""
+"DaoAI Gige & USB3 Camera: This is a industrial 2D camera. We provide "
+"multiple different models."
+msgstr ""
+
+#: ../hardware/index.rst:2
+msgid "Hardware"
+msgstr ""
+
+#: ../hardware/index.rst:5
+msgid "This section covers the hardware components for the whole system."
+msgstr ""
+
+#: ../hardware/robot/ABB.rst:2
+msgid "ABB-Robot"
+msgstr ""
+
+#: ../hardware/robot/Images/overview.rst:2
+msgid "Make the snapshot"
+msgstr ""
+
+#: ../hardware/robot/Images/overview.rst:5
+msgid "Hello"
+msgstr ""
+
+#: ../hardware/robot/UR.rst:2
+msgid "UR-Robot"
+msgstr ""
+
+#: ../hardware/robot/UR.rst:3
+msgid ""
+"**Vision** is integrated with Universal Robots (UR). In the example, the "
+"robot is **UR5**. Other types of **UR** are also similar, might have "
+"slightly different, please check carefully if your **UR** is different "
+"version."
+msgstr ""
+
+#: ../hardware/robot/cali.rst:2 ../hardware/robot/cali_pro.rst:2
+msgid "Calibration Program"
+msgstr ""
+
+#: ../hardware/robot/cali.rst:4
+msgid ""
+"This is the generic logic of Calibration for all kinds of robot. If you "
+"want to see Calibration of individual robot, you can go to Different type"
+" of Robots to find the specific Calibration program under the robot page."
+msgstr ""
+
+#: ../hardware/robot/cali.rst:7
+msgid ""
+"The Calibration programs and VMPlayer are `in here "
+"<https://drive.google.com/file/d/1e8qJSOhm25ZiUAlJgulAEamDqmwYkx6s/view?usp=sharing>`_."
+" Details for UR Calibration program is in `here <https://daoai-robotics-"
+"inc-daoai-vision-user-manual.readthedocs-"
+"hosted.com/en/latest/hardware/robot/cali_pro.html>`_."
+msgstr ""
+
+#: ../hardware/robot/cali.rst:12
+msgid "Calibration process needs some setup beforehand:"
+msgstr ""
+
+#: ../hardware/robot/cali.rst:11
+msgid ""
+"Calibration Tool: Calibration Chessboard or Calibration Ball installed on"
+" robot arm;"
+msgstr ""
+
+#: ../hardware/robot/cali.rst:12
+msgid ""
+"Calibration Pose: According to different Calibration types, you would "
+"need to setup 1 or more waypoints;"
+msgstr ""
+
+#: ../hardware/robot/cali.rst:14 ../hardware/robot/pick.rst:15
+msgid "In pseudo code:"
+msgstr ""
+
+#: ../hardware/robot/cali_pro.rst:4
+msgid ""
+"This page is about **Universal Robot** (alias as UR) specific instruction"
+" of Calibration. Please make sure you have read `Installation and Setup "
+"<https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-"
+"hosted.com/en/latest/hardware/robot/ur_setup.html>`_ and `Calibration "
+"<https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-"
+"hosted.com/en/latest/hardware/robot/cali_pro.html>`_."
+msgstr ""
+
+#: ../hardware/robot/cali_pro.rst:7
+msgid ""
+"The Calibration programs in default DaoAI package is ready to use. If you"
+" do not plan to change the Calibration process flow, we recommend to "
+"leave the program as it is. If you decided to modify the program, please "
+"make sure it matches the communication protocols with DaoAI Vision side. "
+"For detail of communication details please see `Socket <https://daoai-"
+"robotics-inc-daoai-vision-user-manual.readthedocs-"
+"hosted.com/en/latest/hardware/robot/socket.html>`_ and `Communication "
+"Flow <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-"
+"hosted.com/en/latest/hardware/robot/comm.html>`_ ."
+msgstr ""
+
+#: ../hardware/robot/cali_pro.rst:10
+msgid ""
+"The goal of Calibration is to confirm the relation between Robot Base and"
+" Camera(Camera to Base)."
+msgstr ""
+
+#: ../hardware/robot/cali_pro.rst:18
+msgid "Different Calibration Programs"
+msgstr ""
+
+#: ../hardware/robot/cali_pro.rst:21 ../hardware/robot/comm.rst:8
+msgid "Manual Calibration"
+msgstr ""
+
+#: ../hardware/robot/cali_pro.rst:23 ../hardware/robot/pick_pro.rst:12
+msgid ""
+"First of all, we opens up the Manual_Calibration.urp, connect robot with "
+"**Vision**."
+msgstr ""
+
+#: ../hardware/robot/cali_pro.rst:35 ../hardware/robot/cali_pro.rst:79
+#: ../hardware/robot/pick_pro.rst:23
+msgid "The program flow would looks like this:"
+msgstr ""
+
+#: ../hardware/robot/cali_pro.rst:45
+msgid ""
+"In this Manual Calibration sample program, robot opens socket connecting "
+"to **Vision**, traverse all the waypoints, then ends Calibration process "
+"and close the socket. In pseudo code:"
+msgstr ""
+
+#: ../hardware/robot/cali_pro.rst:66 ../hardware/robot/comm.rst:57
+msgid "Auto Calibration"
+msgstr ""
+
+#: ../hardware/robot/cali_pro.rst:67
+msgid "Opening up the Auto_Calibration.urp, connect robot with **Vision**."
+msgstr ""
+
+#: ../hardware/robot/cali_pro.rst:86
+msgid ""
+"In this Auto Calibration sample program, robot opens socket connecting to"
+" **Vision**, sending message to **Vision** to confirm Auto Calibration "
+"process."
+msgstr ""
+
+#: ../hardware/robot/cali_pro.rst:88
+msgid ""
+"Repeat: UR sends the current pose to **Vision**; **Vision** accumulates "
+"the pose then calculates and replies back the next pose to UR; then UR "
+"moves to next pose;"
+msgstr ""
+
+#: ../hardware/robot/cali_pro.rst:90
+msgid ""
+"Until **Vision** has collected enough poses, it sends a stop signal to UR"
+" terminating the Auto Calibration process. UR closes the socket. In "
+"pseudo code:"
+msgstr ""
+
+#: ../hardware/robot/cali_pro.rst:104
+msgid "The Waypoints"
+msgstr ""
+
+#: ../hardware/robot/cali_pro.rst:106
+msgid ""
+"Waypoints are important for the Calibration output. If the waypoints are "
+"not good, the Calibration output would have large error. Which would "
+"affect the detection pose results and robot might not be able to pick."
+msgstr ""
+
+#: ../hardware/robot/cali_pro.rst:108
+msgid ""
+"Waypoint locations should try to follow the clockwise or counter-"
+"clockwise direction within camera scene. The first waypoint can be at the"
+" middle(Or anywhere you could remember). Then central top, central top to"
+" the right......until the waypoint can form a circle to produce enough "
+"poses. Each waypoints should have slightly tilt and rotation. Try to keep"
+" tilting degree small, and rotate around the wrists."
+msgstr ""
+
+#: ../hardware/robot/cali_pro.rst:111
+msgid ""
+"For details of Calibration waypoints, you can check out this `article "
+"<TODO>`_.TODO"
+msgstr ""
+
+#: ../hardware/robot/cali_pro.rst:114
+msgid ""
+"Guidance Calibration and Auto Calibration only needs to setup the first "
+"waypoint. For Guidance Calibration and Auto Calibration, first waypoint "
+"should always be the central location."
+msgstr ""
+
+#: ../hardware/robot/cali_pro.rst:119
+msgid "This is the sample central waypoint."
+msgstr ""
+
+#: ../hardware/robot/cali_pro.rst:124
+msgid "Execute the Program"
+msgstr ""
+
+#: ../hardware/robot/cali_pro.rst:126
+msgid ""
+"Click ``Run`` on both **Vision** and UR, now you should see the robot "
+"moves to different poses, Camera captures and **Vision** accumulates the "
+"data. You just need to sit back and relax, wait for it to be done!"
+msgstr ""
+
+#: ../hardware/robot/cali_pro.rst:129
+msgid ""
+"Even though you can sit back and relax, but remember to MONITOR the robot"
+" movement!!! Do NOT hit anything!!!"
+msgstr ""
+
+#: ../hardware/robot/comm.rst:2
+msgid "Communication Flow"
+msgstr ""
+
+#: ../hardware/robot/comm.rst:5
+msgid "Calibration"
+msgstr ""
+
+#: ../hardware/robot/comm.rst:10
+msgid "The flow of Manual Calibration is like followed:"
+msgstr ""
+
+#: ../hardware/robot/comm.rst:12
+msgid "Setup all the waypoints in the program."
+msgstr ""
+
+#: ../hardware/robot/comm.rst:14
+msgid ""
+"Robot sends ``RC_START_MANUAL_CALIBRATION`` initiating the manual "
+"calibration mode."
+msgstr ""
+
+#: ../hardware/robot/comm.rst:16
+msgid ""
+"Vision replies ``DAOAI_MODE_CALIBRATION`` acknowledge the manual "
+"calibration mode."
+msgstr ""
+
+#: ../hardware/robot/comm.rst:18
+msgid ""
+"4. Robot sends ``RC_MANUAL_ACCUMULATE_POSE`` and requests **Vision**  to "
+"enter accumulate mode, accumulates the poses and images for calibration. "
+"Then **Vision** replies ``DAOAI_MODE_CALIBRATION`` to continue manual "
+"calibration, robot moves to next waypoint."
+msgstr ""
+
+#: ../hardware/robot/comm.rst:21
+msgid ""
+"After robot traversed all the waypoints, robot will send "
+"``RC_STOP_MANUAL_CALIBRATION`` to exits **Vision** from manual "
+"calibration mode."
+msgstr ""
+
+#: ../hardware/robot/comm.rst:29
+msgid "Guidance Calibration"
+msgstr ""
+
+#: ../hardware/robot/comm.rst:31
+msgid "The flow of Guidance Calibration is like followed:"
+msgstr ""
+
+#: ../hardware/robot/comm.rst:33
+msgid "Setup the first calibration pose."
+msgstr ""
+
+#: ../hardware/robot/comm.rst:35
+msgid ""
+"Robot sends ``RC_GUIDANCE_CALIBRATION`` to request start of Guidance "
+"Calibration."
+msgstr ""
+
+#: ../hardware/robot/comm.rst:37
+msgid ""
+"**Vision** collects the first pose then calculate and show the next "
+"recommended calibration pose."
+msgstr ""
+
+#: ../hardware/robot/comm.rst:39
+msgid ""
+"Robot would be manually moved to the recommended pose, then collect this "
+"pose with ``RC_GUIDANCE_CALIBRATION`` command to **Vision** ."
+msgstr ""
+
+#: ../hardware/robot/comm.rst:41
+msgid ""
+"Based on the pose sent back from robot, **Vision** will calculate and "
+"decide if it is a good pose:"
+msgstr ""
+
+#: ../hardware/robot/comm.rst:43
+msgid ""
+"if this pose is acceptable, **Vision** sends "
+"``DAOAI_GUIDANCE_CALIBRATION_GOOD`` as well as showing the next "
+"recommended pose for you;"
+msgstr ""
+
+#: ../hardware/robot/comm.rst:45
+msgid ""
+"if this pose is not good enough, **Vision** would recalculate the current"
+" pose then output the recalculated pose showing to you, you should move "
+"to this pose then repeat the calculation;"
+msgstr ""
+
+#: ../hardware/robot/comm.rst:47
+msgid ""
+"Repeats tje 4-5 step until **Vision** has collected enough poses to "
+"perform final calibration."
+msgstr ""
+
+#: ../hardware/robot/comm.rst:49
+msgid ""
+"After the accumulations, **Vision** sends "
+"``DAOAI_DONE_GUIDANCE_CALIBRATION`` to terminate Guidance Calibration "
+"process on robot."
+msgstr ""
+
+#: ../hardware/robot/comm.rst:59
+msgid "The flow of Auto Calibration is like followed:"
+msgstr ""
+
+#: ../hardware/robot/comm.rst:61
+msgid "Setup the first calibration pose"
+msgstr ""
+
+#: ../hardware/robot/comm.rst:63
+msgid ""
+"Robot sends ``RC_START_AUTO_CALIBRATION`` to initiate the calibration "
+"process, **Vision** replies ``DAOAI_MODE_AUTO_CALIBRATION`` to enter Auto"
+" Calibration process. This command also sends the current pose to "
+"**Vision**."
+msgstr ""
+
+#: ../hardware/robot/comm.rst:65
+msgid ""
+"Robot follows this status, it sends back the pose(after moving to the "
+"calibration pose) and command ``RC_ACCUMULATE_POSE`` to **Vision** . "
+"**Vision** will collect this pose and calculate the next calibration "
+"mode, replies ``DAOAI_MODE_AUTO_CALIBRATION`` and the calculated pose."
+msgstr ""
+
+#: ../hardware/robot/comm.rst:67
+msgid ""
+"Repeating step 4 until **Vision** has collected enough poses for "
+"calibration result. Then, **Vision** sends "
+"``DAOAI_DONE_AUTO_CALIBRATION`` to terminate the Auto Calibration process"
+" at robot side."
+msgstr ""
+
+#: ../hardware/robot/comm.rst:75
+msgid "Picking"
+msgstr ""
+
+#: ../hardware/robot/comm.rst:77
+msgid "The flow of picking process is like followed:"
+msgstr ""
+
+#: ../hardware/robot/comm.rst:79
+msgid ""
+"Setup the detection pose. When the camera is capturing image, robot needs"
+" to stay outside of the scene. Hence, this pose is where the robot should"
+" be when camera is capturing the image."
+msgstr ""
+
+#: ../hardware/robot/comm.rst:81
+msgid ""
+"Robot sends ``RC_DAOAI_CAPTURE_AND_PROCESS`` to initiating the start of "
+"picking process, this is acknowledge stage. **Vision** replies back "
+"``DAOAI_DETECTION`` to inform it is at picking process."
+msgstr ""
+
+#: ../hardware/robot/comm.rst:83
+msgid ""
+"3. Robot sends ``RC_DAOAI_GET_NEXT_OBJECT`` to request the detection "
+"results from **Vision** . Based on the detection results, there are 3 "
+"possibilities from the detection: image capture failed, no objects "
+"detected on scene and objects found. So that, **Vision** has 3 status to "
+"reply: ``DAOAI_NO_IMAGE_CAPTURED`` , ``DAOAI_NO_OBJECT_FOUND`` and  "
+"``DAOAI_OBJECTS_FOUND`` respectively."
+msgstr ""
+
+#: ../hardware/robot/comm.rst:86
+msgid "According to **Vision** replies, robot would perform picking:"
+msgstr ""
+
+#: ../hardware/robot/comm.rst:88
+msgid ""
+"When **Vision** has failed capturing image, robot holds still and sends "
+"``RC_DAOAI_GET_NEXT_OBJECT`` to request detection again, and repeats;"
+msgstr ""
+
+#: ../hardware/robot/comm.rst:90
+msgid ""
+"When **Vision** cannot detect any objects, robot holds still and sends "
+"``RC_DAOAI_GET_NEXT_OBJECT`` to request detection again, and repeats;"
+msgstr ""
+
+#: ../hardware/robot/comm.rst:92
+msgid ""
+"When **Vision** detected objects in scene, robot will receive the pose, "
+"and robot performs picking. Then, robot moves back to detection pose.The "
+"replies from **Vision** contains ``payload_`` which represents the number"
+" of remaining objects in scene. Then robot sends back "
+"``RC_DAOAI_GET_NEXT_OBJECT`` waiting for next object pose, and repeats;"
+msgstr ""
+
+#: ../hardware/robot/indep.rst:7
+msgid "Type of Interface"
+msgstr ""
+
+#: ../hardware/robot/indep.rst:2
+msgid "Robot Independent"
+msgstr ""
+
+#: ../hardware/robot/indep.rst:4
+msgid ""
+"This section is about different robots and **Vision**. Robot is "
+"independent to **Vision** while they communicate through the designated "
+"interface. The Application Programming Interface layer is what the robot "
+"programmer interacts with."
+msgstr ""
+
+#: ../hardware/robot/index.rst:2
+msgid "Robots"
+msgstr ""
+
+#: ../hardware/robot/index.rst:4
+msgid ""
+"This section is about different robots and **Vision**. Robot is "
+"independent to Vision while they communicate through the designated "
+"interface. The Application Programming Interface layer is what the robot "
+"programmer interacts with."
+msgstr ""
+
+#: ../hardware/robot/interface.rst:9
+msgid "Links below to API usage examples:"
+msgstr ""
+
+#: ../hardware/robot/interface.rst:2
+msgid "The Vision Interface"
+msgstr ""
+
+#: ../hardware/robot/interface.rst:4
+msgid ""
+"The Vision Interface has some variables and functions to communicate "
+"between **Vision** and robot. This interface should be able to "
+"communicate with different type of robots, no matter what language the "
+"robot is scripting in."
+msgstr ""
+
+#: ../hardware/robot/interface.rst:7
+msgid "These are the examples:"
+msgstr ""
+
+#: ../hardware/robot/interface.rst:15
+msgid ""
+"This article assumes an existing implementation of the `socket "
+"communication <https://daoai-robotics-inc-daoai-vision-user-manual"
+".readthedocs-hosted.com/en/latest/hardware/robot/socket.html>`_ layer."
+msgstr ""
+
+#: ../hardware/robot/interface.rst:18
+msgid "Variables"
+msgstr ""
+
+#: ../hardware/robot/interface.rst:21
+msgid "Global Common Variables"
+msgstr ""
+
+#: ../hardware/robot/interface.rst:23
+msgid "daoai_socket_name"
+msgstr ""
+
+#: ../hardware/robot/interface.rst:23
+msgid "This is the name if socket which is \"daoai\" at all time."
+msgstr ""
+
+#: ../hardware/robot/interface.rst:25
+msgid "daoai_tcp_pose"
+msgstr ""
+
+#: ../hardware/robot/interface.rst:25
+msgid ""
+"This variable is a vector which contains position and rotation "
+"p[0,0,0,0,0,0,0]."
+msgstr ""
+
+#: ../hardware/robot/interface.rst:29
+msgid ""
+"TCP pose vector contains the positions x, y, z and rotations(different "
+"robot uses different length of this vector, for example, **UR** uses 6 of"
+" them; **ABB** uses 7 of them)."
+msgstr ""
+
+#: ../hardware/robot/interface.rst:32
+msgid "Vision Variable"
+msgstr ""
+
+#: ../hardware/robot/interface.rst:34
+msgid "daoai_status"
+msgstr ""
+
+#: ../hardware/robot/interface.rst:34
+msgid "This variable is the command from **Vision**."
+msgstr ""
+
+#: ../hardware/robot/interface.rst:37
+msgid ""
+"**daoai_object_type & daoai_remaining_obj & daoai_payload**: These are "
+"the 6 payloads of **Vision** replies. ``daoai_object_type`` is referred "
+"to ``payload_1`` , ``daoai_remaining_obj`` is ``payload_2`` , "
+"``daoai_payload_x`` are referred payload -> 3, 4, 5, 6."
+msgstr ""
+
+#: ../hardware/robot/interface.rst:40
+msgid ""
+"Robot is able to check this variable after receiving message from "
+"**Vision** . The status essential in communication since it is to "
+"determine which process **Vision** is currently in. It also represents "
+"the result from previous command. For example, if robot is under picking "
+"mode, robot requests the objects location, **Vision** has different reply"
+" based on its detection results: object found, object not found and image"
+" capture failure. Hence, this status is important to determine the "
+"current process between **Vision** and robot."
+msgstr ""
+
+#: ../hardware/robot/interface.rst:47
+msgid "Robot Variable"
+msgstr ""
+
+#: ../hardware/robot/interface.rst:49
+msgid "payload_1 & payload_2"
+msgstr ""
+
+#: ../hardware/robot/interface.rst:49
+msgid "These are the payloads of the message."
+msgstr ""
+
+#: ../hardware/robot/interface.rst:51
+msgid "daoai_r_command"
+msgstr ""
+
+#: ../hardware/robot/interface.rst:51
+msgid "This variable is the command from robot."
+msgstr ""
+
+#: ../hardware/robot/interface.rst:54
+msgid ""
+"Robot sends command with/without poses to **Vision** , according to this "
+"command, **Vision** is able to determine what is the message and how to "
+"process this message. This is useful when robot is running on different "
+"script with ``Vsion`` flowchart: if robot is trying to perform "
+"calibration waypoints, but **Vision** is trying to detect object and "
+"perform picking; their commands are different in this communication. So "
+"that robot is able to detect the pose sent back from **Vision** is in "
+"wrong process. This is able to protect unexpected errors and collision."
+msgstr ""
+
+#: ../hardware/robot/interface.rst:58
+msgid ""
+"For more details about these commands, please see `Socket Communication "
+"<https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-"
+"hosted.com/en/latest/hardware/robot/socket.html>`_."
+msgstr ""
+
+#: ../hardware/robot/interface.rst:61
+msgid "Functions"
+msgstr ""
+
+#: ../hardware/robot/interface.rst:63
+msgid ""
+"All functions below are request to **Vision**, the communication is one "
+"send and one recv."
+msgstr ""
+
+#: ../hardware/robot/interface.rst:65
+msgid ""
+"These are the system functions, do **NOT** directly call these functions "
+"even if you need to modify the script!"
+msgstr ""
+
+#: ../hardware/robot/interface.rst:121
+msgid "These are the functions mainly for Manual Calibration process."
+msgstr ""
+
+#: ../hardware/robot/interface.rst:166
+msgid "These are the functions mainly for Guidance Calibration process."
+msgstr ""
+
+#: ../hardware/robot/interface.rst:185
+msgid "These are the functions mainly for Auto Calibration process."
+msgstr ""
+
+#: ../hardware/robot/interface.rst:229
+msgid "These are the functions mainly for Picking process."
+msgstr ""
+
+#: ../hardware/robot/other.rst:2
+msgid "Virtual Testing"
+msgstr ""
+
+#: ../hardware/robot/other.rst:4
+msgid ""
+"Virtual testing is essential before testing the project workspace in real"
+" robot. This step could help to ensure **Vision** does not send the wrong"
+" (dangerous) poses to robot. It is to verified the workspace correctness "
+"as well as to ensure the safety of users and hardware. The following "
+"virtual robots are good  for virtual testing:"
+msgstr ""
+
+#: ../hardware/robot/other.rst:9
+msgid "Hercules"
+msgstr ""
+
+#: ../hardware/robot/other.rst:11
+msgid ""
+"Hercules is effective for functionality testing of the workspace. "
+"Hercules is easy to use, faster responsive for communication between "
+"**Vision** and Hercules."
+msgstr ""
+
+#: ../hardware/robot/other.rst:19 ../hardware/robot/other.rst:156
+msgid "Connection"
+msgstr ""
+
+#: ../hardware/robot/other.rst:21
+msgid "First of all, we need to connect **Vision** and Hercules."
+msgstr ""
+
+#: ../hardware/robot/other.rst:23
+msgid ""
+"On **Vision** side, open ``Platform Configuration`` , choose ``Robot`` "
+"option. Following the image below, select ``Other`` as Robot type, then "
+"click ``+`` ."
+msgstr ""
+
+#: ../hardware/robot/other.rst:29 ../hardware/robot/other.rst:166
+msgid "Then, you should see the config page like below:"
+msgstr ""
+
+#: ../hardware/robot/other.rst:35 ../hardware/robot/other.rst:174
+msgid ""
+"Port number can be modified to any number, this would be useful when "
+"connecting multiple robots. You can leave it as ``6969`` when only "
+"connecting to 1 robot."
+msgstr ""
+
+#: ../hardware/robot/other.rst:38
+msgid ""
+"Select the option ``Use String`` for Hercules, since Hercules is sending "
+"a String to **Vision**  to simulate the real robot communication."
+msgstr ""
+
+#: ../hardware/robot/other.rst:44
+msgid ""
+"On Hercules side, select ``TCP Client`` , make sure the Module IP and "
+"Port is correct: ``127.0.0.1`` represents self, the current pc which the "
+"same as Hercules; Port is defined from **Vision** side, connecting with "
+"correct Port number. Then click ``Connect`` ."
+msgstr ""
+
+#: ../hardware/robot/other.rst:47
+msgid ""
+"The red box is the messages templates which would be sent to **Vision** "
+"while connection is established."
+msgstr ""
+
+#: ../hardware/robot/other.rst:50 ../hardware/robot/other.rst:212
+msgid "Communication"
+msgstr ""
+
+#: ../hardware/robot/other.rst:52
+msgid ""
+"Communications require requests and responses. **Vision** is the "
+"communication ``Server`` and Hercules is ``Client`` in this "
+"communication. Hence, **Vision** would always wait for a ``Robot Read`` "
+"before ``Robot Write`` , without requests from client, server would not "
+"send anything to client side."
+msgstr ""
+
+#: ../hardware/robot/other.rst:59
+msgid ""
+"These 2 nodes are the main communication nodes between **Vision** and "
+"Hercules. ``Robot Read`` would always wait for requests from Hercules, "
+"without any requests, the flowchart would be waiting at ``Robot Read`` "
+"until requests come in. You also able to set a Time Out for this node, it"
+" could be helpful when there is connection issue between **Vision** and "
+"Hercules."
+msgstr ""
+
+#: ../hardware/robot/other.rst:66
+msgid ""
+"Hercules sends a string to **Vision** . Console would shows the details "
+"of this request. The fifth index of this message is the ``command`` of "
+"this request. Different ``command`` has different meanings to **Vision** "
+", it tells **Vision** what kind of operations robot is working on, as "
+"well as the status of previous response. The next indexes after "
+"``command`` is ``playload_1`` and ``payload_2`` ."
+msgstr ""
+
+#: ../hardware/robot/other.rst:73
+msgid "**Vision** would response to Hercules with ``Robot Write`` ."
+msgstr ""
+
+#: ../hardware/robot/other.rst:79
+msgid "The setting details are below:"
+msgstr ""
+
+#: ../hardware/robot/other.rst:81
+msgid ""
+"Status is important, it is the response command to robot, which tells "
+"robot what is the next operation."
+msgstr ""
+
+#: ../hardware/robot/other.rst:83
+msgid ""
+"2. Pose Object is the pose which robot should perform. During Picking "
+"process, **Vision** would combine the object coordinates and picking pose"
+" in to this object, sending it to robot in order to perform picking. If "
+"we want the robot holds still, only transmitting command and payloads: we"
+" could send back the pose which is read from ``Robot Read`` , the robot "
+"will stays still."
+msgstr ""
+
+#: ../hardware/robot/other.rst:86
+msgid ""
+"Processing time is the ``payload_1`` for robot, Geometry type is "
+"``payload_2`` ."
+msgstr ""
+
+#: ../hardware/robot/other.rst:88
+msgid ""
+"This is optional if you want to print message on the console window, put "
+"down the message here."
+msgstr ""
+
+#: ../hardware/robot/other.rst:96
+msgid "VMware UR Robot"
+msgstr ""
+
+#: ../hardware/robot/other.rst:98
+msgid ""
+"Using virtual machine to simulate UR robot with **Vision** is another way"
+" to test the workspace virtually. This test can be able to run the "
+"workspace closer to real world condition, which is essential before "
+"delivering."
+msgstr ""
+
+#: ../hardware/robot/other.rst:104
+msgid ""
+"VMware is free to download online, we use ``VMware Workstation 16 "
+"player`` in this document. Download and install it. It might require to "
+"change the BIOS setting in order to have it working."
+msgstr ""
+
+#: ../hardware/robot/other.rst:106
+msgid ""
+"`DaoAI UR Simulation Pack <https://daoairoboticsinc-"
+"my.sharepoint.com/:f:/g/personal/jwu_daoai_com/En0MYNHWVdpCopwbz8aSsYwBFROTh4Qqrd6Zrep9fh3f1A?e=JJWH3u>`_"
+msgstr ""
+
+#: ../hardware/robot/other.rst:112
+msgid "After setup should looks like this."
+msgstr ""
+
+#: ../hardware/robot/other.rst:114
+msgid ""
+"In our example, we use UR5 robot to perform the testing, for details of "
+"operation UR:  `UR-Robot <https://daoai-robotics-inc-daoai-vision-user-"
+"manual.readthedocs-hosted.com/en/latest/hardware/robot/UR.html>`_"
+msgstr ""
+
+#: ../hardware/robot/other.rst:120
+msgid ""
+"Click on ``Program Robot`` , you can run the robot simulation as well as "
+"change the program for different purpose. Then ``Load Program`` ."
+msgstr ""
+
+#: ../hardware/robot/other.rst:126
+msgid ""
+"We can see there are many different urp files in this directory. We can "
+"use:"
+msgstr ""
+
+#: ../hardware/robot/other.rst:128
+msgid "Manual_Calibration.urp for cheese board manual calibration;"
+msgstr ""
+
+#: ../hardware/robot/other.rst:134
+msgid "In real world robot, you need to setup all the waypoints for calibration."
+msgstr ""
+
+#: ../hardware/robot/other.rst:136
+msgid "Picking.urp to perform picking test;"
+msgstr ""
+
+#: ../hardware/robot/other.rst:142
+msgid ""
+"In the real world robot, you should change this detection_pose: this is "
+"the robot pose when **Vision** is performing detection process. This pose"
+" should be away from the camera(At lease not blocking the object in "
+"camera), so that camera is able to capture the scene cloud to detect the "
+"objects in scene."
+msgstr ""
+
+#: ../hardware/robot/other.rst:145
+msgid "send_pose.urp to perform pose define."
+msgstr ""
+
+#: ../hardware/robot/other.rst:151
+msgid ""
+"In real world robot, we need to change this waypoint to a correct picking"
+" pose for the object. However, in virtual robot test, this is not "
+"require."
+msgstr ""
+
+#: ../hardware/robot/other.rst:153
+msgid "Note: We will use Picking.urp as sample for the following demo."
+msgstr ""
+
+#: ../hardware/robot/other.rst:158
+msgid "Connecting with VMware robot is similar with Hercules in **Vision** ."
+msgstr ""
+
+#: ../hardware/robot/other.rst:160
+msgid ""
+"On **Vision** side, open ``Platform Configuration`` , choose ``Robot`` "
+"option. Following the image below, select ``UR`` as Robot type, then "
+"click ``+`` ."
+msgstr ""
+
+#: ../hardware/robot/other.rst:172
+msgid ""
+"Click ``Connect`` to connect Virtual UR robot to **Vision** , ``Clear "
+"Buffer`` can clear the existing buffer for **Vision** and Virtual UR "
+"robot."
+msgstr ""
+
+#: ../hardware/robot/other.rst:177
+msgid "On UR side, click on ``Setup Robot`` then select ``Network`` ."
+msgstr ""
+
+#: ../hardware/robot/other.rst:191
+msgid ""
+"Network setting should be ``DHCP`` and use the above IPs. This will "
+"connect to **Vision** ."
+msgstr ""
+
+#: ../hardware/robot/other.rst:193
+msgid ""
+"Then loading the urp file for Calibration, Send pose or Picking. In this "
+"example, we loaded Picking.urp:"
+msgstr ""
+
+#: ../hardware/robot/other.rst:199
+msgid ""
+"Inside of the urp file, we can see there is a field ``daoai_ip`` , select"
+" this field and click on the ``Expression`` ."
+msgstr ""
+
+#: ../hardware/robot/other.rst:205
+msgid ""
+"Change the IP to corresponding IP address. You can check the IP address "
+"in ``cmd`` then enter ``ipconfig`` to check IP address on the PC."
+msgstr ""
+
+#: ../hardware/robot/other.rst:214
+msgid ""
+"Communications require requests and responses. **Vision** is the "
+"communication ``Server`` and Virtual VM robot is ``Client`` in this "
+"communication. Hence, **Vision** would always wait for a ``Robot Read`` "
+"before ``Robot Write`` , without requests from client, server would not "
+"send anything to client side."
+msgstr ""
+
+#: ../hardware/robot/other.rst:221
+msgid ""
+"In this Picking.urp we have all the robot loop through the picking "
+"process and keeps receiving the pose from **Vision** as long as there are"
+" pickable poses."
+msgstr ""
+
+#: ../hardware/robot/other.rst:227
+msgid ""
+"We click on the ``Run`` button on UR and ``Run`` on **Vision** , they "
+"will keep communicating and send/receive as long as the robot script "
+"matches the communications(``Robot Read`` and ``Robot Write`` ) on "
+"**Vision** ."
+msgstr ""
+
+#: ../hardware/robot/pick.rst:2 ../hardware/robot/pick_pro.rst:2
+msgid "Picking Program"
+msgstr ""
+
+#: ../hardware/robot/pick.rst:4
+msgid ""
+"This is the generic logic of picking process for all kinds of robot. If "
+"you want to see Picking of individual robot, you can go to `Different "
+"type of Robots <https://daoai-robotics-inc-daoai-vision-user-manual"
+".readthedocs-hosted.com/en/latest/hardware/robot/index.html>`_ to find "
+"the specific picking program under the robot page."
+msgstr ""
+
+#: ../hardware/robot/pick.rst:6
+msgid ""
+"You can find the picking program `in here "
+"<https://drive.google.com/file/d/1e8qJSOhm25ZiUAlJgulAEamDqmwYkx6s/view?usp=sharing>`_."
+" Details for UR Picking program is in `here <https://daoai-robotics-inc-"
+"daoai-vision-user-manual.readthedocs-"
+"hosted.com/en/latest/hardware/robot/pick_pro.html>`_."
+msgstr ""
+
+#: ../hardware/robot/pick.rst:13
+msgid "Picking process needs some setup and file beforehand:"
+msgstr ""
+
+#: ../hardware/robot/pick.rst:10
+msgid ""
+"Calibration result(.yml file): Picking needs the camera to base relation "
+"in order to correctly output object locations in scene;"
+msgstr ""
+
+#: ../hardware/robot/pick.rst:11
+msgid ""
+"Detection Pose: Robot needs a Detection Pose(a waypoint) which is not "
+"blocking the camera captures. After each picking cycle, robot moves back "
+"here;"
+msgstr ""
+
+#: ../hardware/robot/pick.rst:12
+msgid "Place Locations: Robot needs to place the objects after picking them;"
+msgstr ""
+
+#: ../hardware/robot/pick.rst:13
+msgid ""
+"Gripper grab and loose signal: Robot needs the signal of grabbing objects"
+" as well as loosing off the objects;"
+msgstr ""
+
+#: ../hardware/robot/pick_pro.rst:4
+msgid ""
+"This page is about **Universal Robot** (alias as UR) specific instruction"
+" of picking process. Please make sure you have read `Installation and "
+"Setup <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-"
+"hosted.com/en/latest/hardware/robot/ur_setup.html>`_ and `Picking <https"
+"://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-"
+"hosted.com/en/latest/complete-vision-guidance/picking/overview.html>`_."
+msgstr ""
+
+#: ../hardware/robot/pick_pro.rst:7
+msgid ""
+"The Picking programs in default DaoAI package is ready to use. If you do "
+"not plan to change the picking process flow, we recommend to leave the "
+"program as it is. If you decided to modify the program, please make sure "
+"it matches the communication protocols with DaoAI Vision side. For detail"
+" of communication details please see `Socket <https://daoai-robotics-inc-"
+"daoai-vision-user-manual.readthedocs-"
+"hosted.com/en/latest/hardware/robot/socket.html>`_ and `Communication "
+"Flow <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-"
+"hosted.com/en/latest/hardware/robot/comm.html>`_ ."
+msgstr ""
+
+#: ../hardware/robot/pick_pro.rst:11
+msgid "Program"
+msgstr ""
+
+#: ../hardware/robot/pick_pro.rst:30
+msgid ""
+"In this Picking sample program, robot opens socket connecting to Vision; "
+"camera captures image, **Vision** performs detection, then **UR** "
+"performs picking. In pseudo code:"
+msgstr ""
+
+#: ../hardware/robot/pick_pro.rst:53
+msgid "Execute Picking"
+msgstr ""
+
+#: ../hardware/robot/pick_pro.rst:58
+msgid ""
+"Before picking, **Vision** needs to have a correct relationship between "
+"camera and robot base, **Tool Centre Point** to flange and correct setup."
+msgstr ""
+
+#: ../hardware/robot/pick_pro.rst:57
+msgid ""
+"We need a Calibration result for the current robot base and camera. The "
+"robot base and camera relationship needs to be the same for Calibration "
+"and this picking.(Because we need camera to base relationship in picking,"
+" and Calibration result is the camera to base relationship)"
+msgstr ""
+
+#: ../hardware/robot/pick_pro.rst:58
+msgid "The **Tool Centre Point(TCP)** is correctly set at robot side"
+msgstr ""
+
+#: ../hardware/robot/pick_pro.rst:59
+msgid ""
+"**REDUCE ROBOT SPEED!** This can prevent destructive collision! Monitor "
+"robot movement at all time!"
+msgstr ""
+
+#: ../hardware/robot/pick_pro.rst:64
+msgid "Calibration is required for accurate picking"
+msgstr ""
+
+#: ../hardware/robot/pick_pro.rst:69
+#, python-format
+msgid ""
+"Speed at 100% is pretty quick. While at experimental stage, set the speed"
+" below 30% to observe the robot movement."
+msgstr ""
+
+#: ../hardware/robot/pick_pro.rst:74
+msgid ""
+"TCP setting is in ``Installation`` tab. The green box area is the TCP in "
+"flange relationship, at default, TCP is centre point of flange. Red box "
+"area is the Payload weight, this should set to a correct weight of the "
+"object. If this Payload is larger than object, robot might have "
+"unexpected movement. Hence, **Make Sure TCP** and **Payload** are Set "
+"**Correctly**."
+msgstr ""
+
+#: ../hardware/robot/pick_pro.rst:80
+msgid ""
+"Checking the Visualize node in **Vision** is able to see the virtual "
+"picking pose."
+msgstr ""
+
+#: ../hardware/robot/pick_pro.rst:82
+msgid "Now, you can see the magic of Modern Machine Learning!"
+msgstr ""
+
+#: ../hardware/robot/pick_pro.rst:85
+msgid "Collision Avoidance & Safety Related"
+msgstr ""
+
+#: ../hardware/robot/pick_pro.rst:87
+msgid ""
+"**Vision** has Collision Avoidance feature to prevent collisions. This is"
+" helpful when robot arm is working in tiny area or pick from box. "
+"Collision Avoidance can visualize a box in the sceneto restrict a "
+"collision free are for robot arm."
+msgstr ""
+
+#: ../hardware/robot/pick_pro.rst:90
+msgid ""
+"Robot might have unexpected movement. And due to constrains in real "
+"world(such as tight working space for robot), robot needs to be monitor "
+"in developing and experimental stage. Observe robot behavior until you "
+"ensure the program and work flow is correct."
+msgstr ""
+
+#: ../hardware/robot/pick_pro.rst:93
+msgid ""
+"If robot is about to hit anything, please initiate the Emergency Stop on "
+"UR panel. After Emergency Stop, you should find the issue and fix it "
+"before restart the process."
+msgstr ""
+
+#: ../hardware/robot/socket.rst:2
+msgid "Socket"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:4
+msgid ""
+"The communication between robot and **Vision** is based on low level "
+"interface on TCP/IP socket. TCP provide stable communication protocol, "
+"which is ideal for robot and **Vision** ."
+msgstr ""
+
+#: ../hardware/robot/socket.rst:8
+msgid "Connections"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:16 ../hardware/robot/socket.rst:46
+msgid "Type"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:16
+msgid "TCP/IP socket"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:18
+msgid "Port"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:18
+msgid "6969 (TCP)"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:20
+msgid "Byte order"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:20
+msgid "Network order (big endian)"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:24
+msgid ""
+"Just like the Client-Server pattern, server is waiting for the requests "
+"from client. **Vision** is the server in this case, so the communication "
+"would start from robot. Robot sends a request to **Vision** , this "
+"request should include command and payloads. **Vision** determines the "
+"process by checking command. after processing data on **Vision** side, it"
+" replies back response, this response should include status and payloads."
+" Robot also checks this status, based on this response to preform moving,"
+" picking or holding still."
+msgstr ""
+
+#: ../hardware/robot/socket.rst:30
+msgid ""
+"The IP address of server is the IP of workstation which the **Vision** is"
+" running on. Port number must to identical for robot and **Vision** , "
+"otherwise they will not be able to communicate."
+msgstr ""
+
+#: ../hardware/robot/socket.rst:33
+msgid "Protocols"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:34
+msgid ""
+"Request and responses messages between a robot and **Vision** have a "
+"fixed size. A fixed-size message protocol has the advantage that it is "
+"easy to implement on the robot side, even with limited programming "
+"features."
+msgstr ""
+
+#: ../hardware/robot/socket.rst:38
+msgid ""
+"Even though requests and response are having fix-size length, they do not"
+" have starting and/or ending signals. Robot side is able to compare the "
+"message size to determine the boundaries of each message."
+msgstr ""
+
+#: ../hardware/robot/socket.rst:40
+msgid ""
+"Requests and response are consist of many fields, each fields are ``int32"
+" `` size of 4 bytes. Floats would be multiply with a constant number "
+"``MULT = 10000`` , then sends back as ``int32`` . After that, client side"
+" robot would divide the multifactor to get the data. Negative values "
+"would use one's complement."
+msgstr ""
+
+#: ../hardware/robot/socket.rst:43
+msgid "Request Message"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:46
+msgid "Length"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:46 ../hardware/robot/socket.rst:98
+#: ../hardware/robot/socket.rst:106 ../hardware/robot/socket.rst:117
+#: ../hardware/robot/socket.rst:130 ../hardware/robot/socket.rst:143
+#: ../hardware/robot/socket.rst:161 ../hardware/robot/socket.rst:213
+msgid "Description"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:48
+msgid "Position"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:48
+msgid "int32[3]"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:48
+msgid "12 bytes"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:48
+msgid ""
+"Robot flange position(x,y,z all in metres) in right hand base. Each "
+"position should multiply by MULT factor"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:50
+msgid "Orientation"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:50
+msgid "int32[4]"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:50
+msgid "16 bytes"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:50
+msgid ""
+"Robot flange direction in right hand base representation. Each "
+"Orientation should multiply by MULT factor"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:52
+msgid "Command"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:52
+msgid "int32"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:52
+msgid "4 bytes"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:52
+msgid "Request command"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:54
+msgid "Payload"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:54 ../hardware/robot/socket.rst:56
+msgid "int32[2]"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:54 ../hardware/robot/socket.rst:56
+msgid "8 bytes"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:54
+msgid "Payloads are optional for extra message contents in communication"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:56
+msgid "Meta"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:56
+msgid ""
+"meta_1 is the second last field in a message, sending the type of robot "
+"to Vision; meta_2 is the last field in message, sending the robot "
+"protocol version"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:59
+msgid ""
+"Payloads are optional, this field can put anything. However, the other "
+"fields are mandatory, without these fields the message is not "
+"recognizable by Vision. Command is the main value for vVision to "
+"determine which operations to perform."
+msgstr ""
+
+#: ../hardware/robot/socket.rst:62
+msgid "Response Message"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:79
+msgid "Commands"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:80
+msgid "These are the commands which robot sends to **Vision**:"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:95
+msgid "**RC_START_MANUAL_CALIBRATION**"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:98 ../hardware/robot/socket.rst:106
+#: ../hardware/robot/socket.rst:117 ../hardware/robot/socket.rst:130
+#: ../hardware/robot/socket.rst:143 ../hardware/robot/socket.rst:161
+msgid "Field"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:98 ../hardware/robot/socket.rst:106
+#: ../hardware/robot/socket.rst:117 ../hardware/robot/socket.rst:130
+#: ../hardware/robot/socket.rst:143 ../hardware/robot/socket.rst:161
+msgid "Value"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:100 ../hardware/robot/socket.rst:108
+#: ../hardware/robot/socket.rst:119 ../hardware/robot/socket.rst:132
+#: ../hardware/robot/socket.rst:145 ../hardware/robot/socket.rst:163
+msgid "status"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:100 ../hardware/robot/socket.rst:132
+msgid "DAOAI_MODE_CALIBRATION"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:100
+msgid "Correct Manual Calibration reply, starts the process"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:103
+msgid "**RC_STOP_MANUAL_CALIBRATION**"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:108
+msgid "DAOAI_UNKNOWN_COMMAND"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:108
+msgid "Robot terminates Calibration program"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:111
+msgid ""
+"Robot sends the ending signal of calibration mode, Vision would stop "
+"calibration mode and sends back ``DAOAI_UNKNOWN_COMMAND = -1`` to "
+"acknowledge the termination of calibration mode."
+msgstr ""
+
+#: ../hardware/robot/socket.rst:114
+msgid "**RC_START_AUTO_CALIBRATION**"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:119 ../hardware/robot/socket.rst:145
+msgid "DAOAI_MODE_AUTO_CALIBRATION"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:119
+msgid "Acknowledge and enters accumulate mode"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:122
+msgid ""
+"Robot sends the start signal of auto calibration mode, Vision would "
+"acknowledge the auto calibration mode. Vision would reply "
+"``DAOAI_MODE_AUTO_CALIBRATION = 11`` to acknowledge and enter accumulate "
+"mode. If Vision sends back any other status, it means Vision is under "
+"different process, robot would resends current command and repeat the "
+"above process."
+msgstr ""
+
+#: ../hardware/robot/socket.rst:127
+msgid "**RC_MANUAL_ACCUMULATE_POSE**"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:132 ../hardware/robot/socket.rst:145
+msgid "Accumulate mode"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:135
+msgid ""
+"Robot requests Vision to accumulate and collect images to accumulates "
+"calibration poses. If Vision sends back ``DAOAI_MODE_CALIBRATION = 10``, "
+"it means Vision is under correct process. Else, Vision is under a "
+"different process and robot will sends ``RC_START_MANUAL_CALIBRATION = "
+"1`` to re-acknowledge the calibration process."
+msgstr ""
+
+#: ../hardware/robot/socket.rst:140
+msgid "**RC_AUTO_ACCUMULATE_POSE**"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:147
+msgid "DAOAI_DONE_AUTO_CALIBRATION"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:147 ../hardware/robot/socket.rst:167
+msgid "Collected enough poses, stop Calibration"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:151
+msgid ""
+"Robot requests Vision to accumulate and collect images to accumulates "
+"calibration poses. If Vision sends back ``DAOAI_MODE_AUTO_CALIBRATION = "
+"11``, it means Vision is under correct process. Else if, Vision sends "
+"back ``DAOAI_DONE_AUTO_CALIBRATION = 33``, it means Vision collected "
+"enough poses for calibration mode, this status ends the auto calibration "
+"mode in robot. If Vision replies anything other than 11 or 33, that means"
+" Vision and robot are under different process, robot will resend "
+"``RC_START_AUTO_CALIBRATION = 4`` to restart auto calibration process."
+msgstr ""
+
+#: ../hardware/robot/socket.rst:158
+msgid "**RC_GUIDANCE_CALIBRATION**"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:163
+msgid "DAOAI_GUIDANCE_CALIBRATION_GOOD"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:163
+msgid "Good pose, proceed to next pose"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:165
+msgid "DAOAI_GUIDANCE_CALIBRATION_BAD"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:165
+msgid "Bad pose, adjust the pose"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:167
+msgid "DAOAI_DONE_GUIDANCE_CALIBRATION"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:171
+msgid ""
+"Robot requests Vision to start guidance calibration process. Robot would "
+"keeps sending this command throughout the guidance process. Vision will "
+"start accumulate and collect images to accumulates calibration poses from"
+" the first robot pose. Then based on the first pose, Vision would "
+"calculate and output the next recommended pose; based on these poses, "
+"Vision would reply 12, 13 and 32 according to the calculation: if the "
+"pose is good, Vision replies 12, meaning is able to move to next pose; if"
+" Vision replies 13, it means the pose is not good according to the "
+"calculation; 32 means Vision has collected enough poses to generate "
+"calibration result, terminates the calibration mode in robot. If Vision "
+"replies anything other than the status above, that means Vision and robot"
+" are under different process, robot will resend ``RC_GUIDANCE_CALIBRATION"
+" = 10`` to restart guidance calibration process."
+msgstr ""
+
+#: ../hardware/robot/socket.rst:182
+msgid "**RC_DAOAI_CAPTURE_AND_PROCESS**"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:184
+msgid ""
+"Robot requests the start signal of picking mode, Vision would acknowledge"
+" picking mode. Vision would reply ``DAOAI_DETECTION =  5`` to acknowledge"
+" and enter detection and picking process. If Vision sends back any other "
+"status, it means Vision is under different process, robot would resend "
+"current command and repeat the above process."
+msgstr ""
+
+#: ../hardware/robot/socket.rst:190
+msgid "Response Status"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:192
+msgid "These are the status which robot receive from **Vision**:"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:210
+msgid "Message metadata"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:213
+msgid "Fields"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:215
+msgid "Meta_1"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:215
+msgid "ABB = 0"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:217
+msgid "Fanuc = 1"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:219
+msgid "Hanwha = 2"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:221
+msgid "Kuka = 3"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:223
+msgid "Omron_TM = 4"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:225
+msgid "Siemens_PLC = 5"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:227
+msgid "Staubli = 6"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:229
+msgid "UR = 7"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:231
+msgid "Yaskawa = 8"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:233
+msgid "Efort = 9"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:235
+msgid "Aubo = 10"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:237
+msgid "Dobot = 11"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:239
+msgid "Mitsubishi = 12"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:241
+msgid "Other = 99"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:243
+msgid "Meta_2"
+msgstr ""
+
+#: ../hardware/robot/socket.rst:243
+msgid ""
+"This is the protocol between Vision version and robot version, in this "
+"case meta_2 is 1."
+msgstr ""
+
+#: ../hardware/robot/socket.rst:247
+msgid ""
+"If your robot does not follow the protocols above, Vision would report "
+"errors, and terminates any process in order to protect the robot."
+msgstr ""
+
+#: ../hardware/robot/tcp_setup.rst:2
+msgid "Tool Center Point(TCP)"
+msgstr ""
+
+#: ../hardware/robot/tcp_setup.rst:4
+msgid ""
+"Robot arm can be equipped with many different tools, they are usually "
+"differed in length, shape and functionalities. Therefore, the gripping "
+"point of one tool will be different to another tool. Some relations in "
+"**Vision** requires the Tool Center Point(alias as **TCP** in the "
+"following article) in flange relation. Hence it would be helpful if we "
+"can have the TCP in flange relation from UR."
+msgstr ""
+
+#: ../hardware/robot/tcp_setup.rst:12
+msgid ""
+"In UR installation tab, you can setup the TCP, using UR installation tool"
+" to get the TCP in flange relation. So that, you do not need to work on "
+"the transformations for flange and TCP."
+msgstr ""
+
+#: ../hardware/robot/tcp_setup.rst:17
+msgid ""
+"Clicking on the **Available TCPs** will bring down the list of TCPs "
+"stored in UR. You can add new TCPs by clicking on **New** button. Which "
+"allows you to rename and create a new TCP."
+msgstr ""
+
+#: ../hardware/robot/tcp_setup.rst:24
+msgid "You can also use the **Remove** button to manage your TCPs."
+msgstr ""
+
+#: ../hardware/robot/tcp_setup.rst:26
+msgid ""
+"After creating a new TCP, you can use the **Position** button to define "
+"the waypoints for this TCP."
+msgstr ""
+
+#: ../hardware/robot/tcp_setup.rst:35
+msgid ""
+"Setting up these waypoints can help UR to define the TCP to flange "
+"relation. You should have the tool installed before defining these "
+"waypoints. These waypoints should have a common grip point. For example, "
+"the gripper like below:"
+msgstr ""
+
+#: ../hardware/robot/tcp_setup.rst:42
+msgid ""
+"The TCP should be defined to the top points(the sharp top). The waypoints"
+" should be in different rotations and angles, which all pointing to the "
+"same coordinate. Like the image shown below:"
+msgstr ""
+
+#: ../hardware/robot/tcp_setup.rst:48
+msgid ""
+"The cross is where you want to align all waypoints to. When all waypoints"
+" are pointing to a same location, with different poses and rotations, UR "
+"is able to generate the relation of TCP to flange."
+msgstr ""
+
+#: ../hardware/robot/tcp_setup.rst:55
+msgid ""
+"Therefore, the TCP to flange relation will be displayed in installation "
+"tab."
+msgstr ""
+
+#: ../hardware/robot/tcp_setup.rst:58
+msgid ""
+"After the TCP is created, you should choose the TCP you created as "
+"default in order to use this relation."
+msgstr ""
+
+#: ../hardware/robot/ur_setup.rst:2
+msgid "Installation and Setup"
+msgstr ""
+
+#: ../hardware/robot/ur_setup.rst:6
+msgid "System Setup"
+msgstr ""
+
+#: ../hardware/robot/ur_setup.rst:10
+msgid "Turn on the robot"
+msgstr ""
+
+#: ../hardware/robot/ur_setup.rst:12
+msgid "To turn on the real robot, press the green button on the teaching pendant."
+msgstr ""
+
+#: ../hardware/robot/ur_setup.rst:21
+msgid "Network"
+msgstr ""
+
+#: ../hardware/robot/ur_setup.rst:23
+msgid ""
+"Once you open the program, we would need to configure the network setting"
+" so we can communicate with the robot.  Click on Setup Robot → Network → "
+"select static address and we will change the IP address."
+msgstr ""
+
+#: ../hardware/robot/ur_setup.rst:36
+msgid ""
+"Open the command prompt on your PC, in the command, type “ipconfig” to "
+"check all the available networks on your PC:"
+msgstr ""
+
+#: ../hardware/robot/ur_setup.rst:43
+msgid ""
+"Locate the network you will communicate with your robot. If you are using"
+" the virtual simulation, go find the VMnet8 network (Or other networks "
+"that your VM is using) and copy the IP address and keep the last 3 digits"
+" as 129."
+msgstr ""
+
+#: ../hardware/robot/ur_setup.rst:50
+msgid ""
+"If you are using a real robot, make sure to change your network to a "
+"static IP address by going into Network Connections → Right-click on the "
+"network and click on properties → right click on TCP/IPv4, and change the"
+" IP address."
+msgstr ""
+
+#: ../hardware/robot/ur_setup.rst:57
+msgid "Once the IP address is changed, hit Apply to finish the changes."
+msgstr ""
+
+#: ../hardware/robot/ur_setup.rst:64
+msgid ""
+"In order to make sure your robot is connected, go to the command prompt "
+"and type “ping _ “ where _ would be the IP address you assigned the robot"
+" to. If the message is displayed like the one shown below, then the robot"
+" is connected successfully. If the responses timed out, check if you "
+"typed your IP address correctly as well as the settings."
+msgstr ""
+
+#: ../hardware/robot/ur_setup.rst:72
+msgid "Safety Issue"
+msgstr ""
+
+#: ../hardware/robot/ur_setup.rst:75
+msgid "Moving Speed"
+msgstr ""
+
+#: ../hardware/robot/ur_setup.rst:77
+#, python-format
+msgid ""
+"It is important to note the operating speed of the robot as the robot can"
+" be dangerous when running at a fast speed. Make sure your robot speed is"
+" within the range of 20% speed to reduce the robot operating speed as "
+"well as giving the safety time to recover the robot if something goes "
+"wrong half-way through the operation."
+msgstr ""
+
+#: ../hardware/robot/ur_setup.rst:85
+msgid "Emergency Stop"
+msgstr ""
+
+#: ../hardware/robot/ur_setup.rst:87
+msgid ""
+"If something goes wrong using the UR5 robot during the robot operation, "
+"press the emergency red button located below the power button. To restart"
+" and recover the robot operation, rotate the emergency stop button in the"
+" direction indicated on the button (Clockwise) until it becomes "
+"unpressed. Then repeat the previous set up procedure."
+msgstr ""
+
+#: ../hardware/robot/ur_setup.rst:95
+msgid "Vision and Robot Communication"
+msgstr ""
+
+#: ../hardware/robot/ur_setup.rst:98
+msgid "Load Program"
+msgstr ""
+
+#: ../hardware/robot/ur_setup.rst:100
+msgid ""
+"Once you finished configuring the network, click Back to go back to the "
+"menu and click on Program Robot. Click on Load Program to load the first "
+"program, “get pose.urp”,  in the UR Code folder downloaded previously in "
+"your Program UR5 folder, and then open the program."
+msgstr ""
+
+#: ../hardware/robot/ur_setup.rst:107
+msgid ""
+"Before running the program, you would need to make sure that the robot is"
+" connected to the right IP and port. Go to “Connected==socket_open…” "
+"under chushiconnected and change the IP address to the same network as "
+"the virtual network (or the network the real robot is on), and change the"
+" port to 6969 (or the same port as the Hercules program on the server-"
+"side)."
+msgstr ""
+
+#: ../hardware/robot/ur_setup.rst:119
+msgid ""
+"click on waypoint under the Robot program, and set the waypoint, make "
+"some position adjustment and click ok."
+msgstr ""
+
+#: ../hardware/robot/ur_setup.rst:131
+msgid ""
+"After setting the waypoint, click run, you should be able to see the "
+"connection established between the client and the server-side by checking"
+" the Client connection status."
+msgstr ""
+
+#: ../hardware/robot/ur_setup.rst:142
+msgid "Configuration on Vision"
+msgstr ""
+
+#: ../hardware/robot/ur_setup.rst:152
+msgid "Select ``Robots`` on left side menu bar and click ``+``,"
+msgstr ""
+
+#: ../hardware/robot/ur_setup.rst:159
+msgid "Press ``Connect`` (Keep the parameter default)"
+msgstr ""
+
+#: ../hardware/robot/ur_setup.rst:166
+msgid "Now you are good to go with Robot related Nodes."
+msgstr ""
+

@@ -1,0 +1,176 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021 DaoAI Robotics Inc.
+# This file is distributed under the same license as the DaoAI Vision User
+# Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: DaoAI Vision User Manual \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-26 15:26-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../index.rst:71
+msgid "Contents"
+msgstr "目录"
+
+#: ../index.rst:2
+msgid "Welcome to the DaoAI Vision knowledge base!"
+msgstr "欢迎来到道爱视觉知识库！"
+
+#: ../index.rst:4
+msgid ""
+"Here you can find everything you need to know about DaoAI Vision Studio, "
+"a plug and play 3D vision solution for your robot that allows it to pick "
+"parts of different shapes, materials and sizes. With DaoAI Vision Studio"
+"  you can automate any type of picking application such as bin picking, "
+"machine loading, depalletizing, kitting and assembly, and pick and place."
+msgstr "本知识库您可以找到您需要了解的有关 DaoAI Vision Studio 的所有信息，这是一款适用于机器人的即插即用 3D 视觉解决方案，可让机器人拾取不同形状、材料和尺寸的零件。使用 DaoAI Vision Studio,您可以自动化任何类型的拣选应用程序,例如料箱拣选、机器装载、卸垛、配套和组装以及拾取和放置."
+
+
+#: ../index.rst:6
+msgid ""
+"**System Overview**: You will find basic information of the software, and"
+" get a taste for using the software"
+msgstr ""
+"**系统概述**: 您将了解软件的基本信息，并进行软件的体验使用"
+
+#: ../index.rst:7
+msgid ""
+"**Hareware**: You will get to know how to mount the hardware, and connect"
+" it. It includes the cameras, robots and processors."
+msgstr ""
+"**硬件**: 您将了解如何安装和连接硬件。它包括相机、机器人和处理器。"
+
+#: ../index.rst:8
+msgid ""
+"**Nodes Details Explanation**: You will find each nodes detailed "
+"explanation, and how to use it. Including the tunning guidelines for your"
+" own application."
+msgstr ""
+"**模块细节说明**:您将找到每个模块的详细说明，以及如何使用它。包括您自己的应用程序的调整指南。  "
+
+
+#: ../index.rst:9
+msgid ""
+"**Deep Learning**: You will understand how to train your deep learning "
+"model and use it inside the DaoAI Vision Studio."
+msgstr ""
+"**深度学习**: 您将了解如何训练您的深度学习模型并在 DaoAI Vision Studio 中使用它。 "
+
+#: ../index.rst:10
+msgid ""
+"**Complete Robot Guidance Steup**: You will understand how each node was "
+"integrated together to fullfill real work robot guidance applications."
+msgstr ""
+"**完整的机器人引导步骤**: 您将了解如何将每个模块集成在一起以完成实际工作的机器人引导应用程序。 "
+
+#: ../index.rst:11
+msgid ""
+"**Template Usage**: You will get to know how to use each template, and "
+"the configuration for each template. Afterwards, you will be able to "
+"modify on your own based on your needs."
+msgstr ""
+"**模板使用**: 您将了解如何使用每个模板，以及每个模板的配置。之后，您将能够根据自己的需要进行修改。 "
+
+#: ../index.rst:12
+msgid ""
+"**Project Example**: You will see real world example project, and get to "
+"know how to mount the camera, and which template or functionalities will "
+"suit it."
+msgstr ""
+"**项目示例**: 您将看到真实的示例项目，并了解如何安装相机，以及适合它的模板或功能。 "
+
+#: ../index.rst:13
+msgid ""
+"**Excercise**: Through the excercise, you will be able to determine your "
+"knowledge regarding the DaoAI Vision Studio, and get hands on experience "
+"to operate the software."
+msgstr ""
+"**练习**: 通过练习，您将能够确定您对DaoAI Vision Studio的了解，并获得操作该软件的经验。 "
+
+#: ../index.rst:14
+msgid ""
+"**FAQ & Troubleshooting**: You will be able to see common problems, and "
+"answer to it."
+msgstr ""
+"**常见问题解答和疑难解答**:您将能够看到常见问题并进行解答 "
+
+#: ../index.rst:17
+msgid ""
+"If you can’t find what you’re looking for here, please reach out to us by"
+" sending an email to support@daoai.com."
+msgstr ""
+"如果您在此处找不到所需内容，"
+"请发送电子邮件到： support@daoai.com."
+
+#: ../index.rst:20
+msgid "Feature Highlights"
+msgstr "功能亮点"
+
+#: ../index.rst:24
+msgid "Flowchart Based Program"
+msgstr "基于流程图的程序"
+
+#: ../index.rst:25
+msgid ""
+"As the image below shows, you could configure the flowchart using "
+"different logical control, and also functional nodes."
+msgstr "如下图所示，您可以使用不同的逻辑控制以及功能模块来配置流程图。"
+
+#: ../index.rst:31
+msgid "Operator View for Deployment"
+msgstr "部署的操作者视图"
+
+#: ../index.rst:32
+msgid ""
+"In the following image, based on the project needs, you are able to "
+"configure the layout that display to the end you, where you could place "
+"the start/stop buttons, and also place your company logos etc.."
+msgstr "在下图中，您可以根据项目需要配置显示到最后的布局，您可以在其中放置开始/停止按钮，还可以放置公司徽标等。"
+
+#: ../index.rst:38
+msgid "Camera & Robot Calibration"
+msgstr "相机和机器人校准"
+
+#: ../index.rst:39
+msgid ""
+"Based on different needs, the system support both the chessboard and "
+"sphere calibration modules. Where chessboard is easy to easy and very "
+"common in machine vision field. While the sphere calibration is more "
+"designed for 3D cameras, where you could simply attach a PingPong ball on"
+" the robot arm or place it on the groud."
+msgstr "根据不同的需要，系统同时支持棋盘格和球体校准方法。棋盘格在机器视觉领域很容易并且很常见。虽然球体校准更适用于 3D 相机，但您可以简单地将乒乓球附在机器人手臂上或将其放在地面上也可以达成校准。"
+
+#: ../index.rst:48
+msgid "Deep Learning Recognition Features"
+msgstr "深度学习识别功能"
+
+#: ../index.rst:49
+msgid ""
+"The system provide state of the art deep learning functionalities, "
+"including image classification, segmentation, key-points detection etc.. "
+"And all these modules can be trained online with our deep learning "
+"server."
+msgstr "该系统提供最先进的深度学习功能，包括图像分类、分割、关键点检测等。所有这些模块都可以通过我们的深度学习服务器进行在线训练。"
+
+#: ../index.rst:58
+msgid "Classical Machine Vision Features"
+msgstr "经典机器视觉功能"
+
+#: ../index.rst:59
+msgid ""
+"Our software also support classfical machine vision tools, including "
+"pattern matching, image corrections, code reading, and metrology etc. "
+"These tools can be combined together with the robot guidance applications"
+" or used indepently."
+msgstr "我们的软件还支持机器视觉工具，包括模式匹配、图像校正、代码读取和计量等。这些工具可以与机器人引导应用程序结合使用，也可以单独使用。"
+

@@ -1,0 +1,1007 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021 DaoAI Robotics Inc.
+# This file is distributed under the same license as the DaoAI Vision User
+# Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: DaoAI Vision User Manual\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-26 15:26-0700\n"
+"PO-Revision-Date: 2022-06-08 01:20-0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: ../deep-learning/annotation/classification-annotation.rst:2
+msgid "Annotating Classification Data"
+msgstr "注释分类数据"
+
+#: ../deep-learning/annotation/classification-annotation.rst:4
+msgid ""
+"For our classification annotation, we use a simple annotater called tkteach."
+msgstr "对于我们的分类注释，我们使用了一个简单的注释器，称为tkteach。"
+
+#: ../deep-learning/annotation/classification-annotation.rst:7
+msgid "Installing tkteach"
+msgstr "安装tkteach"
+
+#: ../deep-learning/annotation/classification-annotation.rst:8
+msgid ""
+"Prior to installing tkteach, you must have an environment set up with "
+"Python, PIL, and tkiner. Once you have that environment set up, go to `this "
+"link <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/"
+"xchen_daoai_com/EbnJb56ga5VGmjSjkV2279wB3andyLOdtg-xfdDzBLe2Tg?e=UOp96H>`_ "
+"and download the .zip file, OR go to https://github.com/rmones/tkteach and "
+"clone the repository somewhere accessible."
+msgstr ""
+"在安装 tkteach 之前，你必须有一个安装了 Python、PIL 和 tkiner 的环境。一旦你"
+"建立了这个环境，去`这个链接 <https://daoairoboticsinc-my.sharepoint.com/:u:/"
+"g/personal/xchen_daoai_com/EbnJb56ga5VGmjSjkV2279wB3andyLOdtg-xfdDzBLe2Tg?"
+"e=UOp96H>`_ 并下载.zip文件，或者去https://github.com/rmones/tkteach 并在可访"
+"问的地方克隆这个仓库。"
+
+#: ../deep-learning/annotation/classification-annotation.rst:14
+msgid "Using tkteach"
+msgstr "使用tkteach"
+
+#: ../deep-learning/annotation/classification-annotation.rst:16
+msgid ""
+"Using your file explorer, navigate to the folder you previously cloned. "
+"Place the images you wish to annotate in a folder inside of 'ds'"
+msgstr ""
+"使用你的文件资源管理器，导航到你之前克隆的文件夹。将你想注释的图像放在 \"ds "
+"\"文件夹中。"
+
+#: ../deep-learning/annotation/classification-annotation.rst:19
+msgid ""
+"Navigate to the file called 'categories.txt' inside tkteach Replace the "
+"lines in this file with the labels you wish to apply, as well as hot keys to "
+"make annotation faster. For example, for my dataset containing images of "
+"Dogs and Cats, my categories.txt would look like:"
+msgstr ""
+"导航到 tkteach 中名为 'categories.txt' 的文件 将此文件中的行替换为您希望应用"
+"的标签以及热键以加快注释速度。例如，对于包含狗和猫图像的数据集，我的 "
+"categories.txt 看起来像："
+
+#: ../deep-learning/annotation/classification-annotation.rst:27
+msgid ""
+"Once your dataset and labels are set up, you are ready to start annotating!"
+msgstr "设置好数据集和标签后，您就可以开始注释了！"
+
+#: ../deep-learning/annotation/classification-annotation.rst:29
+msgid ""
+"To run tkteach, go to the command line where your environment is set up "
+"(Type in 'cmd' in your search bar). Navigate to the folder you just cloned "
+"and run the following::"
+msgstr ""
+"要运行tkteach，进入你的环境设置的命令行（在你的搜索栏中输入 \"cmd\"）。导航到"
+"你刚刚克隆的文件夹，并运行以下程序::"
+
+#: ../deep-learning/annotation/classification-annotation.rst:34
+msgid "After running the previous command, you should see the home screen:"
+msgstr "运行前面的命令后，你应该看到主屏幕:"
+
+#: ../deep-learning/annotation/classification-annotation.rst:40
+msgid ""
+"Select the Dataset you'd like to use (On the left toolbar) and load it. Your "
+"first image should load in the middle, and you should see your labels on the "
+"right sidebar."
+msgstr ""
+"选择您要使用的数据集（在左侧工具栏上）并加载它。您的第一张图片应该在中间加"
+"载，并且您应该在右侧边栏上看到您的标签。"
+
+#: ../deep-learning/annotation/classification-annotation.rst:47
+msgid ""
+"Assign the desired label to each image by either using the hotkeys you "
+"assigned earlier, or clicking on the label on the sidebar. Continue to the "
+"next image using the arrow keys, and repeat for your whole dataset."
+msgstr ""
+"通过使用您之前分配的热键或单击侧栏上的标签为每个图像分配所需的标签。使用箭头"
+"键继续下一张图像，并为整个数据集重复。"
+
+#: ../deep-learning/annotation/index.rst:5 ../deep-learning/index.rst:5
+msgid "Content"
+msgstr "内容"
+
+#: ../deep-learning/annotation/index.rst:2
+msgid "Annotate your Dataset"
+msgstr "注释你的数据集"
+
+#: ../deep-learning/annotation/index.rst:3
+msgid "This section covers how to annotate data for deep learning training"
+msgstr "本节介绍了如何为深度学习训练注释数据"
+
+#: ../deep-learning/annotation/maskrcnn-annotation.rst:2
+msgid "Annotating Segmentation Data"
+msgstr "注释分割数据"
+
+#: ../deep-learning/annotation/maskrcnn-annotation.rst:4
+msgid ""
+"For our segmentation annotation, we use a simple annotater called LabelMe. "
+"It is commonly used for computer vision tasks and also provides some command "
+"line functionality to speed up tasks."
+msgstr ""
+"对于我们的分割注释，我们使用了一个名为LabelMe的简单注释器。它通常用于计算机视"
+"觉任务，也提供一些命令行功能来加速任务。"
+
+#: ../deep-learning/annotation/maskrcnn-annotation.rst:8
+msgid "Installing LabelMe"
+msgstr "安装LabelMe"
+
+#: ../deep-learning/annotation/maskrcnn-annotation.rst:9
+msgid ""
+"Use the downloadable executable `found here <https://daoairoboticsinc-my."
+"sharepoint.com/:u:/g/personal/xchen_daoai_com/Ecmqz3JU-WVCv_Po7uuE-"
+"lABNDx6zXs44VY-tE8OP9ZkqQ?e=VPzNwI>`_ or see installation instructions at "
+"https://github.com/wkentaro/labelme#installation in order to set up LabelMe"
+msgstr ""
+"使用可下载的可执行文件`在这里找到 <https://daoairoboticsinc-my.sharepoint."
+"com/:u:/g/personal/xchen_daoai_com/Ecmqz3JU-WVCv_Po7uuE-lABNDx6zXs44VY-"
+"tE8OP9ZkqQ?e=VPzNwI>`_ 或参阅 https://github.com/wkentaro/"
+"labelme#installation 的安装说明，以便设置 LabelMe"
+
+#: ../deep-learning/annotation/maskrcnn-annotation.rst:12
+msgid "Using LabelMe"
+msgstr "使用LabelMe"
+
+#: ../deep-learning/annotation/maskrcnn-annotation.rst:13
+msgid "After opening LabelMe you should see the home screen:"
+msgstr "打开LabelMe后，您应该看到主屏幕:"
+
+#: ../deep-learning/annotation/maskrcnn-annotation.rst:18
+msgid ""
+"Before annotating choose an output directory for the JSON files by clicking "
+"“File > Change Output Dir”. Although this can be a standalone directory "
+"since the JSON files contain the image data, it is usually easier to keep "
+"the JSON files and PNGs in the same place, as you will need to upload them "
+"together later on. The original images can be loaded from the JSON files so "
+"they do not need to be returned after annotating."
+msgstr ""
+"在注释之前，通过单击“文件 > 更改输出目录”为 JSON 文件选择一个输出目录。虽然这"
+"可以是一个独立的目录，因为 JSON 文件包含图像数据，但将 JSON 文件和 PNG 保存在"
+"同一位置通常更容易，因为您稍后需要将它们一起上传。原始图像可以从 JSON 文件中"
+"加载，因此不需要在注释后返回。"
+
+#: ../deep-learning/annotation/maskrcnn-annotation.rst:23
+msgid ""
+"To get started, open an image or a directory of images by clicking “Open” or "
+"“Open Dir” on the left-side toolbar. The files to annotate will be shown in "
+"the “File List” section (bottom-right) and some options will become visible:"
+msgstr ""
+"首先，通过单击左侧工具栏上的“打开”或“打开目录”打开图像或图像目录。要注释的文"
+"件将显示在“文件列表”部分（右下角）中，并且一些选项将变得可见："
+
+#: ../deep-learning/annotation/maskrcnn-annotation.rst:29
+msgid ""
+"When you're ready to annotate your segments, select the 'Create Polygon' "
+"tool on the left toolbar. Proceed to your image and draw your shape "
+"following the :ref:`guidelines-label`. Once your polygon has been drawn, a "
+"pop-up will appear asking for the class label. If no label list is loaded, "
+"then type in a class label and select \"OK\". This will be the active label "
+"until another one is chosen."
+msgstr ""
+"当您准备好注释段时，选择左侧工具栏上的“创建多边形”工具。继续您的图像并按照注"
+"释指南绘制您的形状。绘制多边形后，将出现一个弹出窗口，询问类标签。如果没有加"
+"载标签列表，则输入类别标签并选择“确定”。这将是活动标签，直到选择另一个标签。"
+
+#: ../deep-learning/annotation/maskrcnn-annotation.rst:35
+msgid ""
+"The previously used class will stay selected when the pop-up re-appears. "
+"Press Enter to quickly accept the selected label."
+msgstr ""
+"当弹出窗口重新出现时，以前使用的类将保持选中状态。按 Enter 快速接受所选标签。"
+
+#: ../deep-learning/annotation/maskrcnn-annotation.rst:37
+msgid ""
+"To edit any of your annotations, click on 'Edit Polygons'. Clicking on an "
+"annotation will now select it and allow you to delete or edit it. When "
+"editing, you can move the vertices or the entire annotation around."
+msgstr ""
+"要编辑任何注释，请单击“编辑多边形”。单击注释现在将选择它并允许您删除或编辑"
+"它。编辑时，您可以移动顶点或整个注释。"
+
+#: ../deep-learning/annotation/maskrcnn-annotation.rst:41
+msgid ""
+"When finished, click 'Save' (On the left toolbar) and choose the directory "
+"to save in. If you set the directory at the start, press Enter to quickly "
+"accept the directory"
+msgstr ""
+"完成后，单击“保存”（在左侧工具栏上）并选择要保存的目录。如果您在开始时设置了"
+"目录，请按 Enter 快速接受目录"
+
+#: ../deep-learning/annotation/maskrcnn-annotation.rst:46
+msgid ""
+"Although going to the next image prompts a saving pop-up, there is a bug in "
+"LabelMe that makes the path in this pop-up incorrect.  As such, it is "
+"recommended to use the 'Save' button instead."
+msgstr ""
+"虽然转到下一张图片会提示保存弹出窗口，但 LabelMe 中存在一个错误，导致此弹出窗"
+"口中的路径不正确。  因此，建议改用“保存”按钮。"
+
+#: ../deep-learning/annotation/maskrcnn-annotation.rst:51
+msgid "Annotation Guidelines"
+msgstr "注释指南"
+
+#: ../deep-learning/annotation/maskrcnn-annotation.rst:53
+msgid ""
+"When annotating segmentation masks the only requirements are that the "
+"polygons extend to the boundary, and there is no overlap in the masks. Shown "
+"below is an example. Try to minimize these gaps and extend to the boundary "
+"as much as possible."
+msgstr ""
+"注释分割掩码时，唯一的要求是多边形延伸到边界，并且掩码中没有重叠。下面显示的"
+"是一个示例。尽量减少这些间隙并尽可能延伸到边界。"
+
+#: ../deep-learning/bp-testing.rst:2
+msgid "Test Your Model in the Bin Picking System"
+msgstr "在箱体拾取系统中测试您的模型"
+
+#: ../deep-learning/bp-testing.rst:3
+msgid ""
+"Testing your model in the DaoAI Bin Picking system is quite easy to do, and "
+"only requires some very basic knowledge of the system."
+msgstr ""
+"在 DaoAI Bin Picking 系统中测试您的模型非常容易，只需要一些非常基本的系统知"
+"识。"
+
+#: ../deep-learning/bp-testing.rst:6
+msgid "Setting up your Workspace"
+msgstr "设置您的工作空间"
+
+#: ../deep-learning/bp-testing.rst:7
+msgid ""
+"The first thing you'll want to do is to set up your system to be able to "
+"test the model. First, launch WeRobotics Cognition Systems.exe.  It should "
+"look similar to this:"
+msgstr ""
+"您要做的第一件事是设置您的系统以便能够测试模型。首先，启动 WeRobotics "
+"Cognition Systems.exe。它应该类似于："
+
+#: ../deep-learning/bp-testing.rst:13
+msgid ""
+"From here, click on 'New Project' in the top left, and give your project a "
+"name. Click 'OK' when you're ready."
+msgstr "在此处，单击左上角的“新建项目”，并为您的项目命名。准备好后单击“确定”。"
+
+#: ../deep-learning/bp-testing.rst:16
+msgid "Now your screen should look like this:"
+msgstr "现在你的屏幕应该是这样的："
+
+#: ../deep-learning/bp-testing.rst:21
+msgid ""
+"Next, right click on the Plus ('+') in the middle of the screen, and select "
+"'Insert Node'."
+msgstr "接下来，右键单击屏幕中间的加号（“+”），然后选择“插入模块”。"
+
+#: ../deep-learning/bp-testing.rst:23
+msgid ""
+"If you'd like to test your model using a Camera, select the 'Camera' Node To "
+"learn how to use a Camera, please reference the 'Cameras' section."
+msgstr ""
+"如果您想使用相机测试您的模型，请选择“camera”模块。要了解如何使用相机，请参"
+"考“相机”部分。"
+
+#: ../deep-learning/bp-testing.rst:26
+msgid ""
+"Once your camera is set up, right click on the Camera node, and select "
+"'Insert Node' again. This time, your choice of node depends on the type of "
+"model you'd like to test."
+msgstr ""
+"设置好相机后，右键单击Camera 模块，然后再次选择“插入模块”。这一次，您选择的模"
+"块取决于您要测试的模型类型。"
+
+#: ../deep-learning/bp-testing.rst:29
+msgid ""
+"If you'd like to test a classification model, select the DL Classify Node. "
+"If you'd like to test a segmentation model, select the DL Segment Node."
+msgstr ""
+"如果您想测试分类模型，请选择  DL Classify 模块。如果您想测试分段模型，请选择 "
+"DL Segment Node。"
+
+#: ../deep-learning/bp-testing.rst:32
+msgid ""
+"Connecting the camera is the same for each node. Next, select the DL Node "
+"and click the blue circle to the right of 'Image Input'"
+msgstr ""
+"每个模块的相机连接都是一样的。接下来，选择 DL 模块并单击“图像输入”右侧的蓝色"
+"圆圈"
+
+#: ../deep-learning/bp-testing.rst:38
+msgid ""
+"From there, click on the arrow to bring out the camera_node dropdown, and "
+"double click 'image'."
+msgstr "从那里，单击箭头以显示 camera_node 下拉菜单，然后双击“图像”。"
+
+#: ../deep-learning/bp-testing.rst:43
+msgid "Click 'Apply' in the bottom right and close the menu."
+msgstr "单击右下角的“应用”并关闭菜单。"
+
+#: ../deep-learning/bp-testing.rst:45
+msgid ""
+"Next, proceed to the 'Model File Path', click Browse, and select the path to "
+"the model you wish to test. Once that is set, do the same for the 'Config "
+"File Path', this time loading in the 'DaoAI_BP_Config.txt' that was exported "
+"with your model."
+msgstr ""
+"接下来，进入“模型文件路径”，单击“浏览”，然后选择要测试的模型的路径。设置完成"
+"后，对“配置文件路径”执行相同操作，这次加载随模型导出的“DaoAI_BP_Config.txt”。"
+
+#: ../deep-learning/bp-testing.rst:48
+msgid ""
+"Once you've done all this, you should now be ready to test your model. Hit "
+"the 'Run' button, and keep an eye on the output of the DL Node, to be able "
+"to tell how well your model is working."
+msgstr ""
+"一旦你完成了所有这些，你现在应该准备好测试你的模型了。点击“运行”按钮，并密切"
+"关注 DL 模块的输出，以了解您的模型的运行情况。"
+
+#: ../deep-learning/bp-testing.rst:51
+msgid ""
+"For classification models, there should be a text output specifying the "
+"detected class. For segmentation models, it should look similar to this"
+msgstr ""
+"对于分类模型，应该有一个指定检测到的类别的文本输出。对于分割模型，它应该类似"
+"于这个"
+
+#: ../deep-learning/common-issues.rst:2
+msgid "Common Issues in the Bin Picking System"
+msgstr "箱体拾取系统的常见问题"
+
+#: ../deep-learning/common-issues.rst:3
+msgid ""
+"There are some common issues that people have come across while trying to "
+"use the bin picking system. Here is how to solve the most common ones before "
+"you feel the need to reach out for support Please review them **in order** "
+"as some have similar symptoms, but they appear in order of how common they "
+"are"
+msgstr ""
+"人们在尝试使用垃圾箱拣选系统时遇到了一些常见问题。这是在您觉得需要寻求支持之"
+"前解决最常见问题的方法 请 **按顺序** 查看它们，因为有些症状有相似之处，但它们"
+"按常见程度排列"
+
+#: ../deep-learning/common-issues.rst:8
+msgid "Memory Consumption issues"
+msgstr "内存消耗问题"
+
+#: ../deep-learning/common-issues.rst:9
+msgid ""
+"If the system console is printing \"Failed to load model, Check model path"
+"\", it is possible that you are using more GPU memory than you have. To "
+"check, open \"Task Manager\" and check your GPU memory limit.  Your GPU "
+"memory limit must be 4.0 GB or more to run properly"
+msgstr ""
+"如果系统控制台正在打印“无法加载模型，请检查模型路径”，则您使用的 GPU 内存可能"
+"比您拥有的多。要检查，请打开“任务管理器”并检查您的 GPU 内存限制。您的 GPU 内"
+"存限制必须为 4.0 GB 或更多才能正常运行"
+
+#: ../deep-learning/common-issues.rst:16
+msgid ""
+"To solve this problem, you must switch to a PC that has more than 4.0 GPU. "
+"If you need an immediate fix, you can temporarily switch to the CPU model, "
+"however this will run substantially slower than the GPU version."
+msgstr ""
+"要解决此问题，您必须切换到具有 4.0 以上 GPU 的 PC。如果您需要立即修复，您可以"
+"暂时切换到 CPU 型号，但是这将比 GPU 版本运行速度慢很多。"
+
+#: ../deep-learning/common-issues.rst:20
+msgid "Deep Learning Node not able to run a second time"
+msgstr "Deep Learning 模块无法再次运行"
+
+#: ../deep-learning/common-issues.rst:21
+msgid ""
+"Only proceed here if you have checked your Memory Consumption **first** as "
+"they have similar symptoms"
+msgstr "如果您 **首先** 检查了内存消耗，请仅在此处继续，因为它们有类似的症状"
+
+#: ../deep-learning/common-issues.rst:23
+msgid ""
+"If you are unable to run the model a second time (The console prints "
+"\"Failed to load model, Check model path\"), but your GPU memory isn't an "
+"issue, then it is possible you are missing some dll files.  Please check "
+"this bin folder."
+msgstr ""
+"如果您无法再次运行模型（控制台显示“加载模型失败，请检查模型路径”），但您的 "
+"GPU 内存不是问题，那么您可能缺少一些 dll 文件。请检查此 bin 文件夹。"
+
+#: ../deep-learning/common-issues.rst:29
+#, python-format
+msgid ""
+"If you are missing nvrtc64_102_0.dll or nvrtc-builtins64_102.dll, please go "
+"download them from `HERE <https://daoairoboticsinc-my.sharepoint.com/"
+"personal/xchen_daoai_com/_layouts/15/onedrive.aspx?ct=1646938410830&or=Teams"
+"%2DHL&id=%2Fpersonal%2Fxchen%5Fdaoai%5Fcom%2FDocuments%2FREAD%5FTHE%5FDOC"
+"%2F2%2E22%2E1%2Fdeep%5Flearning>`_"
+msgstr ""
+
+#: ../deep-learning/common-issues.rst:32
+msgid "Models trained with the bottom layer removed"
+msgstr "移除底层训练的模型"
+
+#: ../deep-learning/common-issues.rst:33
+msgid ""
+"If there is issues finding the top layer of a dataset, use the following "
+"steps."
+msgstr "如果在查找数据集的顶层时遇到问题，请使用以下步骤。"
+
+#: ../deep-learning/common-issues.rst:35
+msgid ""
+"Check your camera node and the connected file path setup.  Ensure everything "
+"is set up correctly, using proper indexing or whatever may be required."
+msgstr ""
+"检查您的Camera 模块和连接的文件路径设置。确保一切设置正确，使用适当的索引或任"
+"何可能需要的东西。"
+
+#: ../deep-learning/common-issues.rst:36
+msgid ""
+"In your Cloud Process node, ensure that the point cloud is coming from the "
+"camera.  Make sure you have chosen *Enable RGB Restore Mode* and *Box*"
+msgstr ""
+"在您的 Cloud Process 节点中，确保点云来自相机。确保您已选择 *启用 RGB 恢复模"
+"式* 和 *Box*"
+
+#: ../deep-learning/common-issues.rst:39
+msgid ""
+"Add the following operations into the Cloud Process node (If they're not "
+"there)"
+msgstr "将以下操作添加到 Cloud Process 模块（如果它们不存在）"
+
+#: ../deep-learning/common-issues.rst:38
+msgid ""
+"*Adjust Bounding Box* : This lets you expand or crop the edges of selection "
+"by a specified number of pixels.  Adjust the bounding box to contain just "
+"the area useful for you."
+msgstr ""
+"*调整边界框* : 这使您可以按指定数量的像素扩展或裁剪选区的边缘。调整边界框以仅"
+"包含对您有用的区域。"
+
+#: ../deep-learning/common-issues.rst:39
+msgid "*Set Reference Frame* : Set a reference frame for the plane"
+msgstr "*设置参考系* : Set a reference frame for the plane"
+
+#: ../deep-learning/common-issues.rst:40
+msgid "*Dynamic Box Filter* : Use to find a box in the box dataset"
+msgstr "*Dynamic Box Filter* :  用于在盒子数据集中查找盒子"
+
+#: ../deep-learning/common-issues.rst:41
+msgid "Check your writer node is set up correctly"
+msgstr "检查您的writer 模块是否设置正确"
+
+#: ../deep-learning/common-issues.rst:43
+msgid ""
+"If that is all set up correctly, you should be able to run the flowchart "
+"with the correct output."
+msgstr "如果一切设置正确，您应该能够以正确的输出运行流程图。"
+
+#: ../deep-learning/dataset.rst:2
+msgid "How to Collect a Dataset"
+msgstr "如何收集数据集"
+
+#: ../deep-learning/dataset.rst:3
+msgid ""
+"This section demonstrates collecting and saving a training dataset with the "
+"correct layout and format using a flowchart."
+msgstr "本节演示使用流程图收集和保存具有正确布局和格式的训练数据集。"
+
+#: ../deep-learning/dataset.rst:5
+msgid "Create a new project from scratch"
+msgstr "从头开始创建一个新项目"
+
+#: ../deep-learning/dataset.rst:6
+msgid "Right click the **[+]** button and click **Insert**"
+msgstr "右键单击 **[+]** 按钮，然后单击 **Insert**"
+
+#: ../deep-learning/dataset.rst:7
+msgid "Insert a **Camera** node, a **Writer** node, and a **Robot Wait** node"
+msgstr ""
+"插入一个 **Camera** 模块、一个 **Writer** 模块和一个 **Robot Wait** 模块"
+
+#: ../deep-learning/dataset.rst:8
+msgid ""
+"Left click the **Camera** node. In the configuration window click the **Open "
+"Platform Config** button"
+msgstr "左键单击 **Camera** 模块。在配置窗口中单击 **打开配置平台** 按钮"
+
+#: ../deep-learning/dataset.rst:13
+msgid ""
+"Click the **[+]** button and select your camera type, then click the "
+"**Accept** button"
+msgstr "单击 **[+]** 按钮并选择您的相机类型，然后单击 **接受** 按钮"
+
+#: ../deep-learning/dataset.rst:18
+msgid ""
+"Configure the camera so that it will produce the same images as will be seen "
+"during the detecting and picking process after your model has been trained. "
+"Load necessary camera setting file (.cfg), then click on the **Save Image "
+"Data** checkbox, and select **From Numbered Files** and click on the "
+"**Browse** button. In the folder you want to save your output, create a new "
+"folder called \"DCF\" then click **Connect**"
+msgstr ""
+"配置相机，使其生成与模型训练后在检测和拾取过程中看到的图像相同的图像。加载必"
+"要的相机设置文件 (.cfg)，然后单击 **保存图片数据** 复选框，然后选择 **From "
+"Numbered Files** 并单击 **Browse** 按钮​​。在要保存输出的文件夹中，创建一个名"
+"为“DCF”的新文件夹，然后单击 **连接**"
+
+#: ../deep-learning/dataset.rst:21
+msgid "Switch **Camera Source** to the camera you just added"
+msgstr "将 **相机源** 切换到刚刚添加的相机"
+
+#: ../deep-learning/dataset.rst:26
+msgid ""
+"In the first **Writer** node, click on the link button (the blue circle) and "
+"select the **Image** output from the **Camera** node.  Click the **Apply "
+"button**"
+msgstr ""
+"在第一个 **Writer** 模块中，单击链接按钮（蓝色圆圈）并从 **Camera** 模块选择 "
+"**图片** 输出。单击应用按钮"
+
+#: ../deep-learning/dataset.rst:31
+msgid ""
+"Keep the **Data Type** to be PNG and change the **Source Type** to \"From "
+"Numbered\""
+msgstr "保持 **Data Type** 为 PNG 并将 **源类型** 更改为 \"从编号\""
+
+#: ../deep-learning/dataset.rst:36
+msgid ""
+"Click **Browse** and select a folder where the PNG data will be saved.  "
+"Preferably, in the same level as the DCF folder create a folder named PNG "
+"and store every image into the same folder. Leave the rest of the settings "
+"unchanged."
+msgstr ""
+"单击 **浏览** 并选择将保存 PNG 数据的文件夹。最好在与 DCF 文件夹相同的级别创"
+"建一个名为 PNG 的文件夹，并将每个图像存储到同一个文件夹中。保持其余设置不变。"
+
+#: ../deep-learning/dataset.rst:38
+msgid "Training will depend on these PNG images"
+msgstr "培训将取决于这些 PNG 图像"
+
+#: ../deep-learning/dataset.rst:43
+msgid ""
+"In the **Robot Wait** node click **Open Platform Config**. Click the **[+] "
+"button.  It doesn't matter what robot you're using here, select one and "
+"click **Connect**"
+msgstr ""
+"在 **Robot Wait** 模块中，单击 **打开配置平台**.单击[+] 按钮。不管你在这里使"
+"用什么机器人，选择一个然后点击 **连接**"
+
+#: ../deep-learning/dataset.rst:44
+msgid ""
+"In the **Robot Wait** node configuration window, change the **Robot Source** "
+"to the one you just added. In the **Time Out** option, enter the time you "
+"want flowchart to pause while you are changing the object layout. Usually "
+"~5000ms will be enough"
+msgstr ""
+"在 **Robot Wait** 模块配置窗口中，将 **机器人源** 更改为您刚刚添加的那个。在 "
+"**超时** 选项中，输入您希望流程图在更改对象布局时暂停的时间。通常~5000ms就足"
+"够了"
+
+#: ../deep-learning/dataset.rst:51
+msgid ""
+"Once you've completed all the above setup, click the **Run** button. Click "
+"**Pause** when you want to stop the flowchart"
+msgstr ""
+"完成上述所有设置后，单击 **运行** 按钮。当您想要 **停止** 流程图时单击暂停"
+
+#: ../deep-learning/dataset.rst:56
+msgid ""
+"Clicking the **Reset** button will reset the **Writer** node index count.  "
+"**Do not click it**"
+msgstr "单击 **重置** 按钮将重置Writer模块索引计数。 **不要点击它**"
+
+#: ../deep-learning/dataset.rst:59
+msgid "Guidelines for collecting a dataset"
+msgstr "收集数据集的指南"
+
+#: ../deep-learning/dataset.rst:64
+#, python-format
+msgid ""
+"While collecting dataset for annotation, you need to set rules for the "
+"dataset. These rules are followed by the detail requirement of detection "
+"needs. For example, we only want to pick the objects which does not cover/"
+"stack by another objects; pick the objects which are tilted less than 30 "
+"degrees etc. Therefore, you only need to annotate the objects which follows "
+"the requirements. Then, you should only annotate those objects which are not "
+"cover 20% or more, tilted less than 30 degree horizontally and annotate "
+"objects by classifying front/back sides etc."
+msgstr ""
+"在收集数据集进行标注时，您需要为数据集设置规则。这些规则之后是检测需求的详细"
+"要求。例如，我们只想挑选没有被其他物体覆盖/堆叠的物体；选择倾斜小于30度的物体"
+"等。因此，您只需对符合要求的物体进行注释即可。然后，您应该只注释那些不覆盖 "
+"20% o更多、水平倾斜小于 30 度的对象，并通过分类正面/背面等方式来注释对象。"
+
+#: ../deep-learning/dataset.rst:70
+msgid ""
+"Secondly, try to simulate the actual working environment and conditions when "
+"collecting dataset. For example, if the objects would showed up in different "
+"height within the scene: you need to collect dataset for objects in "
+"different heights. If the background of object occurrence is different, deep "
+"learning is difficult to identify the objects. Therefore, you should collect "
+"dataset in the working environment. If object can be shown in different "
+"background, you should also collect dataset in all the possible background."
+msgstr ""
+"其次，在收集数据集时尽量模拟实际的工作环境和条件。例如，如果对象会在场景中以"
+"不同的高度出现：您需要为不同高度的对象收集数据集。如果物体发生的背景不同，深"
+"度学习很难识别物体。因此，您应该在工作环境中收集数据集。如果对象可以显示在不"
+"同的背景中，您还应该在所有可能的背景中收集数据集。"
+
+#: ../deep-learning/examples.rst:2
+msgid "Deep Learning Examples"
+msgstr "深度学习示例"
+
+#: ../deep-learning/examples.rst:3
+msgid ""
+"Here are some examples of some past projects we've used the deep learning "
+"nodes for, to give you an idea of what can be accomplished in our systems"
+msgstr ""
+"以下是我们使用深度学习节点进行的一些过去项目的一些示例，让您了解我们的系统可"
+"以完成什么"
+
+#: ../deep-learning/examples.rst:6
+msgid "Classification Model"
+msgstr "分类模型"
+
+#: ../deep-learning/examples.rst:7
+msgid ""
+"This is an example from our classification model. Here, the model is being "
+"used to identify which row of objects is on top, using their orientation. "
+"This allows for much easier picking further along the flowchart, as there "
+"won't be objects stuck under others."
+msgstr ""
+"这是我们分类模型的一个例子。在这里，该模型被用于识别哪一行对象在顶部，使用它"
+"们的方向。这样可以更容易地沿着流程图进一步选择，因为不会有对象卡在其他对象下"
+"面。"
+
+#: ../deep-learning/examples.rst:17
+msgid "Instance Segmentation Model"
+msgstr "实例分割模型"
+
+#: ../deep-learning/examples.rst:18
+msgid ""
+"This is an example from our instance segmentation model. This model is "
+"designed to detect objects within the bin. The model provides the area that "
+"it detects each object, which makes picking possible further down the "
+"flowchart."
+msgstr ""
+"这是我们的实例分割模型中的一个示例。该模型旨在检测箱体内的物体。该模型提供了"
+"它检测每个对象的区域，这使得在流程图的下游进行拾取成为可能。"
+
+#: ../deep-learning/examples.rst:26
+msgid "Key-point Detection Model"
+msgstr "关键点检测模型"
+
+#: ../deep-learning/examples.rst:27
+msgid ""
+"This is an example of our key-point detection model. Here, the model is "
+"identifying the orientation of each object, as well as the center-point. The "
+"top and bottom of each object are slightly different, so the two different "
+"key-points (P1 and P2) are used to identify which side is which."
+msgstr ""
+"这是我们的关键点检测模型的一个示例。在这里，模型正在识别每个对象的方向以及中"
+"心点。每个物体的顶部和底部略有不同，因此使用两个不同的关键点（P1 和 P2）来识"
+"别哪一侧是哪一侧。"
+
+#: ../deep-learning/examples.rst:35
+msgid "Suction Model"
+msgstr "吸力模型"
+
+#: ../deep-learning/examples.rst:36
+msgid ""
+"This is an example from our suction model. This model is designed to provide "
+"an area that is adequate for suction picking, and also provide a **best** "
+"location for suction picking"
+msgstr ""
+"这是我们的吸力模型的一个例子。该模型旨在提供足够的吸拾区域，并提供吸拾的 **最"
+"佳** 位置"
+
+#: ../deep-learning/index.rst:2
+msgid "Deep Learning"
+msgstr "深度学习"
+
+#: ../deep-learning/index.rst:3
+msgid ""
+"This section covers a detailed description of how to train a deep learning "
+"model to accomplish tasks in the Vision System."
+msgstr "本节详细介绍了如何训练深度学习模型以完成视觉系统中的任务。"
+
+#: ../deep-learning/jenkins-setup.rst:2
+msgid "Setup Jenkins and FTP"
+msgstr "设置 Jenkins 和 FTP"
+
+#: ../deep-learning/jenkins-setup.rst:5
+msgid "Account Setup"
+msgstr "帐户设置"
+
+#: ../deep-learning/jenkins-setup.rst:6
+msgid ""
+"At this time, Customers must contact the DaoAI team in order to set up their "
+"account for both Jenkins and FTP. You will be provided with a username and "
+"password, and they will be identical for both platforms for simplicity."
+msgstr ""
+"此时，客户必须联系 DaoAI 团队才能为 Jenkins 和 FTP 设置他们的帐户。您将获得一"
+"个用户名和密码，为简单起见，它们对于两个平台都是相同的。"
+
+#: ../deep-learning/jenkins-setup.rst:9
+msgid ""
+"Once you have your sign-in info, continue to the next sections to get started"
+msgstr "获得登录信息后，继续下一部分开始"
+
+#: ../deep-learning/jenkins-setup.rst:12
+msgid "Connecting to FTP"
+msgstr "连接到 FTP"
+
+#: ../deep-learning/jenkins-setup.rst:13
+msgid ""
+"In order to connect to DaoAI's FTP server, you will need an FTP Navigator. "
+"DaoAI's recommended software for this is Filezilla, `which you can find here "
+"<https://filezilla-project.org/download.php?type=client>`_. You are welcome "
+"to use a different software, however we may not be able to provide you with "
+"support for it."
+msgstr ""
+
+#: ../deep-learning/jenkins-setup.rst:17
+msgid ""
+"Once you have installed Filezilla, launch it. You can now input the "
+"information in the top toolbar to connect to the FTP server."
+msgstr ""
+"安装 Filezilla 后，启动它。您现在可以在顶部工具栏中输入信息以连接到 FTP 服务"
+"器。"
+
+#: ../deep-learning/jenkins-setup.rst:23
+msgid "Please use the following info::"
+msgstr "请使用以下信息："
+
+#: ../deep-learning/jenkins-setup.rst:29
+msgid "Once you have entered the information, press the 'Quickconnect' button."
+msgstr "输入信息后，按 'Quickconnect' 按钮。"
+
+#: ../deep-learning/jenkins-setup.rst:31
+msgid "You are now connected to the DaoAI FTP Server."
+msgstr "您现在已连接到 DaoAI FTP 服务器。"
+
+#: ../deep-learning/jenkins-setup.rst:34
+msgid "Logging in to Jenkins"
+msgstr "登陆Jenkins"
+
+#: ../deep-learning/jenkins-setup.rst:35
+#, python-format
+msgid ""
+"Navigate to the `DaoAI Jenkins Server <http://206.12.6.232:8080/login?from="
+"%2F>`_ in your preferred web browser. Use your provided login info to sign "
+"in."
+msgstr ""
+
+#: ../deep-learning/jenkins-setup.rst:38
+msgid "You are now connected to the DaoAI Jenkins Server"
+msgstr "您现在已连接到 DaoAI Jenkins 服务器"
+
+#: ../deep-learning/jenkins-usage.rst:2
+msgid "Train and Export a Model with Jenkins"
+msgstr "使用 Jenkins 训练和导出模型"
+
+#: ../deep-learning/jenkins-usage.rst:5
+msgid "Requirements"
+msgstr "要求"
+
+#: ../deep-learning/jenkins-usage.rst:6
+msgid ""
+"Before beginning to train a learning model, you must have or know a few "
+"things:"
+msgstr "在开始训练学习模型之前，您必须具备或知道以下几点："
+
+#: ../deep-learning/jenkins-usage.rst:8
+msgid "Know what type of model you would like to train"
+msgstr "知道你想训练什么类型的模型"
+
+#: ../deep-learning/jenkins-usage.rst:9
+msgid ""
+"Know if you would like to continue training from a previous checkpoint or not"
+msgstr "知道您是否想从之前的检查点继续训练"
+
+#: ../deep-learning/jenkins-usage.rst:10
+msgid "Have a complete dataset in the format identified below"
+msgstr "拥有以下格式的完整数据集"
+
+#: ../deep-learning/jenkins-usage.rst:13
+msgid "Creating a New Project"
+msgstr "创建新项目"
+
+#: ../deep-learning/jenkins-usage.rst:14
+msgid ""
+"Creating a new project is very simple, and only consists of running one "
+"pipeline. Navigate to the 'Create New Project' pipeline, and press 'Build "
+"with Parameters' on the left toolbar. Enter the name of your new project "
+"(write it down somewhere, you'll need this later), and the class labels you "
+"used while annotating your dataset. Press Build."
+msgstr ""
+"创建一个新项目非常简单，只需要运行一个管道。导航到 '创建新项目' 管道，然后按"
+"左侧工具栏上的“使用参数构建”。输入新项目的名称（将其写在某处，稍后您将需要"
+"它），以及您在注释数据集时使用的类标签。按构建。"
+
+#: ../deep-learning/jenkins-usage.rst:19
+msgid ""
+"After this build is successful, you should see a new folder show up on your "
+"Filezilla with the same name. This is the folder where you will be uploading "
+"all data, and receiving the model for everything you do with this project."
+msgstr ""
+"此构建成功后，您应该会在 Filezilla 上看到一个同名的新文件夹。这是您将上传所有"
+"数据的文件夹，并接收您对该项目所做的一切的模型。"
+
+#: ../deep-learning/jenkins-usage.rst:23
+msgid "Training a Model"
+msgstr "训练模型"
+
+#: ../deep-learning/jenkins-usage.rst:24
+msgid ""
+"No matter the type of model you wish to train, two pipelines are used. For "
+"each, you must use the Annotation-Check pipeline first, as you will not be "
+"able to run the Training pipeline until the check is successful. This is to "
+"ensure that data formatting is accurate."
+msgstr ""
+"无论您希望训练哪种类型的模型，都使用两个管道。对于每个，您必须首先使用 "
+"Annotation-Check 管道，因为在检查成功之前您将无法运行 Training 管道。这是为了"
+"确保数据格式正确。"
+
+#: ../deep-learning/jenkins-usage.rst:29
+msgid "Classification Models"
+msgstr "分类模型"
+
+#: ../deep-learning/jenkins-usage.rst:30 ../deep-learning/jenkins-usage.rst:63
+msgid "First, run the Annotation-Check with the following steps:"
+msgstr "首先，使用以下步骤运行 Annotation-Check："
+
+#: ../deep-learning/jenkins-usage.rst:32
+msgid ""
+"Navigate to your tkteach folder you used to annotate your dataset in your "
+"file explorer"
+msgstr "导航到您用于在文件资源管理器中注释数据集的 tkteach 文件夹"
+
+#: ../deep-learning/jenkins-usage.rst:33 ../deep-learning/jenkins-usage.rst:66
+msgid "Navigate to the project folder on Filezilla that you wish to use"
+msgstr "导航到 Filezilla 上您要使用的项目文件夹"
+
+#: ../deep-learning/jenkins-usage.rst:34
+msgid ""
+"Add all the images in your dataset and the 'storage.db' file to an archive (."
+"zip)"
+msgstr "将数据集中的所有图像和“storage.db”文件添加到存档 (.zip)"
+
+#: ../deep-learning/jenkins-usage.rst:40 ../deep-learning/jenkins-usage.rst:73
+msgid "Upload the .zip file to the 'src' folder on Filezilla"
+msgstr "将 .zip 文件上传到 Filezilla 上的“src”文件夹"
+
+#: ../deep-learning/jenkins-usage.rst:46
+msgid "Navigate to the Classification-Annotation-Check pipeline on Jenkins"
+msgstr "导航到 Jenkins 上的分类-注释-检查管道"
+
+#: ../deep-learning/jenkins-usage.rst:47 ../deep-learning/jenkins-usage.rst:80
+msgid ""
+"Click 'Build with Parameters' and enter the name of your project (**case "
+"sensitive**)"
+msgstr "单击“使用参数构建”并输入项目名称 ( **区分大小写** )"
+
+#: ../deep-learning/jenkins-usage.rst:48 ../deep-learning/jenkins-usage.rst:57
+#: ../deep-learning/jenkins-usage.rst:81 ../deep-learning/jenkins-usage.rst:90
+msgid "Click 'Build'"
+msgstr "点击“构建”"
+
+#: ../deep-learning/jenkins-usage.rst:50 ../deep-learning/jenkins-usage.rst:83
+msgid ""
+"Please ensure the previous build is successful before carrying on to the "
+"next step."
+msgstr "在进行下一步之前，请确保之前的构建成功。"
+
+#: ../deep-learning/jenkins-usage.rst:52 ../deep-learning/jenkins-usage.rst:85
+msgid "Next, run the Training with the following steps:"
+msgstr "接下来，使用以下步骤运行训练："
+
+#: ../deep-learning/jenkins-usage.rst:54
+msgid "Navigate to the Classification-Training pipeline on Jenkins"
+msgstr "导航到 Jenkins 上的分类训练管道"
+
+#: ../deep-learning/jenkins-usage.rst:55 ../deep-learning/jenkins-usage.rst:88
+msgid "Click 'Build with Parameters' and enter the details for your project"
+msgstr "单击“使用参数构建”并输入项目的详细信息"
+
+#: ../deep-learning/jenkins-usage.rst:56 ../deep-learning/jenkins-usage.rst:89
+msgid ""
+"If you wish to train from a previous build, continue below to :ref:"
+"`checkpoint-label` to learn how"
+msgstr ""
+
+#: ../deep-learning/jenkins-usage.rst:59 ../deep-learning/jenkins-usage.rst:92
+msgid ""
+"Now the model is training and you can continue to the :ref:`export-label` "
+"section."
+msgstr ""
+
+#: ../deep-learning/jenkins-usage.rst:62
+msgid "Segmentation Models"
+msgstr "分割模型"
+
+#: ../deep-learning/jenkins-usage.rst:65
+msgid ""
+"Navigate to your dataset that you annotated containing the PNGs and the JSONs"
+msgstr "导航到您注释的包含 PNG 和 JSON 的数据集"
+
+#: ../deep-learning/jenkins-usage.rst:67
+msgid "Add all the images and JSONs to an archive (.zip)"
+msgstr "将所有图像和 JSON 添加到存档 (.zip)"
+
+#: ../deep-learning/jenkins-usage.rst:79
+msgid "Navigate to the Segmentation-Annotation-Check pipeline on Jenkins"
+msgstr "导航到 Jenkins 上的 Segmentation-Annotation-Check 管道"
+
+#: ../deep-learning/jenkins-usage.rst:87
+msgid "Navigate to the Segmentation-Training pipeline on Jenkins"
+msgstr "导航到 Jenkins 上的 Segmentation-Training 管道"
+
+#: ../deep-learning/jenkins-usage.rst:97
+msgid "Training from a Previous checkpoint"
+msgstr "从上一个检查点训练"
+
+#: ../deep-learning/jenkins-usage.rst:98
+msgid ""
+"If you wish to continue training with new data, using a model you had "
+"previously trained to save time, you can do so. All of your exported models "
+"should come named with a build number To improve an old model, simply input "
+"the build number as a parameter for the training pipeline."
+msgstr ""
+"如果您希望继续使用新数据进行训练，使用您之前训练过的模型来节省时间，您可以这"
+"样做。您导出的所有模型都应以内部版本号命名要改进旧模型，只需输入内部版本号作"
+"为训练管道的参数即可。"
+
+#: ../deep-learning/jenkins-usage.rst:102
+msgid ""
+"For example, if I wanted to continue training from a model I was using "
+"called 'projectName-build-5-2022-01-01-cpu.pt', I would input the following "
+"as the CHECKPOINT_BUILD_NUMBER in the jenkins pipeline::"
+msgstr ""
+
+#: ../deep-learning/jenkins-usage.rst:107
+msgid ""
+"As we have limited storage, only a certain number of past builds are stored "
+"for each project, usually the last 10 builds, or any builds in the last week "
+"(whichever number is higher)"
+msgstr ""
+"由于我们的存储空间有限，每个项目只存储一定数量的过去构建，通常是最后 10 个构"
+"建，或上周的任何构建（以较高的数量为准）"
+
+#: ../deep-learning/jenkins-usage.rst:113
+msgid "Exporting a Model"
+msgstr "导出模型"
+
+#: ../deep-learning/jenkins-usage.rst:114
+msgid ""
+"If a model training reaches a certain training level (dependent on the "
+"accuracy and loss), it will automatically complete the training and export "
+"the model. Otherwise, if you are satisfied with the training of your model "
+"and wish to stop it early, simply cancel the build of the Training pipeline. "
+"When the build is cancelled, it will automatically export the model."
+msgstr ""
+"如果模型训练达到一定的训练水平（取决于准确率和损失），它会自动完成训练并导出"
+"模型。否则，如果您对模型的训练感到满意并希望尽早停止它，只需取消训练管道的构"
+"建。当构建被取消时，它会自动导出模型。"
+
+#: ../deep-learning/jenkins-usage.rst:118
+msgid ""
+"Once your model has been exported, you will be able to find the CPU version, "
+"the GPU version, and the input config file for your model in the 'models' "
+"folder of your FTP project."
+msgstr ""
+"导出模型后，您将能够在 FTP 项目的“models”文件夹中找到模型的 CPU 版本、GPU 版"
+"本和输入配置文件。"
+
+#: ../deep-learning/jenkins-usage.rst:124
+msgid ""
+"If you accidentally run the build again before getting your models, **don't "
+"worry**!  The previous model export is also saved in the 'models_LAST' "
+"folder for your convenience."
+msgstr ""
+"如果您在获取模型之前不小心再次运行构建，**请不要担心**！为方便起见，之前的模"
+"型导出也保存在“models_LAST”文件夹中。"
