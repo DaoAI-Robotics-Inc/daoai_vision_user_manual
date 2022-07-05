@@ -46,3 +46,5 @@ Your first image should load in the middle, and you should see your labels on th
 
 Assign the desired label to each image by either using the hotkeys you assigned earlier, or clicking on the label on the sidebar.
 Continue to the next image using the arrow keys, and repeat for your whole dataset.
+
+.. note:: Tkteach is not a DaoAI application.  For troubleshooting help, please refer to the `tkteach github <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/xchen_daoai_com/EbnJb56ga5VGmjSjkV2279wB3andyLOdtg-xfdDzBLe2Tg?e=UOp96H>`_

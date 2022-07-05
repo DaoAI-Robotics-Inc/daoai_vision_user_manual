@@ -3,7 +3,7 @@ Train and Export a Model with Jenkins
 
 Requirements
 ------------
-Before beginning to train a deep learning model, you must have or know a few things:
+Before beginning to train a deep learning model, you must have or know the following:
 
 * Know what type of model you would like to train
 * Know if you would like to continue training from a previous checkpoint or not
@@ -13,6 +13,11 @@ Creating a New Project
 ----------------------
 Creating a new project is very simple, and only consists of running one pipeline.
 Navigate to the 'Create New Project' pipeline, and press 'Build with Parameters' on the left toolbar.
+
+.. image:: images/jenkins-usage-im5.png
+    :width: 100%
+    :align: center
+
 Enter the name of your new project (write it down somewhere, you'll need this later), and the class labels you used while annotating your dataset.
 The class labels should be separated on individual lines.
 Depending on the type of project you're creating, you may need to use additional labels in the SECONDARY_CLASS_LABELS parameter.  
@@ -25,7 +30,7 @@ This is the folder where you will be uploading all data, and receiving the model
 Training a Model
 ----------------
 No matter the type of model you wish to train, two pipelines are used.
-For each, you must use the AnnoCheck pipeline first, as you will not be able to run the Training pipeline until the check is successful.
+For each, **you must use the AnnoCheck pipeline first**, as you will not be able to run the Training pipeline until the check is successful.
 This is to ensure that data formatting is accurate and to set up some internal files for the Training pipeline to use.
 
 Classification Models
@@ -34,7 +39,7 @@ First, run the AnnoCheck with the following steps:
 
 1. Navigate to your tkteach folder you used to annotate your dataset in your file explorer
 2. Navigate to the project folder on Filezilla that you wish to use
-3. Add all the images in your dataset and the 'storage.db' file to an archive (.zip)
+3. Add all the images in your dataset and the 'storage.db' file to an archive (.zip) in the following format
 
 .. image:: images/jenkins-usage-im3.png
     :width: 30%
@@ -50,12 +55,15 @@ First, run the AnnoCheck with the following steps:
 6. Click 'Build with Parameters' and select the name of your project, as well as your DATASET_ID (stored in storage.db)
 7. Click 'Build'
 
-Please ensure the previous build is successful before carrying on to the next step.
+Please ensure the previous build is successful before carrying on to the next step.  If the annotation check failed, please check the following before contacting DaoAI for help:
+
+* Your data is formatted correctly
+* Your class labels are correct (in the annotations AND in Jenkins)
 
 Next, run the Training with the following steps:
 
 1. Navigate to the Classification-Training pipeline on Jenkins
-2. Click 'Build with Parameters' and enter the details for your project
+2. Click 'Build with Parameters' and select the details for your project
 3. If you wish to train from a previous build, select the build from the dropdown menu titled 'CHECKPOINT'
 4. Click 'Build'
 
@@ -67,7 +75,7 @@ First, run the AnnoCheck with the following steps:
 
 1. Navigate to your dataset that you annotated containing the PNGs and the JSONs
 2. Navigate to the project folder on Filezilla that you wish to use
-3. Add all the images and JSONs to an archive (.zip)
+3. Add all the images and JSONs to an archive (.zip) in the following format
 
 .. image:: images/jenkins-usage-im4.png
     :width: 30%
@@ -83,7 +91,10 @@ First, run the AnnoCheck with the following steps:
 6. Click 'Build with Parameters' and select the name of your project
 7. Click 'Build'
 
-Please ensure the previous build is successful before carrying on to the next step.
+Please ensure the previous build is successful before carrying on to the next step.  If the annotation check failed, please check the following before contacting DaoAI for help:
+
+* Your data is formatted correctly
+* Your class labels are correct (in the annotations AND in Jenkins)
 
 Next, run the Training with the following steps:
 
@@ -109,7 +120,7 @@ As we have limited storage, only a certain number of past builds are stored for 
 
 Exporting a Model
 -----------------
-If a model training reaches a certain training level (dependent on the accuracy and loss), it will automatically complete the training and export the model.
+If a model training reaches a certain training level (dependent on the accuracy and loss) or it has trained for what is typically a sufficient amount of time, it will automatically complete the training and export the model.
 Otherwise, if you are satisfied with the training of your model and wish to stop it early, simply cancel the build of the Training pipeline.
 When the build is cancelled, it will automatically export the model.
 
