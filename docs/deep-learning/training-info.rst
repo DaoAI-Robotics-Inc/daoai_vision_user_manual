@@ -10,7 +10,7 @@ There are two things to look for with the Validation Loss:
 2. Is the validation loss finished improving (has the val-loss decreased over the last 10 outputs) ?
 
 If the answer to either of these questions is yes, then you could consider stopping the training early.
-Generally, if one of these conditions is met, the model is close to it's limit for the currently provided data, and it will likely be ready for actual use.
+Generally, if one of these conditions is met, the model is close to its limit for the currently provided data, and it will likely be ready for actual use.
 
 What the validation loss looks like in Jenkins
 ----------------------------------------------
