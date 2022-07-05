@@ -10,6 +10,7 @@ This section covers a detailed description of how to train a deep learning model
    annotation/index
    jenkins-setup
    jenkins-usage
+   training-info
    bp-testing
    common-issues
    examples

@@ -52,7 +52,7 @@ First, run the AnnoCheck with the following steps:
     :align: center
 
 5. Navigate to the Classification-AnnoCheck pipeline on Jenkins
-6. Click 'Build with Parameters' and select the name of your project, as well as your DATASET_ID (stored in storage.db)
+6. Click 'Build with Parameters' and select the name of your project, as well as your DATASET_ID (stored in storage.db).  If you deleted storage.db when recommended earlier, your DATASET_ID should be 1.  Else, use an SQLite DB tool to find your DATASET_ID
 7. Click 'Build'
 
 Please ensure the previous build is successful before carrying on to the next step.  If the annotation check failed, please check the following before contacting DaoAI for help:

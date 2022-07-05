@@ -24,6 +24,8 @@ For example, for my dataset containing images of Dogs and Cats, my categories.tx
     :width: 50%
     :align: center
 
+To make training easier later on, it is recommended to also go and delete the **storage.db** file stored with tkteach, as well as any old dataset folders
+
 Once your dataset and labels are set up, you are ready to start annotating!
 
 To run tkteach, go to the command line where your environment is set up (Type in 'cmd' in your search bar).
