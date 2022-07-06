@@ -24,6 +24,8 @@ For example, for my dataset containing images of Dogs and Cats, my categories.tx
     :width: 50%
     :align: center
 
+To make training easier later on, it is recommended to also go and delete the **storage.db** file stored with tkteach, as well as any old dataset folders
+
 Once your dataset and labels are set up, you are ready to start annotating!
 
 To run tkteach, go to the command line where your environment is set up (Type in 'cmd' in your search bar).
@@ -46,3 +48,5 @@ Your first image should load in the middle, and you should see your labels on th
 
 Assign the desired label to each image by either using the hotkeys you assigned earlier, or clicking on the label on the sidebar.
 Continue to the next image using the arrow keys, and repeat for your whole dataset.
+
+.. note:: Tkteach is not a DaoAI application.  For troubleshooting help, please refer to the `tkteach github <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/xchen_daoai_com/EbnJb56ga5VGmjSjkV2279wB3andyLOdtg-xfdDzBLe2Tg?e=UOp96H>`_

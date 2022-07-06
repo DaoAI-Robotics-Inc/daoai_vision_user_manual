@@ -16,9 +16,7 @@ After opening LabelMe you should see the home screen:
     :align: center
 
 Before annotating choose an output directory for the JSON files by clicking “File > Change Output Dir”. 
-Although this can be a standalone directory since the JSON files contain the image data, 
-it is usually easier to keep the JSON files and PNGs in the same place, as you will need to upload them together later on. 
-The original images can be loaded from the JSON files so they do not need to be returned after annotating.
+Please keep the JSON files and PNGs in the same place, as you will need to upload them together later on, and it renders model training far easier.
 
 To get started, open an image or a directory of images by clicking “Open” or “Open Dir” on the left-side toolbar. 
 The files to annotate will be shown in the “File List” section (bottom-right) and some options will become visible:
@@ -44,6 +42,8 @@ If you set the directory at the start, press Enter to quickly accept the directo
 .. image:: images/im3.png
 
 .. attention:: Although going to the next image prompts a saving pop-up, there is a bug in LabelMe that makes the path in this pop-up incorrect.  As such, it is recommended to use the 'Save' button instead.
+
+.. note:: LabelMe is not a DaoAI application.  For troubleshooting help, please refer to the `LabelMe github <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/xchen_daoai_com/Ecmqz3JU-WVCv_Po7uuE-lABNDx6zXs44VY-tE8OP9ZkqQ?e=VPzNwI>`_
 
 .. _guidelines-label:
 
