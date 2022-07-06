@@ -24,3 +24,34 @@ The rest of the fields are remain the same(some of them format changed from **In
 Some robots have the **MULT** transformation integrated on **Vision** side, some do not. All the listed types of robot will 
 have the transformation done by **Vision**, but if you are using a robot new type of robot, you will need to process the transformation on robot's script or using an external script to process the transformation. 
 
+Check the Values!!!
+-------------------
+
+After all the process with **MULT** factor, you have to check if the essential data(numbers) were kept. Many robots supports preview of the received poses, which allows you 
+to check the coordinates before the robot perform any movements. 
+
+You can check by the following steps:
+
+    #. Send a customized double with long numbers after the decimal;
+    #. Send the customized pose to **Hercules** and check how many numbers after the decimal had kept;
+
+.. image:: Images/check_mult.png
+    :align: center
+
+|
+
+.. image:: Images/check_mult_robot.png
+    :align: center
+
+|
+
+You can see the received pose on both **Vision** side and  **Hercules** side: ensure that the pose sent is matching the pose received.
+
+.. image:: Images/check_mult_her.png
+    :align: center
+
+|
+
+Now that you see the pose **Vision** sent is exactly the same as the pose **Hercules** received. 
+Also note that, the pose **Vision** sent is trimmed down to 4 numbers after decimal, which is **MULT** factor **10000**. 
+In this case, the process after **MULT** factor is correct and the values of a pose will be kept 4 numbers after the decimal in this type of robot.

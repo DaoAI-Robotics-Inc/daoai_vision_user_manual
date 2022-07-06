@@ -5,7 +5,7 @@ This is the generic logic of Calibration for all kinds of robot.
 If you want to see Calibration of individual robot, you can go to Different type of Robots to find the specific Calibration program under the robot page.
 
 .. warning::
-	You must make sure the `Euler Angle Order <>`_ is matching before you working on Calibration. TODO
+	You must make sure the `Euler Angle Order <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/hardware/robot/euler.html>`_ is matching before you working on Calibration. TODO
 
 The Calibration programs and VMPlayer are `in here <https://drive.google.com/file/d/1e8qJSOhm25ZiUAlJgulAEamDqmwYkx6s/view?usp=sharing>`_. 
 Details for UR Calibration program is in `here <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/hardware/robot/cali_pro.html>`_.

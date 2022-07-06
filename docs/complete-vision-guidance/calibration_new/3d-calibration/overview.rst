@@ -1,6 +1,15 @@
 3D Calibration 
 ==============
 
+.. toctree::
+   :hidden:
+
+   camera-accuracy
+   robot-accuracy
+   chessboard-calibration/chessboard-calibration
+   circleboard-calibration/circle-board-calibration
+   sphere-calibration/3d-sphere-calibration
+
 Robot-camera calibration is the process where the **camera** and the **robot** learn their relative position with respect to each other, which allows the camera to guide the robot to correct positions in the work cell.
 
 Calibration can be performed once the camera and robot have been mounted in the work cell, and needs to be redone if the camera moved relative to the robot base (fixed camera) or flange (robot mounted camera).
@@ -68,5 +77,4 @@ There are two ways in which robot-camera calibration can be validated:
 .. Attention:: The first picks after performing calibration should be executed at a **low robot speed**, so unexpected behavior can be identified early enough to prevent the robot from colliding with people or the environment.
 
 
-
-
+   
