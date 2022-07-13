@@ -1,7 +1,7 @@
-Circle Board Calibration
+Board Calibration
 ========================
 
-Circle board calibration is the recommended method for performing robot-camera calibration in DaoAI Vision. With this method, the robot shows the calibration plate to DaoAI Vision from different viewpoints.
+Board calibration is the recommended method for performing robot-camera calibration in DaoAI Vision. With this method, the robot shows the calibration plate to DaoAI Vision from different viewpoints. We will only discuss the **Circleboard Calibration** here, since there is only one difference in setup between **Circleboard Calibration** and **Chessboard Calibration**.
 
 The placing of the calibration plate and the poses from which it is detected depend on the camera mount.
 
@@ -169,6 +169,16 @@ Next thing to setup before start running the flowchart is to set the row and col
 .. image:: images/row-col-info.png
     :align: center
     
+|
+
+
+
+.. note::
+    For **Chessboard Calibration**, you should choose the **Grid Type: Grid Chessboard** here.
+
+.. image:: images/row-col-info-cb.png
+    :align: center
+
 |
 
 To collect poses, you need to setup the ``Manual Calibration`` robot script.

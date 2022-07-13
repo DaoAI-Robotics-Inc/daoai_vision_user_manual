@@ -6,7 +6,6 @@
 
    camera-accuracy
    robot-accuracy
-   chessboard-calibration/chessboard-calibration
    circleboard-calibration/circle-board-calibration
    sphere-calibration/3d-sphere-calibration
 
