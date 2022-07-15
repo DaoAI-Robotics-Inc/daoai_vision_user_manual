@@ -14,7 +14,7 @@ Creating a New Project
 Creating a new project is very simple, and only consists of running one pipeline.
 Navigate to the 'Create New Project' pipeline, and press 'Build with Parameters' on the left toolbar.
 
-.. image:: images/jenkins-usage-im5.png
+.. image:: images/jenkins-usage-im5_fix.png
     :width: 100%
     :align: center
 

@@ -22,6 +22,6 @@ In classification models:
 
 In segmentation & keypoint models:
 
-.. image:: images/training-info-im2.png
+.. image:: images/training-info-im2_fix.png
     :align: center
     :width: 70%
