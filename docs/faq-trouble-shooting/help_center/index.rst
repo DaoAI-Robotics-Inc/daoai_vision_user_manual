@@ -80,8 +80,8 @@ Help Center 网站： https://daoai.atlassian.net/servicedesk/customer/portals
     :align: center
 |
 
-提交Bug
-~~~~~~~
+提交 Bug
+~~~~~~~~
 
 打开Help Center网站， 点击 “Report a bug“
 
@@ -124,3 +124,45 @@ Help Center 网站： https://daoai.atlassian.net/servicedesk/customer/portals
 |
 
 点击 “Send” 提交 Bug
+
+*例子：* https://daoai.atlassian.net/servicedesk/customer/portal/6/DP-36
+
+提交 产品功能需求
+~~~~~~~~~~~~~~~~
+
+打开Help Center网站， 点击 “Suggest improvement“
+
+.. image:: Images/19.png
+    :align: center
+|
+
+根据图片上的信息填写，请在 "Description" 里面详细描述 需要添加的功能 的介绍，用途和原因，以便我们更好的理解
+
+.. image:: Images/20.png
+    :align: center
+|
+
+*例子：* https://daoai.atlassian.net/servicedesk/customer/portal/6/DP-45?created=true
+
+提交 项目支持需求
+~~~~~~~~~~~~~~~~
+
+打开Help Center网站， 点击 “Project support“
+
+.. image:: Images/21.png
+    :align: center
+|
+
+在 “Summary” 中填写 项目名和标题。格式为 【项目名】标题。比如: 【安道拓】下料小车Mod Finder检测不稳定。
+
+在 “Description” 中添加 问题的 **详细描述** ，以及需要获得怎样的支持。请包括： WeRobotics版本，SLC版本（如果问题与相机软件相关），现场工程师名字（如果有的话）。请填写尝试过的解决办法。
+
+在 “Attachment” 中上传 附件。如果与流程图相关，请上传 **完整的工作空间** 。添加 **视频** 以更好的展示问题和帮助我们复现。
+
+在 “Labels” 中填写 项目名。如果该 项目名还没有创建的话请创建一个，这样会更好的帮助我们分类。比如： 安道拓
+
+.. image:: Images/22.png
+    :align: center
+|
+
+*例子：* https://daoai.atlassian.net/servicedesk/customer/portal/6/DP-47
