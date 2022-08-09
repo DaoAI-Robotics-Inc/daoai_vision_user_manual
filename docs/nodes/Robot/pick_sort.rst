@@ -29,7 +29,7 @@ Input and Output
 +-------------------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | sortedOriginalIndices   | vector<Int>       | The mapping of the original indices and there new positions. For example if the original input is an array of size 5. This output may look like this [3, 1, 5, 2 0, 4] where the new index 0 is the original index 3.|
 +-------------------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| sortedPoses             | vector<Pose>      | The output sorted list of robot poses for pick up.                                                                                                                                                                   |
+| sortedPoses             | vector<Pose>      | The output sorted list of gripper positions for pick up.                                                                                                                                                             |
 +-------------------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Node Settings
@@ -55,8 +55,69 @@ Source Parameters
 
 - **Reference Axis**: 
 
-	asd
+	The reference axis used to sort the picking order. This can link to the Cloud Process Node using "Set Reference Frame" operation.
 
 - **Scene Cloud**: 
 
-	asd
+	The source point cloud.
+
+Pick Sort Setting
+~~~~~~~~~~~~~~~~~
+
+.. image:: images/pick_sort_2.png
+	:scale: 100%
+
+- **Sort Type**: (Default value: Highest Z)
+
+	.. figure:: images/pick_sort_3.png
+		:scale: 100%
+
+
+	The order to sort the object positions and  poses for pick up in the reference coordinates. For example, if "Highest Z" is selected, the node will output the object positions and robot poses from the highest z value to the lowest z value.
+
+- **Align Poses Orientation**: (Default value: None)
+
+	.. figure:: images/pick_sort_4.png
+		:scale: 100%
+
+	This operation aligns the orientation of poses with the x-axis of the reference coordinates. 
+
+	**0 degree**: the x-axis of objects align with the driection of the x-axis of the reference axis.
+	For example, if the reference axis is set like the image below:
+
+	.. figure:: images/pick_sort_8.png
+		:scale: 100%
+
+	The poses of the objects look like:
+
+	.. figure:: images/pick_sort_9.png
+		:scale: 100%	
+
+
+	**toward reference axis**: the x-axis of objects point toward the origin of the reference axis.
+	For example, if the reference axis is set like the image below:
+	
+	.. figure:: images/pick_sort_7.png
+		:scale: 100%
+
+	The poses of the objects look like:
+
+	.. figure:: images/pick_sort_6.png
+		:scale: 100%	
+
+- **Lock Poses Z Direction**: (Default value: None)
+
+	.. figure:: images/pick_sort_5.png
+		:scale: 100%
+
+	Fix the Z direction of object poses. For example, if "Positive" is selected, all of the poses will have positive Z relative with the z-axis of the reference axis. This feature is helpful when the target object is detected facing down, but it can only be approached from the top. This feature can make the objects all have positive/negative Z direction.
+
+	
+Procedure to use
+~~~~~~~~~~~~~~~~
+
+
+
+Exercise
+~~~~~~~~
+
