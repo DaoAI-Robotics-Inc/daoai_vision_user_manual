@@ -166,3 +166,39 @@ Help Center 网站： https://daoai.atlassian.net/servicedesk/customer/portals
 |
 
 *例子：* https://daoai.atlassian.net/servicedesk/customer/portal/6/DP-47
+
+
+分享文件
+~~~~~~~
+
+如果不使用附件上传文件，使用第三方网盘。请 *不要使用百度网盘*，在一段时间时候百度网盘会清空文件。
+
+请使用 OneDrive 分享文件，链接为：
+
+https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/xchen_daoai_com/EvsyfWQXi4BKls0z3ttjkakBDzjVSNe9FUVaHzYghT5OKA?e=ekpd5j
+
+使用方法：
+首先在 Help Center 创建请求。在请求创建成功后，会自动生成一个 Reference。这个 Reference 是独特代表着这个新创建的 请求。
+
+.. image:: Images/23.png
+    :align: center
+|
+
+记住这个 Reference, 打开上面的 OneDrive 链接，创建一个文件夹，文件夹的名字为这个 reference
+
+.. note::
+    举个例子，如果要为 DP-59 的ticket上传文件，应该像下图创建文件夹
+
+.. image:: Images/24.png
+    :align: center
+|
+
+上传文件后，复制这个网页的链接，然后粘贴在创建的 请求 的评论下面。
+
+.. image:: Images/25.png
+    :align: center
+|
+
+.. image:: Images/26.png
+    :align: center
+|
