@@ -11,7 +11,7 @@ This section is a detailed description about the functionalities of each node. Y
    Data Control/index
    Flowchart_control/index
    Utility/index
-   Image Processing/index
+   Images/index
    3D Processing/index
    Calibration/index
    DA Modules/index
