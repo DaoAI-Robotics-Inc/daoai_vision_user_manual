@@ -215,7 +215,7 @@ We have a project for large mechanical parts company automation. The company wan
 
 Image above is the box on the conveyor bell. 
 We have the all the hardware setup, and the detection flowchart uses **Mod Finder** node and **Reconstruct** node. 
-Now we are stuck on the setting of **Reconstruct** node. Please choose the **one** correct answers from the options:
+Now we are stuck on the setting of **Reconstruct** node. Please choose the **one** correct answer from the options:
 
 	.. image:: Images/reconstruct/exe_1_1.png
 		:align: center
@@ -279,7 +279,7 @@ We have a project for Chips manufacture automation. The company wants the robot 
 
 Image above is the chips on the pallet. 
 We have the all the hardware setup, and the detection flowchart uses **DL Segment** node and **Reconstruct** node. 
-Now we are stuck on the setting of **Reconstruct** node. Please choose the **one** correct answers from the options: 
+Now we are stuck on the setting of **Reconstruct** node. Please choose the **one** correct answer from the options: 
 
 .. tip::
 	You might want to use **Vision** studio to test and try out your options for this scenario. 
