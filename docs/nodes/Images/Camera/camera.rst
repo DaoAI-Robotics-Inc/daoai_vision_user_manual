@@ -34,7 +34,7 @@ Node Settings
 -------------
 The following screen shot demonstrate camera node settings
 
-.. image:: images/camera-node-settings.png
+.. image:: Images/camera-node-settings.png
 	:scale: 100%
 
 - **Open Platform Config**: Click to open the Platform Config where you can add and connect cameras.
@@ -50,17 +50,17 @@ Procedure to Use
 
 1. Right click the '+' sign and click 'Insert Node'.
 
-.. image:: images/camera-step-1.png
+.. image:: Images/camera-step-1.png
 	:scale: 100%
 
 2. Select Camera node and click OK.
 
-.. image:: images/camera-step-2.png
+.. image:: Images/camera-step-2.png
 	:scale: 100%
 
 3. Click Platform Config and add Camera by clicking the '+' sign and then click accept.
 
-.. image:: images/camera-step-3.png
+.. image:: Images/camera-step-3.png
 	:scale: 100%
 
 4. Connect to a physical or virtual camera
@@ -75,7 +75,7 @@ Procedure to Use
 	7. click connect.
 	8. click Apply.
 
-	.. image:: images/camera-step-4-1.png
+	.. image:: Images/camera-step-4-1.png
 	:scale: 100%
 
 - 4.2. connect to a virtual camera
@@ -84,28 +84,28 @@ Procedure to Use
 	3. Click browse to select file.
 	4. Click Apply
 
-	.. image:: images/camera-step-4-2.png
+	.. image:: Images/camera-step-4-2.png
 		:scale: 100%
 
 	- 4.2.1. Select From Folder to load all files from folder, the camera node will read image sequencially in the folder
 
-		.. image:: images/camera-step-4-2-1.png
+		.. image:: Images/camera-step-4-2-1.png
 			:scale: 100%
 
 	- 4.2.2. Select From Numbered Files, and select a folder path, specifiy the file prefix and start/end index. 
 	The camera node will read image sequencially in the folder for filenames began with the speicified prefix and ordered by their index. 
 
-		.. image:: images/camera-step-4-2-2.png
+		.. image:: Images/camera-step-4-2-2.png
 			:scale: 100%
 
 5. 1.Close the Platform Configuration window, 2.select camera Source
 
-	.. image:: images/camera-step-5.png
+	.. image:: Images/camera-step-5.png
 			:scale: 100%
 
 6. Select the camera node if its not selected already, click run select node, and you should be able to see the image on the left view port.
 
-	.. image:: images/camera-step-6.png
+	.. image:: Images/camera-step-6.png
 			:scale: 100%
 
 Excercise
