@@ -43,7 +43,7 @@ The following screen shot demonstrate camera node settings
 
 - **Continuous Mode Timeout**: The time interval which the program should wait between continuous image captures.
 
-.. On master: - **Enable Logging**: Toggle logging option, when toggled, an output file will be written to [Workspace_dir]/Log.
+- **Enable Logging**: Toggle logging option, when toggled, an output file will be written to [Workspace_dir]/Log.
 
 Procedure to Use
 ----------------
