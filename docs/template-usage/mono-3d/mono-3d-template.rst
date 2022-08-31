@@ -1,5 +1,5 @@
-Mono 3d template usage
-======================
+Mono 3D
+=======
 
 It used the 2d feature to extract the 3d position of the object. 
 
@@ -7,15 +7,26 @@ It used the 2d feature to extract the 3d position of the object.
 
 Use Case 
 ~~~~~~~~~~~
-TODO: Upload Benz Battery project video after done.
+The Mono 3D template is useful when 2D camera is used instead of 3D camera. 2D camera generally has a higher 
+resolution than 3D camera, which yield to a more accurate result. 2D camera also takes way less time 
+to capture an image.
 
-Requirement 
-~~~~~~~~~~
-TODO: Abstract Benz Battery project Requirements after done.
+For the eye-in-hand situation, the camera, which is mounted on the robot, takes an images first, then send a detection pose to robot 
+and the robot moves to the detection pose which has a better detection angle. The camera takes an image again, and 
+the robot picks the object.
+
+For the eye-to-hand situation, the object is hold by the robot gripper. The fix-mounted camera takes an image of the object and calculate the 
+robot pose which has a better detection angle. The robot then adjust its pose.
+
+.. Requirement 
+.. ~~~~~~~~~~~
 
 Mounting instructions 
 ~~~~~~~~~~~~~~~~~~~~~
-TODO: Abstract Benz Battery project instructions after done.
+There are Eye-in-hand Mono 3D template and Eye-to-hand Mono 3D template. The mounting instructions 
+depend on which hand eye configuration is using. For Eye-in-hand situation, the camera is mounted on 
+the robot arm, and the relation between the camera and the tcp is fixed. For Eye-to-hand situation, the 
+camera is mounted above target objects. The relation between the camera and the base of robot is fixed. 
 
 Setting up the picking pipeline
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -27,8 +38,34 @@ Define the feature and train the object
 """""""""""""""""""""""""""""""""""""""
 After Hand-Eye Calibration, head to :ref:`mono-3d<Placing the object under the camera>` and follow the instructions to define features and train/set an object model.
 
+There are two flowcharts included in the templates that can be used to capture training images.
+
+.. image:: Images/1.png
+    :align: center
+
+The "collect_training_data_auto" flowchart generates a number of poses based on the initial pose automatically.
+
+.. image:: Images/2.png
+    :align: center
+
+Set the X, Y, Z of "Assemble Pose" to the pose that the robot is holding the target item at the center of the image.
+
+.. image:: Images/3.png
+    :align: center
+
+Run the flowchart. The flowchart will automatically generate 14 poses and save the images.
+
+For the "collect_training_data_manual", pre-define the poses manually in the robot script. Then run the flowchart and collect the training images.
+
+.. image:: Images/4.png
+    :align: center
+
 Teach the picking pose
 """"""""""""""""""""""
+
+Eye in hand
+-----------
+
 Teach picking pose process is made to find the relative positions between the robot flange and the object. Once this relation is generated, the relative position between tool and object will remain the same while picking.
  * Head to the **Teach_Pose** flowchart and click **DA Calibration** node. On the configuration window, select Hand Eye Config setting to be eye-in-hand, and enter the DA calibration output file name.
  * Click **Manage Variables** button and set Mode to **2**, and 2_Step to **False** by unchecking the value box.
@@ -56,6 +93,16 @@ Teach picking pose process is made to find the relative positions between the ro
         :align: center 
 
 .. note:: Ignore the second gripper. It is used for 2 step picking.
+
+
+Eye to hand
+-----------
+
+Set the robot to the best detection pose.
+
+.. image:: Images/5.png
+    :align: center
+
 
 Execute the picking 
 """""""""""""""""""
@@ -138,6 +185,24 @@ The **Robot Read** node will receive the detection pose and pass it to **Transfo
 
 Cautions
 ~~~~~~~~
+
+Mono Train result
+"""""""""""""""""
+It is hard to verify the correctness of the training result. One way to check, if all the mod finder 
+features are defined on the same flat surface. Then the trainning result should be on the same surface.
+
+.. image:: Images/6.png
+    :align: center 
+
+.. image:: Images/7.png
+    :align: center  
+
+.. image:: Images/8.png
+    :align: center 
+
+.. image:: Images/9.png
+    :align: center 
+
 2 Step Picking
 """"""""""""""
 * This document is only for 1 step picking. Two step picking is only for high accuracy requirement which the first step is to move camera to a better detection position. In the switch node of **Picking** flowchart, case_1 is to generate the better detection pose, and payload from robot will be needed to switch first and second step. The 2 Step Picking will be enabled by changing the **Variable.Mode** to True.
