@@ -240,9 +240,74 @@ General process of Using Mod Finder Node
 Excercise
 ---------
 
-Here is a `link to a .dcf file <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/tzhang_daoai_com/EagIObWqB4tCtzCcq5dDaWIBcV0UEiF18-smQlPup_1UjQ?e=OYTXZx>`_.
+Here is the `link to a .dcf file <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/tzhang_daoai_com/ESU2opgKuUNLldSSQ7BPl7cBBw_6hz_dEUh0vq--8mkNaA?e=mzFxFI>`_ which is used as input.
 
-Try to create your own workspace and find all the objects in the .dcf with a shape finder node.
+Try to come up with the setting on **Shape Finder** node according to the requirements below. You can work on these exercise with the help of this article. We also have answers attached at the end of this exercise.
+This is some helpful resource when you are working on the exercise:
 
+Scenario 1
+~~~~~~~~~~
+
+There is a project which requires the robot to pick all the parts in scene. 
+Your colleague has setup the 3D camera and robot in the lab for experiment. 
+Here's a `link to .dcf file <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/tzhang_daoai_com/EUaL8LFp-JlJugrB-VYSCr8BODvs7cyJszjIywupMCNDDg?e=XCPFjb>`_ which are used as camera input.
+
+You need to help him setup the **Shape Finder** node in main_flowchart. Please choose the all correct answers from the options:
+
+1. As shown in the image below, you are required to find the picking spot which is the center of the biggest whole, which by measure, you find that the diameter is 55mm.
+How should you configure your model to find.
+	.. image:: images/shape_finder_excerise_1.png
+		:scale: 60%
+
+      A. create a model and use ring as shape, and 27.5 as parameter2 and 30 as parameter3.
+      B. create a model and use ellipse as shape, and 30 as parameter2 and 27.5 as parameter3.
+      C. create a model and use defualt circle as shape, and enter 27.5 as parameter2.
+      D. create a model and use defualt circle as shape, and enter 55 as parameter2.
+
+2. As the image below, you are only detecting one object at the moment, how do you change the settings to detect all 3 targets in the image.
+	.. image:: images/shape_finder_excerise_2.png
+		:scale: 60%
+
+      A. Change Dedicated Mode to Yes.
+      B. Change Min Acceptance from 60 to 40.
+      C. Change Foreground Color to any.
+      D. Change Total Occurrences to All.
+
+
+3. As the image below, you are finding more shapes than you are hoping for. How should you tune the settings to find only the biggest circles.
+	.. image:: images/shape_finder_excerise_3.png
+		:scale: 60%
+
+      A. Change Min Acceptance from 60 to 88.
+      B. Change Dedicated Mode to Yes.
+      C. Change Foreground Color to any.
+      D. Change Advanced Settings -> Certainly to 100.
+
+Answers for Excercises
+~~~~~~~~~~~~~~~~~~~~~~
+
+Scenario 1
+```````````````
+
+1. **Answer: C**
+
+ .. image:: images/shape_finder_answer_1.png
+	:scale: 60%
+
+**Explanation**: Since the hole is in circluar shape, the simplest way is to use circle as shape, and that parameter2 takes radius in milimeters as input. 
+
+2. **Answer: D**
+
+ .. image:: images/shape_finder_answer_2.png
+	:scale: 60%
+
+**Explanation**: The Total occurrence determines how many object the algorithm will find before terminatation by timeout.
+
+3. **Answer: A**
+
+ .. image:: images/shape_finder_answer_3.png
+	:scale: 60%
+
+**Explanation**: Min Acceptance determines the minimum matching score where an occurrence is accpeted, raising it will eliminate the less accurate results (smaller circles).
 
 
