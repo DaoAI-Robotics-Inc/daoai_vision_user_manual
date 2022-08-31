@@ -10,4 +10,5 @@ According to the sample requirements and projects, we will demonstrate how to ap
    3d-mod-finder/overview
    2d-mod-finder/overview
    mono-3d/mono-3d-template
+   trans3d/index
    KungFuTea/index
