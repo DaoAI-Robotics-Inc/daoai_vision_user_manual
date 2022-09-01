@@ -1,14 +1,25 @@
 Template usage
 ==============
-This section we will introduce the usage and example of templates. 
-According to the sample requirements and projects, we will demonstrate how to apply and modify the templates in order to fulfill requirements.
+
+Vision does not only detect objects, but also generates the pose for robot to pick them. While the Detection flowchart generates object location, the Picking flowchart consider everything that revolves around how to pick a detected object: Which tool will it use? What pose is robot going to pick it? Is the pose collision free? 
+In this section, you can checkout the instructions for all templates. Learning and practising from them.
+
+1. Calibration templates:
+
+2. Detection & Picking templates:
+
+3. Deep Learning Detection & Picking templates:
 
 .. toctree::
    :hidden:
 
+   3d-calibration/circleboard-calibration/circle-board-calibration
+   3d-calibration/sphere-calibration/3d-sphere-calibration
    3d-calibration/overview
-   3d-mod-finder/overview
-   2d-mod-finder/overview
-   mono-3d/mono-3d-template
-   trans3d/index
+   mod-finder/mod-finder-overview
+   shape-finder/overview
+   mono-3d/overview
+   boxes/overview
+   keypoint/overview
    KungFuTea/index
+   

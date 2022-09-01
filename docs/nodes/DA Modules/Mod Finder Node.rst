@@ -449,6 +449,79 @@ Search Model In Labelled Mask Sequence
 
 Reference Fixture 
 ---------------------
+
 	Please refer to Reference Fixture System. 
 
 	This node can be used for generating fixture.
+
+Excercise
+---------
+
+Try to come up with the setting on **Mod Finder** node according to the requirements below. You can work on these exercise with the help of this article. We also have answers attached at the end of this exercise.
+
+This is some helpful resource when you are working on the exercise:
+
+Scenario 1
+~~~~~~~~~~
+
+There is a project which requires the robot to pick all the occurrences of the T-tube in scene. 
+Your colleague has setup the 3D camera and robot in the lab for experiment. 
+Here's a `link to .dcf file <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/tzhang_daoai_com/EUaL8LFp-JlJugrB-VYSCr8BODvs7cyJszjIywupMCNDDg?e=XCPFjb>`_ which are used as camera input.
+
+You need to help him setup the **Mod Finder** node in main_flowchart. Please choose the all correct answers from the options:
+
+1. Shown in the following image, the camera node is set up for you, suppose you were asked to use a mod finder(3D) to detect the object in the image. How should you set up the node?
+	.. image:: images/mod_finder_excerise_1.png
+		:scale: 40%
+
+	A. Right click Camera node and insert Mod Finder node, then click 2d from the dialog.
+	B. Right click Camera node and insert Mod Finder node, then click 3d from the dialog.
+	C. Right click Camera node and insert DA CloudNDepth Conv node + Mod Finder node, then click 3d from the dialog.
+	D. Right click Camera node and insert ModFinder3D. 
+
+2. Shown in the following image, you have created the mod finder (3D) node, and you want to setup the input for the node. How do you do this?
+	.. image:: images/mod_finder_excerise_2.png
+		:scale: 60%
+
+	A. Click on the blue dot next to "Image" and link to Camera node.
+	B. Click on the blue dot next to "Da Depth Map and Point Cloud" and link to Camera node.
+	C. Click on the blue dot next to "Image" and link to Da CloudNDepth Conv node.
+	D. Click on the blue dot next to "Da Depth Map and Point Cloud" and link to Da CloudNDepth Conv node.
+
+3. Shown in the following image, you have captured a model, but you find that the features detected contains noise, and it failed to detect all T-tubes in the image. How do you remove the noise from model.
+	.. image:: images/mod_finder_excerise_3.png
+		:scale: 40%
+
+	A. Double click the model and draw mask on the model.
+	B. Change Edge Selection -> Smoothness from Default to 80.
+	C. Change Algorithm Parameters -> Accuracy from Default to Low.
+	D. Double click the model and draw Depth mask on the model.
+
+Answers for Excercises
+~~~~~~~~~~~~~~~~~~~~~~
+
+Scenario 1
+```````````````
+
+1. **Answer: C**
+
+ .. image:: images/mod_finder_answer_1.png
+	:scale: 100%
+
+**Explanation**: 3d Mod finder must take inputs from DA CloudNDepth Conv node, therefore you need to insert a DA CloudNDepth Conv node and followed by Mod finder node and choose 3d.
+
+2. **Answer: D**
+
+ .. image:: images/mod_finder_answer_2.png
+	:scale: 40%
+
+**Explanation**: As mentioned in (ans 1), Mod Finder (3D) must take input from DA CloudNDepth Conv node, hence the corresponding input should be Da Depth Map and Point Cloud. 
+Which clicking the blue should link to DA CloudNDepth Conv node.
+
+3. **Answer: A**
+
+ .. image:: images/mod_finder_answer_3.png
+	:scale: 60%
+
+**Explanation**: While modifying smoothness and accuracy does effect the tolerance of detection, they do not directly effect on the model's feature. 
+Drawing masks, on the other hand, directly removes the noise in the model.

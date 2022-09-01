@@ -1,15 +1,17 @@
-3D Calibration
-==============
+Modified Calibrations
+=====================
 
-This article is a sample usage of 3D-Calibration templates. Before continue reading this article, you should have a good understanding of `Calibration <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/complete-vision-guidance/calibration_new/index.html>`_. 
-We will  also discuss the different types of calibration here. 
+This article is a sample usage of 3D-Calibration templates. Before continue reading this article, 
+you should have a good understanding of :ref:`Board Calibration` and :ref:`Sphere Calibration`. 
+We will also discuss the different types of calibration here. 
 
-Overview
+Scenario Usage and Explanation
 ------------
 
 Generally speaking, all Calibration methods are trying to achieve one goal: find the relation between robot and camera. 
 Based on the specific requirement of one project, you will use either **Eye-in-Hand** or **Eye-to-Hand** configuration. 
 After that, you also need to decide which type of Calibration is suitable for it. There are generally 2 types of Calibration:
+
     #. Chessboard Calibration/Circleboard Calibration;
     #. Sphere Calibration;
 
@@ -121,7 +123,7 @@ We used the **Select Pixel** operation in **Image Process** node, which will all
 pass the result to **Reconstruct** to generate the 3D pose. Then you will have the actual dot in cloud relation here. By keep doing this for all the other poses, eventually collected enough poses for the "Sphere"(dot) Calibration. 
 
 Validating your Calibration Result
-**************
+******************************************
 
 By validating your calibration result, you may not use the gripper to check your calibration accuracy this time. Since the gripper will never going to show up in the camera, you will need a different way to validate it.
 
@@ -136,4 +138,23 @@ A star in rectangle is good object to pick on. You can use a 2D **Mod Finder** t
     When you are validating the result, make sure you test the rotation and tilt of object as well. This is important since no rotation and tilting might not able to validate the true Calibration result. 
 
 If the object is correctly get "picked" by the robot in different rotation, tilt and height, it means the Calibration result is promising. If you found the robot is having error less than 1 mm, it is still within the acceptable range.
+
+Calibration related Issue & Knowledge
+--------------------------------------
+
+    * :ref:`Camera Accuracy`
+
+    * :ref:`Robot Accuracy`
+
+    * :ref:`Qualitative calibration validation`
+    
+    * :ref:`Quantitative calibration validation`
+
+.. toctree::
+   :hidden:
+
+   camera-accuracy
+   robot-accuracy
+   qualitative-measurement/3d-qualitative-validating-calibration
+   quantitive-measurement/3d-quantitative-calibration-validation
 
