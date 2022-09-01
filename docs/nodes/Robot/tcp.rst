@@ -1,6 +1,120 @@
 Gripper
 -----------
 
+Overview
+==================
+
+**Gripper** node is mainly for **Teach Pose** procedure of many major pipelines. This node is able to produce a pose/poses that represents the **Object in Tool** relation. 
+**Gripper** node will almost appear in every workspace which has robot-Vision interaction. 
+
+.. image:: Images/gripper_node.png
+    :align: center 
+
+Input and Output
+==================
+
++----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
+| Input                                  | Type                          | Description                                                                     |
++========================================+===============================+=================================================================================+
+| Gripper Mesh                           | Mesh                          | The gripper mesh from Resource system or Reader.                                |
++----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
+| Model Mesh/Cloud                       | Mesh/Cloud                    | The object mesh/cloud model from Resource system, Reader, crop from scene etc.  |
++----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
+| Initial Pose(Optional)                 | Pose                          | The initial pose from Robot Read node.                                          |
++----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
+
++----------------------------------------+-------------------+------------------------------------------------------------------------+
+| Output                                 | Type              | Description                                                            |
++========================================+===================+========================================================================+
+| Gripper in Object Locations            | Vec<Pose3D>       | Vector of 3D poses for Tool in Object locations.                       |
++----------------------------------------+-------------------+------------------------------------------------------------------------+
+| Gripper Data                           | Gripper Data      | Object for Collision Avoidance tilting restriction.                    |
++----------------------------------------+-------------------+------------------------------------------------------------------------+
+|TCP in Flange Pose                      | Pose              | Pose of TCP in flange relation.                                        |
++----------------------------------------+-------------------+------------------------------------------------------------------------+
+
+Node Settings
+==================
+
+Configure Gripper
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: Images/config_gripper.png
+    :align: center 
+
+* Gripper Mesh
+
+   The gipper mesh from Reader or Resource System.
+
+* TCP Pose
+
+   The pose of TCP in flange relation.
+
+Configure Picked Object
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: Images/config_obj.png
+    :align: center 
+
+* Object Mesh or Point Cloud
+
+   The object mesh or point cloud from scene, Reader, Resource System etc.
+
+Configure Pick Pose
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: Images/config_poses.png
+    :align: center 
+
+* Pose
+
+   The poses that store the **Tool in Object** relation, each pose can be customized with different restrictions and flexibilities. 
+
+* Use Initial Pose
+
+   Apply initial pose from robot read or any other pose output to the **this** pose.
+
+* Flexible Pick Orientation
+
+   Enable more options for gripper flexibility, rotation and tilting etc.
+
+Procedure of Using Gripper Node
+====================================
+
+Gripper node is usually appear in **Teach Pose**, hence we will show the procedure of using Gripper node in **Teach Pose** flowchart. 
+
+1. Open a workspace in DaoAI Vision Studio. 
+	.. image:: Images/open_project.png
+		:align: center
+
+2. Add a flowchart named with **Teach Pose**, **Pose Define** or any other names you can remember. 
+	.. image:: Images/add_flowchart.png
+		:align: center
+
+3. Insert a Calibration node to load the **Camera in Base** relation of our current robot base and camera.
+	.. image:: Images/calibration.png
+		:align: center
+
+4. The following steps are procedures for robot-involved teach pose. If you only wants to check the virtual teach pose procedures, or only the setup for **Gripper** node, you can jump to step XX. 
+
+|
+
+5. Add a flowchart node and connect to detection flowchart.
+	.. image:: Images/detection_flowchart.png
+		:align: center
+
+6. A virtual image is used to demonstrate. Refer to System Overview, Tutorials on how to connect to camera.
+	.. image:: Images/tee.png
+		:align: center
+
+6. A virtual image is used to demonstrate. Refer to System Overview, Tutorials on how to connect to camera.
+	.. image:: Images/tee.png
+		:align: center
+
+6. A virtual image is used to demonstrate. Refer to System Overview, Tutorials on how to connect to camera.
+	.. image:: Images/tee.png
+		:align: center
+
 Robot tool model
 ==================
 
