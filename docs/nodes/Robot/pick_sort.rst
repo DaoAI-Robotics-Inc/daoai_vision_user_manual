@@ -116,8 +116,30 @@ Pick Sort Setting
 Procedure to use
 ~~~~~~~~~~~~~~~~
 
+1. Take an image
 
+.. image:: images/1.png
+	:scale: 70%
+
+2. Set the reference Frame
+
+.. image:: images/2.png
+	:scale: 70%
+
+3. Detect 3D position of objects.
+
+.. image:: images/3.png
+	:scale: 70%
+
+.. image:: images/4.png
+	:scale: 70%
+
+4. Run the pick sort node. This is set to sort by the highest Z with a "Align Poses Orientation" of 90 degree.
+
+.. image:: images/5.png
+	:scale: 60%
 
 Exercise
 ~~~~~~~~
 
+TODO
