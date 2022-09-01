@@ -18,7 +18,8 @@ In this section, you can checkout the instructions for all templates. Learning a
    3d-calibration/overview
    mod-finder/mod-finder-overview
    shape-finder/overview
-   mono-3d/overview
+   mono-3d/mono-3d-template
+   trans3d/index
    boxes/overview
    keypoint/overview
    KungFuTea/index
