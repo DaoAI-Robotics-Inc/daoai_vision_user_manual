@@ -64,16 +64,21 @@ Procedure to use
 
 1. Right click insert node and insert a Da DepthNCloud Conv node
 	.. image:: images/da_cloudNdepth_conv/node_steps_1.png
+		:scale: 50%
 
 2. Link the source input to an appropriate node (eg. camera & cloud process node).
 	.. image:: images/da_cloudNdepth_conv/node_steps_2.png
+		:scale: 60%
 
 3. Run the node and select a bounding box region that captures the area of interest.
 	.. image:: images/da_cloudNdepth_conv/node_steps_3.png
+		:scale: 60%
 
 4. If you see the following result which contains visible grid lines, you need to adjust the Depthmap Size X & Y dimensions to downsample your image until there are no visible grid lines.
 	.. image:: images/da_cloudNdepth_conv/node_steps_4_1.png
-	.. image:: images/da_cloudNdepth_conv/node_steps_4_1.png
+		:scale: 50%
+	.. image:: images/da_cloudNdepth_conv/node_steps_4_2.png
+		:scale: 50%
 
 
 Exercise
@@ -92,7 +97,27 @@ Here's a `link to .dcf file <https://daoairoboticsinc-my.sharepoint.com/:u:/g/pe
 
 You need to help him setup the **Da DepthNCloud Conv** node in main_flowchart. Please choose the all correct answers from the options:
 
-1.
+1. You are given a worskpace that has the camera and Da DepthNCloud Conv node set up, but you find that the result of Da DepthNCloud Conv is strange, as image below. How should you fix this?
+	.. image:: images/da_cloudNdepth_conv/node_exercise.png
+		:scale: 50%
+
+	A. Increase the X Y value in Extraction Box settings/ Set Min. Size.
+	B. Decrease the X Y value in Extraction Box settings/ Set Max. Size.
+	C. Decrease the X Y value in Deptmap Size X/Y. 
+	D. Increase the X Y value in Deptmap Size X/Y. 
+
+Answers for Excercises
+~~~~~~~~~~~~~~~~~~~~~~
+
+Scenario 1
+```````````````
+
+1. **Answer: C**
+	.. image:: images/da_cloudNdepth_conv/node_answer.png
+		:scale: 50%
+**Explanation**: Recall in "Procedure to use" step 4, if you encouter the result containing grid lines, that means the width and height of the depthmap is too high.
+Should reduce them accordingly to remove the gridlines.
+
 
 
 
