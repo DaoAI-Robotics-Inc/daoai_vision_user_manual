@@ -167,6 +167,25 @@ Help Center 网站： https://daoai.atlassian.net/servicedesk/customer/portals
 
 *例子：* https://daoai.atlassian.net/servicedesk/customer/portal/6/DP-47
 
+<<<<<<< HEAD
+=======
+收集数据
+~~~~~~~
+
+在现场的工程师需要在调试和实验过程中，尽量的保存更多的实验数据：可以在连接相机后勾选 **保存相机数据**，然后选择 **从编号文件**。这样设置之后，可以继续正常调试和实验，视觉会自动
+把每次拍照的dcf、daf、dlf等相片文件保存在工控机本地。这样子的好处是在修改后的可以先进行虚拟实验，节省时间。
+
+.. image:: Images/save_images.png
+    :align: center
+|
+
+同时，如果在调试和实验中遇到了问题，可以把照片转移到其他的文件夹，以便管理。在重新调试时可以把有问题的数据先运行一次，检查调试结果是否到位，以此节省时间。
+
+.. image:: Images/folders.png
+    :align: center
+|
+
+>>>>>>> 2fcddcf3cee085578c717ef0ab2734ca21b87f98
 问题反馈
 ~~~~~~~
 
