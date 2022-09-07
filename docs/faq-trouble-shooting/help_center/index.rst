@@ -167,8 +167,6 @@ Help Center 网站： https://daoai.atlassian.net/servicedesk/customer/portals
 
 *例子：* https://daoai.atlassian.net/servicedesk/customer/portal/6/DP-47
 
-<<<<<<< HEAD
-=======
 收集数据
 ~~~~~~~
 
@@ -185,7 +183,6 @@ Help Center 网站： https://daoai.atlassian.net/servicedesk/customer/portals
     :align: center
 |
 
->>>>>>> 2fcddcf3cee085578c717ef0ab2734ca21b87f98
 问题反馈
 ~~~~~~~
 
