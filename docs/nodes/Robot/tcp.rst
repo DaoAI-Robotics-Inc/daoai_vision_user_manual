@@ -99,20 +99,24 @@ Gripper node is usually appear in **Teach Pose**, hence we will show the procedu
 
 |
 
-5. Add a flowchart node and connect to detection flowchart.
+5. Add a flowchart node and connect to detection flowchart. 
 	.. image:: Images/detection_flowchart.png
 		:align: center
 
-6. A virtual image is used to demonstrate. Refer to System Overview, Tutorials on how to connect to camera.
-	.. image:: Images/tee.png
+6. Moving the robot TCP to where it will normally pick the object. 
+	.. image:: Images/XXXXXXXXXXXX
 		:align: center
 
-6. A virtual image is used to demonstrate. Refer to System Overview, Tutorials on how to connect to camera.
-	.. image:: Images/tee.png
+7. Add a Robot Read node to read in the picking pose for our Teach Pose object from robot. 
+	.. image:: Images/robot_read_node.png
 		:align: center
 
-6. A virtual image is used to demonstrate. Refer to System Overview, Tutorials on how to connect to camera.
-	.. image:: Images/tee.png
+8. Add a Transformation Tree node for pose transformation, it transforms the Object in Cloud relation(detection flowchart) 
+	.. image:: Images/tr_node.png
+		:align: center
+
+9. A virtual image is used to demonstrate. Refer to System Overview, Tutorials on how to connect to camera.
+	.. image:: Images/add_gripper.png
 		:align: center
 
 Robot tool model

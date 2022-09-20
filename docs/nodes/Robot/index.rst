@@ -2,9 +2,8 @@ Robot Related
 ========================
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :caption: Contents
 
    Communication
    Operation
-   pick_sort
