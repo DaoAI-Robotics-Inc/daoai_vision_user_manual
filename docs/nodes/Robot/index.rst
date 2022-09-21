@@ -2,7 +2,7 @@ Robot Related
 ========================
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Contents
 
    Communication

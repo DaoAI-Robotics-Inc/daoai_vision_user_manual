@@ -115,7 +115,7 @@ Algorithm Setting
 
 
 Procedure to use
-=====================================
+=================
 
 1. Open a workspace in DaoAI Vision Studio.
 	.. image:: images/da_align/use1.png
