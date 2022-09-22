@@ -7,4 +7,3 @@ Robot Related
 
    Communication
    Operation
-   pick_sort

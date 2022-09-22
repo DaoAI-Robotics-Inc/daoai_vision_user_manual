@@ -4,6 +4,5 @@ Robot Operation
 .. toctree::
     
     tcp
-    pick-point
-    pick-strategy
+    pick_sort
     collision-p
