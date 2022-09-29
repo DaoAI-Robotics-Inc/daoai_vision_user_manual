@@ -5,6 +5,5 @@ Robot Operation
     :maxdepth: 2
     
     tcp
-    pick-point
-    pick-strategy
+    pick_sort
     collision-p
