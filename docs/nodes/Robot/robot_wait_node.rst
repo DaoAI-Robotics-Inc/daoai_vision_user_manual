@@ -45,24 +45,27 @@ Data Source
         .. image:: Images/robot_data_source_add_robot_4.png
             :align: center
 
-    -   **Port Number**: (Default: 6969)
+    -   **Port Number** (Default: 6969)：
             The port number used for connection. Please make sure it is the same as it is in Hercules. 
 
-    -   **Pose Order**: (Default: XYZ)
+    -   **Pose Order** (Default: XYZ)：
             The type of rotation to be performed by the robot. 
 
-    -   **MULT Value**: (Default: 10000)
+    -   **MULT Value** (Default: 10000)：
             The multiplication factor used for multiplying pose values.
 
-    -   **Splitter**: (Default: ,)
+    -   **Splitter** (Default: ',')：
             The character that separates the message into different fields.
 
-    -   **Ending Character**: (Default ;)
+    -   **Ending Character** (Default ';')：
             The character that marks the end of the message.
 
 --------------------
 Robot Wait Setting
 --------------------
+.. image:: Images/robot_wait_setting.png
+    :align: center
+
 - **Time out**: (Default: 0 ms)
 
     The amount of time (in ms) for the program to wait.
@@ -98,7 +101,7 @@ Procedures to Use
     .. image:: Images/robot_wait_procedure_7.png
         :align: center
 
-8. Open the Hercules program. Click the third tab 'TCP Client', input Module IP 127.0.0.1, input port number 6969, and click connect. You should see the message "Connected to 127.0.0.1" in Hercules.
+8. In this case, we use the Hercules program for demonstration. Open the Hercules program. Click the third tab 'TCP Client', input Module IP 127.0.0.1, input port number 6969, and click connect. You should see the message "Connected to 127.0.0.1" in Hercules.
     .. image:: Images/robot_wait_procedure_8.png
         :align: center
 
@@ -109,8 +112,23 @@ Procedures to Use
 
 Exercise
 ~~~~~~~~~~~~~~~~~~~~~
-What is the appropriate settings for the Robot Wait node if I want the program to print "123" every 8 seconds?
+In steps, explain the appropriate settings for the Robot Wait node to make the program print "123" every 8 seconds?
 
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
 
 Answers for Exercise
 ~~~~~~~~~~~~~~~~~~~~~

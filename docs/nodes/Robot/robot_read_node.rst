@@ -60,23 +60,26 @@ Data Source
         .. image:: Images/robot_data_source_add_robot_4.png
             :align: center
 
-    -   **Port Number**: (Default: 6969)
+    -   **Port Number** (Default: 6969):
             The port number used for connection. Please make sure it is the same as it is in Hercules. 
 
-    -   **Pose Order**: (Default: XYZ)
+    -   **Pose Order** (Default: XYZ):
             The type of rotation to be performed by the robot. 
 
-    -   **MULT Value**: (Default: 10000)
+    -   **MULT Value** (Default: 10000):
             The multiplication factor used for multiplying pose values.
 
-    -   **Splitter**: (Default: ,)
+    -   **Splitter** (Default: ','):
             The character that separates the message into different fields.
 
-    -   **Ending Character**: (Default ;)
+    -   **Ending Character** (Default ';')：
             The character that marks the end of the message.
 --------------------
 Robot Read Setting
 --------------------
+
+.. image:: Images/robot_read_input.png
+    :align: center
 
 - **Time out**: (Default: 0 ms)
 
@@ -100,7 +103,7 @@ Procedure to Use
     .. image:: Images/robot_read_procedure_2.png
         :align: center
 
-3. Open the Hercules program. Click the third tab 'TCP Client', input Module IP 127.0.0.1, input port number 6969, and click connect. You should see the message "Connected to 127.0.0.1" in Hercules.
+3. In this case, we use the Hercules program for demonstration. Open the Hercules program. Click the third tab 'TCP Client', input Module IP 127.0.0.1, input port number 6969, and click connect. You should see the message "Connected to 127.0.0.1" in Hercules.
     .. image:: Images/robot_read_procedure_3.png
         :align: center
 
@@ -130,6 +133,22 @@ Exercise
     .. image:: Images/robot_read_exercise_2.png
         :align: center
         :scale: 150%
+
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
 
 Answers for Exercise
 ~~~~~~~~~~~~~~~~~~~~~

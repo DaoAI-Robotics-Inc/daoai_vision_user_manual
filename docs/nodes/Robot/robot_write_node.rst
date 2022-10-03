@@ -55,24 +55,27 @@ Data Source
         .. image:: Images/robot_data_source_add_robot_4.png
             :align: center
 
-    -   **Port Number**: (Default: 6969)
+    -   **Port Number** (Default: 6969)：
             The port number used for connection. Please make sure it is the same as it is in Hercules. 
 
-    -   **Pose Order**: (Default: XYZ)
+    -   **Pose Order** (Default: XYZ)：
             The type of rotation to be performed by the robot. 
 
-    -   **MULT Value**: (Default: 10000)
+    -   **MULT Value** (Default: 10000)：
             The multiplication factor used for multiplying pose values.
 
-    -   **Splitter**: (Default: ,)
+    -   **Splitter** (Default: ',')：
             The character that separates the message into different fields.
 
-    -   **Ending Character**: (Default ;)
+    -   **Ending Character** (Default ';')：
             The character that marks the end of the message.
 
 --------------------
 Robot Write Setting
 --------------------
+.. image:: Images/robot_write_setting.png
+    :align: center
+
 -   **Status**: 
 
     The status value the robot receives from the program, which is used to decide the robot's next action.
@@ -84,6 +87,8 @@ Robot Write Setting
 
 Write
 -----------------
+.. image:: Images/robot_write_payload.png
+    :align: center
 
 -   **Payload 1,2,3,4,5,6**: 
 
@@ -92,8 +97,10 @@ Write
 
 Output/ Print Message
 ----------------------
+.. image:: Images/robot_write_output_print_message.png
+    :align: center
 
-    Writes a message to the console. (optional)
+Writes a message to the console. (optional)
 
 Procedure to Use
 ~~~~~~~~~~~~~~~~~~~~~
@@ -109,7 +116,7 @@ Procedure to Use
     .. image:: Images/robot_write_procedure_3.png
         :align: center
 
-4. Open the Hercules program. Click the third tab 'TCP Client', input Module IP 127.0.0.1, input port number 6969, and click connect.     You should see the message "Connected to 127.0.0.1" in Hercules.
+4. In this case, we use the Hercules program for demonstration. Open the Hercules program. Click the third tab 'TCP Client', input Module IP 127.0.0.1, input port number 6969, and click connect.     You should see the message "Connected to 127.0.0.1" in Hercules.
     .. image:: Images/robot_write_procedure_4.png
         :align: center
 
@@ -124,32 +131,49 @@ Procedure to Use
 
 Exercise
 ~~~~~~~~~~~~~~~~~~~~~
-Try to input the appropriate settings for the Robot Wrtie node based on the following information:
-- Instruct the robot to perform a pose, with any values you like.
-- Indicate that the object is found.
+In steps, explain the appropriate settings for the Robot Wrtie node based on the following information:
+
+- *Instruct the robot to perform a pose, with any values you like.*
+- *Indicate that the object is found.*
+
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
 
 Answers for Exercise
 ~~~~~~~~~~~~~~~~~~~~~
-- Insert the Assemble Pose node (under the Utilities section) and set Pos X = 1 and Pos Z = 0.1.
+1. Insert the Assemble Pose node (under the Utilities section) and set Pos X = 1 and Pos Z = 0.1.
     .. image:: Images/robot_write_exercise_answer_1.png
         :align: center
 
-- Insert the Robot Write node, and select the robot system to write to. Make sure the server is started up.
+2. Insert the Robot Write node, and select the robot system to write to. Make sure the server is started up.
     .. image:: Images/robot_write_exercise_answer_2.png
         :align: center
 
-- According to :ref:`Response Status`, we need to set the status value to 2 to indicate that the object found.
+3. According to :ref:`Response Status`, we need to set the status value to 2 to indicate that the object found.
     .. image:: Images/robot_write_exercise_answer_3.png
         :align: center
 
-- Link the pose object by clicking the blue circle next to the Pose Object field, and choose the corresponding pose object.
+4. Link the pose object by clicking the blue circle next to the Pose Object field, and choose the corresponding pose object.
     .. image:: Images/robot_write_exercise_answer_4.png
         :align: center
 
-- Add a Halt node, set it to True, and connect to the server from Hercules.
+5. Add a Halt node, set it to True, and connect to the server from Hercules.
     .. image:: Images/robot_write_exercise_answer_5.png
         :align: center
 
-- Run the flowchart. You should be able to see that the robot receives the pos X = 10000, and pos Z = 1000. The number is different from the values we entered in the Assemble Pose because they are multiplied by the MULT value set in the Platform Configuration when we added the virtual robot.
+6. Run the flowchart. You should be able to see that the robot receives the pos X = 10000, and pos Z = 1000. The number is different from the values we entered in the Assemble Pose because they are multiplied by the MULT value set in the Platform Configuration when we added the virtual robot.
     .. image:: Images/robot_write_exercise_answer_6.png
         :align: center
