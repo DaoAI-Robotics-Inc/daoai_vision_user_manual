@@ -6,4 +6,5 @@ Images
    
    Camera/index
    Image Processing/index
+   Mod Finder V2/index
 
