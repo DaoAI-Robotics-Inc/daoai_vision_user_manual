@@ -4,6 +4,6 @@ Robot Operation
 .. toctree::
     :maxdepth: 2
     
-    tcp
+    gripper
     pick_sort
     collision-p
