@@ -22,7 +22,7 @@ Inputs and Outputs
 +----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
 | Timeout                                | Double                        | The maximum measurement and validation time for calculating in milliseconds.    |
 +----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
-| Use Reference Frame                    | String                        | The name of the mod finder to use the reference frame from.                     |
+| Use Reference Frame                    | String                        | The name of the mod finder node to use the reference frame from.                |
 +----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
 | Show Interactive Display               | Bool                          | Whether Interactive Display is being used.                                      |
 +----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
