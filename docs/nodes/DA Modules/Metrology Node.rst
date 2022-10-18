@@ -100,9 +100,26 @@ Features
     - Region setting: decides the blue search region of the feature (one of Ring/Ring Sector/Rectangle/Segment/Arc).
 	
         - The arrow indicates the detection direction of the search region.
-        - For Ring and Ring Sector region, the arrow's direction indicates the Start Radius and End Radius. (Tail = Start Radius; Head = End Radius)
+        - For Ring and Ring Sector region, the arrow's direction indicates the Start Radius and End Radius. (Tail: Start Radius; Head: End Radius)
         - Red = detected geometry; Blue = search region.
     - Available measured features: Segment, Edgel, Arc, Circle, Point.
+
+Measured Feature Parameters
+`````````````````````````````
+- Threshold:
+    - A high threshold only keeps edge with strong contrast. A low threshold will include fainter edges.
+
+- Smoothness:
+    - Strength of the noise reduction filter when detecting edges.
+    - Range [0.0 ~ 100.0]
+
+- Data Angle Tolerance:
+    - Whether edges along a transition are considered is based on the angle (direction) of the transition compared to the scan direction of the search region. 
+    - This angle tolerance determines the range of accepted angle (direction).
+
+- Edge Selection Rank:
+    - Setting rank “1” will fit the segment to the edges closest to the beginning of the search box. 
+    - Setting “Disable” will fit to all the edges found in the search-box.
 
 .. image:: images/Metrology/metrology_node_settings_measured_features.png
 	:align: center
@@ -129,11 +146,11 @@ Tolerances
 
 Tolerances' labels will be displayed when "Show Interactive Display" is not checked. 
 
-- Green = Passed
+- Green: Passed
 	- pass_min > value > pass_max
-- Yellow = Warning
+- Yellow: Warning
 	- warning_min > value > warning_max
-- Red = Failed
+- Red: Failed
 	- value < warning_min OR value > warning_max
 
 1. Tolerance Type
