@@ -2,8 +2,8 @@ Metrology Node
 ==================
 Overview
 -------------------
-| Define, detect or calculate features such as edge, circle, and point on a gray image.
-| Calculate value information such as length of segment and radius of circle and arc. 
+| The Metrology node is used to define, detect or calculate features such as edge, circle, and point on a gray image.
+| It can also calculate value information such as length of a segment and radius of a circle or arc. 
 
 .. image:: images/Metrology/metrology_overview_1.png
 	:align: center
