@@ -73,11 +73,10 @@ Verification Setting
 |
 
 - **Verification Method**  (Default: DEPTH MODE):                                                           
-   - One of Depth Mode, Edge Mode, Stacking Mode.
+   One of Depth Mode, Edge Mode, Stacking Mode.
 
-- **Confidence** (Default: 60 (MEDIUM)): 
-   - The confidence of a pose to be valid. 
-   - Range is [0,100].
+- **Confidence** (Default: MEDIUM, Range [0,100]): 
+   The confidence of a pose to be considered valid. 
 
 +-----------------+-----------------+-----------------+
 | LOW = 40        | MEDIUM = 60     | HIGH = 80       |
@@ -96,25 +95,22 @@ Depth Mode
 
 |
 
-- **Occluded Part Tolerance** (Default: 50 (MEDIUM)):
-   - Threshold such that poses with more than this part occluded should be removed. 
-   - Range is [0,100].
+- **Occluded Part Tolerance** (Default: 50 (MEDIUM), Range [0, 100]):
+   Threshold such that poses with more than this part occluded should be removed. 
 
 +-----------------+-----------------+-----------------+
 | LOW = 30        | MEDIUM = 50     | HIGH = 70       |
 +-----------------+-----------------+-----------------+
 
-- **Error Tolerance** (Default: 50 (MEDIUM))
-   - Error Tolerance: how much error points a pose can have. The higher the tolerance, the more inaccurate results will be kept. 
-   - Range is [0,100].
+- **Error Tolerance** (Default: MEDIUM, Range [0,100]):
+   Error Tolerance: how much error points a pose can have. The higher the tolerance, the more inaccurate results will be kept. 
 
 +-----------------+-----------------+-----------------+
 | LOW = 30        | MEDIUM = 50     | HIGH = 70       |
 +-----------------+-----------------+-----------------+
 
-- **Overlap Ratio** (Default: 0.5 (MEDIUM)): 
-   - Controls the penally low overlap between model and scene. 
-   - Range is [0,1].
+- **Overlap Ratio** (Default: MEDIUM, Range is [0,1]):
+   Controls the penally low overlap between model and scene. 
 
 +-----------------+-----------------+-----------------+
 | LOW = 0.3       | MEDIUM = 0.5    | HIGH = 0.7      |
@@ -133,30 +129,28 @@ Edge Mode
 |
 
 - **Camera Intrinsic Parameter**: 
-   - The Parameters of the Camera that is used for capturing. It provides the parameters for the algorithm to run (from a camera node). 
+   The Parameters of the Camera that is used for capturing. It provides the parameters for the algorithm to run (from a camera node). 
 
 - **RGB image**: 
-   - RGB image of the scene. Usually from a Camera Node.
+   RGB image of the scene. Usually from a Camera Node.
 
-- **Smoothness** (Default: 50 (MEDIUM)): 
-   - Level of smoothness applied to scene edge. 
-   - Range is [0,100].
+- **Smoothness** (Default: MEDIUM, Range [0,100]): 
+   Level of smoothness applied to scene edge. 
 
-- **Canny Low Factor** (Default: 0.05 (LOW)): 
-   - Lower the threshold of canny filter.
+- **Canny Low Factor** (Default: LOW): 
+   Lower the threshold of canny filter.
 
-- **Canny High Factor** (Default: 0.1 (LOW)): 
-   - Upper the threshold of canny filter.
+- **Canny High Factor** (Default: LOW): 
+   Upper the threshold of canny filter.
 
 - **Angle Threshold** (Default: MEDIUM): 
-   - The angle threshold for smoothing the extracted edges.
+   The angle threshold for smoothing the extracted edges.
 
-- **Contrast threshold** (Default: 30 (MEDIUM)): 
-   - The threshold for filtering out edges with low difference in depth.
+- **Contrast threshold** (Default: MEDIUM): 
+   The threshold for filtering out edges with low difference in depth.
 
-- **Search Radius** (Default: 5 (MEDIUM)): 
-   - Radius used for edge pixel clustering. 
-   - Range is [1, ∞).
+- **Search Radius** (Default: MEDIUM, Range [1, ∞)): 
+   Radius used for edge pixel clustering. 
 
 +-----------------+-----------------+-----------------+
 | LOW = 1         | MEDIUM = 5      | HIGH = 10       |
@@ -175,19 +169,18 @@ Stacking Mode
 |
 
 - **Model Cloud**:
-   - This field is only needed if the model is defined using the mesh format (optional). 
-   - If a mesh model is used then this field should be link to a point cloud of the model.
+   This field is only needed if the model is defined using the mesh format (optional). 
+   If a mesh model is used then this field should be link to a point cloud of the model.
 
-- **FOV** (Default: 45.0 (MEDIUM)): 
-   - The field of view for viewing camera. A greater value means more poses will be seen, and thus kept.
-   - Range is [1, 180].
+- **FOV** (Default: MEDIUM, Range: [1.0, 180.0]): 
+   The field of view for viewing camera. A greater value means more poses will be seen, and thus kept.
 
 +-----------------+-----------------+-----------------+
 | LOW = 45.0      | MEDIUM = 60.0   | HIGH = 90.0     |
 +-----------------+-----------------+-----------------+
 
 - **Reference Frame**:
-   - The default reference frame will be used if none is provided (optional).
+   The default reference frame will be used if none is provided (optional).
 
 Procedure to Use
 --------------------
