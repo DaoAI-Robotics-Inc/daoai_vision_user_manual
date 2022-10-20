@@ -5,6 +5,11 @@ Overview
 --------------------
 The Measurement node is used to find and measure edge, circle, stripe on a gray image.
 
+.. image:: images/Measurement/measurement_node_overview_1.png
+   :align: center
+
+.. image:: images/Measurement/measurement_node_overview_2.png
+   :align: center
 
 Inputs and Outputs
 --------------------
@@ -63,74 +68,95 @@ Markers Parameters
    :align: center
 
 - **Number of Occurences** (Default: 1):
+   The number of maximum markers to detect.
 
 - **Min Occurances** (Default: -1):
-    The minimum number of edge to detect. If fewer edge is detected than the min occurances, then it is a detection fail.
+   The minimum number of markers to detect. If fewer marker is detected than the min occurances, then it is a detection fail.
 
 Circle Marker Fields
 
+.. image:: images/Measurement/measurement_circle_marker_fields.png
+   :align: center
+
 - **Polarity** (Default: Any):
+   The polarity of edge to detection direction. Positive is from black to white, Negative is from white to black.
 
 - **Max Association Distance** (Default: 0):
+   Not range limit, unit is pixel. 
+   The maximum distance between a marker’s edge (either straight or circular) and its associated sub-edges during fit operation.
+   For edge and stripe markers, it is measured perpendicular from the fitted edge position, along to the search direction.
+   For circle markers, it is measured radially from the fitted circle perimeter.
+
 
 - **Min Edge Value** (Default: 10):
 
 Ring Region Fields
 
+.. image:: images/Measurement/measurement_ring_region_fields.png
+   :align: center
+
 - **Enable Clipping** (Default: false):
+   Whether to apply a clipped search region to search the marker. Useful when search region includes region outside of the image.
 
 - **Center X, Center Y**:
    The coordinates of the Ring Region, measured from the center.
 
 - **Inner Radius, Outer Radius**:
-   
+   Size of the ring region.
 
 Edge Marker Fields
 
 - **Polarity** (Default: Any):
+   The polarity of edge to detection direction. Positive is from black to white, Negative is from white to black.
 
 - **Max Association Distance** (Default: 0):
+   Not range limit, unit is pixel. 
+   The maximum distance between a marker’s edge (either straight or circular) and its associated sub-edges during fit operation.
+   For edge and stripe markers, it is measured perpendicular from the fitted edge position, along to the search direction.
+   For circle markers, it is measured radially from the fitted circle perimeter.
 
 - **Min Edge Value** (Default: 2):
 
+
 Stripe Marker Fields
 
+.. image:: images/Measurement/measurement_stripe_marker_fields.png
+   :align: center
+
 - **Polarity** (Default: Any):
-    The polarity of edge to detection direction. Positive is from black to white, Negative is from white to black.
+   The polarity of edge to detection direction. Positive is from black to white, Negative is from white to black.
 
 - **Polarity 2** (Default: Opposite):
-    Only available for stripe markers. Decides the polarity of the second edge of stripe, related to stripe’s first edge.
+   Only available for stripe markers. Decides the polarity of the second edge of stripe, related to stripe’s first edge.
 
 - **Max Association Distance** (Default: 0):
-    not range limit, unit is pixel. 
-    The maximum distance between a marker’s edge (either straight or circular) and its associated sub-edges during fit operation.
-    For edge and stripe markers, it is measured perpendicular from the fitted edge position, along to the search direction.
-    For circle markers, it is measured radially from the fitted circle perimeter
+   Not range limit, unit is pixel. 
+   The maximum distance between a marker’s edge (either straight or circular) and its associated sub-edges during fit operation.
+   For edge and stripe markers, it is measured perpendicular from the fitted edge position, along to the search direction.
+   For circle markers, it is measured radially from the fitted circle perimeter.
 
 - **Min Edge Value** (Default: 10):
+   
 
 Box Region Fields
 
+.. image:: images/Measurement/measurement_box_region_fields.png
+   :align: center
+
 - **Marker Orientation** (Default: Vertical):
-    Direction of the edge to be detected.
+   Direction of the edge to be detected.
 
 - **Enable Clipping** (Default: false):
-    Whether to apply a clipped search region to search the marker. Useful when search region includes region outside of the image.
+   Whether to apply a clipped search region to search the marker. Useful when search region includes region outside of the image.
 
 - **Enable Multi Angle** (Default: false):
 
 - **Center X, Center Y**:
    The coordinates of the Ring Region, measured from the center.
 
-- **Width, Height, Angle**:
+- **Width, Height**:
+   The size of the box region.
 
-Types of Markers
-```````````````````
-Edge Marker
-
-Stripe Marker
-
-Circle Marker
 
 
 Procedure to Use
@@ -153,7 +179,7 @@ Run the Mod Finder node, and define a model on the image. Then Define a Referenc
 5. Double click
 
 
-In Quick Evaluate, type the marker's name in marker[''] to check its evaluated results.
+In Quick Evaluate, type the marker's name in marker[''] to check its evaluated results. (circle has radius etc.)
 
 Exercise
 --------------------
