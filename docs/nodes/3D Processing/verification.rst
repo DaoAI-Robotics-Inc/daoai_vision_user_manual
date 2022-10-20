@@ -75,7 +75,7 @@ Verification Setting
 - **Verification Method**  (Default: DEPTH MODE):                                                           
    One of Depth Mode, Edge Mode, Stacking Mode.
 
-- **Confidence** (Default: MEDIUM, Range [0,100]): 
+- **Confidence** (Default: MEDIUM, Range: [0,100]): 
    The confidence of a pose to be considered valid. 
 
 +-----------------+-----------------+-----------------+
@@ -95,21 +95,21 @@ Depth Mode
 
 |
 
-- **Occluded Part Tolerance** (Default: 50 (MEDIUM), Range [0, 100]):
+- **Occluded Part Tolerance** (Default: MEDIUM, Range: [0, 100]):
    Threshold such that poses with more than this part occluded should be removed. 
 
 +-----------------+-----------------+-----------------+
 | LOW = 30        | MEDIUM = 50     | HIGH = 70       |
 +-----------------+-----------------+-----------------+
 
-- **Error Tolerance** (Default: MEDIUM, Range [0,100]):
+- **Error Tolerance** (Default: MEDIUM, Range: [0,100]):
    Error Tolerance: how much error points a pose can have. The higher the tolerance, the more inaccurate results will be kept. 
 
 +-----------------+-----------------+-----------------+
 | LOW = 30        | MEDIUM = 50     | HIGH = 70       |
 +-----------------+-----------------+-----------------+
 
-- **Overlap Ratio** (Default: MEDIUM, Range is [0,1]):
+- **Overlap Ratio** (Default: MEDIUM, Range: [0,1]):
    Controls the penally low overlap between model and scene. 
 
 +-----------------+-----------------+-----------------+
@@ -134,7 +134,7 @@ Edge Mode
 - **RGB image**: 
    RGB image of the scene. Usually from a Camera Node.
 
-- **Smoothness** (Default: MEDIUM, Range [0,100]): 
+- **Smoothness** (Default: MEDIUM, Range: [0,100]): 
    Level of smoothness applied to scene edge. 
 
 - **Canny Low Factor** (Default: LOW): 
@@ -149,7 +149,7 @@ Edge Mode
 - **Contrast threshold** (Default: MEDIUM): 
    The threshold for filtering out edges with low difference in depth.
 
-- **Search Radius** (Default: MEDIUM, Range [1, ∞)): 
+- **Search Radius** (Default: MEDIUM, Range: [1, ∞)): 
    Radius used for edge pixel clustering. 
 
 +-----------------+-----------------+-----------------+
