@@ -22,17 +22,17 @@ You can now input the information in the top toolbar to connect to the FTP serve
 
 Please use the following info::
 
-    Host : 206.12.6.164
+    Host : 206.12.6.241
     Username : <YOUR PROVIDED USERNAME>
     Password : <YOUR PROVIDED PASSWORD>
 
 Once you have entered the information, press the 'Quickconnect' button.
 
-You are now connected to the DaoAI FTP Server.
+You are now connected to the DaoAI Model Training FTP Server.
 
 Logging in to Jenkins
 ---------------------
-Navigate to the `DaoAI Jenkins Server <http://206.12.6.164:8080/login?from=%2F>`_ in your preferred web browser.
+Navigate to the `DaoAI Jenkins Server <http://206.12.6.241:8080/login?from=%2F>`_ in your preferred web browser.
 Use your provided login info to sign in.
 
 You are now connected to the DaoAI Jenkins Server

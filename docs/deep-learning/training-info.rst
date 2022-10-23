@@ -25,3 +25,5 @@ In segmentation & keypoint models:
 .. image:: images/training-info-im2_fix.png
     :align: center
     :width: 70%
+
+Please note, that there are certain requirements that cause Jenkins to automatically exit when met.  Jenkins automatically exits when either the validation loss is less than 0.009, or when the model has not improved for 5 evaluation periods
