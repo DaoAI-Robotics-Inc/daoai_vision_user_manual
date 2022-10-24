@@ -147,18 +147,18 @@ Tolerances
 Tolerances' labels will be displayed when "Show Interactive Display" is not checked. 
 
 - Green: Passed
-	- pass_min > value > pass_max
+	pass_min > value > pass_max
 - Yellow: Warning
-	- warning_min > value > warning_max
+	warning_min > value > warning_max
 - Red: Failed
-	- value < warning_min OR value > warning_max
+	value < warning_min OR value > warning_max
 
 1. Tolerance Type
-	- Pick a Tolearnce Type from the list.
+	Pick a Tolearnce Type from the list.
 2. From Features
-	- Select a method to calculate the tolerance value.
+	Select a method to calculate the tolerance value.
 3. Select Features
-	- Select the Features to be used to calculate the tolerance. (Follow Step 2's Feature Type)
+	Select the Features to be used to calculate the tolerance. (Follow Step 2's Feature Type)
 
 Example:
 	1. Angularity
