@@ -23,19 +23,20 @@ Input and Output
 +----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
 | Input                                  | Type                          | Description                                                                     |
 +========================================+===============================+=================================================================================+
-| Image                                  | Point Cloud                   | The Point Cloud from scene(Camera, Reader etc.)                                 |
+| Scene Cloud                            | Point Cloud                   | The Point Cloud from scene (Camera, Reader etc.).                               |
 +----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
-| Object Model                           | Point Cloud                   | The Point Cloud model from objects(Cloud Process, Reader etc.)                  |
+| Hypothesis                             | Vec<3DPoses>                  | The results of poses. Usually from Mod Finder, Reconstruct etc.                 |
 +----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
-| 3D poses                               | Vec<3DPoses>                  | The results of poses. Usually from Mod Finder, Reconstruct etc.                 |
+| Object Model                           | Point Cloud                   | The Point Cloud model from objects (Cloud Process, Reader etc.).                |
 +----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
+
 
 +-------------------------+-------------------+------------------------------------------------------------------------+
 | Output                  | Type              | Description                                                            |
 +=========================+===================+========================================================================+
 | poses                   | Vec<Pose3D>       | Vector of 3D poses generated from "Hypothesis".                        |
 +-------------------------+-------------------+------------------------------------------------------------------------+
-| size                    | int               | Size of the objects aligned.                                           |
+| size                    | int               | Number of aligned poses.                                               |
 +-------------------------+-------------------+------------------------------------------------------------------------+
 
 Node Settings
@@ -49,15 +50,15 @@ Data Source
 
 |
 
-   * Point Cloud
+- **Scene Cloud**
 
-   The Point Cloud from scene(camera, reader etc.)
+   The Point Cloud from scene (Camera, Reader etc.).
 
-   * Model Cloud 
+- **Model Cloud**
    
-   The object point cloud model from scene or more file(Cloud Process, Reader etc.)
+   The object point cloud model from scene or more file (Cloud Process, Reader etc.).
 
-   * Hypothesis
+- **Hypothesis**
 
    The initial guess for the poses, usually obtained from Reconstruct node or 3D Mod Finder node. 
 
@@ -109,10 +110,11 @@ Algorithm Setting
 |LOW = 80%        | MEDIUM = 90%    | HIGH = 99%      |
 +-----------------+-----------------+-----------------+
 
-- **Down Sample Strength**: Range [1,10]
+- **Down Sample Strength**: Range [1,10] (Default value: MEDIUM)
 
-   Control overall downsample intensity for the scene and model. Larger vales means stronger downsample.
+   Control overall downsample intensity for the scene and model. Larger values means stronger downsample.
 
+|
 
 Procedure to use
 =================
@@ -207,7 +209,7 @@ Procedure to use
 	.. image:: images/da_align/max_iterations.png
 		:align: center
 
-21. (Advanced)Decimation Step Model & Decimation Step Scene are used to adjust the step size for downsample. More steps will slow down the performance. Usually recommended using DEFAULT settings are good enough for most of the cases.
+21. (Advanced) Decimation Step Model & Decimation Step Scene are used to adjust the step size for downsample. More steps will slow down the performance. Usually recommended using DEFAULT settings are good enough for most of the cases.
 	.. image:: images/da_align/decimation.png
 		:align: center
 
@@ -275,7 +277,23 @@ experiment. You need to help him setup the **DA Alignment** node in main_flowcha
 
 	D. Change **Down Sample Strength** to **9**; 
 
-Answers for exercises
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+
+Answers for Exercise
 ================
 
 **Scenario 1**
