@@ -10,12 +10,11 @@ matching them between the model and scene, and minimizing the error between matc
 This node should be used when reasonably accurate poses have already been obtained, 
 such as following after the **Reconstruct** Node or **Mod Finder** Node, in which case these poses can be further refined.
 
-.. image:: images/da_align/da_alignment_node.png
+.. image:: images/da_align/DA_Alignment_insert_2.png
 	:align: center
 
-.. image:: images/da_align/insert_da.png
+.. image:: images/da_align/DA_Alignment_insert.png
 	:align: center
-
 
 Input and Output
 ================
@@ -26,8 +25,6 @@ Input and Output
 | Scene Cloud                            | Point Cloud                   | The Point Cloud from scene (Camera, Reader etc.).                               |
 +----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
 | Hypothesis                             | Vec<3DPoses>                  | The results of poses. Usually from Mod Finder, Reconstruct etc.                 |
-+----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
-| Object Model                           | Point Cloud                   | The Point Cloud model from objects (Cloud Process, Reader etc.).                |
 +----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
 
 
@@ -45,7 +42,7 @@ Node Settings
 Data Source
 -----------------
 
-.. image:: images/da_align/source_setting.png
+.. image:: images/da_align/DA_Alignment_node_settings_data_source.png
 	:align: center
 
 |
@@ -53,10 +50,6 @@ Data Source
 - **Scene Cloud**
 
    The Point Cloud from scene (Camera, Reader etc.).
-
-- **Model Cloud**
-   
-   The object point cloud model from scene or more file (Cloud Process, Reader etc.).
 
 - **Hypothesis**
 
