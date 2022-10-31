@@ -10,12 +10,11 @@ matching them between the model and scene, and minimizing the error between matc
 This node should be used when reasonably accurate poses have already been obtained, 
 such as following after the **Reconstruct** Node or **Mod Finder** Node, in which case these poses can be further refined.
 
-.. image:: images/da_align/da_alignment_node.png
+.. image:: images/da_align/DA_Alignment_insert_2.png
 	:align: center
 
-.. image:: images/da_align/insert_da.png
+.. image:: images/da_align/DA_Alignment_insert.png
 	:align: center
-
 
 Input and Output
 ================
@@ -23,19 +22,18 @@ Input and Output
 +----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
 | Input                                  | Type                          | Description                                                                     |
 +========================================+===============================+=================================================================================+
-| Image                                  | Point Cloud                   | The Point Cloud from scene(Camera, Reader etc.)                                 |
+| Scene Cloud                            | Point Cloud                   | The Point Cloud from scene (Camera, Reader etc.).                               |
 +----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
-| Object Model                           | Point Cloud                   | The Point Cloud model from objects(Cloud Process, Reader etc.)                  |
+| Hypothesis                             | Vector<Poses>                 | The results of poses. Usually from Mod Finder, Reconstruct etc.                 |
 +----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
-| 3D poses                               | Vec<3DPoses>                  | The results of poses. Usually from Mod Finder, Reconstruct etc.                 |
-+----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
+
 
 +-------------------------+-------------------+------------------------------------------------------------------------+
 | Output                  | Type              | Description                                                            |
 +=========================+===================+========================================================================+
-| poses                   | Vec<Pose3D>       | Vector of 3D poses generated from "Hypothesis".                        |
+| poses                   | Vector<Pose>      | Vector of 3D poses generated from "Hypothesis".                        |
 +-------------------------+-------------------+------------------------------------------------------------------------+
-| size                    | int               | Size of the objects aligned.                                           |
+| size                    | int               | Number of aligned poses.                                               |
 +-------------------------+-------------------+------------------------------------------------------------------------+
 
 Node Settings
@@ -44,20 +42,16 @@ Node Settings
 Data Source
 -----------------
 
-.. image:: images/da_align/source_setting.png
+.. image:: images/da_align/DA_Alignment_node_settings_data_source.png
 	:align: center
 
 |
 
-   * Point Cloud
+- **Scene Cloud**
 
-   The Point Cloud from scene(camera, reader etc.)
+   The Point Cloud from scene (Camera, Reader etc.).
 
-   * Model Cloud 
-   
-   The object point cloud model from scene or more file(Cloud Process, Reader etc.)
-
-   * Hypothesis
+- **Hypothesis**
 
    The initial guess for the poses, usually obtained from Reconstruct node or 3D Mod Finder node. 
 
@@ -109,10 +103,11 @@ Algorithm Setting
 |LOW = 80%        | MEDIUM = 90%    | HIGH = 99%      |
 +-----------------+-----------------+-----------------+
 
-- **Down Sample Strength**: Range [1,10]
+- **Down Sample Strength**: Range [1,10] (Default value: MEDIUM)
 
-   Control overall downsample intensity for the scene and model. Larger vales means stronger downsample.
+   Control overall downsample intensity for the scene and model. Larger values means stronger downsample.
 
+|
 
 Procedure to use
 =================
@@ -207,7 +202,7 @@ Procedure to use
 	.. image:: images/da_align/max_iterations.png
 		:align: center
 
-21. (Advanced)Decimation Step Model & Decimation Step Scene are used to adjust the step size for downsample. More steps will slow down the performance. Usually recommended using DEFAULT settings are good enough for most of the cases.
+21. (Advanced) Decimation Step Model & Decimation Step Scene are used to adjust the step size for downsample. More steps will slow down the performance. Usually recommended using DEFAULT settings are good enough for most of the cases.
 	.. image:: images/da_align/decimation.png
 		:align: center
 
@@ -275,7 +270,23 @@ experiment. You need to help him setup the **DA Alignment** node in main_flowcha
 
 	D. Change **Down Sample Strength** to **9**; 
 
-Answers for exercises
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+
+Answers for Exercise
 ================
 
 **Scenario 1**
