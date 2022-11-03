@@ -1,10 +1,9 @@
-Deep Learning Segmentation Node
+DL Segment Node
 ======================================
 
 Overview
 -------------
-The DL Segmentation Node offers state-of-the-art segmentation of point clouds using pre-trained models. 
-The node can be used anywhere that normal segmentation is used and offers the same functionality with less configuration.
+The Deep Learning (DL) Segment Node offers state-of-the-art segmentation of point clouds using pre-trained models. 
 
 DL segmentation can be performed on one of point cloud, image, or both.
 Note that DL segmentation works best when the input contains background information around the object. 
@@ -27,37 +26,37 @@ Input and Output
 +========================================+===============================+=================================================================================+
 | Data Input                             | Image / Point Cloud           | The RGB image or point cloud used for segmentation.                             |
 +----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
-| Use GPU Model                          | bool                          | Whether to use the GPU Model or not.                                            |
+| Use GPU Model                          | bool                          | Whether to use the GPU Model or not. Will be used if the option is toggled on.  |
 +----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
-| Config File Path                       | String                        | The path to deep learning config file.                                          |
+| Config File Path                       | String                        | The path to deep learning config file (.txt).                                   |
 +----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
 
-+-------------------------+-------------------+------------------------------------------------------------------------------------------------------------------+
-| Output                  | Type              | Description                                                                                                      |
-+=========================+===================+==================================================================================================================+
-| bboxResults             | vector<Box2f>     | A vector of bounding boxes of the segments. Each element contains top-left, bottom-right coordinate of each box. |
-+-------------------------+-------------------+------------------------------------------------------------------------------------------------------------------+
-| maskOnScene             | Image             | - Masked image showing all segments in the input image.                                                          |
-+-------------------------+-------------------+------------------------------------------------------------------------------------------------------------------+
-| maskedScene             | Image             | RGB image showing all segments in input image.                                                                   |
-+-------------------------+-------------------+------------------------------------------------------------------------------------------------------------------+
-| numDetected             | int               | Number of segments detected.                                                                                     |
-+-------------------------+-------------------+------------------------------------------------------------------------------------------------------------------+
-| segmResults             | vector<Segm>      | - A vector of all the segmentation results.                                                                      |
-|                         |                   | - segmentResultsOfLabel[]: Segment results of a specific label (class).                                          |
-+-------------------------+-------------------+------------------------------------------------------------------------------------------------------------------+
-| segmentLocations        | vecPose2D         | - 2D poses of obtained segments including the center point, score and label for each segment.                    |
-|                         |                   | - segmentLocationsOfLabel[]: Segment locations of a specific label (class).                                      |
-|                         |                   | - segmentLocations[]: Segment location of a specific segment.                                                    |
-+-------------------------+-------------------+------------------------------------------------------------------------------------------------------------------+
-| segmentMasks            | vecImage          | - Masked images of obtained segments.                                                                            |
-|                         |                   | - segmentMasksOfLabel[]: Segment masks of a specific label (class).                                              |
-|                         |                   | - segmentMasks[]: Mask of a specific segment.                                                                    |
-+-------------------------+-------------------+------------------------------------------------------------------------------------------------------------------+
-| segmentRGBs             | vecImage          | Images of obtained segments.                                                                                     |
-+-------------------------+-------------------+------------------------------------------------------------------------------------------------------------------+
-| success                 | bool              | Whether the segmentation is successful (found at least one segment).                                             |
-+-------------------------+-------------------+------------------------------------------------------------------------------------------------------------------+
++-------------------------+-------------------+---------------------------------------------------------------------------------------------------------------------------+
+| Output                  | Type              | Description                                                                                                               |
++=========================+===================+===========================================================================================================================+
+| bboxResults             | vector<Box2f>     | A vector of bounding boxes of the segments. Each element contains top-left, bottom-right coordinate of each bounding box. |
++-------------------------+-------------------+---------------------------------------------------------------------------------------------------------------------------+
+| maskOnScene             | Image             | - Masked image showing all segments in the input image.                                                                   |
++-------------------------+-------------------+---------------------------------------------------------------------------------------------------------------------------+
+| maskedScene             | Image             | RGB image showing all segments in input image.                                                                            |
++-------------------------+-------------------+---------------------------------------------------------------------------------------------------------------------------+
+| numDetected             | int               | Number of segments detected.                                                                                              |
++-------------------------+-------------------+---------------------------------------------------------------------------------------------------------------------------+
+| segmResults             | vector<Segm>      | - A vector of all the segmentation results.                                                                               |
+|                         |                   | - segmentResultsOfLabel[]: Segment results of a specific label (class).                                                   |
++-------------------------+-------------------+---------------------------------------------------------------------------------------------------------------------------+
+| segmentLocations        | vecPose2D         | - 2D poses of obtained segments including the center point, score and label for each segment.                             |
+|                         |                   | - segmentLocationsOfLabel[]: Segment locations of a specific label (class).                                               |
+|                         |                   | - segmentLocations[]: Segment location of a specific segment.                                                             |
++-------------------------+-------------------+---------------------------------------------------------------------------------------------------------------------------+
+| segmentMasks            | vecImage          | - Masked images of obtained segments.                                                                                     |
+|                         |                   | - segmentMasksOfLabel[]: Segment masks of a specific label (class).                                                       |
+|                         |                   | - segmentMasks[]: Mask of a specific segment.                                                                             |
++-------------------------+-------------------+---------------------------------------------------------------------------------------------------------------------------+
+| segmentRGBs             | vecImage          | Images of obtained segments.                                                                                              |
++-------------------------+-------------------+---------------------------------------------------------------------------------------------------------------------------+
+| success                 | bool              | Whether the segmentation is successful (found at least one segment).                                                      |
++-------------------------+-------------------+---------------------------------------------------------------------------------------------------------------------------+
 
 |
 
@@ -84,22 +83,25 @@ Deep Learning Model
    :align: center
 
 - Use GPU Model (Default: false)
-   Whether to use the GPU Model or not.
+   Whether to use the GPU Model or not. Will be used if the option is toggled on.
 
 - Config File Path
-   The path to deep learning config file.
+   The path to deep learning config file (.txt).
 
 - Model Sort Type (Default: IOU Occluded)
-   One of IOU Occluded, Binary Occluded, Area.
+   Set the model sort type of the result. Select from one of IOU Occluded, Binary Occluded, Area.
+      - IOU Occluded: sort by calculating Intersection over Union (IOU) between segments to determine overlapping percentage, and determines which segment occupies the most amount of area in the overlapping region. So that we pick up the objects that are not occluded first.
+      - Binary Occluded: similar to IOU Occluded, but uses two values to denote if any other segment overlaps a given segment.
+      - Area: sort by area size.
 
 - Area min./max. (Range: [0,1.0])
    Avaiblae in Post Process. Values which represent the percentage of the image and segment can occupy.
 
 - Eigenval (1)/(2) min./max. (Range: [0,1])
-   Avaiblae in Post Process. Similar to how the segmentation calculates the PCA of each segment we calculate that here and limit the eigen values. Eigen value 1 is the longer axis.
+   Avaiblae in Post Process. Similar to how the segmentation calculates the Principal Component Analysis (PCA) of each segment we calculate that here and limit the eigen values. Eigen value 1 is the longer axis.
 
 - Min Confidence (Range: [0,1])
-   Avaiblae in Post Process. The minimum confidence required for each segment.
+   Avaiblae in Post Process. The minimum confidence for detecting predicted objects.
 
 - NMS Threshold (Range: [0,1]; Default: 0.8)
    Avaiblae in Post Process. The threshold for applying soft NMS to the bounding boxes. This removes boxes that are too close together.
