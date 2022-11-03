@@ -3,9 +3,7 @@ Visualize Node
 
 Overview
 -------------
-The Visualize node is a utility node that visualizes point clouds or meshes. It can also apply poses to objects before visualizing.
-
-The visualize node takes in an object (either point cloud or mesh) and the pose (affine3f optional). It does not output anything, it only uses the display.
+The Visualize node is a utility node that visualizes point clouds or meshes in the same coordinate system using their respective positions. It can also apply poses to objects before visualizing.
 
 .. image:: Images/visualize/visualize_overview_1.png
    :align: center
@@ -35,8 +33,6 @@ Input and Output
 
 The Visualize node has no output, it only uses the display.
 
-Run the node or click "Visualize All" to display the objects.
-
 Node Settings
 ---------------------------
 
@@ -65,47 +61,58 @@ There can be an arbitrary number of visualization items.
 
 Procedure to Use
 ---------------------------
-We will need a few more nodes to demonstrate the Visualize node. You can get the files `here <>`_ .
+We will need a few more nodes to demonstrate the Visualize node. You can get the files `here <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/yli_daoai_com/EdPIOvcS5nBKrS75IaVfTLsB9YXEfqL6SbHcV1OxemJrTQ?e=ceEWmg>`_ .
 
 1. Insert a Calibration, Transformation Tree, 2 Readers, and Visualize node.
     .. image:: Images/visualize/visualize_procedure_1.png
-       :align: center
+       :scale: 60%
 
 2. In Calibration, select Load mode, and input the calibration file name. Make sure the file is stored in the project's calibrations folder. 
-    .. image:: Images/visualize/visualize_procedure_2.png
-       :align: center
+    .. image:: Images/visualize/visualize_procedure_2_1.png
+       :scale: 60%
+    .. image:: Images/visualize/visualize_procedure_2_2.png
+       :scale: 60%
 
-3. In the Transformation Tree, we need the tool in cloud relation to visualize the gripper. Add a tool in base relation, and link the bag's output pose; Add a cam in base relation, and link calibration's camInBase output; Add a cam in cloud relation, click "Set Pose", change Rot a to 180. Finally, add a tool in cloud output.
+3. In the Transformation Tree, we need the tool in cloud relation to visualize the gripper. Add a tool in base relation, and link the bag's output pose; Add a cam in base relation, and link calibration's camInBase output; Add a cam in cloud relation, click "Set Pose", change Rot a to 180. Finally, add a tool in cloud output. Remember to click "Apply".
     .. image:: Images/visualize/visualize_procedure_3_1.png
-       :align: center
+       :scale: 60%
+    .. image:: Images/visualize/visualize_procedure_3_2.png
+       :scale: 60%
+    .. image:: Images/visualize/visualize_procedure_3_3.png
+       :scale: 90%
+    .. image:: Images/visualize/visualize_procedure_3_4.png
+       :scale: 80%
 
 4. In the first Reader node, read the gripper's mesh file.
     .. image:: Images/visualize/visualize_procedure_4.png
-       :align: center
+       :scale: 90%
 
 5. In the second Reader node, read the bag file.
     .. image:: Images/visualize/visualize_procedure_5.png
-       :align: center
+       :scale: 90%
 
 6. In the Visualize node, click "Add Viz" to add a visualization (Viz_0). For Object, link the first reader's outputMesh (gripper). For Object Pose, link the Transformation Tree's output.
     .. image:: Images/visualize/visualize_procedure_6.png
-       :align: center
+       :scale: 90%
 
 7. Click "Add Viz" to add another visualization (Viz_1). For Object, link the second reader's bag cloud output. You can leave Object Pose empty as the object is the scene.
     .. image:: Images/visualize/visualize_procedure_7.png
-       :align: center
+       :scale: 90%
 
 8. Run the flowchart, and click on Visualize node. You can see the scene and gripper are displayed.
     .. image:: Images/visualize/visualize_procedure_8.png
-       :align: center
+       :scale: 80%
 |
 
 Exercise
 ---------------------------
-You have this flowchart and are trying to see the visualization of the scene with the gripper. However, when you click on the Visualize node, the display is a black screen. How can you fix the problem, given the following visualizations settings?
+You have this flowchart and are trying to see the visualization of the scene with the gripper. However, when you click on the Visualize node, the display is a black screen. How can you fix the problem, given the following visualizations settings and that the Object and Object Pose links are correct?
 
 .. image:: Images/visualize/visualize_exercise_1.png
-   :align: center
+   :scale: 80%
+
+.. image:: Images/visualize/visualize_exercise_2.png
+   :scale: 67%
 
 |
 |
@@ -125,5 +132,12 @@ You have this flowchart and are trying to see the visualization of the scene wit
 
 Answers for Exercise
 ---------------------------
-1. The black screen is due to the wrong box option selected. "Show Object" needs to be selected to display.
+| Since "Show Axis" is checked, the screen should show two axes. However, the axis scale is 0, so nothing is shown on screen. Let's change it to 50.
+| "Show Object" also need to be selected in order to display the objects or scene.
+| With the following settings in visualize, the display shows both the axes and the objects.
 
+.. image:: Images/visualize/visualize_answer_1.png
+   :scale: 80%
+
+.. image:: Images/visualize/visualize_answer_2.png
+   :scale: 100%
