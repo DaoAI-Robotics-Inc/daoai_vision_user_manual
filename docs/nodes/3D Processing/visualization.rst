@@ -61,7 +61,7 @@ There can be an arbitrary number of visualization items.
 
 Procedure to Use
 ---------------------------
-We will need a few more nodes to demonstrate the Visualize node. You can get the files `here <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/yli_daoai_com/EdPIOvcS5nBKrS75IaVfTLsB9YXEfqL6SbHcV1OxemJrTQ?e=ceEWmg>`_ .
+We will need a few more nodes to demonstrate the Visualize node. You can get the files `here <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/xchen_daoai_com/ERwFyz-g2Z9MiW4YPMu6sYwBiDs4NRFnD4YpgVupZkVAHA?e=t7mphp>`_ .
 
 1. Insert a Calibration, Transformation Tree, 2 Readers, and Visualize node.
     .. image:: Images/visualize/visualize_procedure_1.png
