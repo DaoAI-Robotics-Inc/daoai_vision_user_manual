@@ -131,7 +131,7 @@ Below image shows the result of using erosion, the resulting mask is smaller tha
 
 Procedure to Use
 -----------------
-Here is the `link to the files in this demonstration <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/yli_daoai_com/EQh24oMOww5CkyPonUR9etsBM_PIr3KPy9jhtf-pnfT6aQ?e=ObUSfz>`_ .
+Here is the `link to the files in this demonstration <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/xchen_daoai_com/EQWywu5KGOtDuXYc6_saFoIBlEw9AGut826AAaTAHWYPiA?e=gPsx38>`_ .
 
 1. Insert Camera, Cloud Process, and DL Segment.
     .. image:: Images/dl_segment/dl_segment_procedure_1.png
@@ -202,7 +202,7 @@ Exercise
 
 |
 
-2. You have a `depth model <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/yli_daoai_com/ETqXsPWM6SRMl4fRkpItI8IBHLbysOtqS-aUFR1IogThEg?e=tExgEc>`_ at hand, try to setup the flowchart.
+2. You have a `depth model <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/xchen_daoai_com/EfA5MaYcCANIgUfvA3MACNQB-8074gynZGY6-K4eEHzKKw?e=wgYdRm>`_ at hand, try to setup the flowchart.
     .. image:: Images/dl_segment/dl_segment_exercise_2.png
        :scale: 80%
 
@@ -227,32 +227,34 @@ Exercise
 
 Answers for Exercise
 ---------------------
-1. You can filter out the less confident results by changing the "Min Confidence" value in Post Process.
-Set Min Confidence to 0.96 gives the following result:
+1. 
+You can filter out the less confident results by changing the "Min Confidence" value in Post Process. Set Min Confidence to 0.96 gives the following result:
     .. image:: Images/dl_segment/dl_segment_answer_1.png
        :scale: 80%
 
 |
 
-2. First, link the pointCloud output from Camera as the DA CloudNDepth Conv's Object.
+2. 
+
+- First, link the pointCloud output from Camera as the DA CloudNDepth Conv's Object.
     .. image:: Images/dl_segment/dl_segment_answer_2_1.png
        :scale: 80%
 
 |
 
-3. In DL Segment, link DA CloudNDepth's 8bit_depth output.
+- In DL Segment, link DA CloudNDepth's 8bit_depth output.
     .. image:: Images/dl_segment/dl_segment_answer_2_2.png
        :scale: 80%
 
 |
 
-4. Link the Config File.
+- Link the Config File.
     .. image:: Images/dl_segment/dl_segment_answer_2_3.png
        :scale: 80%
 
 |
 
-5. Run the flowchart, and you can see the result as in the image.
+- Run the flowchart, and you can see the result as in the image.
     .. image:: Images/dl_segment/dl_segment_answer_2_4.png
        :scale: 80%
 
