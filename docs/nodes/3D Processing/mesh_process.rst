@@ -87,21 +87,17 @@ Procedure to Use
     .. image:: Images/mesh_process/mesh_process_procedure_6.png
        :align: center
 
-
-.. image:: Images/mesh_process/cloud.png
-   :align: center
-
-.. image:: Images/mesh_process/edge.png
-   :align: center
-
 |
 
 Exercise
 --------------------------------------
 
+You are given this mesh object, which looks like this:
 
+.. image:: Images/mesh_process/mesh_process_exercise_1.png
+       :align: center
 
-
+What Process Type is better for this particular object?
 
 |
 |
@@ -121,3 +117,5 @@ Exercise
 
 Answers for Exercise
 --------------------------------------
+
+Since the object is very flat, the "Generate Edge" process type is the better option.
