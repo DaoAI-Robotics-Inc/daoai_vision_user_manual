@@ -63,7 +63,7 @@ Procedure to Use
 ---------------------------
 We will need a few more nodes to demonstrate the Visualize node. You can get the files `here <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/xchen_daoai_com/ERwFyz-g2Z9MiW4YPMu6sYwBiDs4NRFnD4YpgVupZkVAHA?e=t7mphp>`_ .
 
-1. Insert a Calibration, Transformation Tree, 2 Readers, and Visualize node.
+1. Insert a Calibration, 2 Readers, Transformation Tree, and Visualize node.
     .. image:: Images/visualize/visualize_procedure_1.png
        :scale: 60%
 
@@ -73,7 +73,15 @@ We will need a few more nodes to demonstrate the Visualize node. You can get the
     .. image:: Images/visualize/visualize_procedure_2_2.png
        :scale: 60%
 
-3. In the Transformation Tree, we need the tool in cloud relation to visualize the gripper. Add a tool in base relation, and link the bag's output pose; Add a cam in base relation, and link calibration's camInBase output; Add a cam in cloud relation, click "Set Pose", change Rot a to 180. Finally, add a tool in cloud output. Remember to click "Apply".
+3. In the first Reader node, read the gripper's mesh file.
+    .. image:: Images/visualize/visualize_procedure_4.png
+       :scale: 90%
+
+4. In the second Reader node, read the bag file.
+    .. image:: Images/visualize/visualize_procedure_5.png
+       :scale: 90%
+
+5. In the Transformation Tree, we need the tool in cloud relation to visualize the gripper. Add a tool in base relation, and link the bag's output pose; Add a cam in base relation, and link calibration's camInBase output; Add a cam in cloud relation, click "Set Pose", change Rot a to 180. Finally, add a tool in cloud output. Remember to click "Apply".
     .. image:: Images/visualize/visualize_procedure_3_1.png
        :scale: 60%
     .. image:: Images/visualize/visualize_procedure_3_2.png
@@ -82,14 +90,6 @@ We will need a few more nodes to demonstrate the Visualize node. You can get the
        :scale: 90%
     .. image:: Images/visualize/visualize_procedure_3_4.png
        :scale: 80%
-
-4. In the first Reader node, read the gripper's mesh file.
-    .. image:: Images/visualize/visualize_procedure_4.png
-       :scale: 90%
-
-5. In the second Reader node, read the bag file.
-    .. image:: Images/visualize/visualize_procedure_5.png
-       :scale: 90%
 
 6. In the Visualize node, click "Add Viz" to add a visualization (Viz_0). For Object, link the first reader's outputMesh (gripper). For Object Pose, link the Transformation Tree's output.
     .. image:: Images/visualize/visualize_procedure_6.png
@@ -106,13 +106,13 @@ We will need a few more nodes to demonstrate the Visualize node. You can get the
 
 Exercise
 ---------------------------
-You have this flowchart and are trying to see the visualization of the scene with the gripper. However, when you click on the Visualize node, the display is a black screen. How can you fix the problem, given the following visualizations settings and that the Object and Object Pose links are correct?
+You have this flowchart and are trying to see the visualization of the scene with the gripper. However, when you click on the Visualize node, the display appears to be a black screen. How can you fix the problem, given the following visualizations settings and that the Object and Object Pose links are correct?
 
 .. image:: Images/visualize/visualize_exercise_1.png
-   :scale: 80%
+   :scale: 100%
 
 .. image:: Images/visualize/visualize_exercise_2.png
-   :scale: 67%
+   :scale: 68%
 
 |
 |
@@ -132,7 +132,7 @@ You have this flowchart and are trying to see the visualization of the scene wit
 
 Answers for Exercise
 ---------------------------
-| Since "Show Axis" is checked, the screen should show two axes. However, the axis scale is 0, so nothing is shown on screen. Let's change it to 50.
+| Since "Show Axis" is checked, the screen should show two axes. However, the axis scale is 1, so they are too small to be seen. Let's change it to 50.
 | "Show Object" also need to be selected in order to display the objects or scene.
 | With the following settings in visualize, the display shows both the axes and the objects.
 
