@@ -23,7 +23,7 @@ Input and Output
 +-------------------------+-------------------+-------------------------------------------------------------------------------------------+
 | Input                   | Type              | Description                                                                               |
 +=========================+===================+===========================================================================================+
-| Segment Results         | vector<Segm>      | Segmentation result of objects. Usually From DL Segment, Segmentation node.               |
+| Segment Results         | vector<Segm>      | Segmentation result of objects. Usually from DL Segment, Segmentation node.               |
 +-------------------------+-------------------+-------------------------------------------------------------------------------------------+
 | Scene Cloud             | pointCloud        | The scene point cloud to be cropped. Usually from Camera, Cloud Process node.             |
 +-------------------------+-------------------+-------------------------------------------------------------------------------------------+
@@ -50,7 +50,7 @@ Data Source
    :align: center
 
 - Segment Results
-   Segmentation result of objects. Usually From DL Segment, Segmentation node.
+   Segmentation result of objects. Usually from DL Segment, Segmentation node.
 
 - Scene Cloud
    3D point cloud representing the scene. Usually from Camera, Cloud Process node.
