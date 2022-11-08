@@ -4,7 +4,6 @@ Mesh Process Node
 Overview
 --------------------
 
-Often, polygon meshes contain sparse points, relying more on polygons to represent surfaces. 
 The Mesh Process Node processes an input polygon mesh and generates a point cloud that can be used for finding model features.
 
 .. image:: Images/mesh_process/mesh_process_overview_1.png
@@ -22,18 +21,18 @@ Input and Output
 +-------------------------+-------------------+------------------------------------------------------------------------+
 | Input                   | Type              | Description                                                            |
 +=========================+===================+========================================================================+
-| Model Mesh              | Mesh              | A polygon mesh for the model (.ply).                                   |
+| Model Mesh              | Mesh              | A polygon mesh for the model (.ply). Usually from Reader node.         |
 +-------------------------+-------------------+------------------------------------------------------------------------+
 | Process Type            | Int32             | The type of mesh processing performed.                                 |
 +-------------------------+-------------------+------------------------------------------------------------------------+
 
-+-------------------------+-------------------+------------------------------------------------------------------------+
-| Output                  | Type              | Description                                                            |
-+=========================+===================+========================================================================+
-| cloud                   | Cloud             | point cloud or edge cloud converted from polygon mesh.                 |
-+-------------------------+-------------------+------------------------------------------------------------------------+
-| mass center             | Point4f           | The mass center of the resulting point cloud.                          |
-+-------------------------+-------------------+------------------------------------------------------------------------+
++-------------------------+-------------------+--------------------------------------------------------------------------------------------------------+
+| Output                  | Type              | Description                                                                                            |
++=========================+===================+========================================================================================================+
+| cloud                   | Cloud             | Point cloud or edge cloud converted from polygon mesh.                                                 |
++-------------------------+-------------------+--------------------------------------------------------------------------------------------------------+
+| mass center             | Point4f           | The mass center of the resulting point cloud. Point4f is a normal point in 4D.                         |
++-------------------------+-------------------+--------------------------------------------------------------------------------------------------------+
 
 Node Settings
 ----------------
@@ -45,7 +44,7 @@ Data Source
    :align: center
 
 - Model Mesh
-   A polygon mesh for the model (.ply).
+   A polygon mesh for the model (.ply). Usually from Reader.
 
 Process Settings
 ~~~~~~~~~~~~~~~~
