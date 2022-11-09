@@ -4,10 +4,10 @@ Reconstruct Node
 Overview
 **********************
 
-The Reconstruction Node uses the hypothesis position of a detected object and its centroids to generate a 3D pose. 
-The hypothesis position and centroid information usually comes from the Mode Finder Node. 
-The 3D pose uses the model defined in Mod Finder Node as a reference to compute its translation and rotation(in camera coordinates). 
-In order the visualize the pose, it will be displayed in the scene using a small XYZ axis.
+| The Reconstruct Node uses the hypothesis position of a detected object and its centroids to generate a 3D pose. 
+| The hypothesis position and centroid information usually comes from the Mod Finder Node. 
+| The 3D pose uses the model defined in Mod Finder Node as a reference to compute its translation and rotation (in camera coordinates). 
+| The reconstructed pose is displayed in the scene as a small XYZ axis.
 
 .. image:: Images/reconstruct/reconstruct.png
    :align: center
@@ -19,31 +19,31 @@ Input and Output
 +----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
 | Input                                  | Type                          | Description                                                                     |
 +========================================+===============================+=================================================================================+
-| Image                                  | Point Cloud                   | The Point Cloud from scene(camera, reader etc.)                                 |
+| Point Cloud                            | Point Cloud                   | The Point Cloud from scene (camera, reader etc.).                               |
 +----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
-| 2D Poses                               | Vec<Pose2D>                   | The results of 2D poses. Usually from Mod Finder, Shape Finder etc.             |
+| Object Locations                       | Vec<Pose2D>                   | The results of 2D poses. Usually from Mod Finder, Shape Finder etc.             |
 +----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
-| Camera Intrinsic                       | CameraIntrinsic               | Camera Intrinsic from Camera node, used in computation.                         |
+| Camera Intrinsics                      | CameraIntrinsic               | Camera Intrinsic from Camera node, used in computation.                         |
 +----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
-| Model Masks(Optional)                  | VecImage                      | - Detected model/shape masks from Mod Finder, Shape Finder or DL Segment nodes. |
-|                                        |                               | - Used only when the masks are used for rotation or Z computation.              |
+| Object Masks (Optional)                | VecImage                      | Detected model/shape masks from Mod Finder, Shape Finder or DL Segment nodes.   |
+|                                        |                               | Used only when the masks are used for rotation or Z computation.                |
 +----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
 
 
 +-------------------------+-------------------+------------------------------------------------------------------------+
 | Output                  | Type              | Description                                                            |
 +=========================+===================+========================================================================+
-| objectPositions         | Vec<Pose3D>       | Vector of 3D poses generated from "Object Locations"(2D poses).        |
+| objectPositions         | Vector<Pose>      | Vector of 3D poses generated from "Object Locations" (2D poses).       |
 +-------------------------+-------------------+------------------------------------------------------------------------+
-| object_positions/size   | int               | Size of the object positions.                                          |
+| object_positions/size   | int               | Number of object positions.                                            |
 +-------------------------+-------------------+------------------------------------------------------------------------+
-| success                 | bool              | Boolean value which indicates if the process is successful.            |
+| success                 | bool              | Whether the reconstruct process of all pose is successful.             |
 +-------------------------+-------------------+------------------------------------------------------------------------+
 
 Node Settings
 **********************
 
-Source Parameter
+Data Source
 --------------------------------
 
 .. image:: Images/reconstruct/source.png
@@ -55,7 +55,7 @@ Source Parameter
 
 * Object Locations
 
-   The results of 2D poses, usually from Mod Finder, Shape Finder DL Segment nodes.
+   The results of 2D poses, usually from Mod Finder, Shape Finder, or DL Segment node.
    
 * Camera Intrinsic
 
@@ -67,9 +67,8 @@ Source Parameter
 Estimation Setting
 ---------------------
 
-* Z Computation Method
-
-   This field is the options for computation of Z-value: 
+* Z-Computation Method:
+   This field is the options for computation of Z-value: Averaging surrounding points, and Averaging masking area.
 
 .. image:: Images/reconstruct/z-comp.png
    :align: center
@@ -78,14 +77,16 @@ Estimation Setting
 
 The node has two ways of constructing Z-value in 3D poses:
 
-* Averaging Surrounding Points: This is the default method which uses a set of surrounding points  (square kernel) around the reference point and converts them to a point cloud (using the input point cloud) and takes the average Z value of the corresponding 3D points in the point cloud. The size (radius) of the kernel can also be defined by the user. Using a bigger kernel will result in using more surrounding points for Z computation.  
+* Averaging Surrounding Points: 
+   This is the default method which uses a set of surrounding points (square kernel) around the reference point and converts them to a point cloud (using the input point cloud) and takes the average Z value of the corresponding 3D points in the point cloud. The size (radius) of the kernel can also be defined by the user. Using a bigger kernel will result in using more surrounding points for Z computation.  
 
 .. image:: Images/reconstruct/aver_z_value.png
    :align: center
 
 |
 
-* Averaging masking area: This method uses the mask obtained from mod-finder , shape-finder or dl_segm to obtain the Z value by using the non-zero pixels in the mask (model mask, shape mask or segment mask  depending on which node you are using  before reconstruct_node) and taking the average Z value of their corresponding points in the point cloud. There is also a dilation iterations parameter that can be used to dilate the model/shape mask if needed. More dilation results in using more points for Z computation. 
+* Averaging masking area: 
+   This method uses the mask obtained from Mod Finder , Shape Finder, or DL Segment to obtain the Z value by using the non-zero pixels in the mask (model mask, shape mask or segment mask depending on which node you are using before reconstruct node) and taking the average Z value of their corresponding points in the point cloud. There is also a dilation iterations parameter that can be used to dilate the model/shape mask if needed. More dilation results in using more points for Z computation. 
 
 .. image:: Images/reconstruct/aver_z_masks.png
    :align: center
@@ -100,16 +101,24 @@ Enable Rotation computation
 
 
 If this option is checked by the user, the program will compute the rotation of the object with respect to the camera coordinates system. 
-The nodes has two ways of constructing rotation: 
+The nodes has two ways of constructing rotation: Surrounding Normal Points and Mask Region Normal. 
 
-* Surrounding Normal Points: This is the default method which uses a set of surrounding points of the reference point to fit a plane in the point cloud and then, uses this plane to find normal vector which is then used for rotation calculation. However, this method can fail if the surrounding points are nan (invalid), especially in cases that the target shape/ model is a hole. However, you have control in the kernel used around the reference point to fit the plane and calculate the rotation. 
+* Surrounding Normal Points: 
+   This is the default method which uses a set of surrounding points of the reference point to fit a plane in the point cloud and then, uses this plane to find normal vector which is then used for rotation calculation. However, this method can fail if the surrounding points are nan (invalid), especially in cases that the target shape / model is a hole. However, you can control the kernel used around the reference point by changing **Kernal Radius for Rotation Computation** to fit the plane and calculate the rotation. 
+
+	- Kernal Radius for Rotation Computation (Default: MEDIUM):
+		The radius of kernel used to compute rotational value. A large value uses more points to fit a plane and find the normal at the reference point. 
 
 .. image:: Images/reconstruct/surrounding_normal.png
    :align: center
 
 |
 
-* Mask Region Normal: This method uses the mask/masks obtained from Mod Finder, Shape Finder or DL Segment node and converts it to a cloud to obtain the Rotation value by using the non-zero pixels in the mask and fitting a plane to the corresponding 3D points. Then, the normal of the plane estimated which is used for rotation calculation. There is also a dilation iterations that can be used to dilate the model/shape/segment mask if needed. More dilation results in using more points for plane fitting and Rotation calculation. This option is especially good for cases that we have detected a shape/model which is actually a hole. In this scenario, most of the cases, the reference point and the surrounding points are nan. Therefore, using the surrounding points is not able to find the normal (unless a big kernel size is used) but using the mask region will use the mask to fit the plane and ignore the nan points. 
+* Mask Region Normal: 
+   This method uses the mask/masks obtained from Mod Finder, Shape Finder, or DL Segment node and converts it to a cloud to obtain the Rotation value by using the non-zero pixels in the mask and fitting a plane to the corresponding 3D points. Then, the normal of the plane estimated which is used for rotation calculation. There is also a dilation iterations that can be used to dilate the model/shape/segment mask if needed. This option is especially good for cases that we have detected a shape/model which is actually a hole. In this scenario, most of the cases, the reference point and the surrounding points are nan. Therefore, using the surrounding points is not able to find the normal (unless a big kernel size is used), but using the mask region will use the mask to fit the plane and ignore the nan points. 
+
+	- Dilation Iterations for Rotation Computation (Default: 0):
+		The number of dilation iterations to perform. This can be used when we want the mask to use more points for R computation. More dilation results in using more points for plane fitting and rotation calculation. 
 
 .. image:: Images/reconstruct/mask_normal.png
    :align: center
@@ -127,11 +136,11 @@ Procedure of Using Reconstruct Node
 	.. image:: Images/reconstruct/camera.png
 		:align: center
 
-3. A virtual image is used to demonstrate. Refer to System Overview, Tutorials on how to connect to camera.
+3. A virtual image is used to demonstrate. Refer to `the Camera Node page <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/nodes/Images/Camera/camera.html#camera-node>`_ for tutorials on how to connect to camera.
 	.. image:: Images/reconstruct/tee.png
 		:align: center
 
-4. Insert a Mod Finder node, Shape Finder or DL Segment node to find the T tube, Mod Finder node is used for demonstration here.
+4. Insert a Mod Finder node, Shape Finder or DL Segment node to find the T tube. Mod Finder node is used for demonstration here.
 	.. image:: Images/reconstruct/3setups.png
 		:align: center
 
@@ -190,11 +199,13 @@ Procedure of Using Reconstruct Node
 **Mask Region Normal** uses the algorithm to to calculate the Z-rotation from the average of all the points on the model mask. In the image shown above, 0 is the number of dilation iterations used to perform dilation operation on the mask. This can be used when you want the mask to use more points for Z-rotation.
 
 .. note::
-   All the points which used for calculation are **VALID**. Invalid points will be neglected. Therefore, if your kernel set to a small number, and there are lots of invalid points around your center, the result might be bad. Try increasing the kernel radius.
+   All the points which are used for calculation are **VALID**. Invalid points will be neglected. Therefore, if your kernel set to a small number, and there are lots of invalid points around your center, the result might be bad. Try increasing the kernel radius.
 
 15. Run the **Reconstruct** node, you can see that all the 2D poses detected from **Mod Finder** node are now becoming 3D poses.
 	.. image:: Images/reconstruct/objects_detected.png
 		:align: center
+
+|
 
 Exercise
 ************************************
@@ -239,7 +250,7 @@ Now we are stuck on the setting of **Reconstruct** node. Please choose the **one
 
 	B. Yes, you can leave it empty but it will have warning to remind you the **Object Masks** input is empty;
 
-	C. Yes, you can leave it empty but it will have warning to remind you cannot compute the result with input empty;
+	C. Yes, you can leave it empty but it will have warning to remind you cannot compute the result with the input empty;
 
 	D. No, it will show you error which this input cannot be empty;
 
@@ -255,7 +266,7 @@ Now we are stuck on the setting of **Reconstruct** node. Please choose the **one
 	.. image:: Images/reconstruct/exe_1_4.png
 		:align: center
 
-4. Now, you have a new requirement from your customer. They want to pick the box with the writing facing upward. You have **Mod Finder** node setup, and you are wondering: will the X, Y direction of 3D poses from **Reconstruct** node remains the same? Hints: you should try this on **Vision** studio to testify your thought.
+4. Now, you have a new requirement from your customer. They want to pick the box with the writing facing upward. You have **Mod Finder** node setup, and you are wondering: will the X, Y direction of 3D poses from **Reconstruct** node remains the same? Hints: you should try this on **Vision** studio to verify your thought.
 
 	A. Yes;
 
@@ -310,7 +321,23 @@ Now we are stuck on the setting of **Reconstruct** node. Please choose the **one
 
 	D. The image uses the **Mask Region Normal** for Z-rotation with dilation iterations **0**; change the Z-rotation method to **Mask Region Normal** and dilation iterations to **1** in order to fix it;
 
-Answers for exercises
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+
+Answers for Exercises
 ************************************
 
 **Scenario 1**
@@ -334,7 +361,7 @@ Explanation: **Reconstruct** node will not change the X, Y direction from their 
 
 5. C
 
-Explanation: From all the information above, you can see there is no restrictions about picking angle; also, **Mod Finder** node shows the reference point of this object is in the central of the smooth surface. 
+Explanation: From all the information above, you can see there is no restrictions on the picking angle; also, **Mod Finder** node shows the reference point of this object is in the central of the smooth surface. 
 Therefore, you can use **Averaging surrounding points** for Z-Computation in this object. On the other hand, the box has smooth surface, **Averaging masking area** will work fine on it.
 
 **Scenario 2**
