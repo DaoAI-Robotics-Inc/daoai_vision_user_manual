@@ -309,7 +309,7 @@ select the region that contains the desired model.
 		:scale: 70%
 
 14. Click on the "Draw Mask", then use mouse to cover all the area until only the edge of the model is extracted by red lines.
-	.. image:: images/mod_finder_procedure_16.png
+	.. image:: images/mod_finder_procedure_14_2d.png
 		:scale: 70%
 
 15. Run the Mod Finder node. All of the objects are detected.
@@ -376,7 +376,7 @@ Select "DA PointCloud -> DA depth map" when creating the node.**
 		:scale: 70%
 
 14. Open the Model Parameter Configurator. Set the "Acceptance" to low.
-	.. image:: images/mod_finder_procedure_30.png
+	.. image:: images/mod_finder_procedure_16.png
 			:scale: 70%
 
 15. Run the Mod Finder node again. All of the objects are found.
@@ -443,7 +443,7 @@ So that whenever we find a match for these edges, the matching score will be hig
 And if you are confident that a particlar edge is not present in the object, and that if finding such an edge means that the case is not likely to be an object, then you should draw negatively weighted masks.
 So that whenever we find a match for these edges, the matching score will be low.
 
-.. image:: images/weighted_mask_2.png
+.. image:: images/weighted_mask_3.png
 
 
 .. Model Configuration
