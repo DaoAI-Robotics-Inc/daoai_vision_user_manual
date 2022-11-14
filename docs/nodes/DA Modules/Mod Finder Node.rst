@@ -309,7 +309,7 @@ select the region that contains the desired model.
 		:scale: 70%
 
 14. Click on the "Draw Mask", then use mouse to cover all the area until only the edge of the model is extracted by red lines.
-	.. image:: images/mod_finder_procedure_16.png
+	.. image:: images/mod_finder_procedure_14_2d.png
 		:scale: 70%
 
 15. Run the Mod Finder node. All of the objects are detected.
@@ -376,7 +376,7 @@ Select "DA PointCloud -> DA depth map" when creating the node.**
 		:scale: 70%
 
 14. Open the Model Parameter Configurator. Set the "Acceptance" to low.
-	.. image:: images/mod_finder_procedure_30.png
+	.. image:: images/mod_finder_procedure_16.png
 			:scale: 70%
 
 15. Run the Mod Finder node again. All of the objects are found.
@@ -416,7 +416,34 @@ The model can be searched on image.
 	:scale: 100%
 
 
+Weighted Mask
+~~~~~~~~~~~~~~~
 
+You can edit weighted masks by clicking “Edit Weight Mask”. 
+
+
+Masks weights can be changed at the input box on the right. Make sure you change the Mask Transparency to half so that the edges are visible.
+
+.. image:: images/weighted_mask_1.png
+
+The normal masks in the above section are mask with weight 0, meaning that we ignore the edges and since they have of weight 0 they do not contribute to the matching score.
+
+Erase masks in normal masks are the same as drawing masks of weight 1. By default, the entire model has a mask of weight 1, meaning that the all edges found in the model contributes to the matching score with weight scale of 1.
+
+You can increase or decrease beyond 1 and 0 to draw weighted masks.
+
+A weighted mask which its weight greater than 1 means that the edges in the weight masks contributes more to the confidence score. 
+Similarly, a weighted mask which its weight less than 0 means that the edges in the weight masks contributes negatively to the confidence score. 
+
+If you are confident that a particlar edge in the model is present in all instance of the object, then you can draw a weighted mask of high positive weight.
+So that whenever we find a match for these edges, the matching score will be high.
+
+.. image:: images/weighted_mask_2.png
+
+And if you are confident that a particlar edge is not present in the object, and that if finding such an edge means that the case is not likely to be an object, then you should draw negatively weighted masks.
+So that whenever we find a match for these edges, the matching score will be low.
+
+.. image:: images/weighted_mask_3.png
 
 
 .. Model Configuration
