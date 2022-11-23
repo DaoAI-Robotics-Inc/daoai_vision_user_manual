@@ -201,12 +201,20 @@ Subtract points from the input cloud using cloud b.
 * Cloud b The cloud we are subtracting from the input. Result is input cloud - cloud_b.
 * Distance Threshold: The allowable depth difference between corresponding points for them to be considered to have the same value. Larger values remove more points.
 
+.. image:: Images/cloud_process/depth_diff.png
+   :align: center
+|
+
 Apply Mask 
 ~~~~~~~~~~
 
 Apply a 2d mask to the point cloud.
 
 * Mask: Mask Image, the point cloud has to be organized and the mask image must have the same width and depth with the point cloud
+
+.. image:: Images/cloud_process/apply_mask.png
+   :align: center
+|
 
 Set Reference Frame 
 ~~~~~~~~~~~~~~~~~~~~
