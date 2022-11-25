@@ -4,12 +4,12 @@ When training a model, it's hard to know what to look for without prior experien
 
 In general, it is usually sufficient to look at just one metric, the Validation Loss.  
 Although this provides an incredibly incomplete picture of how good the model actually is, it usually provides enough information for our usage.
-There are two things to look for with the Validation Loss:
+The main thing to look for, is if the validation loss is **very low** (~0.05 or less)
 
-1. Is the validation loss **very low** (0.05 or less)?
-2. Is the validation loss finished improving (has the val-loss decreased over the last 10 outputs) ?
+If the answer to that question is yes, then you could consider stopping the training early.
 
-If the answer to either of these questions is yes, then you could consider stopping the training early.
+Another condition which you will likely see is 'Early Stopping'.  This occurs when the validation loss has not improved for 10 training cycles (epochs), and thus the training automatically ends so as not to waste time.
+There is currently a small issue with exiting due to early stopping, which is covered in the 'Known Issues in the Jenkins System' section.  Please read it for more information.
 Generally, if one of these conditions is met, the model is close to its limit for the currently provided data, and it will likely be ready for actual use.
 
 What the validation loss looks like in Jenkins
