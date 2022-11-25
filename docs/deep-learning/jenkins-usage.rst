@@ -7,6 +7,7 @@ Before beginning to train a deep learning model, you must have or know the follo
 
 * Know what type of model you would like to train
 * Know if you would like to continue training from a previous checkpoint or not
+* Know the generation (2.22.6.0, 2.22.8.0) of model you wish to train
 * Have a complete dataset in the format identified below
 
 Creating a New Project
@@ -52,7 +53,7 @@ First, run the AnnoCheck with the following steps:
     :align: center
 
 5. Navigate to the Classification-AnnoCheck pipeline on Jenkins
-6. Click 'Build with Parameters' and select the name of your project, as well as your DATASET_ID (stored in storage.db).  If you deleted storage.db when recommended earlier, your DATASET_ID should be 1.  Else, use an SQLite DB tool to find your DATASET_ID
+6. Click 'Build with Parameters' and select the name of your project, the version of model to train, as well as your DATASET_ID (stored in storage.db).  If you deleted storage.db when recommended earlier, your DATASET_ID should be 1.  Else, use an SQLite DB tool to find your DATASET_ID
 7. Click 'Build'
 
 Please ensure the previous build is successful before carrying on to the next step.  If the annotation check failed, please check the following before contacting DaoAI for help:
@@ -88,7 +89,7 @@ First, run the AnnoCheck with the following steps:
     :align: center
 
 5. Navigate to the Segmentation-AnnoCheck pipeline on Jenkins
-6. Click 'Build with Parameters' and select the name of your project
+6. Click 'Build with Parameters' and select the name of your project and the version of model to train,
 7. Click 'Build'
 
 Please ensure the previous build is successful before carrying on to the next step.  If the annotation check failed, please check the following before contacting DaoAI for help:
@@ -121,10 +122,13 @@ As we have limited storage, only a certain number of past builds are stored for 
 Exporting a Model
 -----------------
 If a model training reaches a certain training level (dependent on the accuracy and loss) or it has trained for what is typically a sufficient amount of time, it will automatically complete the training and export the model.
-Otherwise, if you are satisfied with the training of your model and wish to stop it early, simply cancel the build of the Training pipeline.
+Otherwise, if you are satisfied with the training of your model and wish to stop it early, simply abort the build of the Training pipeline.
 When the build is cancelled, it will automatically export the model.
 
-Once your model has been exported, you will be able to find the CPU version, the GPU version, and the input config file for your model in the 'models' folder of your FTP project.
+Once your model has been exported, depending on the version you trained, you will find either
+* the CPU version, the GPU version, and the input config file 
+* the model, and the input config file
+for your model in the 'models' folder of your FTP project.
 
 .. image:: images/jenkins-usage-im2.png
     :width: 30%

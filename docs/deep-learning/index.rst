@@ -11,6 +11,7 @@ This section covers a detailed description of how to train a deep learning model
    jenkins-setup
    jenkins-usage
    training-info
+   jenkins-common-issues
    bp-testing
-   common-issues
+   bp-common-issues
    examples
