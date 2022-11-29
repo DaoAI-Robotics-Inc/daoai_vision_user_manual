@@ -18,45 +18,45 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 
-#: ../excercise/3d-mod-finder-picking/overview.rst:2
+#: ../Exercise/3d-mod-finder-picking/overview.rst:2
 msgid "Use Depth Mod Finder to pick"
 msgstr ""
 
-#: ../excercise/build-3d-mod-finder/overview.rst:2
+#: ../Exercise/build-3d-mod-finder/overview.rst:2
 msgid "Build depth mod finder detection pipeline"
 msgstr ""
 
-#: ../excercise/build-operator-view/overview.rst:2
+#: ../Exercise/build-operator-view/overview.rst:2
 msgid "Build a operator view"
 msgstr ""
 
-#: ../excercise/index.rst:8
+#: ../Exercise/index.rst:8
 msgid "Contents"
 msgstr ""
 
-#: ../excercise/index.rst:2
+#: ../Exercise/index.rst:2
 msgid "Exercise"
 msgstr ""
 
-#: ../excercise/index.rst:4
+#: ../Exercise/index.rst:4
 msgid "https://docs.pickit3d.com/en/latest/exercises/index.html"
 msgstr ""
 
-#: ../excercise/index.rst:6
+#: ../Exercise/index.rst:6
 msgid ""
 "This section covers the exercise for the vision engineer to practice the "
 "usage of the system"
 msgstr ""
 
-#: ../excercise/link/overview.rst:2
+#: ../Exercise/link/overview.rst:2
 msgid "Link expression"
 msgstr ""
 
-#: ../excercise/link/overview.rst:4
+#: ../Exercise/link/overview.rst:4
 msgid "This exercise is for link expression, and use advanced expression."
 msgstr ""
 
-#: ../excercise/mono-3d-picking/overview.rst:2
+#: ../Exercise/mono-3d-picking/overview.rst:2
 msgid "Build 3d mod finder detection pipeline"
 msgstr ""
 

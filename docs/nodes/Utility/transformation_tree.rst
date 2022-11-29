@@ -87,7 +87,7 @@ for more information on the transformation concept.
       :scale: 60%
 
 
-Excercise
+Exercise
 ---------
 
 Try to come up with the setting on **Mod Finder** node according to the requirements below. You can work on these exercise with the help of this article. We also have answers attached at the end of this exercise.
@@ -105,7 +105,7 @@ You need to help him setup the **Transformation** node in main_flowchart. Please
 
 1. Shown in the following image, The picking pose is too low. You believe that the height is too low by over a distance of object-in-cloud. 
 What output from the transformation tree can help you correct this error?
-	.. image:: Images/transformation_tree/excercise_1.png
+	.. image:: Images/transformation_tree/exercise_1.png
 		:scale: 60%
 	A. obj in cloud
 	B. cloud in obj
@@ -130,7 +130,7 @@ What output from the transformation tree can help you correct this error?
    E. A and C
 
 
-Answers for Excercises
+Answers for Exercises
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Scenario 1

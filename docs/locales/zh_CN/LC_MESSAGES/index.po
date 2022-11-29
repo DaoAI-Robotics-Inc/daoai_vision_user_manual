@@ -91,7 +91,7 @@ msgstr ""
 
 #: ../index.rst:13
 msgid ""
-"**Excercise**: Through the excercise, you will be able to determine your "
+"**Exercise**: Through the Exercise, you will be able to determine your "
 "knowledge regarding the DaoAI Vision Studio, and get hands on experience "
 "to operate the software."
 msgstr ""

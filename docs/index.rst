@@ -4,13 +4,13 @@ Welcome to the DaoAI Vision knowledge base!
 Here you can find everything you need to know about DaoAI Vision Studio, a plug and play 3D vision solution for your robot that allows it to pick parts of different shapes, materials and sizes. With DaoAI Vision Studio  you can automate any type of picking application such as bin picking, machine loading, depalletizing, kitting and assembly, and pick and place.
 
 - **System Overview**: You will find basic information of the software, and get a taste for using the software
-- **Hareware**: You will get to know how to mount the hardware, and connect it. It includes the cameras, robots and processors.
+- **Hardware**: You will get to know how to mount the hardware, and connect it. It includes the cameras, robots and processors.
 - **Nodes Details Explanation**: You will find each nodes detailed explanation, and how to use it. Including the tunning guidelines for your own application.
 - **Deep Learning**: You will understand how to train your deep learning model and use it inside the DaoAI Vision Studio.
-- **Complete Robot Guidance Steup**: You will understand how each node was integrated together to fullfill real work robot guidance applications. 
+- **Complete Robot Guidance Setup**: You will understand how each node was integrated together to fullfil real work robot guidance applications. 
 - **Template Usage**: You will get to know how to use each template, and the configuration for each template. Afterwards, you will be able to modify on your own based on your needs.
 - **Project Example**: You will see real world example project, and get to know how to mount the camera, and which template or functionalities will suit it.
-- **Excercise**: Through the excercise, you will be able to determine your knowledge regarding the DaoAI Vision Studio, and get hands on experience to operate the software.
+- **Exercise**: Through the exercise, you will be able to determine your knowledge regarding the DaoAI Vision Studio, and get hands on experience to operate the software.
 - **FAQ & Troubleshooting**: You will be able to see common problems, and answer to it.
 
 
@@ -79,5 +79,5 @@ Our software also support classfical machine vision tools, including pattern mat
    deep-learning/index
    complete-vision-guidance/index
    template-usage/index
-   excercise/index
+   Exercise/index
    faq-trouble-shooting/index

@@ -141,7 +141,7 @@ You need to help him setup the **DA CloudNDepth Conv** node in main_flowchart. P
 |
 |
 
-Answers for Excercises
+Answers for Exercises
 ------------------------
 
 1. **Answer: C** (Decrease the X Y value in Deptmap Size X / Y)

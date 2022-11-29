@@ -451,7 +451,7 @@ You need to help him preprocess the image using the **Image Process** node in ma
 |
 |
 
-Answers for Excercises
+Answers for Exercises
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Scenario 1

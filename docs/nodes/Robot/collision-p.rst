@@ -165,7 +165,7 @@ How should you prevent picking with large rotations angles?
     C. Use a bin Mesh instead of virtual bin.
     D. Increase the virtual bin size.
 
-Answers for Excercises
+Answers for Exercises
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Scenario 1

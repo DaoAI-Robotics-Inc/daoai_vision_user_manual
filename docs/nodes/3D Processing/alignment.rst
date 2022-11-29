@@ -210,7 +210,7 @@ You need to help him setup the **Alignment** node in main_flowchart. Please choo
 |
 |
 
-Answers for Excercises
+Answers for Exercises
 -----------------------
 
 Scenario 1
