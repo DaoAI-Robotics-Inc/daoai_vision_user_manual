@@ -79,5 +79,5 @@ Our software also support classfical machine vision tools, including pattern mat
    deep-learning/index
    complete-vision-guidance/index
    template-usage/index
-   Exercise/index
+   excercise/index
    faq-trouble-shooting/index
