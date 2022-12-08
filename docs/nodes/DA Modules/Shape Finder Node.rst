@@ -237,7 +237,7 @@ General process of Using Mod Finder Node
 
 6. Use the position vector for further processing to get the picking pose of the objects in the scene.
 
-Excercise
+Exercise
 ---------
 
 Here is the `link to a .dcf file <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/tzhang_daoai_com/ESU2opgKuUNLldSSQ7BPl7cBBw_6hz_dEUh0vq--8mkNaA?e=mzFxFI>`_ which is used as input.
@@ -283,7 +283,7 @@ How should you configure your model to find.
       C. Change Foreground Color to any.
       D. Change Advanced Settings -> Certainly to 100.
 
-Answers for Excercises
+Answers for Exercises
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Scenario 1

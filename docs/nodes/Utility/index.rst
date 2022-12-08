@@ -12,4 +12,5 @@ This section introduces the utility nodes that we have.
    count 
    load_recipe
    reader_writer
+   thread
    transformation_tree

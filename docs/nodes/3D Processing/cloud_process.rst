@@ -246,7 +246,7 @@ Procedure to Use
 
 7. Click Done and run the node.
 
-Excercise
+Exercise
 ---------
 
 Try to come up with the setting on **Cloud Process** node according to the requirements below. 
@@ -291,7 +291,7 @@ from the object. How can you help him to bring the center of axis onto the objec
 |
 |
 |
-Answers for Excercises
+Answers for Exercises
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Scenario 1

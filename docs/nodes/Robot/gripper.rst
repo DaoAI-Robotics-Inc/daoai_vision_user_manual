@@ -207,7 +207,7 @@ Procedure to Use
     .. image:: Images/gripper/step_5_b.png
 |
 
-Excercise
+Exercise
 ---------
 
 Try to come up with the setting on **Gripper** node according to the requirements below. You can work on these exercise with the help of this article. We also have answers attached at the end of this exercise.
@@ -232,7 +232,7 @@ This is some helpful resource when you are working on the exercise:
 
 |
 |
-Answers for Excercises
+Answers for Exercises
 ~~~~~~~~~~~~~~~~~~~~~~
 
 1. **Answer: A**

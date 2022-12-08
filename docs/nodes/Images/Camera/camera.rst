@@ -108,7 +108,7 @@ Procedure to Use
 	.. image:: Images/camera-step-6.png
 			:scale: 100%
 
-Excercise
+Exercise
 ---------
 
 Here's a `link to .dcf file <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/tzhang_daoai_com/EUaL8LFp-JlJugrB-VYSCr8BODvs7cyJszjIywupMCNDDg?e=XCPFjb>`_ which can be used as input to virtual cameras.

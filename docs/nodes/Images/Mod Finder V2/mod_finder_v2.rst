@@ -333,7 +333,7 @@ Search Model In Labelled Mask Sequence
 	5. The result pose (sorted in labelledPose2dSequence or labelledPose3dSequence) will have the same order of the segments vector of the DL segmentation node.
 
 
-Excercise
+Exercise
 ---------
 
 Try to come up with the setting on **Mod Finder V2** node according to the requirements below. You can work on these exercise with the help of this article. We also have answers attached at the end of this exercise.
@@ -382,7 +382,7 @@ You need to help him setup the **Mod Finder V2** node in main_flowchart. Please 
 
 |
 |
-Answers for Excercises
+Answers for Exercises
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Scenario 1

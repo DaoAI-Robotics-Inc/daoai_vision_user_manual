@@ -335,7 +335,7 @@ that is, pick the first row of tee-tubes first then the second row. How should y
 
 |
 |
-Answers for Excercises
+Answers for Exercises
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Scenario 1
