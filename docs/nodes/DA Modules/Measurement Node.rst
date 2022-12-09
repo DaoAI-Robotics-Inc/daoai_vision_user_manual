@@ -5,10 +5,13 @@ Overview
 --------------------
 The Measurement node is used to find and measure edge, circle, stripe on a gray image.
 
-.. image:: images/Measurement/measurement_node_overview_1.png
+.. image:: images/Measurement/measurement_overview_2.png
    :align: center
 
-.. image:: images/Measurement/measurement_node_overview_2.png
+.. image:: images/Measurement/measurement_overview_1.png
+   :align: center
+
+.. image:: images/Measurement/measurement_0.jpg
    :align: center
 
 Inputs and Outputs
@@ -30,15 +33,12 @@ Inputs and Outputs
 | results                 | MapSMeasResultData  | The measurement results.                                               |
 +-------------------------+---------------------+------------------------------------------------------------------------+
 
- .. image:: images/Measurement/measurement_0.JPG
-	:scale: 60%
-
 Node Settings
 --------------------
 
 Data Source
 ```````````````````
-.. image:: images/Measurement/measurement_node_settings_data_source.png
+.. image:: images/Measurement/measurement_data_source.png
    :align: center
 
 - **Image**:
@@ -56,15 +56,7 @@ Region Settings
 Markers Parameters
 ```````````````````
 
-.. image:: images/Measurement/measurement_edge_edit.png
-   :align: center
-
-
-.. image:: images/Measurement/measurement_stripe_edit.png
-   :align: center
-
-
-.. image:: images/Measurement/measurement_circle_edit.png
+.. image:: images/Measurement/measurement_markers_parameters.png
    :align: center
 
 - **Number of Occurences** (Default: 1):
@@ -74,6 +66,7 @@ Markers Parameters
    The minimum number of markers to detect. If fewer marker is detected than the min occurances, then it is a detection fail.
 
 Circle Marker Fields
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: images/Measurement/measurement_circle_marker_fields.png
    :align: center
@@ -89,8 +82,10 @@ Circle Marker Fields
 
 
 - **Min Edge Value** (Default: 10):
+   Only grayscale variation above this threshold will it be considered an edge.
 
 Ring Region Fields
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: images/Measurement/measurement_ring_region_fields.png
    :align: center
@@ -105,6 +100,7 @@ Ring Region Fields
    Size of the ring region.
 
 Edge Marker Fields
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - **Polarity** (Default: Any):
    The polarity of edge to detection direction. Positive is from black to white, Negative is from white to black.
@@ -116,9 +112,10 @@ Edge Marker Fields
    For circle markers, it is measured radially from the fitted circle perimeter.
 
 - **Min Edge Value** (Default: 2):
-
+   Only grayscale variation above this threshold will it be considered an edge.
 
 Stripe Marker Fields
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: images/Measurement/measurement_stripe_marker_fields.png
    :align: center
@@ -136,9 +133,10 @@ Stripe Marker Fields
    For circle markers, it is measured radially from the fitted circle perimeter.
 
 - **Min Edge Value** (Default: 10):
-   
+   Only grayscale variation above this threshold will it be considered an edge.
 
 Box Region Fields
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: images/Measurement/measurement_box_region_fields.png
    :align: center
@@ -150,13 +148,13 @@ Box Region Fields
    Whether to apply a clipped search region to search the marker. Useful when search region includes region outside of the image.
 
 - **Enable Multi Angle** (Default: false):
+  Enable multi-angle search.
 
 - **Center X, Center Y**:
    The coordinates of the Ring Region, measured from the center.
 
 - **Width, Height**:
    The size of the box region.
-
 
 
 Procedure to Use
