@@ -47,7 +47,7 @@ Data Source
 Region Settings
 ```````````````````
 - **Use Reference Fixture**:
-    - The name of the Mod Finder node to use the reference frame (optional).
+    - The name of the Mod Finder node to use the reference frame (optional). Please refer to :ref:`Reference Fixture System` for more information.
 
 - **Show Interactive Display**:
     - Can edit markers after clicking “Show Interactive Display”.
@@ -166,23 +166,56 @@ Insert Camera, (2D) Mod Finder, and Measurement node.
 
 Set up the tee.dcf scene in the Camera.
 In Mod Finder, link the Camera's image output.
-Run the Mod Finder node, and define a model on the image. Then Define a Reference Point for the model.
+Run the Mod Finder node, and define a model on the image. Then define a Reference Point for the model.
 
-1. Reader/Camera
+1. Insert a Reader node. You may use the data `here <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/xchen_daoai_com/ETnjM6E8D89FsYDUfeMeBIUBSBxAuxVoCqcmJZMgbIYKdg?e=l4fBZ3>`_.  Read from this folder.
 
-2. Mod finder
+.. image:: images/Measurement/measurement_procedure_1.png
+   :scale: 60%
 
-3. Measurement
+2. Insert a 2D Mod finder. Define the object as the fixture. You might want to read :ref:`Reference Fixture System` for more information. 
 
-4. Check "Show Interactive Display". Click '+', choose a marker type, click "Start Drawing New Region" to add markers. When you are finish, click "Stop Drawing New Region".
+.. image:: images/Measurement/measurement_mod_finder_fixture_1.png
+   :scale: 55%
 
-5. Double click
+.. image:: images/Measurement/measurement_mod_finder_fixture_2.png
+   :scale: 100%
+
+3. Insert a Measurement node. Uses the Mod Finder node in step 2 as the Reference Fixture Node.
+
+.. image:: images/Measurement/measurement_procedure_3.png
+   :scale: 80%
+
+4. Enable "Show Interactive Display". Then click '+', choose a marker type, click "Start Drawing New Region" to add markers. Click "Stop Drawing New Region" after you finished drawing the marker. In this case, we will draw a Circle Marker.
+
+.. image:: images/Measurement/measurement_procedure_4_1.png
+   :scale: 76%
+
+.. image:: images/Measurement/measurement_procedure_4_2.png
+   :scale: 60%
+
+5. Run the flowchart, the Measurement node will find the feature using the reference fixture from Mod Finder.
+
+.. image:: images/Measurement/measurement_procedure_5_1.png
+   :scale: 85%
+
+.. image:: images/Measurement/measurement_procedure_5_2.png
+   :scale: 60%
 
 
-In Quick Evaluate, type the marker's name in marker[''] to check its evaluated results. (circle has radius etc.)
+6. In Quick Evaluate, type the marker's name in marker[''] to check its evaluated results. In this case, the circle marker is named "Circle_Marker_Region_1" and we can check the circle's radius, x, and y values by typing in the circle marker's name. You can see the circle's radius under the Evaluated Value column.
+
+.. image:: images/Measurement/measurement_procedure_6_1.png
+   :scale: 80%
+
+.. image:: images/Measurement/measurement_procedure_6_2.png
+   :scale: 80%
 
 Exercise
 --------------------
+1. What would be a good marker for measuring the width of this region?
+
+2. What is the approriate settings for detecting this region?
 
 |
 |
