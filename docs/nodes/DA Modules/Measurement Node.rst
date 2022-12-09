@@ -162,18 +162,13 @@ Box Region Fields
 Procedure to Use
 --------------------
 We will need a few more nodes to demonstrate the usage of Measurement node.
-Insert Camera, (2D) Mod Finder, and Measurement node.
-
-Set up the tee.dcf scene in the Camera.
-In Mod Finder, link the Camera's image output.
-Run the Mod Finder node, and define a model on the image. Then define a Reference Point for the model.
 
 1. Insert a Reader node. You may use the data `here <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/xchen_daoai_com/ETnjM6E8D89FsYDUfeMeBIUBSBxAuxVoCqcmJZMgbIYKdg?e=l4fBZ3>`_.  Read from this folder.
 
 .. image:: images/Measurement/measurement_procedure_1.png
    :scale: 60%
 
-2. Insert a 2D Mod finder. Define the object as the fixture. You might want to read :ref:`Reference Fixture System` for more information. 
+2. Insert a 2D Mod finder node. Link the image output from Reader. Define the object as the model, this will be the reference fixture. You might want to read :ref:`Reference Fixture System` for more information. 
 
 .. image:: images/Measurement/measurement_mod_finder_fixture_1.png
    :scale: 55%
@@ -202,6 +197,8 @@ Run the Mod Finder node, and define a model on the image. Then define a Referenc
 .. image:: images/Measurement/measurement_procedure_5_2.png
    :scale: 60%
 
+.. image:: images/Measurement/measurement_flowchart.png
+   :scale: 70%
 
 6. In Quick Evaluate, type the marker's name in marker[''] to check its evaluated results. In this case, the circle marker is named "Circle_Marker_Region_1" and we can check the circle's radius, x, and y values by typing in the circle marker's name. You can see the circle's radius under the Evaluated Value column.
 
@@ -213,9 +210,19 @@ Run the Mod Finder node, and define a model on the image. Then define a Referenc
 
 Exercise
 --------------------
-1. What would be a good marker for measuring the width of this region?
+1. What would be a good marker for measuring the length of this region?
 
-2. What is the approriate settings for detecting this region?
+.. image:: images/Measurement/measurement_exercise_1.png
+   :scale: 58%
+
+A. Edge Marker
+B. Stripe Marker 
+C. Circle Marker
+
+2. The marker from question 1 does not detect the segment in the box region. How do I fix this?
+
+.. image:: images/Measurement/measurement_exercise_2.png
+   :scale: 60%
 
 |
 |
@@ -235,4 +242,9 @@ Exercise
 
 Answers to Exercise
 --------------------
+1. B. Stripe Marker.
 
+2. Change Polarity to Positive, Polarity 2 to Opposite, and change Marker Orientation to Horizontal.
+
+.. image:: images/Measurement/measurement_answer_2.png
+   :scale: 60%
