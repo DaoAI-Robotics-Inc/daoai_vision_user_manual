@@ -148,7 +148,7 @@ Box Region Fields
    Whether to apply a clipped search region to search the marker. Useful when search region includes region outside of the image.
 
 - **Enable Multi Angle** (Default: false):
-  Enable multi-angle search.
+   Enable multi-angle search.
 
 - **Center X, Center Y**:
    The coordinates of the Ring Region, measured from the center.
