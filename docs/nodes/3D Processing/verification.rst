@@ -7,17 +7,17 @@ Verification checks a matched pose to determine if a model with this pose is wel
 It outputs scores for each pose based on the verification mode, and filters out poses with scores below the confidence level.
 There are three methods of verification: :ref:`Depth Mode`, :ref:`Edge Mode`, :ref:`Stacking Mode`.
 
-.. image:: Images/verification_node_overview_1.png
+.. image:: Images/verification/verification_node_overview_1.png
    :align: center
 
 |
 
-.. image:: Images/verification_node_overview_3.png
+.. image:: Images/verification/verification_node_overview_3.png
    :align: center
 
 |
 
-.. image:: Images/verification_node_overview_2.png
+.. image:: Images/verification/verification_node_overview_2.png
    :align: center
 
 Input and Output
@@ -45,7 +45,7 @@ Node Settings
 --------------------
 Data Source
 ~~~~~~~~~~~~~~~
-.. image:: Images/verification_node_settings_data_source.png
+.. image:: Images/verification/verification_node_settings_data_source.png
    :align: center
 
 |
@@ -58,7 +58,7 @@ Data Source
 
 Models
 ~~~~~~~~~~~~~~~
-.. image:: Images/verification_node_settings_models.png
+.. image:: Images/verification/verification_node_settings_models.png
    :align: center
 
 |
@@ -67,7 +67,7 @@ Define the model from a point cloud, or polygon mesh. Usually from a Reader node
 
 Verification Setting
 ~~~~~~~~~~~~~~~~~~~~~
-.. image:: Images/verification_node_settings_verification_setting.png
+.. image:: Images/verification/verification_node_settings_verification_setting.png
    :align: center
 
 |
@@ -90,7 +90,7 @@ Depth Mode
 | In another word, this mode verifies if the object with that pose is 'above' the scene.
 | Depth Mode may fail to filter out false positives on very flat objects where the depth difference cannot be distinguished from the background. 
 
-.. image:: Images/verification_node_settings_depth_mode.png
+.. image:: Images/verification/verification_node_settings_depth_mode.png
    :align: center
 
 |
@@ -163,7 +163,7 @@ Stacking Mode
 | Stacking Mode is used to determine which object is “on top” when objects are stacked on top of one another. 
 | This mode will sort poses according to the visibility. We calculate the visibility score of each pose then we return the poses sorted by visibility as well as filter poses based on the confidence threshold.
 
-.. image:: Images/verification_node_settings_stacking_mode.png
+.. image:: Images/verification/verification_node_settings_stacking_mode.png
    :align: center
 
 |
@@ -185,159 +185,159 @@ Stacking Mode
 Procedure to Use
 --------------------
 1. We will need a few more nodes for demonstration. Insert nodes: Camera, (2D) Mod Finder, Reconstruct, Transformation Tree, Cloud Process, Writer, Reader, Alignment, and Verification.
-    .. image:: Images/verification_procedure_1.png
+    .. image:: Images/verification/verification_procedure_1.png
        :align: center
 
 |
 
-    .. image:: Images/verification_procedure_1_1_1_mod_finder_option.png
+    .. image:: Images/verification/verification_procedure_1_1_1_mod_finder_option.png
        :align: center
 
 |
 
-    .. image:: Images/verification_procedure_1_1.png
+    .. image:: Images/verification/verification_procedure_1_1.png
        :align: center
 
 2. Click on the Camera node, and link a camera with the tee.dcf scene. You can get the file `here <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/tzhang_daoai_com/EUaL8LFp-JlJugrB-VYSCr8BODvs7cyJszjIywupMCNDDg?e=XCPFjb>`_.
-    .. image:: Images/verification_procedure_2.png
+    .. image:: Images/verification/verification_procedure_2.png
       :align: center
 
 |
 
-    .. image:: Images/verification_procedure_2_2.png
+    .. image:: Images/verification/verification_procedure_2_2.png
       :align: center
 
 3. In Mod Finder, link the previous Camera image output as the Image.
-    .. image:: Images/verification_procedure_3.png
+    .. image:: Images/verification/verification_procedure_3.png
        :align: center
 
 4. In Mod Finder, set Total Occurance to "All". Then click the '+' icon to add a model from the image and draw a mask for model_1.
-    .. image:: Images/verification_procedure_4_mod_finder_models_mask.png
+    .. image:: Images/verification/verification_procedure_4_mod_finder_models_mask.png
        :align: center
 
 5. Select Mod Finder, run the node. The result should look like this:
-    .. image:: Images/verification_procedure_5_mod_finder_run.png
+    .. image:: Images/verification/verification_procedure_5_mod_finder_run.png
        :align: center
 
 6. In Reconstruct, link camera's pointCloud output as the Point Cloud, Mod Finder's labelledPose2dSequence as the Object Locations, and Camera's intrinsicParam as the Camera Intrinsics.
-    .. image:: Images/verification_procedure_6.png
+    .. image:: Images/verification/verification_procedure_6.png
        :align: center
 
 |
 
-    .. image:: Images/verification_procedure_6_6.png
+    .. image:: Images/verification/verification_procedure_6_6.png
       :align: center
 
 |
 
-    .. image:: Images/verification_procedure_6_6_6.png
+    .. image:: Images/verification/verification_procedure_6_6_6.png
        :align: center
 
 7. In Transformation Tree, add a pose item and link Reconstruct's objectPositions/occurrence[0]. Click Next to set Output.
-    .. image:: Images/verification_procedure_7.png
+    .. image:: Images/verification/verification_procedure_7.png
        :align: center
 
 |
 
-    .. image:: Images/verification_procedure_7_7.png
+    .. image:: Images/verification/verification_procedure_7_7.png
        :align: center
 
 |
 
-    .. image:: Images/verification_procedure_7_7_7.png
+    .. image:: Images/verification/verification_procedure_7_7_7.png
        :align: center
 
 8. In Transformation Tree, add an output transformation b in a.
-    .. image:: Images/verification_procedure_8.png
+    .. image:: Images/verification/verification_procedure_8.png
        :align: center
 
 9. In Cloud Process, link the Camera's pointCloud output as the Point Cloud; Add "Adjust Bounding Box" and "Transform Coordinates" opeartions.
-    .. image:: Images/verification_procedure_9.png
+    .. image:: Images/verification/verification_procedure_9.png
        :align: center
 
 10. Check the "Adjust Box" option, then run the cloud process node, and crop the model with the bounding box. Click "Exit Interactor" when you are finished.
-     .. image:: Images/verification_procedure_10.png
+     .. image:: Images/verification/verification_procedure_10.png
         :align: center
 
 |
 
-     .. image:: Images/verification_procedure_10_10.png
+     .. image:: Images/verification/verification_procedure_10_10.png
         :align: center
 
 11. Double click the Transforma Coordinates option to edit it, then link Transformation Tree's output. Run the node.
-     .. image:: Images/verification_procedure_11.png
+     .. image:: Images/verification/verification_procedure_11.png
         :align: center
 
 |
 
-     .. image:: Images/verification_procedure_11_11.png
+     .. image:: Images/verification/verification_procedure_11_11.png
         :align: center
 
 12. In Writer node, select POINT_CLOUD (.pcd) as the Data Type, link the cloud process' cloud output. Select a path and name (tee_v_cloud.pcd) for the file, and run the node.
-     .. image:: Images/verification_procedure_12.png
+     .. image:: Images/verification/verification_procedure_12.png
         :align: center
 
 13. In Reader node, select the file tee_v_cloud.pcd, and run the node. 
-     .. image:: Images/verification_procedure_13.png
+     .. image:: Images/verification/verification_procedure_13.png
         :align: center
 
 |
 
-     .. image:: Images/verification_procedure_13_13.png
+     .. image:: Images/verification/verification_procedure_13_13.png
         :align: center
 
 14. In Alignment node, link Reconstruct's objectPositions as the Hypothesis, and Camera's pointCloud as the Scene Cloud. 
-     .. image:: Images/verification_procedure_14.png
+     .. image:: Images/verification/verification_procedure_14.png
         :align: center 
 
 |
 
-     .. image:: Images/verification_procedure_14_14.png
+     .. image:: Images/verification/verification_procedure_14_14.png
         :align: center
 
 15. In Alignment node, click the '+' icon to add a model. Double click 'model_1', choose the "From Link" option for the Model Type, and link the output of the Reader node. Then click "Define Model", and run the node.
-     .. image:: Images/verification_procedure_15.png
+     .. image:: Images/verification/verification_procedure_15.png
         :align: center
 
 |
 
-     .. image:: Images/verification_procedure_15_15.png
+     .. image:: Images/verification/verification_procedure_15_15.png
         :align: center
 
 |
 
-     .. image:: Images/verification_procedure_15_15_15.png
+     .. image:: Images/verification/verification_procedure_15_15_15.png
         :align: center
 
 16. You should see the result like this image.
-     .. image:: Images/verification_procedure_alignment_scene_eight.png
+     .. image:: Images/verification/verification_procedure_alignment_scene_eight.png
         :align: center
 
 17. In Verification node, link camera's pointCloud output as the Scene Cloud. Link Alignment's pose output as the Hypotehsis.
-     .. image:: Images/verification_procedure_17.png
+     .. image:: Images/verification/verification_procedure_17.png
         :align: center
 
 |
 
-     .. image:: Images/verification_procedure_17_17.png
+     .. image:: Images/verification/verification_procedure_17_17.png
         :align: center
 
 18. Click '+' to add a model. Link the Reader's cloud output, click "Define Model". 
-     .. image:: Images/verification_procedure_18.png
+     .. image:: Images/verification/verification_procedure_18.png
         :align: center
 
 |
 
-     .. image:: Images/verification_procedure_18_18.png
+     .. image:: Images/verification/verification_procedure_18_18.png
         :align: center
 
 |
 
-     .. image:: Images/verification_procedure_18_18_18.png
+     .. image:: Images/verification/verification_procedure_18_18_18.png
         :align: center
 
 19. Select a Verification Mode (Depth/Edge/Stacking). We will use the **Edge Mode** for demonstration here. In the Verification node, change the Verification Method to EDGE MODE. Link Camera Intrinsic Parameters and RGB Image with the output from the Camera node. Then run the node. Only three poses are left after running verification edge mode.
-     .. image:: Images/verification_procedure_19.png
+     .. image:: Images/verification/verification_procedure_19.png
         :align: center
 
 |alignmentSceneEdgePic| |edgeAfterPic|
@@ -349,19 +349,19 @@ Procedure to Use
    :width: 53.5%
 
 20. You can check the "Show Edges" box to see the edges used.
-     .. image:: Images/verification_procedure_edge_see_edge.png
+     .. image:: Images/verification/verification_procedure_edge_see_edge.png
         :align: center
 
 Exercise
 --------------------
 Given the following flowchart and the output of the Alignment node. Without changing the settings of Mod Finder and Alignment, explain a way to filter out the two models on the ground.
    
-   .. image:: Images/verification_exercise_flowchart.png
+   .. image:: Images/verification/verification_exercise_flowchart.png
       :align: center
 
 |
 
-   .. image:: Images/verification_exercise_alignment_scene.png
+   .. image:: Images/verification/verification_exercise_alignment_scene.png
       :align: center
 
 |
@@ -384,17 +384,17 @@ Answers for Exercise
 --------------------
 We can utilize the Depth Mode in Verification node. Insert a Verification node. Link the necessary inputs. Change the Verification Method to DEPTH MODE. Then run the node. The two poses on the ground are filtered out by verification depth mode.
    
-   .. image:: Images/verification_exercise_depth_mode.png
+   .. image:: Images/verification/verification_exercise_depth_mode.png
       :align: center
 
 |
 
 |alignmentSceneDepthPic| |depthAfterPic|
 
-.. |alignmentSceneDepthPic| image:: Images/verification_exercise_alignment_scene.png
+.. |alignmentSceneDepthPic| image:: Images/verification/verification_exercise_alignment_scene.png
    :width: 50%
 
-.. |depthAfterPic| image:: Images/verification_exercise_depth_after.png
+.. |depthAfterPic| image:: Images/verification/verification_exercise_depth_after.png
    :width: 46%
 
 
