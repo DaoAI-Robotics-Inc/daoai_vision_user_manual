@@ -72,7 +72,7 @@ Circle Marker Fields
    :align: center
 
 - **Polarity** (Default: Any):
-   The polarity of edge to detection direction. Positive is from black to white, Negative is from white to black.
+   The polarity of edge to detection direction. Positive is from black to white; Negative is from white to black.
 
 - **Max Association Distance** (Default: 0):
    Not range limit, unit is pixel. 
@@ -103,7 +103,7 @@ Edge Marker Fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - **Polarity** (Default: Any):
-   The polarity of edge to detection direction. Positive is from black to white, Negative is from white to black.
+   The polarity of edge to detection direction. Positive is from black to white; Negative is from white to black.
 
 - **Max Association Distance** (Default: 0):
    Not range limit, unit is pixel. 
@@ -121,7 +121,7 @@ Stripe Marker Fields
    :align: center
 
 - **Polarity** (Default: Any):
-   The polarity of edge to detection direction. Positive is from black to white, Negative is from white to black.
+   The polarity of edge to detection direction. Positive is from black to white; Negative is from white to black.
 
 - **Polarity 2** (Default: Opposite):
    Only available for stripe markers. Decides the polarity of the second edge of stripe, related to stripe’s first edge.
