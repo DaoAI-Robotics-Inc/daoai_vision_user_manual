@@ -3,7 +3,9 @@ Measurement Node
 
 Overview
 --------------------
-The Measurement node is used to find and measure edge, circle, stripe on a gray image.
+The Measurement node is used to find and measure edge, circle, stripe on a gray image, based on differences in pixel intensities. 
+Upon finding a marker, the node outputs the marker’s spatial reference position and measures features such as its angle and radius. 
+
 
 .. image:: images/Measurement/measurement_overview_2.png
    :align: center
@@ -22,7 +24,7 @@ Inputs and Outputs
 +========================================+===============================+=================================================================================+
 | Image                                  | png                           | The gray image to be measured. (from Camera, Reader etc.)                       |
 +----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
-| Use Reference Frame                    | String                        | The name of the mod finder node to use the reference frame from.                |
+| Use Reference Fixture                  | String                        | The name of the Mod Finder node to use the reference fixture from.              |
 +----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
 | Show Interactive Display               | bool                          | Whether Interactive Display is used.                                            |
 +----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
@@ -75,14 +77,11 @@ Circle Marker Fields
    The polarity of edge to detection direction. Positive is from black to white; Negative is from white to black.
 
 - **Max Association Distance** (Default: 0):
-   Not range limit, unit is pixel. 
-   The maximum distance between a marker’s edge (either straight or circular) and its associated sub-edges during fit operation.
-   For edge and stripe markers, it is measured perpendicular from the fitted edge position, along to the search direction.
+   The maximum distance (pixel) between a marker’s edge and its associated sub-edges during fit operation.
    For circle markers, it is measured radially from the fitted circle perimeter.
 
-
 - **Min Edge Value** (Default: 10):
-   Only grayscale variation above this threshold will it be considered an edge.
+   Only grayscale variation above this threshold is considered an edge.
 
 Ring Region Fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -97,7 +96,7 @@ Ring Region Fields
    The coordinates of the Ring Region, measured from the center.
 
 - **Inner Radius, Outer Radius**:
-   Size of the ring region.
+   The dimensions of the ring region.
 
 Edge Marker Fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -106,13 +105,11 @@ Edge Marker Fields
    The polarity of edge to detection direction. Positive is from black to white; Negative is from white to black.
 
 - **Max Association Distance** (Default: 0):
-   Not range limit, unit is pixel. 
-   The maximum distance between a marker’s edge (either straight or circular) and its associated sub-edges during fit operation.
-   For edge and stripe markers, it is measured perpendicular from the fitted edge position, along to the search direction.
-   For circle markers, it is measured radially from the fitted circle perimeter.
+   The maximum distance (pixel) between a marker’s edge and its associated sub-edges during fit operation.
+   For edge markers, it is measured perpendicular from the fitted edge position, along to the search direction.
 
 - **Min Edge Value** (Default: 2):
-   Only grayscale variation above this threshold will it be considered an edge.
+   Only grayscale variation above this threshold is considered an edge.
 
 Stripe Marker Fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -127,13 +124,11 @@ Stripe Marker Fields
    Only available for stripe markers. Decides the polarity of the second edge of stripe, related to stripe’s first edge.
 
 - **Max Association Distance** (Default: 0):
-   Not range limit, unit is pixel. 
-   The maximum distance between a marker’s edge (either straight or circular) and its associated sub-edges during fit operation.
-   For edge and stripe markers, it is measured perpendicular from the fitted edge position, along to the search direction.
-   For circle markers, it is measured radially from the fitted circle perimeter.
+   The maximum distance (pixel) between a marker’s edge and its associated sub-edges during fit operation.
+   For stripe markers, it is measured perpendicular from the fitted edge position, along to the search direction.
 
 - **Min Edge Value** (Default: 10):
-   Only grayscale variation above this threshold will it be considered an edge.
+   Only grayscale variation above this threshold is considered an edge.
 
 Box Region Fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -148,25 +143,25 @@ Box Region Fields
    Whether to apply a clipped search region to search the marker. Useful when search region includes region outside of the image.
 
 - **Enable Multi Angle** (Default: false):
-   Enable multi-angle search.
+   Enable or disable multi-angle search.
 
 - **Center X, Center Y**:
    The coordinates of the Ring Region, measured from the center.
 
 - **Width, Height**:
-   The size of the box region.
+   The dimensions of the box region.
 
 
 Procedure to Use
 --------------------
 We will need a few more nodes to demonstrate the usage of Measurement node.
 
-1. Insert a Reader node. You may use the data `here <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/xchen_daoai_com/ETnjM6E8D89FsYDUfeMeBIUBSBxAuxVoCqcmJZMgbIYKdg?e=l4fBZ3>`_.  Read from this folder.
+1. Insert a Reader node. You may use the data `here <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/xchen_daoai_com/ETnjM6E8D89FsYDUfeMeBIUBSBxAuxVoCqcmJZMgbIYKdg?e=l4fBZ3>`_. Read from this folder.
 
 .. image:: images/Measurement/measurement_procedure_1.png
    :scale: 60%
 
-2. Insert a 2D Mod finder node. Link the image output from Reader. Define the object as the model, this will be the reference fixture. You might want to read :ref:`Reference Fixture System` for more information. 
+2. Insert a 2D Mod Finder node. Link the image output from Reader. Define the object as the model, this will be the reference fixture. You might want to read :ref:`Reference Fixture System` for more information. 
 
 .. image:: images/Measurement/measurement_mod_finder_fixture_1.png
    :scale: 55%
@@ -174,7 +169,7 @@ We will need a few more nodes to demonstrate the usage of Measurement node.
 .. image:: images/Measurement/measurement_mod_finder_fixture_2.png
    :scale: 100%
 
-3. Insert a Measurement node. Uses the Mod Finder node in step 2 as the Reference Fixture Node.
+3. Insert a Measurement node. Select the Mod Finder node in step 2 as the Reference Fixture Node.
 
 .. image:: images/Measurement/measurement_procedure_3.png
    :scale: 80%
@@ -217,10 +212,15 @@ A. Edge Marker
 B. Stripe Marker 
 C. Circle Marker
 
-2. The marker from question 1 does not detect the segment in the box region. How do I fix this?
+2. The marker added from Question 1 did not detect the segment in the box region. How do I fix this?
 
-.. image:: images/Measurement/measurement_exercise_2.png
+.. image:: images/Measurement/measurement_exercise_2_1.png
    :scale: 60%
+
+|
+
+.. image:: images/Measurement/measurement_exercise_2_2.png
+   :scale: 80%
 
 |
 |
