@@ -4,6 +4,7 @@ Measurement Node
 Overview
 --------------------
 The Measurement node is used to find and measure edge, circle, stripe on a gray image, based on differences in pixel intensities. 
+User can define search region in the image to search for the three types of markers (edge, circle, or stripe) in the image.
 Upon finding a marker, the node outputs the marker’s spatial reference position and measures features such as its angle and radius. 
 
 
@@ -24,15 +25,14 @@ Inputs and Outputs
 +========================================+===============================+=================================================================================+
 | Image                                  | png                           | The gray image to be measured. (from Camera, Reader etc.)                       |
 +----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
-| Use Reference Fixture                  | String                        | The name of the Mod Finder node to use the reference fixture from.              |
-+----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
-| Show Interactive Display               | bool                          | Whether Interactive Display is used.                                            |
-+----------------------------------------+-------------------------------+---------------------------------------------------------------------------------+
 
 +-------------------------+---------------------+------------------------------------------------------------------------+
 | Output                  | Type                | Description                                                            |
 +=========================+=====================+========================================================================+
-| results                 | MapSMeasResultData  | The measurement results.                                               |
+| results                 | MapSMeasResultData  | - Includes corresponding measurement results based on the marker type: |
+|                         |                     |     - Circle Feature: radius, x, y                                     |
+|                         |                     |     - Edge Feature: angle, x, y                                        | 
+|                         |                     |     - Stripe Feature: angle, x, y                                      |
 +-------------------------+---------------------+------------------------------------------------------------------------+
 
 Node Settings
@@ -52,20 +52,21 @@ Region Settings
     - The name of the Mod Finder node to use the reference frame (optional). Please refer to :ref:`Reference Fixture System` for more information.
 
 - **Show Interactive Display**:
-    - Can edit markers after clicking “Show Interactive Display”.
+    - Check this field to enable "Interactive Display" which allows editing markers on the display window.
 
 
 Markers Parameters
 ```````````````````
+There are three types of markers available: Edge, Circle, Stripe.
 
 .. image:: images/Measurement/measurement_markers_parameters.png
    :align: center
 
 - **Number of Occurences** (Default: 1):
-   The number of maximum markers to detect.
+   The maximum number of markers to detect.
 
 - **Min Occurances** (Default: -1):
-   The minimum number of markers to detect. If fewer marker is detected than the min occurances, then it is a detection fail.
+   The minimum number of markers to detect. 
 
 Circle Marker Fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -78,10 +79,10 @@ Circle Marker Fields
 
 - **Max Association Distance** (Default: 0):
    The maximum distance (pixel) between a marker’s edge and its associated sub-edges during fit operation.
-   For circle markers, it is measured radially from the fitted circle perimeter.
+   For circle markers, it is measured from the circle marker center.
 
 - **Min Edge Value** (Default: 10):
-   Only grayscale variation above this threshold is considered an edge.
+   The minimum grayscale variation threshold value for an edge.
 
 Ring Region Fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -93,10 +94,10 @@ Ring Region Fields
    Whether to apply a clipped search region to search the marker. Useful when search region includes region outside of the image.
 
 - **Center X, Center Y**:
-   The coordinates of the Ring Region, measured from the center.
+   Ring Region coordinates, measured from the center.
 
 - **Inner Radius, Outer Radius**:
-   The dimensions of the ring region.
+   Ring region dimensions.
 
 Edge Marker Fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -109,7 +110,7 @@ Edge Marker Fields
    For edge markers, it is measured perpendicular from the fitted edge position, along to the search direction.
 
 - **Min Edge Value** (Default: 2):
-   Only grayscale variation above this threshold is considered an edge.
+   The minimum grayscale variation threshold value for an edge.
 
 Stripe Marker Fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -128,7 +129,7 @@ Stripe Marker Fields
    For stripe markers, it is measured perpendicular from the fitted edge position, along to the search direction.
 
 - **Min Edge Value** (Default: 10):
-   Only grayscale variation above this threshold is considered an edge.
+   The minimum grayscale variation threshold value for an edge.
 
 Box Region Fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -140,16 +141,16 @@ Box Region Fields
    Direction of the edge to be detected.
 
 - **Enable Clipping** (Default: false):
-   Whether to apply a clipped search region to search the marker. Useful when search region includes region outside of the image.
+   Apply a clipped search region to search the marker. Useful when search region includes region outside of the image.
 
 - **Enable Multi Angle** (Default: false):
-   Enable or disable multi-angle search.
+   Enable or disable multi-angle search. The marker that most closely matches the specified angle is returned.
 
 - **Center X, Center Y**:
-   The coordinates of the Ring Region, measured from the center.
+   Ring Region coordinates, measured from the center.
 
 - **Width, Height**:
-   The dimensions of the box region.
+   Box region dimensions.
 
 
 Procedure to Use
@@ -201,6 +202,7 @@ We will need a few more nodes to demonstrate the usage of Measurement node.
 .. image:: images/Measurement/measurement_procedure_6_2.png
    :scale: 80%
 
+
 Exercise
 --------------------
 1. What would be a good marker for measuring the length of this region?
@@ -240,9 +242,9 @@ C. Circle Marker
 
 Answers to Exercise
 --------------------
-1. B. Stripe Marker.
+1. B. Stripe Marker. We can make use of the changes in polarity to detect the segment.
 
-2. Change Polarity to Positive, Polarity 2 to Opposite, and change Marker Orientation to Horizontal.
+2. Change Polarity to Positive, Polarity 2 to Opposite, and change Marker Orientation to Horizontal. The Makrer Orientation determines the detection direction of the stripes. Since the stripes are horizontal, the Marker Orientation should also be horizontal. For the first stripe, the Polarity is Positive because it changes from black to white. For the second stripe, the Polarity 2 is Negative because it changes from white to black.
 
 .. image:: images/Measurement/measurement_answer_2.png
    :scale: 60%
