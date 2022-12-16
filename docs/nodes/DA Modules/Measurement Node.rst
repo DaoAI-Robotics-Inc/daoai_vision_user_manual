@@ -91,7 +91,7 @@ Ring Region Fields
    :align: center
 
 - **Enable Clipping** (Default: false):
-   Whether to apply a clipped search region to search the marker. Useful when search region includes region outside of the image.
+   Apply a clipped search region to search the marker. Useful when search region includes region outside of the image.
 
 - **Center X, Center Y**:
    Ring Region coordinates, measured from the center.
