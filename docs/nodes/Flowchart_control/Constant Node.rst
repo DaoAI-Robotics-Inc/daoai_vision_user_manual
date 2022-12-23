@@ -1,40 +1,90 @@
 Constant Node
-=========
+==============
 
-Synopsis 
+Overview
 ---------
-	Node used to hold constant values to be referenced in other nodes. 
+Continue Node holds constant values which can be referenced in other nodes. 
+It can hold integer, double, string, or boolean values as constants.
 
-
-Description 
----------
-	Can hold integer, double, string, or boolean values to be referenced in other nodes.
-
-	 .. image:: images/constant_node.png
-		:scale: 80%	
+.. image:: images/Constant/constant_overview_1.png
+   :align: center
 		
-	This image shows a Constant Node holding various values. 
+.. image:: images/Constant/constant_overview_2.png
+   :align: center
 
-
-Input 
----------
-	Int Field:
-		Integer-type value to be inputted by user.
-	Double Field:
-		Double-type value to be inputted by user.
-	Bool Field:
-		Boolean-type value to be inputted by user.
-	String Field: 
-		String-type value to be inputted by user. 
-
+|
 
 Output 
 ---------
-	Int Field:
-		Integer-type value inputted by user.
-	Double Field:
-		Double-type value inputted by user.
-	Bool Field:
-		Boolean-type value inputted by user.
-	String Field: 
-		String-type value inputted by user. 
++-------------------------+-------------------+-----------------------------------------------------------------------------------+
+| Output                  | Type              | Description                                                                       |
++=========================+===================+===================================================================================+
+| Int                     | int               | Integer-type value inputted by the user.                                          |
++-------------------------+-------------------+-----------------------------------------------------------------------------------+
+| Double                  | double            | Double-type value inputted by the user.                                           |
++-------------------------+-------------------+-----------------------------------------------------------------------------------+
+| Bool                    | bool              | Boolean-type value inputted by the user.                                          |
++-------------------------+-------------------+-----------------------------------------------------------------------------------+
+| String                  | string            | String-type value inputted by the user.                                           |
++-------------------------+-------------------+-----------------------------------------------------------------------------------+
+
+|
+
+Node Settings
+---------------
+
+.. image:: images/Constant/constant_node_settings.png
+   :align: center
+
+- Int Field:
+   Integer-type value to be inputted by user.
+
+- Double Field:
+   Double-type value to be inputted by user.
+
+- Bool Field:
+   Boolean-type value to be inputted by user.
+
+- String Field: 
+   String-type value to be inputted by user. 
+
+|
+
+Procedure to Use
+-----------------
+
+1. Set up the flowchart as in the following image:
+
+.. image:: images/Constant/constant_procedure_1.png
+   :scale: 100%	
+
+|
+
+2. Click the Constant node. Type in a string into the String Field.
+
+.. image:: images/Constant/constant_procedure_2.png
+   :scale: 80%	
+
+|
+
+3. Click the Print node. Link the string output from the Constant node.
+
+.. image:: images/Constant/constant_procedure_3.png
+   :scale: 80%	
+
+|
+
+4. Click the Halt node, change the boolean to True. 
+
+.. image:: images/Constant/constant_procedure_4.png
+   :scale: 80%	
+
+|
+
+5. Run the flowchart. You can see the string you typed into the Constant node is printed onto the console.
+
+.. image:: images/Constant/constant_procedure_5.png
+   :scale: 100%	
+
+|
+
