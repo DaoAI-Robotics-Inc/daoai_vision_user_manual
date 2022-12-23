@@ -13,7 +13,7 @@ It has a single field 'Condition', which when evaluates to true, causes the Loop
    :align: center
 		
 A Break Node is automatically placed at the end of the sub-flowchart when inserting a Loop Node. 
-A break node can not be inserted outside of a Loop.
+A break node cannot be inserted outside of a Loop.
 
 
 .. Output 
