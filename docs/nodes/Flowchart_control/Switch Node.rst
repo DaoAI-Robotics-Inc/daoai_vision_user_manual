@@ -5,17 +5,10 @@ Overview
 ---------
 
 A generalization of the Condition Node to at least 2 cases used to execute one of many sub-flowcharts based on expressions for each case.
-
-Cases are evaluated from left to right (e.g. case_1, case_2 ,..., case_default).
-case_default is run when all other cases are evaluated to false.
-
-Description 
--------------
-
-Upon placement, generates two sub-flowcharts, 'Case 1' and 'Default', although you can then add as many other cases as required. 
+Upon placing a Switch node, generates two sub-flowcharts, 'Case 1' and 'Default'.
 Each case has an input 'Condition: case_x' which when evaluates to true, causes that case's sub-flowchart to be executed when the switch node is hit. 
 If multiple cases have conditions evaluate to True, then the first case's sub-flowchart will be executed (i.e. if Case 1 and Case 2 both have input conditions that evaluate to True, only Case 1's sub-flowchart would be executed). 
-If no cases evaluate to True, the Default case's sub-flowchart will execute. 
+The Default case's sub-flowchart will execute when all other cases are evaluated to false.
 
 .. image:: images/switch_node.png
 	:scale: 80%	
