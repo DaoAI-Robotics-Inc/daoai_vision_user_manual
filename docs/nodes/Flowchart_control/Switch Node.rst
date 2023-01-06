@@ -10,6 +10,12 @@ Each case has an input 'Condition: case_x' which when evaluates to true, causes 
 If multiple cases have conditions evaluate to True, then the first case's sub-flowchart will be executed (i.e. if Case 1 and Case 2 both have input conditions that evaluate to True, only Case 1's sub-flowchart would be executed). 
 The Default case's sub-flowchart will execute when all other cases are evaluated to false.
 
+.. image:: images/Switch/switch_overview_1.png
+	:align: center
+
+.. image:: images/Switch/switch_overview_2.png
+	:align: center
+
 .. image:: images/switch_node.png
 	:scale: 80%	
 
