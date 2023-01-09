@@ -3,24 +3,14 @@ Flowchart Node
 
 Overview
 ---------
-The Flowchart node is used to nest a flowchart as a sub-flowchart in the flowchart the node is placed into. 
-The Flowchart node Has a single input, 'Flowchart Name', which is the name of the other flowchart that is run when this node is executed. 
+The Flowchart node is used to nest a flowchart as a sub-flowchart in the flowchart the node is placed into.  
+Upon placement of this node, you are prompted to select which flowchart the node should execute.
 
 .. image:: images/Flowchart/flowchart_overview_1.png
    :align: center
 
 .. image:: images/Flowchart/flowchart_overview_2.png
    :align: center
-
-Upon placement of this node, you are prompted to select which flowchart the node should execute:
-
-.. image:: images/flowchart_node_setup.png
-   :scale: 50%	
-
-In this example below using of a Flowchart Node, we see that upon a certain condition specific in the Switch Node, an entire flowchart would be run by just placing the single Flowchart Node.
-
-.. image:: images/flowchart_node.png
-   :scale: 80%	
 
 |
 
@@ -56,7 +46,7 @@ Procedure to Use
 
 |
 
-3. Insert a Flowchart node in the main_flowchart.
+3. Insert a Flowchart node in the main_flowchart. Select the flowchart that was just added in Step 1.
 
 .. image:: images/Flowchart/flowchart_procedure_3_1.png
    :scale: 80%	
@@ -65,9 +55,16 @@ Procedure to Use
 
 |
 
-4. Run the flowchart. You can see the print message from the new flowchart printed in the console.
+4. You can see which flowchart will be run from the Flowchart Name field in the node config page.
 
 .. image:: images/Flowchart/flowchart_procedure_4.png
+   :scale: 90%	
+
+|
+
+5. Run the flowchart. You can see the print message from the new flowchart printed in the console.
+
+.. image:: images/Flowchart/flowchart_procedure_5.png
    :scale: 90%	
 
 |

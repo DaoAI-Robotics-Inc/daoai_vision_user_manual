@@ -36,13 +36,13 @@ Node Settings
 .. image:: images/Constant/constant_node_settings.png
    :align: center
 
-- Int Field:
+- Int Field (Default: 0):
    Integer-type value to be inputted by user.
 
-- Double Field:
+- Double Field (Default: 0):
    Double-type value to be inputted by user.
 
-- Bool Field:
+- Bool Field (Default: False):
    Boolean-type value to be inputted by user.
 
 - String Field: 

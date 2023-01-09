@@ -24,6 +24,7 @@ Output
 | Condition               | Bool              | The boolean value of the Condition expression. When true, the loop is forwarded to its next iteration from the Continue node.    |
 +-------------------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------+
 
+|
 
 Procedure to Use
 -------------------

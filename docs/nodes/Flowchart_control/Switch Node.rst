@@ -20,10 +20,10 @@ The Default case's sub-flowchart will execute when all other cases are evaluated
 
 Below is an example of using the Switch node to switch between different calibration types.
 
-.. image:: images/switch_node.png
+.. image:: images/Switch/switch_node.png
 	:scale: 80%	
 
-.. image:: images/switch_node_exp.png
+.. image:: images/Switch/switch_node_exp.png
 	:scale: 80%	
 		
 |
