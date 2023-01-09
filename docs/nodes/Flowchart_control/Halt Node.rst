@@ -4,19 +4,16 @@ Halt Node
 Overview
 ---------
 Halt node is used to stop a flowchart's execution. 
+The Halt node halts flowchart execution whenever the Halt value evaluates to True. 
 
-Halts flowchart execution until the node input 'Halt' expression evaluates to False.
 
-	 .. image:: images/halt_node.png
-		:scale: 80%	
-		
-	In this example of a Halt Node in use, we see that it would halt execution until the linked Mod Finder V2 Node has executed successfully. 
+.. image:: images/Halt/halt_overview_1.png
+   :align: center
 
-Input 
----------
-	Halt:
-		An expression which must evaluate to a boolean. When true the execution of the flowchart is halted at this node. 
-
+.. image:: images/Halt/halt_overview_2.png
+   :align: center
+	
+|
 
 Output 
 ---------
@@ -26,6 +23,21 @@ Output
 +=========================+===================+===================================================================================+
 | Halt                    | Bool              | When true the execution of the flowchart is halted at this node.                  |
 +-------------------------+-------------------+-----------------------------------------------------------------------------------+
+
+|
+
+Node Settings
+----------------
+
+- **Halt** (Default: False):
+	The first box is an expression which must evaluate to a boolean, which can be set by clicking the blue dot. When true the execution of the flowchart is halted at this node. 
+	The second field is a list, which can choose from either True or False.
+
+.. image:: images/Halt/halt_node_settings.png
+   :scale: 100%	
+
+|
+
 
 Procedure to Use
 -----------------

@@ -60,12 +60,14 @@ Procedure to Use
 
 4. Click the Halt node. Set the Halt value to True.
 
-.. image:: images/Condition/condition_procedure_3.png
+.. image:: images/Condition/condition_procedure_4.png
    :scale: 80%	
 
 |
 
 5. Run the flowchart. You can see that the False sub-flowchart is executed and the print message is printed to the console.
 
-.. image:: images/Condition/condition_procedure_3.png
+.. image:: images/Condition/condition_procedure_5.png
    :scale: 80%	
+
+|

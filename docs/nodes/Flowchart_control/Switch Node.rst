@@ -4,10 +4,12 @@ Switch Node
 Overview
 ---------
 
-A generalization of the Condition Node to at least 2 cases used to execute one of many sub-flowcharts based on expressions for each case.
+The Switch node is a generalization of the Condition Node to at least 2 cases used to execute one of many sub-flowcharts based on expressions for each case.
+
 Upon placing a Switch node, generates two sub-flowcharts, 'Case 1' and 'Default'.
+
 Each case has an input 'Condition: case_x' which when evaluates to true, causes that case's sub-flowchart to be executed when the switch node is hit. 
-If multiple cases have conditions evaluate to True, then the first case's sub-flowchart will be executed (i.e. if Case 1 and Case 2 both have input conditions that evaluate to True, only Case 1's sub-flowchart would be executed). 
+If multiple cases have conditions evaluate to True, then the smallest number case's sub-flowchart will be executed (i.e. if Case 1 and Case 2 both have input conditions that evaluate to True, only Case 1's sub-flowchart would be executed). 
 The Default case's sub-flowchart will execute when all other cases are evaluated to false.
 
 .. image:: images/Switch/switch_overview_1.png
@@ -16,21 +18,15 @@ The Default case's sub-flowchart will execute when all other cases are evaluated
 .. image:: images/Switch/switch_overview_2.png
 	:align: center
 
+Below is an example of using the Switch node to switch between different calibration types.
+
 .. image:: images/switch_node.png
 	:scale: 80%	
 
 .. image:: images/switch_node_exp.png
 	:scale: 80%	
 		
-The images above show a Switch Node could be used to switch between different calibration types. 
-
-
-Input 
----------
-Condition\: case_x: 
-	An expression which must evaluate to a boolean. 
-	When true, the sub-flowchart corresponding to this case is evaluated as long as no other conditions corresponding to cases of lower numbers also evaluate to True. 
-
+|
 
 Output 
 ---------
@@ -38,7 +34,7 @@ Output
 +-------------------------+-------------------+-----------------------------------------------------------------------------------+
 | Output                  | Type              | Description                                                                       |
 +=========================+===================+===================================================================================+
-| Condition: case_x       | bool              | The boolean value of the input Condition expression.                              |
+| Condition               | bool              | The boolean value of the input Condition expression.                              |
 +-------------------------+-------------------+-----------------------------------------------------------------------------------+
 
 Procedure to Use
@@ -88,7 +84,7 @@ Procedure to Use
 
 Exercise
 ---------
-1. Given there are case_1, case_2, case_3, and case_default. If both case_2 and case_default are both true, which case is run?
+1. Given there are case_1, case_2, case_3, and case_default. If both case_2 and case_3 are true, which case is run?
 
 A. case_1
 B. case_2
@@ -113,4 +109,5 @@ D. case_default
 
 Answers for Exercise
 -----------------------
-1. B. case_2 is run. 
+
+1. B. case_2 is run. When two cases evaluate to True, the sub-flowchart of the case with smaller number is run.
