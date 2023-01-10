@@ -11,6 +11,9 @@ This section introduces the utility nodes that we have.
    pose
    count 
    load_recipe
+   print
    reader_writer
+   store
+   timer
    thread
    transformation_tree
