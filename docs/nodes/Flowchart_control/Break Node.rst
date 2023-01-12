@@ -3,11 +3,11 @@ Break Node
 
 Overview
 -------------------
-The Break node is used inside of a :ref:`Loop Node` to terminate the loop's execution. 
-It has a single field 'Condition', which when evaluates to true, causes the Loop which the Break Node is in to be broken out of. 
+The **Break Node** is used inside of a :ref:`Loop Node` to terminate the loop's execution. 
+It has a single field 'Condition', which when evaluates to true, causes the loop which the **Break Node** is in to be broken out of. 
 
-A Break Node is automatically placed at the end of the sub-flowchart when inserting a Loop Node. 
-A Break node cannot be inserted outside of a Loop.
+A **Break node** is automatically placed at the end of the sub-flowchart when inserting a Loop Node. 
+A **Break node** cannot be inserted outside of a Loop.
 
 .. image:: images/Break/break_overview_1.png
    :align: center
@@ -20,11 +20,11 @@ A Break node cannot be inserted outside of a Loop.
 Output 
 -------------------
 
-+-------------------------+-------------------+-----------------------------------------------------------------------------------+
-| Output                  | Type              | Description                                                                       |
-+=========================+===================+===================================================================================+
-| Condition               | Bool              | When true, the loop which the Break Node is in will terminate.                    |
-+-------------------------+-------------------+-----------------------------------------------------------------------------------+
++-------------------------+-------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+| Output                  | Type              | Description                                                                                                                                       |
++=========================+===================+===================================================================================================================================================+
+| Condition               | Bool              | When true, the loop which the Break Node is in will terminate. The execution will continue at the node after the loop node that is broken out of. |
++-------------------------+-------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+
 
 |
 
@@ -52,7 +52,7 @@ Procedure to use
 
 |
 
-4. The loop stops executing when the Break condition is reached.
+4. The loop stops executing when the Break condition is reached. The execution will continue at the node after the loop node that is broken out of.
 
 .. image:: images/Break/break_procedure_4.png
    :scale: 80%	
