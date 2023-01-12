@@ -4,9 +4,9 @@ Switch Node
 Overview
 ---------
 
-The Switch node is a generalization of the Condition Node to at least 2 cases used to execute one of many sub-flowcharts based on expressions for each case.
+The **Switch node** is a generalization of the Condition Node to at least 2 cases used to execute one of many sub-flowcharts based on expressions for each case.
 
-Upon placing a Switch node, generates two sub-flowcharts, 'Case 1' and 'Default'.
+Upon placing a **Switch node**, generates two sub-flowcharts, 'Case 1' and 'Default'.
 
 Each case has an input 'Condition: case_x' which when evaluates to true, causes that case's sub-flowchart to be executed when the switch node is hit. 
 If multiple cases have conditions evaluate to True, then the smallest number case's sub-flowchart will be executed (i.e. if Case 1 and Case 2 both have input conditions that evaluate to True, only Case 1's sub-flowchart would be executed). 

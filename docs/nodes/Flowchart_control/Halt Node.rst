@@ -3,8 +3,8 @@ Halt Node
 
 Overview
 ---------
-Halt node is used to stop a flowchart's execution. 
-The Halt node halts flowchart execution whenever the Halt value evaluates to True. 
+**Halt node** is used to stop a flowchart's execution. 
+The **Halt node** halts flowchart execution whenever the Halt value evaluates to True. 
 
 
 .. image:: images/Halt/halt_overview_1.png

@@ -3,9 +3,9 @@ Continue Node
 
 Overview
 ---------
-Continue Node is used inside of Loops to forward the loop execution to the next loop iteration. 
+The **Continue node** is used inside of Loops to forward the loop execution to the next loop iteration. 
 This node allows the you to skip part of a Loop sub-flowchart by simply going to the next iteration. 
-The Continue node cannot be inserted outside of a Loop.
+The **Continue node** cannot be inserted outside of a Loop.
 
 .. image:: images/Continue/continue_overview_1.png
    :align: center

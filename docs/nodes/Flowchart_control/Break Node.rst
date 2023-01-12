@@ -8,6 +8,7 @@ It has a single field 'Condition', which when evaluates to true, causes the loop
 
 A **Break node** is automatically placed at the end of the sub-flowchart when inserting a Loop Node. 
 A **Break node** cannot be inserted outside of a Loop.
+When reaches the **Break node** and the break condition is true, the flowchart execution will continue at the node after the loop node that is broken out of.
 
 .. image:: images/Break/break_overview_1.png
    :align: center

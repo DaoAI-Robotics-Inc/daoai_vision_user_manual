@@ -4,8 +4,8 @@ Loop Node
 Overview
 
 ------------------
-Create a loop which executes until a break condition is met. 
-When a Loop node is inserted, generates a sub-flowchart with a Break node that executes iteratively until the condition defined in a Break Node (which can be the one generated upon placing the Loop Node, or by another Break node placed by the user) evaluates to True. 
+The **Loop node** create a loop which executes until a break condition is met. 
+When a **Loop node** is inserted, generates a sub-flowchart with a Break node that executes iteratively until the condition defined in a Break Node (which can be the one generated upon placing the Loop Node, or by another Break node placed by the user) evaluates to True. 
 
 .. image:: images/Loop/loop_overview_1.png
    :align: center

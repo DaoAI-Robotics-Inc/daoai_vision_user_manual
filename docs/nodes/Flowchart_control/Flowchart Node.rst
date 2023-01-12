@@ -3,8 +3,8 @@ Flowchart Node
 
 Overview
 ---------
-The Flowchart node is used to nest a flowchart as a sub-flowchart in the flowchart the node is placed into.  
-Upon placement of this node, you are prompted to select which flowchart the node should execute.
+The **Flowchart node** is used to nest a flowchart as a sub-flowchart in the flowchart the node is placed into.  
+Upon placement of the **Flowchart node**, you are prompted to select which flowchart the node should execute.
 
 .. image:: images/Flowchart/flowchart_overview_1.png
    :align: center

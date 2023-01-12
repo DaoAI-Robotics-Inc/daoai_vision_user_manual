@@ -4,8 +4,8 @@ Condition Node
 Overview
 ---------
 
-Condition node is used to execute either of two sub-flowcharts based on an inputted expression.
-The Condition node takes an expression which must evaluate to a boolean. 
+The **Condition node** is used to execute either of two sub-flowcharts based on an inputted expression.
+The **Condition node** takes an expression which must evaluate to a boolean. 
 When true, the sub-flowchart corresponding to True is executed; when false, the sub-flowchart corresponding to False is evaluated. 
 
 .. image:: images/Condition/condition_overview_1.png

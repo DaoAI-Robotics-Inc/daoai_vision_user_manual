@@ -3,7 +3,7 @@ Constant Node
 
 Overview
 ---------
-Continue Node holds constant values which can be referenced in other nodes. 
+The **Constant node** holds constant values which can be referenced in other nodes. 
 It can hold integer, double, string, or boolean values as constants.
 
 .. image:: images/Constant/constant_overview_1.png
