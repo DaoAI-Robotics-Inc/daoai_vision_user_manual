@@ -31,9 +31,9 @@ Procedure to Use
 1. Create recipe and add your nodes to recipe, refer to :ref:`Recipes` section.
 
 2. Insert a Load Recipe node.
-.. image:: Images/load_recipe/step_2.png
+    .. image:: Images/load_recipe/step_2.png
 
 3. Click '+' to add all of your recipes, and enter a value for Selected Index input or link to another node.
-.. image:: Images/load_recipe/step_3.png
+    .. image:: Images/load_recipe/step_3.png
 
 4. Run the node, and the corresponding recipe is loaded for your nodes.

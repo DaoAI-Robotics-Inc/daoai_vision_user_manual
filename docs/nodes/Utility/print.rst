@@ -20,10 +20,13 @@ Procedure to Use
 ---------------------
 
 1. Insert a Print node. 
-    .. image:: Images/image/step_1.png
+    .. image:: Images/print/step_1.png
 
 2. Type in the message that you want to print to the input field.
-    .. image:: Images/image/step_2.png
+    .. image:: Images/print/step_2.png
 
 3. You may also use the advanced script to return a customized string.
-    .. image:: Images/image/step_3.png
+    .. image:: Images/print/step_3.png
+
+4. Run the node and the message will be printed on the console.
+    .. image:: Images/print/step_4.png

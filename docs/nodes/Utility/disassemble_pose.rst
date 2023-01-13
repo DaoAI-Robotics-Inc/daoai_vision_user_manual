@@ -59,9 +59,6 @@ Procedure to Use
 
 3. Run the node an you will see the values printed on the console, you can also access them through outputs.
     .. image:: Images/disassemble_pose/step_3.png
-|
-
     .. image:: Images/disassemble_pose/step_3_1.png
-|
 
 

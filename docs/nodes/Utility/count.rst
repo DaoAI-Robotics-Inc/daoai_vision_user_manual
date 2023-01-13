@@ -30,12 +30,12 @@ Procedure to Use
 ------------------
 
 1. Right click the node where you want to insert and insert an count pose node.
-.. image:: Images/count/step_1.png
+    .. image:: Images/count/step_1.png
 
 2. You may optionally set Reset Condition and Reset Value.
 
 3. You can access the Counter in other node like the folling image. (using Break node as an example)
-.. image:: Images/count/step_3.png
+    .. image:: Images/count/step_3.png
 
 
 
