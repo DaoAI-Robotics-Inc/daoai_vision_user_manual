@@ -41,60 +41,68 @@ Node Settings
 --------------
 
 .. image:: Images/writer/writer_node_settings.png
-   :align: center
+    :scale: 100%
+.. image:: Images/writer/writer_node_settings_2.png
+    :scale: 85%
 
 **Data Source**
 
-- Source Type (Default: From File):
-    - From File: write data to one single file.
-    - From Numbered: write data to multiple files. 
+    - Source Type (Default: From File):
+        - From File: write data to one single file.
+        - From Numbered: write data to multiple files. 
 
-- Data Type (Default: RGB_IMAGE (.png)):
-    Select from one of the four output file types:
-        - RGB_IMAGE (.png)
-        - DEPTH_IMAGE (.tif)
-        - POINT_CLOUD (.pcd)
-        - POLYGON_MESH (.ply)
-        - BAG (.bag)
+    - Data Type (Default: RGB_IMAGE (.png)):
+        Select from one of the four output file types:
+            - RGB_IMAGE (.png)
+            - DEPTH_IMAGE (.tif)
+            - POINT_CLOUD (.pcd)
+            - POLYGON_MESH (.ply)
+            - BAG (.bag)
 
-- Write Data:
-    The data to be written to files.
+    - Write Data:
+        The data to be written to files.
 
 **Save to**
 
-- File Path: 
-    Available in From File mode.
+    - File Path: 
+        Available in From File mode.
 
-- File Prefix (Default: "daoai\_"):
-    The string to be appended to the start of the file name.
+    - File Prefix (Default: "daoai\_"):
+        The string as the file name prefix.
 
-- Start Index (Default: 0):
-    The starting index of the file to be saved.
+    - Start Index (Default: 0):
+        Index is the suffix number to be added to File Prefix.
+        The starting index of the file to be saved.
 
-- End Index (Default: 10000):
-    The ending index of the file to be saved.
+    - End Index (Default: 10000):
+        The ending index of the file to be saved. Index will reset to Start Index after exceeding the End Index.
 
+    - Reset Values:
+        Clicking this button will reset the file suffix index value
+
+    .. warning::        
+        Writer node will overwrite exsiting file with same name.
 |
 
 Procedure to Use
 -----------------
 
-1. Insert Camera node and a Writer node.
+1. Set up the Camera node, you can refer to :ref:`Camera Node`. 
 
-.. image:: Images/writer/writer_procedure_1.png
-   :scale: 80%
+2. Insert a Writer node.
 
-2. Set up the Camera node, you can refer to :ref:`Camera Node`. Then, link a Write Data, and select a path. 
+.. image:: Images/writer/writer_overview_1_1.png
+.. image:: Images/writer/writer_overview_1.png
 
-.. image:: Images/writer/writer_procedure_2.png
-   :scale: 80%
 
-3. Run the node.
+3. Select Source Type and Data Type (will use "from file" and "save as .bag" as an example)
+    .. image:: Images/writer/writer_procedure_3.png
 
-.. image:: Images/writer/writer_procedure_3.png
-   :scale: 80%
+4. link data to save (Image, Point Cloud, Depth Image, Intrinsic can all be linked to camera node, and Pose can be linked to robot read node).
+    .. image:: Images/writer/writer_procedure_4.png
 
-4. You can find the file in the file path.
+5. Select a path to save, click browse folder and default path is "[workspace]/Data", click "Select Folder"
+    .. image:: Images/writer/writer_procedure_5.png
 
-.. image:: Images/writer/writer_procedure_4.png
-   :scale: 100%
+6. run the node and the file will be save to the specified directory.
+    .. image:: Images/writer/writer_procedure_6.png
