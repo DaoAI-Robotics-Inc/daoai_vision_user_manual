@@ -7,7 +7,7 @@ Overview
 .. image:: Images/thread/threads.png
    :align: center
 
-Thread node is able to provide multi-threading-like execution flow for the workspace. Which allows you to execute more than 1 pipeline at the same time to increase the time complexity for your pipeline.
+**Thread node** is able to provide multi-threading-like execution flow for the workspace. Which allows you to execute more than 1 pipeline at the same time to increase the time complexity for your pipeline.
 
 Input and Output
 ------------------
@@ -50,8 +50,8 @@ Also, these 2 threads will both execute to the end. After thread kp_detection is
 And this is one of the mode for thread node. Thread node has 2 modes, this is regular mode, which will start a new thread and will not interfere with the main thread. Second mode is **Blocking mode**, this mode will require another thread node to 
 pause the process in main thread. This mode is more usually used since it will ensure the data integrity. 
 
-Blocking mode
--------------
+Blocking Mode
+~~~~~~~~~~~~~~
 
 .. image:: Images/thread/blocking_node.png
    :align: center
@@ -101,9 +101,24 @@ Question 2. Where would you place the second thread node? Why?
 
 	D. between Store node and Break node;
 
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
 
-Answers for Exercises
-~~~~~~~~~~~~~~~~~~~~~~
+Answers for Exercise
+-------------------------
 
 Q1. B, C, D
 

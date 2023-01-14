@@ -4,7 +4,7 @@ Timer Node
 Overview
 ----------
 
-The **Timer node** times the runtime from the first start timer to the second timer.
+The **Timer node** calculates the runtime from the first start timer to the second timer.
 
 .. image:: Images/timer/timer_overview_1.png
    :align: center
@@ -39,9 +39,10 @@ Node Settings
    :align: center
 
 - Timer Type (Default: Start Mode):
+    Select from Start Mode or Lap Mode.
 
 - Link Start Timer:
-    The Start Timer
+    The other Timer node used in calculating the time.
 
 |
 
@@ -58,7 +59,7 @@ Procedure to Use
 .. image:: Images/timer/timer_procedure_2.png
    :scale: 100%
 
-3. Click the second Timer node. Set the Timer Type to Lap Mode. Click the blue dot Link the currentTime output 
+3. Click the second Timer node. Set the Timer Type to Lap Mode. Click the blue dot and link the first Timer node's currentTime output.
 
 .. image:: Images/timer/timer_procedure_3_1.png
    :scale: 100%

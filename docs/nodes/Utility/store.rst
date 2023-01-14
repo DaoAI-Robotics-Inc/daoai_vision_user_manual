@@ -20,6 +20,9 @@ Node Settings
 .. image:: images/store/store_node_settings.png
    :align: center
 
+- Value to Set:
+    The value to set the variable to. Can be entered as an expression.
+
 |
 
 Procedure to Use
