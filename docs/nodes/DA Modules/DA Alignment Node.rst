@@ -172,45 +172,37 @@ Procedure to use
 	.. image:: images/da_align/adjusting_da_model_on_scene.png
 		:align: center
 
-15. Click on the blue dot on the right side of "Model Pose" to link model cloud from Transformation Tree node above as input.
-	.. image:: images/da_align/model_from_scene_before_pose.png
-		:align: center
-
-.. note::
-	You can see the model cloud is small and away from the coordinate. This is because the origin of point cloud is different to the origin of model you see on scene. You should apply the reverse operation on the model pose.
-
-16. Click on "Update Model Pose" button to reverse your model cloud origin to the object itself.
+15. You will see the model defined by you.
 	.. image:: images/da_align/model_loaded_from_scene.png
 		:align: center
 
-17. You should be able to see the model cloud aligned with the objects on scene.
+16. You should be able to see the model cloud aligned with the objects on scene.
 	.. image:: images/da_align/align.png
 		:align: center
 
 .. tip::
 	If you need to alter more settings in order to get your expected results, you can keep reading on the following steps. If not, you can jump to the next section :ref:`Exercise <Exercise>`.
 
-18. You can change the option for "Use Model Box" to decide whether or not cropping the scene based on the model's bounding box before alignment to speeds up matching.
+17. You can change the option for "Use Model Box" to decide whether or not cropping the scene based on the model's bounding box before alignment to speeds up matching.
 	.. image:: images/da_align/use_model_box.png
 		:align: center
 
-19. You can change the option for "Error Metric" to change either Point-to-Point or Point-to-Plane depending on the actual conditions.
+18. You can change the option for "Error Metric" to change either Point-to-Point or Point-to-Plane depending on the actual conditions.
 	.. image:: images/da_align/error_metric.png
 		:align: center
-
-20. You can change the option for "Max Iterations" to change the iteration of re-align for better alignment result. But more iterations will take more time, choose the option with your best fit.
+19. You can change the option for "Max Iterations" to change the iteration of re-align for better alignment result. But more iterations will take more time, choose the option with your best fit.
 	.. image:: images/da_align/max_iterations.png
 		:align: center
 
-21. (Advanced) Decimation Step Model & Decimation Step Scene are used to adjust the step size for downsample. More steps will slow down the performance. Usually recommended using DEFAULT settings are good enough for most of the cases.
+20. (Advanced) Decimation Step Model & Decimation Step Scene are used to adjust the step size for downsample. More steps will slow down the performance. Usually recommended using DEFAULT settings are good enough for most of the cases.
 	.. image:: images/da_align/decimation.png
 		:align: center
 
-22. You can control the percentage of model points for calculation of this alignment with scene points. More is usually better and more accurate. 
+21. You can control the percentage of model points for calculation of this alignment with scene points. More is usually better and more accurate. 
 	.. image:: images/da_align/model_overlaps.png
 		:align: center
 
-23. You can control the overall downsample intensity for calculation for scene and model. Lower is usually better and more accurate. However, more calculations is needed, takes longer to align.
+22. You can control the overall downsample intensity for calculation for scene and model. Lower is usually better and more accurate. However, more calculations is needed, takes longer to align.
 	.. image:: images/da_align/downsample.png
 		:align: center
 

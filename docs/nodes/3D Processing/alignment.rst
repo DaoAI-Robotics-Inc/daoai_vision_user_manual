@@ -131,7 +131,7 @@ Procedure to Use
     .. image:: Images/alignment/alignment_node_steps_1.png
        :align: center
 
-2. 1, Click the '+' button to add a model. 2, Double click the creaeted model. 3, You may optionally select how you define your model. 4, Click define model and the model will display on the area to the left. 5, select a pose (link from output of transformation tree) if the axis is far away from the model. 6, Then click Define Model Pose will update the model with the pose given and the axis should be close to the model (like in the image).
+2. 1, Click the '+' button to add a model. 2, Double click the creaeted model. 3, You may optionally select how you define your model. 4, Click define model and the model will display on the area to the left. 
     .. image:: Images/alignment/alignment_node_steps_2.png
        :align: center
 
