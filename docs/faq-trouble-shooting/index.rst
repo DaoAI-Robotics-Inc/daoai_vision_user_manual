@@ -1,5 +1,5 @@
 FAQ & Trouble Shooting
-============
+=======================
 
 This section is for troubleshooting and some of the known-issues solution. 
 If the issue you encounter is not listed below, please `report your issue here <https://daoai-robotics-inc-daoai-vision-user-manual.readthedocs-hosted.com/en/latest/faq-trouble-shooting/bug-report/overview.html>`_.
@@ -7,6 +7,7 @@ If the issue you encounter is not listed below, please `report your issue here <
 .. toctree::
    :hidden:
 
+   faq/index
    help_center/index
    bug-report/overview
    utf8/index
