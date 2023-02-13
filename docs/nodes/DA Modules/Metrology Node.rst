@@ -179,7 +179,7 @@ Procedure to Use
 
 |
 
-2. In Reader node, select the metrology node sample data folder. You can get the data `here <https://daoairobotics-my.sharepoint.com/personal/contact_daoairobotics_onmicrosoft_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fcontact%5Fdaoairobotics%5Fonmicrosoft%5Fcom%2FDocuments%2FPersonal%5FLog%2FHewei%2Fmetrology%20node%20sample%20data%2Ezip&parent=%2Fpersonal%2Fcontact%5Fdaoairobotics%5Fonmicrosoft%5Fcom%2FDocuments%2FPersonal%5FLog%2FHewei&ga=1>`_.
+2. In Reader node, select the metrology node sample data folder. You can get the data `here <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/xchen_daoai_com/ETnjM6E8D89FsYDUfeMeBIUBSBxAuxVoCqcmJZMgbIYKdg?e=jIEhFz>`_.
     .. image:: images/Metrology/metrology_procedure_2_1.png
        :align: center
 
