@@ -7,10 +7,10 @@ Overview
 | Generate calibrated depth map image from point cloud input. 
 | **DA CloudNDepth Conv** node is generally used when we need a calibrated depth image from point cloud to do 3D searching in nodes such as 3D Mod Finder, Metrology node, and Measurement node.  
 
-.. image:: images/DA_CloudNDepth_Conv/DA_CloudNDepth_Conv_overview_1.png
+.. image:: images/DA_CloudNDepth_conv/DA_CloudNDepth_Conv_overview_1.png
    :align: center
 
-.. image:: images/DA_CloudNDepth_Conv/DA_CloudNDepth_Conv_overview_2.png
+.. image:: images/DA_CloudNDepth_conv/DA_CloudNDepth_Conv_overview_2.png
    :align: center
 
 Input and Output
@@ -43,7 +43,7 @@ Node Settings
 Source
 ~~~~~~~~~
 
-.. image:: images/DA_CloudNDepth_Conv/DA_CloudNDepth_Conv_node_settings_source.png
+.. image:: images/DA_CloudNDepth_conv/DA_CloudNDepth_Conv_node_settings_source.png
 
 - **Object**:
    The point cloud data to be convert (From Camera etc.).
@@ -51,7 +51,7 @@ Source
 Depth Map Settings
 ~~~~~~~~~~~~~~~~~~
 
-.. image:: images/DA_CloudNDepth_Conv/node_setting.png
+.. image:: images/DA_CloudNDepth_conv/node_setting.png
 
 - **Depthmap Size X**:
 
@@ -82,7 +82,7 @@ Procedure to use
 1. We will also need a Camera node to demonstrate DA CloudNDepth Conv node. Right click insert node and insert a Camera node, and a DA CloudNDepth Conv node.
 	.. image:: images/DA_cloudNdepth_conv/DA_CloudNDepth_Conv_procedure_insert_nodes.png
 		:scale: 60%
-    .. image:: images/DA_CloudNDepth_Conv/DA_CloudNDepth_Conv_procedure_flowchart.png
+    .. image:: images/DA_CloudNDepth_conv/DA_CloudNDepth_Conv_procedure_flowchart.png
         :scale: 90%
 
 2. Here's a `link to tee.dcf file <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/tzhang_daoai_com/EUaL8LFp-JlJugrB-VYSCr8BODvs7cyJszjIywupMCNDDg?e=XCPFjb>`_ for the camera input. Add a virtual Camera in the Platform Config and link the tee.dcf file as its input.
@@ -141,7 +141,7 @@ You need to help him setup the **DA CloudNDepth Conv** node in main_flowchart. P
 |
 |
 
-Answers for Excercises
+Answers for Exercises
 ------------------------
 
 1. **Answer: C** (Decrease the X Y value in Deptmap Size X / Y)
