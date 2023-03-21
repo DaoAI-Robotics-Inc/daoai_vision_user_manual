@@ -124,21 +124,21 @@ Flowchart Summary
 +----------------+---------+----------------------------------------------------+
 | Flowchart Name | Purpose |                                                    |
 +================+=========+====================================================+
-| Manual         | 0       | Acquire Object geo feature relations.               |
+| Manual         | 0       | Acquire Object geo feature relations.              |
 +----------------+---------+----------------------------------------------------+
-| Mono Train     | 1       | Acquire Object geo feature relations.               |
+| Mono Train     | 1       | Acquire Object geo feature relations.              |
 +----------------+---------+----------------------------------------------------+
-|| Mod Finder    || N/A    || Use given image selected by Variable.Mode         |
-||               ||        || to acquire relative position between camera        |
-||               ||        || and geo features.                                 |
+| Mod Finder     | N/A     | Use given image selected by Variable.Mode          |
+|                |         | to acquire relative position between camera        |
+|                |         | and geo features.                                  |
 +----------------+---------+----------------------------------------------------+
-|| Detection     || N/A    || Use Trained geo features and detected geo         |
-||               ||        || features to generate object location in 3D        |
+| Detection      | N/A     | Use Trained geo features and detected geo          |
+|                |         | features to generate object location in 3D         |
 +----------------+---------+----------------------------------------------------+
 | Teach Pose     | 2       | Set picking pose                                   |
 +----------------+---------+----------------------------------------------------+
-|| Picking       || 3      || Use object location, picking pose, hand-eye       |
-||               ||        || relationship to generate pick pose to guide Robot |
+| Picking        | 3       | Use object location, picking pose, hand-eye        |
+|                |         | relationship to generate pick pose to guide Robot  |
 +----------------+---------+----------------------------------------------------+
 
 Manual 
