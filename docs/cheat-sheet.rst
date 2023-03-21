@@ -229,37 +229,37 @@ Admonitions and other paragraph markups
 
    `Another guide <https://docs.typo3.org/m/typo3/docs-how-to-document/master/en-us/WritingReST/Index.html>`_
 
-.. Tabs
-.. ====
+Tabs
+====
 
-.. The `Sphinx Inline Tabs <https://github.com/pradyunsg/sphinx-inline-tabs>`_ Sphinx extension enables tabbed views.
+The `Sphinx Inline Tabs <https://github.com/pradyunsg/sphinx-inline-tabs>`_ Sphinx extension enables tabbed views.
 
-.. .. tab:: One
+.. tab:: One
 
-..    One is an interesting number.
+   One is an interesting number.
 
-.. .. tab:: Two
+.. tab:: Two
 
-..    Two is the even prime.
+   Two is the even prime.
 
-.. This will break the tab set!
+This will break the tab set!
 
-.. .. tab:: Three
+.. tab:: Three
 
-..    Three is an odd prime.
+   Three is an odd prime.
 
-.. .. tab:: Four
+.. tab:: Four
 
-..    Four is not a perfect number.
+   Four is not a perfect number.
 
-.. .. tab:: Five
-..    :new-set:
+.. tab:: Five
+   :new-set:
 
-..    Five is a nice number.
+   Five is a nice number.
 
-.. .. tab:: Six
+.. tab:: Six
 
-..    Six is also nice.
+   Six is also nice.
 
 Table of contents
 =================
