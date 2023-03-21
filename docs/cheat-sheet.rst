@@ -253,6 +253,7 @@ This will break the tab set!
    Four is not a perfect number.
 
 .. tab:: Five
+   :new-set:
 
    Five is a nice number.
 
