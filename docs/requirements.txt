@@ -1,1 +1,2 @@
+sphinx-inline-tabs
 git+https://github.com/sphinx-contrib/video.git#egg=sphinxcontrib-video
