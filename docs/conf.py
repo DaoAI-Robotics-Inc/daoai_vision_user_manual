@@ -47,8 +47,7 @@ language = 'en'
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
-latex_engine = "xelatex"
-latex_use_xindy = False
+latex_engine = "lualatex"
 
 # -- Options for HTML output -------------------------------------------------
 
