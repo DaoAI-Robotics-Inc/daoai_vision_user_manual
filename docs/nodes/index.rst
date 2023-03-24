@@ -16,3 +16,4 @@ This section is a detailed description about the functionalities of each node. Y
    Calibration/index
    DA Modules/index
    Robot/index
+   RC/index
