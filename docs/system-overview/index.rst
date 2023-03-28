@@ -21,4 +21,5 @@ This section covers the basic knowledge of the Vision software, including user i
    3d-transformation/3d-transformation
    recipes/recipes
    tutorials/overview
+   annotation-tool/index
 
