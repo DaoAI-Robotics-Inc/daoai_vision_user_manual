@@ -5,6 +5,7 @@ Overview
 ---------
 The **Flowchart node** is used to nest a flowchart as a sub-flowchart in the flowchart the node is placed into.  
 Upon placement of the **Flowchart node**, you are prompted to select which flowchart the node should execute.
+Users can import customized flowchart and add them through the Flowchart Node.
 
 .. image:: images/Flowchart/flowchart_overview_1.png
    :align: center
@@ -22,6 +23,22 @@ Output
 +=========================+===================+===================================================================================+
 | FlowChartName           | string            | Name of the flowchart that runs when this node is executed.                       |
 +-------------------------+-------------------+-----------------------------------------------------------------------------------+
+
+|
+
+Imported Flowchart Templates
+-------------------------------
+
+.. image:: images/Flowchart/flowchart_addNodeDialog.png
+   :align: center
+   :scale: 80%
+
+| Customized flowcharts are shown under the Templates section.
+| There are a few default flowcharts available (SimpleImageFilter, SimpleLoop, timer).
+| You can add custom flowcharts by placing the .fws file in a folder starting with **;** under the path: %DAOAI_VISION_PATH%\\templates\\.template_flowcharts.
+
+.. image:: images/Flowchart/flowchart_folders.png
+   :align: center
 
 |
 

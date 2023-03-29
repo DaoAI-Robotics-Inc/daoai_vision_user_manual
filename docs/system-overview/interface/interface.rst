@@ -84,15 +84,16 @@ in order to capture such input data.
 
 In order to pick up the objects, the workspace must similarly be connected to robots.
 
-The vision software provides detection, connection management and configuration of cameras and robots. They are located under platform config page (Platform -> Platform Config Page).
+The vision software provides detection, connection management and configuration of cameras and robots. They are located under platform config page (Platform → Platform Config Page).
 
 .. image:: Images/acc_cam.png
    :align: center
 
 Camera 
-~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Cameras can be added by clicking the **+** button, then **Accept**. You can then double click an already added camera to configure a specific camera.
+See :ref:`Camera` for details on the camera's configuration.
 
 .. image:: Images/cam_config.png
    :align: center
@@ -106,6 +107,37 @@ You can manage robot configuration in robot tab.
 
 .. image:: Images/robot.png
    :align: center
+
+Robot Pilot 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: Images/platform_config_rp.png
+   :align: center
+
+Robot Pilot is an integrated system designed to help you easily plan, control, and program your robot operations in bin pinking applications. 
+Please refer to :ref:`Robot Pilot` for more information on the Robot Pilot Systems.
+
+Python System
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: Images/platform_config_ps.png
+   :align: center
+
+The Python System is used for starting python scripts when we want to use the socket communication transfer.
+
+- **File path**
+   The path where the script is.
+
+- **Arguments** (optional)
+   Run the python script with arguments.
+
+- **Connect**
+   Click to start executing the python script.
+
+- **Disconnect**
+   Click to stop running the python script, and prints the Exit Code to the console.
+   - 0 - success
+   - 1 - fail
 
 Operator View
 ------------------

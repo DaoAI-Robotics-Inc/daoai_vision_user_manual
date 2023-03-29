@@ -10,6 +10,14 @@ Expressions can be added to the evaluation table by selecting one in the 'Availa
 
 As the flowchart runs, the expressions will be continuously evaluated and refreshed to reflect their changing values.  
 
+.. image:: images/quick_rmb.png
+	:align: center
+
+Users can right click and select "Show Node in Quick Evaluate" to quickly filter the expressions in Quick Evaluate.
+
+.. image:: images/quick_rmb_2.png
+	:align: center
+
 Usage Example
 ~~~~~~~~~~~~~
 

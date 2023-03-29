@@ -3,7 +3,6 @@ System Overview
 
 This section covers the basic knowledge of the Vision software, including user interface, data types, recipes and case study on how to build a project.
 
-
 - **User Interface**: It will cover the basic usage with the software.
 - **Data Type**: It will cover the supported datatype, and how to use it. 
 - **3D Concept**: It will cover the basic concept for the 3d transformation.
@@ -21,5 +20,8 @@ This section covers the basic knowledge of the Vision software, including user i
    3d-transformation/3d-transformation
    recipes/recipes
    tutorials/overview
+   calibration-tool/index
+   license-check/index
+   diagnostic-report/index
    annotation-tool/index
 
