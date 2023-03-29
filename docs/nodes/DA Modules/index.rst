@@ -1,7 +1,8 @@
 DaoAI Advanced Modules
 ========================
 .. toctree::
-   Reference Fixture System 
+   Reference Fixture System
+   Blob Analysis Node 
    Mod Finder Node
    Shape Finder Node
    Code Reader Node
