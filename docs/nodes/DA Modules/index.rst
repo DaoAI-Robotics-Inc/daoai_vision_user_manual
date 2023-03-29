@@ -12,4 +12,4 @@ DaoAI Advanced Modules
    Mono 3D Node
    Measurement Node
    Metrology Node
-   
+   Mod Finder 3D Node
