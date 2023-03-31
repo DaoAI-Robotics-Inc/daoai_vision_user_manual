@@ -10,3 +10,4 @@ Calibration Nodes
    calibration_2d
    perspective_cali/index
    pose_generation
+   trans3d_estimation/index
