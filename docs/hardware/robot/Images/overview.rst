@@ -1,5 +1,0 @@
-Make the snapshot
-=============
-
-
-Hello
