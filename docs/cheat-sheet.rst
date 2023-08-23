@@ -163,8 +163,8 @@ Videos
 
 The `sphinxcontrib-video <https://github.com/sphinx-contrib/video>`_ extension allows you to embed videos without using the ``raw`` directive:
 
-.. video:: https://test-1252620621.file.myqcloud.com/videos/tutorial%20vid%20-%20ROI.mp4
-   :align: center
+.. .. video:: https://test-1252620621.file.myqcloud.com/videos/tutorial%20vid%20-%20ROI.mp4
+..    :align: center
 
 
 Code Blocks
